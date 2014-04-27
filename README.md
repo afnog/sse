@@ -438,7 +438,7 @@ Details for project management of the training
 * Security and Availability - JJ
 * Closing Survey - JJ
 
-See the [wiki page](wiki/Topics and Instructors).
+See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 
 ### Coordinating the lab-setup
 
