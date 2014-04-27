@@ -20,8 +20,7 @@ Jump within this page:
 This course on Scalable Internet Services is part of the [AfNOG 2014 Workshop on Network Technology](http://www.ws.afnog.org/afnog2014), held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
 in Djibouti, May-June 2014.</p>
 
-We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the
-configuration and operation of large scale Internet services.
+We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the configuration and operation of large scale Internet services.
 
 ### Who should attend
 
@@ -423,8 +422,37 @@ DNSSEC High Level Awareness
 
 ## Management
 
-Details for project management of the training:
+Details for project management of the training
 
-* [[Topics and Instructors]]
-* [[Administration]]
-* [[Operating System Choices]]
+### Topics and Instructors
+
+* Welcome - CW?
+* DNS - JA?
+* RADIUS - CW
+* Apache - EN
+* Virtualization - JJ and CW
+* Load Balancing - JJ
+* Monitoring - ??
+* Exim - CW
+* Mail (Dovecot, Webmail, scalability) - ??
+* Security and Availability - JJ
+* Closing Survey - JJ
+
+See the [[wiki page|Topics and Instructors]].
+
+### Coordinating the lab-setup
+
+Who is arriving when?
+
+* CW on 22/05 around 14h
+
+### Administration
+
+All done by CW unless anyone else wants to.
+
+* Time management during the workshop (breaks, lunch, etc)
+* Student name verification for certificates
+* Coordinate the class group photo.
+* Liaise with the secretariat on any other issues that may be required.
+* Ensure that all course materials are placed on the workshop folder for CD burning at the end of the workshop
+* Ensure that the participants complete and return the feedback form
