@@ -426,7 +426,7 @@ Details for project management of the training
 
 ### Editing this page
 
-Please request from @qris to be added as an administrator of the [AfNOG organisation on GitHub](https://github.com/afnog).
+Please [file an issue](https://github.com/afnog/sse/issues) requesting to be added as an administrator of the [AfNOG organisation on GitHub](https://github.com/afnog).
 
 ### Mailing list
 
