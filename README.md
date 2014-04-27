@@ -1,0 +1,430 @@
+# AfNOG 2014 Workshop on Network Technology
+
+## Track SS-E: Scalable Internet Services
+
+Jump within this page:
+
+* [Introduction](#introduction)
+* [Instructors](#instructors)
+* [Timetable](#timetable)
+* [Topics](#topics)
+* [Management](#management)
+
+
+<p><a href="photos/Class_Group_Photo.jpg" class="group-photo"><img
+      src="photos/Class_Group_Photo_600.jpg"
+      alt="[SS-E Group Photo]"></a></p>
+
+## Introduction
+
+This course on Scalable Internet Services is part of the [AfNOG 2014 Workshop on Network Technology](http://www.ws.afnog.org/afnog2014), held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
+in Djibouti, May-June 2014.</p>
+
+We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the
+configuration and operation of large scale Internet services.
+
+### Who should attend
+
+Technical staff who are now providing Internet Services, or those who will be involved in the establishment and/or provisioning of a basic national Internet Services in the country.
+
+### Prerequisites
+
+Experience using and administering *NIX Servers, Name Servers, Web Servers and Mail Servers.
+
+### Instructors
+
+<!-- sorted by surname -->
+
+<table class="instructors">
+	<thead><tr><th>Name</th><th>Initials</th><th>From</th></tr></thead>
+	<tbody>
+		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
+		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td>Ghana</td> </tr>
+		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
+		<tr id="JJ"> <td>Joel Jaeggli</td>   <td>JJ</td> <td>US</td> </tr>
+		<tr id="MM"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
+		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
+	</tbody>
+</table>
+
+### Participants
+
+<!-- sorted by surname -->
+
+<table class="participants">
+	<thead><tr><th>Name</th><th>Country</th></tr></thead>
+	<tbody>
+		<tr><td>Frank Kwetei Quaynor</td><td>Ghana</td></tr>
+	</tbody>
+</table>
+
+### Timetable
+
+<table class="timetable" width="80%">
+	<colgroup>
+		<col width="10%" />
+		<col width="10%" />
+		<col width="10%" />
+		<col width="10%" />
+		<col width="10%" />
+		<col width="10%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="time">
+				09:30-11:00
+			</td>
+			<td class="mon">
+				<a href="#introduction">SSE Intro</a>
+			</td>
+			<td class="tue">
+				<a href="#dns">DNS</a>
+			</td>
+			<td class="wed">
+				<a href="#dns">DNS</a>
+			</td>
+			<td class="thu">
+				<a href="#exim">Exim</a>
+			</td>
+			<td class="fri">
+				<a href="#mail">POP/IMAP</a>
+			</td>
+		</tr>
+		<tr class="break">
+			<td></td>
+			<td colspan="5">Tea Break</td>
+		</tr>
+		<tr>
+			<td class="time">
+				11:30-13:30
+			</td>
+			<td class="mon">
+				<a href="#dns">DNS</a>
+			</td>
+			<td class="tue">
+				<a href="#dns">DNS</a>
+			</td>
+			<td class="wed">
+				<a href="#dns">DNS</a>
+			</td>
+			<td class="thu">
+				<a href="#exim">Exim</a>
+			</td>
+			<td class="fri">
+				<a href="#radius">RADIUS</a>
+			</td>
+		</tr>
+		<tr class="break">
+			<td></td>
+			<td colspan="5">Lunch</td>
+		</tr>
+		<tr>
+			<td class="time">
+				14:30-16:30
+			</td>
+			<td class="mon">
+				<a href="#security">Crypto/Security</a>
+			</td>
+			<td class="tue">
+				<a href="#virtualization">Virtualization</a><br />
+				<a href="#loadbalancing">Load Balancing</a>
+			</td>
+			<td class="wed">
+				<a href="#apache">Apache</a>
+			</td>
+			<td class="thu">
+				<a href="#exim">EXIM</a>
+			</td>
+			<td class="fri">
+				<a href="#monitoring">Monitoring IP Services</a>
+			</td>
+		</tr>
+		<tr class="break">
+			<td></td>
+			<td colspan="5">Tea Break</td>
+		</tr>
+		<tr>
+			<td class="time">
+				17:00-19:00
+			</td>
+			<td class="mon">
+				<a href="#apache">Apache</a>
+			</td>
+			<td class="tue">
+				<a href="#virtualization">Virtualization</a><br />
+				<a href="#loadbalancing">Load Balancing</a>
+			</td>
+			<td class="wed">
+				<a href="#apache">Apache</a>
+			</td>
+			<td class="thu">
+				<a href="#dnssec">DNSSEC</a>
+			</td>
+			<td class="fri">
+				<a href="#securityavailability">Security & Availability</a><br />
+				<a href="#closingsurvey">Closing Survey</a>
+			</td>
+		</tr>
+		<tr class="break">
+			<td></td>
+			<td colspan="5">Dinner</td>
+		</tr>
+		<tr>
+			<td class="time">
+				Evening Sessions (20:00-22:00)
+			</td>
+			<td colspan="3">Closed</td>
+			<td class="thu">Closed</td>
+			<td class="fri">Closed</td>
+		</tr>
+	</tbody>
+</table>
+
+## Topics
+
+### Introduction
+#### [Ayitey Bulley](#AB)
+###### [Presentation](intro/welcome-slide.pdf)
+###### [Opening Survey](http://www.surveymonkey.com/s/8QNGCZZ)
+###### Survey Results (TBC)
+
+### DNS
+#### [Joe Abley](#JA)
+##### Fundamentals
+###### [PowerPoint](dns/dns1-presentation.ppt)
+###### [PDF](dns/dns1-presentation.pdf)
+###### [Exercise](dns/dns1-exercise.txt)
+
+Goal: to understand overall purpose and structure of DNS
+
++ IP addresses vs. names
++ DNS as a distributed, hierarchical database
++ Domain names and resource records:
+  - A, PTR, MX, CNAME, TXT, SOA/NS
++ Domain name lookup responses
++ Reverse DNS
++ DNS as client-server model
+  - Resolver
+  - Cache
+  - Authoritative server
++ Testing DNS (dig)
++ Understanding output from dig 
++ Practical Exercises:
+  - Configure Unix resolver
+  - Use dig { A, other (e.g. MX), non-existent answer, reverse lookup }
+  - Use tcpdump to show queries being sent to cache
+
+##### DNS Caching and Debugging
+###### [PowerPoint](dns/dns2-presentation.ppt)
+###### [PDF](dns/dns2-presentation.pdf)
+###### [Exercise 1](dns/dns2-exercise1.txt)
+###### [Exercise 2](dns/dns2-exercise2.txt)
+###### [Exercise 3](dns/dns2-exercise3.txt)
+
+Goal: to understand operation of a recursive nameserver
+
++ Recap of previous session
++ DNS as a distributed database.
++ Resource record NS: referral of answer
++ Caching nameserver and root servers
++ Caching used to reduce load (esp. top level servers)
++ Issue of stale data in caches (problems with distributed systems).
+  - TTL records on each record
+  - Negative TTL in SOA
++ Recursion and caching (dig +norec)
++ Demo: www.ticscali.co.uk
++ Practical Exercise:
+  - Debugging DNS Worksheet (with dig +norec ):
+    . Students work on their own examples
++ Configuring a caching nameserver 
+  - check /var/named/etc/namedb/named.conf
+  - run tcpdump
+  - rndc start
+  - change /etc/resolv.conf to point to your nameserver
+  - query two times - { Look at 'aa' flag, TTL, query time }
+  - rndc flush
+  - cache is authoritative for 127.0.0.1
++ What sort of hardware would you choosing when building a DNS cache?		
++ Improving the configuration of a cache NS 
++ Managing a caching nameserver 
++ Practical Exercise:
+  - Building your own cache nameserver
+  - Improving the configuration of the cache NS
++ Question and Answer session
++ Summary
+
+##### Configuring Authoritative Name Servers
+###### [PowerPoint](dns/dns3-presentation.ppt)
+###### [PDF](dns/dns3-presentation.pdf)
+
+Goal: to properly configure an authoritative nameserver	
+
++ Recap of caching NS	
++ DNS Replication 
++ Outside world cannot tell the difference between master and slave 
++ When does replication take place? 
++ Two (2) Dangers with serial numbers 
++ Configuration of Master & Slave NS 
+  - Format of Resource Records { SOA and NS } 
++ Ten (10) Common DNS Operational and Configuration Errors (RFC1912) 
+
+##### Exercises
+###### [Exercise](dns/dns3-exercise.txt)
+
+Setting up authoritative name services for a domain
+
++ Master & Slave nameserver exercises 
+
+##### Delegation and Reverse DNS
+###### [PowerPoint](dns/dns4-presentation.ppt)
+###### [PDF](dns/dns4-presentation.pdf)
+
++ How do you delegate a subdomain?
++ Glue records
++ Reverse DNS
+  - Subnets smaller than /24
++ DNS Landmarks
+  - Key organisations and people
++ The Root Zone
++ Top-Level Domains
+  - Generic and Country Code TLDs
++ Registries, Registrars, Registrants
++ Nameserver Vendors
++ Conferences, Industry Groups
++ Mailing Lists
++ DNS Summary
++ Further reading
+
+### DNSSEC
+#### [Joe Abley](#JA)
+###### [Presentation/PDF](dns/DNSSEC_High-Level_Awareness.pdf)
+###### [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
+###### [Exercise/Text](dns/dns5-exercise.txt)
+
+DNSSEC High Level Awareness
+
+### RADIUS
+#### [Chris Wilson](#CW)
+###### [Presentation/OpenOffice](radius/radius.odp)
+###### [Presentation/PDF](radius/radius.pdf)
+
+### Apache
+#### [Kevin Chege](#KC)
+###### [Apache Presentation/PowerPoint](apache/apache-1.ppt)
+###### [Exercise1 - Apache Installation/SSL](apache/apache_sse_exercises_pt1.txt)
+###### [Exercise2 - MySQL/PHP/Wordpress Install](apache/apache_sse_exercises_pt2.txt)
+###### [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_pt3.txt)
+###### [Additional - Working with Distfiles/PDF](apache/Working-with-Distfiles.pdf)
+
++ Installing Apache22 from FreeBSD ports
++ Configure Apache with basic configuration 
++ Start Apache http daemon and connect to local box
++ Verify local ssl certificate works 
++ Configuring Apache with SSL 
++ Example SSL Apache configuration file 
++ Sample config for Virtual Hosting
++ Install MySQL, PHP, Wordpress	
++ Configuring Wordpress
+
+### Virtualization 
+
+#### [Joel Jaeggli](#JJ) and [Chris Wilson](#CW)
+###### Virtualization Overview ([PDF](virtualisation/sse-virtualization-overview-2013.pdf)/[OpenOffice](virtualisation/sse-virtualization-overview-2013.odp))
+###### Virtualization Exercise ([PDF](virtualisation/virt-exer-2013.pdf)/[OpenOffice](virtualisation/virt-exer-2013.odp))
+###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
+
+### Load Balancing
+#### [Joel Jaeggli](#JJ)
+###### [Presentation/PDF](loadbalancing/sse-LB-overview.pdf)
+###### [Presentation/OpenOffice](loadbalancing/sse-LB-overview.odp)
+###### [Exercise](loadbalancing/ha-proxy-install.txt)
+
+### Monitoring
+#### [Ayitey Bulley](#AB)
+###### [Monitoring IP Services](monitoring/monitoring-ip-services.pdf)
+###### [Nagios Exercise-1](monitoring/nagios-exercise1.txt)
+###### [Nagios Exercise-2](monitoring/nagios-exercise2.txt)
+###### [Smokeping Exercise](monitoring/smokeping-exercise1.txt)
+
+### Exim
+#### [Chris Wilson](#CW)
+###### [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)  
+###### [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
+###### [EICAR Anti-Virus Test File](exim/eicar)
+###### [Sample spam message](exim/spam.txt)
+
+### Mail
+#### [Michuki Mwangi](#MM)
+##### Introduction to POP and IMAP
+###### [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
+###### [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
+
++ Dovecot - Server for POP and IMAP
+  - What is Dovecot?
+  - Installing dovecot from ports
+  - Configuring Dovecot
+  - Configuring POP3s and IMAPs
+
+###### [Presentation and Exercise/PDF](mail/dovecot-scaling.pdf)
+###### [Presentation and Exercise/PowerPoint](mail/dovecot-scaling.ppt)
+###### [Dovecot Basic Mysql Schema](mail/dovecot-mysql-schema.sql)
+
++ Dovecot - Virtual Users
+  - Configuring Dovecot for Virtual users with Mysql
+  - Configuring Exim for Virtual Users 
+
+##### Webmail using Squirrelmail
+###### [Presentation/PDF](mail/squirrelmail.pdf)
+###### [Presentation/PowerPoint](mail/squirrelmail.ppt)
+
++ Squirrelmail - Webmail IMAP
+  - What is Squirrelmail
+  - Installing Squirrelmail from ports/source
+  - Configuring squirrelmail
+  - Redirecting http to https
+
+##### Scaling mail services
+###### [Mail Server Clustering](mail/clustering.htm)
+###### [Mail Server Scalability](mail/scalability.htm)
+
++ Mailserver scalability
+  - Linear password files 
+  - Linear mbox files 
+  - Too many files in one directory 
+  - CPU limits 
+  - Disk performance 
+  - Keep your SMTP (smarthost) and POP3 services separate 
++ Notes and Clustering and NFS
+  - Using Network File System (NFS)
+  - Using Proxies 
+  - Load balancing 
+  - Database backends
+  - FreeBSD NFS 
+
+### Security and Availability
+#### [Joel Jaeggli](#JJ)
+###### [Presentation/PDF](security/sse-sec-and-availability.pdf)
+###### [Presentation/ODP](security/sse-sec-and-availability.odp)
+
+### Closing Survey
+#### [Joel Jaeggli](#JJ)
+###### [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
+###### [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+
+## Management
+
+Details for project management of the training:
+
+* [[Topics and Instructors]]
+* [[Administration]]
+* [[Operating System Choices]]
