@@ -424,6 +424,17 @@ DNSSEC High Level Awareness
 
 Details for project management of the training
 
+### Editing this page
+
+Please request from @qris to be added as an administrator of the [AfNOG organisation on GitHub](https://github.com/afnog).
+
+### Mailing list
+
+The instructors group on Google Groups:
+
+* Email address: afnog-sse@googlegroups.com
+* Web interface: https://groups.google.com/forum/#!forum/afnog-sse
+
 ### Topics and Instructors
 
 * Welcome - CW?
