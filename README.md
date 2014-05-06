@@ -441,11 +441,11 @@ The instructors group on Google Groups:
 * DNS - JA?
 * RADIUS - CW
 * Apache - EN
-* Virtualization - JJ and CW
-* Load Balancing - JJ
-* Monitoring - ??
+* Virtualization - LM
+* Load Balancing - LM
+* Monitoring - KC
 * Exim - CW
-* Mail (Dovecot, Webmail, scalability) - ??
+* Mail (Dovecot, Webmail, scalability) - KC
 * Security and Availability - JJ
 * Closing Survey - JJ
 
@@ -456,6 +456,7 @@ See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 Who is arriving when?
 
 * CW on 22/05 around 14h
+* KC on 25/05 early morning
 
 ### Administration
 
