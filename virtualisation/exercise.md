@@ -185,3 +185,4 @@ These steps are to create a new gold image for training (each year).
 * Guided partitioning, use entire disk
 * Accept the defaults
 * Enable `ntpd` to synchronise virtual machine time with global time
+* Create a user called `afnog` and invite them to the `wheel` group
