@@ -277,3 +277,45 @@ After shutting down the guest, you can start it again for testing or to make
 changes using this commands:
 
 	virsh start FreeBSD-Gold
+
+## Creating Clones
+
+To run a big class you'll need a lot of virtual machine clones. Here's how to
+create 32 clones using the gold image and `libvirt`.
+
+First, configure your DHCP server to give each guest the correct IP address
+when it boots, so you can log in and manage it. For example, if you're using
+ISC DHCP daemon:
+
+	for pc in {1..32}; do
+		hostname=pc$pc
+		ipaddr=196.200.219.$pc
+
+		macaddr=`echo $hostname | md5sum | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:54:\1:\2:\3:\4/'`
+		cat <<EOF
+	host $hostname {
+	hardware ethernet $macaddr;
+	fixed-address $ipaddr;
+	}
+	EOF
+	done
+
+And here's how to create the `libvirt` configurations (note, 32 is too many
+guests for a single host, you probably want to put `1..16` on one host and
+`17..32` on another, with 16 GB RAM each):
+
+	for pc in {1..32}; do
+		hostname=pc$pc
+		macaddr=`echo $hostname | md5sum | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:54:\1:\2:\3:\4/'`
+		image=/data/vm/$hostname.img
+		sudo qemu-img create -f qcow2 \
+			-o backing_file=FreeBSD-Gold.img \
+			$image
+		virt-install --connect qemu:///system \
+			--virt-type kvm --name $hostname \
+			--os-variant=freebsd8 --ram 512 --vcpus 1 \
+			--disk path=$image,format=qcow2 \
+			--network=bridge=br219,mac=$macaddr \
+			--graphics type=vnc,listen=0.0.0.0 --import
+	done
+
