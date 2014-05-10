@@ -60,7 +60,7 @@ On Linux:
 
 ## VirtualBox Main Window
 
-![VirtualBox Main Window](virtualbox-main-window.png)
+![VirtualBox Main Window](images/virtualbox-main-window.png)
 
 * List of virtual machines (Probably empty!)
 * Settings of the selected virtual machine
@@ -69,7 +69,7 @@ On Linux:
 
 ## Creating a Virtual Machine
 
-![VirtualBox New VM wizard](virtualbox-new-vm-wizard.png)
+![VirtualBox New VM wizard](images/virtualbox-new-vm-wizard.png)
 
 * Click *New* to create a new virtual machine
 * Type FreeBSD as the name
@@ -85,7 +85,7 @@ On Linux:
 * Don't start it yet!
 * Need to change settings for IO APIC (to make FreeBSD work)
 
-![Enable the IO APIC option](virtualbox-enable-io-apic.png)
+![Enable the IO APIC option](images/virtualbox-enable-io-apic.png)
 
 * Click Settings
 * Click System
@@ -97,14 +97,14 @@ On Linux:
 
 The First Run Wizard appears:
 
-![VirtualBox first run wizard](virtualbox-first-run-wizard.png)
+![VirtualBox first run wizard](images/virtualbox-first-run-wizard.png)
 
 This allows you to boot from an Operating System install CD or CD image (ISO file), which
 you can obtain on a USB stick or CD from us, or download it from the NOC.
 
 ## Boot Device
 
-![VirtualBox BIOS screen](virtualbox-bios-screen.png)
+![VirtualBox BIOS screen](images/virtualbox-bios-screen.png)
 
 When you see the prompt _Press F12 to select boot device_, press F12.
 
@@ -112,7 +112,7 @@ If you miss it, open the VirtualBox menu and choose Machine/Reset menu to try ag
 
 ## Boot Menu
 
-![VirtualBox boot menu](virtualbox-boot-menu.png)
+![VirtualBox boot menu](images/virtualbox-boot-menu.png)
 
 * If booting from real CD, insert the disk now.
 * Choose Devices/CD or DVD Device menu
@@ -122,7 +122,7 @@ If you miss it, open the VirtualBox menu and choose Machine/Reset menu to try ag
 
 ## FreeBSD Booting
 
-![FreeBSD boot loader](virtualbox-freebsd-bootloader.png)
+![FreeBSD boot loader](images/virtualbox-freebsd-bootloader.png)
 
 * Shows that FreeBSD is booting successfully from the ISO file (or the network)
 * Allows you to interrupt the boot process and reconfigure FreeBSD
@@ -130,7 +130,7 @@ If you miss it, open the VirtualBox menu and choose Machine/Reset menu to try ag
 
 ## FreeBSD Installer
 
-![FreeBSD installer welcome screen](freebsd-installer-welcome.png)
+![FreeBSD installer welcome screen](images/freebsd-installer-welcome.png)
 
 * New installer as of FreeBSD 9.1
 * Text “windows”
@@ -142,7 +142,7 @@ If you miss it, open the VirtualBox menu and choose Machine/Reset menu to try ag
 
 ## Standard Install
 
-![FreeBSD partitioning wizard](freebsd-partitioning.png)
+![FreeBSD partitioning wizard](images/freebsd-partitioning.png)
 
 * Choose *Install* from the welcome screen
 * Accept defaults most of the way through
@@ -160,22 +160,42 @@ Depends on your physical keyboard. Only used on the console, not by SSH, so not 
 * United Kingdom ISO-8859-1 (£ on 3 key)
 * French ISO-8859-1 (Azerty layout)
 
+## Other useful KVM commands
+
+* virsh list --all
+* virsh autostart FreeBSD-Gold
+
 ## AfNOG gold image
 
 These steps are to create a new gold image for training (each year).
 
 ## Installation in KVM
 
-  qemu-img create -f qcow2 FreeBSD-Gold.img 20G
-  virt-install --connect qemu:///system \
-    --virt-type kvm \
-    --name FreeBSD-Gold \
-    --os-variant=freebsd8 \
-    --ram 1024 \
-    --vcpus 1 \
-    --disk path=FreeBSD-Gold.img \
-    --cdrom ~/Downloads/FreeBSD-10.0-RELEASE-i386-bootonly.iso \
-    --network=user
+We now use KVM instead of VirtualBox for the virtual servers for classrooms,
+because it's more efficient, so we can run more virtual boxes per host (16
+on a quad core Mac Mini i7 with 16 GB RAM).
+
+	qemu-img create -f qcow2 FreeBSD-Gold.img 20G
+	virt-install --connect qemu:///system \
+	    --virt-type kvm \
+	    --name FreeBSD-Gold \
+	    --os-variant=freebsd8 \
+	    --ram 1024 \
+	    --vcpus 1 \
+	    --disk path=FreeBSD-Gold.img,format=qcow2 \
+	    --cdrom ~/Downloads/FreeBSD-10.0-RELEASE-i386-bootonly.iso \
+	    --network=user,hostfwd=tcp::2222-:22
+
+## Deleting the virtual machine
+
+If you make a mistake and you need to delete it and run `virt-install` again,
+you'll need to run the following commands first:
+
+	virsh destroy FreeBSD-Gold
+	virsh undefine FreeBSD-Gold
+	rm FreeBSD-Gold.img
+
+## Installing FreeBSD
 
 * Keymap: UK ISO-8859-1
 * Hostname: freebsd-gold.sse.ws.afnog.org
@@ -185,4 +205,51 @@ These steps are to create a new gold image for training (each year).
 * Guided partitioning, use entire disk
 * Accept the defaults
 * Enable `ntpd` to synchronise virtual machine time with global time
-* Create a user called `afnog` and invite them to the `wheel` group
+* Set the root password to `afnog`
+* Create a user called `afnog` (password `afnog`) and invite them to the `wheel` group
+
+## Post-Installation Step 1
+
+The minimum necessary to get text console access, which is much more comfortable.
+
+* Log into the guest
+* Become root using `su`
+* Make a backup of `/etc/ttys`
+* Edit `/etc/ttys` (carefully, you might make the system unbootable)
+* Find the line starting with `ttyu0`
+* Change `dialup` on that line to `xterm`
+* Change `off` on that line to `on`
+* Save changes and run `init q`
+
+On the host, try to connect to this console using:
+
+	virsh console FreeBSD-Gold
+
+Press Enter and you should see a `login:` prompt.
+
+## Post-Installation Step 2
+
+Hopefully with the help of a text console from step 1, run the following
+commands on the guest:
+
+	pkg
+	pkg install sudo bash
+	echo 'fdesc /dev/fd fdescfs rw 0 0' >> /etc/fstab
+	mount /dev/fd
+	echo 'afnog ALL=(ALL) ALL: ALL' >> /usr/local/etc/sudoers
+	chsh -s /usr/local/bin/bash afnog
+	mkdir -p /root/.ssh /home/afnog/.ssh
+	scp chris@10.0.2.2:.ssh/id_rsa.pub /root/.ssh/authorized_keys
+	cp /root/.ssh/authorized_keys /home/afnog/.ssh
+	echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+	/etc/rc.d/sshd restart
+
+Please test that you can login to the host using SSH to the `root` and `afnog`
+accounts.
+
+## Restarting the Guest
+
+After shutting down the guest, you can start it again for testing or to make
+changes using this commands:
+
+	virsh start FreeBSD-Gold
