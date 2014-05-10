@@ -186,6 +186,30 @@ on a quad core Mac Mini i7 with 16 GB RAM).
 	    --cdrom ~/Downloads/FreeBSD-10.0-RELEASE-i386-bootonly.iso \
 	    --network=user,hostfwd=tcp::2222-:22
 
+Note 1: not all versions of QEmu/libvirt support the `--network hostfwd`
+option. Without it, you won't be able to SSH into the guest from the host
+or the LAN.
+
+Note 2: you may want to try `--network=network=default`, assuming that your
+host is configured to forward packets, allow forwarding for the `virbr0`
+interface, and NAT packets from `virbr0` to the LAN. For example the
+following might work:
+
+	sed -i -e 's/(net.ipv4.ip_forward)=.*/\1=1/' /etc/sysctl.conf
+	sysctl -p
+	iptables -I FORWARD -i virbr0 -s 192.168.122.0/24 -j ACCEPT
+	iptables -t nat -I POSTROUTING -s 192.168.122.0/24 -j MASQUERADE
+
+Note 3: if you're using VLANs on your physical LAN interface and you want
+to bridge the virtual machines onto a particular VLAN, you can create a bridge
+device for it like this in `/etc/network/interfaces`:
+
+	iface br219 inet dhcp
+		bridge_ports eth0.219
+
+And have your virtual machine join it automatically, tagging its untagged
+traffic, by running `virt-install` with the option `--network=bridge=br219`.
+
 ## Deleting the virtual machine
 
 If you make a mistake and you need to delete it and run `virt-install` again,
