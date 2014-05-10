@@ -463,9 +463,13 @@ Who is arriving when?
 
 All done by CW unless anyone else wants to.
 
+* Classroom setup, networking, virtual machine images
+* Notices - door, timetable, bar camp invitation
 * Time management during the workshop (breaks, lunch, etc)
+* Ensuring that every topic has an instructor and enough time allocated
+* Ensuring that participants are receiving any assistance necessary
 * Student name verification for certificates
-* Coordinate the class group photo.
-* Liaise with the secretariat on any other issues that may be required.
+* Coordinate the class group photo
+* Liaise with the secretariat on any other issues that may be required
 * Ensure that all course materials are placed on the workshop folder for CD burning at the end of the workshop
 * Ensure that the participants complete and return the feedback form
