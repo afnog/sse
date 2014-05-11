@@ -38,10 +38,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	<thead><tr><th>Name</th><th>Initials</th><th>From</th></tr></thead>
 	<tbody>
 		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
-		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td>Ghana</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
 		<tr id="JJ"> <td>Joel Jaeggli</td>   <td>JJ</td> <td>US</td> </tr>
-		<tr id="MM"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
+		<tr id="LM"> <td>Laban Mwangi</td> <td>LM</td> <td>Kenya?</td> </tr>
+		<tr id="EN"> <td>Evelyn Namara</td>  <td>EN</td> <td>??</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
 	</tbody>
 </table>
@@ -446,8 +446,8 @@ The instructors group on Google Groups:
 * Monitoring - KC
 * Exim - CW
 * Mail (Dovecot, Webmail, scalability) - KC
-* Security and Availability - JJ
-* Closing Survey - JJ
+* Security and Availability - CW
+* Closing Survey - CW
 
 See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 
@@ -456,15 +456,20 @@ See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 Who is arriving when?
 
 * CW on 22/05 around 14h
+* EN on 24/05 
 * KC on 25/05 early morning
 
 ### Administration
 
 All done by CW unless anyone else wants to.
 
+* Classroom setup, networking, virtual machine images
+* Notices - door, timetable, bar camp invitation
 * Time management during the workshop (breaks, lunch, etc)
+* Ensuring that every topic has an instructor and enough time allocated
+* Ensuring that participants are receiving any assistance necessary
 * Student name verification for certificates
-* Coordinate the class group photo.
-* Liaise with the secretariat on any other issues that may be required.
+* Coordinate the class group photo
+* Liaise with the secretariat on any other issues that may be required
 * Ensure that all course materials are placed on the workshop folder for CD burning at the end of the workshop
 * Ensure that the participants complete and return the feedback form
