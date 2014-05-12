@@ -458,6 +458,7 @@ Who is arriving when?
 * CW on 22/05 around 14h
 * EN on 24/05 
 * KC on 25/05 early morning
+* JA on 25/05 at 0900
 
 ### Administration
 
