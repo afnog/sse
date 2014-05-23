@@ -77,6 +77,14 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			<th>Thursday</th>
 			<th>Friday</th>
 		</tr>
+		<tr>
+			<td></td>
+			<td>26/05</td>
+			<td>27/05</td>
+			<td>28/05</td>
+			<td>29/05</td>
+			<td>30/05</td>
+		</tr>
 	</thead>
 	<tbody>
 		<tr>
@@ -84,7 +92,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				09:30-11:00
 			</td>
 			<td class="mon">
-				<a href="#introduction">SSE Intro</a>
+				<a href="#introduction">SSE Intro/ee bootcamp</a>
 			</td>
 			<td class="tue">
 				<a href="#dns">DNS</a>
@@ -108,10 +116,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				11:30-13:30
 			</td>
 			<td class="mon">
-				<a href="#dns">DNS</a>
+				<a href="#dns">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#dns">DNS</a>
+				<a href="#security-and-availability">Security and Availability</a>
 			</td>
 			<td class="wed">
 				<a href="#dns">DNS</a>
@@ -132,7 +140,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				14:30-16:30
 			</td>
 			<td class="mon">
-				<a href="#security">Crypto/Security</a>
+				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
 				<a href="#virtualization">Virtualization</a><br />
@@ -142,7 +150,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="thu">
-				<a href="#exim">EXIM</a>
+				<a href="#exim">Exim</a>
 			</td>
 			<td class="fri">
 				<a href="#monitoring">Monitoring IP Services</a>
