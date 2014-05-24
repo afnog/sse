@@ -473,7 +473,8 @@ Who is arriving when?
 All done by CW unless anyone else wants to.
 
 * Classroom setup, networking, virtual machine images
-* Notices - door, timetable, bar camp invitation
+* Notices - door, timetable, complaints box
+* Introductory talk - welcome, topic poll, complaints box
 * Time management during the workshop (breaks, lunch, etc)
 * Ensuring that every topic has an instructor and enough time allocated
 * Ensuring that participants are receiving any assistance necessary
