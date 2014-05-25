@@ -471,10 +471,12 @@ Who is arriving when?
 
 All done by CW unless anyone else wants to.
 
+* Student numbers and names
 * Classroom setup, networking, virtual machine images
-* Notices - door, timetable, complaints box
+* Notices - door, timetable, complaints box, wifi password
 * Introductory talk - welcome, topic poll, complaints box
 * Time management during the workshop (breaks, lunch, etc)
+* Set alarms for break times
 * Ensuring that every topic has an instructor and enough time allocated
 * Ensuring that participants are receiving any assistance necessary
 * Student name verification for certificates
@@ -482,3 +484,13 @@ All done by CW unless anyone else wants to.
 * Liaise with the secretariat on any other issues that may be required
 * Ensure that all course materials are placed on the workshop folder for CD burning at the end of the workshop
 * Ensure that the participants complete and return the feedback form
+* Download and serve any files needed, e.g. FreeBSD ISO images (for virtualisation) and packages (for pkg_add mirror)
+
+#### TODO
+
+* Student numbers and names
+* Power strips: do we have enough? tape them down
+* Set up desktop/backup PCs
+* Distribute the Wifi password
+* Nagios config for all PCs
+* Phones to silent
