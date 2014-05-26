@@ -199,10 +199,27 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ## Topics
 
 ### Introduction
-#### [Ayitey Bulley](#AB)
-###### [Presentation](intro/welcome-slide.pdf)
-###### [Opening Survey](http://www.surveymonkey.com/s/8QNGCZZ)
-###### Survey Results (TBC)
+#### [Chris Wilson](#CW)
+###### [Presentation](http://afnog.github.io/sse/intro/presentation)
+###### [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
+###### [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
+
+### Apache
+#### [Evelyn Namara](#EN)
+###### Apache Presentation/PowerPoint
+###### [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
+###### [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
+###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
+
++ Installing Apache22 from FreeBSD ports
++ Configure Apache with basic configuration 
++ Start Apache http daemon and connect to local box
++ Verify local ssl certificate works 
++ Configuring Apache with SSL 
++ Example SSL Apache configuration file 
++ Sample config for Virtual Hosting
++ Install MySQL, PHP, Wordpress	
++ Configuring Wordpress
 
 ### DNS
 #### [Joe Abley](#JA)
@@ -324,23 +341,6 @@ DNSSEC High Level Awareness
 ###### [Presentation/OpenOffice](radius/radius.odp)
 ###### [Presentation/PDF](radius/radius.pdf)
 
-### Apache
-#### [Kevin Chege](#KC)
-###### [Apache Presentation/PowerPoint](apache/apache-1.ppt)
-###### [Exercise1 - Apache Installation/SSL](apache/apache_sse_exercises_pt1.txt)
-###### [Exercise2 - MySQL/PHP/Wordpress Install](apache/apache_sse_exercises_pt2.txt)
-###### [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_pt3.txt)
-###### [Additional - Working with Distfiles/PDF](apache/Working-with-Distfiles.pdf)
-
-+ Installing Apache22 from FreeBSD ports
-+ Configure Apache with basic configuration 
-+ Start Apache http daemon and connect to local box
-+ Verify local ssl certificate works 
-+ Configuring Apache with SSL 
-+ Example SSL Apache configuration file 
-+ Sample config for Virtual Hosting
-+ Install MySQL, PHP, Wordpress	
-+ Configuring Wordpress
 
 ### Virtualization 
 
