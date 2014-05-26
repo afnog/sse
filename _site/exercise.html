@@ -1,0 +1,394 @@
+<h1>Class Virtualisation Setup</h1>
+
+<p>Practical exercise: install FreeBSD 10 in a virtual machine on your own PC.</p>
+
+<h2>System Requirements</h2>
+
+<p>You will need:</p>
+
+<ul>
+<li>A laptop or desktop (Windows, Macintosh, Linux or FreeBSD)</li>
+<li>About 2 GB RAM</li>
+<li>About 20 GB free disk space</li>
+<li>Administrative rights (root access)</li>
+<li>A CD or DVD drive or wireless card</li>
+</ul>
+
+<p>If your laptop doesn't meet these specs: Work with a partner. (We may be able to provide a few spare machines, but not guaranteed.)</p>
+
+<h2>CD or Wireless?</h2>
+
+<p>If possible, please use a FreeBSD CD/DVD/ISO image.</p>
+
+<ul>
+<li>Disks available on loan, please ask and sign for.</li>
+<li>Please return your disk after the session, sorry!</li>
+<li>We can copy the ISO image and VirtualBox onto a USB stick for you.</li>
+</ul>
+
+<p>If you don't have a CD drive:</p>
+
+<ul>
+<li>You can install over the wireless network </li>
+<li>Bandwidth is limited and shared between all of us</li>
+<li>Using CD or DVD  or ISO will be much faster for you</li>
+<li>Using CD or DVD or ISO will speed up wireless install for everyone who really needs it.</li>
+</ul>
+
+<h2>Installing VirtualBox</h2>
+
+<p>We have local copies for:</p>
+
+<ul>
+<li><a href="VirtualBox-4.3.10-93012-Win.exe">Windows</a></li>
+<li><a href="VirtualBox-4.3.10-93012-OSX.dmg">Mac OS X</a></li>
+</ul>
+
+<p>For other platforms, please visit:</p>
+
+<ul>
+<li><a href="http://www.virtualbox.org/wiki/Downloads">http://www.virtualbox.org/wiki/Downloads</a></li>
+</ul>
+
+<p>Linux versions are at:</p>
+
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Linux_Downloads">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
+</ul>
+
+<h2>Running VirtualBox</h2>
+
+<p>On Windows:</p>
+
+<ul>
+<li>Start/Programs/Oracle VM VirtualBox</li>
+</ul>
+
+<p>On Mac OS X:</p>
+
+<ul>
+<li>Hard Disk/Applications/Oracle VM VirtualBox</li>
+</ul>
+
+<p>On FreeBSD:</p>
+
+<ul>
+<li>Open a terminal and type VirtualBox</li>
+</ul>
+
+<p>On Linux:</p>
+
+<ul>
+<li>Applications/System Tools/Oracle VM VirtualBox, or</li>
+<li>Search for VirtualBox (Ubuntu Unity), or</li>
+<li>Open a terminal and type VirtualBox</li>
+</ul>
+
+<h2>VirtualBox Main Window</h2>
+
+<p><img src="images/virtualbox-main-window.png" alt="VirtualBox Main Window"></p>
+
+<ul>
+<li>List of virtual machines (Probably empty!)</li>
+<li>Settings of the selected virtual machine</li>
+<li>Screen preview</li>
+<li>Toolbar buttons to control VMs: New, Settings, Start</li>
+</ul>
+
+<h2>Creating a Virtual Machine</h2>
+
+<p><img src="images/virtualbox-new-vm-wizard.png" alt="VirtualBox New VM wizard"></p>
+
+<ul>
+<li>Click <em>New</em> to create a new virtual machine</li>
+<li>Type FreeBSD as the name</li>
+<li>Choose <em>BSD</em> as the type, and <em>FreeBSD (32 bit)</em> as the version</li>
+<li>Virtual RAM:
+
+<ul>
+<li>Use less than half your machine's total RAM</li>
+<li>512MB is an acceptable minimum</li>
+</ul>
+</li>
+<li>Virtual hard disk:
+
+<ul>
+<li>Dynamic expanding, 20 GB </li>
+</ul>
+</li>
+</ul>
+
+<h2>Hold your horses!</h2>
+
+<ul>
+<li>Don't start it yet!</li>
+<li>Need to change settings for IO APIC (to make FreeBSD work)</li>
+</ul>
+
+<p><img src="images/virtualbox-enable-io-apic.png" alt="Enable the IO APIC option"></p>
+
+<ul>
+<li>Click Settings</li>
+<li>Click System</li>
+<li>Click motherboard</li>
+<li>Enable IO APIC</li>
+<li>Ok/close</li>
+</ul>
+
+<h2>Go!</h2>
+
+<p>The First Run Wizard appears:</p>
+
+<p><img src="images/virtualbox-first-run-wizard.png" alt="VirtualBox first run wizard"></p>
+
+<p>This allows you to boot from an Operating System install CD or CD image (ISO file), which
+you can obtain on a USB stick or CD from us, or download it from the NOC.</p>
+
+<h2>Boot Device</h2>
+
+<p><img src="images/virtualbox-bios-screen.png" alt="VirtualBox BIOS screen"></p>
+
+<p>When you see the prompt <em>Press F12 to select boot device</em>, press F12.</p>
+
+<p>If you miss it, open the VirtualBox menu and choose Machine/Reset menu to try again.</p>
+
+<h2>Boot Menu</h2>
+
+<p><img src="images/virtualbox-boot-menu.png" alt="VirtualBox boot menu"></p>
+
+<ul>
+<li>If booting from real CD, insert the disk now.</li>
+<li>Choose Devices/CD or DVD Device menu</li>
+<li>Select your CD-ROM image</li>
+<li>Press C to boot from CD-ROM, or</li>
+<li>Press L to boot from LAN (Network)</li>
+</ul>
+
+<h2>FreeBSD Booting</h2>
+
+<p><img src="images/virtualbox-freebsd-bootloader.png" alt="FreeBSD boot loader"></p>
+
+<ul>
+<li>Shows that FreeBSD is booting successfully from the ISO file (or the network)</li>
+<li>Allows you to interrupt the boot process and reconfigure FreeBSD</li>
+<li>Don't need to do anything, just let it continue booting after 10 seconds</li>
+</ul>
+
+<h2>FreeBSD Installer</h2>
+
+<p><img src="images/freebsd-installer-welcome.png" alt="FreeBSD installer welcome screen"></p>
+
+<ul>
+<li>New installer as of FreeBSD 9.1</li>
+<li>Text “windows”</li>
+<li>Buttons at the bottom</li>
+<li>TAB key to switch buttons</li>
+<li>Enter key to activate the selected button</li>
+<li>Up and Down arrows to select item from menu</li>
+<li>Select OK to activate/continue to next screen</li>
+</ul>
+
+<h2>Standard Install</h2>
+
+<p><img src="images/freebsd-partitioning.png" alt="FreeBSD partitioning wizard"></p>
+
+<ul>
+<li>Choose <em>Install</em> from the welcome screen</li>
+<li>Accept defaults most of the way through</li>
+<li>Set hostname</li>
+<li>Do guided partioning and let FreeBSD use the whole disk.</li>
+<li>Set root password and</li>
+<li>Create a new user</li>
+<li>Then you should be complete. </li>
+</ul>
+
+<h2>Keymap</h2>
+
+<p>Depends on your physical keyboard. Only used on the console, not by SSH, so not critical if it's wrong. Common choices would be:</p>
+
+<ul>
+<li>United States of America ISO-8895-1 (# on 3 key)</li>
+<li>United Kingdom ISO-8859-1 (£ on 3 key)</li>
+<li>French ISO-8859-1 (Azerty layout)</li>
+</ul>
+
+<h2>Other useful KVM commands</h2>
+
+<ul>
+<li>virsh list --all</li>
+<li>virsh autostart FreeBSD-Gold</li>
+</ul>
+
+<h2>AfNOG gold image</h2>
+
+<p>These steps are to create a new gold image for training (each year).</p>
+
+<h2>Installation in KVM</h2>
+
+<p>We now use KVM instead of VirtualBox for the virtual servers for classrooms,
+because it's more efficient, so we can run more virtual boxes per host (16
+on a quad core Mac Mini i7 with 16 GB RAM).</p>
+
+<pre><code>qemu-img create -f qcow2 FreeBSD-Gold.img 20G
+virt-install --connect qemu:///system \
+    --virt-type kvm \
+    --name FreeBSD-Gold \
+    --os-variant=freebsd8 \
+    --ram 1024 \
+    --vcpus 1 \
+    --disk path=FreeBSD-Gold.img,format=qcow2 \
+    --cdrom ~/Downloads/FreeBSD-10.0-RELEASE-i386-bootonly.iso \
+    --network=user,hostfwd=tcp::2222-:22
+</code></pre>
+
+<p>Note 1: not all versions of QEmu/libvirt support the <code>--network hostfwd</code>
+option. Without it, you won't be able to SSH into the guest from the host
+or the LAN.</p>
+
+<p>Note 2: you may want to try <code>--network=network=default</code>, assuming that your
+host is configured to forward packets, allow forwarding for the <code>virbr0</code>
+interface, and NAT packets from <code>virbr0</code> to the LAN. For example the
+following might work:</p>
+
+<pre><code>sed -i -e 's/(net.ipv4.ip_forward)=.*/\1=1/' /etc/sysctl.conf
+sysctl -p
+iptables -I FORWARD -i virbr0 -s 192.168.122.0/24 -j ACCEPT
+iptables -t nat -I POSTROUTING -s 192.168.122.0/24 -j MASQUERADE
+</code></pre>
+
+<p>Note 3: if you're using VLANs on your physical LAN interface and you want
+to bridge the virtual machines onto a particular VLAN, you can create a bridge
+device for it like this in <code>/etc/network/interfaces</code>:</p>
+
+<pre><code>iface br219 inet dhcp
+    bridge_ports eth0.219
+</code></pre>
+
+<p>And have your virtual machine join it automatically, tagging its untagged
+traffic, by running <code>virt-install</code> with the option <code>--network=bridge=br219</code>.</p>
+
+<h2>Deleting the virtual machine</h2>
+
+<p>If you make a mistake and you need to delete it and run <code>virt-install</code> again,
+you'll need to run the following commands first:</p>
+
+<pre><code>virsh destroy FreeBSD-Gold
+virsh undefine FreeBSD-Gold
+rm FreeBSD-Gold.img
+</code></pre>
+
+<h2>Installing FreeBSD</h2>
+
+<ul>
+<li>Keymap: UK ISO-8859-1</li>
+<li>Hostname: freebsd-gold.sse.ws.afnog.org</li>
+<li>Distributions: unselect Games, select Ports</li>
+<li>Networking: configure IPv4, use DHCP, no IPv6</li>
+<li>Mirror: <a>ftp://ftp.uk.freebsd.org</a> (or closer if possible)</li>
+<li>Guided partitioning, use entire disk</li>
+<li>Accept the defaults</li>
+<li>Enable <code>ntpd</code> to synchronise virtual machine time with global time</li>
+<li>Set the root password to <code>afnog</code>
+</li>
+<li>Create a user called <code>afnog</code> (password <code>afnog</code>) and invite them to the <code>wheel</code> group</li>
+</ul>
+
+<h2>Post-Installation Step 1</h2>
+
+<p>The minimum necessary to get text console access, which is much more comfortable.</p>
+
+<ul>
+<li>Log into the guest</li>
+<li>Become root using <code>su</code>
+</li>
+<li>Make a backup of <code>/etc/ttys</code>
+</li>
+<li>Edit <code>/etc/ttys</code> (carefully, you might make the system unbootable)</li>
+<li>Find the line starting with <code>ttyu0</code>
+</li>
+<li>Change <code>dialup</code> on that line to <code>xterm</code>
+</li>
+<li>Change <code>off</code> on that line to <code>on</code>
+</li>
+<li>Save changes and run <code>init q</code>
+</li>
+</ul>
+
+<p>On the host, try to connect to this console using:</p>
+
+<pre><code>virsh console FreeBSD-Gold
+</code></pre>
+
+<p>Press Enter and you should see a <code>login:</code> prompt.</p>
+
+<h2>Post-Installation Step 2</h2>
+
+<p>Hopefully with the help of a text console from step 1, run the following
+commands on the guest:</p>
+
+<pre><code>pkg
+pkg install sudo bash
+echo 'fdesc /dev/fd fdescfs rw 0 0' &gt;&gt; /etc/fstab
+mount /dev/fd
+echo 'afnog ALL=(ALL) ALL: ALL' &gt;&gt; /usr/local/etc/sudoers
+chsh -s /usr/local/bin/bash afnog
+mkdir -p /root/.ssh /home/afnog/.ssh
+scp chris@10.0.2.2:.ssh/id_rsa.pub /root/.ssh/authorized_keys
+cp /root/.ssh/authorized_keys /home/afnog/.ssh
+echo 'PermitRootLogin yes' &gt;&gt; /etc/ssh/sshd_config
+/etc/rc.d/sshd restart
+</code></pre>
+
+<p>Please test that you can login to the host using SSH to the <code>root</code> and <code>afnog</code>
+accounts.</p>
+
+<h2>Restarting the Guest</h2>
+
+<p>After shutting down the guest, you can start it again for testing or to make
+changes using this commands:</p>
+
+<pre><code>virsh start FreeBSD-Gold
+</code></pre>
+
+<h2>Creating Clones</h2>
+
+<p>To run a big class you'll need a lot of virtual machine clones. Here's how to
+create 32 clones using the gold image and <code>libvirt</code>.</p>
+
+<p>First, configure your DHCP server to give each guest the correct IP address
+when it boots, so you can log in and manage it. For example, if you're using
+ISC DHCP daemon:</p>
+
+<pre><code>for pc in {1..32}; do
+    hostname=pc$pc
+    ipaddr=196.200.219.$pc
+
+    macaddr=`echo $hostname | md5sum | sed -e 's/^<img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt="..">.*/52:54:\1:\2:\3:\4/'`
+    cat &lt;&lt;EOF
+host $hostname {
+hardware ethernet $macaddr;
+fixed-address $ipaddr;
+}
+EOF
+done
+</code></pre>
+
+<p>And here's how to create the <code>libvirt</code> configurations (note, 32 is too many
+guests for a single host, you probably want to put <code>1..16</code> on one host and
+<code>17..32</code> on another, with 16 GB RAM each):</p>
+
+<pre><code>for pc in {1..32}; do
+    hostname=pc$pc
+    macaddr=`echo $hostname | md5sum | sed -e 's/^<img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt=".."><img src="/_tex.png?type=inline&data=Li4=" alt="..">.*/52:54:\1:\2:\3:\4/'`
+    image=/data/vm/$hostname.img
+    sudo qemu-img create -f qcow2 \
+        -o backing_file=FreeBSD-Gold.img \
+        $image
+    virt-install --connect qemu:///system \
+        --virt-type kvm --name $hostname \
+        --os-variant=freebsd8 --ram 512 --vcpus 1 \
+        --disk path=$image,format=qcow2 \
+        --network=bridge=br219,mac=$macaddr \
+        --graphics type=vnc,listen=0.0.0.0 --import
+done
+</code></pre>
