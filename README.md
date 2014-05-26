@@ -169,10 +169,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#loadbalancing">Load Balancing</a>
 			</td>
 			<td class="wed">
-				<a href="#apache">Apache</a>
+				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="thu">
-				<a href="#dnssec">DNSSEC</a>
+				<a href="#imap-imaps">IMAP/IMAPS</a>
 			</td>
 			<td class="fri">
 				<a href="#security-and-availability">Security and Availability</a><br />
