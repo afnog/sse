@@ -115,7 +115,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				11:30-13:30
 			</td>
 			<td class="mon">
-				<a href="#dns">Apache</a>
+				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
 				<a href="#security-and-availability">Security and Availability</a>
