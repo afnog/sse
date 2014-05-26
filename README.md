@@ -342,7 +342,7 @@ DNSSEC High Level Awareness
 ###### [Presentation/PDF](radius/radius.pdf)
 
 
-### Virtualization 
+### Virtualization
 
 #### [Joel Jaeggli](#JJ) and [Chris Wilson](#CW)
 ###### Virtualization Overview ([PDF](virtualisation/sse-virtualization-overview-2013.pdf)/[OpenOffice](virtualisation/sse-virtualization-overview-2013.odp))
@@ -356,11 +356,11 @@ DNSSEC High Level Awareness
 ###### [Exercise](loadbalancing/ha-proxy-install.txt)
 
 ### Monitoring
-#### [Ayitey Bulley](#AB)
-###### [Monitoring IP Services](monitoring/monitoring-ip-services.pdf)
-###### [Nagios Exercise-1](monitoring/nagios-exercise1.txt)
-###### [Nagios Exercise-2](monitoring/nagios-exercise2.txt)
-###### [Smokeping Exercise](monitoring/smokeping-exercise1.txt)
+#### [Kevin Chege](#KC)
+###### [Monitoring IP Services](nagios/nagios.pdf)
+###### [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
+###### [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
+###### [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
 
 ### Exim
 #### [Chris Wilson](#CW)
@@ -511,6 +511,7 @@ Generated HTML:
 
 Generating the HTML:
 
-* `sudo gem install gollum-site`
+	sudo gem install gollum-site
+
 
 
