@@ -1,0 +1,312 @@
+<p>class: center, middle</p>
+
+<h1 id="cryptography-and-security">Cryptography and Security</h1>
+
+<h2 id="how-to-keep-your-data-safe-a-bit">How to keep your data safe (a bit)</h2>
+
+<h3 id="chris-wilson-aptivatehttpwwwaptivateorg-afnog-2014">Chris Wilson, <a href="http://www.aptivate.org/">Aptivate</a>, AfNOG 2014</h3>
+
+<hr />
+
+<h2 id="credits">Credits</h2>
+
+<p>Based on presentations by:</p>
+
+<ul>
+  <li><a href="http://www.afnog.org/afnog_chix2011/Thursday/MA/CryptographySlides.odp">Marcus Adomey</a> (AfChix, Malawi, 2011)</li>
+  <li><a href="https://nsrc.org/workshops/2013/nsrc-tenet-tut/raw-attachment/wiki/AgendaTrack2">NSRC</a> (NSRC-TENET Workshop, South Africa, 2013)</li>
+</ul>
+
+<p>You can access this presentation at: http://afnog.github.io/sse/crypto/presentation</p>
+
+<p>Download or edit this presentation <a href="https://github.com/afnog/sse/crypto/presentation.md">on GitHub</a>.</p>
+
+<hr />
+
+<h2 id="what-we-can-talk-about">What we can talk about</h2>
+
+<ul>
+  <li>What is security?</li>
+  <li>How secure are you?</li>
+  <li>Attack vectors</li>
+  <li></li>
+</ul>
+
+<hr />
+
+<h2 id="what-do-you-care-about">What do you care about?</h2>
+
+<p>What is security?</p>
+
+<p>–</p>
+
+<ul>
+  <li>Trying to prevent some particular event.</li>
+</ul>
+
+<p>What do you want to prevent? What is the <strong>threat</strong>?</p>
+
+<p>–</p>
+
+<ul>
+  <li>Is your data valuable to someone else?</li>
+  <li>Are your systems valuable to someone else?</li>
+  <li>Can someone cause expensive damage (e.g. death)?</li>
+  <li>What prevents them from doing that?</li>
+</ul>
+
+<p>???</p>
+
+<ul>
+  <li>Is your data valuable to someone else?
+    <ul>
+      <li>Sell it?</li>
+      <li>Blackmail?</li>
+      <li>Steal money or resources?</li>
+      <li>Embarrass somebody important?</li>
+      <li>Threaten to or actually cause downtime?</li>
+    </ul>
+  </li>
+  <li>Are your systems valuable to someone else?
+    <ul>
+      <li>CPU time?</li>
+      <li>Disk space?</li>
+      <li>Network bandwidth?</li>
+      <li>IP addresses?</li>
+      <li>Access to other systems?</li>
+    </ul>
+  </li>
+  <li>What prevents them from doing that? - brainstorm</li>
+</ul>
+
+<hr />
+
+<h2 id="examples-of-security-measures">Examples of security measures</h2>
+
+<p>Make a list of measures that you actually use.</p>
+
+<p>–</p>
+
+<p>For example:</p>
+
+<ul>
+  <li>Locks on doors</li>
+  <li>Security lights</li>
+  <li>Video cameras</li>
+  <li>Passwords</li>
+  <li>Dual signatures</li>
+  <li>Thumb prints</li>
+  <li>Credit card PIN</li>
+  <li>Credit limits</li>
+</ul>
+
+<hr />
+
+<h2 id="how-secure-are-you">How secure are you?</h2>
+
+<p>How would you crack the defensive measures that we just listed?</p>
+
+<hr />
+
+<h2 id="absolute-security">Absolute security</h2>
+
+<blockquote>
+  <p>The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts. - <a href="http://spaf.cerias.purdue.edu/quotes.html">Gene Spafford</a></p>
+</blockquote>
+
+<p>Security is <strong>impossible</strong> if:</p>
+
+<ul>
+  <li>some users have additional rights (privileges)</li>
+  <li>AND you cannot distinguish users using only laws of physics</li>
+  <li>OR you cannot make it physically impossible to violate policy</li>
+</ul>
+
+<hr />
+
+<h2 id="living-with-insecurity">Living with insecurity</h2>
+
+<ul>
+  <li><strong>Can’t</strong> be completely secure</li>
+  <li><strong>Can</strong> make individual attacks:
+    <ul>
+      <li>More expensive</li>
+      <li>More risky</li>
+      <li>Less rewarding</li>
+    </ul>
+  </li>
+  <li>Beware the side effects (systems harder to use)</li>
+  <li>Increase transparency
+    <ul>
+      <li>more eyes on attackers</li>
+      <li>more understanding of what security means</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="reducing-specific-risks">Reducing specific risks</h2>
+
+<ul>
+  <li>Use encrypted communications</li>
+  <li>Use multi-factor authentication</li>
+  <li>Verify authenticity of messages</li>
+  <li>Reduce risks (don’t keep sensitive data)</li>
+  <li>Increase risks for attackers (monitoring and logging)</li>
+</ul>
+
+<hr />
+
+<h2 id="goals-of-system-security">Goals of system security</h2>
+
+<p>Why do you lock your doors?</p>
+
+<ul>
+  <li>Confidentiality</li>
+  <li>Integrity</li>
+  <li>Authentication
+    <ul>
+      <li>Access Control</li>
+      <li>Verification</li>
+      <li>Non-repudiation</li>
+    </ul>
+  </li>
+  <li>Availability</li>
+</ul>
+
+<hr />
+
+<h3 id="confidentiality-secrecy">Confidentiality (secrecy)</h3>
+
+<p>–</p>
+
+<ul>
+  <li>Ensuring that no one can read the message except the intended receiver.</li>
+  <li>Data is kept secret from those without the proper credentials, even if that data travels through an insecure medium.</li>
+  <li>How does this prevent </li>
+</ul>
+
+<hr />
+
+<h3 id="integrity-anti-tampering">Integrity (anti-tampering)</h3>
+
+<p>–</p>
+
+<ul>
+  <li>Assuring the receiver that the received message has not been altered in any way from the original.</li>
+  <li>Preventing unauthorised or undetected changes to the protected system.</li>
+</ul>
+
+<hr />
+
+<h3 id="authentication">Authentication</h3>
+
+<p>–</p>
+
+<ul>
+  <li>The process of proving one’s identity.
+    <ul>
+      <li>The primary forms of host-to-host authentication on the Internet today are name-based or address-based, both of which are notoriously weak.</li>
+    </ul>
+  </li>
+  <li>Cryptography can help establish identity for authentication purposes (how?)</li>
+</ul>
+
+<p>–</p>
+
+<ul>
+  <li>Can prove that you possess a secret</li>
+  <li>Or that you spent a LOT of energy to brute-force it</li>
+</ul>
+
+<hr />
+
+<h3 id="non-repudiation">Non-repudiation</h3>
+
+<p>–</p>
+
+<ul>
+  <li>A mechanism to prove that the sender really sent this message</li>
+</ul>
+
+<hr />
+
+<h2 id="how-do-we-use-cryptography">How do we use cryptography?</h2>
+
+<ul>
+  <li>ssh/scp/sftp</li>
+  <li>SSL/TLS/https</li>
+  <li>pops/imaps/smtps</li>
+  <li>VPNs</li>
+  <li>dnssec</li>
+  <li>wep/wpa</li>
+  <li>digital signatures (software)</li>
+  <li>certificates and pki</li>
+  <li>DRM</li>
+  <li>disk encryption</li>
+</ul>
+
+<hr />
+
+<h2 id="applied-cryptography">Applied Cryptography</h2>
+
+<p><img src="https://www.schneier.com/images/cover-applied-200h.gif" />
+<img src="https://www.schneier.com/images/bruce-blog3.jpg" /></p>
+
+<p>Written by Bruce Schneier. Perhaps the best book around if you
+want to understand how cryptography works.</p>
+
+<p>https://www.schneier.com/book-applied.html</p>
+
+<hr />
+
+<p>class: small</p>
+
+<h2 id="cryptographic-tools">Cryptographic Tools</h2>
+
+<ul>
+  <li>hashes/message digests
+    <ul>
+      <li>MD5, SHA1, SHA256, SHA512</li>
+      <li>collisions</li>
+    </ul>
+  </li>
+  <li>entropy (randomness)</li>
+  <li>keys
+    <ul>
+      <li>symmetric/asymmetric (public/private)</li>
+      <li>length</li>
+      <li>creation</li>
+      <li>distribution</li>
+    </ul>
+  </li>
+  <li>ciphers
+    <ul>
+      <li>block/stream</li>
+      <li>AES, 3DES, Blowfish, IDEA</li>
+    </ul>
+  </li>
+  <li>plaintext/ciphertext</li>
+  <li>password/passphrase</li>
+</ul>
+
+<hr />
+
+<h2 id="ciphers-rarr-ciphertext">Ciphers → ciphertext</h2>
+
+<p>The foundation of all of cryptography:</p>
+
+<ul>
+  <li>We start with <em>plaintext</em>. Something you can read.</li>
+  <li>We apply a mathematical algorithm (<em>cipher</em>) to it.</li>
+  <li>The plaintext is turned in to <em>ciphertext</em>.</li>
+  <li>Almost all ciphers were secret until recently.</li>
+  <li>Creating a secure cipher is HARD.</li>
+</ul>
+
+<hr />
+
+<h2 id="fin">FIN</h2>
+
+<p>Any questions?</p>
