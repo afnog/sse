@@ -1,14 +1,19 @@
 class: center, middle
 
-# Welcome to AfNOG 2014
+# Cryptography and Security
 
-## Welcome to Scalable Internet Services (SS-E)
+## How to keep your data safe (a bit)
 
 ### Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
 
-You can access this presentation at: http://afnog.github.io/sse/intro/presentation
+Based on presentations by:
 
-Download or edit this presentation [on GitHub](https://github.com/afnog/sse/introduction/presentation.md).
+* [Marcus Adomey](http://www.afnog.org/afnog_chix2011/Thursday/MA/CryptographySlides.odp) (AfChix, Malawi, 2011)
+* [NSRC](https://nsrc.org/workshops/2013/nsrc-tenet-tut/raw-attachment/wiki/AgendaTrack2) (NSRC-TENET Workshop, South Africa, 2013)
+
+You can access this presentation at: http://afnog.github.io/sse/crypto/presentation
+
+Download or edit this presentation [on GitHub](https://github.com/afnog/sse/crypto/presentation.md).
 
 ---
 
