@@ -180,7 +180,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 		</tr>
 		<tr class="break">
-			<td></td>
+			<td>18:30-20:30</td>
 			<td colspan="5">Dinner</td>
 		</tr>
 		<tr>
