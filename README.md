@@ -513,7 +513,9 @@ Generated HTML:
 
 Generating the HTML:
 
-If you're using Ruby 1.8, you need to [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/) first.
+If you're using Ruby 1.8, you may need to
+[install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/)
+first.
 
 	sudo gem install jekyll execjs therubyracer
 	jekyll
