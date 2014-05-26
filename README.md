@@ -1,5 +1,4 @@
 ---
-layout: post
 ---
 
 # AfNOG 2014 Workshop on Network Technology
