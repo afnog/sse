@@ -1,0 +1,142 @@
+Testing with stateless connections that do not use a cookie
+
+########################################################
+Testing with stateful connections that do use cookie
+########################################################
+
+Testing with stateless connections that do not use a cookie
+
+########################################################
+Testing with stateful connections that do use cookie
+########################################################
+
+Testing with stateless connections that do not use a cookie
+* Hostname was NOT found in DNS cache
+*   Trying 196.200.216.76...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#0)
+> GET /tiles/tile-0.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 33990
+< Last-Modified: Mon, 26 May 2014 11:36:19 GMT
+< Set-Cookie: EXERCISE2=cookie-for-exercise2-server2; path=/
+< 
+{ [data not shown]
+100 33990  100 33990    0     0  6183k      0 --:--:-- --:--:-- --:--:-- 16.2M
+* Closing connection 0
+* Hostname was found in DNS cache
+*   Trying 196.200.216.76...
+* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#1)
+> GET /tiles/tile-1.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 2365
+< Last-Modified: Mon, 26 May 2014 11:26:05 GMT
+< Set-Cookie: EXERCISE2=cookie-for-exercise2-server1; path=/
+< 
+{ [data not shown]
+100  2365  100  2365    0     0  1589k      0 --:--:-- --:--:-- --:--:-- 1589k
+* Closing connection 1
+* Hostname was found in DNS cache
+*   Trying 196.200.216.76...
+* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#2)
+> GET /tiles/tile-2.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 46727
+< Last-Modified: Mon, 26 May 2014 11:36:19 GMT
+< Set-Cookie: EXERCISE2=cookie-for-exercise2-server2; path=/
+< 
+{ [data not shown]
+100 46727  100 46727    0     0  29.0M      0 --:--:-- --:--:-- --:--:-- 29.0M
+* Closing connection 2
+
+########################################################
+Testing with stateful connections that do use cookie
+########################################################
+
+* Hostname was NOT found in DNS cache
+*   Trying 196.200.216.76...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#0)
+> GET /tiles/tile-0.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> Cookie: EXERCISE2=cookie-for-exercise2-server1
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 1295
+< Last-Modified: Mon, 26 May 2014 11:26:05 GMT
+< 
+{ [data not shown]
+100  1295  100  1295    0     0   225k      0 --:--:-- --:--:-- --:--:--  632k
+* Closing connection 0
+* Hostname was found in DNS cache
+*   Trying 196.200.216.76...
+* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#1)
+> GET /tiles/tile-1.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> Cookie: EXERCISE2=cookie-for-exercise2-server1
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 2365
+< Last-Modified: Mon, 26 May 2014 11:26:05 GMT
+< 
+{ [data not shown]
+100  2365  100  2365    0     0   716k      0 --:--:-- --:--:-- --:--:--  716k
+* Closing connection 1
+* Hostname was found in DNS cache
+*   Trying 196.200.216.76...
+* Connected to 196.200.216.76 (196.200.216.76) port 8080 (#2)
+> GET /tiles/tile-2.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: 196.200.216.76:8080
+> Accept: */*
+> Cookie: EXERCISE2=cookie-for-exercise2-server1
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:05:16 GMT
+< Content-type: image/jpeg
+< Content-Length: 3222
+< Last-Modified: Mon, 26 May 2014 11:26:05 GMT
+< 
+{ [data not shown]
+100  3222  100  3222    0     0  1819k      0 --:--:-- --:--:-- --:--:-- 1819k
+* Closing connection 2
