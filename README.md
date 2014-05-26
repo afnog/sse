@@ -511,6 +511,6 @@ Generated HTML:
 
 Generating the HTML:
 
-
+* `sudo gem install gollum-site`
 
 
