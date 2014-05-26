@@ -19,7 +19,9 @@ Download or edit this presentation [on GitHub](https://github.com/afnog/sse/cryp
 
 ## What we can talk about
 
-* The FreeBSD OS
+* What is security?
+* How secure is your data? (risks and hazards)
+* 
 * Domain Name Services using BIND
 * Web Services using Apache
 * AAA Services using FreeRADIUS
@@ -31,7 +33,25 @@ Download or edit this presentation [on GitHub](https://github.com/afnog/sse/cryp
 
 ---
 
-## What do you want to learn about?
+## How secure is your data?
+
+What do you want to prevent?
+
+* Is your data valuable to someone else?
+  * Sell it?
+  * Blackmail?
+  * Steal money or resources?
+  * Embarrass somebody important?
+  * Threaten to or actually cause downtime?
+* Are your systems valuable to someone else?
+  * CPU time?
+  * Disk space?
+  * Network bandwidth?
+  * IP addresses?
+  * Access to other systems?
+* What prevents them from doing that? - brainstorm
+
+
 
 * https://www.surveymonkey.com/s/7Q88MH7
 
