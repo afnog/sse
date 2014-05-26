@@ -88,7 +88,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	<tbody>
 		<tr>
 			<td class="time">
-				09:30-11:00
+				09:00-11:00
 			</td>
 			<td class="mon">
 				<a href="#introduction">SSE Intro/ee bootcamp</a>
@@ -100,10 +100,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
-				<a href="#exim">Exim</a>
+				<a href="#dns">DNS</a>
 			</td>
 			<td class="fri">
-				<a href="#mail">POP/IMAP</a>
+				<a href="#dns">DNS</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -112,22 +112,22 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 		</tr>
 		<tr>
 			<td class="time">
-				11:30-13:30
+				11:30-13:00
 			</td>
 			<td class="mon">
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#security-and-availability">Security and Availability</a>
+				<a href="#cryptography">Cryptography</a>
 			</td>
 			<td class="wed">
-				<a href="#dns">DNS</a>
+				<a href="#radius">RADIUS</a>
 			</td>
 			<td class="thu">
-				<a href="#exim">Exim</a>
+				<a href="#postfix">Postfix</a>
 			</td>
 			<td class="fri">
-				<a href="#radius">RADIUS</a>
+				<a href="#monitoring-and-logging">Monitoring and Logging</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -136,23 +136,22 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 		</tr>
 		<tr>
 			<td class="time">
-				14:30-16:30
+				14:00-16:00
 			</td>
 			<td class="mon">
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#virtualization">Virtualization</a><br />
-				<a href="#loadbalancing">Load Balancing</a>
+				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
-				<a href="#apache">Apache</a>
+				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
-				<a href="#exim">Exim</a>
+				<a href="#configuration-management">Configuration Management</a>
 			</td>
 			<td class="fri">
-				<a href="#monitoring">Monitoring IP Services</a>
+				<a href="#ip-exploration">IP Exploration</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -161,13 +160,12 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 		</tr>
 		<tr>
 			<td class="time">
-				17:00-19:00
+				16:30-18:30
 			</td>
 			<td class="mon">
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#virtualization">Virtualization</a><br />
 				<a href="#loadbalancing">Load Balancing</a>
 			</td>
 			<td class="wed">
@@ -177,7 +175,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#dnssec">DNSSEC</a>
 			</td>
 			<td class="fri">
-				<a href="#securityavailability">Security & Availability</a><br />
+				<a href="#security-and-availability">Security and Availability</a><br />
 				<a href="#closingsurvey">Closing Survey</a>
 			</td>
 		</tr>
@@ -511,7 +509,10 @@ Generated HTML:
 
 Generating the HTML:
 
+If you're using Ruby 1.8, you need to [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/) first.
+
 	sudo gem install gollum-site
+
 
 
 
