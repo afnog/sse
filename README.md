@@ -191,9 +191,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			<td class="time">
 				Evening Sessions (20:00-22:00)
 			</td>
-			<td colspan="3">Closed</td>
-			<td class="thu">Closed</td>
-			<td class="fri">Closed</td>
+			<td colspan="5">Closed</td>
 		</tr>
 	</tbody>
 </table>
