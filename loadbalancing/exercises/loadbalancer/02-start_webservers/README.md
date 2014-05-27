@@ -9,6 +9,7 @@ Check out the code
 ```sh
 $ cd 
 $ git clone https://github.com/afnog/sse.git
+$ cd sse/loadbalancing/exercises/loadbalancer/02-start_webservers
 ```
 
 Open a terminal and execute:
