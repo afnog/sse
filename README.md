@@ -214,13 +214,13 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
 + Installing Apache22 from FreeBSD ports
-+ Configure Apache with basic configuration 
++ Configure Apache with basic configuration
 + Start Apache http daemon and connect to local box
-+ Verify local ssl certificate works 
-+ Configuring Apache with SSL 
-+ Example SSL Apache configuration file 
++ Verify local ssl certificate works
++ Configuring Apache with SSL
++ Example SSL Apache configuration file
 + Sample config for Virtual Hosting
-+ Install MySQL, PHP, Wordpress	
++ Install MySQL, PHP, Wordpress
 + Configuring Wordpress
 
 ### Security and Cryptography
