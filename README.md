@@ -344,9 +344,8 @@ DNSSEC High Level Awareness
 
 ### RADIUS
 #### [Chris Wilson](#CW)
-###### [Presentation/OpenOffice](radius/radius.odp)
-###### [Presentation/PDF](radius/radius.pdf)
-
+###### [Presentation/OpenOffice](radius/radius_presentation.odp)
+###### [Presentation/PDF]
 
 ### Virtualization
 
