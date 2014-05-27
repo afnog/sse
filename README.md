@@ -104,7 +104,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
-				<a href="#dns">DNS</a>
+				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="fri">
 				<a href="#dns">DNS</a>
@@ -149,7 +149,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security-and-cryptography">Security and Cryptography</a>
 			</td>
 			<td class="wed">
-				<a href="#firewalls">Firewalls</a>
+				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
 				<a href="#configuration-management">Configuration Management</a>
@@ -173,7 +173,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
-				<a href="#ldap">LDAP</a>
+				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
 				<a href="#imap-imaps">IMAP/IMAPS</a>
