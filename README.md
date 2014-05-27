@@ -350,9 +350,9 @@ DNSSEC High Level Awareness
 
 ### Virtualization
 
-#### [Joel Jaeggli](#JJ) and [Chris Wilson](#CW)
-###### Virtualization Overview ([PDF](virtualisation/sse-virtualization-overview-2013.pdf)/[OpenOffice](virtualisation/sse-virtualization-overview-2013.odp))
-###### Virtualization Exercise ([PDF](virtualisation/virt-exer-2013.pdf)/[OpenOffice](virtualisation/virt-exer-2013.odp))
+#### [Laban Mwangi](#LM)
+([PDF](virtualisation/docs/sse-virtualization-overview-2013.pdf)/[OpenOffice](virtualisation/docs/sse-virtualization-overview-2013.odp))
+###### Virtualization Exercise ([TXT](virtualisation/Readmen.md)
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
