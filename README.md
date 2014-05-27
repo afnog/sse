@@ -43,7 +43,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	<tbody>
 		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
-		<tr id="LM"> <td>Laban Mwangi</td> <td>LM</td> <td>Kenya?</td> </tr>
+		<tr id="LM"> <td>Laban Mwangi</td> <td>LM</td> <td>Kenya</td> </tr>
 		<tr id="EN"> <td>Evelyn Namara</td>  <td>EN</td> <td>Uganda</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
 	</tbody>
@@ -104,7 +104,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
-				<a href="#dns">DNS</a>
+				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="fri">
 				<a href="#dns">DNS</a>
@@ -122,7 +122,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#virtualization">Virtualization</a>
+				<a href="#loadbalancing">Load Balancing</a>
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
@@ -146,10 +146,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#cryptography">Cryptography</a>
+				<a href="#security-and-cryptography">Security and Cryptography</a>
 			</td>
 			<td class="wed">
-				<a href="#firewalls">Firewalls</a>
+				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
 				<a href="#configuration-management">Configuration Management</a>
@@ -170,10 +170,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#loadbalancing">Load Balancing</a>
+				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
-				<a href="#ldap">LDAP</a>
+				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
 				<a href="#imap-imaps">IMAP/IMAPS</a>
@@ -191,9 +191,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			<td class="time">
 				Evening Sessions (20:00-22:00)
 			</td>
-			<td colspan="3">Closed</td>
-			<td class="thu">Closed</td>
-			<td class="fri">Closed</td>
+			<td colspan="5">Closed</td>
 		</tr>
 	</tbody>
 </table>
@@ -214,14 +212,18 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
 + Installing Apache22 from FreeBSD ports
-+ Configure Apache with basic configuration 
++ Configure Apache with basic configuration
 + Start Apache http daemon and connect to local box
-+ Verify local ssl certificate works 
-+ Configuring Apache with SSL 
-+ Example SSL Apache configuration file 
++ Verify local ssl certificate works
++ Configuring Apache with SSL
++ Example SSL Apache configuration file
 + Sample config for Virtual Hosting
-+ Install MySQL, PHP, Wordpress	
++ Install MySQL, PHP, Wordpress
 + Configuring Wordpress
+
+### Security and Cryptography
+#### [Chris Wilson](#CW)
+###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 #### [Joe Abley](#JA)
@@ -340,15 +342,14 @@ DNSSEC High Level Awareness
 
 ### RADIUS
 #### [Chris Wilson](#CW)
-###### [Presentation/OpenOffice](radius/radius.odp)
-###### [Presentation/PDF](radius/radius.pdf)
-
+###### [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+###### [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Virtualization
 
-#### [Joel Jaeggli](#JJ) and [Chris Wilson](#CW)
-###### Virtualization Overview ([PDF](virtualisation/sse-virtualization-overview-2013.pdf)/[OpenOffice](virtualisation/sse-virtualization-overview-2013.odp))
-###### Virtualization Exercise ([PDF](virtualisation/virt-exer-2013.pdf)/[OpenOffice](virtualisation/virt-exer-2013.odp))
+#### [Laban Mwangi](#LM)
+##### Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
+###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
