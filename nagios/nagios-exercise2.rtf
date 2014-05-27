@@ -45,7 +45,7 @@
 define host \{\
 	                   use freebsd-server\
                         host_name pcXX\
-                        alias pcXX.sse.ws.afnog.org - some virtual server \
+                        alias My Very Nice Shiny Server thats virtually somewhere  \
                         address 196.200.219.XX\
         \}\
 \
@@ -104,10 +104,10 @@ define host \{\
 \
 1.6 Now restart the nagios service.\
 \
-	$sudo /usr/local/etc/rc.d/nagios restart\
+	$sudo service nagios restart\
 \
 \
-1.6 Check from your nagios page if you can see the new services you just added. \
+1.6 Check your nagios web page to see if you can find the new services you just added. \
 \
 \
 }
