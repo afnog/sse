@@ -225,7 +225,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 ### Cryptography
 #### [Chris Wilson](#CW)
-###### Presentation [HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
+###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 #### [Joe Abley](#JA)
