@@ -122,7 +122,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#cryptography">Cryptography</a>
+				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
@@ -146,7 +146,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#virtualization">Virtualization</a>
+				<a href="#cryptography">Cryptography</a>
 			</td>
 			<td class="wed">
 				<a href="#firewalls">Firewalls</a>
