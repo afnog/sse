@@ -146,7 +146,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#cryptography">Cryptography</a>
+				<a href="#security-and-cryptography">Security and Cryptography</a>
 			</td>
 			<td class="wed">
 				<a href="#firewalls">Firewalls</a>
@@ -223,7 +223,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 + Install MySQL, PHP, Wordpress	
 + Configuring Wordpress
 
-### Cryptography
+### Security and Cryptography
 #### [Chris Wilson](#CW)
 ###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
