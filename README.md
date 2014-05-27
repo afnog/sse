@@ -223,6 +223,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 + Install MySQL, PHP, Wordpress	
 + Configuring Wordpress
 
+### Cryptography
+#### [Chris Wilson](#CW)
+###### [Presentation](http://afnog.github.io/sse/crypto/presentation)
+
 ### DNS
 #### [Joe Abley](#JA)
 ##### Fundamentals
