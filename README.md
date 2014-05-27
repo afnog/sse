@@ -146,7 +146,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#cryptography">Cryptography</a>
+				<a href="#security-and-cryptography">Security and Cryptography</a>
 			</td>
 			<td class="wed">
 				<a href="#firewalls">Firewalls</a>
@@ -214,18 +214,18 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
 + Installing Apache22 from FreeBSD ports
-+ Configure Apache with basic configuration 
++ Configure Apache with basic configuration
 + Start Apache http daemon and connect to local box
-+ Verify local ssl certificate works 
-+ Configuring Apache with SSL 
-+ Example SSL Apache configuration file 
++ Verify local ssl certificate works
++ Configuring Apache with SSL
++ Example SSL Apache configuration file
 + Sample config for Virtual Hosting
-+ Install MySQL, PHP, Wordpress	
++ Install MySQL, PHP, Wordpress
 + Configuring Wordpress
 
-### Cryptography
+### Security and Cryptography
 #### [Chris Wilson](#CW)
-###### Presentation [HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
+###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 #### [Joe Abley](#JA)
@@ -344,13 +344,13 @@ DNSSEC High Level Awareness
 
 ### RADIUS
 #### [Chris Wilson](#CW)
-###### [Presentation/OpenOffice](radius/radius_presentation.odp)
-###### [Presentation/PDF]
+###### [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+###### [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
-([PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp))
+##### Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
 ###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
