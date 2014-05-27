@@ -9,7 +9,8 @@ Layer4:
 
 Open a terminal and execute:
 ```sh
- $ cd layer4
+ $ cd
+ $ cd sse/loadbalancing/exercises/loadbalancer/03-exercise-haproxy-simple/layer4
  $ ls
 ```
 
@@ -38,7 +39,8 @@ Layer7:
 
 Open a terminal and execute:
 ```sh
- $ cd layer7
+ $ cd
+ $ cd sse/loadbalancing/exercises/loadbalancer/03-exercise-haproxy-simple/layer7
  $ ls
 ```
 
