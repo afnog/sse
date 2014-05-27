@@ -225,7 +225,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 ### Cryptography
 #### [Chris Wilson](#CW)
-###### [Presentation](http://afnog.github.io/sse/crypto/presentation)
+###### Presentation [HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 #### [Joe Abley](#JA)
@@ -351,8 +351,8 @@ DNSSEC High Level Awareness
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
-([PDF](virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](virtualisation/docs/sse-virtualization-overview-2014.odp))
-###### Virtualization Exercise ([TXT](virtualisation/Readmen.md)
+([PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp))
+###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
