@@ -352,7 +352,7 @@ DNSSEC High Level Awareness
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
-#### [Joel Jaeggli](#JJ)
+#### [Laban Mwangi](#LM)
 ###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 ###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
