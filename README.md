@@ -271,7 +271,7 @@ Goal: to understand operation of a recursive nameserver
 + Practical Exercise:
   - Debugging DNS Worksheet (with dig +norec ):
     . Students work on their own examples
-+ Configuring a caching nameserver 
++ Configuring a caching n Load Balancingameserver 
   - check /var/named/etc/namedb/named.conf
   - run tcpdump
   - rndc start
@@ -353,9 +353,8 @@ DNSSEC High Level Awareness
 
 ### Load Balancing
 #### [Joel Jaeggli](#JJ)
-###### [Presentation/PDF](loadbalancing/sse-LB-overview.pdf)
-###### [Presentation/OpenOffice](loadbalancing/sse-LB-overview.odp)
-###### [Exercise](loadbalancing/ha-proxy-install.txt)
+###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
+###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Monitoring
 #### [Kevin Chege](#KC)
