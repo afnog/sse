@@ -8,7 +8,7 @@ Check out the code
 
 ```sh
 $ cd 
-$ git clone
+$ git clone https://github.com/afnog/sse.git
 ```
 
 Open a terminal and execute:
