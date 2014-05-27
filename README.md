@@ -122,7 +122,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#virtualization">Virtualization</a>
+				<a href="#loadbalancing">Load Balancing</a>
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
@@ -170,7 +170,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#loadbalancing">Load Balancing</a>
+				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
 				<a href="#ldap">LDAP</a>
