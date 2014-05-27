@@ -16,7 +16,6 @@ it uses other resolvers itself:
 Change the nameservers to the following:
 
   nameserver 196.200.223.10
-  nameserver 196.200.223.11
 
 Do not leave the "nameserver 127.0.0.1" line in the file.
 
