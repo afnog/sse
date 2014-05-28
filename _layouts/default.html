@@ -177,7 +177,10 @@ meeting in Djibouti in May 2014.</p>
 <script type="text/javascript">
 var converter = new Showdown.converter();
 var markdownArea = document.getElementById('markdown');
-markdownArea.innerHTML = converter.makeHtml(markdownArea.innerHTML);
+if (markdownArea)
+{
+	markdownArea.innerHTML = converter.makeHtml(markdownArea.innerHTML);
+}
 </script>
 
 <div class="bottomlinks">
