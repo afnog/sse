@@ -126,7 +126,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
-			</td>
+			</td>pres
 			<td class="thu">
 				<a href="#postfix">Postfix</a>
 			</td>
@@ -281,7 +281,7 @@ Goal: to understand operation of a recursive nameserver
   - query two times - { Look at 'aa' flag, TTL, query time }
   - rndc flush
   - cache is authoritative for 127.0.0.1
-+ What sort of hardware would you choosing when building a DNS cache?		
++ What sort of hardware would you choose when building a DNS cache?		
 + Improving the configuration of a cache NS 
 + Managing a caching nameserver 
 + Practical Exercise:
