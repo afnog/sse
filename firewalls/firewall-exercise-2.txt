@@ -80,7 +80,7 @@ block in log quick on $lan_if inet proto tcp from $neighbour_v4 to $bsd_vm_v4 po
 	OR check the log file
 
 
-	$sudo tcpdump -r -tte /var/log/pflog
+	$sudo tcpdump -tte -r /var/log/pflog
 
 
 	
