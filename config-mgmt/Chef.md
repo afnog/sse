@@ -350,7 +350,7 @@ listen MPISHI :8081
     # Cookie called MPISHI injected into http connections
     cookie MPISHI insert
     server BACKENDSERVER1 127.0.0.1:80 cookie cookie-for-mpishi-server1 check
-EOH>>
+EOH
 
 end
 
