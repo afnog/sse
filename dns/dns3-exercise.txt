@@ -1,0 +1,147 @@
+DNS Exercise 3.1: Setting up a domain
+=====================================
+
+In this exercise, you will create a new domain, _something_.afnog.guru.
+You will create master nameservice on your own machine, and someone else
+will setup their machine to be a slave server for your domain. Then you
+will ask the administrator for the domain above you (bogus.gh) to delegate
+your domain to you.
+
+IMPORTANT! Yesterday we configured named as a cache. Today we will configure
+named as an authority server. Change the configuration of your server so that
+it uses other resolvers itself:
+
+>    # vi /etc/resolv.conf
+
+Change the nameservers to the following:
+
+  nameserver 196.200.223.10
+
+Do not leave the "nameserver 127.0.0.1" line in the file.
+
+Then edit named.conf and disable recursion:
+
+>    # vi /usr/local/etc/namedb/named.conf
+
+  options {
+    recursion no;
+    allow-query { any; };
+  };
+
+We are now ready to start.
+
+
+Exercise
+--------
+
+*   Choose a new domain, write it here:  `___________________.afnog.guru.`  
+    (Do not choose any of the pc names, e.g. `pc23`, as your subdomain,
+    because that would be confusing)
+
+*   Check that the directories you need exist. If they don't, create them:
+
+        # mkdir /usr/local/etc/namedb/master
+        # mkdir /usr/local/etc/namedb/slave
+        # chown bind /usr/local/etc/namedb/slave 
+
+*   Find someone who will agree to be slave for your domain. You must choose
+    someone on a DIFFERENT table to you. (Remember RFC2182: secondaries must
+    be on remote networks). You can have more than one slave if you wish.
+
+*   Create your zone file in `/usr/local/etc/namedb/master/xxxxx.afnog.guru.`
+    (where xxxxxx is your chosen domain)
+
+    >   $TTL 10m
+    >   @       IN     SOA    pcXX.sse.ws.afnog.org.  yourname.example.com. (
+    >                                     2009051200    ; Serial
+    >                                     10m           ; Refresh
+    >                                     10m           ; Retry
+    >                                     4w            ; Expire
+    >                                     10m )         ; Negative
+    > 
+    >               IN      NS      pcXX.sse.ws.afnog.org.   ; master
+    >               IN      NS      pcYY.sse.ws.afnog.org.   ; slave
+    > 
+    >   www         IN      A       196.200.219.X          ; your own IP
+
+    Replace `yourname.example.com.` with your home E-mail address, changing
+    "@" in the e-mail address to "." and adding a "." to the end.
+
+    Don't just copy and paste the text above! If your zone file contains spaces
+    and ">" characters at the beginning of each line, you will have problems!
+
+    We have chosen purposely low values for TTL, refresh, and retry to make
+    it easier to fix problems in the classroom. For a production domain you
+    would use higher values, e.g. `$TTL 1d`
+
+*   Edit `/usr/local/etc/namedb/named.conf` to configure your machine as
+    master for your domain (see slides for information how to do this).
+    It's probably easier to add your "zone" configuration lines right
+    at the end of the named.conf file, to avoid confusion (remember, the
+    FreeBSD package installs a weirdly big named.conf by default)
+
+*   Check that your config file and zone file are valid, and then reload 
+    the nameserver daemon:
+
+        # named-checkconf
+        # named-checkzone xxxxx.afnog.guru. \
+			/usr/local/etc/namedb/master/xxxxx.bogus.gh.
+
+*   If there are any errors, correct them*
+
+        # rndc reload
+        # tail /var/log/messages
+
+*   If there are any errors, correct them*. Some configuration errors can
+    cause the daemon to die completely, in which case you may have to
+    start it again:
+
+        # /etc/rc.d/named restart
+
+*   Assist your slaves to configure themselves as slave for your domain, 
+    and configure yourself as a slave if asked to do so by another table.
+    Again, the instructions for how to do this are on the slides. If you
+    have changed your `named.conf` so that you are a slave for someone
+    else, make sure there are no errors in `/var/log/messages` after you
+    do `rndc reload`.
+
+*   Check that you and your slaves are giving authoritative answers for
+    your domain:
+
+        # dig +norec @196.200.219.X xxxxx.afnog.guru. soa
+        # dig +norec @192.200.219.Y xxxxx.afnog.guru. soa
+
+    Check that you get an AA (authoritative answer) from both, and that
+    the serial numbers match.
+
+*   Now you are ready to request delegation. Bring the following information to
+    the classroom instructor:
+
+        Domain name:          ___________________.afnog.guru.
+
+        Master nameserver:    pc____.sse.ws.afnog.org
+
+        Slave nameserver:     pc____.sse.ws.afnog.org
+
+        Slave nameserver:     pc____.sse.ws.afnog.org (optional)
+
+        Slave nameserver:     pc____.sse.ws.afnog.org (optional)
+
+*   You will not get delegation until the instructor has checked:
+
+    - Your nameservers are all authoritative for your domain
+    - They all have the same SOA serial number
+    - The NS records within the zone match the list of servers you are
+      requesting delegation for
+    - The slave(s) are not on the same desk as you
+
+*   Once you have delegation, try to resolve www.xxxxx.bogus.gh.:
+
+    - On your own machine
+    - On someone else's machine (who is not slave for you)
+    - On a machine elsewhere on the Internet, if you have access to one
+    - Using Google Public DNS, 8.8.8.8 8.8.4.4
+
+*   Add a new resource record to your zone file. Remember to update the
+    serial number. Check that your slaves have updated. Try resolving this
+    new name from elsewhere.

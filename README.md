@@ -104,7 +104,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
-				<a href="#dns">DNS</a>
+				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="fri">
 				<a href="#dns">DNS</a>
@@ -126,7 +126,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
-			</td>
+			</td>pres
 			<td class="thu">
 				<a href="#postfix">Postfix</a>
 			</td>
@@ -146,10 +146,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#security">Nagios</a>
 			</td>
 			<td class="tue">
-				<a href="#cryptography">Cryptography</a>
+				<a href="#security-and-cryptography">Security and Cryptography</a>
 			</td>
 			<td class="wed">
-				<a href="#firewalls">Firewalls</a>
+				<a href="#dns">DNS</a>
 			</td>
 			<td class="thu">
 				<a href="#configuration-management">Configuration Management</a>
@@ -173,7 +173,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#virtualization">Virtualization</a>
 			</td>
 			<td class="wed">
-				<a href="#ldap">LDAP</a>
+				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
 				<a href="#imap-imaps">IMAP/IMAPS</a>
@@ -191,9 +191,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			<td class="time">
 				Evening Sessions (20:00-22:00)
 			</td>
-			<td colspan="3">Closed</td>
-			<td class="thu">Closed</td>
-			<td class="fri">Closed</td>
+			<td colspan="5">Closed</td>
 		</tr>
 	</tbody>
 </table>
@@ -214,18 +212,18 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
 + Installing Apache22 from FreeBSD ports
-+ Configure Apache with basic configuration 
++ Configure Apache with basic configuration
 + Start Apache http daemon and connect to local box
-+ Verify local ssl certificate works 
-+ Configuring Apache with SSL 
-+ Example SSL Apache configuration file 
++ Verify local ssl certificate works
++ Configuring Apache with SSL
++ Example SSL Apache configuration file
 + Sample config for Virtual Hosting
-+ Install MySQL, PHP, Wordpress	
++ Install MySQL, PHP, Wordpress
 + Configuring Wordpress
 
-### Cryptography
+### Security and Cryptography
 #### [Chris Wilson](#CW)
-###### Presentation [HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
+###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 #### [Joe Abley](#JA)
@@ -283,7 +281,7 @@ Goal: to understand operation of a recursive nameserver
   - query two times - { Look at 'aa' flag, TTL, query time }
   - rndc flush
   - cache is authoritative for 127.0.0.1
-+ What sort of hardware would you choosing when building a DNS cache?		
++ What sort of hardware would you choose when building a DNS cache?		
 + Improving the configuration of a cache NS 
 + Managing a caching nameserver 
 + Practical Exercise:
@@ -344,20 +342,37 @@ DNSSEC High Level Awareness
 
 ### RADIUS
 #### [Chris Wilson](#CW)
-###### [Presentation/OpenOffice](radius/radius_presentation.odp)
-###### [Presentation/PDF]
+###### [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+###### [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
-([PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp))
+##### Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
 ###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
+
+
+
 
 ### Load Balancing
 #### [Laban Mwangi](#LM)
 ###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 ###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
+
+### Firewalls
+#### [Kevin Chege](#KC)
+
+Goal: To understand firewalls and how the PF (Packet Filter) works
+
++ Block outgoing traffic on IPv6 and IPv4
++ Block incoming traffic on IPv6 and IPv4
++ Log the blocked traffic
+
+###### [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
+###### [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
+###### [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+
 
 ### Monitoring
 #### [Kevin Chege](#KC)
