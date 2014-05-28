@@ -352,10 +352,19 @@ DNSSEC High Level Awareness
 ###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
+
+
+
 ### Load Balancing
 #### [Laban Mwangi](#LM)
 ###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 ###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
+
+### Firewalls
+#### [Kevin Chege](#KC)
+###### [FreeBSD Firewalls](firewalls/FreeBSD-firewalls.pdf)
+###### [PacketFilter Firewall Exercise-1] (firewalls/firewall-exercise1.txt)
+###### [PacketFilter Firewall Exercise-2] (firewalls/firewall-exercise2.txt)
 
 ### Monitoring
 #### [Kevin Chege](#KC)
