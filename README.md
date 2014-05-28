@@ -127,7 +127,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
-			</td>pres
+			</td>
 			<td class="thu">
 				<a href="#postfix">Postfix</a>
 			</td>
