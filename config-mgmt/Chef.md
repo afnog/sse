@@ -226,7 +226,7 @@ $ echo """
 # Happy path does not work on FreeBSD10
 # package 'bash' { action :install }
 
-# Luckily, we can shell exec
+# Shell exec exists... :)
 execute 'install bash via pkgng' do
     command 'pkg install bash'
     not_if 'pkg info | grep "^bash-"'
@@ -255,7 +255,7 @@ $ mkdir -p $HOME/chef/cookbooks/install_security_packages/recipes
 $ ee  $HOME/chef/cookbooks/install_security_packages/recipes/default.rb
 ```
 
-* Paste the following into your edit
+* Paste the following into your editor (ee)
 ```
 # Install the following packages: nmap, tshark, stunnel and tcpdump.
 
@@ -282,5 +282,121 @@ $ sudo chef-solo -c $HOME/chef/solo.rb
 * You should now have tshark, nmap, tcpdump and stunnel installed
 
 
-### Load balancing. Yup, we can do it!
+## Load balancing. Yup, we can do it!
+This recipe does the following:
+* Makes sure that HAProxy is installed.
+* Makes sure that Apache is installed.
+
+* Drops a config for haproxy on the fs.
+* Make sure that HAProxy is enabled in /etc/rc.conf
+* Make sure that Apache is enabled in /etc/rc.conf
+
+* Drops a file on Apache's webroot.
+* Starts Apache.
+* Starts the HAProxy on port 8081
+* Tests that we can retrieve the file via the LB from apache.
+
+
+```sh
+$ cd $HOME
+
+$ mkdir -p $HOME/chef/cookbooks/loadbalancing/recipes/
+
+```
+
+* Add the recipe to a recipe file
+
+```
+% ee $HOME/chef/cookbooks/loadbalancing/recipes/default.rb
+
+########### Paste the following into the file opened above ###############
+# Make sure that we have haproxy and apache installed
+%w[apache haproxy].each do |package|
+    execute "install #{package} via pkgng" do
+        command "pkg install #{package}"
+        not_if "pkg info | grep ^#{package}-"
+    end
+end
+
+# Templates are the preferred route.
+# Don't do this in production..
+file '/usr/local/etc/haproxy.conf' do
+  owner 'nobody'
+  group 'nobody'
+  mode 0644
+  action :create
+  content <<-EOH
+global
+    maxconn 4096
+    daemon
+
+defaults
+    retries 3
+    option redispatch
+    contimeout 5000
+    clitimeout 50000
+    srvtimeout 50000
+
+listen MPISHI :8081
+    mode http
+    balance roundrobin
+    option http-server-close
+    timeout http-keep-alive 3000
+    option httpchk GET /test.html
+    stats enable
+    stats uri /stats
+    stats realm afnog\ loadbalancer
+    stats auth afnog:success
+    # Cookie called MPISHI injected into http connections
+    cookie MPISHI insert
+    server BACKENDSERVER1 127.0.0.1:80 cookie cookie-for-mpishi-server1 check
+EOH>>
+
+end
+
+## Let's make sure that /etc/rc.conf has haproxy and apache enabled
+
+# We'll use a ruby shell exec block. It's a hack but it works
+# Don't do this in production!
+# See http://docs.opscode.com/resource_execute.html
+#%w[haproxy_enable apache22_enable].each do |daemon_enable_directive|
+#    execute "Attempting to enable service: #{daemon_enable_directive}" do
+#        command "grep -q 2>/dev/null '#{daemon_enable_directive}' /etc/rc.conf || echo #{daemon_enable_directive}='YES' > /etc/rc.conf"
+#        # Piping saves us from escape hell
+#        not_if "grep '^#{daemon_enable_directive}' /etc/rc.conf | grep YES"
+#    end
+#end
+
+# Service resource allows us to do service management easily
+# Enable and start services.
+# See http://docs.opscode.com/resource_service.html
+%w[haproxy apache22].each do |service|
+    service "service: #{service}" do
+      action [ :enable, :start ]
+    end
+end
+
+# Create marker file for haproxy to detect
+file '/usr/local/www/apache22/data/test.html' do
+  owner 'root'
+  group 'wheel'
+  mode 0644
+  action :create
+  content "Server is OK..."
+end
+
+```
+
+* Adjust the runlist for the node
+``` sh
+# Now let's have some sed fun. Text replacement w/out using an editor
+# This should be run once and only once!
+$ cat $HOME/chef/node.json
+$ sed -ie 's/\]$/, "recipe[loadbalancing]" ]/' $HOME/chef/node.json
+$ cat $HOME/chef/node.json
+
+
+# Run chef-solo
+$ sudo chef-solo -c $HOME/chef/solo.rb
+```
 
