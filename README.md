@@ -1,5 +1,6 @@
 ---
 jekyll: process
+layout: default
 ---
 
 # AfNOG 2014 Workshop on Network Technology
@@ -22,7 +23,7 @@ Jump within this page:
 ## Introduction
 
 This course on Scalable Internet Services is part of the [AfNOG 2014 Workshop on Network Technology](http://www.ws.afnog.org/afnog2014), held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
-in Djibouti, May-June 2014.</p>
+in Djibouti, May-June 2014.
 
 We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the configuration and operation of large scale Internet services.
 
@@ -126,7 +127,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
-			</td>pres
+			</td>
 			<td class="thu">
 				<a href="#postfix">Postfix</a>
 			</td>
@@ -199,13 +200,17 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ## Topics
 
 ### Introduction
+
 #### [Chris Wilson](#CW)
+
 ###### [Presentation](http://afnog.github.io/sse/intro/presentation)
 ###### [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
 ###### [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
 
 ### Apache
+
 #### [Evelyn Namara](#EN)
+
 ###### Apache Presentation/PowerPoint
 ###### [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
 ###### [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
@@ -222,12 +227,17 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 + Configuring Wordpress
 
 ### Security and Cryptography
+
 #### [Chris Wilson](#CW)
+
 ###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
+
 #### [Joe Abley](#JA)
+
 ##### Fundamentals
+
 ###### [PowerPoint](dns/dns1-presentation.ppt)
 ###### [PDF](dns/dns1-presentation.pdf)
 ###### [Exercise](dns/dns1-exercise.txt)
@@ -352,15 +362,13 @@ DNSSEC High Level Awareness
 ###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
-
-
-
 ### Load Balancing
 #### [Laban Mwangi](#LM)
 ###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 ###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Firewalls
+
 #### [Kevin Chege](#KC)
 
 Goal: To understand firewalls and how the PF (Packet Filter) works
@@ -375,21 +383,28 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 
 ### Monitoring
+
 #### [Kevin Chege](#KC)
+
 ###### [Monitoring IP Services](nagios/nagios.pdf)
 ###### [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
 ###### [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
 ###### [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
 
+
 ### Exim
+
 #### [Chris Wilson](#CW)
+
 ###### [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)  
 ###### [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
 ###### [EICAR Anti-Virus Test File](exim/eicar)
 ###### [Sample spam message](exim/spam.txt)
 
 ### Mail
+
 #### [Michuki Mwangi](#MM)
+
 ##### Introduction to POP and IMAP
 ###### [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
 ###### [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
@@ -409,6 +424,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
   - Configuring Exim for Virtual Users 
 
 ##### Webmail using Squirrelmail
+
 ###### [Presentation/PDF](mail/squirrelmail.pdf)
 ###### [Presentation/PowerPoint](mail/squirrelmail.ppt)
 
@@ -419,6 +435,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
   - Redirecting http to https
 
 ##### Scaling mail services
+
 ###### [Mail Server Clustering](mail/clustering.htm)
 ###### [Mail Server Scalability](mail/scalability.htm)
 
@@ -437,12 +454,16 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
   - FreeBSD NFS 
 
 ### Security and Availability
+
 #### [Joel Jaeggli](#JJ)
+
 ###### [Presentation/PDF](security/sse-sec-and-availability.pdf)
 ###### [Presentation/ODP](security/sse-sec-and-availability.odp)
 
 ### Closing Survey
+
 #### [Joel Jaeggli](#JJ)
+
 ###### [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
 ###### [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
 
