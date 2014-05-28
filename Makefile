@@ -12,7 +12,7 @@ help:
 
 # Directories where various files should be found or written to:
 SRC_DIR = .
-DST_DIR = ../afnog.github.io
+DST_DIR = afnog.github.io
 TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
