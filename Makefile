@@ -123,7 +123,8 @@ debug:
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
 PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.md,$(PRESO_SOURCES))
-afnog.github.io: run_jekyll_first $(PRESOS_HTML_OUTPUTS)
+afnog.github.io: run_jekyll_first
+# $(PRESOS_HTML_OUTPUTS)
 
 run_jekyll_first:
 	$(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
