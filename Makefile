@@ -130,7 +130,8 @@ run_jekyll_first:
 	  --destination $(PROJECT_DIR_ABS)/$(DST_DIR)
 
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
-
+	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
+		> $@
 
 clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
