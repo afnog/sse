@@ -1,4 +1,4 @@
-DEFAULT_TARGETS = presos_odp presos_pdf docs_pdf guides_pdf
+DEFAULT_TARGETS = afnog.github.io
 all: $(DEFAULT_TARGETS)
 clean:
 	rm -rf $(DST_DIR)
@@ -8,22 +8,11 @@ help:
 	@echo 
 	@echo "Targets:"
 	@echo "  all:        Build the usual suspects [$(DEFAULT_TARGETS)]"
-	@echo "  clean:      Delete the output directory [output] and all contents"
-	@echo "  presos_odp: Make .odp files for presentations"
-	@echo "  presos_odp_clean:"
-	@echo "              Delete .odp files for presentations"
-	@echo "  presos_odp_force:"
-	@echo "              Delete and rebuild all .odp files for presentations"
-	@echo "  presos_pdf, presos_pdf_clean, presos_pdf_force:"
-	@echo "              Similarly for .pdf files for presentations"
-	@echo "  docs_pdf, docs_pdf_clean, docs_pdf_force:"
-	@echo "              Similarly for .pdf files for documents (exercises and manuals)"
-	@echo "  guides_pdf, guides_pdf_clean, guides_pdf_force:"
-	@echo "              Similarly for .pdf files for guide/study documents"
+	@echo "  clean:      Delete the output directory [$(DST_DIR)] and all contents"
 
 # Directories where various files should be found or written to:
-SRC_DIR = src
-DST_DIR = output
+SRC_DIR = .
+DST_DIR = ../afnog.github.io
 TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
@@ -36,12 +25,7 @@ INVERT_PATH = $(shell echo $(call REMOVE_TRAILING_SLASH,$(1)) | sed -e 's|[^/]*|
 RELATIVE_URL_TARGET_TO_ROOT = $(call INVERT_PATH,$(dir $@))
 
 # Automatically find all the presentation and guide input files.
-PRESOS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Presentation*.rst)
-GUIDES = $(wildcard $(SRC_DIR)/*/*.rst) \
-         $(wildcard $(SRC_DIR)/Network_Management/One_Week_Training_Course/*.rst)
-EXERS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Exercises.rst)
-MANUALS = $(wildcard $(SRC_DIR)/*/Unit_*/Unit_*_Manual.rst)
-SOURCE_DIRS = $(wildcard $(SRC_DIR)/*/Unit_*)
+PRESO_SOURCES = $(shell find $(SRC_DIR) -name presentation.md)
 
 # Ways of hiding commands. Show the full command when you run "make V=1",
 # otherwise just the name of the command and the output file.
@@ -60,6 +44,7 @@ QUIET = $(if $(V), $3, @ printf "  [%.8s] $2\n" $1 && $3)
 PANDOC_BIN  = pandoc
 RST2PDF_BIN = PYTHONPATH=tools/rst2pdf-0.93 python tools/rst2pdf-0.93/rst2pdf/createpdf.py
 RST2ODP_BIN = PYTHONPATH=tools/rst2odp      python tools/rst2odp/bin/rst2odp
+JEKYLL_BIN  = jekyll
 
 # Document processing commands for each output format.
 PANDOC_COMMON = $(PANDOC_BIN) --data-dir=. --smart \
@@ -68,8 +53,6 @@ PANDOC_COMMON = $(PANDOC_BIN) --data-dir=. --smart \
 PANDOC_PDF_BEAMER = $(PANDOC_COMMON) -t beamer --latex-engine=xelatex \
 	--toc --toc-depth=4 \
 	--template=$(TEMPLATES_DIR)/beamer.tex --variable handout=1
-# ".. include::" doesn't work, so work around it with the -B option:
-# https://groups.google.com/forum/?fromgroups=#!topic/pandoc-discuss/75zqDF9ZMkg
 PANDOC_PDF_READABLE = $(PANDOC_COMMON) -t latex --latex-engine=xelatex \
 	--toc --toc-depth=4 \
 	--template=$(TEMPLATES_DIR)/readable.tex --variable handout=1 \
@@ -81,6 +64,8 @@ RST2PDF = $(RST2PDF_BIN) \
 	--smart-quotes=1
 RST2ODP = $(RST2ODP_BIN) --traceback \
 	--template-file=$(TEMPLATES_DIR)/presentation.odp
+JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
+	  --destination $(PROJECT_DIR_ABS)/$(DST_DIR)
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
@@ -138,6 +123,11 @@ debug:
 	@echo PRESO_ODP_FILES = $(PRESO_ODP_FILES)
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
+
+afnog.github.io: run_jekyll_first $(call ONE_TARGET_FILE_PER_SOURCE_FILE,src/Network_Management/Unit_1/Unit_1_Presentation.rst,src,.rst,output,.pdf)
+
+run_jekyll_first:
+	$(JEKYLL)
 
 PRESO_ODP_FILES = $(call FILES_PATTERN,.odp,$(PRESOS))
 presos_odp: $(PRESO_ODP_FILES)
