@@ -4,7 +4,7 @@ DNS Exercise 3.1: Setting up a domain
 In this exercise, you will create a new domain, _something_.afnog.guru.
 You will create master nameservice on your own machine, and someone else
 will setup their machine to be a slave server for your domain. Then you
-will ask the administrator for the domain above you (bogus.gh) to delegate
+will ask the administrator for the domain above you (afnog.guru) to delegate
 your domain to you.
 
 IMPORTANT! Yesterday we configured named as a cache. Today we will configure
