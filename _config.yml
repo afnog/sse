@@ -1,4 +1,4 @@
-include: README.html
+include: ["README.html"]
 
 defaults:
   -
