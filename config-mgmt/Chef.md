@@ -209,7 +209,7 @@ end
 # Compare the file before and after by running cat
 # This should be run once and only once!
 $ cat $HOME/chef/node.json
-$ sed -ie 's/\]$/, "recipe[user_management_101]" ]/' $HOME/chef/node.json
+$ grep -q user_management_101 $HOME/chef/node.json || sed -ie 's/\]$/, "recipe[user_management_101]" ]/' $HOME/chef/node.json
 $ cat $HOME/chef/node.json
 
 
@@ -239,7 +239,7 @@ end
 # Compare the file before and after by running cat
 # This should be run once and only once!
 $ cat $HOME/chef/node.json
-$ sed -ie 's/\]$/, "recipe[install_bash]" ]/' $HOME/chef/node.json
+$ grep -q  install_bash $HOME/chef/node.json || sed -ie 's/\]$/, "recipe[install_bash]" ]/' $HOME/chef/node.json
 $ cat $HOME/chef/node.json
 
 
@@ -272,7 +272,7 @@ end
 # Now let's have some sed fun. Text replacement w/out using an editor
 # This should be run once and only once!
 $ cat $HOME/chef/node.json
-$ sed -ie 's/\]$/, "recipe[install_security_packages]" ]/' $HOME/chef/node.json
+$ grep -q  install_security_packages $HOME/chef/node.json || sed -ie 's/\]$/, "recipe[install_security_packages]" ]/' $HOME/chef/node.json
 $ cat $HOME/chef/node.json
 
 
@@ -380,7 +380,7 @@ end
 # Now let's have some sed fun. Text replacement w/out using an editor
 # This should be run once and only once!
 $ cat $HOME/chef/node.json
-$ sed -ie 's/\]$/, "recipe[loadbalancing]" ]/' $HOME/chef/node.json
+$ grep -q  loadbalancing $HOME/chef/node.json || sed -ie 's/\]$/, "recipe[loadbalancing]" ]/' $HOME/chef/node.json
 $ cat $HOME/chef/node.json
 
 
@@ -390,6 +390,6 @@ $ sudo chef-solo -c $HOME/chef/solo.rb
 
 You should now have an apache server with a loadbalancer infront of it.
 To test, visit:
-* http://pc32.sse.ws.afnog.org:8081
+* http://pcXX.sse.ws.afnog.org:8081
 * http://pcXX.sse.ws.afnog.org:8081/stats
 ** Login in with user:afnog  password:success
