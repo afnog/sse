@@ -1,3 +1,7 @@
+---
+jekyll: process
+---
+
 # AfNOG 2014 Workshop on Network Technology
 
 ## Track SS-E: Scalable Internet Services
