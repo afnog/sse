@@ -1,0 +1,49 @@
+; these are zones that have been delegated from the afnog.guru zone
+; to student servers. Apologies if I mis-read anybody's handwriting.
+
+$ORIGIN afnog.guru.
+
+aang                   NS      pc5.sse.ws.afnog.org.
+                       NS      pc6.sse.ws.afnog.org.
+                       NS      pc8.sse.ws.afnog.org.
+
+bukkie                 NS      pc6.sse.ws.afnog.org.
+                       NS      pc9.sse.ws.afnog.org.
+
+caleb                  NS      pc5.sse.ws.afnog.org.
+                       NS      pc6.sse.ws.afnog.org.
+                       NS      pc7.sse.ws.afnog.org.
+                       NS      pc9.sse.ws.afnog.org.
+
+habari                 NS      pc11.sse.ws.afnog.org.
+                       NS      pc12.sse.ws.afnog.org.
+
+mae                    NS      pc2.sse.ws.afnog.org.
+                       NS      pc13.sse.ws.afnog.org.
+
+martin                 NS      pc2.sse.ws.afnog.org.
+                       NS      pc13.sse.ws.afnog.org.
+
+max                    NS      pc2.sse.ws.afnog.org.
+                       NS      pc3.sse.ws.afnog.org.
+
+ndama                  NS      pc11.sse.ws.afnog.org.
+                       NS      pc12.sse.ws.afnog.org.
+
+noc                    NS      pc1.sse.ws.afnog.org.
+                       NS      pc20.sse.ws.afnog.org.
+
+praise                 NS      pc10.sse.ws.afnog.org.
+                       NS      pc16.sse.ws.afnog.org.
+
+ryta                   NS      pc5.sse.ws.afnog.org.
+                       NS      pc6.sse.ws.afnog.org.
+                       NS      pc7.sse.ws.afnog.org.
+                       NS      pc9.sse.ws.afnog.org.
+
+som                    NS      pc6.sse.ws.afnog.org.
+                       NS      pc8.sse.ws.afnog.org.
+                       NS      pc15.sse.ws.afnog.org.
+
+suin                   NS      pc8.sse.ws.afnog.org.
+                       NS      pc15.sse.ws.afnog.org.
