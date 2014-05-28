@@ -122,7 +122,7 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.md,$(PRESO_SOURCES))
+PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 afnog.github.io: run_jekyll_first
 # $(PRESOS_HTML_OUTPUTS)
 
