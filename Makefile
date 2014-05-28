@@ -124,74 +124,14 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-afnog.github.io: run_jekyll_first $(call ONE_TARGET_FILE_PER_SOURCE_FILE,$(PRESO_SOURCES),$(SRC_DIR),.md,$(DST_DIR),.html)
+PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.md,$(PRESO_SOURCES))
+afnog.github.io: run_jekyll_first $(PRESOS_HTML_OUTPUTS)
 
 run_jekyll_first:
 	$(JEKYLL)
 
-PRESO_ODP_FILES = $(call FILES_PATTERN,.odp,$(PRESOS))
-presos_odp: $(PRESO_ODP_FILES)
-# $(PRESO_ODP_FILES): $(call MAKE_PATTERN,.odp)
-$(PRESO_ODP_FILES): $(DST_DIR)/%.odp: $(SRC_DIR)/% $(TEMPLATES_DIR)/presentation.odp
-	$(CREATE_DESTDIR)
-	$(LINK_IMAGES)
-	$(RST2ODP_V) $< $@
-	$(UNLINK_IMAGES)
-presos_odp_clean:
-	$(RM_V) $(PRESO_ODP_FILES)
-
-NOTES_FILE = Facilitators_Notes.pdf
-NOTES_INTERMED = $(NOTES_FILE).src.rst
-PRESO_PDF_FILES = $(call FILES_PATTERN,/$(NOTES_FILE),$(SOURCE_DIRS))
-
-presos_pdf: $(PRESO_PDF_FILES)
-$(PRESO_PDF_FILES): %/$(NOTES_FILE): %/$(NOTES_INTERMED)
-	$(CREATE_DESTDIR)
-	$(RST2PDF_V) -o $@ $^
-
-# rst2pdf only supports one input file, so we must combine them first
-PRESO_PDF_INTERMEDS = $(call FILES_PATTERN,/$(NOTES_INTERMED),$(SOURCE_DIRS))
-# can't tell if a file has been deleted, so always rebuild the pdfs
-
-.PHONY: $(PRESO_PDF_INTERMEDS)
-$(PRESO_PDF_INTERMEDS): $(DST_DIR)/%/$(NOTES_INTERMED):
-# Create the intermediate files, output/Network_Management/Unit_XX/pdf.src.rst
-# by catting the source files together; and also symlinks to the includes and
-# images directory, so that rst2pdf can find images and files referenced by the
-# input files, although it's working in a different directory.
-	$(CREATE_DESTDIR)
-	$(SILENT) cat $(SRC_DIR_FOR_CURRENT_TARGET)/Unit_*_Presentation*.rst > $@
-# replace PNGs with SVGs for high-res graphics in PDFs
-# $(SILENT) for png in `grep 'images/.*png' $@ | sed -e 's/.*:: //' | sort | uniq`; do svg=`echo $$png | sed -e 's/\.png$$/.svg/'`; if test -r $(@D)/$$svg; then sed -i -e "s|$$png|$$svg|" $@; fi; done
-# create symlinks for images and includes directories in output dirs
-	$(RM_V)   $(DST_DIR_FOR_CURRENT_TARGET)/images
-	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR_FOR_CURRENT_TARGET)/images $(DST_DIR_FOR_CURRENT_TARGET)/images
-	$(RM_V)   $(DST_DIR)/Network_Management/includes
-	$(SILENT) ln -sf $(PROJECT_DIR_ABS)/$(SRC_DIR)/Network_Management/includes 	$(DST_DIR)/Network_Management/includes
-
-presos_pdf_clean:
-	$(RM_V) $(PRESO_PDF_FILES) $(PRESO_PDF_INTERMEDS)
-
-EXER_PDF_FILES = $(call FILES_PATTERN,.pdf,$(EXERS))
-MANUAL_PDF_FILES = $(call FILES_PATTERN,.pdf,$(MANUALS))
-DOC_PDF_FILES = $(EXER_PDF_FILES) $(MANUAL_PDF_FILES)
-docs_pdf: $(DOC_PDF_FILES)
-$(DOC_PDF_FILES): $(call MAKE_PATTERN,.pdf)
-	$(CREATE_DESTDIR)
-	$(LINK_IMAGES)
-	$(RST2PDF_V) $^ -o $@
-	$(UNLINK_IMAGES)
-docs_pdf_clean:
-	$(RM_V) $(DOC_PDF_FILES)
+$(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 
 
-GUIDE_PDF_FILES = $(call FILES_PATTERN,.pdf,$(GUIDES))
-guides_pdf: $(GUIDE_PDF_FILES)
-$(GUIDE_PDF_FILES): $(call MAKE_PATTERN,.pdf)
-	$(CREATE_DESTDIR)
-	$(LINK_IMAGES)
-	$(RST2PDF_V) $^ -o $@
-	$(UNLINK_IMAGES)
-guides_pdf_clean:
-	$(RM_V) $(GUIDE_PDF_FILES)
-
+clean:
+	rm -f $(PRESOS_HTML_OUTPUTS)
