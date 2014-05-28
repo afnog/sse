@@ -363,8 +363,8 @@ DNSSEC High Level Awareness
 ### Firewalls
 #### [Kevin Chege](#KC)
 ###### [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
-###### [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
-###### [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-1.txt)
+###### [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+
 
 ### Monitoring
 #### [Kevin Chege](#KC)
