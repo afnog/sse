@@ -228,7 +228,7 @@ $ echo """
 
 # Shell exec exists... :)
 execute 'install bash via pkgng' do
-    command 'pkg install bash'
+    command 'pkg install -y bash'
     not_if 'pkg info | grep "^bash-"'
 end
 
