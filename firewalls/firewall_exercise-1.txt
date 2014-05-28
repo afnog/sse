@@ -8,7 +8,7 @@ Firewall exercise 1
 
 2. Now enable PF in /etc/rc.conf as follows by editing /etc/rc.conf with ee:
 	
-	$sudo ee /etc/pf.conf
+	$sudo ee /etc/rc.conf
 	
 	#########PF Startup######
 	
