@@ -126,7 +126,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
-			</td>
+			</td>pres
 			<td class="thu">
 				<a href="#postfix">Postfix</a>
 			</td>
@@ -281,7 +281,7 @@ Goal: to understand operation of a recursive nameserver
   - query two times - { Look at 'aa' flag, TTL, query time }
   - rndc flush
   - cache is authoritative for 127.0.0.1
-+ What sort of hardware would you choosing when building a DNS cache?		
++ What sort of hardware would you choose when building a DNS cache?		
 + Improving the configuration of a cache NS 
 + Managing a caching nameserver 
 + Practical Exercise:
@@ -352,10 +352,27 @@ DNSSEC High Level Awareness
 ###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
 ###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
+
+
+
 ### Load Balancing
 #### [Laban Mwangi](#LM)
 ###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 ###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
+
+### Firewalls
+#### [Kevin Chege](#KC)
+
+Goal: To understand firewalls and how the PF (Packet Filter) works
+
++ Block outgoing traffic on IPv6 and IPv4
++ Block incoming traffic on IPv6 and IPv4
++ Log the blocked traffic
+
+###### [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
+###### [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
+###### [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+
 
 ### Monitoring
 #### [Kevin Chege](#KC)

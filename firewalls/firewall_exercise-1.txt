@@ -1,0 +1,216 @@
+Firewall exercise 1
+
+
+1. PF is installed by default in FreeBSD but is not loaded in the kernel. We will load it as well as pflog which we will use to log the rules on the firewall
+	
+	$sudo kldload pf pflog
+
+
+2. Now enable PF in /etc/rc.conf as follows by editing /etc/rc.conf with ee:
+	
+	$sudo ee /etc/pf.conf
+	
+	#########PF Startup######
+	
+	pflog_enable=YES                                                   
+	pf_enable=YES                                                      
+	pf_rules="/etc/pf.conf"                                            
+	pflog_logfile="/var/log/pflog" 
+	
+	#####END OF PF STARTUP ########
+
+	Save and exit the file. Also, create the file that PF will log to:
+		
+	$sudo touch /var/log/pflog
+
+
+
+3. Now add a few rules into the PF file /etc/pf.conf 
+
+	$sudo ee /etc/pf.conf
+
+	Then paste the following ruleset replacing XX as indicated with the required values
+	
+
+#########PF RULES####
+	
+lan_if="em0"						#Your FreeBSD Network Card
+afnog_v4="196.200.208.0/20"  				#Afnog's full IPv4 Block
+afnog_v6="2001:43f8:220::/48"  			#Afnog's full IPv6 Block 
+bsd_vm_v4="196.200.219.XX"   				#Your FreeBSD VM IPv4 Block
+bsd_vm_v6="2001:43f8:220:219:196:200:219:XX"  	#Your FreeBSD VM's IPv6 Block
+neighbour_v4="196.200.219.YY"				#Your neighbour's IPv4 block
+neighbour_v6="2001:43f8:220:219:196:200:219:YY"  	#Your neighbour's IPv6 block
+ipv6_ll="fe80::/10"                             	#IPv6 link local on LAN interface for Router Advertisements
+set skip on lo0 					#Don't bother processing localhost packets
+
+
+block in all						#incoming packets blocked unless specified in below rules
+pass quick out all                                    #whatever communication this server initiates is allowed
+
+#Things I want to always allow
+pass in quick on $lan_if inet6 proto { tcp, udp, icmp6 } from $ipv6_ll to any #allow link local IPv6
+pass in on $lan_if from { $afnog_v4, $afnog_v6 } to { $bsd_vm_v4, $bsd_vm_v6 }
+
+
+##Add your rules block rules below
+
+block out log quick on $lan_if inet6 proto tcp from $bsd_vm_v6 to $neighbour_v6 port 22
+block out log quick on $lan_if inet proto tcp from $bsd_vm_v4 to $neighbour_v4 port 80
+
+
+####END OF PF RULES####
+
+	Save and exit the file. The rules will block SSH over IPv6 and HTTP over IPv4 to your Neighbour. PF is not activated right now. Try the following tests before the PF is activated and ENSURE YOU GET A RESPONSE!
+
+	$telnet -6 2001:43f8:220:219:196:200:219:YY 80
+	$telnet pcYY.sse.ws.afnog.org 80
+	$telnet -6 2001:43f8:220:219:196:200:219:YY 22
+	$telnet pcYY.sse.ws.afnog.org 80
+
+4. Configure Nagios to monitor your neighbour's PC on IPv4 and IPv6 as follows. Replace YY with your neighbour's IP
+
+
+	$cd /usr/local/etc/nagios/servers
+	$sudo ee pcYY.cfg
+
+##########Neighbour IPv4####
+define host {
+                        use freebsd-server
+                        host_name pcYY
+                        alias My Neighbour's Machine on IPv4
+                        address 196.200.219.YY
+        }
+
+
+        define service {
+                        use generic-service
+                        host_name pcYY
+                        service_description PING
+                        check_command check_ping!100.0,20%!500.0,60%
+        }
+
+        define service {
+                        use generic-service
+                        host_name pcYY
+                        service_description SSH
+                        check_command check_ssh
+        }
+
+        define service {
+                        use generic-service
+                        host_name pcYY
+                        service_description HTTP
+                        check_command check_http
+        }
+#######END neighbour IPv4#####
+
+
+	Save and exit the file. Also create a new file for your neighbour for IPv6
+
+
+	$sudo ee pcYY-v6.cfg
+
+##########Neighbour IPv6#######
+define host {
+                        use freebsd-server
+                        host_name pcYY-v6
+                        alias My Neighbour's Machine on IPv6
+                        address 2001:43f8:220:219:196:200:219:YY
+        }
+
+
+        define service {
+                        use generic-service
+                        host_name pcYY-v6
+                        service_description PING
+                        check_command check_ping!100.0,20%!500.0,60%
+        }
+
+        define service {
+                        use generic-service
+                        host_name pcYY-v6
+                        service_description SSH
+                        check_command check_ssh
+        }
+
+        define service {
+                        use generic-service
+                        host_name pcYY-v6
+                        service_description HTTP
+                        check_command check_http
+        }
+######End of Neighbour IPv6###########
+
+	
+	Save and exit the file. 
+
+
+
+	Do the nagios check:
+
+	$sudo nagios -v /usr/local/etc/nagios/nagios.cfg
+
+
+	And restart nagios
+	
+	$sudo service nagios restart
+
+
+	Check you nagios web page to see if the hosts are up on IPv4 and IPv6
+
+5. Now enable PF. Remember it is now loaded but not started:
+
+	$sudo pfctl -e
+
+	Now check if your rules have been loaded
+
+	$sudo pfctl -s rules
+
+	Do you get any output?
+
+	Now load your rules from the file you created with the below command
+
+	$sudo pfctl -f /etc/pf.conf
+
+	And check which rules it has loaded
+	 
+	$sudo pfctl -s rules
+
+
+6. Enable logging
+
+	$sudo service pflog start
+	
+	and reload PF
+
+	$sudo service pf restart
+
+
+	Now try and browse your neighbour's machine over IPv4 and also check SSH over IPv6
+
+	
+	$telnet -6 2001:43f8:220:219:196:200:219:YY 22
+	
+
+	
+
+	Check the log file as follows: 
+	
+
+	$sudo tcpdump -i pflog0 -tte
+
+
+	OR check the log file
+
+
+	$sudo tcpdump -tte -r /var/log/pflog
+
+
+	
+	
+
+
+
+
+
