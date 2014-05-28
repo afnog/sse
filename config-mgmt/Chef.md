@@ -117,7 +117,7 @@ search sse.ws.afnog.org
 nameserver 196.200.223.10
 nameserver 4.4.4.4
 nameserver 8.8.8.8
-EOH>>
+EOH
 
 end
 """ > $HOME/chef/cookbooks/resolv_conf_afnog_tmp/recipes/default.rb
@@ -261,8 +261,8 @@ $ ee  $HOME/chef/cookbooks/install_security_packages/recipes/default.rb
 
 %w[nmap tshark stunnel tcpdump].each do |package|
     execute "install #{package} via pkgng" do
-        command "pkg install #{package}"
-        not_if "pkg info | grep ^#{package}-"
+        command "pkg install -y #{package}"
+        not_if "pkg info #{package}"
     end
 end
 ```
@@ -310,10 +310,10 @@ $ mkdir -p $HOME/chef/cookbooks/loadbalancing/recipes/
 % ee $HOME/chef/cookbooks/loadbalancing/recipes/default.rb
 
 ########### Paste the following into the file opened above ###############
-# Make sure that we have haproxy and apache installed
-%w[apache haproxy].each do |package|
+# Make sure that we have haproxy and apache22 installed
+%w[apache22 haproxy].each do |package|
     execute "install #{package} via pkgng" do
-        command "pkg install #{package}"
+        command "pkg install -y #{package}"
         not_if "pkg info | grep ^#{package}-"
     end
 end
@@ -355,23 +355,11 @@ EOH>>
 end
 
 ## Let's make sure that /etc/rc.conf has haproxy and apache enabled
-
-# We'll use a ruby shell exec block. It's a hack but it works
-# Don't do this in production!
-# See http://docs.opscode.com/resource_execute.html
-#%w[haproxy_enable apache22_enable].each do |daemon_enable_directive|
-#    execute "Attempting to enable service: #{daemon_enable_directive}" do
-#        command "grep -q 2>/dev/null '#{daemon_enable_directive}' /etc/rc.conf || echo #{daemon_enable_directive}='YES' > /etc/rc.conf"
-#        # Piping saves us from escape hell
-#        not_if "grep '^#{daemon_enable_directive}' /etc/rc.conf | grep YES"
-#    end
-#end
-
 # Service resource allows us to do service management easily
 # Enable and start services.
 # See http://docs.opscode.com/resource_service.html
 %w[haproxy apache22].each do |service|
-    service "service: #{service}" do
+    service "#{service}" do
       action [ :enable, :start ]
     end
 end
@@ -400,3 +388,8 @@ $ cat $HOME/chef/node.json
 $ sudo chef-solo -c $HOME/chef/solo.rb
 ```
 
+You should now have an apache server with a loadbalancer infront of it.
+To test, visit:
+* http://pc32.sse.ws.afnog.org:8081
+* http://pcXX.sse.ws.afnog.org:8081/stats
+** Login in with user:afnog  password:success
