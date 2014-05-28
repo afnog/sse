@@ -124,7 +124,7 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-afnog.github.io: run_jekyll_first $(call ONE_TARGET_FILE_PER_SOURCE_FILE,src/Network_Management/Unit_1/Unit_1_Presentation.rst,src,.rst,output,.pdf)
+afnog.github.io: run_jekyll_first $(call ONE_TARGET_FILE_PER_SOURCE_FILE,$(PRESO_SOURCES),$(SRC_DIR),.md,$(DST_DIR),.html)
 
 run_jekyll_first:
 	$(JEKYLL)
