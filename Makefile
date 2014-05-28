@@ -138,5 +138,5 @@ clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
 
 watch:
-	$(JEKYLL_BIN) watch --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
+	$(JEKYLL_BIN) build --watch --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 	  --destination $(PROJECT_DIR_ABS)/$(DST_DIR)
