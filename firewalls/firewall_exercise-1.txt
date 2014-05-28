@@ -204,7 +204,7 @@ define host {
 	OR check the log file
 
 
-	$sudo tcpdump -r /var/log/pflog
+	$sudo tcpdump -tte -r /var/log/pflog
 
 
 	
