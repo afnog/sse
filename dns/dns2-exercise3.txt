@@ -95,7 +95,7 @@ options {
 Save the file and check that the configuration file does not contain
 any errors:
 
-# rndc-checkconf
+# named-checkconf
 
 If everything looks good, restart the nameserver:
 
