@@ -360,7 +360,7 @@ end
 # See http://docs.opscode.com/resource_service.html
 %w[haproxy apache22].each do |service|
     service "#{service}" do
-      action [ :enable, :start ]
+      action [ :enable, :restart ]
     end
 end
 
