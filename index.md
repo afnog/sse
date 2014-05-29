@@ -452,7 +452,8 @@ on the Markdown source files:
   `_layouts/presentation.html`.
 * This file is generic and the same for all presentations. It loads the Remark
   source code, and then loads the `presentation.md` file from the same
-  directory using AJAX.
+  directory using AJAX. So the URL that you use to load it is very important
+  in locating the correct `presentation.md` file.
 
 #### Generating the HTML
 
