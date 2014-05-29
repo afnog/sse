@@ -285,6 +285,15 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
+
+### Postfix
+####
++ understanding email
++ Some Email Best Practices
++ Postfix and Dovecot
+
+* [Email Overview]()
+* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 ### Firewalls
 
 #### [Kevin Chege](#KC)
