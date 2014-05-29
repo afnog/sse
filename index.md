@@ -257,11 +257,12 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Joe Abley](#JA)
 
+Goal: DNSSEC High Level Awareness.
+
 * [Presentation/PDF](dns/DNSSEC_High-Level_Awareness.pdf)
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-DNSSEC High Level Awareness
 
 ### RADIUS
 
