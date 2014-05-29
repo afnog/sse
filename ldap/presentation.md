@@ -207,7 +207,9 @@ sudo /etc/rc.d/kadmind start
 * Decide the root of your tree, usually based on your domain:
   * For example, `pcXX.sse.ws.afnog.org`
 * Reverse it, add `DC=` to each component, and separate with commas:
+  * This is the Distinguised Name or `DN`
   * For example, `DC=org,DC=afnog,DC=ws,DC=sse,DC=pcXX`
+* Decide on a manager account, under that DN, prefixed 
 
 ```sh
 sudo pkg install openldap-server
