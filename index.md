@@ -471,9 +471,17 @@ generated HTML files), you can specify it as a command-line argument to Make:
 
 	make DST_DIR=/tmp/site
 
+You will need to install Jekyll to generate the HTML files:
+
 	sudo gem install jekyll execjs therubyracer
+
+Then run `make` to build them once, in the destination directory:
+
 	make
 
+Or run `make watch` to tell Jekyll to stay running, watch for source files
+changing, and generate a new HTML file when they do (ideal for modifying
+presentations on the fly):
 
-
+	make watch
 
