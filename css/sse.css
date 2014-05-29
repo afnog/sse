@@ -113,3 +113,6 @@ h6, blockquote, ol > li /* links to materials */
 .sectionjumps li {
 	display: inline;
 }
+.sectionjumps ul {
+	margin: 0;
+}
