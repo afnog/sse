@@ -108,6 +108,9 @@ h6, blockquote, ol > li /* links to materials */
 	font-size: 1em;
 	font-weight: normal;
 }
+.sectionjumps {
+	text-align: left;
+}
 .sectionjumps:before {
 	content: "[";
 }
