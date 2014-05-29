@@ -5,4 +5,9 @@ defaults:
     values:
       layout: "default"
       year: 2014
-
+  -
+    scope:
+      path: "*/presentation.md" # empty string for all files
+    values:
+      layout: "presentation"
+      year: 2014
