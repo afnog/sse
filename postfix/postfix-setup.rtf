@@ -40,10 +40,10 @@
 \
 \
 5. Edit main.cf\
-	cd /usr/local/etc/postfix\
+	$cd /usr/local/etc/postfix\
 	\
-	sudo mv main.cf main.cf.orig\
-	sudo ee main.cf\
+	$sudo mv main.cf main.cf.orig\
+	$sudo ee main.cf\
 \
 Add the following and replace XXX where necessary\
 \
@@ -84,18 +84,21 @@ inet_protocols = ipv4 ipv6\
 \
 6. Edit the aliases file to look like below\
 \
-	sudo ee /etc/newaliases\
+	$sudo ee /etc/newaliases\
 \
+###\
 	#root: postmaster\
 	root: afnog\
 	nagios: afnog\
+####\
+\
 \
 	Save and exit.\
 \
 	$sudo newaliases\
 \
-7. Stop sendmail (incase it is running) and start Postfix\
-	$sudo service sendmail stop && sudo service postfix start\
+7. Start Postfix\
+	$ sudo service postfix start\
 \
 8. Turn of the firewall for now\
 	$service pf stop\
