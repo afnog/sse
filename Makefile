@@ -148,4 +148,4 @@ watch:
 	$(JEKYLL) --watch
 
 sync:
-	$(LSYNC_BIN) -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
+	$(LSYNC)
