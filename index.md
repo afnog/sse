@@ -413,8 +413,8 @@ All done by CW unless anyone else wants to.
 * Introductory talk - welcome, topic poll, complaints box
 * Time management during the workshop (breaks, lunch, etc)
 * Set alarms for break times
-* Ensuring that every topic has an instructor and enough time allocated
-* Ensuring that participants are receiving any assistance necessary
+* Ensure that every topic has an instructor and enough time allocated
+* Ensure that participants are receiving any assistance necessary
 * Student name verification for certificates
 * Coordinate the class group photo
 * Liaise with the secretariat on any other issues that may be required
