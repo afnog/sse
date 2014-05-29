@@ -11,6 +11,7 @@ help:
 	@echo "  clean:      Delete the output directory [$(DST_DIR)] and all contents"
 	@echo "  output:     Build the output directory [$(DST_DIR)] using Jekyll"
 	@echo "  watch:      Watch for source changes and rebuild outputs in $(DST_DIR)"
+	@echo "  sync:       Watch for file changes in $(DST_DIR) and sync to $(SYNC_HOST):$(SYNC_DIR)"
 
 # Directories where various files should be found or written to:
 SRC_DIR = .
