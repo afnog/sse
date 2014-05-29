@@ -451,6 +451,11 @@ since it assumes that you have both https://github.com/afnog/sse/ and
 https://github.com/afnog/afnog.github.io/ checked out side-by-side (for example
 in [SparkleShare](http://sparkleshare.org/)).
 
+If you want it to overwrite a different directory (where it will write the
+generated HTML files), you can specify it as a command-line argument to Make:
+
+	make DST_DIR=/tmp/site
+
 	sudo gem install jekyll execjs therubyracer
 	make
 
