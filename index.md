@@ -222,8 +222,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-* [Presentation/HTML](http://afnog.github.io/sse/crypto/index.html)
-* [Presentation/PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
+* [Presentation/HTML](crypto/index.html)
+* [Presentation/PDF](crypto/presentation.pdf)
 
 ### DNS
 
@@ -324,7 +324,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 #### [Chris Wilson](#CW)
 
-* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)  
+* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
 * [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
 * [EICAR Anti-Virus Test File](exim/eicar)
 * [Sample spam message](exim/spam.txt)
