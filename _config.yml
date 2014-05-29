@@ -1,3 +1,5 @@
+baseurl: "/afnog2014"
+
 defaults:
   -
     scope:
