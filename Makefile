@@ -18,7 +18,7 @@ PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
 # Host and directory to be overwritten by "make sync"
 SYNC_HOST = noc.mtg.afnog.org
-SYNC_DIR  = /tmp/sse
+SYNC_DIR  = /u/vol/www/afnog2014/sse
 
 # Macros to manipulate relative paths, for use in URLs:
 REMOVE_TRAILING_SLASH = $(patsubst %/,%,$(1))
