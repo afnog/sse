@@ -141,9 +141,6 @@ $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
 		> $@
 
-clean:
-	rm -f $(PRESOS_HTML_OUTPUTS)
-
 watch:
 	$(JEKYLL) --watch
 
