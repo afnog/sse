@@ -120,6 +120,6 @@ h6, blockquote, ol > li /* links to materials */
 .sectionjumps li:before {
 	content: "| ";
 }
-.sectionjumps li:before:first {
+.sectionjumps li:before:first-child {
 	content: "";
 }
