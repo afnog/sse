@@ -18,7 +18,7 @@ PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
 # Host and directory to be overwritten by "make sync"
 SYNC_HOST = noc.mtg.afnog.org
-SYNC_DIR  = /tmp/sse
+SYNC_DIR  = /u/vol/www/afnog2014/sse
 
 # Macros to manipulate relative paths, for use in URLs:
 REMOVE_TRAILING_SLASH = $(patsubst %/,%,$(1))
@@ -71,7 +71,7 @@ RST2ODP = $(RST2ODP_BIN) --traceback \
 JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 	--destination $(PROJECT_DIR_ABS)/$(DST_DIR)
 LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
-LSYNC   = $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
+LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
@@ -130,18 +130,17 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
-afnog.github.io: run_jekyll_first
-# $(PRESOS_HTML_OUTPUTS)
+output: run_jekyll_first
 
 run_jekyll_first:
 	$(JEKYLL)
 
+PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
 		> $@
 
-clean:
+presos_clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
 
 watch:

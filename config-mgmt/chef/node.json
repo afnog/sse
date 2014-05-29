@@ -1,4 +1,4 @@
 
 {
-  "run_list": [ "recipe[resolv_conf_afnog_tmp]" , "recipe[user_management_101]" , "recipe[install_bash]" , "recipe[install_security_packages]" , "recipe[loadbalancing]" ]
+  "run_list": [ "recipe[resolv_conf_afnog_tmp]" , "recipe[user_management_101]" , "recipe[install_bash]" , "recipe[install_security_packages]" , "recipe[loadbalancing]" , "recipe[install_bind]" ]
 }
