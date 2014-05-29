@@ -26,9 +26,23 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 
 ### Learn how to filter captures
 
+* What filter would you put in the capture box to select HTTP traffic?
 
-.height_8em[[![Tree in Mist](https://farm8.staticflickr.com/7095/7230738190_3c6f7146e6_b.jpg)](https://www.flickr.com/photos/matthewpaulson/7230738190)]
+* How would you select HTTP traffic in the packet list view (main screen)?
 
-### Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
+## Network Security
 
+### Check for open ports
+
+```sh
+sudo pkg install nmap
+```
+
+* On your virtual server
+* On your laptop
+* On a real server under your control
+
+What can you do with these ports?
+
+### Check for open ports
 
