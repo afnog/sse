@@ -319,7 +319,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 Goal: to understand the contents and layering of common Internet protocols
 
-* [Exercise](ip/exercise.md)
+* [Exercise](ip/exercise.html)
 
 #### [Kevin Chege](#KC)
 
