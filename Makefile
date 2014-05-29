@@ -9,6 +9,8 @@ help:
 	@echo "Targets:"
 	@echo "  all:        Build the usual suspects [$(DEFAULT_TARGETS)]"
 	@echo "  clean:      Delete the output directory [$(DST_DIR)] and all contents"
+	@echo "  output:     Build the output directory [$(DST_DIR)] using Jekyll"
+	@echo "  watch:      Watch for source changes and rebuild outputs in $(DST_DIR)"
 
 # Directories where various files should be found or written to:
 SRC_DIR = .
