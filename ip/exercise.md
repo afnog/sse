@@ -74,6 +74,8 @@ Check for open ports:
 
 What do the different states mean? open/closed/filtered
 
+What difference does it make if you stop your firewall?
+
 What can you do with these ports?
 
 Try connecting to one:
