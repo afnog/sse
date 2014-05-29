@@ -64,6 +64,8 @@ RST2PDF = $(RST2PDF_BIN) \
 	--smart-quotes=1
 RST2ODP = $(RST2ODP_BIN) --traceback \
 	--template-file=$(TEMPLATES_DIR)/presentation.odp
+JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
+	--destination $(PROJECT_DIR_ABS)/$(DST_DIR)
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
