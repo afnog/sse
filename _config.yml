@@ -6,4 +6,4 @@ defaults:
     values:
       layout: "default"
       year: 2014
-      site_root_path: "/afnog2014"
+      site_root_path: "/afnog2014/sse"
