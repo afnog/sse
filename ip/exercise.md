@@ -36,8 +36,13 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 ### Learn how to filter captures
 
 * What filter would you put in the capture box to select HTTP traffic?
-
 * How would you select HTTP traffic in the packet list view (main screen)?
+
+### Reading TCP Stream
+
+* Start capturing and then browse a website.
+* Right click on an HTTP packet and view TCP stream.
+* Look at the HTTP headers: what do they mean?
 
 ## Network Security
 
@@ -52,6 +57,3 @@ sudo pkg install nmap
 * On a real server under your control
 
 What can you do with these ports?
-
-### Check for open ports
-
