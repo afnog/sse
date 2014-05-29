@@ -425,10 +425,6 @@ All done by CW unless anyone else wants to.
 ### TODO
 
 * Student numbers and names
-* Set up desktop/backup PCs
-* Distribute the Wifi password
-* Nagios config for all PCs
-* Phones to silent
 
 ### Meta (about this site)
 
