@@ -130,13 +130,12 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 output: run_jekyll_first
-# $(PRESOS_HTML_OUTPUTS)
 
 run_jekyll_first:
 	$(JEKYLL)
 
+PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
 		> $@
