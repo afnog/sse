@@ -446,6 +446,11 @@ If you're using Ruby 1.8, you may need to
 [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/)
 first.
 
+**Warning**: This command by default will overwrite ../afnog.github.io/sse,
+since it assumes that you have both https://github.com/afnog/sse/ and
+https://github.com/afnog/afnog.github.io/ checked out side-by-side (for example
+in [SparkleShare](http://sparkleshare.org/)).
+
 	sudo gem install jekyll execjs therubyracer
 	make
 
