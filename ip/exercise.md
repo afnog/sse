@@ -22,6 +22,13 @@ otherwise go to http://www.wireshark.org/download.html.
 
 Run a capture for 10 seconds, look at the traffic and analyse it.
 
+Look out for:
+
+* Wireless (802.11)
+* ARP
+* DNS
+* UDP
+
 If you find something interesting/unusual, send a pcap file to the intructor.
 
 ### Learn how to filter captures
