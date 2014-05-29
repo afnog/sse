@@ -1,0 +1,127 @@
+Apache24 with SSL, MySQL5 and PHP5 Installation Exercise
+=====================================================
+
+1. Intro:
+
+The packages to be installed are:
+
+* Apache22
+* Mysql56-server
+* PHP5
+
+FreeBSD provides 2 ways of installing third party software: The FreeBSD port collection for installing from source, and packages, for installing from pre-built binaries.
+ 
+FreeBSD Ports and Packages Collection offers a simple way for users and administrators to install applications. There were over 24330 ports available (as of June 2013). One of the advantages of using the FreeBSD ports system is that it will automatically resolve all the dependencies, present the dependency options and then proceed with downloading and installing. 
+
+For this class, we will install Apache, Mysql and PHP using packages.
+
+-------------------
+
+2. Installation of Apache, Mysql & PHP using packages:
+
+2.1. Install portupgrade which also installs postinstall tool: 
+
+Postinstall will allow you to install programs without knowing exactly where they reside. Using pkg, the system installs a precompiled binary which is faster to install. The ports system does not use precompiled binaries and large programs like perl would take long to compile and install.
+
+	$ sudo pkg install portupgrade
+
+2.2. Install Apache, Mysql and PHP
+
+	$ sudo pkg install mysql56-server apache22 php5 mod_php5
+
+
+OPTION B: To install from ports, you must navigate to the directory containing the installation files for the software you wish to install. FreeBSD ports reside in /usr/ports . The softwares are then categorised in different folders based on similarity for example, programs related to web are stored under /usr/ports/www/ . Apache resides at /usr/ports/www apache22
+ 
+	$ cd /usr/ports/www/apache22
+	$ sudo make install clean
+
+2.3. Choose whatever default options are presented. Once installed, in /etc/rc.conf, add the following line
+
+	$ ee /etc/rc.conf
+
+	apache24_enable="YES"
+
+2.4. To start apache run
+
+	$ sudo /usr/local/etc/rc.d/apache22 start
+
+Check if the apache web server you have just installed works by pointing a browser to the server i.e. http://<your-ip-address> or http://pcXX.sse.ws.afnog.org 
+
+You can also do 
+
+	$ telnet localhost 80
+
+For IPv6 to work on your virtual PC do the following:
+
+	$ sudo su
+	# echo ipv6_activate_all_interfaces="YES" >> /etc/rc.conf
+	# /etc/netstart
+
+Then set your IPv6 address to match your IPv4 address:
+	$ sudo ifconfig em0 inet6 2001:43f8:220:219::XX/64
+
+Then add your default route for IPv6:
+	$ sudo route add -inet6 default 2001:43f8:220:219::1
+
+Test your IPv6 connectivity:
+	$ ping6 www.google.com
+
+
+Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
+
+------------
+
+
+3. Configuring SSL
+
+To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
+
+The following steps should do the trick. 
+
+3.1	Create the SSL Certificates for your Apache Web Server:
+
+	$ cd /usr/local/etc/apache22/
+	$ sudo openssl genrsa -des3 -out server.key 2048 
+
+NOTE:	Password-Phrase is needed to encrypt the key. For this exercise, use "afnog" as the pass phrase. However, this pass-phrase will be needed at every apache restart. To get rid of the pass-phrase prompts at every apache restart and maintain the original key.
+
+	$ sudo cp server.key server.key.org
+	$ sudo openssl rsa -in server.key.org -out server.key
+
+3.1.1	Create Certificate Request
+
+	$ sudo openssl req -new -key server.key -out server.csr
+	
+NOTE:	The CommonName is the name of the Website you will use in this case the localhost name i.e pcXX.sse.ws.afnog.org where XX is your computer number
+
+3.1.2	Self Sign your Own Certificate
+
+	$ sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+3.2	Enable SSL in Apache
+
+Edit the httpd.conf file and uncomment the lines below;
+
+	#include etc/apache22/extra/httpd-ssl.conf
+	#LoadModule ssl_module libexec/apache22/mod_ssl.so
+
+Edit the httpd-ssl.conf file and make the following changes:
+
+	$ ee /usr/local/etc/apache22/extra/httpd-ssl.conf
+
+NOTE:
+* Each virtual host must have its own certificate file see comments on "CommonName".  
+* The path is where the certificate File and Keys are located in this case /usr/local/etc/apache22/ (see virtualhost example below)
+
+	SSLCertificateFile    /usr/local/etc/apache22/server.crt
+	SSLCertificateKeyFile /usr/local/etc/apache22/server.key
+
+Restart apache to reflect the changes
+		$ sudo apachectl restart
+
+Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as 
+http://[2001:43f8:220:219:XX]:443
+You can also do 
+
+	$ telnet localhost 443
+

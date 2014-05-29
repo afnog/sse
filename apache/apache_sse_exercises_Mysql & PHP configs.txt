@@ -1,0 +1,116 @@
+Configuring MySQL5 and PHP5 & Installation of Wordpress
+=======================================================
+
+1. Configuring MySQL:
+------------------------------------------------------------------------------------
+ 
+1.1 Enable and launch the mysql service by editing /etc/rc.conf and add the below line.
+
+	mysql_enable="YES"
+     
+    or issue the following command:
+
+	# echo mysql_enable="YES" >> /etc/rc.conf
+
+
+1.2 Start the mysql server using command below
+
+	# /usr/local/etc/rc.d/mysql-server start
+
+
+1.3 Set the mysql admin password to "afnog"
+
+	# mysqladmin -u root password afnog
+
+
+1.4. Log in to mysql console to check if the password was set properly using command below.
+
+	# mysql -u root -p
+	Password:
+
+     Type the password at the prompt.
+
+     You can exit from the mysql> prompt by typing “exit” command
+
+
+2. Configuring PHP:
+------------------------------------------------------------------------------------
+
+2.1 PHP Configuration
+
+    Settings for PHP are stored in the /usr/local/etc/php.ini file.
+
+
+2.2 Copy the distribution file by issuing the following command
+
+	# cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini
+
+
+2.3 Edit /usr/local/etc/php.ini and uncomment the following:
+
+	; display_errors
+	   Default Value: On
+	   Development Value: On
+	;   Production Value: Off
+	
+	; display_startup_errors
+	   Default Value: Off
+	   Development Value: On
+	;   Production Value: Off
+	
+	; error_reporting
+	   Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
+	   Development Value: E_ALL
+	;   Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
+	
+	; html_errors
+	   Default Value: On
+	   Development Value: On
+	;   Production value: On
+	
+	; log_errors
+	   Default Value: Off
+	   Development Value: On
+	;   Production Value: On
+   
+   Save and exit php.ini
+
+
+3.4 Also Apache needs to be configured, so it can use php.
+
+	# cd /usr/local/etc/apache22/
+	# ee httpd.conf
+
+    Scroll down to the end of the /usr/local/etc/apache22/httpd.conf and add the following lines.
+
+	DirectoryIndex index.php index.html index.htm
+	AddType application/x-httpd-php .php
+	AddType application/x-httpd-php-source .phps
+
+     Save and exit the apache configuration file.
+
+3.5 Restart apache to check if you have any errors
+
+	# /usr/local/etc/rc.d/apache22 restart
+
+	Output:
+	Performing sanity check on apache24 configuration:
+	Syntax OK
+	Stopping apache22.
+	Waiting for PIDS: 61539.
+	Performing sanity check on apache24 configuration:
+	Syntax OK
+	Starting apache22.
+
+
+3.6 To test PHP, create the following file in the apache 
+
+	# echo "<? phpinfo(); ?>" >> /usr/local/www/apache22/data/test.php
+
+     Now check the phpinfo page http://<your-server-ip>/test.php
+
+
+Proceed to apache_sse_wordpres.doc
+
+
+

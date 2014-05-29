@@ -1,0 +1,132 @@
+INSTALLATION AND CONFIGURING WORDPRESS
+-------------------------------------------------------------------
+
+
+1. Install Wordpress:
+------------------------------------------------------------------------------------
+
+1.1 Install wordpress using packages:
+
+	$ sudo pkg install wordpress
+
+1.2 Configure Wordpress
+
+Create the database for wordpress:
+
+$ mysql -u root -p
+Password:
+mysql> CREATE DATABASE wordpress; 
+mysql> GRANT ALL PRIVILEGES ON wordpress.* TO "wpuser"@"localhost" IDENTIFIED BY "afnog";
+mysql> FLUSH PRIVILEGES;
+mysql> EXIT
+
+Create an A and AAAA record entry in your DNS entry based on the zone that has been delegated to you. For example, for the zone evelyn.bogus.gh:
+
+	wordpress	IN 	A	196.200.219.XX
+	wordpress	IN 	AAAA	2001:43f8:220:219::XX
+
+This means you can reach wordpress via: http://wordpress.evelyn.bogus.gh . Edit the apache vhosts file to look like what is below.
+
+	$ sudo ee /usr/local/etc/apache22/extra/httpd-vhosts.conf
+
+	<VirtualHost *:80>
+	ServerAdmin webmaster@<name>.sse.ws.afnog.org
+	DocumentRoot /usr/local/www/wordpress
+	ServerName wordpress.yourdomain.bogus.gh
+ 
+		<Directory "/usr/local/www/wordpress">
+     		   	Options Indexes FollowSymLinks
+        	   	AllowOverride AuthConfig FileInfo
+        		Order allow,deny
+        		Allow from all
+    		</Directory>
+	ErrorLog "/var/log/wordpress.sse.ws.afnog.org-error_log"
+  	 CustomLog "/var/log/wordpress.sse.ws.afnog.org " common
+	</VirtualHost>
+
+	
+Edit the apache httpd.conf file so that the httpd-vhosts.conf file will be read:
+
+	$ sudo ee /usr/local/etc/apache22/extra/httpd-vhosts.conf
+
+
+Uncomment the following line:
+
+	#Include etc/apache22/extra/httpd-vhosts.conf
+
+Save and exit and then restart apache: sudo apachectl restart
+
+
+
+Modify the wordpress config:
+
+	$ cd /usr/local/www/wordpress
+	$ sudo cp wp-config-sample.php wp-config.php
+
+Edit the wp-config.php with the database name, username and passwords created above.so that it looks like so:
+
+
+                   define('DB_NAME', 'wordpress');
+                   
+                   /** MySQL database username */
+                   define('DB_USER', 'wpuser');
+
+                   /** MySQL database password */
+                   define('DB_PASSWORD', 'afnog');
+                   
+
+
+Save the wordpress configuration file and restart apache.
+
+Point your browser to your WordPress virtual host 
+
+http://wordpress.yourdomain.bogus.gh/
+
+Complete the setup as instructed on the page then:
+
+Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
+
+To browse it on HTTPS, add the following to the top of the httpd-ssl.conf file:
+
+	$ sudo vi /usr/local/etc/apache22/extra/httpd-ssl.conf
+
+	NameVirtualHost *:443
+
+Then add the below to the bottom of the file:
+
+	<VirtualHost *:443>
+	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
+	DocumentRoot /usr/local/www/wordpress
+	ServerName wordpress.yourdomain.bogus.gh
+
+       		<Directory "/usr/local/www/wordpress">
+        	Options Indexes FollowSymLinks
+        	AllowOverride AuthConfig FileInfo
+        	Order allow,deny
+        	Allow from all
+	</Directory>
+	ErrorLog /var/log/wordpress-s.err-error.log
+	TransferLog /var/log/wordpress-s.tx-access.log
+	SSLEngine on
+	SSLCertificateFile /usr/local/etc/apache22/server.crt
+	SSLCertificateKeyFile /usr/local/etc/apache22/server.key
+	<FilesMatch "\.(cgi|shtml|phtml|php)$">
+    	SSLOptions +StdEnvVars
+	</FilesMatch>
+       	<Directory "/usr/local/www/apache22/cgi-bin">
+    	SSLOptions +StdEnvVars
+	</Directory>
+	BrowserMatch ".*MSIE.*" \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+	CustomLog "/var/log/httpd-ssl_request.log" \
+          "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+	</VirtualHost>
+
+
+
+
+Save, exit and restart Apache then point your browser to your WordPress virtual host 
+
+https://wordpress.yourdomain.bogus.gh/
+
