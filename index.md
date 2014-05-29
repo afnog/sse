@@ -313,6 +313,25 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
 * [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
 
+### Internet Protocols
+
+Goal: to understand the contents and layering of common Internet protocols
+
+* [Exercise](ip/exercise.md)
+
+#### [Kevin Chege](#KC)
+
+Goal: To understand firewalls and how the PF (Packet Filter) works
+
++ Block outgoing traffic on IPv6 and IPv4
++ Block incoming traffic on IPv6 and IPv4
++ Log the blocked traffic
+
+* [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
+* [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
+* [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+
+
 ### Monitoring
 
 #### [Kevin Chege](#KC)
