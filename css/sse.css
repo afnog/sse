@@ -71,7 +71,7 @@ th
 	border-bottom: 1px solid #b40004;
 }
 */
-.topics h3 /* topic */
+.topics > h3 /* topic */
 {
 	margin: 1em 0 0;
 	border: 4px solid #b40004;
