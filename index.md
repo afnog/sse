@@ -282,12 +282,15 @@ DNSSEC High Level Awareness
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
+
 * Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
 * Virtualization Exercise ([TXT](virtualisation/Readme.md))
 * Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
+
 #### [Laban Mwangi](#LM)
+
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
