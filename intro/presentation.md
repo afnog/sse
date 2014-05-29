@@ -7,8 +7,7 @@ class: center, middle
 ### Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
 
 You can access this presentation at: http://afnog.github.io/sse/intro/presentation
-
-Download or edit this presentation [on GitHub](https://github.com/afnog/sse/introduction/presentation.md).
+([edit](https://github.com/afnog/sse/intro/presentation.md))
 
 ---
 
