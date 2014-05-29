@@ -14,7 +14,6 @@ h2, .bottomlinks
 }
 h3 /* subheadings under introduction & management */
 {
-	display: block;
 	margin: 0.5 0 0.5em;
 	border: 4px solid #d98082;
 	border-style: none none none solid;
@@ -80,6 +79,11 @@ th
 	border-bottom: 1px solid #b40004;
 }
 */
+.topics h3,
+.topics h4,
+.topics h5 {
+	font-weight: bold;
+}
 .topics h3 /* topic */
 {
 	margin: 1em 0 0 5%;
@@ -90,20 +94,17 @@ th
 }
 .topics h4 /* presenter */
 {
-	display: block;
 	margin: 0.5 0 0.5em;
 	border: 4px solid #d98082;
 	border-style: none none none solid;
 	padding: 0.5em;
 	font-size: 1em;
-	font-weight: bold;
 }
-h5 /* sub topic/heading within topic */
+.topics h5 /* sub topic/heading within topic */
 {
 	border: 4px solid #ecc0c1;
 	border-style: none none solid none;
-	padding: 0.5em;
-	padding-left: 0;
+	padding: 0.5em 0.5em 0.5em 0;
 	margin: 1em 0 0.5em;
 	font-size: 1em;
 	font-weight: bold;
