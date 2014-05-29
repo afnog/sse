@@ -22,7 +22,7 @@ h3 /* subheadings under introduction & management */
 	font-size: 1em;
 	font-weight: bold;
 }
-p, table
+p, table, h3
 {
 	margin-left: 5%;
 }
