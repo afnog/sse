@@ -16,6 +16,9 @@ DST_DIR = ../afnog.github.io/sse
 TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
+# Host and directory to be overwritten by "make sync"
+SYNC_HOST = noc.mtg.afnog.org
+SYNC_DIR  = /u/vol/www/afnog2014/sse
 
 # Macros to manipulate relative paths, for use in URLs:
 REMOVE_TRAILING_SLASH = $(patsubst %/,%,$(1))
@@ -45,6 +48,7 @@ PANDOC_BIN  = pandoc
 RST2PDF_BIN = PYTHONPATH=tools/rst2pdf-0.93 python tools/rst2pdf-0.93/rst2pdf/createpdf.py
 RST2ODP_BIN = PYTHONPATH=tools/rst2odp      python tools/rst2odp/bin/rst2odp
 JEKYLL_BIN  = jekyll
+LSYNC_BIN   = lsyncd
 
 # Document processing commands for each output format.
 PANDOC_COMMON = $(PANDOC_BIN) --data-dir=. --smart \
@@ -66,6 +70,8 @@ RST2ODP = $(RST2ODP_BIN) --traceback \
 	--template-file=$(TEMPLATES_DIR)/presentation.odp
 JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 	--destination $(PROJECT_DIR_ABS)/$(DST_DIR)
+LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
+LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
@@ -124,19 +130,21 @@ debug:
 	@echo PRESOS = $(PRESOS)
 	@echo PRESOS make rules = $(call MAKE_PATTERN,.odp)
 
-PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
-afnog.github.io: run_jekyll_first
-# $(PRESOS_HTML_OUTPUTS)
+output: run_jekyll_first
 
 run_jekyll_first:
 	$(JEKYLL)
 
+PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
 		> $@
 
-clean:
+presos_clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
 
 watch:
 	$(JEKYLL) --watch
+
+sync:
+	$(LSYNC)
