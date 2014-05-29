@@ -117,3 +117,6 @@ h6, blockquote, ol > li /* links to materials */
 	margin: 0;
 	padding: 0;
 }
+.sectionjumps li:before {
+	content: "| ";
+}
