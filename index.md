@@ -7,6 +7,7 @@ layout: default
 
 ## Track SS-E: Scalable Internet Services
 
+<div class="sectionjumps" markdown="1">
 Jump within this page:
 
 * [Introduction](#introduction)
@@ -14,6 +15,7 @@ Jump within this page:
 * [Timetable](#timetable)
 * [Topics](#topics)
 * [Management](#management)
+</div><!-- sectionjumps -->
 
 
 <p><a href="photos/Class_Group_Photo.jpg" class="group-photo"><img
