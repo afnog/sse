@@ -204,9 +204,9 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-###### [Presentation](http://afnog.github.io/sse/intro/presentation)
-###### [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
-###### [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
+1. [Presentation](http://afnog.github.io/sse/intro/presentation)
+1. [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
+1. [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
 
 ### Apache
 
