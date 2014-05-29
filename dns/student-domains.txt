@@ -1,5 +1,24 @@
-; these are zones that have been delegated from the afnog.guru zone
-; to student servers. Apologies if I mis-read anybody's handwriting.
+; These are zones that have been delegated from the afnog.guru zone
+; to student servers.
+;
+; Each student zone is configured with
+; 
+;   @    IN  MX 0 MASTER_SERVER
+;   www  IN  CNAME MASTER_SERVER
+;
+; where MASTER_SERVER is the master server for the zone (e.g.
+; MASTER_SERVER is pc5.sse.ws.afnog.org for aang.afnog.guru).
+;
+; So, for example,
+;
+;   http://www.aang.afnog.guru/ will retrieve content from pc5
+;   postmaster@aang.afnog.guru will deliver mail to pc5
+;
+; named.conf on each student pc has been simplified, removing
+; all the default FreeBSD package nonsense, making it much easier
+; to read.
+;
+; Slave configuration has been tested, and all seems to be working.
 
 $ORIGIN afnog.guru.
 
