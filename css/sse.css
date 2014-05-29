@@ -108,6 +108,7 @@ h6, blockquote, ol > li /* links to materials */
 	font-size: 1em;
 	font-weight: normal;
 }
+.sectionjumps p,
 .sectionjumps li {
 	display: inline;
 }
