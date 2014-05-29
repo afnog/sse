@@ -49,6 +49,13 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 * Right click on an HTTP packet and view TCP stream.
 * Look at the HTTP headers: what do they mean?
 
+### Drawing Graphs
+
+* Start a capture.
+* Set up charting with an unfiltered graph and a filtered one (e.g. http traffic).
+* Try downloading something and see what happens.
+* What speed do you get? What causes the dips in the transfer rate?
+
 ## Network Security
 
 ### Check for open ports
