@@ -29,6 +29,8 @@ Look out for:
 * DNS
 * UDP (Skype/VPN/unusual)
 
+Investigate the properties of the packets by expanding layers at the bottom.
+
 If you find something interesting/unusual, send a pcap file to the intructor.
 
 ### Learn how to filter captures
