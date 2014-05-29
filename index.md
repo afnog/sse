@@ -408,7 +408,7 @@ Who is arriving when?
 All done by CW unless anyone else wants to.
 
 * Student numbers and names
-* Classroom setup, networking, virtual machine images, tape down cables
+* Classroom setup, networking, virtual machine images, cable management
 * Notices - door, timetable, complaints box, wifi password
 * Introductory talk - welcome, topic poll, complaints box
 * Time management during the workshop (breaks, lunch, etc)
