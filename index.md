@@ -204,18 +204,18 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-1. [Presentation](http://afnog.github.io/sse/intro/presentation)
-1. [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
-1. [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
+* [Presentation](http://afnog.github.io/sse/intro/presentation)
+* [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
+* [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
 
 ### Apache
 
 #### [Evelyn Namara](#EN)
 
-###### Apache Presentation/PowerPoint
-###### [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
-###### [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
-###### [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
+* Apache Presentation/PowerPoint
+* [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
+* [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
+* [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
 + Installing Apache22 from FreeBSD ports
 + Configure Apache with basic configuration
@@ -231,7 +231,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-###### Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
+* Presentation/[HTML](http://afnog.github.io/sse/crypto/presentation)/[PDF](http://afnog.github.io/sse/crypto/presentation.pdf)
 
 ### DNS
 
@@ -239,9 +239,9 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 ##### Fundamentals
 
-###### [PowerPoint](dns/dns1-presentation.ppt)
-###### [PDF](dns/dns1-presentation.pdf)
-###### [Exercise](dns/dns1-exercise.txt)
+* [PowerPoint](dns/dns1-presentation.ppt)
+* [PDF](dns/dns1-presentation.pdf)
+* [Exercise](dns/dns1-exercise.txt)
 
 Goal: to understand overall purpose and structure of DNS
 
@@ -263,11 +263,11 @@ Goal: to understand overall purpose and structure of DNS
   - Use tcpdump to show queries being sent to cache
 
 ##### DNS Caching and Debugging
-###### [PowerPoint](dns/dns2-presentation.ppt)
-###### [PDF](dns/dns2-presentation.pdf)
-###### [Exercise 1](dns/dns2-exercise1.txt)
-###### [Exercise 2](dns/dns2-exercise2.txt)
-###### [Exercise 3](dns/dns2-exercise3.txt)
+* [PowerPoint](dns/dns2-presentation.ppt)
+* [PDF](dns/dns2-presentation.pdf)
+* [Exercise 1](dns/dns2-exercise1.txt)
+* [Exercise 2](dns/dns2-exercise2.txt)
+* [Exercise 3](dns/dns2-exercise3.txt)
 
 Goal: to understand operation of a recursive nameserver
 
@@ -302,8 +302,8 @@ Goal: to understand operation of a recursive nameserver
 + Summary
 
 ##### Configuring Authoritative Name Servers
-###### [PowerPoint](dns/dns3-presentation.ppt)
-###### [PDF](dns/dns3-presentation.pdf)
+* [PowerPoint](dns/dns3-presentation.ppt)
+* [PDF](dns/dns3-presentation.pdf)
 
 Goal: to properly configure an authoritative nameserver	
 
@@ -317,15 +317,15 @@ Goal: to properly configure an authoritative nameserver
 + Ten (10) Common DNS Operational and Configuration Errors (RFC1912) 
 
 ##### Exercises
-###### [Exercise](dns/dns3-exercise.txt)
+* [Exercise](dns/dns3-exercise.txt)
 
 Setting up authoritative name services for a domain
 
 + Master & Slave nameserver exercises 
 
 ##### Delegation and Reverse DNS
-###### [PowerPoint](dns/dns4-presentation.ppt)
-###### [PDF](dns/dns4-presentation.pdf)
+* [PowerPoint](dns/dns4-presentation.ppt)
+* [PDF](dns/dns4-presentation.pdf)
 
 + How do you delegate a subdomain?
 + Glue records
@@ -345,28 +345,28 @@ Setting up authoritative name services for a domain
 
 ### DNSSEC
 #### [Joe Abley](#JA)
-###### [Presentation/PDF](dns/DNSSEC_High-Level_Awareness.pdf)
-###### [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
-###### [Exercise/Text](dns/dns5-exercise.txt)
+* [Presentation/PDF](dns/DNSSEC_High-Level_Awareness.pdf)
+* [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
+* [Exercise/Text](dns/dns5-exercise.txt)
 
 DNSSEC High Level Awareness
 
 ### RADIUS
 #### [Chris Wilson](#CW)
-###### [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
-###### [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
+* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
 ##### Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
-###### Virtualization Exercise ([TXT](virtualisation/Readme.md))
-###### Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
+* Virtualization Exercise ([TXT](virtualisation/Readme.md))
+* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Load Balancing
 #### [Laban Mwangi](#LM)
-###### [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
-###### [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
+* [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
+* [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Firewalls
 
@@ -378,37 +378,37 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 + Block incoming traffic on IPv6 and IPv4
 + Log the blocked traffic
 
-###### [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
-###### [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
-###### [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+* [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
+* [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
+* [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
 
 
 ### Monitoring
 
 #### [Kevin Chege](#KC)
 
-###### [Monitoring IP Services](nagios/nagios.pdf)
-###### [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
-###### [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
-###### [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
+* [Monitoring IP Services](nagios/nagios.pdf)
+* [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
+* [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
+* [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
 
 
 ### Exim
 
 #### [Chris Wilson](#CW)
 
-###### [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)  
-###### [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
-###### [EICAR Anti-Virus Test File](exim/eicar)
-###### [Sample spam message](exim/spam.txt)
+* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)  
+* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
+* [EICAR Anti-Virus Test File](exim/eicar)
+* [Sample spam message](exim/spam.txt)
 
 ### Mail
 
 #### [Kevin Chege](#KC)
 
 ##### Introduction to POP and IMAP
-###### [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
-###### [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
+* [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
+* [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
 
 + Dovecot - Server for POP and IMAP
   - What is Dovecot?
@@ -416,9 +416,9 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
   - Configuring Dovecot
   - Configuring POP3s and IMAPs
 
-###### [Presentation and Exercise/PDF](mail/dovecot-scaling.pdf)
-###### [Presentation and Exercise/PowerPoint](mail/dovecot-scaling.ppt)
-###### [Dovecot Basic Mysql Schema](mail/dovecot-mysql-schema.sql)
+* [Presentation and Exercise/PDF](mail/dovecot-scaling.pdf)
+* [Presentation and Exercise/PowerPoint](mail/dovecot-scaling.ppt)
+* [Dovecot Basic Mysql Schema](mail/dovecot-mysql-schema.sql)
 
 + Dovecot - Virtual Users
   - Configuring Dovecot for Virtual users with Mysql
@@ -426,8 +426,8 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ##### Webmail using Squirrelmail
 
-###### [Presentation/PDF](mail/squirrelmail.pdf)
-###### [Presentation/PowerPoint](mail/squirrelmail.ppt)
+* [Presentation/PDF](mail/squirrelmail.pdf)
+* [Presentation/PowerPoint](mail/squirrelmail.ppt)
 
 + Squirrelmail - Webmail IMAP
   - What is Squirrelmail
@@ -437,8 +437,8 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ##### Scaling mail services
 
-###### [Mail Server Clustering](mail/clustering.htm)
-###### [Mail Server Scalability](mail/scalability.htm)
+* [Mail Server Clustering](mail/clustering.htm)
+* [Mail Server Scalability](mail/scalability.htm)
 
 + Mailserver scalability
   - Linear password files 
@@ -458,21 +458,21 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 #### [Laban Mwangi](#LM)
 
-###### [Presentation/PDF](security/sse-sec-and-availability.pdf)
-###### [Presentation/ODP](security/sse-sec-and-availability.odp)
+* [Presentation/PDF](security/sse-sec-and-availability.pdf)
+* [Presentation/ODP](security/sse-sec-and-availability.odp)
 
 ###  configuration-management
 #### [Laban Mwangi](#LM)
 
-###### [Exercise](config-mgmt/Readme.md)
+* [Exercise](config-mgmt/Readme.md)
 
 
 ### Closing Survey
 
 #### [Joel Jaeggli](#JJ)
 
-###### [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
-###### [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
+* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
 </div><!-- .topics -->
 
 ## Management
