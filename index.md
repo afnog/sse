@@ -501,3 +501,5 @@ You can use `make sync` to run `lsyncd` (which you must have installed) to
 automatically `rsync` the content to the workshop server, http://www.ws.afnog.org.
 You will need to check the `SYNC_HOST` and `SYNC_DIR` in the `Makefile`,
 which must point to the destination host and directory **which will be overwritten**.
+
+	make sync
