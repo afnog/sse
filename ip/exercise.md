@@ -68,6 +68,8 @@ sudo pkg install nmap
 * On your laptop
 * On a real server under your control
 
+What do the different states mean? open/closed/filtered
+
 What can you do with these ports?
 
 Try connecting to one:
