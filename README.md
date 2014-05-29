@@ -403,7 +403,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ### Mail
 
-#### [Michuki Mwangi](#MM)
+#### [Kevin Chege](#KC)
 
 ##### Introduction to POP and IMAP
 ###### [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
@@ -455,10 +455,16 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ### Security and Availability
 
-#### [Joel Jaeggli](#JJ)
+#### [Laban Mwangi](#LM)
 
 ###### [Presentation/PDF](security/sse-sec-and-availability.pdf)
 ###### [Presentation/ODP](security/sse-sec-and-availability.odp)
+
+###  configuration-management
+#### [Laban Mwangi](#LM)
+
+###### [Exercise](config-mgmt/Readme.md)
+
 
 ### Closing Survey
 
