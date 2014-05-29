@@ -96,20 +96,19 @@ th
 .topics h4,
 .topics h5 {
 	margin-bottom: 0.5em;
+	font-size: 1em;
 }
 .topics h4 /* presenter */
 {
 	border: 4px solid #d98082;
 	border-style: none none none solid;
 	padding: 0.5em;
-	font-size: 1em;
 }
 .topics h5 /* sub topic/heading within topic */
 {
 	border: 4px solid #ecc0c1;
 	border-style: none none solid none;
 	padding: 0.5em 0.5em 0.5em 0;
-	font-size: 1em;
 	font-weight: bold;
 	list-style-type: none;
 }
