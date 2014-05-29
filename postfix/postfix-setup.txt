@@ -27,7 +27,7 @@ Install Postfix and Dovecot
 	$sudo service sendmail stop 
 
 4.  Ensure you have a working MX record 
-	$dig xxxx@afnog.guru mx
+	$dig xxxx.afnog.guru mx
 
       Where XXX is your zone name
 
@@ -77,7 +77,7 @@ inet_protocols = ipv4 ipv6
 
 6. Edit the aliases file to look like below
 
-	$sudo ee /etc/newaliases
+	$sudo ee /etc/aliases
 
 ###
 	#root: postmaster
