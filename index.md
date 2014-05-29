@@ -447,7 +447,7 @@ If you're using Ruby 1.8, you may need to
 first.
 
 	sudo gem install jekyll execjs therubyracer
-	jekyll
+	make
 
 
 
