@@ -21,7 +21,7 @@ h3 /* subheadings under introduction & management */
 	font-size: 1em;
 	font-weight: bold;
 }
-p, table, h3, ul
+p, table, h3, ul, pre
 {
 	margin-left: 5%;
 }
@@ -143,4 +143,8 @@ h6, blockquote, ol > li /* links to materials */
 }
 .sectionjumps li:first-child:before {
 	content: "";
+}
+pre {
+	background: #eee;
+	padding: 0.5em;
 }
