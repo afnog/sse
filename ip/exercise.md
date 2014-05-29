@@ -64,7 +64,7 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 sudo pkg install nmap
 ```
 
-Find out which hosts are up on our LAN, and the whole of AfNOG.
+Find out which hosts are up on our LAN, and the whole of AfNOG. Try to identify them.
 
 Check for open ports:
 
