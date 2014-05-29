@@ -105,25 +105,6 @@ https://github.com/afnog/afnog.github.io
 		var slideshow = remark.create({sourceUrl: url});
 		$('#loading').hide();
 
-		/*
-		jQuery.ajax({
-			url: url,
-			dataType: "text",
-			success: function(data, textStatus, jqXHR)
-			{
-				lastText = data;
-				jQuery('#source').html(data);
-				slideshow = remark.create();
-				$('#loading').hide();
-			},
-			error: function(jqXHR, textStatus, errorThrown)
-			{
-				alert("Failed to load page: " + url + ": " +
-					textStatus + " " + errorThrown);
-			}
-		});
-		*/
-
 		var interval = setInterval(function() {
 			// Do nothing if not finished loading yet
 			if (slideshow)
