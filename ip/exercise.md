@@ -31,6 +31,11 @@ Look out for:
 
 Investigate the properties of the packets by expanding layers at the bottom.
 
+Investigate a DNS packet. What host is being looked up, by who and why?
+
+What's the source MAC address of your incoming packets? And destination of
+your outgoing packets? Why?
+
 If you find something interesting/unusual, send a pcap file to the intructor.
 
 ### Learn how to filter captures
@@ -57,3 +62,10 @@ sudo pkg install nmap
 * On a real server under your control
 
 What can you do with these ports?
+
+Try connecting to one:
+
+* SSH port with `ssh`
+* HTTP port with `fetch`
+* DNS port with `dig`
+
