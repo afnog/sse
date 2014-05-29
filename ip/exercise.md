@@ -64,6 +64,10 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 sudo pkg install nmap
 ```
 
+Find out which hosts are up on our LAN, and the whole of AfNOG.
+
+Check for open ports:
+
 * On your virtual server
 * On your laptop
 * On a real server under your control
