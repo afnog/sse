@@ -287,12 +287,12 @@ Goal: DNSSEC High Level Awareness.
 
 
 ### Postfix
-####
+#### [Kevin Chege](#KC)
 + understanding email
 + Some Email Best Practices
 + Postfix and Dovecot
 
-* [Email Overview]()
+* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
 * [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 ### Firewalls
 
