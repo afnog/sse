@@ -129,8 +129,7 @@ afnog.github.io: run_jekyll_first
 # $(PRESOS_HTML_OUTPUTS)
 
 run_jekyll_first:
-	$(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
-	  --destination $(PROJECT_DIR_ABS)/$(DST_DIR)
+	$(JEKYLL)
 
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
 	cat $(TEMPLATES_DIR)/remark/header.html $^ $(TEMPLATES_DIR)/remark/footer.html \
@@ -140,5 +139,4 @@ clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
 
 watch:
-	$(JEKYLL_BIN) build --watch --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
-	  --destination $(PROJECT_DIR_ABS)/$(DST_DIR)
+	$(JEKYLL) --watch
