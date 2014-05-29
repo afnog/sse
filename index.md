@@ -263,7 +263,6 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-
 ### RADIUS
 
 #### [Chris Wilson](#CW)
