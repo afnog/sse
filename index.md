@@ -473,7 +473,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ###### [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
 ###### [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
-</div><!-- topics>
+</div><!-- .topics -->
 
 ## Management
 
