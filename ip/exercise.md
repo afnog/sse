@@ -20,14 +20,14 @@ otherwise go to http://www.wireshark.org/download.html.
 
 ### Capture some traffic
 
-Run a capture for 10 seconds, look at the traffic and analyse it.
+Start a capture (e.g. 1000 packets), look at the traffic and analyse it.
 
 Look out for:
 
 * Wireless (802.11)
 * ARP
 * DNS
-* UDP
+* UDP (Skype/VPN/unusual)
 
 If you find something interesting/unusual, send a pcap file to the intructor.
 
