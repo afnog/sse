@@ -83,3 +83,5 @@ Try connecting to one:
 * DNS port with `dig`
 
 What log messages do you get when someone hits these services?
+
+Do you see other such records?
