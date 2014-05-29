@@ -7,6 +7,9 @@ aang			NS	pc5.sse.ws.afnog.org.	; master
 			NS	pc6.sse.ws.afnog.org.
 			NS	pc8.sse.ws.afnog.org.
 
+bello			NS	pc14.sse.ws.afnog.org.	; master
+			NS	pc10.sse.ws.afnog.org.
+
 bukkie			NS	pc6.sse.ws.afnog.org.
 			NS	pc9.sse.ws.afnog.org.	; master
 
@@ -37,7 +40,7 @@ noc			NS	pc1.sse.ws.afnog.org.
 			NS	pc20.sse.ws.afnog.org.
 
 praise			NS	pc10.sse.ws.afnog.org.	; master
-			NS	pc16.sse.ws.afnog.org.
+			NS	pc14.sse.ws.afnog.org.
 
 ryta			NS	pc5.sse.ws.afnog.org.
 			NS	pc6.sse.ws.afnog.org.	; master
@@ -45,9 +48,9 @@ ryta			NS	pc5.sse.ws.afnog.org.
 			NS	pc9.sse.ws.afnog.org.
 
 som			NS	pc6.sse.ws.afnog.org.
-			NS	pc8.sse.ws.afnog.org.
+			NS	pc8.sse.ws.afnog.org.	; master
 			NS	pc15.sse.ws.afnog.org.
 
 suin			NS	pc8.sse.ws.afnog.org.
-			NS	pc15.sse.ws.afnog.org.
+			NS	pc15.sse.ws.afnog.org.	; master
 
