@@ -315,6 +315,8 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ### Internet Protocols
 
+#### [Chris Wilson](#CW)
+
 Goal: to understand the contents and layering of common Internet protocols
 
 * [Exercise](ip/exercise.md)
