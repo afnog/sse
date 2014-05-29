@@ -1,8 +1,8 @@
 class: center, middle
 
-# Welcome to AfNOG 2014
+# Welcome to Scalable Internet Services (SS-E)
 
-## Welcome to Scalable Internet Services (SS-E)
+.height_8em[[![Service Station](https://farm3.staticflickr.com/2766/4160009881_49e5d81a92_s.jpg)](https://www.flickr.com/photos/caveman_92223/4160009881)]
 
 ### Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
 
