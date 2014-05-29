@@ -34,7 +34,7 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 
 ### Check for open ports
 
-```sh
+```
 sudo pkg install nmap
 ```
 
