@@ -243,108 +243,29 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [PDF](dns/dns1-presentation.pdf)
 * [Exercise](dns/dns1-exercise.txt)
 
-Goal: to understand overall purpose and structure of DNS
-
-+ IP addresses vs. names
-+ DNS as a distributed, hierarchical database
-+ Domain names and resource records:
-  - A, PTR, MX, CNAME, TXT, SOA/NS
-+ Domain name lookup responses
-+ Reverse DNS
-+ DNS as client-server model
-  - Resolver
-  - Cache
-  - Authoritative server
-+ Testing DNS (dig)
-+ Understanding output from dig 
-+ Practical Exercises:
-  - Configure Unix resolver
-  - Use dig { A, other (e.g. MX), non-existent answer, reverse lookup }
-  - Use tcpdump to show queries being sent to cache
-
 ##### DNS Caching and Debugging
+
 * [PowerPoint](dns/dns2-presentation.ppt)
 * [PDF](dns/dns2-presentation.pdf)
 * [Exercise 1](dns/dns2-exercise1.txt)
 * [Exercise 2](dns/dns2-exercise2.txt)
 * [Exercise 3](dns/dns2-exercise3.txt)
 
-Goal: to understand operation of a recursive nameserver
-
-+ Recap of previous session
-+ DNS as a distributed database.
-+ Resource record NS: referral of answer
-+ Caching nameserver and root servers
-+ Caching used to reduce load (esp. top level servers)
-+ Issue of stale data in caches (problems with distributed systems).
-  - TTL records on each record
-  - Negative TTL in SOA
-+ Recursion and caching (dig +norec)
-+ Demo: www.ticscali.co.uk
-+ Practical Exercise:
-  - Debugging DNS Worksheet (with dig +norec ):
-    . Students work on their own examples
-+ Configuring a caching n Load Balancingameserver 
-  - check /var/named/etc/namedb/named.conf
-  - run tcpdump
-  - rndc start
-  - change /etc/resolv.conf to point to your nameserver
-  - query two times - { Look at 'aa' flag, TTL, query time }
-  - rndc flush
-  - cache is authoritative for 127.0.0.1
-+ What sort of hardware would you choose when building a DNS cache?		
-+ Improving the configuration of a cache NS 
-+ Managing a caching nameserver 
-+ Practical Exercise:
-  - Building your own cache nameserver
-  - Improving the configuration of the cache NS
-+ Question and Answer session
-+ Summary
-
 ##### Configuring Authoritative Name Servers
+
 * [PowerPoint](dns/dns3-presentation.ppt)
 * [PDF](dns/dns3-presentation.pdf)
-
-Goal: to properly configure an authoritative nameserver	
-
-+ Recap of caching NS	
-+ DNS Replication 
-+ Outside world cannot tell the difference between master and slave 
-+ When does replication take place? 
-+ Two (2) Dangers with serial numbers 
-+ Configuration of Master & Slave NS 
-  - Format of Resource Records { SOA and NS } 
-+ Ten (10) Common DNS Operational and Configuration Errors (RFC1912) 
-
-##### Exercises
 * [Exercise](dns/dns3-exercise.txt)
 
-Setting up authoritative name services for a domain
-
-+ Master & Slave nameserver exercises 
-
 ##### Delegation and Reverse DNS
+
 * [PowerPoint](dns/dns4-presentation.ppt)
 * [PDF](dns/dns4-presentation.pdf)
 
-+ How do you delegate a subdomain?
-+ Glue records
-+ Reverse DNS
-  - Subnets smaller than /24
-+ DNS Landmarks
-  - Key organisations and people
-+ The Root Zone
-+ Top-Level Domains
-  - Generic and Country Code TLDs
-+ Registries, Registrars, Registrants
-+ Nameserver Vendors
-+ Conferences, Industry Groups
-+ Mailing Lists
-+ DNS Summary
-+ Further reading
-
 ### DNSSEC
+
 #### [Joe Abley](#JA)
+
 * [Presentation/PDF](dns/DNSSEC_High-Level_Awareness.pdf)
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
@@ -352,14 +273,16 @@ Setting up authoritative name services for a domain
 DNSSEC High Level Awareness
 
 ### RADIUS
+
 #### [Chris Wilson](#CW)
+
 * [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Virtualization
 
 #### [Laban Mwangi](#LM)
-##### Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
+* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
 * Virtualization Exercise ([TXT](virtualisation/Readme.md))
 * Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
