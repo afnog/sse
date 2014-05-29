@@ -20,9 +20,7 @@ Jump within this page:
       src="photos/Class_Group_Photo_600.jpg"
       alt="[SS-E Group Photo]"></a></p>
 
-<div markdown="1">
 ## Introduction
-</div>
 
 This course on Scalable Internet Services is part of the [AfNOG 2014 Workshop on Network Technology](http://www.ws.afnog.org/afnog2014), held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
 in Djibouti, May-June 2014.
@@ -199,6 +197,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	</tbody>
 </table>
 
+<div class="topics" markdown="1">
 ## Topics
 
 ### Introduction
@@ -474,6 +473,7 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 ###### [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
 ###### [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+</div><!-- topics>
 
 ## Management
 
