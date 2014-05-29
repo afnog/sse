@@ -26,7 +26,7 @@ set skip on lo0 					#Don't bother processing localhost packets
 
 
 block in all						#incoming packets blocked unless specified in below rules
-pass quick out all                                    #whatever communication this server initiates is allowed
+pass out all                                    #whatever communication this server initiates is allowed
 
 #Things I want to always allow
 pass in quick on $lan_if inet6 proto { tcp, udp, icmp6 } from $ipv6_ll to any #allow link local IPv6
