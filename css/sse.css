@@ -13,11 +13,11 @@ h2, .bottomlinks
 	padding-top: 1em;
 }
 h3 { margin: 1em 0 0.2em; }
-.formatted > *
+.topics > *
 {
 	margin-left: 5%;
 }
-.formatted > h2
+.topics > h2
 {
 	margin-left: 0;
 }
