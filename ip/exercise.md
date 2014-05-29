@@ -82,3 +82,4 @@ Try connecting to one:
 * HTTP port with `fetch`
 * DNS port with `dig`
 
+What log messages do you get when someone hits these services?
