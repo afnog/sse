@@ -1,4 +1,4 @@
-DEFAULT_TARGETS = afnog.github.io
+DEFAULT_TARGETS = output
 all: $(DEFAULT_TARGETS)
 clean:
 	rm -rf $(DST_DIR)
