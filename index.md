@@ -428,19 +428,33 @@ All done by CW unless anyone else wants to.
 
 ### Meta (about this site)
 
-Source code (Markdown):
+#### Source code (Markdown)
 
 * Latest master is in [GitHub](https://github.com/afnog/sse).
 * Clone an offline copy with Markdown source (no HTML) at `git@github.com:afnog/sse.git`.
 
-Generated HTML:
+#### Generated HTML
 
 * Created with [gollum-site](https://github.com/dreverri/gollum-site) from the source code.
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
 
-Generating the HTML:
+#### Presentations
+
+Presentations use a special format to invoke [remark](http://remarkjs.com/)
+on the Markdown source files:
+
+* The Markdown source is called `presentation.md` (so there can be only one
+  per directory).
+* In the same directory is a file called `index.md`, which tells Jekyll to
+  use a specific layout (template file) to generate the HTML:
+  `_layouts/presentation.html`.
+* This file is generic and the same for all presentations. It loads the Remark
+  source code, and then loads the `presentation.md` file from the same
+  directory using AJAX.
+
+#### Generating the HTML
 
 If you're using Ruby 1.8, you may need to
 [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/)
