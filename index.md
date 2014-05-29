@@ -364,7 +364,6 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 
 * [Exercise](config-mgmt/Readme.md)
 
-
 ### Closing Survey
 
 #### [Joel Jaeggli](#JJ)
