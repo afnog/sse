@@ -308,7 +308,6 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
 * [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
 
-
 ### Monitoring
 
 #### [Kevin Chege](#KC)
@@ -317,7 +316,6 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
 * [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
 * [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
-
 
 ### Exim
 
@@ -333,52 +331,25 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 #### [Kevin Chege](#KC)
 
 ##### Introduction to POP and IMAP
+
 * [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
 * [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
 
-+ Dovecot - Server for POP and IMAP
-  - What is Dovecot?
-  - Installing dovecot from ports
-  - Configuring Dovecot
-  - Configuring POP3s and IMAPs
+##### Installing Dovecot Server
 
 * [Presentation and Exercise/PDF](mail/dovecot-scaling.pdf)
 * [Presentation and Exercise/PowerPoint](mail/dovecot-scaling.ppt)
 * [Dovecot Basic Mysql Schema](mail/dovecot-mysql-schema.sql)
-
-+ Dovecot - Virtual Users
-  - Configuring Dovecot for Virtual users with Mysql
-  - Configuring Exim for Virtual Users 
 
 ##### Webmail using Squirrelmail
 
 * [Presentation/PDF](mail/squirrelmail.pdf)
 * [Presentation/PowerPoint](mail/squirrelmail.ppt)
 
-+ Squirrelmail - Webmail IMAP
-  - What is Squirrelmail
-  - Installing Squirrelmail from ports/source
-  - Configuring squirrelmail
-  - Redirecting http to https
-
 ##### Scaling mail services
 
 * [Mail Server Clustering](mail/clustering.htm)
 * [Mail Server Scalability](mail/scalability.htm)
-
-+ Mailserver scalability
-  - Linear password files 
-  - Linear mbox files 
-  - Too many files in one directory 
-  - CPU limits 
-  - Disk performance 
-  - Keep your SMTP (smarthost) and POP3 services separate 
-+ Notes and Clustering and NFS
-  - Using Network File System (NFS)
-  - Using Proxies 
-  - Load balancing 
-  - Database backends
-  - FreeBSD NFS 
 
 ### Security and Availability
 
@@ -387,7 +358,8 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [Presentation/PDF](security/sse-sec-and-availability.pdf)
 * [Presentation/ODP](security/sse-sec-and-availability.odp)
 
-###  configuration-management
+### Configuration Management
+
 #### [Laban Mwangi](#LM)
 
 * [Exercise](config-mgmt/Readme.md)
