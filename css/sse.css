@@ -73,7 +73,7 @@ th
 */
 .topics > h3 /* topic */
 {
-	margin: 1em 0 0;
+	margin: 1em 0 0 5%;
 	border: 4px solid #b40004;
 	border-style: none none solid none;
 	background: #ecc0c1;
