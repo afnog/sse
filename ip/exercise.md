@@ -1,3 +1,8 @@
+---
+jekyll: process
+layout: default
+---
+
 # Internet Protocols
 
 Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
