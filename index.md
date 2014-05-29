@@ -411,7 +411,7 @@ See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 Who is arriving when?
 
 * CW on 22/05 around 14h
-* EN on 24/05 
+* EN on 24/05
 * KC on 25/05 early morning
 * JA on 25/05 at 0900
 
