@@ -89,7 +89,7 @@ h4 /* presenter */
 	font-size: 1em;
 	font-weight: bold;
 }
-ol > li /* sub topic/heading within topic */
+h5 /* sub topic/heading within topic */
 {
 	border: 4px solid #ecc0c1;
 	border-style: none none solid none;
@@ -100,7 +100,7 @@ ol > li /* sub topic/heading within topic */
 	font-weight: bold;
 	list-style-type: none;
 }
-h6, blockquote /* links to materials */
+h6, blockquote, ol > li /* links to materials */
 {
 	list-style-type: none;	
 	margin: 0;
