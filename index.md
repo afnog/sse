@@ -214,7 +214,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 #### [Evelyn Namara](#EN)
 
 * [Presentation/PowerPoint](apache/apache.ppt)
-* [Presentation/PDF](apache/apapche.pdf)
+* [Presentation/PDF](apache/apache.pdf)
 * [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
 * [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
