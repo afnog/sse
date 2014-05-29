@@ -422,7 +422,7 @@ All done by CW unless anyone else wants to.
 * Ensure that the participants complete and return the feedback form
 * Download and serve any files needed, e.g. FreeBSD ISO images (for virtualisation) and packages (for pkg_add mirror)
 
-#### TODO
+### TODO
 
 * Student numbers and names
 * Power strips: do we have enough? tape them down
