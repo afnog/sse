@@ -1,0 +1,118 @@
+h2, a, a.visited
+{
+	color: #b40004;
+}
+h2, .bottomlinks
+{
+	/*
+	font-family: "Impact";
+	font-weight: normal;
+	*/
+	border-top: 4px solid #b40004;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+h3 { margin: 1em 0 0.2em; }
+.formatted > *
+{
+	margin-left: 5%;
+}
+.formatted > h2
+{
+	margin-left: 0;
+}
+/*
+p { margin: 0 0 1em; }
+*/
+table, td, th
+{
+	border: 1px solid #dce7ed;
+	border-collapse: collapse;
+}
+table
+{
+	border-width: 2px;
+}
+th, td
+{
+	padding: 0.3em 0.5em;
+}
+th
+{
+	background: #dce7ed;
+}
+.timetable td
+{
+	background: white;
+}
+.timetable tr.break td
+{
+	background: white;
+	text-align: center;
+	color: #dce7ed;
+}
+.timetable .time
+{
+	font-weight: bold;
+}
+.group-photo 
+{
+	width: 30%;
+	float: right;
+	margin: 1em 0 2em 2em;
+}
+.group-photo img
+{
+	width: 100%;
+}
+/*
+.session
+{
+	border-bottom: 1px solid #b40004;
+}
+*/
+h3 /* topic */
+{
+	margin: 1em 0 0;
+	border: 4px solid #b40004;
+	border-style: none none solid none;
+	background: #ecc0c1;
+	padding: 0.5em;
+}
+h4 /* presenter */
+{
+	display: block;
+	margin: 0 0 0.5em;
+	border: 4px solid #d98082;
+	border-style: none none none solid;
+	padding: 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+}
+h5 /* sub topic/heading within topic */
+{
+	border: 4px solid #ecc0c1;
+	border-style: none none solid none;
+	padding: 0.5em;
+	padding-left: 0;
+	margin: 1em 0 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+}
+h6, blockquote /* links to materials */
+{
+	list-style-type: none;	
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+.topics
+{
+	margin: 0 0 0.5em;
+	border: 4px solid #dce7ed;
+	border-style: none none none solid;
+	padding: 0.1em 0.5em;
+	list-style-type: none;
+}
+
