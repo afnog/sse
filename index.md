@@ -408,7 +408,7 @@ Who is arriving when?
 All done by CW unless anyone else wants to.
 
 * Student numbers and names
-* Classroom setup, networking, virtual machine images
+* Classroom setup, networking, virtual machine images, tape down cables
 * Notices - door, timetable, complaints box, wifi password
 * Introductory talk - welcome, topic poll, complaints box
 * Time management during the workshop (breaks, lunch, etc)
@@ -425,7 +425,6 @@ All done by CW unless anyone else wants to.
 ### TODO
 
 * Student numbers and names
-* Power strips: do we have enough? tape them down
 * Set up desktop/backup PCs
 * Distribute the Wifi password
 * Nagios config for all PCs
