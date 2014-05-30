@@ -355,7 +355,7 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
 * [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 * [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
-
+* [Dovecot Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/dovecot-setup.txt)
 ### RADIUS
 
 #### [Chris Wilson](#CW)
