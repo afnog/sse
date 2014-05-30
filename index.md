@@ -201,6 +201,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 <div class="topics" markdown="1">
 ## Topics
 
+Please keep these topics in alphabetical order (except for Introduction first), thanks!
+
 ### Introduction
 
 #### [Chris Wilson](#CW)
@@ -287,18 +289,6 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
-### Postfix
-
-#### [Kevin Chege](#KC)
-
-+ understanding email
-+ Some Email Best Practices
-+ Postfix and Dovecot
-
-* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
-* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
-* [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
-
 ### Exim
 
 #### [Chris Wilson](#CW)
@@ -362,6 +352,18 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Mail Server Clustering](mail/clustering.htm)
 * [Mail Server Scalability](mail/scalability.htm)
+
+### Postfix
+
+#### [Kevin Chege](#KC)
+
++ understanding email
++ Some Email Best Practices
++ Postfix and Dovecot
+
+* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
+* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
+* [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
 
 ### Security and Availability
 
