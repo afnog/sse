@@ -8,7 +8,7 @@ Dovecot Setup
 
 ###########
 protocols = imap imaps
-disable_plaintext_auth = no
+disable_plaintext_auth = yes
 log_path = /var/log/dovecot
 ssl_cert_file = /usr/local/etc/apache22/server.crt
 ssl_key_file = /usr/local/etc/apache22/server.key
