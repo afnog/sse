@@ -71,13 +71,6 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Martin          |Njau           |KENET                |Kenya
 |Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
 
-<table class="participants">
-	<thead><tr><th>Name</th><th>Country</th></tr></thead>
-	<tbody>
-		<tr><td>Frank Kwetei Quaynor</td><td>Ghana</td></tr>
-	</tbody>
-</table>
-
 ### Timetable
 
 <table class="timetable" width="80%">
