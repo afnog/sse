@@ -145,7 +145,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				14:00-16:00
 			</td>
 			<td class="mon">
-				<a href="#nagios">Nagios</a>
+				<a href="#monitoring">Monitoring</a>
 			</td>
 			<td class="tue">
 				<a href="#security-and-cryptography">Security and Cryptography</a>
