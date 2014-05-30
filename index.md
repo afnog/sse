@@ -325,10 +325,9 @@ Goal: to understand the contents and layering of common Internet protocols
 
 #### [Kevin Chege](#KC)
 
-* [Monitoring IP Services](nagios/nagios.pdf)
-* [Nagios Exercise-1](nagios/nagios-exercise1.txt)
-* [Nagios Exercise-2](nagios/nagios-exercise2.txt)
-* [Smokeping Exercise](nagios/smokeping-exercise1.txt)
+* [Monitoring IP Services](nagios/nagios-presentation.pdf)
+* [Nagios Exercise-1](nagios/nagios-exercise1.rtf)
+* [Nagios Exercise-2](nagios/nagios-exercise2.rtf)
 
 ### Exim
 
