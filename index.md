@@ -124,7 +124,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#loadbalancing">Load Balancing</a>
+				<a href="#load-balancing">Load Balancing</a>
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
