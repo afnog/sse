@@ -273,13 +273,6 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-### RADIUS
-
-#### [Chris Wilson](#CW)
-
-* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
-* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
-
 ### Exim
 
 #### [Chris Wilson](#CW)
@@ -362,6 +355,13 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
 * [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 * [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
+
+### RADIUS
+
+#### [Chris Wilson](#CW)
+
+* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Security and Availability
 
