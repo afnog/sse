@@ -281,13 +281,6 @@ Goal: DNSSEC High Level Awareness.
 * Virtualization Exercise ([TXT](virtualisation/Readme.md))
 * Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
-### Load Balancing
-
-#### [Laban Mwangi](#LM)
-
-* [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
-* [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
-
 ### Exim
 
 #### [Chris Wilson](#CW)
@@ -318,6 +311,13 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 Goal: to understand the contents and layering of common Internet protocols
 
 * [Exercise](ip/exercise.html)
+
+### Load Balancing
+
+#### [Laban Mwangi](#LM)
+
+* [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
+* [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Monitoring
 
