@@ -372,7 +372,6 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/HTML](crypto/index.html)
 * [Presentation/PDF](crypto/presentation.pdf)
 
-
 ### Configuration Management
 
 #### [Laban Mwangi](#LM)
