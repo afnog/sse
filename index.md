@@ -65,7 +65,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Bello Bukar     |Mele           |NITDA                |Nigeria
 |Mohamed Aided   |Mohamed        |                     |Somalia
 |Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
-|Abdifatah Ali   |Mohamud        |SomaliREN            |Somalia
+|Abdifatah Ali   |Mohamud        |Somali Research and Education Network (SomaliREN) |Somalia
 |Ritah           |Mulinde        |Infocom Limited      |Uganda
 |James Julius    |Mwasyola       |Habari Node Ltd      |Tanzania
 |Maguette Thioro |Ndong          |Performances Group (UNIV) |Senegal
