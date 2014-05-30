@@ -57,18 +57,20 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 |First Names     |Surname        |Organisation         |Country
 |:-              |:-             |:-                   |:-
-|Bello Bukar     |Mele           |NITDA                |Nigeria
-|BUKOLA          |FAWOLE         |UNIVERSITY OF IBADAN |Nigeria
+|Alfred          |Arouna         |Isocel Telecom       |Benin
+|Bukola          |Fawole         |UNIVERSITY OF IBADAN |Nigeria
+|Lawrence        |Lartey         |REGISTRAR-GENERAL DEPARTMENT |Ghana
 |Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
-|Maguette Thioro |NDONG          |Performances Group (UNIV) |Senegal
-|Ritah           |Mulinde        |Infocom Limited      |Uganda
+|Abdifatah Ali   |Mohamud        |SomaliREN            |Somalia
+|Maguette Thioro |Ndong          |Performances Group (UNIV) |Senegal
 |Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
-|Mohamed Aided   |Mohamed        |                     |Somalia
-|James Julius    |Mwasyola       |Habari Node          |Tanzania
-|NYIMA           |NYANG          |GAMBIA TELECOMMUNICATION COMPANY  |Gambia
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
-|LAWRENCE        |LARTEY         |REGISTRAR-GENERAL DEPARTMENT |Ghana
+|Bello Bukar     |Mele           |NITDA                |Nigeria
+|Mohamed Aided   |Mohamed        |                     |Somalia
+|Ritah           |Mulinde        |Infocom Limited      |Uganda
+|James Julius    |Mwasyola       |Habari Node          |Tanzania
 |Martin          |Njau           |KENET                |Kenya
+|Nyima           |Nyang          |GAMBIA TELECOMMUNICATION COMPANY  |Gambia
 |Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
 
 ### Timetable
