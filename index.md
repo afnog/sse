@@ -45,7 +45,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	<tbody>
 		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
-		<tr id="LM"> <td>Laban Mwangi</td> <td>LM</td> <td>Kenya</td> </tr>
+		<tr id="LM"> <td>Laban Mwangi</td>   <td>LM</td> <td>Kenya</td> </tr>
 		<tr id="EN"> <td>Evelyn Namara</td>  <td>EN</td> <td>Uganda</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
 	</tbody>
