@@ -31,4 +31,5 @@ Have a look at:
 ## Deployments 
 * Use [configuration management]. For example [Juniper supports chef](http://www.juniper.net/techpubs/en_US/junos-chef11.10/topics/concept/chef-for-junos-overview.html)
 * Automate deployments as much as possible. For example, use a [Continuous integration pipeline ](https://en.wikipedia.org/wiki/Continuous_integration)
-* Use CMs. 
+* Have automatic alarms and sensible metrics to track your deployment.
+* Use Configuration management to manage your deployments. 
