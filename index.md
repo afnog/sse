@@ -60,15 +60,15 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Alfred          |Arouna         |Isocel Telecom       |Benin
 |Bukola          |Fawole         |UNIVERSITY OF IBADAN |Nigeria
 |Lawrence        |Lartey         |REGISTRAR-GENERAL DEPARTMENT |Ghana
-|Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
-|Abdifatah Ali   |Mohamud        |SomaliREN            |Somalia
-|Maguette Thioro |Ndong          |Performances Group (UNIV) |Senegal
 |Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
 |Bello Bukar     |Mele           |NITDA                |Nigeria
 |Mohamed Aided   |Mohamed        |                     |Somalia
+|Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
+|Abdifatah Ali   |Mohamud        |SomaliREN            |Somalia
 |Ritah           |Mulinde        |Infocom Limited      |Uganda
 |James Julius    |Mwasyola       |Habari Node          |Tanzania
+|Maguette Thioro |Ndong          |Performances Group (UNIV) |Senegal
 |Martin          |Njau           |KENET                |Kenya
 |Nyima           |Nyang          |GAMBIA TELECOMMUNICATION COMPANY  |Gambia
 |Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
