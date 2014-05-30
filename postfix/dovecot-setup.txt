@@ -3,7 +3,7 @@ Dovecot Setup
 1. Make a copy of the existing dovecot file and add the following to the file we will use
 
 	cd /usr/local/etc
-	sudo cp dovecot.conf dovecot.conf.orig
+	sudo mv dovecot.conf dovecot.conf.orig
 	sudo ee dovecot.conf
 
 ###########
