@@ -94,9 +94,12 @@ TRY THE FOLLOWING COMMANDS ONE BY ONE:
 
 5. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
 
-5. Optional: Try the same commands with normal IMAP on port 143.
+6. Optional: Try the same commands with normal IMAP on port 143.
 
 	$telnet localhost 143
+
+
+
 
 
 
