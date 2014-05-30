@@ -17,8 +17,8 @@ Jump within this page:
 * [Management](#management)
 </div><!-- sectionjumps -->
 
-<p><a href="photos/Class_Group_Photo.jpg" class="group-photo"><img
-      src="photos/Class_Group_Photo_600.jpg"
+<p><a href="images/Class_Group_Photo.jpg" class="group-photo"><img
+      src="images/Class_Group_Photo_600.jpg"
       alt="[SS-E Group Photo]"></a></p>
 
 ## Introduction
@@ -97,7 +97,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				09:00-11:00
 			</td>
 			<td class="mon">
-				<a href="#introduction">SSE Intro/ee bootcamp</a>
+				<a href="#introduction-1">SSE Intro/ee bootcamp</a>
 			</td>
 			<td class="tue">
 				<a href="#dns">DNS</a>
@@ -109,7 +109,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="fri">
-				<a href="#dns">DNS</a>
+				<a href="#dnssec">DNSSEC</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -124,7 +124,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#apache">Apache</a>
 			</td>
 			<td class="tue">
-				<a href="#loadbalancing">Load Balancing</a>
+				<a href="#load-balancing">Load Balancing</a>
 			</td>
 			<td class="wed">
 				<a href="#radius">RADIUS</a>
@@ -145,7 +145,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				14:00-16:00
 			</td>
 			<td class="mon">
-				<a href="#security">Nagios</a>
+				<a href="#monitoring">Monitoring</a>
 			</td>
 			<td class="tue">
 				<a href="#security-and-cryptography">Security and Cryptography</a>
@@ -157,7 +157,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#configuration-management">Configuration Management</a>
 			</td>
 			<td class="fri">
-				<a href="#ip-exploration">IP Exploration</a>
+				<a href="#mail">IMAP/IMAPS</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -178,7 +178,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
-				<a href="#imap-imaps">IMAP/IMAPS</a>
+				<a href="#internet-protocols">Internet Protocols</a>
 			</td>
 			<td class="fri">
 				<a href="#security-and-availability">Security and Availability</a><br />
@@ -201,6 +201,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 <div class="topics" markdown="1">
 ## Topics
 
+Please keep these topics in alphabetical order (except for Introduction first), thanks!
+
 ### Introduction
 
 #### [Chris Wilson](#CW)
@@ -219,12 +221,18 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
-### Security and Cryptography
+### Closing Survey
 
-#### [Chris Wilson](#CW)
+#### [Joel Jaeggli](#JJ)
 
-* [Presentation/HTML](crypto/index.html)
-* [Presentation/PDF](crypto/presentation.pdf)
+* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
+* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+
+### Configuration Management
+
+#### [Laban Mwangi](#LM)
+
+* [Exercise](config-mgmt/Readme.md)
 
 ### DNS
 
@@ -265,39 +273,14 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-### RADIUS
+### Exim
 
 #### [Chris Wilson](#CW)
 
-* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
-* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
-
-### Virtualization
-
-#### [Laban Mwangi](#LM)
-
-* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
-* Virtualization Exercise ([TXT](virtualisation/Readme.md))
-* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
-
-### Load Balancing
-
-#### [Laban Mwangi](#LM)
-
-* [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
-* [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
-
-### Postfix
-
-#### [Kevin Chege](#KC)
-
-+ understanding email
-+ Some Email Best Practices
-+ Postfix and Dovecot
-
-* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
-* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
-* [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
+* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
+* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
+* [EICAR Anti-Virus Test File](exim/eicar)
+* [Sample spam message](exim/spam.txt)
 
 ### Firewalls
 
@@ -321,36 +304,20 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Exercise](ip/exercise.html)
 
-#### [Kevin Chege](#KC)
+### Load Balancing
 
-Goal: To understand firewalls and how the PF (Packet Filter) works
+#### [Laban Mwangi](#LM)
 
-+ Block outgoing traffic on IPv6 and IPv4
-+ Block incoming traffic on IPv6 and IPv4
-+ Log the blocked traffic
-
-* [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
-* [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
-* [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
-
+* [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
+* [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Monitoring
 
 #### [Kevin Chege](#KC)
 
-* [Monitoring IP Services](nagios/nagios.pdf)
-* [Nagios Exercise-1] (monitoring/nagios-exercise1.txt)
-* [Nagios Exercise-2] (monitoring/nagios-exercise2.txt)
-* [Smokeping Exercise] (monitoring/smokeping-exercise1.txt)
-
-### Exim
-
-#### [Chris Wilson](#CW)
-
-* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
-* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
-* [EICAR Anti-Virus Test File](exim/eicar)
-* [Sample spam message](exim/spam.txt)
+* [Monitoring IP Services](nagios/nagios-presentation.pdf)
+* [Nagios Exercise-1](nagios/nagios-exercise1.rtf)
+* [Nagios Exercise-2](nagios/nagios-exercise2.rtf)
 
 ### Mail
 
@@ -377,6 +344,25 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [Mail Server Clustering](mail/clustering.htm)
 * [Mail Server Scalability](mail/scalability.htm)
 
+### Postfix
+
+#### [Kevin Chege](#KC)
+
++ understanding email
++ Some Email Best Practices
++ Postfix and Dovecot
+
+* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
+* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
+* [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
+
+### RADIUS
+
+#### [Chris Wilson](#CW)
+
+* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
+
 ### Security and Availability
 
 #### [Laban Mwangi](#LM)
@@ -384,18 +370,21 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 * [Presentation/PDF](security/sse-sec-and-availability.pdf)
 * [Presentation/ODP](security/sse-sec-and-availability.odp)
 
-### Configuration Management
+### Security and Cryptography
+
+#### [Chris Wilson](#CW)
+
+* [Presentation/HTML](crypto/index.html)
+* [Presentation/PDF](crypto/presentation.pdf)
+
+### Virtualization
 
 #### [Laban Mwangi](#LM)
 
-* [Exercise](config-mgmt/Readme.md)
+* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
+* Virtualization Exercise ([TXT](virtualisation/Readme.md))
+* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
-### Closing Survey
-
-#### [Joel Jaeggli](#JJ)
-
-* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
-* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
 </div><!-- .topics -->
 
 ## Management
@@ -461,21 +450,21 @@ All done by CW unless anyone else wants to.
 
 * Student numbers and names
 
-### Meta (about this site)
+## Meta (about this site)
 
-#### Source code (Markdown)
+### Source code (Markdown)
 
 * Latest master is in [GitHub](https://github.com/afnog/sse).
 * Clone an offline copy with Markdown source (no HTML) at `git@github.com:afnog/sse.git`.
 
-#### Generated HTML
+### Generated HTML
 
 * Created with [gollum-site](https://github.com/dreverri/gollum-site) from the source code.
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
 
-#### Presentations
+### Presentations
 
 Presentations use a special format to invoke [remark](http://remarkjs.com/)
 on the Markdown source files:
@@ -490,7 +479,7 @@ on the Markdown source files:
   directory using AJAX. So the URL that you use to load it is very important
   in locating the correct `presentation.md` file.
 
-#### Generating the HTML
+### Generating the HTML
 
 If you're using Ruby 1.8, you may need to
 [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/)
@@ -519,6 +508,8 @@ changing, and generate a new HTML file when they do (ideal for modifying
 presentations on the fly):
 
 	make watch
+
+### Publishing the HTML
 
 You can use `make sync` to run `lsyncd` (which you must have installed) to
 automatically `rsync` the content to the workshop server, http://www.ws.afnog.org.

@@ -20,6 +20,7 @@ h3 /* subheadings under introduction & management */
 	padding: 0.5em;
 	font-size: 1em;
 	font-weight: bold;
+	background: #fee;
 }
 p, table, h3, ul, pre
 {
@@ -34,7 +35,7 @@ p { margin: 0 0 1em; }
 */
 table, td, th
 {
-	border: 1px solid #dce7ed;
+	border: 1px solid #dee;
 	border-collapse: collapse;
 }
 table
@@ -47,7 +48,7 @@ th, td
 }
 th
 {
-	background: #dce7ed;
+	background: #dee;
 }
 .timetable td
 {
@@ -57,17 +58,19 @@ th
 {
 	background: white;
 	text-align: center;
-	color: #dce7ed;
+	color: #cdd;
 }
 .timetable .time
 {
 	font-weight: bold;
 }
-.group-photo 
+.group-photo
 {
 	width: 30%;
 	float: right;
-	margin: 1em 0 2em 2em;
+	margin: 1.5em 0 1em 1em;
+	background: white;
+	padding: 0 0 0 1em;
 }
 .group-photo img
 {
