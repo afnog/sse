@@ -235,7 +235,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 #### [Chris Wilson](#CW)
 
 * [Survey link](https://www.surveymonkey.com/s/MGJQ6VZ) (online)
-* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+* [Survey results](intro/closing-survey-results.pdf) (PDF)
 
 ### Configuration Management
 
