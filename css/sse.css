@@ -64,11 +64,13 @@ th
 {
 	font-weight: bold;
 }
-.group-photo 
+.group-photo
 {
 	width: 30%;
 	float: right;
-	margin: 1em 0 2em 2em;
+	margin: 1em 0 1em 1em;
+	background: white;
+	padding: 0 0 0 1em;
 }
 .group-photo img
 {
