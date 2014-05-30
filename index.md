@@ -157,7 +157,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#configuration-management">Configuration Management</a>
 			</td>
 			<td class="fri">
-				<a href="#ip-exploration">IP Exploration</a>
+				<a href="#imap-imaps">IMAP/IMAPS</a>
 			</td>
 		</tr>
 		<tr class="break">
@@ -178,7 +178,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#firewalls">Firewalls</a>
 			</td>
 			<td class="thu">
-				<a href="#imap-imaps">IMAP/IMAPS</a>
+				<a href="#internet-protocols">Internet Protocols</a>
 			</td>
 			<td class="fri">
 				<a href="#security-and-availability">Security and Availability</a><br />
