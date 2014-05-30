@@ -97,7 +97,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				09:00-11:00
 			</td>
 			<td class="mon">
-				<a href="#introduction">SSE Intro/ee bootcamp</a>
+				<a href="#introduction-1">SSE Intro/ee bootcamp</a>
 			</td>
 			<td class="tue">
 				<a href="#dns">DNS</a>
