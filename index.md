@@ -64,7 +64,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Ritah           |Mulinde        |Infocom Limited      |Uganda
 |Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
 |Mohamed Aided   |Mohamed        |                     |Somalia
-|James Julius    |Msowoyla       |Habari Node          |Tanzania
+|James Julius    |Mwasyola       |Habari Node          |Tanzania
 |NYIMA           |NYANG          |GAMBIA TELECOMMUNICATION COMPANY  |GAMBIA
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
 |LAWRENCE        |LARTEY         |REGISTRAR-GENERAL DEPARTMENT |Ghana
