@@ -109,7 +109,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#ldap">LDAP</a>
 			</td>
 			<td class="fri">
-				<a href="#dns">DNS</a>
+				<a href="#dnssec">DNSSEC</a>
 			</td>
 		</tr>
 		<tr class="break">
