@@ -461,21 +461,21 @@ All done by CW unless anyone else wants to.
 
 * Student numbers and names
 
-### Meta (about this site)
+## Meta (about this site)
 
-#### Source code (Markdown)
+### Source code (Markdown)
 
 * Latest master is in [GitHub](https://github.com/afnog/sse).
 * Clone an offline copy with Markdown source (no HTML) at `git@github.com:afnog/sse.git`.
 
-#### Generated HTML
+### Generated HTML
 
 * Created with [gollum-site](https://github.com/dreverri/gollum-site) from the source code.
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
 
-#### Presentations
+### Presentations
 
 Presentations use a special format to invoke [remark](http://remarkjs.com/)
 on the Markdown source files:
@@ -490,7 +490,7 @@ on the Markdown source files:
   directory using AJAX. So the URL that you use to load it is very important
   in locating the correct `presentation.md` file.
 
-#### Generating the HTML
+### Generating the HTML
 
 If you're using Ruby 1.8, you may need to
 [install Ruby 1.9](https://leonard.io/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/)
@@ -519,6 +519,8 @@ changing, and generate a new HTML file when they do (ideal for modifying
 presentations on the fly):
 
 	make watch
+
+### Publishing the HTML
 
 You can use `make sync` to run `lsyncd` (which you must have installed) to
 automatically `rsync` the content to the workshop server, http://www.ws.afnog.org.
