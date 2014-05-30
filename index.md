@@ -299,6 +299,15 @@ Goal: DNSSEC High Level Awareness.
 * [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 * [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
 
+### Exim
+
+#### [Chris Wilson](#CW)
+
+* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
+* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
+* [EICAR Anti-Virus Test File](exim/eicar)
+* [Sample spam message](exim/spam.txt)
+
 ### Firewalls
 
 #### [Kevin Chege](#KC)
@@ -328,15 +337,6 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.rtf)
 * [Nagios Exercise-2](nagios/nagios-exercise2.rtf)
-
-### Exim
-
-#### [Chris Wilson](#CW)
-
-* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
-* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
-* [EICAR Anti-Virus Test File](exim/eicar)
-* [Sample spam message](exim/spam.txt)
 
 ### Mail
 
