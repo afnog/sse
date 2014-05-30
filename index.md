@@ -55,6 +55,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 <!-- sorted by surname -->
 
+|hello |world |
+
 <table class="participants">
 	<thead><tr><th>Name</th><th>Country</th></tr></thead>
 	<tbody>
