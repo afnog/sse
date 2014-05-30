@@ -221,6 +221,12 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
+### Configuration Management
+
+#### [Laban Mwangi](#LM)
+
+* [Exercise](config-mgmt/Readme.md)
+
 ### DNS
 
 #### [Joe Abley](#JA)
@@ -371,12 +377,6 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Presentation/HTML](crypto/index.html)
 * [Presentation/PDF](crypto/presentation.pdf)
-
-### Configuration Management
-
-#### [Laban Mwangi](#LM)
-
-* [Exercise](config-mgmt/Readme.md)
 
 ### Closing Survey
 
