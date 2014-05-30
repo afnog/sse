@@ -57,15 +57,15 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 |First Names     |Surname        |Organisation         |Country
 |:-              |:-             |:-                   |:-
-|Bello Bukar     |Mele           |NITDA                |
-|BUKOLA          |FAWOLE         |UNIVERSITY OF IBADAN |NIGERIA
+|Bello Bukar     |Mele           |NITDA                |Nigeria
+|BUKOLA          |FAWOLE         |UNIVERSITY OF IBADAN |Nigeria
 |Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
 |Maguette Thioro |NDONG          |Performances Group (UNIV) |Senegal
 |Ritah           |Mulinde        |Infocom Limited      |Uganda
 |Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
 |Mohamed Aided   |Mohamed        |                     |Somalia
 |James Julius    |Mwasyola       |Habari Node          |Tanzania
-|NYIMA           |NYANG          |GAMBIA TELECOMMUNICATION COMPANY  |GAMBIA
+|NYIMA           |NYANG          |GAMBIA TELECOMMUNICATION COMPANY  |Gambia
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
 |LAWRENCE        |LARTEY         |REGISTRAR-GENERAL DEPARTMENT |Ghana
 |Martin          |Njau           |KENET                |Kenya
