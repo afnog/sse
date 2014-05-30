@@ -221,6 +221,13 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
+### Closing Survey
+
+#### [Joel Jaeggli](#JJ)
+
+* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
+* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
+
 ### Configuration Management
 
 #### [Laban Mwangi](#LM)
@@ -272,14 +279,6 @@ Goal: DNSSEC High Level Awareness.
 
 * [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
-
-### Virtualization
-
-#### [Laban Mwangi](#LM)
-
-* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
-* Virtualization Exercise ([TXT](virtualisation/Readme.md))
-* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ### Exim
 
@@ -378,13 +377,15 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/HTML](crypto/index.html)
 * [Presentation/PDF](crypto/presentation.pdf)
 
-### Closing Survey
-
-#### [Joel Jaeggli](#JJ)
-
-* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
-* [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
 </div><!-- .topics -->
+
+### Virtualization
+
+#### [Laban Mwangi](#LM)
+
+* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
+* Virtualization Exercise ([TXT](virtualisation/Readme.md))
+* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 ## Management
 
