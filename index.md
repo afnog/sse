@@ -68,7 +68,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
 |LAWRENCE        |LARTEY         |REGISTRAR-GENERAL DEPARTMENT |Ghana
 |Martin          |Njau           |KENET                |Kenya
-|Caleb           |Ogundele       |University of Ibadan , Distance Learning Centre |Nigeria
+|Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
 
 <table class="participants">
 	<thead><tr><th>Name</th><th>Country</th></tr></thead>
