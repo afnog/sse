@@ -157,7 +157,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#configuration-management">Configuration Management</a>
 			</td>
 			<td class="fri">
-				<a href="#imap-imaps">IMAP/IMAPS</a>
+				<a href="#mail">IMAP/IMAPS</a>
 			</td>
 		</tr>
 		<tr class="break">
