@@ -232,9 +232,9 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 
 ### Closing Survey
 
-#### [Joel Jaeggli](#JJ)
+#### [Chris Wilson](#CW)
 
-* [Survey link](http://www.surveymonkey.com/s/7TD2J7T) (online)
+* [Survey link](https://www.surveymonkey.com/s/MGJQ6VZ) (online)
 * [Survey results](survey/2013_exit_survey_results.pdf) (PDF)
 
 ### Configuration Management
