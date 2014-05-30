@@ -190,7 +190,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 				<a href="#internet-protocols">Internet Protocols</a>
 			</td>
 			<td class="fri">
-				<a href="#question-and-answer-session">Question and Answer Session</a><br />
+				Question and Answer Session<br />
 				<a href="#closing-survey">Closing Survey</a>
 			</td>
 		</tr>
