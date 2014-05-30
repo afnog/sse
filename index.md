@@ -63,7 +63,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
 |John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
 |Bello Bukar     |Mele           |NITDA                |Nigeria
-|Mohamed Aided   |Mohamed        |                     |Somalia
+|Mohamed Aided   |Mohamed        |Telesom              |Somalia
 |Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
 |Abdifatah Ali   |Mohamud        |Somali Research and Education Network (SomaliREN) |Somalia
 |Ritah           |Mulinde        |Infocom Limited      |Uganda
