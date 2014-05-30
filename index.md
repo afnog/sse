@@ -326,9 +326,9 @@ Goal: to understand the contents and layering of common Internet protocols
 #### [Kevin Chege](#KC)
 
 * [Monitoring IP Services](nagios/nagios.pdf)
-* [Nagios Exercise-1](monitoring/nagios-exercise1.txt)
-* [Nagios Exercise-2](monitoring/nagios-exercise2.txt)
-* [Smokeping Exercise](monitoring/smokeping-exercise1.txt)
+* [Nagios Exercise-1](nagios/nagios-exercise1.txt)
+* [Nagios Exercise-2](nagios/nagios-exercise2.txt)
+* [Smokeping Exercise](nagios/smokeping-exercise1.txt)
 
 ### Exim
 
