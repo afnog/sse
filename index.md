@@ -221,13 +221,6 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
 
-### Security and Cryptography
-
-#### [Chris Wilson](#CW)
-
-* [Presentation/HTML](crypto/index.html)
-* [Presentation/PDF](crypto/presentation.pdf)
-
 ### DNS
 
 #### [Joe Abley](#JA)
@@ -371,6 +364,14 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Presentation/PDF](security/sse-sec-and-availability.pdf)
 * [Presentation/ODP](security/sse-sec-and-availability.odp)
+
+### Security and Cryptography
+
+#### [Chris Wilson](#CW)
+
+* [Presentation/HTML](crypto/index.html)
+* [Presentation/PDF](crypto/presentation.pdf)
+
 
 ### Configuration Management
 
