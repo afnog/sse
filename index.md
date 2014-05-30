@@ -55,6 +55,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 <!-- sorted by surname -->
 
+<div class="participants" markdown="1">
 |First Names     |Surname        |Organisation         |Country
 |-               |-              |-                    |-
 |Bello Bukar     |Mele           |NITDA                |
@@ -70,6 +71,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |LAWRENCE        |LARTEY         |REGISTRAR-GENERAL DEPARTMENT |Ghana
 |Martin          |Njau           |KENET                |Kenya
 |Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
+</div>
 
 ### Timetable
 
