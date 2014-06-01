@@ -237,7 +237,18 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 #### [Chris Wilson](#CW)
 
 * [Survey link](https://www.surveymonkey.com/s/MGJQ6VZ) (online)
-* [Survey results](intro/closing-survey-results.pdf) (PDF)
+* [Survey results/HTML](https://www.surveymonkey.com/results/SM-8JH7M6Z/)
+* [Survey results/PDF](intro/closing-survey-results.pdf)
+
+Answers to the question "Do you have any other comments, questions, or concerns?"
+which are not shown on the printed report:
+
+* MY CONCERN IS IF THE NUMBER OF DAYS FOR THE CLASSES CAN BE INCREASE SO THAT WE CAN GET MORE KNOWLEDGE FROM THE LECTURERS.
+* Thank you for your organizing like this great and live changing event, I will miss you.
+* Meals served at the venue is poor quality
+* Am satisfied, just keep up good spirit.
+* I want to thanks all SSE instructors , they are very Kind and they accept all questions and comments with an open mind
+* Everything is satisfactory except the time allocation for the workshop is not enough. I will either suggest more time or reduce the content at least.
 
 ### Configuration Management
 
@@ -367,6 +378,7 @@ Goal: to understand the contents and layering of common Internet protocols
 * [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
 * [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
 * [Dovecot Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/dovecot-setup.txt)
+
 ### RADIUS
 
 #### [Chris Wilson](#CW)
