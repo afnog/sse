@@ -220,7 +220,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 
 * [Presentation](intro/index.html)
 * [Opening Survey](https://www.surveymonkey.com/s/7Q88MH7)
-* [Survey Results](http://afnog.github.io/sse/intro/opening-survey-results.pdf)
+* [Survey Results](intro/opening-survey-results.pdf)
 
 ### Apache
 
@@ -228,9 +228,9 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 
 * [Presentation/PowerPoint](apache/apache.ppt)
 * [Presentation/PDF](apache/apache.pdf)
-* [Exercise1 - Apache Installation/SSL](http://afnog.github.io/sse/apache/apache_sse_exercises_apache+ssl.txt)
-* [Exercise2 - MySQL/PHP/Wordpress Install](http://afnog.github.io/sse/apache/apache_sse_exercises_Mysql & PHP configs.txt)
-* [Exercise3 - Wordpress Configuration](http://afnog.github.io/sse/apache/apache_sse_exercises_wordpress.txt)
+* [Exercise1 - Apache Installation/SSL](apache/apache_sse_exercises_apache+ssl.txt)
+* [Exercise2 - MySQL/PHP/Wordpress Install](apache/apache_sse_exercises_Mysql & PHP configs.txt)
+* [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_wordpress.txt)
 
 ### Closing Survey
 
@@ -314,9 +314,9 @@ Goal: To understand firewalls and how the PF (Packet Filter) works
 + Block incoming traffic on IPv6 and IPv4
 + Log the blocked traffic
 
-* [FreeBSD Firewalls](https://github.com/afnog/sse/raw/master/firewalls/FreeBSD-firewalls.pdf)
-* [PacketFilter Firewall Exercise-1](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall_exercise-1.txt)
-* [PacketFilter Firewall Exercise-2](https://raw.githubusercontent.com/afnog/sse/master/firewalls/firewall-exercise-2.txt)
+* [FreeBSD Firewalls](firewalls/FreeBSD-firewalls.pdf)
+* [PacketFilter Firewall Exercise-1](firewalls/firewall_exercise-1.txt)
+* [PacketFilter Firewall Exercise-2](firewalls/firewall-exercise-2.txt)
 
 ### Internet Protocols
 
@@ -374,10 +374,10 @@ Goal: to understand the contents and layering of common Internet protocols
 + Some Email Best Practices
 + Postfix and Dovecot
 
-* [Email Overview](https://github.com/afnog/sse/raw/master/postfix/01_email_preso.pdf)
-* [EmailBestPractices Postfix and Dovecot](https://github.com/afnog/sse/raw/master/postfix/postfix-preso.pdf)
-* [Postfix Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/postfix-setup.txt)
-* [Dovecot Setup](https://raw.githubusercontent.com/afnog/sse/master/postfix/dovecot-setup.txt)
+* [Email Overview](postfix/01_email_preso.pdf)
+* [EmailBestPractices Postfix and Dovecot](postfix/postfix-preso.pdf)
+* [Postfix Setup](postfix/postfix-setup.txt)
+* [Dovecot Setup](postfix/dovecot-setup.txt)
 
 ### RADIUS
 
@@ -404,7 +404,7 @@ Goal: to understand the contents and layering of common Internet protocols
 
 #### [Laban Mwangi](#LM)
 
-* Presentation/[PDF](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](https://github.com/afnog/sse/raw/master/virtualisation/docs/sse-virtualization-overview-2014.odp)
+* Presentation ([PDF](virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](virtualisation/docs/sse-virtualization-overview-2014.odp))
 * Virtualization Exercise ([TXT](virtualisation/Readme.md))
 * Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
