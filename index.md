@@ -482,7 +482,7 @@ All done by CW unless anyone else wants to.
 
 ### Generated HTML
 
-* Created with [gollum-site](https://github.com/dreverri/gollum-site) from the source code.
+* Created with Jekyll
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
