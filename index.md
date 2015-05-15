@@ -442,6 +442,20 @@ Who is arriving when?
 * KC on 25/05 early morning
 * JA on 25/05 at 0900
 
+### Equipment
+
+To host this track you will probably need the following equipment:
+
+* 2 x Mac Minis or similar, quad core i7 2Ghz+, 16GB Ram, 250 GB SSD (to host 16 virtual machines each)
+* Projector: VGA required, HDMI optional, screen/wall. Mac VGA and HDMI adaptors.
+* Wifi: ideally wired and wireless on the same SSID with /24.
+* Wired Ethernet ports: probably 4-8 ports for people with broken wireless and for instructors in our classroom.
+* Power strips: 12 x 4 socket.
+* Spare machines: 4 x reasonable desktop/laptop with 1 GB RAM and permission to reformat and install Ubuntu or FreeBSD.
+* Sun shading: to be able to read the projected screen and not overheat in our
+rooms.
+* White board, pens and eraser: at least 3 pens in 2 different colours.
+
 ### Administration
 
 All done by CW unless anyone else wants to.
