@@ -39,7 +39,9 @@ Many devices have built-in firewalls:
 * Basic firewalls are packet filters
 * Can't always make a decision based on one packet (examples?)
 * Stateful firewalls (connection table)
-* Layer 7 filtering/inspection/IDS
+* Application layer (L7) filtering/inspection/IDS
+* Redundant firewalls with synchronisation
+* VPNs and SSL "VPNs"
 
 ???
 
@@ -53,7 +55,12 @@ Decisions that can't be made based on one packet:
 
 ---
 
-## Instructors
+## Stateful Firewalls
+
+.height_8em[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
+
+* "Stateful inspection" tracks the state or progress of a network connection
+
 
 * Joe Abley (Canada)
 * Kevin Chege (Kenya)
