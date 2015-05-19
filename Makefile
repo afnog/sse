@@ -20,8 +20,10 @@ TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
 # Host and directory to be overwritten by "make sync"
-SYNC_HOST = noc.mtg.afnog.org
-SYNC_DIR  = /u/vol/www/afnog2014/sse
+# These must now be edited in $(LSYNCD_CONF) instead:
+# SYNC_HOST = 196.200.223.173
+# SYNC_DIR  = /u/vol/www/afnog2014/sse
+LSYNCD_CONF := lsyncd.conf
 
 # Macros to manipulate relative paths, for use in URLs:
 REMOVE_TRAILING_SLASH = $(patsubst %/,%,$(1))
@@ -73,8 +75,9 @@ RST2ODP = $(RST2ODP_BIN) --traceback \
 	--template-file=$(TEMPLATES_DIR)/presentation.odp
 JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 	--destination $(PROJECT_DIR_ABS)/$(DST_DIR)
-LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
-LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
+# LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
+# LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
+LSYNC   = $(LSYNC_BIN) $(LSYNCD_CONF)
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
