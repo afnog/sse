@@ -65,11 +65,11 @@ Decisions that can't be made based on one packet:
 
 ## Stateful Firewalls
 
-[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
+[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)
 
 ???
 
-* "Stateful inspection" tracks the state or progress of a network connection
+"Stateful inspection" tracks the state or progress of a network connection.
 
 ---
 
