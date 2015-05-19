@@ -65,16 +65,11 @@ Decisions that can't be made based on one packet:
 
 ## Stateful Firewalls
 
-.height_8em[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
+[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
+
+???
 
 * "Stateful inspection" tracks the state or progress of a network connection
-
-
-* Joe Abley (Canada)
-* Kevin Chege (Kenya)
-* Laban Mwangi (Kenya)
-* Evelyn Namara (Uganda)
-* Chris Wilson (UK)
 
 ---
 
