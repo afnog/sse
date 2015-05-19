@@ -15,6 +15,7 @@ You can access this presentation at: http://afnog.github.io/sse/firewalls/
 
 ## What is a Firewall
 
+.height_8em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
 .height_8em[[![Firewall](firewall-art-800.jpg)](http://www.ittechnewsdaily.com/216-firewall-security.html)]
 .height_8em[[![Firewall](firewall_man-800.jpg)](http://prajwaldesai.com/configuring-firewall-settings-for-configuration-manager-2012-r2/)]
 .height_8em[[![Firewall](NAT-Firewall-VPN.jpg)](http://www.bestvpnservice.com/blog/nat-firewall-vpn-router-security/)]
