@@ -69,7 +69,12 @@ Decisions that can't be made based on one packet:
 
 ???
 
-"Stateful inspection" tracks the state or progress of a network connection.
+* "Stateful inspection" tracks the state or progress of a network connection.
+* These are the states of a TCP connection.
+* Most useful for allowing return packets for an open connection.
+* Can prevent sneaking in packets after connection closed.
+* What about ICMP and UDP? They are not inherently stateful protocols.
+* Almost essential for NAT - tracks the internal address corresponding to a connection.
 
 ---
 
