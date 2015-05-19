@@ -8,7 +8,7 @@ class: center, middle
 
 Based on a previous talk by Kevin Chege with thanks!
 
-You can access this presentation at: http://afnog.github.io/sse/firewalls/presentation
+You can access this presentation at: http://afnog.github.io/sse/firewalls/
 ([edit](https://github.com/afnog/sse/firewalls/presentation.md))
 
 ---
