@@ -65,7 +65,7 @@ Decisions that can't be made based on one packet:
 
 ## Stateful Firewalls
 
-.center [![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)
+.center[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
 
 ???
 
