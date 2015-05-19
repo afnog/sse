@@ -1,37 +1,55 @@
 class: center, middle
 
-# Welcome to Scalable Internet Services
+# Linux Firewalls
 
-.height_8em[[![Service Station](https://farm3.staticflickr.com/2766/4160009881_49e5d81a92_z_d.jpg)](https://www.flickr.com/photos/caveman_92223/4160009881)]
+.height_8em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
 
-### Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
+### Chris Wilson, AfNOG 2015
 
-You can access this presentation at: http://afnog.github.io/sse/intro/presentation
-([edit](https://github.com/afnog/sse/intro/presentation.md))
+Based on a previous talk by Kevin Chege with thanks!
 
----
-
-## What we can talk about
-
-* The FreeBSD OS
-* Domain Name Services using BIND
-* Web Services using Apache
-* AAA Services using FreeRADIUS
-* SMTP Services using Exim
-* POP3 & IMAP Services
-* Monitoring IP Services
-* Virtualization
-* Security
+You can access this presentation at: http://afnog.github.io/sse/firewalls/presentation
+([edit](https://github.com/afnog/sse/firewalls/presentation.md))
 
 ---
 
-## What do you want to learn about?
+## What is a Firewall
 
-* https://www.surveymonkey.com/s/7Q88MH7
+* Computer network security device
+* Decided whether packets are allowed or denied
+* Uses a pre-defined set of rules
+
+Many devices have built-in firewalls:
+
+* End devices (desktop, laptop and server)
+* Routers
+* IP-connected devices
+* Dedicated hardware
 
 ???
 
-Use the answers to adjust the number of sessions on each topic.
+* Ask for some examples in each category
+* Software and hardware firewalls
+* Any unusual examples? Mobile phones, desk phones, toasters?
+
+---
+
+## Advanced Firewalls
+
+* Basic firewalls are packet filters
+* Can't always make a decision based on one packet (examples?)
+* Stateful firewalls (connection table)
+* Layer 7 filtering/inspection/IDS
+
+???
+
+Decisions that can't be made based on one packet:
+
+* Downloading a forbidden file type
+* Downloading a virus
+* Sending emails with a virus
+* Established connections/Reply packets (information smuggling)
+* P2P traffic (bittorrent, skype, etc)
 
 ---
 
