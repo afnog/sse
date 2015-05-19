@@ -15,6 +15,11 @@ You can access this presentation at: http://afnog.github.io/sse/firewalls/
 
 ## What is a Firewall
 
+.height_8em[[![Firewall](firewall-art.jpg)](http://www.ittechnewsdaily.com/216-firewall-security.html)]
+.height_8em[[![Firewall](firewall_man.png)](http://prajwaldesai.com/configuring-firewall-settings-for-configuration-manager-2012-r2/)]
+
+???
+
 * Computer network security device
 * Decided whether packets are allowed or denied
 * Uses a pre-defined set of rules
@@ -26,7 +31,7 @@ Many devices have built-in firewalls:
 * IP-connected devices
 * Dedicated hardware
 
-???
+Questions:
 
 * Ask for some examples in each category
 * Software and hardware firewalls
