@@ -71,15 +71,14 @@ Modify the wordpress config:
 
 Edit the config-ip.add.ress.php with the database name, username and passwords created above.so that it looks like so:
 
-		<?php
-                define('DB_NAME', 'wordpress');
-                define('DB_USER', 'wpuser');
-                define('DB_PASSWORD', 'afnog');
-		define('DB_HOST', 'localhost');
-		define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
-		?>
+<?php
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'wpuser');
+define('DB_PASSWORD', 'afnog');
+define('DB_HOST', 'localhost');
+define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
+?>
                    
-
 
 Save the configuration file and restart apache.
 
