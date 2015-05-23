@@ -27,7 +27,7 @@ Create an A and AAAA record entry in your DNS entry based on the zone that has b
 
 This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Create a config file for the wordpress blog to look as below
 
-	$ sudo ee /etc/apache2/sites-enabled/wp.conf
+	$ sudo ee /etc/apache2/sites-enabled/wp-mich.bogus.gh.conf
 
 
  <VirtualHost *:80>
@@ -69,7 +69,7 @@ Create the wordpress config for the fully qualified domain name:
 	$ cd /etc/wordpress/
 	$ ee config-wordpress.yourdomain.bogus.gh.php 
 
-Edit the config-ip.add.ress.php with the database name, username and passwords created above.so that it looks like so:
+Edit the config-wordpress.yourdomain.bogus.gh.php with the database name, username and passwords created above.so that it looks like so:
 
 <?php
 define('DB_NAME', 'wordpress');
