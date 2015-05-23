@@ -23,17 +23,14 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 2. Installation of Apache, Mysql & PHP using packages:
 
-2.1. Install portupgrade which also installs postinstall tool: 
-
-Postinstall will allow you to install programs without knowing exactly where they reside. Using pkg, the system installs a precompiled binary which is faster to install. The ports system does not use precompiled binaries and large programs like perl would take long to compile and install.
+2.1. Update the source tree
 
 	$ sudo apt-get update
 
 2.2. Install Apache, Mysql and PHP
 
-	$ sudo apt-get install mysql-server apache2 php5 mod_php5
-
- 
+	$ sudo apt-get install mysql-server apache2 php5
+	
 2.3.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
 	$ sudo update-rc.d apache2 enable
@@ -48,19 +45,16 @@ You can also do
 
 	$ telnet localhost 80
 
-For IPv6 to work on your virtual PC do the following:
-
-	$ sudo su
-	# echo ipv6_activate_all_interfaces="YES" >> /etc/rc.conf
-	# /etc/netstart
-
 Then set your IPv6 address to match your IPv4 address:
+
 	$ sudo ip -6 addr add 2001:43f8:220:219::XX/64 dev eth0
 
 Then add your default route for IPv6:
+
 	$ sudo ip -6 route add default via 2001:43f8:220:219::1
 
 Test your IPv6 connectivity:
+
 	$ ping6 www.google.com
 
 
@@ -108,23 +102,23 @@ NOTE:	The CommonName is the name of the Website you will use in this case the lo
 	$ ee /etc/apache2/sites-enabled/default-ssl.conf
 
 NOTE:
-* Each virtual host must have its own certificate file see comments on "CommonName".  
+* Each virtual host must have its own certificate file see comments on "CommonName".
+* The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
 * The path is where the certificate File and Keys are located in this case /etc/apache2/ssl 
 
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-
 3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host
 
 	$ a2ensite sitename
 
-
 Restart apache to reflect the changes
-		$ sudo apachectl restart
 
-Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as 
-http://[2001:43f8:220:219:XX]:443
+	$ sudo apachectl restart
+
+Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as http://[2001:43f8:220:219:XX]:443
+
 You can also do 
 
 	$ telnet localhost 443
