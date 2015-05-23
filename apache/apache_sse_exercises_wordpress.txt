@@ -45,17 +45,6 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 	</VirtualHost>
 
 	
-Edit the apache httpd.conf file so that the httpd-vhosts.conf file will be read:
-
-	$ sudo ee /usr/local/etc/apache22/extra/httpd-vhosts.conf
-
-
-Uncomment the following line:
-
-	#Include etc/apache22/extra/httpd-vhosts.conf
-
-Save and exit and then restart apache: sudo apachectl restart
-
 
 
 Modify the wordpress config:
