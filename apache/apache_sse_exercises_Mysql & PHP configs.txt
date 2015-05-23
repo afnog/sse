@@ -14,12 +14,13 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 	# service mysql start
 
 
-1.3 Setting the Mysql Admin passord we use the following procedure
+1.3 Setting the Mysql Admin password and security we use the following procedure 
+
+* Please read the instructions and use the letters y or n on the keyboard.
 
 	# mysql_secure_installation
 
-	# mysqladmin -u root password afnog
-
+Answers to the 
 
 1.4. Log in to mysql console to check if the password was set properly using command below.
 
