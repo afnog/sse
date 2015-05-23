@@ -14,7 +14,9 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 	# service mysql start
 
 
-1.3 Set the mysql admin password to "afnog"
+1.3 Setting the Mysql Admin passord we use the following procedure
+
+	#
 
 	# mysqladmin -u root password afnog
 
