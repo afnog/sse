@@ -25,7 +25,7 @@ Create an A and AAAA record entry in your DNS entry based on the zone that has b
 	wordpress	IN 	A	196.200.219.XX
 	wordpress	IN 	AAAA	2001:43f8:220:219::XX
 
-This means you can reach wordpress via: http://wordpress.evelyn.bogus.gh . Edit the apache vhosts file to look like what is below.
+This means you can reach wordpress via: http://wordpress.evelyn.bogus.gh . Edit the apache 000-defaults file to look like what is below.
 
 	$ sudo ee /usr/local/etc/apache22/extra/httpd-vhosts.conf
 
