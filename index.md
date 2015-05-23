@@ -40,15 +40,14 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 ### Instructors
 
-<!-- sorted by surname -->
-
 <table class="instructors">
 	<thead><tr><th>Name</th><th>Initials</th><th>From</th></tr></thead>
 	<tbody>
+		<!-- sorted by surname -->
 		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
-		<tr id="LM"> <td>Laban Mwangi</td>   <td>LM</td> <td>Kenya</td> </tr>
-		<tr id="EN"> <td>Evelyn Namara</td>  <td>EN</td> <td>Uganda</td> </tr>
+		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td>Ghana</td> </tr>
+		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
 	</tbody>
 </table>
@@ -60,20 +59,6 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |First Names     |Surname        |Organisation         |Country
 |:-              |:-             |:-                   |:-
 |Alfred          |Arouna         |Isocel Telecom       |Benin
-|Bukola          |Fawole         |UNIVERSITY OF IBADAN |Nigeria
-|Lawrence        |Lartey         |REGISTRAR-GENERAL DEPARTMENT |Ghana
-|Praise          |Matanawui      |Ghana Dot Com Ltd    |Ghana
-|John            |Mbugua Maina   |Liquid Telecom Kenya |Kenya
-|Bello Bukar     |Mele           |NITDA                |Nigeria
-|Mohamed Aided   |Mohamed        |Telesom              |Somalia
-|Sara Alamin     |Mohamed Hassan |Sudanese Research and Education Network (SudREN) |Sudan
-|Abdifatah Ali   |Mohamud        |Somali Research and Education Network (SomaliREN) |Somalia
-|Ritah           |Mulinde        |Infocom Limited      |Uganda
-|James Julius    |Mwasyola       |Habari Node Ltd      |Tanzania
-|Maguette Thioro |Ndong          |Performances Group (UNIV) |Senegal
-|Martin          |Njau           |KENET                |Kenya
-|Nyima           |Nyang          |GAMBIA TELECOMMUNICATION COMPANY  |Gambia
-|Caleb           |Ogundele       |University of Ibadan, Distance Learning Centre |Nigeria
 
 ### Timetable
 
