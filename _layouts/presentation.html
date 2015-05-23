@@ -6,11 +6,12 @@ It acts as a 404 page handler, intercepting requests for pages that don't
 exist, adding .md to the end of the URL, fetching the contents using AJAX
 and rendering them as an HTML presentation using Remark.
 
-The actual content is found at the URL that you accessed, followed by .md,
-for example: http://afnog.github.io/sse/exim/presentation.md
+The actual content is found at the URL that you accessed, followed by
+presentation.md, for example: http://afnog.github.io/sse/exim/presentation.md
 
-You can fork and modify this presentation on Github:
-https://github.com/afnog/afnog.github.io
+You can fork and modify this presentation on Github: it should be one of the
+sub-projects under https://github.com/afnog, for example
+https://github.com/afnog/sse.
 -->
 <html>
   <head>
@@ -37,31 +38,44 @@ https://github.com/afnog/afnog.github.io
 	.title h2 {
 		border: none;
 	}
-	.center {
+	.center, .fill {
 		text-align: center;
 	}
-	img {
+	.fill img {
 		/* percentage heights don't work for some reason */
 		/*
 		max-width: 100%;
 		max-height: 80%;
 		*/
-		height: 20em;
+		max-height: 18em;
+		max-width: 100%;
+		object-fit: fill;
 	}
 	.remark-slide-content {
 		font-size: 150%;
 	}
-	.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 	li {
 		margin: 1em 0;
+	}
+	.remark-code, .remark-inline-code {
+		background: #eee;
+		font-family: 'Ubuntu Mono';
+		font-size: 80%;
+	}
+	.remark-code {
+		display: block;
+		border: 0.2em #ccc;
+		border-style: solid none;
+		padding-top: 0.5em;
+	}
+	.remark-inline-code {
+		padding: 0.5em;
 	}
 	.remark-code-line {
 		white-space: pre-wrap;
 		line-height: 150%;
-		background: #eee;
 		padding: 0 0.5em;
 		position: relative;
-		font-size: 140%;
 	}
 	.sh .remark-code-line {
 		margin-left: 1.5em;

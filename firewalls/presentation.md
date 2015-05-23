@@ -65,7 +65,7 @@ Decisions that can't be made based on one packet:
 
 ## Stateful Firewalls
 
-.center[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
+.fill[[![TCP states](Tcp_state_diagram_fixed.svg)](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)]
 
 ???
 
@@ -75,38 +75,175 @@ Decisions that can't be made based on one packet:
 * Can prevent sneaking in packets after connection closed.
 * What about ICMP and UDP? They are not inherently stateful protocols.
 * Almost essential for NAT - tracks the internal address corresponding to a connection.
+* Performance impact - scanning the connection table vs partially/not evaluating the ruleset
 
 ---
 
-## Participants
+## Limitations of Firewalls
 
-Get to know each other!
-
-* Name
-* Country
-* Work
-* Favourite superhero
-
-Close your laptops :)
+.fill[[![Snakes on a Plane](snake_plane_2719321b.jpg)](http://i.telegraph.co.uk/multimedia/archive/02719/snake_plane_2719321b.jpg)]
 
 ???
 
-If you're running a workshop, try this game:
-
-* Works best if there's an even number of people on each table.
-* Divide the group into pairs.
-* Ask the group to put their hands up if they're paired with someone they
-already know.
-* "If your hand is up and you're left of the person you know, stand up and
-  move to the front."
-* "Now sit down next to someone you don't know."
-* Repeat to check that everyone's paired with someone they don't know.
-* Each pair has 2 minutes to get to know the person next to them. Should make notes.
-* Then they have to introduce the other person in their pair.
+* Usually only block *inbound* traffic - what about outbound?
+* How to protect against inside attacks? (more firewalls!)
+* Limited ability to understand application protocols (need other defenses e.g. Application Layer Gateways)
+* Performance impact - minimal (especially compared to ALGs)
+* Blocking legitimate traffic
+* Some traffic very hard to block (skype, encrypted bittorrent, particular websites)
 
 ---
 
-## Presentations
+## Blocking Websites
+
+.fill[[![Great Firewall of China](China.png)](http://www.apc.org/en/node/14821)]
+
+???
+
+* How do you do it?
+* How do you know what sites people are accessing?
+* Can you do it at the packet level? DNS? HTTP Host header?
+* Bypassing - alternative DNS servers, HTTPS
+* Turkey blocking Twitter example
+* How does China do it? Secret, massive manpower, intimidation.
+
+---
+
+## Typical features
+
+* Rulesets (tables, read in order)
+* Rules (IF this THEN that)
+* Match conditions
+  * interface, IP address, protocol, port, time, contents
+* Actions
+  * accept, drop, reject, jump to another table, return
+* Default policy
+
+---
+
+## iptables/netfilter
+
+.fill[[![Netfilter diagram](iptables.png)](http://www.adminsehow.com/2011/09/iptables-packet-traverse-map/)]
+
+???
+
+* `iptables` is the command-line tool to manage the Netfilter firewall
+* connection tracking
+* multiple "tables":
+  * filter (packet filtering)
+  * NAT
+  * mangle
+* hooks at different points in the packet path:
+  * INPUT, FORWARD, OUTPUT, PREROUTING, POSTROUTING
+* many matches and targets
+
+---
+
+## Showing current rules
+
+	$ sudo iptables -L -nv
+
+	Chain INPUT (policy ACCEPT 119 packets, 30860 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+
+	Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+
+	Chain OUTPUT (policy ACCEPT 36 packets, 1980 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+
+---
+
+## Your first ruleset
+
+	$ sudo iptables -A INPUT -p icmp -j ACCEPT
+
+	$ sudo iptables -L INPUT -nv
+
+	Chain INPUT (policy ACCEPT 4 packets, 520 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+	    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+
+---
+
+## Testing rules
+
+How can you test it?
+
+	$ ping -c4 127.0.0.1
+	PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+	64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.058 ms
+	...
+
+	$ sudo iptables -L INPUT -nv
+	Chain INPUT (policy ACCEPT 220 packets, 218K bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+	    8   672 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+
+???
+
+* Why 8 packets instead of 4?
+  * Every ping has a request and a reply packet.
+  * Both are received by the same machine because it's local
+  * Try working with your neighbour
+
+---
+
+## Blocking pings
+
+Add another rule:
+
+	$ sudo iptables -A INPUT -p icmp -j DROP
+
+	$ sudo iptables -L INPUT -nv
+	Chain INPUT (policy ACCEPT 12 packets, 1560 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+	    8   672 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+	    0     0 DROP       icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+
+	$ ping -c1 127.0.0.1
+	64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.067 ms
+
+What happened?
+
+???
+
+* Hint: look at the number of packets matching the DROP rule
+* Why did no packets match? the ACCEPT rule came first
+
+---
+
+## Rule precedence
+
+Add a rule before the ACCEPT rule:
+
+	$ sudo iptables -I INPUT -p icmp -j DROP
+
+	$ sudo iptables -L INPUT -nv
+	Chain INPUT (policy ACCEPT 12 packets, 1560 bytes)
+	 pkts bytes target     prot opt in     out     source       destination         
+	    0     0 DROP       icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+	   10   840 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+	    0     0 DROP       icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+
+	$ ping -c1 127.0.0.1
+	PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+	^C
+	--- 127.0.0.1 ping statistics ---
+	1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+???
+
+What can we do to tidy up?
+
+---
+
+## Deleting rules
+
+
+
+
+
 
 * Theory followed by practical exercises
 * Help us to help you!

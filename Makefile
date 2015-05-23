@@ -11,6 +11,7 @@ help:
 	@echo "  clean:      Delete the output directory [$(DST_DIR)] and all contents"
 	@echo "  output:     Build the output directory [$(DST_DIR)] using Jekyll"
 	@echo "  watch:      Watch for source changes and rebuild outputs in $(DST_DIR)"
+	@echo "  serve:      Run built-in HTTP server"
 	@echo "  sync:       Watch for file changes in $(DST_DIR) and sync to $(SYNC_HOST):$(SYNC_DIR)"
 
 # Directories where various files should be found or written to:
@@ -73,8 +74,9 @@ RST2PDF = $(RST2PDF_BIN) \
 	--smart-quotes=1
 RST2ODP = $(RST2ODP_BIN) --traceback \
 	--template-file=$(TEMPLATES_DIR)/presentation.odp
-JEKYLL  = $(JEKYLL_BIN) build --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
+JEKYLL_OPTS = --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 	--destination $(PROJECT_DIR_ABS)/$(DST_DIR)
+
 # LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
 # LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
 LSYNC   = $(LSYNC_BIN) $(LSYNCD_CONF)
@@ -139,7 +141,7 @@ debug:
 output: run_jekyll_first
 
 run_jekyll_first:
-	$(JEKYLL)
+	$(JEKYLL_BIN) build $(JEKYLL_OPTS)
 
 PRESOS_HTML_OUTPUTS = $(call FILES_PATTERN,.html,$(PRESO_SOURCES))
 $(PRESOS_HTML_OUTPUTS): $(DST_DIR)/%.html: $(SRC_DIR)/%
@@ -150,7 +152,10 @@ presos_clean:
 	rm -f $(PRESOS_HTML_OUTPUTS)
 
 watch:
-	$(JEKYLL) --watch
+	$(JEKYLL_BIN) build $(JEKYLL_OPTS) --watch
+
+serve:
+	$(JEKYLL_BIN) serve $(JEKYLL_OPTS) --watch
 
 sync:
 	$(LSYNC)

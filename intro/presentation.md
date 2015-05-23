@@ -13,7 +13,7 @@ You can access this presentation at: http://afnog.github.io/sse/intro/presentati
 
 ## What we can talk about
 
-* The FreeBSD OS
+* The Debian OS
 * Domain Name Services using BIND
 * Web Services using Apache
 * AAA Services using FreeRADIUS
@@ -144,7 +144,8 @@ Take your name badge to meals at the Palace du Peuple!
 At the end you will receive:
 
 * A USB stick with some O'Reilly eBooks
-* Possibly a FreeBSD CD-ROM
+* Course materials on CD (they are also on our website)
+* Maybe a copy of your virtual machine (if you're lucky)
 
 Please share with your colleagues back at home.
 
@@ -211,7 +212,7 @@ Please be careful in class:
 
 ## Servers
 
-* FreeBSD-10.0 OS installed
+* Debian (Jessie) OS installed
 * sudo and bash installed, ports tree updated
 * Use SSH to access your server (e.g. Putty for Windows)
 * Login with afnog/afnog

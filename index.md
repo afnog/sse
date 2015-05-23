@@ -478,20 +478,37 @@ All done by CW unless anyone else wants to.
 ### TODO
 
 * Student numbers and names
+* Apache, Load Balancing, Virtualisation, Monitoring/Nagios, RADIUS - update (to Debian?)
+* DNS - has jabley updated?
+* Security - SSL certificate generation
 
 ## Meta (about this site)
+
+### Quick Start (editing)
+
+* Request write access to the repositories below, or clone them (and use the clone URLs instead)
+* Install SparkleShare
+* Add `git@github.com:afnog/sse.git` to it
+* Add `git@github.com:afnog/afnog.github.io.git` to it
+* Install Jekyll: `sudo gem install jekyll execjs therubyracer`
+* Run `make serve`
+* Edit the Markdown files in `~/SparkleShare/sse/.../*.md`
+* View the results in your browser at http://localhost:4000/.../*.html
 
 ### Source code (Markdown)
 
 * Latest master is in [GitHub](https://github.com/afnog/sse).
+* Edit online using GitHub's web editor, or:
 * Clone an offline copy with Markdown source (no HTML) at `git@github.com:afnog/sse.git`.
 
 ### Generated HTML
 
-* Created with Jekyll
+* HTML files are auto-generated from Markdown by Jekyll - do not edit by hand!
+* All files except *.md (Markdown files) are copied literally from the source (`sse`) repository.
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
+* Some variables are stored in `_config.yml`, e.g. the year, and used with `{{page.year}}` in HTML and Markdown files.
 
 ### Presentations
 
