@@ -73,11 +73,7 @@ Edit the config-ip.add.ress.php with the database name, username and passwords c
 
 
                    define('DB_NAME', 'wordpress');
-                   
-                   /** MySQL database username */
                    define('DB_USER', 'wpuser');
-
-                   /** MySQL database password */
                    define('DB_PASSWORD', 'afnog');
                    
 
