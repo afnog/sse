@@ -46,7 +46,6 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 
 	
 
-
 Modify the wordpress config:
 
 	$ cd /usr/local/www/wordpress
