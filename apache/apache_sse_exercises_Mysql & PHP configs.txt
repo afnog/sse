@@ -74,12 +74,12 @@ Cleaning up...
 
 2.1 PHP Configuration
 
-    Settings for PHP are stored in the /usr/local/etc/php.ini file.
+    Settings for PHP are stored in the /etc/php5/php.ini file.
 
 
 2.2 Copy the distribution file by issuing the following command
 
-	# cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini
+	# cp /etc/php.ini-development /usr/local/etc/php.ini
 
 
 2.3 Edit /usr/local/etc/php.ini and uncomment the following:
