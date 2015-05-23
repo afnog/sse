@@ -92,7 +92,7 @@ Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
 To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
 
-	$ sudo vi /etc/apache2/sites-enabled/default-ssl.conf
+	$ ee /etc/apache2/sites-enabled/default-ssl.conf
 
 	NameVirtualHost *:443
 
@@ -126,8 +126,6 @@ Then add the below to the bottom of the file:
 	CustomLog "/var/log/apache2/httpd-ssl_request.log" \
           "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
 	</VirtualHost>
-
-
 
 
 Save, exit and restart Apache then point your browser to your WordPress virtual host 
