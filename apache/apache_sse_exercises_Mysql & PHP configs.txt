@@ -4,11 +4,11 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 1. Configuring MySQL:
 ------------------------------------------------------------------------------------
  
-1.1 Enable and launch the mysql service by issuing the following command.
+1.1 Enable the mysql service by issuing the following command.
 
      
 
-	# 
+	# /etc/
 
 
 1.2 Start the mysql server using command below
