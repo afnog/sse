@@ -29,21 +29,6 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 
 	$ sudo ee /etc/apache2/sites-enabled/000-default.conf
 
-	<VirtualHost *:80>
-	ServerAdmin webmaster@mich.sse.ws.afnog.org
-	DocumentRoot /usr/local/www/wordpress
-	ServerName wordpress.yourdomain.bogus.gh
- 
-		<Directory "/usr/local/www/wordpress">
-     		   	Options Indexes FollowSymLinks
-        	   	AllowOverride AuthConfig FileInfo
-        		Order allow,deny
-        		Allow from all
-    		</Directory>
-	ErrorLog "/var/log/wordpress.sse.ws.afnog.org-error_log"
-  	 CustomLog "/var/log/wordpress.sse.ws.afnog.org " common
-	</VirtualHost>
-
 
  <VirtualHost *:80>
         ServerName wordpress.yourdomain.bogus.gh
