@@ -20,8 +20,10 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 
 	# mysql_secure_installation
 
+The password to set for mysql is afnog
 
-
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
 
 By default, a MySQL installation has an anonymous user, allowing anyone
 to log into MySQL without having to have a user account created for
@@ -35,7 +37,7 @@ Remove anonymous users? [Y/n] y
 Normally, root should only be allowed to connect from 'localhost'.  This
 ensures that someone cannot guess at the root password from the network.
 
-Disallow root login remotely? [Y/n] y
+Disallow root login remotely? [Y/n] n
 ... Success!
 
 By default, MySQL comes with a database named 'test' that anyone can
@@ -45,6 +47,7 @@ before moving into a production environment.
 Remove test database and access to it? [Y/n] y
  - Dropping test database...
  ... Success!
+
  - Removing privileges on test database...
  ... Success!
 
