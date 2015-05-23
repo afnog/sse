@@ -5,13 +5,17 @@ Apache24 with SSL, MySQL5 and PHP5 Installation Exercise
 
 The packages to be installed are:
 
-* Apache22
-* Mysql56-server
+* Apache2
+* Mysql-server
 * PHP5
 
-FreeBSD provides 2 ways of installing third party software: The FreeBSD port collection for installing from source, and packages, for installing from pre-built binaries.
+Debian provides 2 ways of installing third party software: 
+	i. Binary Packages
+	This are pre-built package that contains the executables, config files, man/info pages, etc for the Debian system and have a distinguished file extension ".deb"
+	
+	ii. Source packages
+	They contain the original unmodified source files in gzipped-compressed tar format.
  
-FreeBSD Ports and Packages Collection offers a simple way for users and administrators to install applications. There were over 24330 ports available (as of June 2013). One of the advantages of using the FreeBSD ports system is that it will automatically resolve all the dependencies, present the dependency options and then proceed with downloading and installing. 
 
 For this class, we will install Apache, Mysql and PHP using packages.
 
@@ -23,27 +27,20 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 Postinstall will allow you to install programs without knowing exactly where they reside. Using pkg, the system installs a precompiled binary which is faster to install. The ports system does not use precompiled binaries and large programs like perl would take long to compile and install.
 
-	$ sudo pkg install portupgrade
+	$ sudo apt-get update
 
 2.2. Install Apache, Mysql and PHP
 
-	$ sudo pkg install mysql56-server apache22 php5 mod_php5
+	$ sudo apt-get install mysql-server apache2 php5 mod_php5
 
-
-OPTION B: To install from ports, you must navigate to the directory containing the installation files for the software you wish to install. FreeBSD ports reside in /usr/ports . The softwares are then categorised in different folders based on similarity for example, programs related to web are stored under /usr/ports/www/ . Apache resides at /usr/ports/www apache22
  
-	$ cd /usr/ports/www/apache22
-	$ sudo make install clean
+2.3.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
-2.3. Choose whatever default options are presented. Once installed, in /etc/rc.conf, add the following line
-
-	$ ee /etc/rc.conf
-
-	apache24_enable="YES"
+	$ sudo update-rc.d apache2 enable
 
 2.4. To start apache run
 
-	$ sudo /usr/local/etc/rc.d/apache22 start
+	$ sudo /etc/init.d/apache2 start
 
 Check if the apache web server you have just installed works by pointing a browser to the server i.e. http://<your-ip-address> or http://pcXX.sse.ws.afnog.org 
 
