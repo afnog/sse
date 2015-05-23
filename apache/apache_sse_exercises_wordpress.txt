@@ -67,21 +67,21 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 Modify the wordpress config:
 
 	$ cd /etc/wordpress/
-	$ ee config-ip.add.ress.php 
+	$ ee config-wordpress.yourdomain.bogus.gh.php 
 
 Edit the config-ip.add.ress.php with the database name, username and passwords created above.so that it looks like so:
 
-		
+		<?php
                 define('DB_NAME', 'wordpress');
                 define('DB_USER', 'wpuser');
                 define('DB_PASSWORD', 'afnog');
 		define('DB_HOST', 'localhost');
-   6 define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
-   7 ?>
+		define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
+		?>
                    
 
 
-Save the wordpress configuration file and restart apache.
+Save the configuration file and restart apache.
 
 Point your browser to your WordPress virtual host 
 
@@ -91,9 +91,9 @@ Complete the setup as instructed on the page then:
 
 Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
-To browse it on HTTPS, add the following to the top of the httpd-ssl.conf file:
+To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
 
-	$ sudo vi /usr/local/etc/apache22/extra/httpd-ssl.conf
+	$ sudo vi /etc/apache2/sites-enabled/default-ssl.conf
 
 	NameVirtualHost *:443
 
@@ -101,10 +101,10 @@ Then add the below to the bottom of the file:
 
 	<VirtualHost *:443>
 	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
-	DocumentRoot /usr/local/www/wordpress
+	DocumentRoot /usr/share/wordpress
 	ServerName wordpress.yourdomain.bogus.gh
 
-       		<Directory "/usr/local/www/wordpress">
+       		<Directory "/usr/share/wordpress">
         	Options Indexes FollowSymLinks
         	AllowOverride AuthConfig FileInfo
         	Order allow,deny
@@ -113,8 +113,8 @@ Then add the below to the bottom of the file:
 	ErrorLog /var/log/wordpress-s.err-error.log
 	TransferLog /var/log/wordpress-s.tx-access.log
 	SSLEngine on
-	SSLCertificateFile /usr/local/etc/apache22/server.crt
-	SSLCertificateKeyFile /usr/local/etc/apache22/server.key
+	SSLCertificateFile /etc/apache2/ssl/server.crt
+	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 	<FilesMatch "\.(cgi|shtml|phtml|php)$">
     	SSLOptions +StdEnvVars
 	</FilesMatch>
