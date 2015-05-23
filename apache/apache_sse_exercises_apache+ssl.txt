@@ -31,6 +31,8 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 	$ sudo apt-get install mysql-server apache2 php5
 	
+2.2.1 When the mysql-server prompts for a password to be entered use 'afnog' as the password
+	
 2.3.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
 	$ sudo update-rc.d apache2 enable
