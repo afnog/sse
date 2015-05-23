@@ -44,7 +44,40 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
   	 CustomLog "/var/log/wordpress.sse.ws.afnog.org " common
 	</VirtualHost>
 
-	
+
+ <VirtualHost *:80>
+        ServerName wordpress.yourdomain.bogus.gh
+        DocumentRoot /usr/share/wordpress/
+        DirectoryIndex index.php index.html
+        ErrorLog /var/log/apache2/wp-error.log
+        TransferLog /var/log/apache2/wp-access.log
+
+        # wp-content in /var/lib/wordpress/wp-content
+        Alias /wp-content /var/lib/wordpress/wp-content
+
+        <Directory /usr/share/wordpress>
+            Options FollowSymLinks
+            <IfVersion < 2.3>
+                Order allow,deny
+                Allow from all
+            </IfVersion>
+            <IfVersion >= 2.3>
+                Require all granted
+            </IfVersion>
+        </Directory>
+        <Directory /var/lib/wordpress/wp-content>
+            Options FollowSymLinks
+            <IfVersion < 2.3>
+                Order allow,deny
+                Allow from all
+            </IfVersion>
+            <IfVersion >= 2.3>
+                Require all granted
+            </IfVersion>
+        </Directory>
+        </VirtualHost>
+
+
 
 Modify the wordpress config:
 
