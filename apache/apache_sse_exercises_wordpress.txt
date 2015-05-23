@@ -66,10 +66,10 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 
 Modify the wordpress config:
 
-	$ cd /usr/local/www/wordpress
-	$ sudo cp wp-config-sample.php wp-config.php
+	$ cd /etc/wordpress/
+	$ ee config-ip.add.ress.php 
 
-Edit the wp-config.php with the database name, username and passwords created above.so that it looks like so:
+Edit the config-ip.add.ress.php with the database name, username and passwords created above.so that it looks like so:
 
 
                    define('DB_NAME', 'wordpress');
