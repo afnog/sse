@@ -74,7 +74,7 @@ Cleaning up...
 
 2.1 PHP Configuration
 
-    Settings for PHP are stored in the /etc/php5/php.ini file.
+    Settings for PHP are stored in the /etc/php5/apache2/php.ini file.
 
 
 2.2 Copy the distribution file by issuing the following command
@@ -82,7 +82,7 @@ Cleaning up...
 	# cp /etc/php.ini-development /usr/local/etc/php.ini
 
 
-2.3 Edit /usr/local/etc/php.ini and uncomment the following:
+2.3 Edit /etc/php5/apache2/php.ini and uncomment the following:
 
 	; display_errors
 	   Default Value: On
