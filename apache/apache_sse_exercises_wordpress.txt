@@ -27,7 +27,7 @@ Create an A and AAAA record entry in your DNS entry based on the zone that has b
 
 This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit the apache 000-default.conf file to look as below
 
-	$ sudo ee /etc/apache2/sites-enabled/httpd-vhosts.conf
+	$ sudo ee /etc/apache2/sites-enabled/000-default.conf
 
 	<VirtualHost *:80>
 	ServerAdmin webmaster@mich.sse.ws.afnog.org
