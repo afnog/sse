@@ -3,7 +3,7 @@ jekyll: process
 layout: default
 ---
 
-# AfNOG 2014 Workshop on Network Technology
+# AfNOG {{page.year}} Workshop on Network Technology
 
 ## Track SS-E: Scalable Internet Services
 
