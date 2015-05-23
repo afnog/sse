@@ -114,7 +114,7 @@ Cleaning up...
 
 3.4 Also Apache needs to be configured, so it can use php.
 
-	# cd /usr/local/etc/apache22/
+	# cd /etc/apache2/
 	# ee httpd.conf
 
     Scroll down to the end of the /usr/local/etc/apache22/httpd.conf and add the following lines.
