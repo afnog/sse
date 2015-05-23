@@ -25,9 +25,9 @@ Create an A and AAAA record entry in your DNS entry based on the zone that has b
 	wordpress	IN 	A	196.200.219.XX
 	wordpress	IN 	AAAA	2001:43f8:220:219::XX
 
-This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit the apache 000-default.conf file to look as below
+This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Create a config file for the wordpress blog to look as below
 
-	$ sudo ee /etc/apache2/sites-enabled/000-default.conf
+	$ sudo ee /etc/apache2/sites-enabled/wp.conf
 
 
  <VirtualHost *:80>
@@ -64,7 +64,7 @@ This means you can reach wordpress via: http://wordpress.mich.bogus.gh . Edit th
 
 
 
-Modify the wordpress config:
+Create the wordpress config for the fully qualified domain name:
 
 	$ cd /etc/wordpress/
 	$ ee config-wordpress.yourdomain.bogus.gh.php 
