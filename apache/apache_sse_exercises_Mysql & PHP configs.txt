@@ -6,8 +6,6 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
  
 1.1 Enable the mysql service by issuing the following command.
 
-     
-
 	# update-rc.d mysql enable
 
 
