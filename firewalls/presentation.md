@@ -139,7 +139,10 @@ Decisions that can't be made based on one packet:
 
 ---
 
-## Showing current rules
+## Listing current rules
+
+To `L`ist all the rules in the `filter` table (default), not resolving `n`umeric addresses and `v`erbosely
+(showing packet and byte counters):
 
 	$ sudo iptables -L -nv
 
