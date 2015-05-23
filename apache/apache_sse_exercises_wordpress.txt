@@ -117,7 +117,7 @@ Then add the below to the bottom of the file:
 	<FilesMatch "\.(cgi|shtml|phtml|php)$">
     	SSLOptions +StdEnvVars
 	</FilesMatch>
-       	<Directory “/etc/apache2//cgi-bin">
+       	<Directory “/usr/lib/cgi-bin">
     	SSLOptions +StdEnvVars
 	</Directory>
 	BrowserMatch ".*MSIE.*" \
