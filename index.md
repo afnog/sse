@@ -24,7 +24,7 @@ Jump within this page:
 ## Introduction
 
 This course on Scalable Internet Services is part of the
-[AfNOG 2014 Workshop on Network Technology](http://www.ws.afnog.org/afnog2014/index.html),
+[AfNOG {{page.year}} Workshop on Network Technology](http://www.ws.afnog.org/afnog2014/index.html),
 held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
 in Djibouti, May-June 2014.
 
