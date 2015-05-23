@@ -8,7 +8,7 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 
      
 
-	# /etc/
+	# update-rc.d 
 
 
 1.2 Start the mysql server using command below
