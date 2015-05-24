@@ -9,9 +9,10 @@ INSTALLATION AND CONFIGURING WORDPRESS
 
 	$ apt-get install wordpress
 
-1.2 Configure Wordpress
 
-Create the database for wordpress:
+2. Configure Wordpress
+
+2.1 Create the mysql database for wordpress:
 
 $ mysql -u root -p
 Password:
@@ -20,7 +21,7 @@ mysql> GRANT ALL PRIVILEGES ON wordpress.* TO "wpuser"@"localhost" IDENTIFIED BY
 mysql> FLUSH PRIVILEGES;
 mysql> EXIT
 
-2. Configure Apache to host the wordpress site. Start by editing the .conf file under the sites-enabled directory. 
+2.1 Configure Apache to host the wordpress site. Edite the .conf file with the location of wordpress. 
 
 	$ sudo ee /etc/apache2/sites-enabled/wp-pcXX.sse.ws.afnog.org.conf
 
@@ -56,7 +57,6 @@ mysql> EXIT
             </IfVersion>
         </Directory>
         </VirtualHost>
-
 
 
 Create the wordpress config for the fully qualified domain name:
