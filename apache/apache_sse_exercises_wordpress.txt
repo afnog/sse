@@ -21,7 +21,7 @@ mysql> GRANT ALL PRIVILEGES ON wordpress.* TO "wpuser"@"localhost" IDENTIFIED BY
 mysql> FLUSH PRIVILEGES;
 mysql> EXIT
 
-2.1 Configure Apache to host the wordpress site. Edite the .conf file with the location of wordpress. 
+2.1 Configure Apache to host the wordpress site. Edit the .conf file with the location of wordpress. 
 
 	$ sudo ee /etc/apache2/sites-enabled/wp-pcXX.sse.ws.afnog.org.conf
 
