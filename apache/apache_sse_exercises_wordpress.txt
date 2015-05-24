@@ -59,10 +59,10 @@ mysql> EXIT
         </VirtualHost>
 
 
-Create the wordpress config for the fully qualified domain name:
+2.2 Create the wordpress config for the fully qualified domain name:
 
 	$ cd /etc/wordpress/
-	$ ee config-pcXX.sse.ws.afnog.org.php 
+	$ sudo ee config-pcXX.sse.ws.afnog.org.php 
 
 Edit the config-pcXX.sse.ws.afnog.org.php with the database name, username and passwords created above.so that it looks like so:
 
@@ -85,9 +85,9 @@ Complete the setup as instructed on the page then:
 
 Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
-To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
+2.3 To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
 
-	$ ee /etc/apache2/sites-enabled/default-ssl.conf
+	$ sudo ee /etc/apache2/sites-enabled/default-ssl.conf
 
 	NameVirtualHost *:443
 
@@ -96,7 +96,7 @@ Then add the below to the bottom of the file:
 	<VirtualHost *:443>
 	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
 	DocumentRoot /usr/share/wordpress
-	ServerName wordpress.yourdomain.bogus.gh
+	ServerName pcXX.sse.ws.afnog.org
 
        		<Directory "/usr/share/wordpress">
         	Options Indexes FollowSymLinks
@@ -125,5 +125,5 @@ Then add the below to the bottom of the file:
 
 Save, exit and restart Apache then point your browser to your WordPress virtual host 
 
-https://wordpress.yourdomain.bogus.gh/
+https://pcXX.sse.ws.afnog.org/
 
