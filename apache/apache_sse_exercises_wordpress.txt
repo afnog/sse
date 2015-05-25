@@ -89,9 +89,11 @@ Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
 	$ sudo ee /etc/apache2/sites-enabled/default-ssl.conf
 
-	NameVirtualHost *:443
+	<IfModule mod_ssl.c>
 
-Then add the below to the bottom of the file:
+Then add the below to under the the line;
+
+<IfModule mod_ssl.c>
 
 	<VirtualHost *:443>
 	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
