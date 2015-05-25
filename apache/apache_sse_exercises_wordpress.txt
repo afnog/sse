@@ -24,7 +24,7 @@ mysql> EXIT
 
 2.1 Configure Apache to host the wordpress site. Edit the .conf file with the location of wordpress. 
 
-	$ sudo nano /etc/apache2/sites-enabled/wp-pcXX.sse.ws.afnog.org.conf
+	$ sudo nano /etc/apache2/sites-enabled/000-default.conf
 
 
  <VirtualHost *:80>
