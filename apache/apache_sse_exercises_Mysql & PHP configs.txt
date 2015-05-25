@@ -6,19 +6,19 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
  
 1.1 Enable the mysql service by issuing the following command.
 
-	# sudo update-rc.d mysql enable
+	$ sudo update-rc.d mysql enable
 
 
 1.2 Start the mysql server using command below
 
-	# sudo service mysql start
+	$ sudo service mysql start
 
 
 1.3 Setting the Mysql Admin password and security we use the following procedure 
 
-* Please read the instructions and use the letters “y” or “n” on the keyboard.
+* Please read the instructions and use the letters "y" or “n” on the keyboard.
 
-	# sudo mysql_secure_installation
+	$ sudo mysql_secure_installation
 
 The password to set for mysql is afnog
 
@@ -61,12 +61,12 @@ Cleaning up...
 
 1.4. Log in to mysql console to check if the password was set properly using command below.
 
-	# mysql -u root -p
+	$ mysql -u root -p
 	Password:
 
      Type the password at the prompt.
 
-     You can exit from the mysql> prompt by typing “exit” command
+     You can exit from the mysql> prompt by typing "exit" command
 
 
 2. Configuring PHP:
@@ -113,17 +113,17 @@ Uncomment the following lines;
 
 2.3 Restart apache 
 
-	# sudo service apache2 restart
+	$ sudo service apache2 restart
 
 
 2.4 To test PHP, create the following file in the apache 
 
-	# sudo bash -c 'echo "<? phpinfo(); ?>" >> /var/www/html/test.php'
+	$ sudo bash -c 'echo "<? phpinfo(); ?>" >> /var/www/html/test.php'
 
      Now check the phpinfo page http://<your-server-ip>/test.php
 
 
-Proceed to apache_sse_wordpres.doc
+Proceed to Wordpress Exercise
 
 
 
