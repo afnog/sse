@@ -62,7 +62,7 @@ mysql> EXIT
 2.2 Create the wordpress config for the fully qualified domain name:
 
 	$ cd /etc/wordpress/
-	$ sudo ee config-pcXX.sse.ws.afnog.org.php 
+	$ sudo nano config-pcXX.sse.ws.afnog.org.php 
 
 Edit the config-pcXX.sse.ws.afnog.org.php with the database name, username and passwords created above.so that it looks like so:
 
