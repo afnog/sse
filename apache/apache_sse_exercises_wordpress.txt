@@ -27,7 +27,7 @@ mysql> EXIT
 
 
  <VirtualHost *:80>
-        ServerName pcXX.sse.ws.afnog.org.conf
+        ServerName pcXX.sse.ws.afnog.org
         DocumentRoot /usr/share/wordpress/
         DirectoryIndex index.php index.html
         ErrorLog /var/log/apache2/wp-error.log
