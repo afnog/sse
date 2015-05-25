@@ -79,6 +79,10 @@ Cleaning up...
 
 2.2 Edit /etc/php5/apache2/php.ini and uncomment the following:
 
+	$ sudo nano /etc/php5/apache/php.ini
+
+Uncomment the following lines;
+
 	; display_errors
 	   Default Value: On
 	   Development Value: On
