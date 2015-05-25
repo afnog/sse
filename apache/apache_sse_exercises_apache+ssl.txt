@@ -68,6 +68,11 @@ Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
 
 To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
 
+NOTE:
+* Each virtual host must have its own certificate file see comments on "CommonName".
+* The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
+* The path is where the certificate File and Keys are located in this case /etc/apache2/ssl 
+
 The following steps should do the trick. 
 
 3.1	Create the SSL Certificates for your Apache Web Server:
@@ -85,7 +90,7 @@ NOTE:	Password-Phrase is needed to encrypt the key. For this exercise, use "afno
 
 	$ sudo openssl req -new -key server.key -out server.csr
 	
-NOTE:	The CommonName is the name of the Website you will use in this case the localhost name i.e pcXX.sse.ws.afnog.org where XX is your computer number
+* NOTE:	The CommonName is the name of the Website you will use in this case the localhost name i.e pcXX.sse.ws.afnog.org where XX is your computer number
 
 3.1.2	Self Sign your Own Certificate
 
@@ -97,20 +102,17 @@ NOTE:	The CommonName is the name of the Website you will use in this case the lo
 
 	$ sudo a2enmod ssl
 
-3.2.2 Copy the default-ssl.conf file from sites-available to sites-enabled and edit the /etc/apache2/sites-enabled/default-ssl.conf file and make the following changes:
+3.2.2 Copy the default-ssl.conf file from sites-available to sites-enabled and edit the /etc/apache2/sites-enabled/default-ssl.conf 
 
 	$ sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
 	$ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 
-NOTE:
-* Each virtual host must have its own certificate file see comments on "CommonName".
-* The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
-* The path is where the certificate File and Keys are located in this case /etc/apache2/ssl 
+3.2.3 Modify the following lines in the default-ssl.conf file to point to the location of the self-signed certificate and private key.
 
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host - in this case site name is pcXX.sse.ws.afnog.org
+3.2.4 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host - in this case site name is pcXX.sse.ws.afnog.org
 
 	$ sudo a2ensite sitename
 
@@ -120,7 +122,7 @@ Restart apache to reflect the changes
 
 Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as http://[2001:43f8:220:219:XX]:443
 
-You can also do 
+
 
 	$ telnet localhost 443
 
