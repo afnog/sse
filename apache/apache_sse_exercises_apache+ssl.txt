@@ -23,21 +23,17 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 2. Installation of Apache, Mysql & PHP using packages:
 
-2.1. Update the source tree
+2.1 Install Apache, Mysql and PHP
 
-	$ sudo apt-get update
-
-2.2. Install Apache, Mysql and PHP
-
-	$ sudo apt-get install mysql-server apache2 php5
+	$ sudo apt-get install mysql-server apache2 php5 php5-mysql
 	
-2.2.1 When the mysql-server prompts for a password to be entered use 'afnog' as the password
+2.1.1 When the mysql-server prompts for a password to be entered use 'afnog' as the password. If not prompted, it will be set at the next exercise.
 	
-2.3.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
+2.2.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
 	$ sudo update-rc.d apache2 enable
 
-2.4. To start apache run
+2.3. To start apache run
 
 	$ sudo /etc/init.d/apache2 start
 
@@ -54,6 +50,9 @@ Then set your IPv6 address to match your IPv4 address:
 Then add your default route for IPv6:
 
 	$ sudo ip -6 route add default via 2001:43f8:220:219::1
+
+On the above if you get an message: RTNETLINK answers: File exists
+It means the gateway is already in place - as it was auto-configured 
 
 Test your IPv6 connectivity:
 
@@ -73,7 +72,7 @@ The following steps should do the trick.
 
 3.1	Create the SSL Certificates for your Apache Web Server:
 
-	$ mkdir /etc/apache2/ssl/
+	$ sudo mkdir /etc/apache2/ssl/
 	$ cd /etc/apache2/ssl/
 	$ sudo openssl genrsa -des3 -out server.key 2048 
 
@@ -96,12 +95,12 @@ NOTE:	The CommonName is the name of the Website you will use in this case the lo
 
 3.2.1 Enable SSL using the following command;
 
-	$ a2enmod ssl
+	$ sudo a2enmod ssl
 
 3.2.2 Copy the default-ssl.conf file from sites-available to sites-enabled and edit the /etc/apache2/sites-enabled/default-ssl.conf file and make the following changes:
 
-	$ copy /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
-	$ ee /etc/apache2/sites-enabled/default-ssl.conf
+	$ sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
+	$ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 
 NOTE:
 * Each virtual host must have its own certificate file see comments on "CommonName".
@@ -111,9 +110,9 @@ NOTE:
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host
+3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host - in this case site name is pcXX.sse.ws.afnog.org
 
-	$ a2ensite sitename
+	$ sudo a2ensite sitename
 
 Restart apache to reflect the changes
 
