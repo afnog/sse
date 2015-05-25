@@ -7,7 +7,7 @@ INSTALLATION AND CONFIGURING WORDPRESS
 
 1.1 Install wordpress using packages:
 
-	$ apt-get install wordpress
+	$ sudo apt-get install wordpress curl
 
 
 2. Configure Wordpress
