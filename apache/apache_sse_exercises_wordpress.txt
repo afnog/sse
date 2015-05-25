@@ -89,13 +89,18 @@ Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
 	$ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 
+Skip the first two lines below;
+
 	<IfModule mod_ssl.c>
+		<VirtualHost _default_:443>
 
-Then add the below to under the the line;
+Then remove the two lines after (see lines to be removed below)
 
-<IfModule mod_ssl.c>
+		ServerAdmin webmaster@localhost
+                DocumentRoot /var/www/html
 
-	<VirtualHost *:443>
+Then add the following lines;
+
 	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
 	DocumentRoot /usr/share/wordpress
 	ServerName pcXX.sse.ws.afnog.org
@@ -106,26 +111,7 @@ Then add the below to under the the line;
         	Order allow,deny
         	Allow from all
 	</Directory>
-	ErrorLog /var/log/apache2/wordpress-s.err-error.log
-	TransferLog /var/log/apache2/wordpress-s.tx-access.log
-	SSLEngine on
-	SSLCertificateFile /etc/apache2/ssl/server.crt
-	SSLCertificateKeyFile /etc/apache2/ssl/server.key
-	<FilesMatch "\.(cgi|shtml|phtml|php)$">
-    	SSLOptions +StdEnvVars
-	</FilesMatch>
-       	<Directory “/usr/lib/cgi-bin">
-    	SSLOptions +StdEnvVars
-	</Directory>
-	BrowserMatch ".*MSIE.*" \
-         nokeepalive ssl-unclean-shutdown \
-         downgrade-1.0 force-response-1.0
-	CustomLog "/var/log/apache2/httpd-ssl_request.log" \
-          "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
-	</VirtualHost>
 
-
-Delete everything e
 Save, exit and restart Apache then point your browser to your WordPress virtual host 
 
 https://pcXX.sse.ws.afnog.org/
