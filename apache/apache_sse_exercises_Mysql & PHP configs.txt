@@ -118,7 +118,7 @@ Uncomment the following lines;
 
 2.4 To test PHP, create the following file in the apache 
 
-	# sudo bash -c ‘echo "<? phpinfo(); ?>" >> /var/www/html/test.php’
+	# sudo bash -c 'echo "<? phpinfo(); ?>" >> /var/www/html/test.php'
 
      Now check the phpinfo page http://<your-server-ip>/test.php
 
