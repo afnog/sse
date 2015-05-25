@@ -111,7 +111,7 @@ Decisions that can't be made based on one packet:
 
 ## Typical features
 
-* Rulesets (tables, read in order)
+* Rulesets (lists of rules, read in order)
 * Rules (IF this THEN that)
 * Match conditions
   * interface, IP address, protocol, port, time, contents
@@ -141,8 +141,7 @@ Decisions that can't be made based on one packet:
 
 ## Listing current rules
 
-To `L`ist all the rules in the `filter` table (default), not resolving `n`umeric addresses and `v`erbosely
-(showing packet and byte counters):
+We use the `iptables` command to interact with the firewall (in the kernel):
 
 	$ sudo iptables -L -nv
 
@@ -155,9 +154,21 @@ To `L`ist all the rules in the `filter` table (default), not resolving `n`umeric
 	Chain OUTPUT (policy ACCEPT 36 packets, 1980 bytes)
 	 pkts bytes target     prot opt in     out     source       destination         
 
+???
+
+This command is to:
+
+* `L`ist all the rules,
+* in the `filter` table (default),
+* not resolving `n`umeric addresses,
+
+This shows 3 chains (INPUT, FORWARD and OUTPUT) with no rules in any of them.
+
 ---
 
 ## Your first ruleset
+
+Configure your firewall to allow ICMP packets.
 
 	$ sudo iptables -A INPUT -p icmp -j ACCEPT
 
@@ -166,6 +177,13 @@ To `L`ist all the rules in the `filter` table (default), not resolving `n`umeric
 	Chain INPUT (policy ACCEPT 4 packets, 520 bytes)
 	 pkts bytes target     prot opt in     out     source       destination         
 	    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
+
+What effect will this have?
+
+???
+
+No effect for now, because the policy is also ACCEPT. However you will see
+*icmp* packets accounted against the rule, instead of the chain.
 
 ---
 
@@ -183,12 +201,16 @@ How can you test it?
 	 pkts bytes target     prot opt in     out     source       destination         
 	    8   672 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
 
+Why do we see 8 packets against the rule, instead of 4?
+
+You can use `iptables -L INPUT -nZ` to `Z`ero the counters.
+
 ???
 
-* Why 8 packets instead of 4?
-  * Every ping has a request and a reply packet.
-  * Both are received by the same machine because it's local
-  * Try working with your neighbour
+* The *ping* command uses ICMP packets of the `echo-request` and `echo-response` types.
+* Every ping has a request and a response packet.
+* Both are received by the same machine because it's local.
+* Try working with your neighbour: each test the other's firewall.
 
 ---
 
@@ -207,9 +229,11 @@ Add another rule:
 	$ ping -c1 127.0.0.1
 	64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.067 ms
 
-What happened?
+Is that what you expected?
 
 ???
+
+Some people would have expected that pings would be dropped.
 
 * Hint: look at the number of packets matching the DROP rule
 * Why did no packets match? the ACCEPT rule came first
@@ -218,7 +242,7 @@ What happened?
 
 ## Rule precedence
 
-Add a rule before the ACCEPT rule:
+Add a DROP rule **before** the ACCEPT rule:
 
 	$ sudo iptables -I INPUT -p icmp -j DROP
 
@@ -241,11 +265,37 @@ What can we do to tidy up?
 
 ---
 
-## Deleting rules
+## List rules with indexes
 
+Use the iptables `-L --line-numbers` options:
 
+	$ sudo iptables -L INPUT -nv --line-numbers
+	Chain INPUT (policy ACCEPT 15 packets, 1315 bytes)
+	num   pkts bytes target   prot opt in    out   source       destination         
+	1        0     0 DROP     icmp --  *     *     0.0.0.0/0    0.0.0.0/0           
+	2        0     0 ACCEPT   icmp --  *     *     0.0.0.0/0    0.0.0.0/0           
+	3        0     0 DROP     icmp --  *     *     0.0.0.0/0    0.0.0.0/0
 
+---
 
+## Deleting Rules
+
+Delete rule by index:
+
+	$ sudo iptables -D INPUT 3
+
+Delete rule by target:
+
+	$ sudo iptables -D INPUT -p icmp -j ACCEPT
+
+Check the results:
+
+	$ sudo iptables -L INPUT -nv --line-numbers
+	Chain INPUT (policy ACCEPT 9 packets, 835 bytes)
+	num   pkts bytes target     prot opt in     out     source               destination         
+	1        0     0 DROP       icmp --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+---
 
 
 * Theory followed by practical exercises

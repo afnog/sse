@@ -62,146 +62,31 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 ### Timetable
 
-<table class="timetable" width="80%">
-	<colgroup>
-		<col width="10%" />
-		<col width="10%" />
-		<col width="10%" />
-		<col width="10%" />
-		<col width="10%" />
-		<col width="10%" />
-	</colgroup>
-	<thead>
-		<tr>
-			<th></th>
-			<th>Monday</th>
-			<th>Tuesday</th>
-			<th>Wednesday</th>
-			<th>Thursday</th>
-			<th>Friday</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>26/05</td>
-			<td>27/05</td>
-			<td>28/05</td>
-			<td>29/05</td>
-			<td>30/05</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="time">
-				09:00-11:00
-			</td>
-			<td class="mon">
-				<a href="#introduction-1">SSE Intro/ee bootcamp</a>
-			</td>
-			<td class="tue">
-				<a href="#dns">DNS</a>
-			</td>
-			<td class="wed">
-				<a href="#dns">DNS</a>
-			</td>
-			<td class="thu">
-				<a href="#ldap">LDAP</a>
-			</td>
-			<td class="fri">
-				<a href="#dnssec">DNSSEC</a>
-			</td>
-		</tr>
-		<tr class="break">
-			<td></td>
-			<td colspan="5">Tea Break</td>
-		</tr>
-		<tr>
-			<td class="time">
-				11:30-13:00
-			</td>
-			<td class="mon">
-				<a href="#apache">Apache</a>
-			</td>
-			<td class="tue">
-				<a href="#load-balancing">Load Balancing</a>
-			</td>
-			<td class="wed">
-				<a href="#radius">RADIUS</a>
-			</td>
-			<td class="thu">
-				<a href="#postfix">Postfix</a>
-			</td>
-			<td class="fri">
-				<a href="#monitoring-and-logging">Monitoring and Logging</a>
-			</td>
-		</tr>
-		<tr class="break">
-			<td></td>
-			<td colspan="5">Lunch</td>
-		</tr>
-		<tr>
-			<td class="time">
-				14:00-16:00
-			</td>
-			<td class="mon">
-				<a href="#monitoring">Monitoring</a>
-			</td>
-			<td class="tue">
-				<a href="#security-and-cryptography">Security and Cryptography</a>
-			</td>
-			<td class="wed">
-				<a href="#dns">DNS</a>
-			</td>
-			<td class="thu">
-				<a href="#configuration-management">Configuration Management</a>
-			</td>
-			<td class="fri">
-				<a href="#mail">IMAP/IMAPS</a>
-			</td>
-		</tr>
-		<tr class="break">
-			<td></td>
-			<td colspan="5">Tea Break</td>
-		</tr>
-		<tr>
-			<td class="time">
-				16:30-18:30
-			</td>
-			<td class="mon">
-				<a href="#apache">Apache</a>
-			</td>
-			<td class="tue">
-				<a href="#virtualization">Virtualization</a>
-			</td>
-			<td class="wed">
-				<a href="#firewalls">Firewalls</a>
-			</td>
-			<td class="thu">
-				<a href="#internet-protocols">Internet Protocols</a>
-			</td>
-			<td class="fri">
-				Question and Answer Session<br />
-				<a href="#closing-survey">Closing Survey</a>
-			</td>
-		</tr>
-		<tr class="break">
-			<td>18:30-20:30</td>
-			<td colspan="5">Dinner</td>
-		</tr>
-		<tr>
-			<td class="time">
-				Evening Sessions (20:00-22:00)
-			</td>
-			<td colspan="5">Closed</td>
-		</tr>
-	</tbody>
-</table>
+|		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
+|:-             |:-                     |:-                     |:-                     |:-                     |:-
+|		|25/05			|26/05			|27/05			|28/05			|29/05
+|09:00-11:00	|[Introduction][]	|[DNS Resolver][]	|[DNS Authoritative][]	|[DNS Authoritative][]	|[LDAP][]
+|-
+|Tea break
+|11:30-13:00	|[DNS Fundamentals][]	|[RADIUS][]		|[Virtualisation][]	|[File Servers][]	|[SMTP][]
+|-
+|Lunch
+|14:00-16:00	|[Apache][]		|[Monitoring][]		|[Virtualisation][]	|[Load Balancing][]	|[IMAP and Webmail][]
+|-
+|Tea break
+|16:30-18:30	|[Apache][]		|[Monitoring][]		|[SSL][]		|[Backups][]		|[Closing Survey][]
+|-
+|Supper
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[Cryptography][]	|[DNSSEC][]	|[Backups][]	|[Eduroam][]
+{: .timetable width="80%"}
 
 <div class="topics" markdown="1">
 ## Topics
 
-Please keep these topics in alphabetical order (except for Introduction first), thanks!
+<!-- Please keep these topics in alphabetical order (except for Introduction first), thanks! -->
 
 ### Introduction
+[Introduction]: #introduction-1
 
 #### [Chris Wilson](#CW)
 
@@ -210,6 +95,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [Survey Results](intro/opening-survey-results.pdf)
 
 ### Apache
+[Apache]: #apache
 
 #### [Evelyn Namara](#EN)
 
@@ -220,6 +106,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_wordpress.txt)
 
 ### Closing Survey
+[Closing Survey]: #closing-survey
 
 #### [Chris Wilson](#CW)
 
@@ -238,6 +125,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 #### [Joe Abley](#JA)
 
 ##### Fundamentals
+[DNS Fundamentals]: #fundamentals
 
 * [PowerPoint](dns/dns1-presentation.ppt)
 * [PDF](dns/dns1-presentation.pdf)
@@ -263,6 +151,7 @@ Please keep these topics in alphabetical order (except for Introduction first), 
 * [PDF](dns/dns4-presentation.pdf)
 
 ### DNSSEC
+[DNSSEC]: #dnssec
 
 #### [Joe Abley](#JA)
 
@@ -272,24 +161,11 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-### Exim
+### Firewalls
 
 #### [Chris Wilson](#CW)
 
-* [Presentation/PDF](exim/afnog_2013_exim_presentation_130613.pdf)
-* [Presentation/OpenOffice](exim/afnog_2013_exim_presentation.odp)
-* [EICAR Anti-Virus Test File](exim/eicar)
-* [Sample spam message](exim/spam.txt)
-
-### Firewalls
-
-#### [Kevin Chege](#KC)
-
-Goal: To understand firewalls and how the PF (Packet Filter) works
-
-+ Block outgoing traffic on IPv6 and IPv4
-+ Block incoming traffic on IPv6 and IPv4
-+ Log the blocked traffic
+Goal: To understand firewalls and how the Linux iptables (netfilter) firewall works
 
 * [FreeBSD Firewalls](firewalls/FreeBSD-firewalls.pdf)
 * [PacketFilter Firewall Exercise-1](firewalls/firewall_exercise-1.txt)
@@ -304,6 +180,7 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Exercise](ip/exercise.html)
 
 ### Load Balancing
+[Load Balancing]: #load-balancing
 
 #### [Laban Mwangi](#LM)
 
@@ -311,6 +188,7 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
 ### Monitoring
+[Monitoring]: #monitoring
 
 #### [Kevin Chege](#KC)
 
@@ -318,7 +196,8 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Nagios Exercise-1](nagios/nagios-exercise1.rtf)
 * [Nagios Exercise-2](nagios/nagios-exercise2.rtf)
 
-### Mail
+### IMAP and Webmail
+[IMAP and Webmail]: #imap-and-webmail
 
 #### [Kevin Chege](#KC)
 
@@ -343,20 +222,8 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Mail Server Clustering](mail/clustering.htm)
 * [Mail Server Scalability](mail/scalability.htm)
 
-### Postfix
-
-#### [Kevin Chege](#KC)
-
-+ understanding email
-+ Some Email Best Practices
-+ Postfix and Dovecot
-
-* [Email Overview](postfix/01_email_preso.pdf)
-* [EmailBestPractices Postfix and Dovecot](postfix/postfix-preso.pdf)
-* [Postfix Setup](postfix/postfix-setup.txt)
-* [Dovecot Setup](postfix/dovecot-setup.txt)
-
 ### RADIUS
+[RADIUS]: #radius
 
 #### [Chris Wilson](#CW)
 
@@ -377,7 +244,22 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/HTML](crypto/index.html)
 * [Presentation/PDF](crypto/presentation.pdf)
 
+### SMTP
+[SMTP]: #smtp
+
+#### [Kevin Chege](#KC)
+
++ understanding email
++ Some Email Best Practices
++ Postfix and Dovecot
+
+* [Email Overview](postfix/01_email_preso.pdf)
+* [EmailBestPractices Postfix and Dovecot](postfix/postfix-preso.pdf)
+* [Postfix Setup](postfix/postfix-setup.txt)
+* [Dovecot Setup](postfix/dovecot-setup.txt)
+
 ### Virtualization
+[Virtualization]: #virtualization
 
 #### [Laban Mwangi](#LM)
 
@@ -485,11 +367,12 @@ All done by CW unless anyone else wants to.
 * Latest master is in [GitHub](https://github.com/afnog/sse).
 * Edit online using GitHub's web editor, or:
 * Clone an offline copy with Markdown source (no HTML) at `git@github.com:afnog/sse.git`.
+* The syntax is parsed with Kramdown, which adds some useful [extensions](http://kramdown.gettalong.org/quickref.html).
 
 ### Generated HTML
 
 * HTML files are auto-generated from Markdown by Jekyll - do not edit by hand!
-* All files except *.md (Markdown files) are copied literally from the source (`sse`) repository.
+* All files except those starting with `---` ([front matter](http://jekyllrb.com/docs/frontmatter/)) are copied literally from the source (`sse`) repository.
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
 * [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
@@ -509,6 +392,9 @@ on the Markdown source files:
   source code, and then loads the `presentation.md` file from the same
   directory using AJAX. So the URL that you use to load it is very important
   in locating the correct `presentation.md` file.
+* This means that you cannot use Kramdown extensions in presentations. No
+  presentation.html files are generated because the `presentation.md` files
+  deliberately do not have a "front matter" section which Jekyll requires.
 
 ### Generating the HTML
 

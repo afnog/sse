@@ -25,6 +25,7 @@ h3 /* subheadings under introduction & management */
 p, table, h3, ul, pre
 {
 	margin-left: 5%;
+	margin-right: 5%;
 }
 .topics > h2
 {
@@ -53,10 +54,10 @@ th
 .timetable td
 {
 	background: white;
+	width: 10%;
 }
-.timetable tr.break td
+.timetable tr.break td, .timetable tbody tr:first-child td
 {
-	background: white;
 	text-align: center;
 	color: #cdd;
 }
@@ -86,7 +87,7 @@ th
 .topics h4,
 .topics h5 {
 	font-weight: bold;
-	margin: 0 0 0 5%;
+	margin: 0 5% 0 5%;
 }
 .topics h3 /* topic */
 {
