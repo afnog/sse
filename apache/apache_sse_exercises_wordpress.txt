@@ -22,7 +22,8 @@ mysql> FLUSH PRIVILEGES;
 mysql> EXIT
 
 
-2.1 Configure Apache to host the wordpress site. Edit the .conf file with the location of wordpress. 
+2.1 Configure Apache to host the wordpress site. Edit the 000-default .conf file with the location of wordpress. 
+Replace the contents of the 000-default.conf file with the content below.
 
 	$ sudo nano /etc/apache2/sites-enabled/000-default.conf
 
