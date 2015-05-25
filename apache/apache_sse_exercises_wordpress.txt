@@ -24,7 +24,11 @@ mysql> EXIT
 
 2.1 Prepare Apache to Configure multi-hosts
 
-Edit the Apache config 
+Edit the Apache default config
+
+	$ sudo nano /etc/apache2/sites-enabled/000-default.conf
+
+
 2.1 Configure Apache to host the wordpress site. Edit the .conf file with the location of wordpress. 
 
 	$ sudo nano /etc/apache2/sites-enabled/wp-pcXX.sse.ws.afnog.org.conf
