@@ -89,7 +89,7 @@ Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
 
 2.3 To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
 
-	$ sudo nano /etc/apache2/sites-available/default-ssl.conf
+	$ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 
 Skip the first two lines below;
 
