@@ -125,6 +125,7 @@ Then add the below to under the the line;
 	</VirtualHost>
 
 
+Delete 
 Save, exit and restart Apache then point your browser to your WordPress virtual host 
 
 https://pcXX.sse.ws.afnog.org/
