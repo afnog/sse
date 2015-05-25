@@ -113,7 +113,7 @@ Uncomment the following lines;
 
 2.3 Restart apache 
 
-	# /etc/init.d/apache2 restart
+	# sudo service apache2 restart
 
 
 2.4 To test PHP, create the following file in the apache 
