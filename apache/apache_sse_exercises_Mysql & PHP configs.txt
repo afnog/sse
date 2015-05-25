@@ -18,7 +18,7 @@ Configuring MySQL5 and PHP5 & Installation of Wordpress
 
 * Please read the instructions and use the letters “y” or “n” on the keyboard.
 
-	# mysql_secure_installation
+	# sudo mysql_secure_installation
 
 The password to set for mysql is afnog
 
