@@ -5,13 +5,17 @@ Apache24 with SSL, MySQL5 and PHP5 Installation Exercise
 
 The packages to be installed are:
 
-* Apache22
-* Mysql56-server
+* Apache2
+* Mysql-server
 * PHP5
 
-FreeBSD provides 2 ways of installing third party software: The FreeBSD port collection for installing from source, and packages, for installing from pre-built binaries.
+Debian provides 2 ways of installing third party software: 
+	i. Binary Packages
+	This are pre-built package that contains the executables, config files, man/info pages, etc for the Debian system and have a distinguished file extension ".deb"
+	
+	ii. Source packages
+	They contain the original unmodified source files in gzipped-compressed tar format.
  
-FreeBSD Ports and Packages Collection offers a simple way for users and administrators to install applications. There were over 24330 ports available (as of June 2013). One of the advantages of using the FreeBSD ports system is that it will automatically resolve all the dependencies, present the dependency options and then proceed with downloading and installing. 
 
 For this class, we will install Apache, Mysql and PHP using packages.
 
@@ -19,31 +23,23 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 2. Installation of Apache, Mysql & PHP using packages:
 
-2.1. Install portupgrade which also installs postinstall tool: 
+2.1. Update the source tree
 
-Postinstall will allow you to install programs without knowing exactly where they reside. Using pkg, the system installs a precompiled binary which is faster to install. The ports system does not use precompiled binaries and large programs like perl would take long to compile and install.
-
-	$ sudo pkg install portupgrade
+	$ sudo apt-get update
 
 2.2. Install Apache, Mysql and PHP
 
-	$ sudo pkg install mysql56-server apache22 php5 mod_php5
+	$ sudo apt-get install mysql-server apache2 php5
+	
+2.2.1 When the mysql-server prompts for a password to be entered use 'afnog' as the password
+	
+2.3.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
-
-OPTION B: To install from ports, you must navigate to the directory containing the installation files for the software you wish to install. FreeBSD ports reside in /usr/ports . The softwares are then categorised in different folders based on similarity for example, programs related to web are stored under /usr/ports/www/ . Apache resides at /usr/ports/www apache22
- 
-	$ cd /usr/ports/www/apache22
-	$ sudo make install clean
-
-2.3. Choose whatever default options are presented. Once installed, in /etc/rc.conf, add the following line
-
-	$ ee /etc/rc.conf
-
-	apache24_enable="YES"
+	$ sudo update-rc.d apache2 enable
 
 2.4. To start apache run
 
-	$ sudo /usr/local/etc/rc.d/apache22 start
+	$ sudo /etc/init.d/apache2 start
 
 Check if the apache web server you have just installed works by pointing a browser to the server i.e. http://<your-ip-address> or http://pcXX.sse.ws.afnog.org 
 
@@ -51,19 +47,16 @@ You can also do
 
 	$ telnet localhost 80
 
-For IPv6 to work on your virtual PC do the following:
-
-	$ sudo su
-	# echo ipv6_activate_all_interfaces="YES" >> /etc/rc.conf
-	# /etc/netstart
-
 Then set your IPv6 address to match your IPv4 address:
-	$ sudo ifconfig em0 inet6 2001:43f8:220:219::XX/64
+
+	$ sudo ip -6 addr add 2001:43f8:220:219::XX/64 dev eth0
 
 Then add your default route for IPv6:
-	$ sudo route add -inet6 default 2001:43f8:220:219::1
+
+	$ sudo ip -6 route add default via 2001:43f8:220:219::1
 
 Test your IPv6 connectivity:
+
 	$ ping6 www.google.com
 
 
@@ -80,7 +73,8 @@ The following steps should do the trick.
 
 3.1	Create the SSL Certificates for your Apache Web Server:
 
-	$ cd /usr/local/etc/apache22/
+	$ mkdir /etc/apache2/ssl/
+	$ cd /etc/apache2/ssl/
 	$ sudo openssl genrsa -des3 -out server.key 2048 
 
 NOTE:	Password-Phrase is needed to encrypt the key. For this exercise, use "afnog" as the pass phrase. However, this pass-phrase will be needed at every apache restart. To get rid of the pass-phrase prompts at every apache restart and maintain the original key.
@@ -100,27 +94,33 @@ NOTE:	The CommonName is the name of the Website you will use in this case the lo
 
 3.2	Enable SSL in Apache
 
-Edit the httpd.conf file and uncomment the lines below;
+3.2.1 Enable SSL using the following command;
 
-	#include etc/apache22/extra/httpd-ssl.conf
-	#LoadModule ssl_module libexec/apache22/mod_ssl.so
+	$ a2enmod ssl
 
-Edit the httpd-ssl.conf file and make the following changes:
+3.2.2 Copy the default-ssl.conf file from sites-available to sites-enabled and edit the /etc/apache2/sites-enabled/default-ssl.conf file and make the following changes:
 
-	$ ee /usr/local/etc/apache22/extra/httpd-ssl.conf
+	$ copy /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
+	$ ee /etc/apache2/sites-enabled/default-ssl.conf
 
 NOTE:
-* Each virtual host must have its own certificate file see comments on "CommonName".  
-* The path is where the certificate File and Keys are located in this case /usr/local/etc/apache22/ (see virtualhost example below)
+* Each virtual host must have its own certificate file see comments on "CommonName".
+* The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
+* The path is where the certificate File and Keys are located in this case /etc/apache2/ssl 
 
-	SSLCertificateFile    /usr/local/etc/apache22/server.crt
-	SSLCertificateKeyFile /usr/local/etc/apache22/server.key
+	SSLCertificateFile    /etc/apache2/ssl/server.crt
+	SSLCertificateKeyFile /etc/apache2/ssl/server.key
+
+3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host
+
+	$ a2ensite sitename
 
 Restart apache to reflect the changes
-		$ sudo apachectl restart
 
-Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as 
-http://[2001:43f8:220:219:XX]:443
+	$ sudo apachectl restart
+
+Check if the apache web server you have just installed works by pointing a browser to the server i.e. https://<your-ip-address>:443. Or https://pcXX.sse.ws.afnog.org:443 and IPv6 as http://[2001:43f8:220:219:XX]:443
+
 You can also do 
 
 	$ telnet localhost 443
