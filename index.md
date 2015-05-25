@@ -227,7 +227,7 @@ Goal: to understand the contents and layering of common Internet protocols
 
 #### [Chris Wilson](#CW)
 
-* [Presentation/OpenOffice](radius/radius_presentation.odp?raw=true)
+* [Presentation/OpenOffice](radius/radius_presentation.ppt?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
 ### Security and Availability
