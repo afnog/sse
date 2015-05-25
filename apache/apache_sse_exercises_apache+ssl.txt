@@ -102,17 +102,18 @@ NOTE:	Password-Phrase is needed to encrypt the key. For this exercise, use "afno
 
 	$ sudo a2enmod ssl
 
-3.2.2 Copy the default-ssl.conf file from sites-available to sites-enabled and edit the /etc/apache2/sites-enabled/default-ssl.conf 
+3.2.2 Open and edit the default-ssl.conf file 
 
-	$ sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
-	$ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
+* Note: Edit the file in the sites-available folder and activate the site (using the filename) after.
 
-3.2.3 Modify the following lines in the default-ssl.conf file to point to the location of the self-signed certificate and private key.
+$ sudo nano /etc/apache2/sites-available/default-ssl.conf
+
+3.2.3 modify by editing the following lines in the default-ssl.conf to point to the location of the self-signed certificate and private key.
 
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-3.2.4 Enable the SSL on the specific site - note the "sitename" in the syntax below is the information provided for the virtual host - in this case site name is pcXX.sse.ws.afnog.org
+3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the filename of the site to be activated - in this case 'default-ssl'
 
 	$ sudo a2ensite sitename
 
