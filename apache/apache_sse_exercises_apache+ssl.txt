@@ -113,7 +113,7 @@ $ sudo nano /etc/apache2/sites-available/default-ssl.conf
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-3.2.3 Enable the SSL on the specific site - note the "sitename" in the syntax below is the filename of the site to be activated - in this case 'default-ssl'
+3.2.4 Enable the SSL on the specific site - note the "sitename" in the syntax below is the filename of the site to be activated - in this case 'default-ssl'
 
 	$ sudo a2ensite sitename
 
