@@ -73,8 +73,7 @@ define('DB_USER', 'wpuser');
 define('DB_PASSWORD', 'afnog');
 define('DB_HOST', 'localhost');
 define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
-?>
-                   
+?>                 
 
 Save the configuration file and restart apache.
 
