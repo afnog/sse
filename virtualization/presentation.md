@@ -51,11 +51,32 @@ Juju can provision virtual machines on:
 
 ---
 
+## Create Networks
+
+.fill[[![Minimal architecture example with OpenStack Networking (neutron)—Network layout](installguidearch-neutron-networks.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html)]
+
+---
+
+## Create Networks
+
+* Create one NAT network:
+  * "External"
+* And three host-only networks:
+  * "Management"
+  * "Tunnel"
+  * "Storage"
+
+---
+
 ## Create a Virtual Machine
 
 * Named "Trusty OpenStack Compute"
   * One of our three virtual machines, the Compute Node
 * Allocate 1 GB RAM, 20 GB disk space
+* Configure networks:
+  * Interface 1: Management
+  * Interface 2: Tunnel
+  * Interface 3: Storage
 * Install Ubuntu
   * Do not install updates yet!
   * Normally would use the server edition and drive from command line
