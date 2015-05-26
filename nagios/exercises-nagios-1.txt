@@ -342,7 +342,7 @@ Click on the "Services" link in the Nagios web interface to see your new entries
 
 
 
-ADDITIONAL - Configuring the map icons
+========ADDITIONAL - Configuring the map icons======
 
 Nags ships with a few logos for generic devices like routers and switches that will appear on the map. Let us change the icon for the 2 routers
 
