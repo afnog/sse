@@ -242,7 +242,7 @@ Read all about the [Identity Service](http://docs.openstack.org/kilo/install-gui
 Shell redirects don't work with `sudo`, so:
 
 * Either become `root` (bad practice), or
-* Replace `>` with `| sudo tee` (and `>>` with `sudo tee -a`)
+* Replace `>` with `| sudo tee` (and `>>` with `| sudo tee -a`)
 
 Also, when the instructions say `controller`:
 
