@@ -44,6 +44,10 @@ Juju can provision virtual machines (nodes) on:
 **Warning:** the procedure described here is highly customised for this demonstration. For a real deployment you should follow
 the installation guide linked above.
 
+???
+The setup is complicated because we're using three virtual machines and networking them together. In real life it would be simpler,
+but we don't have enough computers for everyone!
+
 ---
 ## Install VirtualBox
 
