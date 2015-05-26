@@ -66,7 +66,7 @@ Juju can provision virtual machines on:
 ## Create a Virtual Machine
 
 * Named "OpenStack Compute 1"
-  * One of our three virtual machines, the Compute Node
+  * One of our three nodes, the Compute Node
 * Allocate 1024 MB RAM, 20 GB disk space
   * Name the disk image "Trusty OpenStack"
 * Configure network devices:
@@ -170,7 +170,7 @@ Create "OpenStack Network":
 * Set guest port to 22
 
 ???
-Forward local ports to each of your virtual machines' management IPs, for easier remote management.
+Forward local ports to each of your node's management IPs, for easier remote management.
 ---
 
 ## Setup port forwarding
@@ -197,7 +197,7 @@ You should be able to:
 
 Normally you would set up DNS entries for all machines. In a test environment it's easier to use a `hosts` file.
 
-Create a `hosts` file with the name of each virtual machine and its **management** interface address:
+Create a `hosts` file with the name of each node and its **management** interface address:
 
 	127.0.0.1	localhost
 	10.196.1.x	controller.local
@@ -205,6 +205,11 @@ Create a `hosts` file with the name of each virtual machine and its **management
 	10.196.1.z	compute1.local
 
 Copy this file to each computer, replacing its original `/etc/hosts`.
+
+---
+## Verify connectivity
+
+Check that each 
 
 ---
 class: center, middle, inverse
