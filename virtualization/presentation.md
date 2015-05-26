@@ -180,7 +180,7 @@ Create "OpenStack Network":
   * "2201" for the controller node
   * "2202" for network
   * "2203" for compute 1
-* Set guest IP to the IP address of the host, and guest por
+* Set guest IP to the host IP address on management network
 * Set guest port to 22
 
 ???
