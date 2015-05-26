@@ -285,7 +285,7 @@ You should see some JSON data like this:
 
 `openstack` commands are authenticated by token, not Unix user id.
 
-* So you don't need to `sudo openstack` ever
+So you don't need to `sudo openstack` ever.
 
 	chris@controller:~$ openstack service create --name keystone --description "OpenStack Identity" identity
 	+-------------+----------------------------------+
