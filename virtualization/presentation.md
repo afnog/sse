@@ -8,13 +8,11 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 ([edit](https://github.com/afnog/sse/firewalls/virtualization.md))
 
 ---
-
 ## What will we do?
 
 .fill[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
 
 ---
-
 ## Why are we doing it?
 
 Rapid deployments
@@ -33,7 +31,6 @@ Juju can provision virtual machines on:
 * bare metal (MAAS)
 
 ---
-
 ## How will we do it?
 
 * Create 3 virtual machines
@@ -44,19 +41,16 @@ Juju can provision virtual machines on:
 * Requirements: A PC with 4 GB RAM, 20 GB free disk space
 
 ---
-
 ## Install VirtualBox
 
 * You can find installers and packages at: https://www.virtualbox.org/wiki/Downloads
 
 ---
-
 ## Create Networks
 
 .fill[[![Minimal architecture example with OpenStack Networking (neutron)—Network layout](installguidearch-neutron-networks.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html)]
 
 ---
-
 ## Create Networks
 
 .center.height_8em[![Adding NAT networks](add-networks.png)]
@@ -69,7 +63,6 @@ Juju can provision virtual machines on:
 
 
 ---
-
 ## Create a Virtual Machine
 
 * Named "OpenStack Compute 1"
@@ -82,7 +75,6 @@ Juju can provision virtual machines on:
   * Interface 3: Storage
 
 ---
-
 ## Install Ubuntu
 
 * Do not install updates yet!
@@ -90,7 +82,6 @@ Juju can provision virtual machines on:
 * In a virtual machine, the GUI makes it easier to manage
 
 ---
-
 ## Enable cache
 
 Start the virtual machine and log in.
@@ -106,7 +97,6 @@ Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 	Acquire::http::Proxy "http://197.4.11.251:3142";
 
 ---
-
 ## Install the Kilo repository
 
 Sudo edit `/etc/apt/sources.list.d/cloudarchive-kilo.list` and add:
@@ -122,7 +112,6 @@ Then execute:
 And shut down the machine.
 
 ---
-
 ## Share the disk
 
 Use Virtual Media Manager to:
@@ -139,7 +128,6 @@ Then reattach to virtual machine:
 * Choose the *Trusty Openstack* disk image
 
 ---
-
 ## Create new virtual machines
 
 Create "OpenStack Controller":
@@ -158,7 +146,6 @@ Create "OpenStack Network":
     * Change the *Promiscuous Mode* to *Allow all*
 
 ---
-
 ## Hostnames and IP addresses
 
 * Start all three virtual machines
@@ -169,7 +156,6 @@ Create "OpenStack Network":
 * Note their IP addresses on all interfaces (networks)
 
 ---
-
 ## Setup port forwarding
 
 * Open *VirtualBox Settings > Network > External*
@@ -190,6 +176,21 @@ Forward local ports to each of your virtual machines' management IPs, for easier
 ## Setup port forwarding
 
 .fill[![Adding port forwarding](port-forwarding.png)]
+
+---
+## Connect with SSH
+
+Start SSH sessions in three separate terminals to:
+
+* Controller: localhost port 2201
+* Network: localhost port 2202
+* Compute: localhost port 2203
+
+You should be able to:
+
+* see them all
+* identify which is which
+* switch easily between them.
 
 ---
 class: center, middle, inverse
