@@ -106,7 +106,7 @@ Sudo edit `/etc/apt/sources.list.d/cloudarchive-kilo.list` and add:
 Then execute:
 
 	$ sudo apt-get update
-	$ sudo apt-get install ubuntu-cloud-keyring ntp openssh-server
+	$ sudo apt-get install ubuntu-cloud-keyring ntp openssh-server nano
 	$ sudo apt-get dist-upgrade
 
 And shut down the machine.
