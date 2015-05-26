@@ -311,21 +311,21 @@ define service {
 # check that Web services are running
 define service {
         hostgroup_name                  web-servers
-        service_description             Web servers
+        service_description             HTTP Service
         check_command                   check_http
         use                             generic-service
         notification_interval           0 ; set > 0 if you want to be renotified
-
+}
 
 
 # check that Web services are running
 define service {
         hostgroup_name                  https-servers
-        service_description             HTTPS servers
+        service_description             HTTPS service
         check_command                   check_https
         use                             generic-service
         notification_interval           0 ; set > 0 if you want to be renotified
-
+}
 
 
 Verify that your changes are OK:
