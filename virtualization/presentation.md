@@ -22,7 +22,7 @@ Rapid deployments
 * Redundancy
 * Fault tolerance
 * Scalability
-* Managed by Juju
+* Managed by [Juju](https://jujucharms.com/)
 
 ???
 
