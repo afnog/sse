@@ -75,6 +75,7 @@ Juju can provision virtual machines on:
 * Named "Trusty OpenStack Compute"
   * One of our three virtual machines, the Compute Node
 * Allocate 1 GB RAM, 20 GB disk space
+  * Name the disk image "Trusty OpenStack"
 * Configure networks:
   * Interface 1: Management
   * Interface 2: Tunnel
@@ -118,16 +119,24 @@ Then execute:
 	$ sudo apt-get install ubuntu-cloud-keyring ntp
 	$ sudo apt-get dist-upgrade
 
+And shut down the machine.
+
 ---
 
-## Install updates and NTP
+## Share the disk
 
-Now you can install updates:
+Use Virtual Media Manager to:
 
-	$ sudo apt-get update
-	$ sudo apt-get dist-upgrade
+* Release the disk (detach from virtual machine)
+* Modify > Multi-attach
 
+Then reattach to virtual machine:
 
+* Settings > Storage > Controller: SATA
+* Click *Add new attachment" icon below
+* Choose *Add hard disk*
+* *Choose existing disk*
+* Choose the *Trusty Openstack* disk image
 
 ---
 class: center, middle, inverse
