@@ -288,11 +288,6 @@ You should see some JSON data like this:
 So you don't need to `sudo openstack` ever.
 
 	chris@controller:~$ openstack service create --name keystone --description "OpenStack Identity" identity
-	+-------------+----------------------------------+
-	| Field       | Value                            |
-	+-------------+----------------------------------+
-	| description | OpenStack Identity               |
-	:             :                                  :
 
 ---
 class: center, middle, inverse
