@@ -267,6 +267,18 @@ So add one at the end:
 	ServerName controller.local
 
 ---
+## Testing Keystone
+
+After installing Keystone:
+
+* Add a port forwarding for port 8001 to your controller IP port 80
+* Check that you can access http://localhost:8001
+
+You should see some JSON data like this:
+
+	{"versions": {"values": [{"status": "stable", "updated": "2015-03-30T00:00:00Z", "media-types": [{"base": "application/json", "type": "application/vnd.openstack.identity-v3+json"}], "id": "v3.4", "links": [{"href": "http://localhost:8001/v3/", "rel": "self"}]}, {"status": "stable", "updated": "2014-04-17T00:00:00Z", "media-types": [{"base": "application/json", "type": "application/vnd.openstack.identity-v2.0+json"}], "id": "v2.0", "links": [{"href": "http://localhost:8001/v2.0/", "rel": "self"}, {"href": "http://docs.openstack.org/", "type": "text/html", "rel": "describedby"}]}]}}
+
+---
 class: center, middle, inverse
 
 ## FIN
