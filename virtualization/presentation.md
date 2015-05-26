@@ -41,6 +41,21 @@ http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 * You can find installers and packages at: https://www.virtualbox.org/wiki/Downloads
 
 ---
+
+## Create a Virtual Machine
+
+* Named "Trusty OpenStack Compute"
+  * One of our three virtual machines, the Compute Node
+* Allocate 1 GB RAM, 20 GB disk space
+* Install Ubuntu
+  * Normally would use the server edition and drive from command line
+  * In a virtual machine, the GUI makes it easier to manage
+
+---
+
+## Install Ubuntu
+
+---
 class: center, middle, inverse
 
 ## FIN
