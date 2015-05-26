@@ -40,6 +40,9 @@ Juju can provision virtual machines (nodes) on:
     http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 * Requirements: A PC with 4 GB RAM, 20 GB free disk space
 
+**Warning:** the procedure described here is highly customised for this demonstration. For a real deployment you should follow
+the installation guide linked above.
+
 ---
 ## Install VirtualBox
 
