@@ -256,6 +256,13 @@ define hostgroup {
                 members         localhost,server1,server2,server3,server4,server5
 	}
 
+# A list of your Routers servers
+define hostgroup {
+        hostgroup_name  my-routers
+                alias           Routers
+                members         gw-rtr-1,gw-rtr-2
+        }
+
 # A list of your Web servers
 define hostgroup {
         hostgroup_name  web-servers
