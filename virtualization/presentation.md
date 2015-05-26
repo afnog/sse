@@ -165,6 +165,7 @@ Create "OpenStack Network":
   * controller.local
   * network.local
   * compute1.local
+* Note their IP addresses on all interfaces (networks)
 
 ---
 class: center, middle, inverse
