@@ -135,13 +135,13 @@ Then reattach to virtual machine:
 ---
 ## Create new virtual machines
 
-Create "OpenStack Controller":
+Create node "OpenStack Controller":
 
 * 1024 MB RAM, use existing disk image
 * Configure network devices:
   * Interface 1: Management
 
-Create "OpenStack Network":
+Create node "OpenStack Network":
 
 * 1024 MB RAM, use existing disk image
 * Configure network devices:
