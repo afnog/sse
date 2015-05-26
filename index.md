@@ -66,10 +66,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|25/05			|26/05			|27/05			|28/05			|29/05
-|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[Spam Filtering][]	|[Virtualisation][]
+|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[Spam Filtering][]	|[Virtualization][]
 |-
 |Tea break
-|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Virtualisation][]	|
+|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Virtualization][]	|
 |-
 |Lunch
 |14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[Storage][]		|[PGP][]
