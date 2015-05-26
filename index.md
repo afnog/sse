@@ -1,4 +1,5 @@
 ---
+vim: autoread
 jekyll: process
 layout: default
 ---
@@ -65,19 +66,19 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|25/05			|26/05			|27/05			|28/05			|29/05
-|09:00-11:00	|[Introduction][]	|[DNS Resolver][]	|[DNS Authoritative][]	|[DNS Authoritative][]	|[LDAP][]
+|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[Spam Filtering][]	|[Virtualisation][]
 |-
 |Tea break
-|11:30-13:00	|[DNS Fundamentals][]	|[RADIUS][]		|[Virtualisation][]	|[File Servers][]	|[SMTP][]
+|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Virtualisation][]	|
 |-
 |Lunch
-|14:00-16:00	|[Apache][]		|[Monitoring][]		|[Virtualisation][]	|[Load Balancing][]	|[IMAP and Webmail][]
+|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[Storage][]		|[PGP][]
 |-
 |Tea break
-|16:30-18:30	|[Apache][]		|[Monitoring][]		|[SSL][]		|[Backups][]		|[Closing Survey][]
+|16:30-18:30	|[Apache][]		|[RADIUS][]		|[SMTP and Spam]	|[Backups][]		|[Expert Panel][] and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[Cryptography][]	|[DNSSEC][]	|[Backups][]	|[Eduroam][]
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[User Databases][]	|[DNSSEC][]	|Closed |Closing Ceremony
 {: .timetable width="80%"}
 
 <div class="topics" markdown="1">
@@ -121,17 +122,17 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [Exercise](config-mgmt/Readme.md)
 
 ### DNS
-
 #### [Joe Abley](#JA)
 
-##### Fundamentals
-[DNS Fundamentals]: #fundamentals
+##### DNS Fundamentals
+[DNS Fundamentals]: #dns-fundamentals
 
 * [PowerPoint](dns/dns1-presentation.ppt)
 * [PDF](dns/dns1-presentation.pdf)
 * [Exercise](dns/dns1-exercise.txt)
 
-##### DNS Caching and Debugging
+##### DNS Resolvers
+[DNS Resolver]: #dns-resolvers
 
 * [PowerPoint](dns/dns2-presentation.ppt)
 * [PDF](dns/dns2-presentation.pdf)
@@ -139,7 +140,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [Exercise 2](dns/dns2-exercise2.txt)
 * [Exercise 3](dns/dns2-exercise3.txt)
 
-##### Configuring Authoritative Name Servers
+##### DNS Authoritative Name Servers
+[DNS Authoritative]: #dns-authoritative-name-servers
 
 * [PowerPoint](dns/dns3-presentation.ppt)
 * [PDF](dns/dns3-presentation.pdf)
@@ -150,10 +152,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [PowerPoint](dns/dns4-presentation.ppt)
 * [PDF](dns/dns4-presentation.pdf)
 
-### DNSSEC
+##### DNSSEC
 [DNSSEC]: #dnssec
-
-#### [Joe Abley](#JA)
 
 Goal: DNSSEC High Level Awareness.
 
@@ -182,7 +182,7 @@ Goal: to understand the contents and layering of common Internet protocols
 ### Load Balancing
 [Load Balancing]: #load-balancing
 
-#### [Laban Mwangi](#LM)
+#### [Frank Kuse](#FK)
 
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
@@ -225,7 +225,7 @@ Goal: to understand the contents and layering of common Internet protocols
 ### RADIUS
 [RADIUS]: #radius
 
-#### [Chris Wilson](#CW)
+#### [Frank Kuse](#FK)
 
 * [Presentation/powerpoint](radius/radius_presentation.ppt?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
@@ -244,8 +244,8 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/HTML](crypto/index.html)
 * [Presentation/PDF](crypto/presentation.pdf)
 
-### SMTP
-[SMTP]: #smtp
+### SMTP and Spam
+[SMTP and Spam]: #smtp-and-spam
 
 #### [Kevin Chege](#KC)
 
@@ -257,6 +257,9 @@ Goal: to understand the contents and layering of common Internet protocols
 * [EmailBestPractices Postfix and Dovecot](postfix/postfix-preso.pdf)
 * [Postfix Setup](postfix/postfix-setup.txt)
 * [Dovecot Setup](postfix/dovecot-setup.txt)
+
+##### Spam Filtering
+[Spam Filtering]: #spam-filtering
 
 ### Virtualization
 [Virtualization]: #virtualization
