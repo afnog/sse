@@ -255,6 +255,8 @@ Also, when the instructions say `controller`:
 * You should write the controller' hostname:
 * `controller.local`
 
+And use the password instead of generating a token with `openssl rand -hex 10`.
+
 ---
 ## Configuring Apache
 
