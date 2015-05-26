@@ -10,7 +10,7 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 ([edit](https://github.com/afnog/sse/firewalls/virtualization.md))
 
 ---
-background-image: url(openstack_havana_conceptual_arch.png)
+background: url(openstack_havana_conceptual_arch.png) center/70%
 
 ???
 
