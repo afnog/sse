@@ -183,6 +183,8 @@ Create "OpenStack Network":
 * Set guest IP to the IP address of the host, and guest por
 * Set guest port to 22
 
+???
+Forward local ports to each of your virtual machines' management IPs:
 ---
 
 ## Setup port forwarding
