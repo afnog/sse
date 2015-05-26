@@ -48,6 +48,8 @@ the installation guide linked above.
 The setup is complicated because we're using three virtual machines and networking them together. In real life it would be simpler,
 but we don't have enough computers for everyone!
 
+Take heart that it might be the last time you ever need to configure Apache and NTP by hand!
+
 ---
 ## Install VirtualBox
 
