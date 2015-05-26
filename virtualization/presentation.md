@@ -135,19 +135,22 @@ Then reattach to virtual machine:
 ---
 ## Create the Controller Node
 
-* 1024 MB RAM, use existing disk image
-* Configure network devices:
-  * Interface 1: Management
+1024 MB RAM, use existing disk image.
+
+Configure network devices:
+* Interface 1: Management
 
 ---
 ## Create the Network Node
 
-* 1024 MB RAM, use existing disk image
-* Configure network devices:
-  * Interface 1: Management
-  * Interface 2: Tunnel
-  * Interface 3: External
-    * Change the *Promiscuous Mode* to *Allow all*
+1024 MB RAM, use existing disk image.
+
+Configure network devices:
+
+* Interface 1: Management
+* Interface 2: Tunnel
+* Interface 3: External
+  * Change the *Promiscuous Mode* to *Allow all*
 
 ---
 ## Hostnames and IP addresses
