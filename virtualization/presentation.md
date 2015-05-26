@@ -26,7 +26,7 @@ Rapid deployments
 
 ???
 
-Juju can manage VMs on:
+Juju can provision virtual machines on:
 
 * commercial providers (e.g. EC2)
 * our OpenStack cluster
