@@ -224,7 +224,7 @@ Check that each node can ping the Internet and all other nodes:
 	$ ping compute1.local
 
 ---
-### Follow the instructions
+## Follow the instructions
 
 Start following the OpenStack Kilo installation guide:
 
