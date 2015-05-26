@@ -228,8 +228,7 @@ Check that each node can ping the Internet and all other nodes:
 
 Start following the OpenStack Kilo installation guide:
 
-* Use the [Security](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html#basics-security) to create a password.
-  * Use this password for everything ending in `PASS`.
+* Choose a password and use it for everything ending in `PASS`.
 * Skip the *Networking* step, already done.
 * Skip the *OpenStack packages* step, already done.
 * Remember to prefix most commands with `sudo`.
