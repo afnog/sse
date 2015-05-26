@@ -11,8 +11,7 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ---
 background-image: url(openstack_havana_conceptual_arch.png)
-
-## background: center/70%
+background: center/70%
 
 ???
 
