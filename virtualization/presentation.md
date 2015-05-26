@@ -1,3 +1,5 @@
+class: center, middle
+
 # Virtualization with OpenStack
 
 .center.height_8em[[![Virtualization](vmw-virtualization-defined.jpg)](http://www.vmware.com/virtualization/virtualization-basics/how-virtualization-works)]
