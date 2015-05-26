@@ -21,6 +21,7 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
   * Redundancy
   * Fault tolerance
   * Scalability
+
 * Use Juju to manage (later)
   * commercial providers (e.g. EC2)
   * our OpenStack cluster
