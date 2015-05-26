@@ -100,9 +100,34 @@ Check that you can ping the Apt cache server:
 	PING mini1.sse.ws.afnog.org (197.4.15.144): 56 data bytes
 	64 bytes from 197.4.15.144: icmp_seq=0 ttl=63 time=1.434 ms
 
-Sudo edit `/etc/apt/apt.conf.d/01proxy` and add the following line:
+Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 
 	Acquire::http::Proxy "http://197.4.11.251:3142";
+
+---
+
+## Install the Kilo repository
+
+Sudo edit `/etc/apt/sources.list.d/cloudarchive-kilo.list` and add:
+
+	deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/kilo main
+
+Then execute:
+
+	$ sudo apt-get update
+	$ sudo apt-get install ubuntu-cloud-keyring ntp
+	$ sudo apt-get dist-upgrade
+
+---
+
+## Install updates and NTP
+
+Now you can install updates:
+
+	$ sudo apt-get update
+	$ sudo apt-get dist-upgrade
+
+
 
 ---
 class: center, middle, inverse
