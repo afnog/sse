@@ -281,12 +281,11 @@ You should see some JSON data like this:
 	{"versions": {"values": [{"status": "stable", "updated": ...
 
 ---
-## Start using tokens
+## Openstack authentication
 
-After Keystone is installed, from *Create the service entity and API endpoint* onwards, you authorise commands with a token, not
-by your Unix user.
+`openstack` commands are authenticated by token, not Unix user id.
 
-* So you can stop using `sudo` on commands.
+* So you don't need to `sudo openstack` ever.
 
 ---
 class: center, middle, inverse
