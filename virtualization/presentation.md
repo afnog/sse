@@ -239,7 +239,7 @@ Start following the OpenStack Kilo installation guide:
 
 Read all about the [Identity Service](http://docs.openstack.org/kilo/install-guide/install/apt/content/keystone-concepts.html). It's very important.
 
-Shell redirects don't work with `sudo`:
+Shell redirects don't work with `sudo`, so:
 
 * Either become `root` (bad practice), or
 * Replace `>` with `| sudo tee` (and `>>` with `sudo tee -a`)
