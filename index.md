@@ -122,6 +122,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [Exercise](config-mgmt/Readme.md)
 
 ### DNS
+
 #### [Joe Abley](#JA)
 
 ##### DNS Fundamentals
