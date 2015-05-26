@@ -182,9 +182,11 @@ Forward local ports to each of your virtual machines' management IPs:
 * Set guest IP to the IP address of the host
 * Set guest port to 22
 
-For example:
+---
 
-.center.height_8em[![Adding port forwarding](port-forwarding.png)]
+## Setup port forwarding
+
+.fill[![Adding port forwarding](port-forwarding.png)]
 
 ---
 class: center, middle, inverse
