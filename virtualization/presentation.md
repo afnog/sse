@@ -74,9 +74,9 @@ Juju can provision virtual machines on:
 
 * Named "Trusty OpenStack Compute"
   * One of our three virtual machines, the Compute Node
-* Allocate 1 GB RAM, 20 GB disk space
+* Allocate 1024 MB RAM, 20 GB disk space
   * Name the disk image "Trusty OpenStack"
-* Configure networks:
+* Configure network devices:
   * Interface 1: Management
   * Interface 2: Tunnel
   * Interface 3: Storage
@@ -137,6 +137,21 @@ Then reattach to virtual machine:
 * Choose *Add hard disk*
 * *Choose existing disk*
 * Choose the *Trusty Openstack* disk image
+
+---
+
+## Create new virtual machines
+
+* Create "Trusty OpenStack Controller"
+  * 1024 MB RAM, use existing disk image
+  * Configure network devices:
+    * Interface 1: Management
+* Create "Trusty OpenStack Network"
+  * 1024 MB RAM, use existing disk image
+  * Configure network devices:
+    * Interface 1: Management
+    * Interface 2: Tunnel
+    * Interface 3: External
 
 ---
 class: center, middle, inverse
