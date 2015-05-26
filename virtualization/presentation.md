@@ -281,6 +281,14 @@ You should see some JSON data like this:
 	{"versions": {"values": [{"status": "stable", "updated": ...
 
 ---
+## Start using tokens
+
+After Keystone is installed, from *Create the service entity and API endpoint* onwards, you authorise commands with a token, not
+by your Unix user.
+
+* So you can stop using `sudo` on commands.
+
+---
 class: center, middle, inverse
 
 ## FIN
