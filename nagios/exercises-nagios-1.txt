@@ -254,7 +254,7 @@ define hostgroup {
         hostgroup_name  radius-servers
                 alias           Radius servers
                 members         localhost,server1,server2,server3,server4,server5
-
+	}
 
 # A list of your Web servers
 define hostgroup {
@@ -262,12 +262,14 @@ define hostgroup {
                 alias           Web servers
                 members         localhost,server1,server2,server3,server4,server5
 
-
+	}
 # A list of your HTTPS servers
 define hostgroup {
         hostgroup_name  https-servers
                 alias           HTTPS servers
                 members         localhost,server1,server2,server3,server4,server5
+
+	}
 
 Exit and save the file. 
 
