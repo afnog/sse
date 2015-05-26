@@ -65,7 +65,7 @@ Juju can provision virtual machines on:
   * "Tunnel" - 10.196.3.0/24
   * "Storage" - 10.196.4.0/24
 
-.height_8em[![Adding NAT networks](add-networks.png)]
+.center.height_8em[![Adding NAT networks](add-networks.png)]
 
 ---
 
