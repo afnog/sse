@@ -174,7 +174,8 @@ Create "OpenStack Network":
 
 Forward local ports to each of your virtual machines' management IPs:
 
-* Open VirtualBox Settings > Network > External and click the screwdriver (right)
+* Open *VirtualBox Settings > Network > External*
+* Click on the screwdriver (to the right)
 * Click *Port Forwarding*
 * Add entries named after the machine plus "SSH"
 * Set local port to "2201" for manager, "2202" for network, "2203" for compute
