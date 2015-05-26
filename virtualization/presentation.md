@@ -247,7 +247,7 @@ Shell redirects don't work with `sudo`:
 Also, when the instructions say `controller`:
 
 * You should write the controller' hostname:
-* `controller.local`.
+* `controller.local`
 
 ---
 class: center, middle, inverse
