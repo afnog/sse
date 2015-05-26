@@ -1,4 +1,4 @@
-# Virtualization with OpenStack
+s# Virtualization with OpenStack
 
 .height_8em[[![Virtualization](vmw-virtualization-defined.jpg)](http://www.vmware.com/virtualization/virtualization-basics/how-virtualization-works)]
 
@@ -24,7 +24,7 @@ Rapid deployments
 
 ???
 
-Juju can provision virtual machines on:
+Juju can provision virtual machines (nodes) on:
 
 * commercial providers (e.g. EC2)
 * our OpenStack cluster
@@ -33,7 +33,7 @@ Juju can provision virtual machines on:
 ---
 ## How will we do it?
 
-* Create 3 virtual machines
+* Create 3 virtual machines (nodes)
 * Install Ubuntu
 * Install OpenStack "Kilo" components
   * Roughly following the instructions at:
@@ -79,7 +79,7 @@ Juju can provision virtual machines on:
 
 * Do not install updates yet!
 * Normally would use the server edition and drive from command line
-* In a virtual machine, the GUI makes it easier to manage
+* In a virtual machine, the GUI makes it easier to manage (until SSH is up)
 
 ---
 ## Enable cache
