@@ -87,7 +87,15 @@ Juju can provision virtual machines on:
 
 ---
 
-## 
+## Enable cache
+
+Start the virtual machine and log in.
+
+Check that you can ping the Apt cache server:
+
+	$ ping mini1.sse.ws.afnog.org
+	PING mini1.sse.ws.afnog.org (197.4.15.144): 56 data bytes
+	64 bytes from 197.4.15.144: icmp_seq=0 ttl=63 time=1.434 ms
 
 ---
 class: center, middle, inverse
