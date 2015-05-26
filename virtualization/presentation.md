@@ -234,6 +234,10 @@ Start following the OpenStack Kilo installation guide:
 * Check carefully which node to run each command on.
 * Remember to prefix most commands with `sudo`.
 
+---
+## Identity Service
+
+Read all about the [Identity Service](http://docs.openstack.org/kilo/install-guide/install/apt/content/keystone-concepts.html). It's very important.
 
 ---
 class: center, middle, inverse
