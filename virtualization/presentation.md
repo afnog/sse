@@ -1,48 +1,36 @@
 class: center, middle
 
-# Linux Firewalls
+# Virtualization with OpenStack
 
-.height_8em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
+.height_8em[[![Virtualization](vmw-virtualization-defined.jpg)](http://www.vmware.com/virtualization/virtualization-basics/how-virtualization-works)]
 
 ### Chris Wilson, AfNOG 2015
 
-Based on a previous talk by Kevin Chege with thanks!
-
-You can access this presentation at: http://afnog.github.io/sse/firewalls/
-([edit](https://github.com/afnog/sse/firewalls/presentation.md))
+You can access this presentation at: http://afnog.github.io/sse/virtualization/
+([edit](https://github.com/afnog/sse/firewalls/virtualization.md))
 
 ---
 
-## What is a Firewall?
-
-.height_8em[[![Firewall](firewall-art-800.jpg)](http://www.ittechnewsdaily.com/216-firewall-security.html)]
-.height_8em[[![Firewall](firewall_man-800.jpg)](http://prajwaldesai.com/configuring-firewall-settings-for-configuration-manager-2012-r2/)]
-.height_8em[[![Firewall](NAT-Firewall-VPN.jpg)](http://www.bestvpnservice.com/blog/nat-firewall-vpn-router-security/)]
-.height_8em[[![Firewall](640_edge-if.jpg)](http://eandt.theiet.org/magazine/2013/08/cyber-securitys-new-hard-line.cfm)]
-.height_8em[[![Firewall](China_S5_Kids_phone_low_RF_Smart_Alert_Firewall_Protection_Position_Tracking_Etc20144241306509.jpg)](http://www.ecvv.com/product/4338436.html)]
+## Why?
 
 ???
 
-* Computer network security device
-* Decided whether packets are allowed or denied
-* Uses a pre-defined set of rules
-
-Many devices have built-in firewalls:
-
-* End devices (desktop, laptop and server)
-* Routers
-* IP-connected devices
-* Dedicated hardware
-
-Questions:
-
-* Ask for some examples in each category
-* Software and hardware firewalls
-* Any unusual examples? Mobile phones, desk phones, toasters?
+* Enables rapid deployments of new virtual machines
+* Build rendundant, fault-tolerant, scalable systems
+* We will use Juju to deploy and manage VMs on our OpenStack hosts later
+* Juju supports several commercial providers (e.g. EC2), OpenStack and MAAS (bare metal)
 
 ---
 
-## Advanced Firewalls
+## How?
+
+.height_8em[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
+
+Create 3 virtual machines, roughly following the instructions at:
+http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
+
+
+
 
 * Basic firewalls are packet filters
 * Can't always make a decision based on one packet (examples?)
