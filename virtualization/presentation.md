@@ -155,6 +155,7 @@ Create "OpenStack Network":
   * Interface 1: Management
   * Interface 2: Tunnel
   * Interface 3: External
+    * Change the *Promiscuous Mode* to *Allow all*
 
 ---
 
