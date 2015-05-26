@@ -231,7 +231,9 @@ Start following the OpenStack Kilo installation guide:
 * Choose a password and use it for everything ending in `PASS`.
 * Start from the [Network Time Protocol](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html#basics-ntp) step.
 * Skip the *OpenStack packages* step, already done.
+* Check carefully which node to run each command on.
 * Remember to prefix most commands with `sudo`.
+
 
 ---
 class: center, middle, inverse
