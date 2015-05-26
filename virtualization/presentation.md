@@ -133,7 +133,7 @@ Use Virtual Media Manager to:
 Then reattach to virtual machine:
 
 * Settings > Storage > Controller: SATA
-* Click *Add new attachment" icon below
+* Click *Add new attachment* icon below
 * Choose *Add hard disk*
 * *Choose existing disk*
 * Choose the *Trusty Openstack* disk image
