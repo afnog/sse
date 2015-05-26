@@ -77,10 +77,14 @@ Juju can provision virtual machines on:
   * Interface 1: Management
   * Interface 2: Tunnel
   * Interface 3: Storage
-* Install Ubuntu
-  * Do not install updates yet!
-  * Normally would use the server edition and drive from command line
-  * In a virtual machine, the GUI makes it easier to manage
+
+---
+
+## Install Ubuntu
+
+* Do not install updates yet!
+* Normally would use the server edition and drive from command line
+* In a virtual machine, the GUI makes it easier to manage
 
 ---
 
