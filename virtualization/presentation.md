@@ -37,9 +37,10 @@ Juju can provision virtual machines on:
 ## How will we do it?
 
 * Create 3 virtual machines
-* Install Ubuntu and OpenStack "Kilo" components
-* Roughly following the instructions at:
-http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
+* Install Ubuntu
+* Install OpenStack "Kilo" components
+  * Roughly following the instructions at:
+    http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 * Requirements: A PC with 4 GB RAM, 20 GB free disk space
 
 ---
@@ -56,6 +57,7 @@ http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
   * One of our three virtual machines, the Compute Node
 * Allocate 1 GB RAM, 20 GB disk space
 * Install Ubuntu
+  * Do not install updates yet!
   * Normally would use the server edition and drive from command line
   * In a virtual machine, the GUI makes it easier to manage
 
