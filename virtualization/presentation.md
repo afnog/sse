@@ -193,6 +193,20 @@ You should be able to:
 * switch easily between them.
 
 ---
+## Create /etc/hosts
+
+Normally you would set up DNS entries for all machines. In a test environment it's easier to use a `hosts` file.
+
+Create a `hosts` file with the name of each virtual machine and its **management** interface address:
+
+	127.0.0.1	localhost
+	10.196.1.x	controller.local
+	10.196.1.y	network.local
+	10.196.1.z	compute1.local
+
+Copy this file to each computer, replacing its original `/etc/hosts`.
+
+---
 class: center, middle, inverse
 
 ## FIN
