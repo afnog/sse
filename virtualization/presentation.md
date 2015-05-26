@@ -303,6 +303,11 @@ To fix it, add the following options to the command:
 	--os-project-domain-id default --os-user-domain-id default
 
 ---
+## Image Service
+
+The guide doesn't specify, so install this service on the Controller node.
+
+---
 class: center, middle, inverse
 
 ## FIN
