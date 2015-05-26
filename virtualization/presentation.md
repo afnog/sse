@@ -59,7 +59,7 @@ the installation guide linked above.
 
 Open *Settings > Network*:
 
-.center.height_8em[![Adding NAT networks](add-networks.png)]
+.height_8em[![Adding NAT networks](add-networks.png)]
 
 * Create four NAT networks:
   * "External" - 10.196.1.0/24
