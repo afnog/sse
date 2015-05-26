@@ -59,7 +59,7 @@ Juju can provision virtual machines on:
 
 ## Create Networks
 
-.height_8em[![Adding NAT networks](add-networks.png)]
+.center.height_8em[![Adding NAT networks](add-networks.png)]
 
 * Create four NAT networks:
   * "External" - 10.196.1.0/24
