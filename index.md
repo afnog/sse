@@ -268,8 +268,6 @@ Goal: to understand the contents and layering of common Internet protocols
 #### [Chris Wilson](#CW)
 
 * [Presentation][virtualization/index.html]
-* Virtualization Exercise ([TXT](virtualisation/Readme.md))
-* Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
 </div><!-- .topics -->
 
