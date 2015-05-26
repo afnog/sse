@@ -42,6 +42,7 @@ http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 
 ---
 class: center, middle, inverse
+
 ## FIN
 
 Any questions?
