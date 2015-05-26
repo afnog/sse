@@ -65,6 +65,8 @@ Juju can provision virtual machines on:
 
 ## Install Ubuntu
 
+Remember: do not install updates!
+
 ---
 class: center, middle, inverse
 
