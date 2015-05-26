@@ -367,32 +367,13 @@ Save and Exit the file
 
 
 
-Then define a new service group for the routers to map the information in the extinfo_nagios.cfg
-
-
-		#nano hostgroups_nagios2.cfg
-
-
-# A list of your Routers servers
-define hostgroup {
-        hostgroup_name  my-routers
-                alias           Routers
-                members         gw-rtr-1,gw-rtr-2
-        }
-
-
-
-
-Save and exit the file
-
-
 Check that the config is ok
 
 
 		#nagios3 -v /etc/nagios3/conf.d/nagios.cfg
 
 
-Then reload NagiosL
+Then reload Nagios
 		
 
 		#service nagios3 restart
