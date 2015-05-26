@@ -77,6 +77,7 @@ Juju can provision virtual machines on:
   * Interface 1: Management
   * Interface 2: Tunnel
   * Interface 3: Storage
+* Write down the IP address ranges of each
 
 ---
 
@@ -88,9 +89,7 @@ Juju can provision virtual machines on:
 
 ---
 
-## Install Ubuntu
-
-Remember: do not install updates!
+## 
 
 ---
 class: center, middle, inverse
