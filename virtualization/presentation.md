@@ -290,6 +290,19 @@ So you don't need to `sudo openstack` ever. For example:
 	chris@controller:~$ openstack service create --name keystone --description "OpenStack Identity" identity
 
 ---
+## Project List command
+
+The guide contains a mistake in the `project list` command:
+
+	$ openstack --os-auth-url http://controller.local:35357   --os-project-name admin --os-username admin --os-auth-type password   project list
+	Password: 
+	WARNING: keystoneclient.auth.identity.base Failed to contact the endpoint at http://controller:35357/v2.0 for discovery. Fallback to using that endpoint as the base url.
+
+To fix it, add the following options to the command:
+
+	--os-project-domain-id default --os-user-domain-id default
+
+---
 class: center, middle, inverse
 
 ## FIN
