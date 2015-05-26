@@ -59,12 +59,12 @@ Juju can provision virtual machines on:
 
 ## Create Networks
 
-* Create one NAT network:
+* Create four NAT networks:
   * "External"
-* And three host-only networks:
   * "Management"
   * "Tunnel"
   * "Storage"
+* Write down the IP address ranges of each
 
 ---
 
@@ -77,7 +77,6 @@ Juju can provision virtual machines on:
   * Interface 1: Management
   * Interface 2: Tunnel
   * Interface 3: Storage
-* Write down the IP address ranges of each
 
 ---
 
