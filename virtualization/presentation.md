@@ -57,6 +57,8 @@ the installation guide linked above.
 ---
 ## Create Networks
 
+Open *Settings > Network*:
+
 .center.height_8em[![Adding NAT networks](add-networks.png)]
 
 * Create four NAT networks:
@@ -64,7 +66,6 @@ the installation guide linked above.
   * "Management" - 10.196.2.0/24
   * "Tunnel" - 10.196.3.0/24
   * "Storage" - 10.196.4.0/24
-
 
 ---
 ## Create a Virtual Machine
