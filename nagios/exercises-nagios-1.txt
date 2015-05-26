@@ -255,6 +255,20 @@ define hostgroup {
                 alias           Radius servers
                 members         localhost,server1,server2,server3,server4,server5
 
+
+# A list of your Web servers
+define hostgroup {
+        hostgroup_name  web-servers
+                alias           Web servers
+                members         localhost,server1,server2,server3,server4,server5
+
+
+# A list of your HTTPS servers
+define hostgroup {
+        hostgroup_name  https-servers
+                alias           HTTPS servers
+                members         localhost,server1,server2,server3,server4,server5
+
 Exit and save the file. 
 
 
@@ -283,6 +297,27 @@ define service {
         check_command                   check_radius
         use                             generic-service
         notification_interval           0 ; set > 0 if you want to be renotified
+
+
+# check that Web services are running
+define service {
+        hostgroup_name                  web-servers
+        service_description             Web servers
+        check_command                   check_http
+        use                             generic-service
+        notification_interval           0 ; set > 0 if you want to be renotified
+
+
+
+# check that Web services are running
+define service {
+        hostgroup_name                  https-servers
+        service_description             HTTPS servers
+        check_command                   check_https
+        use                             generic-service
+        notification_interval           0 ; set > 0 if you want to be renotified
+
+
 
 Verify that your changes are OK:
 
