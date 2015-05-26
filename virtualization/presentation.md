@@ -9,15 +9,13 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ---
 
-## What?
+## What will we do?
 
 .fill[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
 
 ---
 
-## Why?
-
-???
+## Why are we doing it?
 
 * Enables rapid deployments of new virtual machines
 * Build rendundant, fault-tolerant, scalable systems
@@ -26,7 +24,7 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ---
 
-## How?
+## How will we do it?
 
 * Create 3 virtual machines
 * Install Ubuntu and OpenStack "Kilo" components
