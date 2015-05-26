@@ -11,6 +11,12 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ---
 
+## What?
+
+.fill[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
+
+---
+
 ## Why?
 
 ???
@@ -24,16 +30,19 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ## How?
 
-.height_8em[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
-
 * Create 3 virtual machines
 * Install Ubuntu and OpenStack "Kilo" components
 * Roughly following the instructions at:
 http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
+* Requirements: A PC with 4 GB RAM, 20 GB free disk space
 
 ---
 
+## Install VirtualBox
 
+* You can find installers at: https://www.virtualbox.org/wiki/Downloads
+
+---
 
 * Basic firewalls are packet filters
 * Can't always make a decision based on one packet (examples?)
