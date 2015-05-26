@@ -97,6 +97,10 @@ Check that you can ping the Apt cache server:
 	PING mini1.sse.ws.afnog.org (197.4.15.144): 56 data bytes
 	64 bytes from 197.4.15.144: icmp_seq=0 ttl=63 time=1.434 ms
 
+sudo edit `/etc/apt/apt.conf.d/01proxy` and add the following line:
+
+	Acquire::http::Proxy "http://197.4.11.251:3142";
+
 ---
 class: center, middle, inverse
 
