@@ -142,16 +142,19 @@ Then reattach to virtual machine:
 
 ## Create new virtual machines
 
-* Create "Trusty OpenStack Controller"
-  * 1024 MB RAM, use existing disk image
-  * Configure network devices:
-    * Interface 1: Management
-* Create "Trusty OpenStack Network"
-  * 1024 MB RAM, use existing disk image
-  * Configure network devices:
-    * Interface 1: Management
-    * Interface 2: Tunnel
-    * Interface 3: External
+Create "Trusty OpenStack Controller":
+
+* 1024 MB RAM, use existing disk image
+* Configure network devices:
+  * Interface 1: Management
+
+Create "Trusty OpenStack Network":
+
+* 1024 MB RAM, use existing disk image
+* Configure network devices:
+  * Interface 1: Management
+  * Interface 2: Tunnel
+  * Interface 3: External
 
 ---
 class: center, middle, inverse
