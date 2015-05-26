@@ -260,8 +260,9 @@ Also, when the instructions say `controller`:
 
 The instructions are out of date:
 
-* There is no `ServerName` line in `/etc/apache2/apache2.conf`
-* So add one at the end:
+There is no `ServerName` line in `/etc/apache2/apache2.conf`
+
+So add one at the end:
 
 	ServerName controller.local
 
