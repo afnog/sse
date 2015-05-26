@@ -228,7 +228,7 @@ Goal: to understand the contents and layering of common Internet protocols
 #### [Frank Kuse](#FK)
 
 * [Presentation/powerpoint](radius/radius_presentation.ppt?raw=true)
-* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
+* [Presentation/PDF](radius/radius_presentation.pdf?raw=true)
 
 ### Security and Availability
 
