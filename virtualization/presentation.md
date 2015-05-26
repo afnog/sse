@@ -250,6 +250,13 @@ Also, when the instructions say `controller`:
 * `controller.local`
 
 ---
+## Configuring Apache
+
+The instructions are out of date. There is no `ServerName` line in `/etc/apache2/apache2.conf`, so add one at the end:
+
+	ServerName controller.local
+
+---
 class: center, middle, inverse
 
 ## FIN
