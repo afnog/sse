@@ -1,5 +1,3 @@
----
-
 # Virtualization with OpenStack
 
 .height_8em[[![Virtualization](vmw-virtualization-defined.jpg)](http://www.vmware.com/virtualization/virtualization-basics/how-virtualization-works)]
@@ -43,7 +41,7 @@ http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 * You can find installers and packages at: https://www.virtualbox.org/wiki/Downloads
 
 ---
-template: inverse
+class: center, middle, inverse
 ## FIN
 
 Any questions?
