@@ -178,7 +178,10 @@ Forward local ports to each of your virtual machines' management IPs:
 * Click on the screwdriver (to the right)
 * Click *Port Forwarding*
 * Add entries named after the machine plus "SSH"
-* Set local port to "2201" for controller, "2202" for network, "2203" for compute 1
+* Set local port to:
+  * "2201" for the controller node
+  * "2202" for network
+  * "2203" for compute 1
 * Set guest IP to the IP address of the host
 * Set guest port to 22
 
