@@ -265,9 +265,9 @@ Goal: to understand the contents and layering of common Internet protocols
 ### Virtualization
 [Virtualization]: #virtualization
 
-#### [Laban Mwangi](#LM)
+#### [Chris Wilson](#CW)
 
-* Presentation ([PDF](virtualisation/docs/sse-virtualization-overview-2014.pdf)/[OpenOffice](virtualisation/docs/sse-virtualization-overview-2014.odp))
+* [Presentation][virtualization/index.html]
 * Virtualization Exercise ([TXT](virtualisation/Readme.md))
 * Virtualization with KVM ([PDF](virtualisation/afnog_2013_virtualization_kvm_cw_130610.pdf)/[OpenOffice](virtualisation/afnog_2013_virtualization_kvm_cw.odp))
 
