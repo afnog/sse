@@ -148,7 +148,7 @@ Create "OpenStack Network":
 ---
 ## Hostnames and IP addresses
 
-* Start all three virtual machines
+* Start all three virtual machines (nodes)
 * Change their hostnames to be unique:
   * controller.local
   * network.local
@@ -209,7 +209,17 @@ Copy this file to each computer, replacing its original `/etc/hosts`.
 ---
 ## Verify connectivity
 
-Check that each 
+Check that each node can ping the Internet and all other nodes:
+
+	$ ping 8.8.8.8
+	$ ping controller.local
+	$ ping network.local
+	$ ping compute1.local
+
+---
+### Follow the instructions
+
+Start following the OpenStack Kilo installation guide from the [Network Time Protocol](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html#basics-prerequisites) step.
 
 ---
 class: center, middle, inverse
