@@ -17,10 +17,14 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 
 ## Why are we doing it?
 
-* Enables rapid deployments of new virtual machines
-* Build rendundant, fault-tolerant, scalable systems
-* We will use Juju to deploy and manage VMs on our OpenStack hosts later
-* Juju supports several commercial providers (e.g. EC2), OpenStack and MAAS (bare metal)
+* Rapid deployments
+  * Redundancy
+  * Fault tolerance
+  * Scalability
+* Use Juju to manage:
+  * commercial providers (e.g. EC2)
+  * our OpenStack cluster
+  * bare metal (MAAS)
 
 ---
 
