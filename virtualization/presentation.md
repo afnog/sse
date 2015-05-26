@@ -244,6 +244,8 @@ Shell redirects don't work with `sudo`:
 * Either become `root` (bad practice), or
 * Replace `>` with `| sudo tee` (and `>>` with `sudo tee -a`)
 
+Remember that when the instructions say `controller` you should write the controller' hostname, `controller.local`.
+
 ---
 class: center, middle, inverse
 
