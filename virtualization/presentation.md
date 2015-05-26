@@ -307,6 +307,8 @@ To fix it, add the following options to the command:
 
 The guide doesn't specify, so install this service on the Controller node.
 
+When *Verifying operation of the Image service*, don't download the image file with `wget`. You should find it in the files supplied on the USB stick, to save the download time.
+
 ---
 class: center, middle, inverse
 
