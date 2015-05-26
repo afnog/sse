@@ -229,6 +229,7 @@ Check that each node can ping the Internet and all other nodes:
 Start following the OpenStack Kilo installation guide from the [Network Time Protocol](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_basic_environment.html#basics-prerequisites) step.
 
 * Skip the *OpenStack packages* step, already done.
+* Remember to prefix most commands with `sudo`.
 
 ---
 class: center, middle, inverse
