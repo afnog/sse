@@ -172,8 +172,6 @@ Create "OpenStack Network":
 
 ## Setup port forwarding
 
-Forward local ports to each of your virtual machines' management IPs:
-
 * Open *VirtualBox Settings > Network > External*
 * Click on the screwdriver (to the right)
 * Click *Port Forwarding*
@@ -182,7 +180,7 @@ Forward local ports to each of your virtual machines' management IPs:
   * "2201" for the controller node
   * "2202" for network
   * "2203" for compute 1
-* Set guest IP to the IP address of the host
+* Set guest IP to the IP address of the host, and guest por
 * Set guest port to 22
 
 ---
