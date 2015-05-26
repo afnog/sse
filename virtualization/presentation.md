@@ -27,7 +27,7 @@ You can access this presentation at: http://afnog.github.io/sse/virtualization/
 .height_8em[[![OpenStack Havana Architecture](openstack_havana_conceptual_arch.png)](http://docs.openstack.org/kilo/install-guide/install/apt/content/ch_overview.html)]
 
 * Create 3 virtual machines
-* Install Ubuntu and OpenStack components
+* Install Ubuntu and OpenStack "Kilo" components
 * Roughly following the instructions at:
 http://docs.openstack.org/kilo/install-guide/install/apt/content/index.html
 
