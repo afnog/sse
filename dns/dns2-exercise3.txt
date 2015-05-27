@@ -118,8 +118,13 @@ We can expand the default access control list by creating a new
 file as root in /etc/unbound/unbound.conf.d called clients.conf:
 
     server:
+        interface: 0.0.0.0
+        interface: ::0
         access-control: 197.4.137.0/24 allow
         access-control: 2001:43f8:220:219::/64 allow
+
+The two interface lines instruct inbound to bind to all interfaces
+on IPv4 (first line) and IPv6 (second line).
 
 The first access-control line allows access from the local network
 that contains the SSE servers over IPv4; the second line does the
