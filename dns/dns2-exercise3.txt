@@ -120,7 +120,7 @@ file as root in /etc/unbound/unbound.conf.d called clients.conf:
     server:
         interface: 0.0.0.0
         interface: ::0
-        access-control: 197.4.137.0/24 allow
+        access-control: 197.4.11.0/24 allow
         access-control: 2001:43f8:220:219::/64 allow
 
 The two interface lines instruct inbound to bind to all interfaces
