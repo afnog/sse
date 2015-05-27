@@ -110,9 +110,13 @@ Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 ---
 ## Install the Kilo repository
 
-Sudo edit `/etc/apt/sources.list.d/cloudarchive-kilo.list` and add:
+Install the `apt-add-repository` command-line tool:
 
-	deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/kilo main
+	sudo apt-get install software-properties-common
+
+Use it to add the Juno repository:
+
+	sudo apt-add-repository cloud-archive:juno
 
 Then execute:
 
