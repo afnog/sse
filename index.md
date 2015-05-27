@@ -66,19 +66,19 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|25/05			|26/05			|27/05			|28/05			|29/05
-|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[Spam Filtering][]	|[Virtualization][]
+|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[SMTP and Spam][]	|[Backups][]
 |-
 |Tea break
-|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Virtualization][]	|
+|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Virtualization][]	|[Virtualization][]
 |-
 |Lunch
-|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[Storage][]		|[PGP][]
+|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[Spam Filtering][]		|[PGP][]
 |-
 |Tea break
-|16:30-18:30	|[Apache][]		|[RADIUS][]		|[SMTP and Spam]	|[Backups][]		|[Expert Panel][] and [Closing Survey][]
+|16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[Storage][]		|[Expert Panel][] and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[User Databases][]	|[DNSSEC][]	|Closed |Closing Ceremony
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[User Databases][]	|[DNSSEC][] and [EduRoam][]	|Closed |Closing Ceremony
 {: .timetable width="80%"}
 
 <div class="topics" markdown="1">
