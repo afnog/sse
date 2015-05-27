@@ -148,8 +148,8 @@ Then execute:
 Use these IP addresses to write a `hosts` file, for example:
 
 	197.4.11.11     os-juno-controller.local
-	197.4.11.12	os-juno-network
-	197.4.11.15	os-juno-compute1
+	197.4.11.12	os-juno-network.local
+	197.4.11.15	os-juno-compute1.local
 	127.0.0.1	localhost
 
 Copy this file onto all the hosts.
