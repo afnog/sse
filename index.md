@@ -135,7 +135,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ##### DNS Resolvers
 [DNS Resolver]: #dns-resolvers
 
-* [PowerPoint](dns/dns2-presentation.ppt)
+* [PowerPoint](dns/dns2-presentation.pptx)
 * [PDF](dns/dns2-presentation.pdf)
 * [Exercise 1](dns/dns2-exercise1.txt)
 * [Exercise 2](dns/dns2-exercise2.txt)
