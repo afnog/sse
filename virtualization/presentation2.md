@@ -189,7 +189,7 @@ Check that each node can ping the Internet and all other nodes:
 	$ ping network.local
 	$ ping compute1.local
 
-Check that the IP addresses match the ones you wrote down.
+Check that the IP addresses pinged match the ones you wrote down.
 
 ---
 ## Follow the instructions
