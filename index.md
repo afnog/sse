@@ -64,7 +64,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ### Timetable
 
 |		|Monday			|Tuesday		|Wednesday		|Thursday			|Friday
-|:-             |:-                     |:-                     |:-                     |:-                     	|:-
+|:-             |:-                     |:-                     |:-                     |:-                             |:-
 |		|25/05			|26/05			|27/05			|28/05				|29/05
 |09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[SMTP and Spam][]		|[Backups][]
 |-
