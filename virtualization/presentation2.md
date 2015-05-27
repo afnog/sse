@@ -155,65 +155,9 @@ Use these IP addresses to write a `hosts` file, for example:
 Copy this file onto all the hosts.
 
 ---
-## Create the Controller Node
-
-1024 MB RAM, use existing disk image.
-
-Configure network devices:
-* Interface 1: Management
-
----
-## Create the Network Node
-
-1024 MB RAM, use existing disk image.
-
-Configure network devices:
-
-* Interface 1: Management
-* Interface 2: Tunnel
-* Interface 3: External
-  * Change the *Promiscuous Mode* to *Allow all*
-
----
-## Hostnames and IP addresses
-
-* Start all three virtual machines (nodes)
-* Change their hostnames to be unique:
-  * controller.local
-  * network.local
-  * compute1.local
-* Note their IP addresses on all interfaces (networks)
-
----
-## Setup port forwarding
-
-* Open *VirtualBox Settings > Network > External*
-* Click on the screwdriver (to the right)
-* Click *Port Forwarding*
-* Add entries named after the machine plus "SSH"
-* Set local port to:
-  * "2201" for the controller node
-  * "2202" for network
-  * "2203" for compute 1
-* Set guest IP to the host IP address on management network
-* Set guest port to 22
-
-???
-Forward local ports to each of your node's management IPs, for easier remote management.
----
-
-## Setup port forwarding
-
-.fill[![Adding port forwarding](port-forwarding.png)]
-
----
 ## Connect with SSH
 
-Start SSH sessions in three separate terminals to:
-
-* Controller: localhost port 2201
-* Network: localhost port 2202
-* Compute: localhost port 2203
+Start SSH sessions in three separate terminals to each server.
 
 You should be able to:
 
@@ -244,6 +188,8 @@ Check that each node can ping the Internet and all other nodes:
 	$ ping controller.local
 	$ ping network.local
 	$ ping compute1.local
+
+Check that the IP addresses match the ones you wrote down.
 
 ---
 ## Follow the instructions
