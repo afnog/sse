@@ -124,7 +124,23 @@ Then execute:
 	$ sudo apt-get install ubuntu-cloud-keyring ntp openssh-server nano
 	$ sudo apt-get dist-upgrade
 
-And shut down the machine.
+---
+## Create the Clones
+
+	sudo lxc-stop -n os-juno-base
+	for pc in controller network compute1; do
+		hostname=os-juno-$pc
+		sudo sed -i -e "s#\(lxc.network.link = \).*#\1br0#" /var/lib/lxc/$hostname/config
+		sudo sed -i -e "s#\(lxc.network.veth.pair = \).*#\1veth-$hostname#" /var/lib/lxc/$hostname/config
+		echo lxc.start.auto = 1 | sudo tee -a /var/lib/lxc/$hostname/config
+		sudo lxc-execute -n $hostname -- sh -c "echo $hostname.local > /etc/hostname"
+	done
+	sudo lxc-autostart
+	for pc in controller network compute1; do
+		hostname=os-juno-$pc
+		sudo echo $hostname `echo ifconfig eth0 | sudo lxc-attach -n $hostname | grep "inet addr"`
+	done
+
 
 ---
 ## Share the disk
