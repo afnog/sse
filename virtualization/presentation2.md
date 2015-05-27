@@ -136,27 +136,23 @@ Then execute:
 		sudo lxc-execute -n $hostname -- sh -c "echo $hostname.local > /etc/hostname"
 	done
 	sudo lxc-autostart
+
+---
+## Create the Hosts file
+
 	for pc in controller network compute1; do
 		hostname=os-juno-$pc
 		sudo echo $hostname `echo ifconfig eth0 | sudo lxc-attach -n $hostname | grep "inet addr"`
 	done
 
+Use these IP addresses to write a `hosts` file, for example:
 
----
-## Share the disk
+	197.4.11.11     os-juno-controller.local
+	197.4.11.12	os-juno-network
+	197.4.11.15	os-juno-compute1
+	127.0.0.1	localhost
 
-Use Virtual Media Manager to:
-
-* Release the disk (detach from virtual machine)
-* Modify > Multi-attach
-
-Then reattach to virtual machine:
-
-* Settings > Storage > Controller: SATA
-* Click *Add new attachment* icon below
-* Choose *Add hard disk*
-* *Choose existing disk*
-* Choose the *Trusty Openstack* disk image
+Copy this file onto all the hosts.
 
 ---
 ## Create the Controller Node
