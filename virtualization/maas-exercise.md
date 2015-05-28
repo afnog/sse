@@ -129,4 +129,5 @@ And click on *Save interface*. Then use the console to reboot the server.
 In VirtualBox create a new VM called MAAS Node 1. Give it 1 GB RAM and a 40 GB VDI disk,
 dynamically sized.
 
-Configure its network Adapter 1 to use a Host-Only network, and select *vboxnet1*.
+Configure its network Adapter 1 to use a Host-Only network, and select *vboxnet1*. This
+client should only have a single network adaptor.
