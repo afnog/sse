@@ -118,7 +118,12 @@ Go to *Clusters > Cluster master > Add interface* and configure it like this:
 * IP range low: 192.168.57.100
 * IP range high: 192.168.57.200
 
-And click on *Save interface*. Then use the console to reboot the server.
+And click on *Save interface*.
+
+Click on the cog icon in the top right, find the box marked *Proxy for HTTP and HTTPS traffic*,
+and enter `http://197.4.11.251:3128`.
+
+Then use the console to reboot the server.
 
 ## Install a Node
 
@@ -129,4 +134,8 @@ Configure its network Adapter 1 to use a Host-Only network, and select *vboxnet1
 client should only have a single network adaptor.
 
 Start the client and immediately press F12 to select a boot device, then press `L` to boot
-from the LAN. This should boot from your 
+from the LAN. This should boot from your MAAS Controller. It should get to a login screen
+(saying `maas-enlisting-node login:`), sit there for about 15 seconds (with the network connection
+active, as you can see from flashing network lights in VirtualBox), and then shut itself down.
+
+
