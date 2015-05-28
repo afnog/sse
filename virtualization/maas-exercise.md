@@ -2,7 +2,7 @@
 vim: autoread
 jekyll: process
 layout: default
-root: ../
+root: .
 ---
 
 # MAAS Exercise
