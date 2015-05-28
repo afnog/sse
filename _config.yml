@@ -5,3 +5,4 @@ defaults:
     values:
       layout: "default"
       year: 2015
+      root: .
