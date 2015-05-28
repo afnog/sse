@@ -84,10 +84,10 @@ Go to *Clusters > Cluster master > Add interface* and configure it like this:
 
 * Interface: eth1
 * Management: Manage DHCP and DNS
-* IP: 192.168.56.1
+* IP: 192.168.57.1
 * Subnet mask: 255.255.255.0
-* Router IP: 192.168.56.1
-* IP range low: 192.168.56.100
-* IP range high: 192.168.56.200
+* Router IP: 192.168.57.1
+* IP range low: 192.168.57.100
+* IP range high: 192.168.57.200
 
 And click on *Save interface*.
