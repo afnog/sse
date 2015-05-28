@@ -38,6 +38,10 @@ with MAAS* option:
 
 ![MAAS boot](maas-install-boot-marked.png)
 
+### MAAS Option
+
+When asked what kind of MAAS server to use, choose *Create a new MAAS server*.
+
 ### Partitioning
 
 The MAAS server needs more memory than you might want, so we need to give it a big swap space.
