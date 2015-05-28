@@ -154,12 +154,12 @@ pre {
 	background: #eee;
 	padding: 0.5em;
 }
-pre > code, .remark-code, .remark-inline-code {
+pre, .remark-code, .remark-inline-code {
 	background: #eee;
 	font-family: 'Ubuntu Mono';
 	font-size: 80%;
 }
-pre > code, .remark-code {
+pre, .remark-code {
 	display: block;
 	border: 0.2em #ccc;
 	border-style: solid none;
