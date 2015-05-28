@@ -69,12 +69,7 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
-Then start the machine again. Log in on the console and run `ifconfig eth0` to find its IP address.
-Open http://ip-address/MAAS in a browser on your laptop and you should see this:
-
-![MAAS website initial page](maas-web-initial.png)
-
-On the server console, edit `/etc/network/interfaces` to look like this:
+Then start the machine again. Log in on the console and edit `/etc/network/interfaces` to look like this:
 
 	# The loopback network interface
 	auto lo
@@ -92,14 +87,22 @@ On the server console, edit `/etc/network/interfaces` to look like this:
 
 Then run the following commands:
 
+	sudo ifdown eth0
+	sudo ifup eth0
 	sudo ifup eth1
+	ifconfig eth0
+
+And write down the IP address of eth0. Then continue with the following commands:
+
 	sudo apt-get install patch
 	cd /
 	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
 	sudo maas-region-admin createsuperuser
 	sudo http_proxy=http://197.4.11.251:3128/ maas-import-pxe-files
 
-The last command will take some time to run, you can leave it running and go back to the MAAS web interface and log in.
+The last command will take some time to run, you can leave it running.
+
+Open http://ip-address/MAAS in a browser on your laptop and you should be able to log in.
 
 Go to *Clusters > Cluster master > Add interface* and configure it like this:
 
