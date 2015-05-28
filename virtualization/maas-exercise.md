@@ -86,7 +86,7 @@ Go to *Clusters > Cluster master > Add interface* and configure it like this:
 * Management: Manage DHCP and DNS
 * IP: 192.168.56.1
 * Subnet mask: 255.255.255.0
-* Broadcast IP and Router IP: leave blank
+* Router IP: 192.168.56.1
 * IP range low: 192.168.56.100
 * IP range high: 192.168.56.200
 
