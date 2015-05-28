@@ -24,7 +24,10 @@ Install VirtualBox.
 > Host Network Adapter vboxnet1. Please check whether any of your virtual machines are using this adapter.
 > If they are, please choose a different one in the following examples.
 
-Open VirtualBox Preferences > Network > Host-Only Adaptors > vboxnet1 and disable the DHCP server:
+Open VirtualBox Preferences > Network > Host-Only Adaptors. Ensure that you have at least two listed:
+vboxnet0 and vboxnet1. If not, click on the Add button to the right of the list to create them.
+
+Double-click on *vboxnet1* and disable the DHCP server:
 
 ![Disabling the DHCP server](virtualbox-disable-host-network-dhcp.png)
 
