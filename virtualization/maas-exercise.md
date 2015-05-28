@@ -31,6 +31,11 @@ Double-click on *vboxnet1* and disable the DHCP server:
 
 ![Disabling the DHCP server](virtualbox-disable-host-network-dhcp.png)
 
+Then configure the matching interface on your host OS as follows:
+
+* IP address: 192.168.57.2
+* Subnet mask: 255.255.255.0
+
 Create a new VM called MAAS Controller. Give it 1 GB RAM and a 40 GB VDI disk,
 dynamically sized.
 
