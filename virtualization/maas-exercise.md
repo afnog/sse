@@ -36,7 +36,7 @@ Then disable the DHCP server:
 
 ![Disabling the DHCP server](virtualbox-disable-host-network-dhcp.png)
 
-Then **exit and restart VirtualBox** (otherwise this change will not take effect, as we discovered after an hour of debugging!).
+Then **exit and restart VirtualBox**, otherwise this change will not take effect, as we discovered after an hour of debugging!
 
 Create a new VM called MAAS Controller. Give it 1 GB RAM and a 40 GB VDI disk,
 dynamically sized.
