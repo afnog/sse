@@ -59,7 +59,19 @@ Open http://<ip-address>/MAAS in a browser on your laptop and you should see thi
 
 ![MAAS website initial page](maas-web-initial.png)
 
-On the server console, run `sudo maas-region-admin createsuperuser` as instructed.
+On the server console, run:
+
+	sudo apt-get install patch
+	cd /
+	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
+	sudo maas-region-admin createsuperuser
+	sudo http_proxy=http://197.4.11.251:3128/ maas-import-pxe-files
+
+The second command will take some time to run, you can leave it running and go back to the MAAS web interface and log in.
+
+
+as instructed. Then login to the
+web interface.
 
 something like this:
 
