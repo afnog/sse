@@ -72,9 +72,7 @@ When asked for a proxy server, enter this one (to save a LONG install time):
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
 
-* Adapter 1: Bridged to your Wireless NIC (if that doesn't work, you can use the loopback interface
-  with Internet Connection Sharing that you created for GNS3)
-
+* Adapter 1: Do not change, leave set to NAT.
 * Adapter 2: Host-only network, vboxnet0, enable Promiscuous Mode.
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
@@ -88,7 +86,6 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 	# The primary network interface
 	auto eth0
 	iface eth0 inet dhcp
-		post-up ip addr add dev eth0 10.0.2.15
 
 	auto eth1
 	iface eth1 inet static
