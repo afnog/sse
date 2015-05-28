@@ -98,4 +98,4 @@ Go to *Clusters > Cluster master > Add interface* and configure it like this:
 * IP range low: 192.168.57.100
 * IP range high: 192.168.57.200
 
-And click on *Save interface*.
+And click on *Save interface*. Then use the console to reboot the server.
