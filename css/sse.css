@@ -75,6 +75,9 @@ th
 	background: white;
 	padding: 0 0 0 1em;
 }
+img {
+	max-width: 100%;
+}
 .group-photo img
 {
 	width: 100%;
