@@ -40,7 +40,7 @@ with MAAS* option:
 
 ### MAAS Option
 
-When asked what kind of MAAS server to use, choose *Create a new MAAS server*.
+When asked which MAAS server to use, choose *Create a new MAAS server*.
 
 ### Partitioning
 
