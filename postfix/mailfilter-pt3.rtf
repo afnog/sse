@@ -16,6 +16,16 @@ $cd /home/afnog/1.2.0-mailwatch\
 $sudo mv mailscanner /var/www\
 $sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/\
 \
+setup Mailwatch web page on apache:\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 $sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf\'92\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+\
+\
 \
 \
 2. Continue MailScanner setup\
@@ -54,7 +64,6 @@ $sudo chown postfix:www-data /var/spool/MailScanner/quarantine\
 $sudo service clamav-daemon stop\
 $sudo killall -9 freshclam\
 $sudo scp afnog@pc39.sse.ws.afnog.org:/var/lib/clamav/* /var/lib/clamav/\
-$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf\'92\
 \
 \
 \
