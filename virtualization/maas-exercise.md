@@ -17,7 +17,9 @@ Install VirtualBox.
 > Host Network Adapter vboxnet1. Please check whether any of your virtual machines are using this adapter.
 > If they are, please choose a different one in the following examples.
 
-Open VirtualBox Preferences > Network > Host-Only Adaptors > vboxnet1 and disable the DHCP server.
+Open VirtualBox Preferences > Network > Host-Only Adaptors > vboxnet1 and disable the DHCP server:
+
+![Disabling the DHCP server](virtualbox-disable-host-network-dhcp.png)
 
 Create a new VM called MAAS Controller. Give it 1 GB RAM and a 40 GB VDI disk,
 dynamically sized.
@@ -69,13 +71,4 @@ On the server console, run:
 
 The last command will take some time to run, you can leave it running and go back to the MAAS web interface and log in.
 
-
-as instructed. Then login to the
-web interface.
-
-something like this:
-
-	
-
-sudo http_proxy=http://197.4.11.251:3128 maas-import-pxe-files
 
