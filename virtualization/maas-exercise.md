@@ -80,4 +80,14 @@ On the server console, run:
 
 The last command will take some time to run, you can leave it running and go back to the MAAS web interface and log in.
 
+Go to *Clusters > Cluster master > Add interface* and configure it like this:
 
+* Interface: eth1
+* Management: Manage DHCP and DNS
+* IP: 192.168.56.1
+* Subnet mask: 255.255.255.0
+* Broadcast IP and Router IP: leave blank
+* IP range low: 192.168.56.100
+* IP range high: 192.168.56.200
+
+And click on *Save interface*.
