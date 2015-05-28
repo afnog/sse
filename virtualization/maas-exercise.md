@@ -22,6 +22,8 @@ Open VirtualBox Preferences > Network > Host-Only Adaptors > vboxnet1 and disabl
 Create a new VM called MAAS Controller. Give it 1 GB RAM and a 40 GB VDI disk,
 dynamically sized.
 
+### Starting Installation
+
 Start the VM and attach the Ubuntu 14.04 Server 64-bit CD. Choose the *Multiple server installation
 with MAAS* option:
 
@@ -42,6 +44,8 @@ Instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI3*, the
 When asked for a proxy server, enter this one (to save a LONG install time):
 
 * http://197.4.11.251:3142
+
+### After Installation
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
 
