@@ -65,7 +65,7 @@ After installation, shut down the machine and reconfigure its network interfaces
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
 Then start the machine again. Log in on the console and run `ifconfig eth0` to find its IP address.
-Open http://<ip-address>/MAAS in a browser on your laptop and you should see this:
+Open http://ip-address/MAAS in a browser on your laptop and you should see this:
 
 ![MAAS website initial page](maas-web-initial.png)
 
