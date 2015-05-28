@@ -101,6 +101,10 @@ And write down the IP address of eth0. Then continue with the following commands
 	cd /
 	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
 	sudo maas-region-admin createsuperuser
+
+This will create a new administrator user, for which you will have to enter a username and password
+and an email address. Then run:
+
 	sudo http_proxy=http://197.4.11.251:3128/ maas-import-pxe-files
 
 The last command will take some time to run, you can leave it running.
