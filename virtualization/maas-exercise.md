@@ -1,3 +1,9 @@
+---
+vim: autoread
+jekyll: process
+layout: default
+---
+
 # MAAS Exercise
 
 MAAS is not a virtualisation system. It's an OS deployment tool. We will use it later to deploy
