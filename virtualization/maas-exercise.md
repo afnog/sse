@@ -93,10 +93,6 @@ Then run the following commands:
 	sudo ifdown eth0
 	sudo ifup eth0
 	sudo ifup eth1
-	ifconfig eth0
-
-And write down the IP address of eth0. Then continue with the following commands:
-
 	sudo apt-get install patch
 	cd /
 	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
@@ -109,7 +105,7 @@ and an email address. Then run:
 
 The last command will take some time to run, you can leave it running.
 
-Open http://ip-address/MAAS in a browser on your laptop and you should be able to log in.
+Open http://192.168.57.1/MAAS in a browser on your laptop and you should be able to log in.
 
 Go to *Clusters > Cluster master > Add interface* and configure it like this:
 
