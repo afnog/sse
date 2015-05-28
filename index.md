@@ -275,7 +275,7 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Intro Presentation (PDF)](virtualization/sse-virtualization-overview-2013_150527.pdf)
 * [KVM Presentation (OpenOffice Impress)](virtualization/afnog_2015_virtualization_kvm_cw.odp)
 * [KVM Presentation (PDF)](virtualization/afnog_2015_virtualization_kvm_cw_150527.pdf)
-* [MAAS Exercise](maas-exercise.md)
+* [MAAS Exercise](virtualization/maas-exercise.md)
 
 </div><!-- .topics -->
 
