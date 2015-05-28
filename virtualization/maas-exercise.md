@@ -93,11 +93,8 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 		address 192.168.57.1
 		netmask 255.255.255.0
 
-Then run the following commands:
+Then `reboot` the host, log in again and run the following commands:
 
-	sudo ifdown eth0
-	sudo ifup eth0
-	sudo ifup eth1
 	sudo apt-get install patch
 	cd /
 	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
@@ -131,3 +128,6 @@ dynamically sized.
 
 Configure its network Adapter 1 to use a Host-Only network, and select *vboxnet1*. This
 client should only have a single network adaptor.
+
+Start the client and immediately press F12 to select a boot device, then press `L` to boot
+from the LAN. This should boot from your 
