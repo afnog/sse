@@ -79,6 +79,7 @@ On the server console, edit `/etc/network/interfaces` and add the following line
 
 Then run the following commands:
 
+	sudo ifup eth1
 	sudo apt-get install patch
 	cd /
 	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
