@@ -12,7 +12,6 @@
 ==================\
 \
 $sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm \CocoaLigature0 /usr/share/MailScanner/MailScanner/CustomFunctions/\
-\
 $cd /home/afnog/1.2.0-mailwatch\
 $sudo mv mailscanner /var/www\
 $sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/\
@@ -62,20 +61,14 @@ $sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-en
 \
 4. Setup Postfix and SpamAssassin\
 ================================\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 \
+\
 \
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \CocoaLigature1 $sudo nano /etc/default/spamassassin\
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
 \
 \
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
-##Uncomment the following line:\expnd0\expndtw0\kerning0
-\
+##Uncomment the following line:\
 ENABLED=1\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
@@ -89,8 +82,6 @@ ENABLED=1\
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \CocoaLigature1 $sudo nano /etc/postfix/header_checks\
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
 \
 ###Add the following\
 /^Received:/ HOLD\
@@ -101,17 +92,10 @@ ENABLED=1\
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
 $sudo nano /etc/postfix/main.cf\
 \
 \
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
-###Add the following\expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720
-\cf0 \expnd0\expndtw0\kerning0
+###Add the following\
 header_checks = regexp:/etc/postfix/header_checks\
 \
 \pard\pardeftab720
@@ -137,15 +121,13 @@ $mysql \'96u root \'96p < create.sql\uc0\u8232 \expnd0\expndtw0\kerning0
 THEN\
 \
 \
-\pard\pardeftab720
-\cf0 Setup the mailscanner database, where it will store details on incoming emails\
-\pard\pardeftab720
+Setup the mailscanner database, where it will store details on incoming emails\
 \kerning1\expnd0\expndtw0 $mysql \'96u root \'96p\
 \
 \
 You should get the MySQL shell. \
 \
-\cf0 mysql>\cf0 \
+mysql>\
 \
 Add the following exactly as it is IN ONE LINE:\
 \
@@ -167,6 +149,12 @@ INSERT INTO users SET username = \'91mailwatch\'92, password = MD5(\'91afnog\'92
 \f1\fs64 \
 
 \f0\fs24 exit\
+\
+\
+6. LOGIN TO MAILWATCH\
+\
+\
+\
 \
 \
 \
