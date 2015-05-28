@@ -54,7 +54,13 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 * Adapter 2: Host-only network, vboxnet0, enable Promiscuous Mode.
 
-Then start the machine again. Log in on the console and edit /etc/network/interfaces to look
+Then start the machine again. Log in on the console and run `ifconfig eth0` to find its IP address.
+Open http://<ip-address>/MAAS in a browser on your laptop and you should see this:
+
+![MAAS website initial page](maas-web-initial.png)
+
+On the server console, run `sudo maas-region-admin createsuperuser` as instructed.
+
 something like this:
 
 	
