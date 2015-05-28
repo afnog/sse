@@ -255,7 +255,10 @@ Goal: to understand the contents and layering of common Internet protocols
 + Postfix and Dovecot
 
 * [Email Overview](postfix/01_email_preso.pdf)
-* [EmailBestPractices Postfix and Dovecot](postfix/postfix-preso.pdf)
+* [EmailBestPractices Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.ppt)
+* [Mail Gateway Part 1] (postfix/mailgateway-pt1.rtf)
+* [Mail Gateway Part 2] (postfix/mailgateway-pt2.pdf)
+* [Mail Gateway Part 3] (postfix/mailgateway-pt3.rtf)
 * [Postfix Setup](postfix/postfix-setup.txt)
 * [Dovecot Setup](postfix/dovecot-setup.txt)
 
