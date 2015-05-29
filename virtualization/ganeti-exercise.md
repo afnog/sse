@@ -129,7 +129,14 @@ for the cluster name, instead of editing `/etc/hosts`. Your hostname should
 really be in the DNS as well, but for the purposes of this exercise
 (non-production deployment) it doesn't matter too much.
 
-Then `reboot` the host, log in again and run the following commands:
+Edit `/etc/default/grub` and add the following line:
+
+	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:256M,max:256M"
+
+This restricts the master domain to 256 MB RAM, which will make it slow, but give us more RAM free
+for guests. In your own configurations you should probably allocate more RAM to the host (domain 0)!
+
+Then run the following commands:
 
 	sudo apt-get dist-upgrade	
 	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap xen-hypervisor-amd64
@@ -137,6 +144,8 @@ Then `reboot` the host, log in again and run the following commands:
 Edit `/etc/xen/xend-config.sxp` and change the following setting:
 
 	(enable-dom0-ballooning no)
+
+Then `reboot` the host and log in again.
 
 Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.13/html/install.html),
 skipping the following sections:
