@@ -228,7 +228,7 @@ Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/fil
 
 Then run the following commands to install it:
 
-	sudo apt-get install fabric python-virtualenv python-dev libffi-dev libssl-dev patch
+	sudo apt-get install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
@@ -268,5 +268,83 @@ Save the file, and check the configuration for errors:
 	sudo -u www-data venv/bin/python manage.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
-by visiting http://192.168.56.10:8000.
+by visiting http://192.168.56.10:8000. You should get a white page with a login and password box,
+but no styling (colours, images, etc.) If not, check the console output for error messages.
 
+Create the file `/opt/ganeti_webmgr/wsgi.py` with the following contents:
+
+	import os
+	import sys
+
+	path = '/opt/ganeti_webmgr'
+
+	# activate virtualenv
+	activate_this = '%s/venv/bin/activate_this.py' % path
+	execfile(activate_this, dict(__file__=activate_this))
+
+	# add project to path
+	if path not in sys.path:
+	    sys.path.append(path)
+
+	    # configure django environment
+	    os.environ['DJANGO_SETTINGS_MODULE'] = 'ganeti_webmgr.ganeti_web.settings'
+
+	    import django.core.handlers.wsgi
+	    application = django.core.handlers.wsgi.WSGIHandler()
+
+Create the file `/etc/apache2/sites-enabled/ganeti.conf` with the following contents:
+
+	WSGIPythonHome /opt/ganeti_webmgr/venv
+	WSGISocketPrefix /var/run/wsgi
+	WSGIRestrictEmbedded On
+
+	<VirtualHost *:80>
+		ServerAdmin your-email-address@example.com
+		ServerName ganeti-server.local
+		ServerAlias 192.168.56.10
+
+		# Static content needed by Django
+		Alias /static "/opt/ganeti_webmgr/collected_static/"
+		<Location "/static">
+			Order allow,deny
+			Allow from all
+			SetHandler None
+		</Location>
+
+		# Django settings - AFTER the static media stuff
+		WSGIScriptAlias / /opt/ganeti_webmgr/wsgi.py
+		WSGIDaemonProcess ganeti processes=1 threads=10 display-name='%{GROUP}' deadlock-timeout=30
+		WSGIApplicationGroup %{GLOBAL}
+		WSGIProcessGroup ganeti
+
+		# Possible values include: debug, info, notice, warn, error, crit,
+		# alert, emerg.
+		LogLevel warn
+
+		<Location />
+			Require all granted
+		</Location>
+	</VirtualHost>
+
+Now you should be able to access http://192.168.56.10/ (without the :8000 port specification)
+and see the login page with graphics:
+
+![Ganeti Login Screen](ganeti-login.png)
+
+Log in using the superuser account that you created during the `syncdb`
+command, or if you have forgotten the details, run this command to create a new
+one:
+
+	sudo -u www-data venv/bin/python manage.py createsuperuser
+
+Choose *Clusters* from the menu on the left, and then click *Add Cluster* in the top right.
+Enter the following details:
+
+* Hostname: localhost
+* Port: 5080
+* Description: My Cluster
+
+Leave the other details blank, and click *Add*. Your new cluster should then
+appear with its specifications:
+
+![Ganeti Manager showing the new cluster](ganeti-my-cluster.png)

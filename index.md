@@ -57,9 +57,24 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 <!-- sorted by surname -->
 
-|First Names     |Surname        |Organisation         |Country
-|:-              |:-             |:-                   |:-
-|Alfred          |Arouna         |Isocel Telecom       |Benin
+|First Names	|Surname	|Organisation				|Country
+|:-             |:-             |:-                     		|:-
+|Amel		|HAMIMY (Ms)    |SudREN					|Sudan
+|Salma		|BASHIR		|SudREN					|Nigeria
+|Adefolarin	|BOLAHI		|Adeleke University			|Nigeria
+|Patrick	|KIREMBU	|Angani Limited				|Uganda
+|Brian		|MASIGA		|Research Education Network For Uganda	|Uganda
+|Robert		|LUBANGA	|UCU					|Uganda
+|Cedrick Adrien	|MBEYET		|AFRINIC				|Mauritius
+|Baraka		|CHUMA		|Ruaha University College		|Nigeria
+|GABRIEL	|AWOFADEJU	|University of Ibadan			|Nigeria
+|Yankuba	|JAITEH		|GAMTEL					|Ghana
+|Mary		|JONAH		|Ghana Dot Com				|NIGERIA
+|Oluwafemi	|FOLARIN	|Andmark University 			|Nigeria
+|Sunday		|OYEBAMIJI	|University of Ibadan			|Nigeria
+|Caleb		|OGUNDELE	|University of Ibadan			|Nigeria
+|Timothy	|AKINFENWA	|Osun State University Osogbo		|Nigeria	
+|Serge		|Roland		|SANOU,	ARCEP				|Burkina Faso
 
 ### Timetable
 
@@ -114,10 +129,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 #### [Chris Wilson](#CW)
 
 * [Survey link](https://www.surveymonkey.com/s/623JR5J) (online)
-<!--
-* [Survey results/HTML](https://www.surveymonkey.com/results/SM-8JH7M6Z/)
 * [Survey results/PDF](intro/closing-survey-results.pdf)
--->
 
 ### Configuration Management
 
