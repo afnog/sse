@@ -1,0 +1,179 @@
+=====MAIL FILTER - Part 3=======
+===========================
+
+
+1. Setup MailWatch
+==================
+Copy preconfigured files from the instructor’s server
+
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/MailScanner/CustomFunctions/
+
+
+Download MailWatch - MailScanner Frontend
+
+	$cd /home/afnog/
+	$wget http://197.4.11.139/1.2.0-mailwatch.zip
+	$unzip 1.2.0-mailwatch.zip
+	$cd 1.2.0-master
+	$sudo mv mailscanner /var/www
+
+Setup MailWatch conf.php (copy preconfigured)
+
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
+
+Setup MailWatch web page for Apache:
+
+
+	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf’
+
+
+
+2. Continue MailScanner setup
+=============================
+
+You will need the following CPAN module
+
+	$sudo cpan install Encoding::FixLatin
+
+Enable MailScanner
+
+	$sudo nano /etc/default/mailscanner
+
+	##Uncomment the following line:
+	run_mailscanner=1
+
+Save and Exit the file
+
+
+Copy preconfigured MailScanner.conf file
+	
+	$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/
+	
+Prepare MailScanner directories (they may already exist)
+	
+	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin
+	$sudo chown postfix:www-data /var/spool/MailScanner/incoming
+	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine
+
+
+3. Get clamav updates (they take a long time and we will use a local copy)
+========================================================================
+
+Clamav will automatically attempt to obtain fresh antivirus signatures from the Internet via
+freshclam after installation. This will take too long for us so please use pre-downloaded signatures for the class.
+(No need to do this on a real server)
+	
+	$sudo service clamav-daemon stop
+	$sudo killall -9 freshclam
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/var/lib/clamav/* /var/lib/clamav/
+	$sudo service clamav-daemon start
+
+
+4. Setup Postfix and SpamAssassin
+================================
+
+Enable SpamAssassin 
+
+	$sudo nano /etc/default/spamassassin
+
+	##Uncomment the following line:
+	ENABLED=1
+
+
+Save and Exit.
+
+
+Configure Postfix to hold mail first. Effectivly a mail arrives and is put into a hold queue then mailscanner scans the mail for spam or virus content then it is released:
+
+	$sudo nano /etc/postfix/header_checks
+
+	###Add the following
+	/^Received:/ HOLD
+
+	Save and Exit
+
+Configure the main.cf file to read the file created above.
+
+	$sudo nano /etc/postfix/main.cf
+
+	###Add the following
+	header_checks = regexp:/etc/postfix/header_checks
+
+	Save and Exit
+
+
+
+5. Setup Mailwatch
+==================
+
+Set up MailwWatch
+
+	$cd /home/afnog/1.2.0-master
+
+
+Setup the database. The password is afnog
+
+	$mysql –u root –p < create.sql 
+
+THEN
+
+
+Setup the mailscanner database, where it will store details on incoming emails
+
+	$mysql –u root –p
+
+
+You should get the MySQL shell. 
+
+	mysql>
+
+Add the following exactly as it is IN ONE LINE:
+
+	GRANT ALL ON mailscanner.* TO mailwatch@localhost IDENTIFIED BY 'afnog';
+	GRANT FILE ON *.* TO mailwatch@localhost IDENTIFIED BY 'afnog';
+	FLUSH PRIVILEGES;
+	exit
+
+THEN
+
+Login as the Mailwatch user using the credentials used in the Mysql entry above. We will set the username and password to be used to login to the MailWatch web interface. Typically this should be a strong alphanumeric password or passphrase. We will use afnog:
+
+	$mysql mailscanner -u mailwatch –p
+
+	INSERT INTO users SET username = ‘mailwatch’, password = MD5(‘afnog’), fullname = ’mailadmin’, type = ‘A’;
+	exit
+
+
+
+6. START everything
+====================
+
+	$sudo service postfix restart && sudo service apache2 restart && sudo service mailscanner restart
+
+
+
+8. ALWAYS CHECK MAIL LOGS
+=======================
+
+You should make sure that MailScanner is working properly and can communicate with ClamAV and SpamAssassin.
+Do not run the following command from the root director (/root) as it will produce errors
+
+	$MailScanner —lint —debug
+	
+
+
+
+7. LOGIN TO MAILWATCH
+====================
+
+Username is “mailwatch” password is “afnog”
+
+Please note that Chrome may not be able to login so try another browser if that is the case.
+
+	http://pcX.sse.ws.afnog.org/mailwatch
+
+
+
+
+
