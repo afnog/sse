@@ -1,0 +1,274 @@
+Full Encrypted System Backups using Duplicity and GnuPG
+-------------------------------------------------------
+
+The goal of this exercise is to perform full (and incremental)
+system backups of a Linux system over a network, encrypting all
+data on the target host.
+
+Using encryption in this way means you don't have to worry quite
+so much about the security of the backup system. You could back up
+to Dropbox, Amazon S3, Mega or anywhere really, and not have to
+worry that your data is accidentally disclosed.
+
+In this exercise we will back up over a network using scp, which
+is part of the ssh protocol.
+
+
+1. Install the necessary software
+
+As root, install the duplicity and gnupg packages.
+
+  # apt-get update
+  # apt-get install duplicity
+  # apt-get install gnupg
+  #
+
+
+2. Prepare our Destination Volume
+
+A series of accounts have been created on the host "backup.afnog.guru".
+Each workshop server (e.g. pcN) has an account on that server with
+username "backupN". The password in each case is the same as the password
+on pcN for user "afnog".
+
+So pc11 has an account with user name backup11, pc4 has an account
+with username backup4, etc.
+
+We need to arrange things so that we can ssh to that account without
+a password, since we ultimately want backups to happen automatically
+without an administrator haing to type a password.
+
+Become root, and generate an ssh key pair on the workshop server:
+
+  afnog@pcN:~$ sudo -i
+  root@pcN:~# ssh-keygen
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/root/.ssh/id_rsa): 
+  Enter passphrase (empty for no passphrase): 
+  Enter same passphrase again: 
+  Your identification has been saved in /root/.ssh/id_rsa.
+  Your public key has been saved in /root/.ssh/id_rsa.pub.
+  The key fingerprint is:
+  39:5e:30:d1:46:1d:60:ae:44:2f:d5:89:ea:8c:a4:09 root@pc38.sse.ws.afnog.org
+  The key's randomart image is:
+  +---[RSA 2048]----+
+  |        oo==.o   |
+  |       . *+ +    |
+  |        =oo      |
+  |  E   ...*       |
+  |   . + +S .      |
+  |    o ..oo       |
+  |        .        |
+  |                 |
+  |                 |
+  +-----------------+
+  root@pcN:~#
+
+Verify that you can ssh from the root account of the workshop server
+to the backup account, and that you can do so without being asked
+for a password. (The first time you do it, you will probably be
+asked to confirm a key fingerprint; subsequent connections should
+not ask this.)
+
+  root@pc38:~# ssh backup38@backup.afnog.guru
+
+  The programs included with the Debian GNU/Linux system are free software;
+  the exact distribution terms for each program are described in the
+  individual files in /usr/share/doc/*/copyright.
+
+  Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+  permitted by applicable law.
+  Last login: Fri May 29 13:57:37 2015 from 193.95.80.178
+  $ 
+
+You can log out now. Everything is good.
+
+  $ exit
+  Connection to backup.afnog.guru closed.
+  root@pc38:~# 
+
+
+3. Create a PGP key for encrypting our backups
+
+We will generate a new, specific key pair just for use in backups.
+This key will be specific to the machine being backed up; we won't
+use it for e-mail or anything else.
+
+In this example, the key is being created on server pc38.
+
+Note that we have specified a key expiration of 2 days (since it's
+Friday, and this is a workshop) -- in real life you would choose a
+key lifetime that was longer and more sensible.
+
+We specified no passphrase for the private key. This means that the
+private key is exposed (without encryption) on pc38 in /root which
+is not ideal; on the other hand, it means we can easily encrypt
+using this key without being prompted for a password. This will
+allow us to run backups automatically without a human operator.
+
+  root@pc38:~# gpg --gen-key
+  gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+  This is free software: you are free to change and redistribute it.
+  There is NO WARRANTY, to the extent permitted by law.
+
+  gpg: directory `/root/.gnupg' created
+  gpg: new configuration file `/root/.gnupg/gpg.conf' created
+  gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run
+  gpg: keyring `/root/.gnupg/secring.gpg' created
+  gpg: keyring `/root/.gnupg/pubring.gpg' created
+  Please select what kind of key you want:
+     (1) RSA and RSA (default)
+     (2) DSA and Elgamal
+     (3) DSA (sign only)
+     (4) RSA (sign only)
+  Your selection? 1
+  RSA keys may be between 1024 and 4096 bits long.
+  What keysize do you want? (2048)  
+  Requested keysize is 2048 bits
+  Please specify how long the key should be valid.
+           0 = key does not expire
+        <n>  = key expires in n days
+        <n>w = key expires in n weeks
+        <n>m = key expires in n months
+        <n>y = key expires in n years
+  Key is valid for? (0) 2d
+  Key expires at Sun May 31 13:25:30 2015 UTC
+  Is this correct? (y/N) y
+
+  You need a user ID to identify your key; the software constructs the user ID
+  from the Real Name, Comment and Email Address in this form:
+      "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+  Real name: Root Backup User
+  Email address: root@pc38.sse.ws.afnog.org
+  Comment: used by duplicity
+  You selected this USER-ID:
+      "Root Backup User (used by duplicity) <root@pc38.sse.ws.afnog.org>"
+
+  Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+  You need a Passphrase to protect your secret key.
+
+  You don't want a passphrase - this is probably a *bad* idea!
+  I will do it anyway.  You can change your passphrase at any time,
+  using this program with the option "--edit-key".
+
+  We need to generate a lot of random bytes. It is a good idea to perform
+  some other action (type on the keyboard, move the mouse, utilize the
+  disks) during the prime generation; this gives the random number
+  generator a better chance to gain enough entropy.
+  .......+++++
+  ..+++++
+  We need to generate a lot of random bytes. It is a good idea to perform
+  some other action (type on the keyboard, move the mouse, utilize the
+  disks) during the prime generation; this gives the random number
+  generator a better chance to gain enough entropy.
+  ..........+++++
+  ................+++++
+  gpg: /root/.gnupg/trustdb.gpg: trustdb created
+  gpg: key 54C305B6 marked as ultimately trusted
+  public and secret key created and signed.
+
+  gpg: checking the trustdb
+  gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+  gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+  gpg: next trustdb check due at 2015-05-31
+  pub   2048R/54C305B6 2015-05-29 [expires: 2015-05-31]
+        Key fingerprint = F682 96DE 0F82 9742 F2C9  FA38 4DD1 E1C9 54C3 05B6
+  uid                  Root Backup User (used by duplicity) <root@pc38.sse.ws.afnog.org>
+  sub   2048R/7D00BBC7 2015-05-29 [expires: 2015-05-31]
+  
+  root@pc38:~# 
+
+
+4. Perform a full system backup
+
+We will use duplicity to back up the system to the remote backup account,
+encrypting using the public key we generated in step 3. You should
+substitute a key id that matches the key you generated.
+
+We use the parameter "--exclude-device-files" because we don't want to 
+try and backup Unix device files, which are special.
+
+We use the parameter "--exclude" to identify directories that we don't
+want to include in the backup.
+
+  root@pc38:~# duplicity full \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    --exclude /mnt \
+    --exclude /tmp \
+    / scp://backup38@backup.afnog.guru/pc38/
+
+This might take a little while to run.
+
+
+5. Perform an incremental system backup
+
+We can save time after the first full backup by only backing up
+things that have changed since the last run. We do this by telling
+duplicity to do an incremental backup, rather than a full one.
+
+  root@pc38:~# duplicity incremental \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    --exclude /mnt \
+    --exclude /tmp \
+    / scp://backup38@backup.afnog.guru/pc38/
+
+
+6. Verify that the last backup was good
+
+We can verify that a backup we just made is accurate like this:
+
+  root@pc38:~# duplicity verify \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    --exclude /mnt \
+    --exclude /tmp \
+    / scp://backup38@backup.afnog.guru/pc38/
+
+
+7. Restore from the backup
+
+Restoring from a backup uses a very similar syntax as the backup
+commands above. To restore the whole system as it was most recently
+backed up:
+
+  root@pc38:~# duplicity restore \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    scp://backup38@backup.afnog.guru/pc38/ /tmp/restored/
+
+(this might take a while)
+
+To restore one particular file, we can use the --file-to-restore
+option. The following example restores the most recent backup copy
+of /etc/debconf.conf:
+
+  root@pc38:~# duplicity restore \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    --file-to-restore etc/debconf.conf \
+    scp://backup38@backup.afnog.guru/pc38/ /tmp/debconf.conf
+
+To restore the same file as it was on 1 May 2015 at noon, use the
+--time option:
+
+  root@pc38:~# duplicity restore \
+    --encrypt-key 54C305B6 \
+    --exclude-device-files \
+    --file-to-restore etc/debconf.conf \
+    --time "20150501T12:00:00+00:00" \
+    scp://backup38@backup.afnog.guru/pc38/ /tmp/debconf.conf
+
+
+8. Duplicity has many other options
+
+Refer to the manual page for more ideas!
+
+  root@pc38:~# man duplicity
+
+or find more information at:
+
+  http://duplicity.nongnu.org
+
