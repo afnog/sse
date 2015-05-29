@@ -132,7 +132,7 @@ Add the following lines;
 	
 Save, exit the file
 
-2.3.1 Disable the default-ssl site since SSL works on one site per IP and enable the wordpress-ssl site and restart apache
+2.3.1 We need to disable the default-ssl site because SSL works on a per IP basis. Then enable the wordpress-ssl site and restart apache
 
 	$ sudo a2dissite default-ssl
 	
