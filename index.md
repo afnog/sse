@@ -172,6 +172,15 @@ Goal: To understand firewalls and how the Linux iptables (netfilter) firewall wo
 * [PacketFilter Firewall Exercise-1](firewalls/firewall_exercise-1.txt)
 * [PacketFilter Firewall Exercise-2](firewalls/firewall-exercise-2.txt)
 
+### Ganeti
+[Ganeti]: #ganeti
+
+#### [Chris Wilson](#CW)
+
+* Ganeti Presentation: to be written
+* [Ganeti Exercise](virtualization/ganeti-exercise.html)
+
+
 ### Internet Protocols
 
 #### [Chris Wilson](#CW)
