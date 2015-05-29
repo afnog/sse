@@ -1,34 +1,43 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Calibri;}
 {\colortbl;\red255\green255\blue255;\red53\green64\blue80;\red234\green234\blue234;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww22960\viewh8400\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww25160\viewh14020\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\f0\fs26 \cf0 =====MAIL FILTER - Part 2==\
+\f0\fs26 \cf0 =====MAIL FILTER - Part 3=======\
 ===========================\
 
 \fs28 \
 \
 1. Setup MailWatch\
 ==================\
+Copy preconfigured files from the instructor\'92s server\
 \
-$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm \CocoaLigature0 /usr/share/MailScanner/MailScanner/CustomFunctions/\
-$cd /home/afnog/\
-$wget http://197.4.11.139/1.2.0-mailwatch.zip\
-$unzip 1.2.0-mailwatch.zip\
-$cd 1.2.0-master\
-$sudo mv mailscanner /var/www\
-$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/\
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm \CocoaLigature0 /usr/share/MailScanner/MailScanner/CustomFunctions/\
 \
-setup Mailwatch web page on apache:\
+\
+Download MailWatch - MailScanner Frontend\
+\
+	$cd /home/afnog/\
+	$wget http://197.4.11.139/1.2.0-mailwatch.zip\
+	$unzip 1.2.0-mailwatch.zip\
+	$cd 1.2.0-master\
+	$sudo mv mailscanner /var/www\
+\
+Setup MailWatch conf.php (copy preconfigured)\
+\
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/\
+\
+Setup MailQatch web page for Apache:\
 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 $sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf\'92\
+\cf0 	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf\'92\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\fs26 \
+\fs26 \cf0 \
 \
 \
 \
@@ -36,29 +45,35 @@ setup Mailwatch web page on apache:\
 2. Continue MailScanner setup\
 =============================\
 \
+You will need the following CPAN module\
+\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 $sudo cpan install Encoding::FixLatin\
+\cf0 	$sudo cpan install Encoding::FixLatin\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 \
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
-\CocoaLigature1 $sudo nano /etc/default/mailscanner\
+\CocoaLigature1 \
+Enable MailScanner\
 \
-##Uncomment the following line:\
-run_mailscanner=1\
+	$sudo nano /etc/default/mailscanner\
+\
+	##Uncomment the following line:\
+	run_mailscanner=1\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 Save and Exit the file\
 \
 \
-$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup\
+Copy preconfigured MailScanner.conf file\
+	$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup\
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/\
+	\
+Prepare MailScanner directories (they may already exist)\
+	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin\
 \
-$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/\
-\
-$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin\
-\
-$sudo chown postfix:www-data /var/spool/MailScanner/incoming\
-$sudo chown postfix:www-data /var/spool/MailScanner/quarantine\
+	$sudo chown postfix:www-data /var/spool/MailScanner/incoming\
+	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 \
 \
@@ -157,12 +172,14 @@ login as mail watch to mysql. The password is afnog:\
 \pard\pardeftab720
 \cf0 \kerning1\expnd0\expndtw0 $mysql mailscanner -u mailwatch \'96p\
 \
+\pard\pardeftab720
 
-\fs24 INSERT INTO users SET username = \'91mailwatch\'92, password = MD5(\'91afnog\'92), fullname = \'92mailadmin\'92, 
+\fs24 \cf0 INSERT INTO users SET username = \'91mailwatch\'92, password = MD5(\'91afnog\'92), fullname = \'92mailadmin\'92, 
 \fs26 type = \'91A\'92;
 \f1 \
+\pard\pardeftab720
 
-\f0 exit\
+\f0 \cf0 exit\
 \
 \
 6. LOGIN TO MAILWATCH\
