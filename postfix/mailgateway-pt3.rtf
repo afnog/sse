@@ -40,8 +40,6 @@ Setup MailQatch web page for Apache:\
 \fs26 \cf0 \
 \
 \
-\
-\
 2. Continue MailScanner setup\
 =============================\
 \
@@ -49,8 +47,6 @@ You will need the following CPAN module\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 	$sudo cpan install Encoding::FixLatin\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
-\cf0 \
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
@@ -71,13 +67,12 @@ Copy preconfigured MailScanner.conf file\
 	\
 Prepare MailScanner directories (they may already exist)\
 	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin\
-\
 	$sudo chown postfix:www-data /var/spool/MailScanner/incoming\
 	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 \
 \
-3. Get clamav updates (they take a long time and we will use a local copy\
+3. Get clamav updates (they take a long time and we will use a local copy)\
 ========================================================================\
 \
 \
