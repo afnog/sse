@@ -114,7 +114,15 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 		bridge_stp off
 		bridge_fd 0
 
-Also edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
+Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
+
+Edit `/etc/hosts` and ensure that it contains the IP address and hostname of
+your host. You will also need to choose a name (hostname) and IP address for
+your cluster, which must be different. For example:
+
+	127.0.0.1       localhost
+	192.168.56.10   ganeti1.sse.ws.afnog.org
+	192.168.56.11   cluster1.sse.ws.afnog.org
 
 Then `reboot` the host, log in again and run the following commands:
 	
@@ -128,5 +136,13 @@ skipping the following sections:
 * KVM userspace access
 * Configuring the network
 * Configuring LVM
-* Installing Ganeti: skip to [Initializing the Cluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#initializing-the-cluster)
+* Installing Ganeti: skip to [Initializing the Cluster](#initializing-the-cluster) below.
+
+### Initializing the Cluster
+
+Follow the instructions in [Initializing the
+Cluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#initializing-the-cluster),
+but use the cluster name that you placed in `/etc/hosts` as the cluster name
+for the `gnt-cluster init` command.
+
 
