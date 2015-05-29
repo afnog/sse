@@ -235,5 +235,5 @@ Then run the following commands to install it:
 	cd /var/www/ganeti
 	sudo mv requirements/production.txt requirements/prod.txt
 	sudo http_proxy=http://197.4.11.251:3128/ fab deploy
-
+	sudo pip install -r requirements/prod.txt --proxy=http://197.4.11.251:3128/
 
