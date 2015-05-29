@@ -170,6 +170,7 @@ pre, .remark-code {
 }
 blockquote {
 	background: #fee;
+	padding: 1em;
 }
 blockquote > p {
 	margin: 1em 0;
