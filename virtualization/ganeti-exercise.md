@@ -337,4 +337,11 @@ one:
 
 	sudo -u www-data venv/bin/python manage.py createsuperuser
 
+Choose *Clusters* from the menu on the left, and then click *Add Cluster* in the top right.
+Enter the following details:
 
+* Hostname: localhost
+* Port: 5080
+* Description: My Cluster
+
+Leave the other details blank, and click *Add*.
