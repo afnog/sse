@@ -156,6 +156,7 @@ h6, ol > li /* links to materials */
 pre {
 	background: #eee;
 	padding: 0.5em;
+	white-space: pre-wrap;
 }
 pre, .remark-code, .remark-inline-code {
 	background: #eee;
