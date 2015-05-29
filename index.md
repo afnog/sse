@@ -275,11 +275,11 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Email Overview](postfix/01_email_preso.pdf)
 * [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
-* [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.rtf)
+* [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
 * [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
-* [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.rtf)
+* [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
 * [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
-* [Postfix Mail Forward HowTo](postfix/postfix_mailforward.rtf)
+* [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
 
 + FreeBSD 10 Setup
 * [Postfix Setup](postfix/postfix-setup.txt)
