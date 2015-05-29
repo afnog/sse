@@ -234,5 +234,6 @@ Then run the following commands to install it:
 	$ sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
 	$ cd /var/www/ganeti
 	$ sudo mv requirements/production.txt requirements/prod.txt
+	$ sudo fab deploy
 
 
