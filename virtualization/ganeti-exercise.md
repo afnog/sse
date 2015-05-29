@@ -259,4 +259,9 @@ Edit `settings.py` and find the database path (the 'NAME' line):
 
 Change the line to:
 
-	'NAME': '/var/lib/ganeti/ganeti_webmgr.db',
+	'NAME': '/var/lib/ganeti_webmgr/ganeti.db',
+
+And then create the directory and set permissions:
+
+	sudo mkdir /var/lib/ganeti_webmgr
+	sudo chown www-data /var/lib/ganeti_webmgr
