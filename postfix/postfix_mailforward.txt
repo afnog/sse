@@ -13,11 +13,11 @@ Edit Postfix main.cf
 
 	$sudo nano /etc/postfix/main.cf
 
-	##Match accordingly
+	##Add your neighbour's domain to the mydestination entries
 	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, , localhost
 
 
-	##Add at the end
+	##Add at the end. This file contains mail routing information
 	transport_maps = hash:/etc/postfix/transport
 
 Save and Exit
@@ -25,14 +25,14 @@ Save and Exit
 
 	$sudo nano /etc/postfix/transport
 	
-	##Add your neighbor
+	##Add your neighbor's server where his mail will be routed to
 	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
 
 
 Save and Exit
 
 
-Run postmap
+Run postmap against the file you created. This should be done each time you add or remove a domain
 
 	$cd /etc/postfix
 	$sudo postmap transport
