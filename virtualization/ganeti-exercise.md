@@ -259,7 +259,7 @@ Edit `config/config.yml` and add the following lines at the end:
 	SECRET_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 	WEB_MGR_API_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
-Also change the `EMAIL_HOST` and `DEFAULT_FROM_EMAIL` lines, so that their values refer to your mail server and your email address.
+Also change the `EMAIL_HOST` and `DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server and your email address.
 
 Save the file, and check the configuration for errors:
 
