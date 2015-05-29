@@ -292,3 +292,31 @@ Create the file `/opt/ganeti_webmgr/mod_wsgi.py` with the following contents:
 	    import django.core.handlers.wsgi
 	    application = django.core.handlers.wsgi.WSGIHandler()
 
+Create the file `/etc/apache2/sites-enabled/ganeti.conf` with the following contents:
+
+	WSGIPythonHome /opt/ganeti_webmgr/venv
+	WSGISocketPrefix /var/run/wsgi
+	WSGIRestrictEmbedded On
+
+	<VirtualHost *:80>
+		ServerAdmin your-email-address@example.com
+		ServerName ganeti-server.local
+
+		# Static content needed by Django
+		Alias /static "/opt/ganeti_webmgr/collected_static/"
+		<Location "/static">
+			Order allow,deny
+			Allow from all
+			SetHandler None
+		</Location>
+
+		# Django settings - AFTER the static media stuff
+		WSGIScriptAlias / /opt/ganeti_webmgr/wsgi.py
+		WSGIDaemonProcess ganeti processes=1 threads=10 display-name='%{GROUP}' deadlock-timeout=30
+		WSGIApplicationGroup %{GLOBAL}
+		WSGIProcessGroup ganeti
+
+		# Possible values include: debug, info, notice, warn, error, crit,
+		# alert, emerg.
+		LogLevel warn
+	</VirtualHost>
