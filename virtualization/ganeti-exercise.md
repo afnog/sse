@@ -123,4 +123,8 @@ skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
 * Installing RBD: skip to [Installing Gluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#installing-gluster) instead.
+* KVM userspace access
+* Configuring the network
+* Configuring LVM
+* Installing Ganeti: skip to [Installing the OS support packages](http://docs.ganeti.org/ganeti/2.13/html/install.html#id27)
 
