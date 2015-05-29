@@ -115,49 +115,8 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 		bridge_fd 0
 
 Then `reboot` the host, log in again and run the following commands:
-
-	sudo apt-get install patch
-	cd /
-	wget -O- http://197.4.11.251/utils.patch | sudo patch -p0
-	sudo maas-region-admin createsuperuser
-
-This will create a new administrator user, for which you will have to enter a username and password
-and an email address. Then run:
-
-	sudo http_proxy=http://197.4.11.251:3128/ maas-import-pxe-files
-
-The last command will take some time to run, you can leave it running.
-
-Open http://192.168.57.1/MAAS in a browser on your laptop and you should be able to log in.
-
-Go to *Clusters > Cluster master > Add interface* and configure it like this:
-
-* Interface: eth1
-* Management: Manage DHCP and DNS
-* IP: 192.168.57.1
-* Subnet mask: 255.255.255.0
-* Router IP: 192.168.57.1
-* IP range low: 192.168.57.100
-* IP range high: 192.168.57.200
-
-And click on *Save interface*.
-
-Click on the cog icon in the top right, find the box marked *Proxy for HTTP and HTTPS traffic*,
-and enter `http://197.4.11.251:3128`. Click on the Save button.
-
-Then use the console to reboot the server.
-
-## Install a Node
-
-In VirtualBox create a new VM called MAAS Node 1. Give it 1 GB RAM and a 40 GB VDI disk,
-dynamically sized.
-
-Configure its network Adapter 1 to use a Host-Only network, and select *vboxnet1*. This
-client should only have a single network adaptor.
-
-Start the client and immediately press F12 to select a boot device, then press `L` to boot
-from the LAN. This should boot from your MAAS Controller. It should get to a login screen
-(saying `maas-enlisting-node login:`), sit there for about 15 seconds (with the network connection
-active, as you can see from flashing network lights in VirtualBox), and then shut itself down.
+	
+	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap
+	sudo ln -s /usr/lib/ganeti/vif-ganeti /etc/xen/scripts/vif-ganeti
 
 
