@@ -24,7 +24,7 @@ h3 /* subheadings under introduction & management */
 	font-weight: bold;
 	background: #fee;
 }
-p, table, h3, ul, pre
+p, table, h3, ul, pre, blockquote
 {
 	margin-left: 5%;
 	margin-right: 5%;
