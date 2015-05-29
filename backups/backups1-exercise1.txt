@@ -272,3 +272,11 @@ or find more information at:
 
   http://duplicity.nongnu.org
 
+
+9. Exercise for the Student!
+
+Write a script which will back up the whole system, along the lines
+described above, and arrange for that script to be run automatically
+out of cron.
+
+
