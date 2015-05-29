@@ -1,0 +1,37 @@
+POSTFIX MAIL GATEWAY
+
+1. ===MX RECORDS==
+
+The mail filter for your domain should have an MX record with a lower priority number
+
+
+2. ===Configure Postfix====
+
+Edit Postfix main.cf
+
+	$sudo nano /etc/postfix/main.cf
+
+	##Match accordingly
+	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, , localhost
+
+
+	##Add at the end
+	transport_maps = hash:/etc/postfix/transport
+
+Save and Exit
+
+
+	$sudo nano /etc/postfix/transport
+	
+	##Add
+	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
+
+
+Save and Exit
+
+
+Run postmap
+
+	$sudo postmap
+	$sudo postfix reload
+
