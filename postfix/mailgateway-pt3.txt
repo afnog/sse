@@ -182,7 +182,7 @@ You should see something like this:
 	AND
 
 	Filename Checks: Windows/DOS Executable (1 eicar.com)
-		Other Checks: Found 1 problems
+	Other Checks: Found 1 problems
 	Virus and Content Scanning: Starting
 	./1/eicar.com: Eicar-Test-Signature FOUND
 
