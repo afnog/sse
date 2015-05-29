@@ -247,14 +247,18 @@ Then deploy the web interface:
 	cd ganeti_webmgr/ganeti_web/settings
 	sudo cp settings.py.dist ../settings.py
 
-Edit `settings.py` and find the database path (the 'NAME' line):
+Run this command to generate a new secret key:
 
-		# Or path to database file if using sqlite3.
-		'NAME': '/opt/ganeti_webmgr/ganeti.db',
+	openssl rand -base64 24
 
-Change the line to:
+Edit `settings.py` and find the SECRET_KEY line, uncomment it, and change it to
+include the key that you generated above, for example:
 
-	'NAME': '/var/lib/ganeti_webmgr/ganeti.db',
+	SECRET_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
+
+Set the WEB_MGR_API_KEY to the same value and uncomment it, for example:
+
+	WEB_MGR_API_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
 And then create the directory and set permissions:
 
