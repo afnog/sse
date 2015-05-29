@@ -1,0 +1,11 @@
+--- fabfile.py.orig	2015-05-29 15:50:27.784620719 +0100
++++ fabfile.py	2015-05-29 15:50:55.336620719 +0100
+@@ -193,7 +193,7 @@
+     """
+     Default to quiet install when env.verbose is false
+     """
+-    install_str = '%(virtualenv)s/bin/pip install '
++    install_str = '%(virtualenv)s/bin/pip install --proxy=http://197.4.11.251:3128 '
+     if not env.verbose:
+         install_str += '-q '
+ 
