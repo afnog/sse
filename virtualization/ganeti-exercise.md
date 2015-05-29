@@ -268,5 +268,27 @@ Save the file, and check the configuration for errors:
 	sudo -u www-data venv/bin/python manage.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
-by visiting http://192.168.56.10:8000.
+by visiting http://192.168.56.10:8000. You should get a white page with a login and password box,
+but no styling (colours, images, etc.)
+
+Create the file `/opt/ganeti_webmgr/mod_wsgi.py` with the following contents:
+
+	import os
+	import sys
+
+	path = '/opt/ganeti_webmgr'
+
+	# activate virtualenv
+	activate_this = '%s/venv/bin/activate_this.py' % path
+	execfile(activate_this, dict(__file__=activate_this))
+
+	# add project to path
+	if path not in sys.path:
+	    sys.path.append(path)
+
+	    # configure django environment
+	    os.environ['DJANGO_SETTINGS_MODULE'] = 'ganeti_webmgr.ganeti_web.settings'
+
+	    import django.core.handlers.wsgi
+	    application = django.core.handlers.wsgi.WSGIHandler()
 
