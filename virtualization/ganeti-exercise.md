@@ -262,5 +262,5 @@ Edit `config/config.yml` and add the following lines at the end:
 Save the file, and check the configuration for errors:
 
 	cd /opt/ganeti_webmgr
-	sudo -u www-data venv/bin/python -c "import ganeti_webmgr.ganeti_web.settings"
+	sudo -u www-data venv/bin/python manage.py syncdb --migrate
 
