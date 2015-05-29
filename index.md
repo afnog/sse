@@ -114,10 +114,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 #### [Chris Wilson](#CW)
 
 * [Survey link](https://www.surveymonkey.com/s/623JR5J) (online)
-<!--
-* [Survey results/HTML](https://www.surveymonkey.com/results/SM-8JH7M6Z/)
 * [Survey results/PDF](intro/closing-survey-results.pdf)
--->
 
 ### Configuration Management
 
