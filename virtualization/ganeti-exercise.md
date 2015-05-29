@@ -131,7 +131,7 @@ really be in the DNS as well, but for the purposes of this exercise
 
 Edit `/etc/default/grub` and add the following line:
 
-	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:256M,max:256M"
+	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:384M,max:384M"
 
 This restricts the master domain to 256 MB RAM, which will make it slow, but give us more RAM free
 for guests. In your own configurations you should probably allocate more RAM to the host (domain 0)!
