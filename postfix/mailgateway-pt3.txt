@@ -159,9 +159,10 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 You should make sure that MailScanner is working properly and can communicate with ClamAV and SpamAssassin.
 Do not run the following command from the root director (/root) as it will produce errors
 
-	$MailScanner --lint --debug
+	$sudo MailScanner --lint --debug
 	
-You should also run the 
+You should also run the SpamAssassin check
+	$sudo spamassassin -d --lint
 
 
 8. LOGIN TO MAILWATCH
