@@ -169,10 +169,12 @@ pre, .remark-code {
 	background: #ddd;
 }
 blockquote {
-	background: #fee;
 	padding: 0 1em;
-	border: 0.2em solid #fdd;
 }
 blockquote > p {
 	margin: 1em 0;
+}
+.warning {
+	background: #ffe;
+	border: 0.2em solid #ffd;
 }
