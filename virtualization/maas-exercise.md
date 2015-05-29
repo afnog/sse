@@ -121,7 +121,7 @@ Go to *Clusters > Cluster master > Add interface* and configure it like this:
 And click on *Save interface*.
 
 Click on the cog icon in the top right, find the box marked *Proxy for HTTP and HTTPS traffic*,
-and enter `http://197.4.11.251:3128`.
+and enter `http://197.4.11.251:3128`. Click on the Save button.
 
 Then use the console to reboot the server.
 
