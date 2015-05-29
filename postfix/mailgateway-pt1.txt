@@ -1,46 +1,48 @@
 
-==How to Install MailScanner and Mailwatch==
-===========================================
+=====How to Install MailScanner and Mailwatch====
+================================================
 
-DISCLAIMER: 
-==========
+	DISCLAIMER: 
+========================
 
 SETTING UP A PROPER AND SECURE EMAIL FILTER TAKES A LONG TIME AND MUCH OF THE SETUP FOR THE CLASS HAS BEEN PRE-CONFIGURED FOR THE SAKE OF TIME. 
 
-THE INSTRUCTIONS FOR THIS COURSE HAVE BEEN HIGHLU SIMPLIFIED AND YOU SHOULD TAKE TIME TO READ MORE ABOUT POSTFIX, MAILSCANNER, SPAMASSASIN, CLAM ANTIVIRUS AND MAILWATCH BEFORE DEPLOYING A SERVER IN THE REAL WORLD
+THE CONFIGURATIONS FOR THIS COURSE HAVE BEEN HIGHLY SIMPLIFIED AND YOU SHOULD TAKE TIME TO READ MORE ABOUT POSTFIX, MAILSCANNER, SPAMASSASIN, CLAM ANTIVIRUS AND MAILWATCH BEFORE DEPLOYING A SERVER IN THE REAL WORLD. 
 
-LINKS TO DOWNLOAD MAILSCANNER AND MAILWATCH ARE:
+LINKS TO THE INDIVIDUAL SOFTWARES:
 
 MailScanner: 	http://www.mailscanner.info
 MailWatch:	http://mailwatch.org
 SpamAssassin:	http://spamassassin.apache.org/
 ClamAv:		http://www.clamav.net/index.html
-Postfix:	
+Postfix:	http://www.postfix.org/
 
 
 
+IF YOU WANT TO SET UP A SIMILAR MAIL FILTER FOR YOUR NETWORK THEN YOU SHOULD CREATE A TEST DOMAIN TO RECEIVE EMAILS BEFORE DIRECTING YOUR EMAILS VIA THE FILTER OTHERWISE YOU MAY LOSE EMAILS. 
 
-IF YOU WANT TO SET UP ONE FOR YOUR NETWORK THEN YOU SHOULD CREATE A TEST DOMAIN TO RECEIVE EMAILS BEFORE DIRECTING YOUR EMAILS VIA THE FILTER OTHERWISE YOU MAY LOSE EMAILS.
+THE FOLLOWING INSTRUCTIONS ASSUME THAT YOU HAVE WORKING MX RECORDS
 
 
 
 
 === Install The Tools:=
+=======================
 
-
-$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget
+	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget
 
 
 YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
 
 ===2. Get Mailscanner====
+========================
 
-$cd /home/afnog
-$wget http://197.4.11.139/MailScanner-4.85.2-3.deb.tar.gz
-$tar -xzf MailScanner-4.85.2-3.deb.tar.gz
-$cd MailScanner-4.85.2-3
-$sudo ./install.sh
+	$cd /home/afnog
+	$wget http://197.4.11.139/MailScanner-4.85.2-3.deb.tar.gz
+	$tar -xzf MailScanner-4.85.2-3.deb.tar.gz
+	$cd MailScanner-4.85.2-3
+	$sudo ./install.sh
 
 
 =3. Go to the mailfilter-pt2 on the wiki=
-
+========================================
