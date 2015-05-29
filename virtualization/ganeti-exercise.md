@@ -269,7 +269,7 @@ Save the file, and check the configuration for errors:
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
 by visiting http://192.168.56.10:8000. You should get a white page with a login and password box,
-but no styling (colours, images, etc.)
+but no styling (colours, images, etc.) If not, check the console output for error messages.
 
 Create the file `/opt/ganeti_webmgr/wsgi.py` with the following contents:
 
@@ -325,3 +325,15 @@ Create the file `/etc/apache2/sites-enabled/ganeti.conf` with the following cont
 			Require all granted
 		</Location>
 	</VirtualHost>
+
+Now you should be able to access http://192.168.56.10/ (without the :8000 port specification)
+and see the login page with graphics:
+
+![Ganeti Login Screen](ganeti-login.png)
+
+Log in using the superuser account that you created during the `syncdb` command, or run this
+command to create a new one:
+
+	sudo -u www-data venv/bin/python manage.py createsuperuser
+
+
