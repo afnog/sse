@@ -232,9 +232,14 @@ Then run the following commands to install it:
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
-	sudo chown -R www-data /opt/ganeti_webmgr
 	cd /opt/ganeti_webmgr
-	sudo mv requirements/production.txt requirements/prod.txt
+	mv requirements/production.txt requirements/prod.txt
+	mv ganeti_webmgr/manage.py .
+	mkdir config
+	cp ganeti_webmgr/ganeti_web/settings/config.yml.dist config/config.yml
+	cd ganeti_webmgr/ganeti_web/settings
+	cp settings.py.dist ../settings.py
+	sudo chown -R www-data /opt/ganeti_webmgr
 
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
 be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
@@ -244,21 +249,15 @@ be done at an AfNOG workshop, or an environment where you are forced to use a pr
 Then deploy the web interface:
 
 	sudo -i sh -c 'cd /opt/ganeti_webmgr; fab deploy'
-	cd ganeti_webmgr/ganeti_web/settings
-	sudo cp settings.py.dist ../settings.py
 
 Run this command to generate a new secret key:
 
 	openssl rand -base64 24
 
-Edit `settings.py` and find the SECRET_KEY line, uncomment it, and change it to
-include the key that you generated above, for example:
+Edit `config/config.yml` and add the following lines at the end:
 
-	SECRET_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
-
-Set the WEB_MGR_API_KEY to the same value and uncomment it, for example:
-
-	WEB_MGR_API_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
+	SECRET_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
+	WEB_MGR_API_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
 Save the file, and check the configuration for errors:
 
