@@ -220,3 +220,12 @@ Run the `burnin` test to make sure that everything is working properly:
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
+### Install the Web Manager
+
+Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.9.2. We have a local copy which you can download here:
+
+	wget http://197.4.11.251/ganeti-webmgr-0.9.2.tar.gz
+
+
+
+
