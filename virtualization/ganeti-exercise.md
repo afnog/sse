@@ -232,7 +232,6 @@ Insert them both into `/var/lib/ganeti/rapi/user`, prefixing the password hash w
 
 	jack	{ha1}5ede44dba4dd4e9ce3909246515b2cdc
 
-
 ### Install the Web Manager
 
 Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
