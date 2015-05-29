@@ -229,10 +229,10 @@ Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/fil
 Then run the following commands to install it:
 
 	sudo apt-get install fabric python-virtualenv python-dev libffi-dev patch
-	sudo mkdir -p /var/www
+	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
-	sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
-	cd /var/www/ganeti
+	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
+	cd /opt/ganeti_webmgr
 	sudo mv requirements/production.txt requirements/prod.txt
 
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
