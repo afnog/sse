@@ -228,9 +228,10 @@ generate a hash using `echo` and `openssl md5` like this:
 	$ echo -n 'jack:Ganeti Remote API:mypassword' | openssl md5
 	(stdin)= 5ede44dba4dd4e9ce3909246515b2cdc
 
-Insert them both into `/var/lib/ganeti/rapi/user`, prefixing the password hash with `{ha1}`:
+Insert them both into `/var/lib/ganeti/rapi/user`, prefixing the password hash
+with `{ha1}`, and giving this user `write` permissions:
 
-	jack	{ha1}5ede44dba4dd4e9ce3909246515b2cdc
+	jack	{ha1}5ede44dba4dd4e9ce3909246515b2cdc	write
 
 ### Install the Web Manager
 
