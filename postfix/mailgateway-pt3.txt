@@ -174,7 +174,15 @@ Do not run the following command from the root director (/root) as it will produ
 
 You should see something like this:
 
+	Checking for SpamAssassin errors (if you use it)...
+	Using SpamAssassin results cache
+	Connected to SpamAssassin cache database
 
+
+	AND
+
+
+	
 
 8. LOGIN TO MAILWATCH
 ====================
