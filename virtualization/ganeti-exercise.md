@@ -84,6 +84,9 @@ impossible for you to install any packages.  Of course, if you are not at the
 AfNOG workshop then this server will no longer exist, so use a local proxy
 server or leave it blank.
 
+While the installation proceeds, familiarise yourself with the terminology of
+[Ganeti](http://docs.ganeti.org/ganeti/2.13/html/admin.html).
+
 ### Network Re-Configuration
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
