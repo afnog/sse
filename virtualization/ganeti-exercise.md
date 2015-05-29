@@ -201,5 +201,12 @@ Check that the `gnt-node list` command shows your node:
 >
 > and check that the `gnt-node list` now shows the correct information for your node.
 
+You should also make sure that the `MFree` column shows at least 1 GB free (not
+126 MB as in the example output above). This ensures that there is enough RAM
+free in the hypervisor to create new guests. Otherwise you won't be able to do
+much with your new hypervisor. If it doesn't show enough free RAM, check that
+you have [reconfigured GRUB and run
+`update-grub`](http://askubuntu.com/a/191489/49566).
+
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
