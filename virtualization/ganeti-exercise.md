@@ -56,6 +56,10 @@ Start the VM and attach the Ubuntu 14.04 Server 64-bit CD. Read the following se
 **before** you start the installation, and use them at the appropriate times during the
 installation.
 
+### Hostname
+
+You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.org`.
+
 ### Partitioning
 
 The server should use LVM for disk space, so instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI3*, then:
