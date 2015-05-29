@@ -115,7 +115,7 @@ $ sudo nano /etc/apache2/sites-available/default-ssl.conf
 
 3.2.4 Enable the SSL on the specific site - note the "sitename" in the syntax below is the filename of the site to be activated - in this case 'default-ssl'
 
-	$ sudo a2ensite sitename
+	$ sudo a2ensite default-ssl
 
 Restart apache to reflect the changes
 
