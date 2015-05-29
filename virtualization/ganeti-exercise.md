@@ -234,6 +234,7 @@ Then run the following commands to install it:
 	sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
 	cd /var/www/ganeti
 	sudo mv requirements/production.txt requirements/prod.txt
+	wget http://197.4.11.251/ganeti.patch | sudo patch -p0
 	sudo http_proxy=http://197.4.11.251:3128/ fab deploy
 	sudo pip install -r requirements/prod.txt --proxy=http://197.4.11.251:3128/
 
