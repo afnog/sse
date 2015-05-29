@@ -32,6 +32,7 @@ Save and Exit
 
 Run postmap
 
-	$sudo postmap
+	$cd /etc/postfix
+	$sudo postmap transport
 	$sudo postfix reload
 
