@@ -194,6 +194,7 @@ Goal: to understand the contents and layering of common Internet protocols
 #### [Chris Wilson](#CW)
 
 * MAAS Presentation: to be written
+* [MAAS reference](https://williamlsd.wordpress.com/2014/04/26/installing-local-cloud-infrastructure-using-ubuntu-14-04-lts-maas/)
 * [MAAS Exercise](virtualization/maas-exercise.html)
 
 ### Monitoring
