@@ -132,9 +132,13 @@ really be in the DNS as well, but for the purposes of this exercise
 Then `reboot` the host, log in again and run the following commands:
 
 	sudo apt-get dist-upgrade	
-	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap
+	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap xen-hypervisor-amd64
 
-Start following the [Ganeti installation tutorial¶](http://docs.ganeti.org/ganeti/2.13/html/install.html),
+Edit `/etc/xen/xend-config.sxp` and change the following setting:
+
+	(enable-dom0-ballooning no)
+
+Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.13/html/install.html),
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
