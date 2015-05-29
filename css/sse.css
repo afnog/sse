@@ -171,3 +171,6 @@ pre, .remark-code {
 blockquote {
 	background: #fee;
 }
+blockquote > p {
+	margin: 1em 0;
+}
