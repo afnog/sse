@@ -228,10 +228,11 @@ Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/fil
 
 Then run the following commands to install it:
 
-	sudo apt-get install fabric python-virtualenv python-dev libffi-dev patch
+	sudo apt-get install fabric python-virtualenv python-dev libffi-dev libssl-dev patch
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
+	sudo chown -R www-data /opt/ganeti_webmgr
 	cd /opt/ganeti_webmgr
 	sudo mv requirements/production.txt requirements/prod.txt
 
@@ -242,26 +243,22 @@ be done at an AfNOG workshop, or an environment where you are forced to use a pr
 
 Then deploy the web interface:
 
-	sudo fab deploy
+	sudo -i sh -c 'cd /opt/ganeti_webmgr; fab deploy'
 	cd ganeti_webmgr/ganeti_web/settings
 	sudo cp settings.py.dist ../settings.py
 
-Edit `settings.py` and find the database path (the 'NAME' line):
+Run this command to generate a new secret key:
 
-	DATABASES = {
-	    'default': {
-		# Add 'postgresql_psycopg2', 'postgresql', 'mysql',
-		# 'sqlite3' or 'oracle'.
-		'ENGINE': 'django.db.backends.sqlite3',
+	openssl rand -base64 24
 
-		# Or path to database file if using sqlite3.
-		'NAME': '/opt/ganeti_webmgr/ganeti.db',
+Edit `settings.py` and find the SECRET_KEY line, uncomment it, and change it to
+include the key that you generated above, for example:
 
-Change the line to:
+	SECRET_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
-	'NAME': '/var/lib/ganeti_webmgr/ganeti.db',
+Set the WEB_MGR_API_KEY to the same value and uncomment it, for example:
+
+	WEB_MGR_API_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
 And then create the directory and set permissions:
 
-	sudo mkdir /var/lib/ganeti_webmgr
-	sudo chown www-data /var/lib/ganeti_webmgr
