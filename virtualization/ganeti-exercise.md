@@ -232,6 +232,7 @@ Then run the following commands to install it:
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
+	sudo chown -R www-data /opt/ganeti_webmgr
 	cd /opt/ganeti_webmgr
 	sudo mv requirements/production.txt requirements/prod.txt
 
@@ -242,17 +243,11 @@ be done at an AfNOG workshop, or an environment where you are forced to use a pr
 
 Then deploy the web interface:
 
-	sudo fab deploy
+	sudo -i sh -c 'cd /opt/ganeti_webmgr; fab deploy'
 	cd ganeti_webmgr/ganeti_web/settings
 	sudo cp settings.py.dist ../settings.py
 
 Edit `settings.py` and find the database path (the 'NAME' line):
-
-	DATABASES = {
-	    'default': {
-		# Add 'postgresql_psycopg2', 'postgresql', 'mysql',
-		# 'sqlite3' or 'oracle'.
-		'ENGINE': 'django.db.backends.sqlite3',
 
 		# Or path to database file if using sqlite3.
 		'NAME': '/opt/ganeti_webmgr/ganeti.db',
@@ -263,5 +258,3 @@ Change the line to:
 
 And then create the directory and set permissions:
 
-	sudo mkdir /var/lib/ganeti_webmgr
-	sudo chown www-data /var/lib/ganeti_webmgr
