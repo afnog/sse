@@ -117,6 +117,10 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 Then `reboot` the host, log in again and run the following commands:
 	
 	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap
-	sudo ln -s /usr/lib/ganeti/vif-ganeti /etc/xen/scripts/vif-ganeti
 
+Start following the [Ganeti installation tutorial¶](http://docs.ganeti.org/ganeti/2.13/html/install.html),
+skipping the following sections:
+
+* Anything to do with KVM (we're using Xen instead)
+* Installing RBD: skip to [Installing Gluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#installing-gluster) instead.
 
