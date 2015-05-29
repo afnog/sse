@@ -167,9 +167,26 @@ Check that the `gnt-node list` command shows your node:
 
 	$ sudo gnt-node list
 	Node                     DTotal DFree MTotal MNode MFree Pinst Sinst
-	ganeti1.sse.ws.afnog.org      ?     ?      ?     ?     ?     0     0
+	ganeti1.sse.ws.afnog.org  40.0G 28.8G   2.0G  1.9G  126M     0     0
 
-
+> **Warning:** If you see question marks in all the columns after the node name, like this:
+>
+>	$ sudo gnt-node list
+>	Node                     DTotal DFree MTotal MNode MFree Pinst Sinst
+>	ganeti1.sse.ws.afnog.org      ?     ?      ?     ?     ?     0     0
+>
+> that means that Ganeti cannot retrieve information about your node. Check the node daemon logfile
+> `/var/log/ganeti/node-daemon.log` for possible error messages. For example, if you find this error:
+>
+>	ERROR Can't retrieve xen hypervisor information (exited with exit code 1): ERROR:  A different toolstack (xl) have been selected!
+>
+> that means that Ganeti is trying to use the old `xm` command to get information, instead of the new `xl` command,
+> and not getting any information. You probably forgot to add the option `-H xen-pvm:xen_cmd=xl` when you created
+> the cluster. You can fix it by modifying the cluster settings on the node:
+>
+>	$ sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
+>
+> and check that the `gnt-node list` now shows the correct information for your node.
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
