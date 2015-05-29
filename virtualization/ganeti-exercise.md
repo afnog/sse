@@ -84,7 +84,7 @@ impossible for you to install any packages.  Of course, if you are not at the
 AfNOG workshop then this server will no longer exist, so use a local proxy
 server or leave it blank.
 
-### After Installation
+### Network Re-Configuration
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
 
@@ -113,6 +113,8 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 		bridge_ports eth1
 		bridge_stp off
 		bridge_fd 0
+
+Also edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
 
 Then `reboot` the host, log in again and run the following commands:
 	
