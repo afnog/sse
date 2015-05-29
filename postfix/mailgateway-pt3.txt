@@ -153,7 +153,7 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 
 
 
-8. ALWAYS CHECK MAIL LOGS
+7. ALWAYS CHECK LOGS
 =======================
 
 You should make sure that MailScanner is working properly and can communicate with ClamAV and SpamAssassin.
@@ -161,10 +161,10 @@ Do not run the following command from the root director (/root) as it will produ
 
 	$MailScanner --lint --debug
 	
+You should also run the 
 
 
-
-7. LOGIN TO MAILWATCH
+8. LOGIN TO MAILWATCH
 ====================
 
 Username is “mailwatch” password is “afnog”
