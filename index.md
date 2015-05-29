@@ -72,7 +72,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Spam Filtering][]	|[Backups[]
 |-
 |Lunch
-|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[MAAS][]		|
+|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[MAAS][]		|[Ganeti][]
 |-
 |Tea break
 |16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[MAAS][]		|[Expert Panel][] and [Closing Survey][]
@@ -179,7 +179,6 @@ Goal: To understand firewalls and how the Linux iptables (netfilter) firewall wo
 
 * Ganeti Presentation: to be written
 * [Ganeti Exercise](virtualization/ganeti-exercise.html)
-
 
 ### Internet Protocols
 
