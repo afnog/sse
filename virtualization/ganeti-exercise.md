@@ -344,4 +344,7 @@ Enter the following details:
 * Port: 5080
 * Description: My Cluster
 
-Leave the other details blank, and click *Add*.
+Leave the other details blank, and click *Add*. Your new cluster should then
+appear with its specifications:
+
+
