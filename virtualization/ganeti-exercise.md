@@ -220,6 +220,19 @@ Run the `burnin` test to make sure that everything is working properly:
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
+### Enable Remote API
+
+Choose a username and password for your remote account (`jack` and `mypassword` in this case) and
+generate a hash using `echo` and `openssl md5` like this:
+
+	$ echo -n 'jack:Ganeti Remote API:mypassword' | openssl md5
+	(stdin)= 5ede44dba4dd4e9ce3909246515b2cdc
+
+Insert them both into `/var/lib/ganeti/rapi/user`, prefixing the password hash with `{ha1}`:
+
+	jack	{ha1}5ede44dba4dd4e9ce3909246515b2cdc
+
+
 ### Install the Web Manager
 
 Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
