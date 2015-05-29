@@ -4,7 +4,7 @@
 
 1. Setup MailWatch
 ==================
-Copy preconfigured files from the instructor’s server
+Copy preconfigured files for Mailwatch from the instructor’s server. The only changes made to these files was to add the MySQL username and password to allow MailWatch to connect to the database.
 
 	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/MailScanner/CustomFunctions/
 
@@ -242,7 +242,7 @@ Username is “mailwatch” password is “afnog”
 
 Please note that Chrome may not be able to login so try another browser if that is the case.
 
-	http://pcX.sse.ws.afnog.org/mailwatch
+	https://pcX.sse.ws.afnog.org/mailwatch
 
 
 
