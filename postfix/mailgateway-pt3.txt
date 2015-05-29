@@ -160,7 +160,7 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 You should also run the SpamAssassin check. Look for errors and fix (if any). It may require you to install a few more 
 	$sudo spamassassin -D --lint
 
-You should get similar output at the very end
+You should get similar output at the very end.
 
 	dbg: check: subtests=__BODY_TEXT_LINE,__EMPTY_BODY,__GATED_THROUGH_RCVD_REMOVER,__HAS_FROM,__HAS_MESSAGE_ID,__HAS_MSGID,__HAS_SUBJECT,__KHOP_NO_FULL_NAME,__MISSING_REF,__MISSING_REPLY,__MSGID_OK_DIGITS,__MSGID_OK_HOST,__MSOE_MID_WRONG_CASE,__NONEMPTY_BODY,__NOT_SPOOFED,__SANE_MSGID,__TO_NO_ARROWS_R,__UNUSABLE_MSGID
 May 29 12:14:46.384 [12173] dbg: timing: total 1061 ms - init: 798 (75.2%), parse: 0.55 (0.1%), extract_message_metadata: 1.14 (0.1%), get_uri_detail_list: 0.58 (0.1%), tests_pri_-1000: 5 (0.5%), compile_gen: 117 (11.0%), compile_eval: 16 (1.5%), tests_pri_-950: 3.7 (0.4%), tests_pri_-900: 4.0 (0.4%), tests_pri_-400: 3.5 (0.3%), tests_pri_0: 197 (18.5%), tests_pri_500: 45 (4.3%)
@@ -180,6 +180,29 @@ You should see something like this:
 
 
 	AND
+
+	Filename Checks: Windows/DOS Executable (1 eicar.com)
+		Other Checks: Found 1 problems
+	Virus and Content Scanning: Starting
+	./1/eicar.com: Eicar-Test-Signature FOUND
+
+	Virus Scanning: ClamAV found 2 infections
+	Infected message 1 came from 10.1.1.1
+	Virus Scanning: Found 2 viruses
+	===========================================================================
+	Virus Scanner test reports:
+	ClamAV said "eicar.com contains Eicar-Test-Signature"
+
+
+
+If all is well then restart everything:
+
+	$sudo service postfix restart && sudo service apache2 restart && sudo service mailscanner restart
+
+And check the log
+
+
+	$sudo tail -f /var/log/mail.log
 
 
 	
