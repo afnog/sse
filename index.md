@@ -78,7 +78,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[MAAS][]		|Expert Panel and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[User Databases][]	|[DNSSEC][] and [EduRoam][]	|Closed |Closing Ceremony
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|User Databases	|[DNSSEC][] and [EduRoam][]	|Closed |Closing Ceremony
 {: .timetable width="80%"}
 
 [EduRoam]: "http://www.ws.afnog.org/tutorials/eduroam/index.html"
