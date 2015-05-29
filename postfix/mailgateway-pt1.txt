@@ -1,0 +1,26 @@
+
+==How to Install MailScanner and Mailwatch==
+
+
+DISCLAIMER: SETTING UP AN EMAIL FILTER TAKES A LONG TIME AND MUCH OF THE SETUP FOR THE CLASS
+
+
+=1.  install the tools:=
+
+
+$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget
+
+
+YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afgog
+
+=2. Get Mailscanner=
+
+$cd /home/afnog
+$wget http://197.4.11.139/MailScanner-4.85.2-3.deb.tar.gz
+$tar -xzf MailScanner-4.85.2-3.deb.tar.gz
+$cd MailScanner-4.85.2-3
+$sudo ./install.sh
+
+
+=3. Go to the mailfilter-pt2 on the wiki=
+
