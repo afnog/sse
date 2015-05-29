@@ -222,9 +222,9 @@ Continue following the installation instructions from [Testing the setup](http:/
 
 ### Install the Web Manager
 
-Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.9.2. We have a local copy which you can download here:
+Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
 
-	wget http://197.4.11.251/ganeti-webmgr-0.9.2.tar.gz
+	wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
 
 
 
