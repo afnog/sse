@@ -234,6 +234,13 @@ Then run the following commands to install it:
 	sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
 	cd /var/www/ganeti
 	sudo mv requirements/production.txt requirements/prod.txt
+
+Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
+be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
+
 	wget http://197.4.11.251/ganeti.patch | sudo patch -p0
+
+Then deploy the web interface:
+
 	sudo fab deploy
 
