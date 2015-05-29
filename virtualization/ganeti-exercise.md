@@ -244,7 +244,7 @@ Then deploy the web interface:
 
 	sudo fab deploy
 	cd ganeti_webmgr/ganeti_web/settings
-	sudo cp settings.py.dist settings.py
+	sudo cp settings.py.dist ../settings.py
 
 Edit `settings.py` and find the database path (the 'NAME' line):
 
