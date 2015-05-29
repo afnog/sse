@@ -75,7 +75,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[MAAS][]		|[Ganeti][]
 |-
 |Tea break
-|16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[MAAS][]		|[Expert Panel][] and [Closing Survey][]
+|16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[MAAS][]		|Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|[User Databases][]	|[DNSSEC][] and [EduRoam][]	|Closed |Closing Ceremony
