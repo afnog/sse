@@ -2,8 +2,9 @@
 =====How to Install MailScanner and Mailwatch====
 ================================================
 
-	DISCLAIMER: 
-========================
+
+!!!!!!!DISCLAIMER!!!!! 
+=======================-===
 
 SETTING UP A PROPER AND SECURE EMAIL FILTER TAKES A LONG TIME AND MUCH OF THE SETUP FOR THE CLASS HAS BEEN PRE-CONFIGURED FOR THE SAKE OF TIME. 
 
@@ -17,7 +18,7 @@ SpamAssassin:	http://spamassassin.apache.org/
 ClamAv:		http://www.clamav.net/index.html
 Postfix:	http://www.postfix.org/
 
-
+ALSO, YOU MUST REGULARLY UPDATE ALL SOFTWARES TO RECEIVE NEW PATCHES AND SECURITY UPDATES!!
 
 IF YOU WANT TO SET UP A SIMILAR MAIL FILTER FOR YOUR NETWORK THEN YOU SHOULD CREATE A TEST DOMAIN TO RECEIVE EMAILS BEFORE DIRECTING YOUR EMAILS VIA THE FILTER OTHERWISE YOU MAY LOSE EMAILS. 
 
