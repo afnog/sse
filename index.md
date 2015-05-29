@@ -188,6 +188,14 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
+### MAAS
+[MAAS]: #maas
+
+#### [Chris Wilson](#CW)
+
+* MAAS Presentation: to be written
+* [MAAS Exercise](virtualization/maas-exercise.html)
+
 ### Monitoring
 [Monitoring]: #monitoring
 
@@ -278,7 +286,6 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Intro Presentation (PDF)](virtualization/sse-virtualization-overview-2013_150527.pdf)
 * [KVM Presentation (OpenOffice Impress)](virtualization/afnog_2015_virtualization_kvm_cw.odp)
 * [KVM Presentation (PDF)](virtualization/afnog_2015_virtualization_kvm_cw_150527.pdf)
-* [MAAS Exercise](virtualization/maas-exercise.html)
 
 </div><!-- .topics -->
 
