@@ -215,8 +215,8 @@ Goal: to understand the contents and layering of common Internet protocols
 #### [Kevin Chege](#KC)
 
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
-* [Nagios Exercise-1](nagios/nagios-exercise1.rtf)
-* [Nagios Exercise-2](nagios/nagios-exercise2.rtf)
+* [Nagios Exercise-1](nagios/nagios-exercise1.txt)
+
 
 ### IMAP and Webmail
 [IMAP and Webmail]: #imap-and-webmail
@@ -277,18 +277,16 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Email Overview](postfix/01_email_preso.pdf)
 * [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
+
+
+##### Spam Filtering
+[Spam Filtering]: #spam-filtering
+
 * [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
 * [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
 * [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
 * [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
 * [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
-
-+ FreeBSD 10 Setup
-* [Postfix Setup](postfix/postfix-setup.txt)
-* [Dovecot Setup](postfix/dovecot-setup.txt)
-
-##### Spam Filtering
-[Spam Filtering]: #spam-filtering
 
 ### Virtualization
 [Virtualization]: #virtualization
