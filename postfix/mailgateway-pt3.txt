@@ -182,7 +182,7 @@ You should see something like this:
 	AND
 
 	Filename Checks: Windows/DOS Executable (1 eicar.com)
-		Other Checks: Found 1 problems
+	Other Checks: Found 1 problems
 	Virus and Content Scanning: Starting
 	./1/eicar.com: Eicar-Test-Signature FOUND
 
@@ -223,6 +223,16 @@ You should get similar output
 
 Test that port 25 is open and that Postfix is listening
 	$sudo telnet localhost 25
+
+
+	afnog@pc39:/etc/spamassassin$ sudo telnet localhost 25
+	Trying ::1...
+	Connected to localhost.
+	Escape character is '^]'.
+	220 pc39.sse.ws.afnog.org ESMTP Postfix (Debian/GNU)
+
+Type quit to exit
+
 
 
 8. LOGIN TO MAILWATCH
