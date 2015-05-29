@@ -57,9 +57,24 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 <!-- sorted by surname -->
 
-|First Names     |Surname        |Organisation         |Country
-|:-              |:-             |:-                   |:-
-|Alfred          |Arouna         |Isocel Telecom       |Benin
+|First Names	|Surname	|Organisation				|Country
+|:-             |:-             |:-                     		|:-
+|Amel		|HAMIMY (Ms)    |SudREN					|Sudan
+|Salma		|BASHIR		|SudREN					|Nigeria
+|Adefolarin	|BOLAHI		|Adeleke University			|Nigeria
+|Patrick	|KIREMBU	|Angani Limited				|Uganda
+|Brian		|MASIGA		|Research Education Network For Uganda	|Uganda
+|Robert		|LUBANGA	|UCU					|Uganda
+|Cedrick Adrien	|MBEYET		|AFRINIC				|Mauritius
+|Baraka		|CHUMA		|Ruaha University College		|Nigeria
+|GABRIEL	|AWOFADEJU	|UNIVERSITY OF IBADAN			|Nigeria
+|Yankuba	|JAITEH		|GAMTEL					|Ghana
+|Mary		|JONAH		|Ghana Dot Com				|NIGERIA
+|Oluwafemi	|FOLARIN	|ANDMARK UNIVERSITY 			|Nigeria
+|Sunday		|OYEBAMIJI	|UNIVERSITY OF IBADAN			|Nigeria
+|Caleb		|OGUNDELE	|DLC University of Ibadan		|Nigeria
+|Timothy	|AKINFENWA	|Osun State University Osogbo		|Nigeria	
+|Serge		|Roland		|SANOU,	ARCEP				|Burkina Faso
 
 ### Timetable
 
