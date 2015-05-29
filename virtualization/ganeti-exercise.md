@@ -126,5 +126,5 @@ skipping the following sections:
 * KVM userspace access
 * Configuring the network
 * Configuring LVM
-* Installing Ganeti: skip to [Installing the OS support packages](http://docs.ganeti.org/ganeti/2.13/html/install.html#id27)
+* Installing Ganeti: skip to [Initializing the Cluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#initializing-the-cluster)
 
