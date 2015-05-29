@@ -67,7 +67,7 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 * Select *pri/log free space*, *Create a new partition*, 40 GB, *Primary*, *Beginning*, *Done*.
 * Select the new partition, choose *Use as > Physical volume for LVM*.
 * Select *Configure LVM volumes*
-* Enter a name for the new main volume group, for example `Disk1`.
+* Enter a name for the new main volume group, for example `xenvg`.
 * Create a logical volume of 8 GB, *Name > Root, Use as > ext4 filesystem, Mount point > / (root)*.
 * Create a logical volume of 4 GB, *Name > Swap, Use as > swap*.
 * Leave the rest of the volume group as unallocated free space.
@@ -106,8 +106,8 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 	auto eth1
 	iface eth1 inet manual
 
-	auto xenbr0
-	iface xenbr0 inet static
+	auto xen-br0
+	iface xen-br0 inet static
 		address 192.168.56.10
 		netmask 255.255.255.0
 		bridge_ports eth1
