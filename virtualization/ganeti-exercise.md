@@ -243,4 +243,20 @@ be done at an AfNOG workshop, or an environment where you are forced to use a pr
 Then deploy the web interface:
 
 	sudo fab deploy
+	cd ganeti_webmgr/ganeti_web/settings
+	sudo cp settings.py.dist settings.py
 
+Edit `settings.py` and find the database path (the 'NAME' line):
+
+	DATABASES = {
+	    'default': {
+		# Add 'postgresql_psycopg2', 'postgresql', 'mysql',
+		# 'sqlite3' or 'oracle'.
+		'ENGINE': 'django.db.backends.sqlite3',
+
+		# Or path to database file if using sqlite3.
+		'NAME': '/opt/ganeti_webmgr/ganeti.db',
+
+Change the line to:
+
+	'NAME': '/var/lib/ganeti/ganeti_webmgr.db',
