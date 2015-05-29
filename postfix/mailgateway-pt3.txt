@@ -137,13 +137,18 @@ Add the following exactly as it is IN ONE LINE:
 
 THEN
 
-Login as the Mailwatch user using the credentials used in the Mysql entry above. We will set the username and password to be used to login to the MailWatch web interface. Typically this should be a strong alphanumeric password or passphrase. We will use afnog:
+Login as the Mailwatch user using the credentials used in the Mysql entry above. We will set the username and password to be used to login to the MailWatch web interface. Typically this should be a strong alphanumeric password or passphrase. We will use afnog for this class however:
 
 	$mysql mailscanner -u mailwatch –p
 
 	INSERT INTO users SET username = ‘mailwatch’, password = MD5(‘afnog’), fullname = ’mailadmin’, type = ‘A’;
 	exit
 
+
+Finally, set the rights to the images directory 
+
+	$sudo chown -R root:www-data images/
+	
 
 
 6. START everything
