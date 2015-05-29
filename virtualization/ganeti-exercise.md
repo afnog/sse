@@ -271,7 +271,7 @@ This will start the debugging webserver on port 8000, so you can check that ever
 by visiting http://192.168.56.10:8000. You should get a white page with a login and password box,
 but no styling (colours, images, etc.)
 
-Create the file `/opt/ganeti_webmgr/mod_wsgi.py` with the following contents:
+Create the file `/opt/ganeti_webmgr/wsgi.py` with the following contents:
 
 	import os
 	import sys
