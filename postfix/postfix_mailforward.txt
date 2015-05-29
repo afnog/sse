@@ -1,4 +1,5 @@
 POSTFIX MAIL GATEWAY
+===================
 
 1. ===MX RECORDS==
 
@@ -24,7 +25,7 @@ Save and Exit
 
 	$sudo nano /etc/postfix/transport
 	
-	##Add your nigh
+	##Add your neighbor
 	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
 
 
