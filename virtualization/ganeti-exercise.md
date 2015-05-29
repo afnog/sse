@@ -235,7 +235,9 @@ with `{ha1}`, and giving this user `write` permissions:
 
 ### Install the Web Manager
 
-Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
+Download the [latest
+release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
+0.11.0. We have a local copy which you can download here:
 
 	wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
 
