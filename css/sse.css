@@ -168,3 +168,6 @@ pre, .remark-code {
 	border-style: solid none;
 	background: #ddd;
 }
+blockquote {
+	background: #fee;
+}
