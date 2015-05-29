@@ -142,7 +142,7 @@ skipping the following sections:
 * KVM userspace access
 * Configuring the network
 * Configuring LVM
-* Installing Ganeti: skip to [#Initializing the Cluster](#initializing-the-cluster) below.
+* Installing Ganeti: skip to [#Initializing the Cluster] below.
 * Installing Ganeti: skip to [#Initializing the Cluster](#initializing-the-cluster) below.
 
 ### Initializing the Cluster
