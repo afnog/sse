@@ -124,6 +124,11 @@ your cluster, which must be different. For example:
 	192.168.56.10   ganeti1.sse.ws.afnog.org
 	192.168.56.11   cluster1.sse.ws.afnog.org
 
+Normally you would add DNS entries for all of these. Feel free to use the DNS
+for the cluster name, instead of editing `/etc/hosts`. Your hostname should
+really be in the DNS as well, but for the purposes of this exercise
+(non-production deployment) it doesn't matter too much.
+
 Then `reboot` the host, log in again and run the following commands:
 	
 	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap
