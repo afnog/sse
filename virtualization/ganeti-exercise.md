@@ -347,4 +347,4 @@ Enter the following details:
 Leave the other details blank, and click *Add*. Your new cluster should then
 appear with its specifications:
 
-
+![Ganeti Manager showing the new cluster](ganeti-my-cluster.png)
