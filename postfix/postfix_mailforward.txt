@@ -23,7 +23,7 @@ Save and Exit
 
 	$sudo nano /etc/postfix/transport
 	
-	##Add
+	##Add your nigh
 	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
 
 
