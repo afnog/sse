@@ -6,6 +6,7 @@ The mail filter for your domain should have an MX record with a lower priority n
 
 
 2. ===Configure Postfix====
+=============================
 
 Edit Postfix main.cf
 
@@ -32,6 +33,7 @@ Save and Exit
 
 Run postmap
 
-	$sudo postmap
+	$cd /etc/postfix
+	$sudo postmap transport
 	$sudo postfix reload
 

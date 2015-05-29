@@ -200,7 +200,7 @@ Check that the `gnt-node list` command shows your node:
 > and not getting any information. You probably forgot to add the option `-H xen-pvm:xen_cmd=xl` when you created
 > the cluster. You can fix it by modifying the cluster settings on the node:
 >
->	$ sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
+>	sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
 >
 > and check that the `gnt-node list` now shows the correct information for your node.
 {: .warning}
@@ -219,4 +219,46 @@ Run the `burnin` test to make sure that everything is working properly:
 	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 burnin.example -vv
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
+
+### Install the Web Manager
+
+Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
+
+	wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
+
+Then run the following commands to install it:
+
+	sudo apt-get install fabric python-virtualenv python-dev libffi-dev libssl-dev patch
+	sudo mkdir -p /opt
+	tar xzvf ganeti_webmgr-0.11.0.tar.gz
+	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
+	sudo chown -R www-data /opt/ganeti_webmgr
+	cd /opt/ganeti_webmgr
+	sudo mv requirements/production.txt requirements/prod.txt
+
+Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
+be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
+
+	wget http://197.4.11.251/ganeti.patch | sudo patch -p0
+
+Then deploy the web interface:
+
+	sudo -i sh -c 'cd /opt/ganeti_webmgr; fab deploy'
+	cd ganeti_webmgr/ganeti_web/settings
+	sudo cp settings.py.dist ../settings.py
+
+Run this command to generate a new secret key:
+
+	openssl rand -base64 24
+
+Edit `settings.py` and find the SECRET_KEY line, uncomment it, and change it to
+include the key that you generated above, for example:
+
+	SECRET_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
+
+Set the WEB_MGR_API_KEY to the same value and uncomment it, for example:
+
+	WEB_MGR_API_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
+
+And then create the directory and set permissions:
 
