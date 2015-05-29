@@ -69,7 +69,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[SMTP and Spam][]	|[PGP][]
 |-
 |Tea break
-|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Spam Filtering][]	|[Backups[]
+|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Spam Filtering][]	|[Backups][]
 |-
 |Lunch
 |14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[MAAS][]		|[Ganeti][]
