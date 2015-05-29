@@ -148,7 +148,7 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 Finally, set the rights to the images directory 
 
 	$sudo chown -R root:www-data images/
-	
+	$sudo chmod -R 775 images/
 
 
 6. START everything
