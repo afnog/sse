@@ -175,6 +175,6 @@ blockquote > p {
 	margin: 1em 0;
 }
 .warning {
-	background: #ffe;
-	border: 0.2em solid #ffd;
+	background: #fed;
+	border: 0.2em solid #fdc;
 }
