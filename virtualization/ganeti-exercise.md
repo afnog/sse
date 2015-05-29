@@ -106,8 +106,8 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 	auto eth1
 	iface eth1 inet manual
 
-	auto xenbr0
-	iface xenbr0 inet static
+	auto xen-br0
+	iface xen-br0 inet static
 		address 192.168.56.10
 		netmask 255.255.255.0
 		bridge_ports eth1
