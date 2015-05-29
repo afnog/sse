@@ -28,7 +28,7 @@ Setup MailWatch conf.php (copy preconfigured)\
 \
 	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/\
 \
-Setup MailQatch web page for Apache:\
+Setup MailWatch web page for Apache:\
 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -38,7 +38,6 @@ Setup MailQatch web page for Apache:\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \fs26 \cf0 \
-\
 \
 2. Continue MailScanner setup\
 =============================\
@@ -62,10 +61,12 @@ Save and Exit the file\
 \
 \
 Copy preconfigured MailScanner.conf file\
+	\
 	$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup\
 	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/\
 	\
 Prepare MailScanner directories (they may already exist)\
+	\
 	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin\
 	$sudo chown postfix:www-data /var/spool/MailScanner/incoming\
 	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine\
@@ -75,40 +76,42 @@ Prepare MailScanner directories (they may already exist)\
 3. Get clamav updates (they take a long time and we will use a local copy)\
 ========================================================================\
 \
-\
-$sudo service clamav-daemon stop\
-$sudo killall -9 freshclam\
-$sudo scp afnog@pc39.sse.ws.afnog.org:/var/lib/clamav/* /var/lib/clamav/\
-\
-\
+Clamav will automatically attempt to obtain fresh antivirus signatures from the Internet via\
+freshclam after installation. This will take too long for us so please use pre-downloaded signatures for the class.\
+(No need to do this on a real server)\
+	\
+	$sudo service clamav-daemon stop\
+	$sudo killall -9 freshclam\
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/var/lib/clamav/* /var/lib/clamav/\
 \
 \
 4. Setup Postfix and SpamAssassin\
 ================================\
 \
+Enable SpamAssassin \
 \
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
-\CocoaLigature1 $sudo nano /etc/default/spamassassin\
+\CocoaLigature1 	$sudo nano /etc/default/spamassassin\
 \
-\
-##Uncomment the following line:\
-ENABLED=1\
+	##Uncomment the following line:\
+	ENABLED=1\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \
 \pard\pardeftab720
-\cf0 Save and Exit\
+\cf0 Save and Exit.\
 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 \
+\cf0 Configure Postfix to hold mail first\
+\
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
-\CocoaLigature1 $sudo nano /etc/postfix/header_checks\
+\CocoaLigature1 	$sudo nano /etc/postfix/header_checks\
 \
-###Add the following\
-/^Received:/ HOLD\
+	###Add the following\
+	/^Received:/ HOLD\
 \
 \pard\pardeftab720
 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Save and Exit\
