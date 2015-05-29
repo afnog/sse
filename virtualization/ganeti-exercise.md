@@ -154,3 +154,5 @@ Run the following command, substituting the cluster name you added to
 Create the file `/etc/ganeti/vnc-cluster-password` containing the password that
 you want to use for VNC access to consoles.
 
+Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
+
