@@ -268,5 +268,5 @@ Save the file, and check the configuration for errors:
 	sudo -u www-data venv/bin/python manage.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
-by visiting http://192.168.56.1:8000.
+by visiting http://192.168.56.10:8000.
 
