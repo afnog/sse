@@ -91,7 +91,7 @@ Configure Postfix to hold mail first. Effectivly a mail arrives and is put into 
 	###Add the following
 	/^Received:/ HOLD
 
-	Save and Exit
+Save and Exit
 
 Configure the main.cf file to read the file created above.
 
@@ -100,7 +100,7 @@ Configure the main.cf file to read the file created above.
 	###Add the following
 	header_checks = regexp:/etc/postfix/header_checks
 
-	Save and Exit
+Save and Exit
 
 
 
@@ -151,14 +151,7 @@ Finally, set the rights to the images directory
 	$sudo chmod -R 775 /var/www/mailscanner/images/
 
 
-6. START everything
-====================
-
-	$sudo service postfix restart && sudo service apache2 restart && sudo service mailscanner restart
-
-
-
-7. ALWAYS CHECK LOGS
+6. ALWAYS CHECK LOGS
 =======================
 
 	
@@ -179,6 +172,8 @@ Do not run the following command from the root director (/root) as it will produ
 
 You should see something like this:
 
+
+
 	Checking for SpamAssassin errors (if you use it)...
 	Using SpamAssassin results cache
 	Connected to SpamAssassin cache database
@@ -198,7 +193,8 @@ You should see something like this:
 	Virus Scanner test reports:
 	ClamAV said "eicar.com contains Eicar-Test-Signature"
 
-
+6. START everything
+====================
 
 If all is well then restart everything:
 
@@ -210,9 +206,7 @@ And check the log
 
 	$sudo tail -f /var/log/mail.log
 
-You should get similar output
-
-	
+You should get similar output:
 
 	May 29 12:19:15 pc39 MailScanner[12825]: MailScanner E-Mail Virus Scanner version 4.85.2 starting...
 	May 29 12:19:15 pc39 MailScanner[12825]: Reading configuration file /etc/MailScanner/MailScanner.conf
