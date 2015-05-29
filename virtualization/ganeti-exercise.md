@@ -200,7 +200,7 @@ Check that the `gnt-node list` command shows your node:
 > and not getting any information. You probably forgot to add the option `-H xen-pvm:xen_cmd=xl` when you created
 > the cluster. You can fix it by modifying the cluster settings on the node:
 >
->	$ sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
+>	sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
 >
 > and check that the `gnt-node list` now shows the correct information for your node.
 {: .warning}
@@ -216,7 +216,7 @@ Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `
 
 Run the `burnin` test to make sure that everything is working properly:
 
-	$ sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 burnin.example -vv
+	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 burnin.example -vv
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
@@ -224,16 +224,16 @@ Continue following the installation instructions from [Testing the setup](http:/
 
 Download the [latest release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example 0.11.0. We have a local copy which you can download here:
 
-	$ wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
+	wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
 
 Then run the following commands to install it:
 
-	$ sudo apt-get install fabric python-virtualenv
-	$ sudo mkdir -p /var/www
-	$ tar xzvf ganeti_webmgr-0.11.0.tar.gz
-	$ sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
-	$ cd /var/www/ganeti
-	$ sudo mv requirements/production.txt requirements/prod.txt
-	$ sudo fab deploy
+	sudo apt-get install fabric python-virtualenv
+	sudo mkdir -p /var/www
+	tar xzvf ganeti_webmgr-0.11.0.tar.gz
+	sudo mv ganeti_webmgr-0.11.0 /var/www/ganeti
+	cd /var/www/ganeti
+	sudo mv requirements/production.txt requirements/prod.txt
+	sudo fab deploy
 
 
