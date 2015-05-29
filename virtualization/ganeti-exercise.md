@@ -100,9 +100,15 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 	iface eth0 inet dhcp
 
 	auto eth1
-	iface eth1 inet static
+	iface eth1 inet manual
+
+	auto xenbr0
+	iface xenbr0 inet static
 		address 192.168.56.10
 		netmask 255.255.255.0
+		bridge_ports eth1
+		bridge_stp off
+		bridge_fd 0
 
 Then `reboot` the host, log in again and run the following commands:
 
