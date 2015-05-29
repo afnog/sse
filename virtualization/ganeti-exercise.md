@@ -260,5 +260,8 @@ Set the WEB_MGR_API_KEY to the same value and uncomment it, for example:
 
 	WEB_MGR_API_KEY = "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
 
-And then create the directory and set permissions:
+Save the file, and check the configuration for errors:
+
+	cd /opt/ganeti_webmgr
+	sudo -u www-data venv/bin/python -c "import ganeti_webmgr.ganeti_web.settings"
 
