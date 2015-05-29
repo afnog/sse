@@ -331,8 +331,8 @@ and see the login page with graphics:
 
 ![Ganeti Login Screen](ganeti-login.png)
 
-Log in using the superuser account that you created during the `syncdb` command, or run this
-command to create a new one:
+Log in using the superuser account that you created during the `syncdb`
+command, or if you have forgotten it, run this command to create a new one:
 
 	sudo -u www-data venv/bin/python manage.py createsuperuser
 
