@@ -246,5 +246,7 @@ Please note that Chrome may not be able to login so try another browser if that 
 
 
 
+PLEASE NOTE: In the real world this page _MUST_ be accessed over HTTPS and as was mentioned earlier, the username should be changed and the password made more difficult to guess.
+
 
 
