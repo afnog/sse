@@ -67,12 +67,12 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |Robert		|LUBANGA	|UCU					|Uganda
 |Cedrick Adrien	|MBEYET		|AFRINIC				|Mauritius
 |Baraka		|CHUMA		|Ruaha University College		|Nigeria
-|GABRIEL	|AWOFADEJU	|UNIVERSITY OF IBADAN			|Nigeria
+|GABRIEL	|AWOFADEJU	|University of Ibadan			|Nigeria
 |Yankuba	|JAITEH		|GAMTEL					|Ghana
 |Mary		|JONAH		|Ghana Dot Com				|NIGERIA
-|Oluwafemi	|FOLARIN	|ANDMARK UNIVERSITY 			|Nigeria
-|Sunday		|OYEBAMIJI	|UNIVERSITY OF IBADAN			|Nigeria
-|Caleb		|OGUNDELE	|DLC University of Ibadan		|Nigeria
+|Oluwafemi	|FOLARIN	|Andmark University 			|Nigeria
+|Sunday		|OYEBAMIJI	|University of Ibadan			|Nigeria
+|Caleb		|OGUNDELE	|University of Ibadan			|Nigeria
 |Timothy	|AKINFENWA	|Osun State University Osogbo		|Nigeria	
 |Serge		|Roland		|SANOU,	ARCEP				|Burkina Faso
 
