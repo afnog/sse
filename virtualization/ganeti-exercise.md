@@ -301,6 +301,7 @@ Create the file `/etc/apache2/sites-enabled/ganeti.conf` with the following cont
 	<VirtualHost *:80>
 		ServerAdmin your-email-address@example.com
 		ServerName ganeti-server.local
+		ServerAlias 192.168.56.10
 
 		# Static content needed by Django
 		Alias /static "/opt/ganeti_webmgr/collected_static/"
@@ -319,4 +320,8 @@ Create the file `/etc/apache2/sites-enabled/ganeti.conf` with the following cont
 		# Possible values include: debug, info, notice, warn, error, crit,
 		# alert, emerg.
 		LogLevel warn
+
+		<Location />
+			Require all granted
+		</Location>
 	</VirtualHost>
