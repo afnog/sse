@@ -130,7 +130,8 @@ really be in the DNS as well, but for the purposes of this exercise
 (non-production deployment) it doesn't matter too much.
 
 Then `reboot` the host, log in again and run the following commands:
-	
+
+	sudo apt-get upgrade	
 	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap
 
 Start following the [Ganeti installation tutorial¶](http://docs.ganeti.org/ganeti/2.13/html/install.html),
