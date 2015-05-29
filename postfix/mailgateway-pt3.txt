@@ -199,13 +199,31 @@ If all is well then restart everything:
 
 	$sudo service postfix restart && sudo service apache2 restart && sudo service mailscanner restart
 
+
 And check the log
 
 
 	$sudo tail -f /var/log/mail.log
 
+You should get similar output
 
 	
+
+	May 29 12:19:15 pc39 MailScanner[12825]: MailScanner E-Mail Virus Scanner version 4.85.2 starting...
+	May 29 12:19:15 pc39 MailScanner[12825]: Reading configuration file /etc/MailScanner/MailScanner.conf
+	May 29 12:19:15 pc39 MailScanner[12825]: Reading configuration file /etc/MailScanner/conf.d/README
+	May 29 12:19:15 pc39 MailScanner[12825]: Read 868 hostnames from the phishing whitelist
+	May 29 12:19:15 pc39 MailScanner[12825]: Read 5807 hostnames from the phishing blacklists
+	May 29 12:19:15 pc39 MailScanner[12825]: Config: calling custom init function SQLBlacklist
+	May 29 12:19:15 pc39 MailScanner[12825]: Starting up SQL Blacklist
+	May 29 12:19:15 pc39 MailScanner[12825]: Read 0 blacklist entries
+	May 29 12:19:15 pc39 MailScanner[12825]: Config: calling custom init function SQLWhitelist
+	May 29 12:19:15 pc39 MailScanner[12825]: Starting up SQL Whitelist
+
+
+Test that port 25 is open and that Postfix is listening
+	$sudo telnet localhost 25
+
 
 8. LOGIN TO MAILWATCH
 ====================
