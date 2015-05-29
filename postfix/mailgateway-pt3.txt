@@ -17,7 +17,7 @@ Download MailWatch - MailScanner Frontend
 	$cd 1.2.0-master
 	$sudo mv mailscanner /var/www
 
-Setup MailWatch conf.php (copy preconfigured)
+Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set 
 
 	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
 
