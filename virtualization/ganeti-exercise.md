@@ -138,6 +138,7 @@ for guests. In your own configurations you should probably allocate more RAM to 
 
 Then run the following commands:
 
+	sudo update-grub
 	sudo apt-get dist-upgrade	
 	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap xen-hypervisor-amd64
 
