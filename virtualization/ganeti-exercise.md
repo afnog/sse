@@ -200,6 +200,7 @@ Check that the `gnt-node list` command shows your node:
 >	$ sudo gnt-cluster modify -H xen-pvm:xen_cmd=xl
 >
 > and check that the `gnt-node list` now shows the correct information for your node.
+{.warning}
 
 You should also make sure that the `MFree` column shows at least 1 GB free (not
 126 MB as in the example output above). This ensures that there is enough RAM
