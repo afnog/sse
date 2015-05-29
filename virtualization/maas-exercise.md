@@ -74,7 +74,7 @@ When asked for a proxy server, enter this one (to save a LONG install time):
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
 
 * Adapter 1: Do not change, leave set to NAT.
-* Adapter 2: Host-only network, vboxnet0, enable Promiscuous Mode.
+* Adapter 2: Host-only network, vboxnet1, enable Promiscuous Mode.
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
