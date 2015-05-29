@@ -171,7 +171,8 @@ pre, .remark-code {
 blockquote {
 	padding: 0 1em;
 }
-blockquote > p {
+blockquote > p,
+blockquote > pre {
 	margin: 1em 0;
 }
 .warning {
