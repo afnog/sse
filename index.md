@@ -182,16 +182,6 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
-### Firewalls
-
-#### [Chris Wilson](#CW)
-
-Goal: To understand firewalls and how the Linux iptables (netfilter) firewall works
-
-* [FreeBSD Firewalls](firewalls/FreeBSD-firewalls.pdf)
-* [PacketFilter Firewall Exercise-1](firewalls/firewall_exercise-1.txt)
-* [PacketFilter Firewall Exercise-2](firewalls/firewall-exercise-2.txt)
-
 ### Ganeti
 [Ganeti]: #ganeti
 
