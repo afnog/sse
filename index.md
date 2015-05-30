@@ -173,11 +173,6 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [PDF](dns/dns3-presentation.pdf)
 * [Exercise](dns/dns3-exercise.txt)
 
-##### Delegation and Reverse DNS
-
-* [PowerPoint](dns/dns4-presentation.ppt)
-* [PDF](dns/dns4-presentation.pdf)
-
 ##### DNSSEC
 [DNSSEC]: #dnssec
 
