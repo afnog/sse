@@ -288,7 +288,7 @@ Please [file an issue](https://github.com/afnog/sse/issues) requesting to be add
 The instructors group on Google Groups:
 
 * Email address: afnog-sse@googlegroups.com
-* Web interface: https://groups.google.com/forum/#!forum/afnog-sse
+* Web interface: [https://groups.google.com/forum/#!forum/afnog-sse](https://groups.google.com/forum/#!forum/afnog-sse)
 
 ### Topics and Instructors
 
