@@ -290,21 +290,7 @@ The instructors group on Google Groups:
 * Email address: [afnog-sse@googlegroups.com](mailto:afnog-sse@googlegroups.com)
 * Web interface: [https://groups.google.com/forum/#!forum/afnog-sse](https://groups.google.com/forum/#!forum/afnog-sse)
 
-### Topics and Instructors
-
-* Welcome - CW?
-* DNS - JA?
-* RADIUS - CW
-* Apache - EN
-* Virtualization - LM
-* Load Balancing - LM
-* Monitoring - KC
-* Exim - CW
-* Mail (Dovecot, Webmail, scalability) - KC
-* Security and Availability - CW
-* Closing Survey - CW
-
-See the [wiki page](https://github.com/afnog/sse/wiki/Operating-System-Choices).
+There is a [wiki page on course development](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 
 ### Coordinating the lab-setup
 
