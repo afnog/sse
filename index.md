@@ -58,7 +58,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 <!-- sorted by surname -->
 
 |First Names	|Surname	|Organisation				|Country
-|:-             |:-             |:-                     		|:-
+|:-             |:-             |:-                                     |:-
 |Amel		|HAMIMY		|SudREN					|Sudan
 |Salma		|BASHIR		|SudREN					|Nigeria
 |Adefolarin	|BOLAHI		|Adeleke University			|Nigeria
