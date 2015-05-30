@@ -292,15 +292,6 @@ The instructors group on Google Groups:
 
 There is a [wiki page on course development](https://github.com/afnog/sse/wiki/Operating-System-Choices).
 
-### Coordinating the lab-setup
-
-Who is arriving when?
-
-* CW on 22/05 around 14h
-* EN on 24/05
-* KC on 25/05 early morning
-* JA on 25/05 at 0900
-
 ### Equipment
 
 To host this track you will probably need the following equipment:
