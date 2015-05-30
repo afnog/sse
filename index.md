@@ -327,11 +327,6 @@ All done by CW unless anyone else wants to.
 
 ### TODO
 
-* Student numbers and names
-* Apache, Load Balancing, Virtualisation, Monitoring/Nagios, RADIUS - update (to Debian?)
-* DNS - has jabley updated?
-* Security - SSL certificate generation
-
 ## Meta (about this site)
 
 ### Quick Start (editing)
