@@ -238,32 +238,16 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.txt)
 
+### PGP
+[PGP]: #pgp
 
-### IMAP and Webmail
-[IMAP and Webmail]: #imap-and-webmail
+#### [Joe Abley](#JA)
 
-#### [Kevin Chege](#KC)
-
-##### Introduction to POP and IMAP
-
-* [Presentation and Exercise/PDF](mail/dovecot-intro.pdf)
-* [Presentation and Exercise/PowerPoint](mail/dovecot-intro.ppt)
-
-##### Installing Dovecot Server
-
-* [Presentation and Exercise/PDF](mail/dovecot-scaling.pdf)
-* [Presentation and Exercise/PowerPoint](mail/dovecot-scaling.ppt)
-* [Dovecot Basic Mysql Schema](mail/dovecot-mysql-schema.sql)
-
-##### Webmail using Squirrelmail
-
-* [Presentation/PDF](mail/squirrelmail.pdf)
-* [Presentation/PowerPoint](mail/squirrelmail.ppt)
-
-##### Scaling mail services
-
-* [Mail Server Clustering](mail/clustering.htm)
-* [Mail Server Scalability](mail/scalability.htm)
+* [Presentation (PowerPoint)](pgp/pgp-presentation1.pptx)
+* [Presentation (PDF)](pgp/pgp-presentation1.pdf)
+* [Exercise](pgp/pgp-exercise1.txt)
+* [Key File](pgp/pgp-presentation1.key)
+* [Old NANOG Presentation](pgp/nanog29-jabley-pgp.pdf)
 
 ### RADIUS
 [RADIUS]: #radius
@@ -272,20 +256,6 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Presentation/powerpoint](radius/radius_presentation.ppt?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
-
-### Security and Availability
-
-#### [Laban Mwangi](#LM)
-
-* [Presentation/PDF](security/sse-sec-and-availability.pdf)
-* [Presentation/ODP](security/sse-sec-and-availability.odp)
-
-### Security and Cryptography
-
-#### [Chris Wilson](#CW)
-
-* [Presentation/HTML](crypto/index.html)
-* [Presentation/PDF](crypto/presentation.pdf)
 
 ### SMTP and Spam
 [SMTP and Spam]: #smtp-and-spam
@@ -298,7 +268,6 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Email Overview](postfix/01_email_preso.pdf)
 * [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
-
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
