@@ -123,6 +123,15 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [Exercise2 - MySQL/PHP/Wordpress Install](apache/apache_sse_exercises_Mysql & PHP configs.txt)
 * [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_wordpress.txt)
 
+### Backups
+[Backups]: #backups
+
+#### [Joe Abley](#JA)
+
+* [Backups Presentation (OpenOffice Impress)](backups/regnauld-afnog2006-backups.sxi)
+* [Backups Presentation (PDF)](backups/regnauld-afnog2006-backups.pdf)
+* [Backups Exercise](backups/backups1-exercise1.txt)
+
 ### Closing Survey
 [Closing Survey]: #closing-survey
 
