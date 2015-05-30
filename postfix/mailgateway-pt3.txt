@@ -155,7 +155,8 @@ Finally, set the rights to the images directory
 =======================
 
 	
-You should also run the SpamAssassin check. Look for errors and fix (if any). It may require you to install a few more 
+You should also run the SpamAssassin check. Look for errors and fix (if any). It may require you to run sa-update in order to fix the errors.
+
 	$sudo spamassassin -D --lint
 
 You should get similar output at the very end.
