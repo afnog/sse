@@ -277,7 +277,7 @@ Goal: to understand the contents and layering of common Internet protocols
 
 ## Management
 
-Details for project management of the training
+Details for project management of the training.
 
 ### Editing this page
 
