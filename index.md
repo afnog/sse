@@ -18,8 +18,8 @@ Jump within this page:
 * [Management](#management)
 </div><!-- sectionjumps -->
 
-<p><a href="images/Class_Group_Photo.jpg" class="group-photo"><img
-      src="images/Class_Group_Photo_600.jpg"
+<p><a href="https://www.flickr.com/photos/65789103@N06/18071392728/" class="group-photo"><img
+      src="images/Class_Group_Photo.jpg"
       alt="[SS-E Group Photo]"></a></p>
 
 ## Introduction
