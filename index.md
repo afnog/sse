@@ -70,7 +70,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |GABRIEL	|AWOFADEJU	|University of Ibadan			|Nigeria
 |Yankuba	|JAITEH		|GAMTEL					|Ghana
 |Mary		|JONAH		|Ghana Dot Com				|Nigeria
-|Oluwafemi	|FOLARIN	|Andmark University 			|Nigeria
+|Oluwafemi	|FOLARIN	|Landmark University 			|Nigeria
 |Sunday		|OYEBAMIJI	|University of Ibadan			|Nigeria
 |Caleb		|OGUNDELE	|University of Ibadan			|Nigeria
 |Timothy	|AKINFENWA	|Osun State University Osogbo		|Nigeria	
