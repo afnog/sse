@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="../workshop.css" type="text/css" />
+	<link rel="stylesheet" href="{{page.root}}/css/sse.css" type="text/css" />
+	<link rel="copyright" title="Copyright and Usage Restrictions"
+		href="../00readme.html" type="text/html" />
+	<link rel="home" title="AfNOG Workshop web site"
+		href="http://www.ws.afnog.org/" type="text/html" />
+	<link rel="up" title="AfNOG {{page.year}} Workshop Main Page"
+		href="../index.html" type="text/html" />
+	<title>SS-E - AfNOG {{page.year}} Workshop</title>
+	<!--
+	Showdown - Markdown in Javascript
+	from http://www.showdown.im/
+	-->
+	<script type="text/javascript" src="{{page.root}}/js/showdown.js"></script>
+	<style>
+	pre {
+		font-size: 120%;
+	}
+	</style>
+</head>
+<body>
+
+<div class="arrowlinks">
+  <a href="http://www.afnog.org/">AfNOG</a>
+  &gt;
+  <a href="http://www.ws.afnog.org/">Workshops</a>
+  &gt;
+  <a href="{{page/root}}/../index.html">{{page.year}}</a>
+  &gt;
+  <a href="{{page.root}}/">Track SS-E &mdash; Scalable Internet Services</a>
+</div>
+
+<hr>
+
+{{ content }}
+
+<script type="text/javascript">
+var converter = new Showdown.converter();
+var markdownArea = document.getElementById('markdown');
+if (markdownArea)
+{
+	markdownArea.innerHTML = converter.makeHtml(markdownArea.innerHTML);
+}
+</script>
+
+<div class="bottomlinks">
+<p><a href="../index.html">Return to AfNOG Workshop Main Page</a></p>
+</div>
+
+</body>
+</html>
+

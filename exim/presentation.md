@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<!--
-
-Note: Most of this file is in Markdown for ease of editing. The boilerplate
-makes it visible as a slideshow using Remark: http://remarkjs.com/#1
-
--->
-<html>
-  <head>
-    <title>Title</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <style type="text/css">
-      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    </style>
-  </head>
-  <body>
-    <textarea id="source">
-
 class: center, middle
 
 # Exim and Internet Mail
@@ -35,7 +8,7 @@ Download or edit this presentation [on GitHub](https://github.com/afnog/sse/exim
 
 ---
 
-# Agenda
+## Agenda
 
 1. How email works
 2. Setting up a mail server
@@ -43,13 +16,74 @@ Download or edit this presentation [on GitHub](https://github.com/afnog/sse/exim
 
 ---
 
-# How email works
+## How email works
 
-    </textarea>
-    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-      var slideshow = remark.create();
-    </script>
-  </body>
-</html>
+![How Internet Email Works](how-internet-email-works.svg)
+
+---
+
+## What is Exim?
+
+* Listens on port 25 (smtp)
+* Accepts mail
+* Queues mail
+* Delivers it somewhere
+	* Using SMTP, LMTP, LDA, mbox or maildir
+* No POP, IMAP, calendars, to-do lists, Crackberry!
+
+---
+
+## Who uses Exim?
+
+![Public SMTP Server survey results](public-smtp-servers.svg)
+
+???
+
+About 23% of the servers polled by the [Open Email Survey](http://www.openemailsurvey.org/smtp.html).
+2nd most popular SMTP server after Postfix.
+
+---
+
+## Why use Exim?
+
+* Flexible (lots of features)
+* Reasonably secure
+* Reasonably scalable
+* Good debugging options
+* Sane (but complex) configuration syntax
+
+---
+
+## Why not to use Exim
+
+Not every problem is a nail:
+
+* **Simplicity?** Use postfix or qmail
+* **Security?** Use qmail
+* **Speed?** Use postfix or sendmail
+* **Insanity?** Use sendmail or qmail
+
+Note: Exim is not designed for spooling large amounts of mail. Its queue
+handling slows down with large queues (thousands of messages queued).
+
+---
+
+## Conventions
+
+As used in this presentation:
+
+* File names and technical terms are in *italics*.
+* Commands to type are shown thus:
+
+	cat /etc/monospaced/bold/italic/purple
+
+Long command lines may be wrapped, with lines between each line:
+
+	cat /usr/local/etc/foo/bar | less | more | grep | sed | awk > /usr/local/tmp/foo/bar
+	sudo make SUBDIR=old WITH_RADIUS_TYPE=RADLIB EXTRALIBS_EXIM=/usr/lib/libradius.so install clean
+
+Text that is output by a program, or should already be in a file, is shown in plain monospaced type:
+sshd_enable="YES"
+
+
+

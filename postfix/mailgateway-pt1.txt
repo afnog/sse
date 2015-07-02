@@ -1,0 +1,52 @@
+
+=====How to Install MailScanner and Mailwatch====
+================================================
+
+
+!!!!!!!DISCLAIMER!!!!!!!
+=======================-===
+
+SETTING UP A PROPER AND SECURE EMAIL FILTER TAKES A LONG TIME AND MUCH OF THE SETUP FOR THE CLASS HAS BEEN PRE-CONFIGURED FOR THE SAKE OF TIME. 
+
+THE CONFIGURATIONS FOR THIS COURSE HAVE BEEN HIGHLY SIMPLIFIED AND YOU SHOULD TAKE TIME TO READ MORE ABOUT POSTFIX, MAILSCANNER, SPAMASSASIN, CLAM ANTIVIRUS AND MAILWATCH BEFORE DEPLOYING A SERVER IN THE REAL WORLD. 
+
+LINKS TO THE INDIVIDUAL SOFTWARES:
+
+MailScanner: 	http://www.mailscanner.info
+MailWatch:	http://mailwatch.org
+SpamAssassin:	http://spamassassin.apache.org/
+Clam Antivirus:	http://www.clamav.net/index.html
+Postfix:	http://www.postfix.org/
+
+!!!!YOU MUST REGULARLY UPDATE ALL SOFTWARES TO RECEIVE NEW PATCHES AND SECURITY UPDATES!!!!
+READ ABOUT FRESHCLAM (FOR UPDATING CLAM ANTIVIRUS) AND SA-UPDATE (FOR UPDATING SPAMASSASSIN)
+
+ALSO, YOU SHOULD READ ABOUT CONFIGURING GREYLISTING, DKIM AND SPF VERIFICATION ON POSTFIX!
+
+IF YOU WANT TO SET UP A MAIL FILTER FOR YOUR NETWORK, YOU SHOULD CREATE A TEST DOMAIN TO RECEIVE EMAILS BEFORE DIRECTING YOUR EMAILS VIA THE FILTER OTHERWISE YOU MAY LOSE EMAILS. 
+
+THE FOLLOWING INSTRUCTIONS ASSUME THAT YOU HAVE WORKING MX RECORDS
+
+
+
+
+=== Install The Tools:====
+=======================
+
+	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget
+
+
+YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
+
+===2. Get Mailscanner====
+========================
+
+	$cd /home/afnog
+	$wget http://197.4.11.139/MailScanner-4.85.2-3.deb.tar.gz
+	$tar -xzf MailScanner-4.85.2-3.deb.tar.gz
+	$cd MailScanner-4.85.2-3
+	$sudo ./install.sh
+
+
+=3. Go to the mailfilter-pt2 on the wiki=
+========================================

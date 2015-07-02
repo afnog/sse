@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+h2, a, a.visited
+{
+	color: #b40004;
+}
+h2, .bottomlinks
+{
+	/*
+	font-family: "Impact";
+	font-weight: normal;
+	*/
+	border-top: 4px solid #b40004;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+h3 /* subheadings under introduction & management */
+{
+	margin: 0.5 0 0.5em;
+	border: 4px solid #d98082;
+	border-style: none none none solid;
+	padding: 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+	background: #fee;
+}
+p, table, h3, ul, pre, blockquote
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.topics > h2
+{
+	margin-left: 0;
+}
+/*
+p { margin: 0 0 1em; }
+*/
+table, td, th
+{
+	border: 1px solid #dee;
+	border-collapse: collapse;
+}
+table
+{
+	border-width: 2px;
+}
+th, td
+{
+	padding: 0.3em 0.5em;
+}
+th
+{
+	background: #dee;
+}
+.timetable td
+{
+	background: white;
+	width: 10%;
+}
+.timetable tr.break td, .timetable tbody tr:first-child td
+{
+	text-align: center;
+	color: #cdd;
+}
+.timetable .time
+{
+	font-weight: bold;
+}
+.group-photo
+{
+	width: 30%;
+	float: right;
+	margin: 1.5em 0 1em 1em;
+	background: white;
+	padding: 0 0 0 1em;
+}
+img {
+	max-width: 100%;
+}
+.group-photo img
+{
+	width: 100%;
+}
+/*
+.session
+{
+	border-bottom: 1px solid #b40004;
+}
+*/
+.topics h3,
+.topics h4,
+.topics h5 {
+	font-weight: bold;
+	margin: 0 5% 0 5%;
+}
+.topics h3 /* topic */
+{
+	margin-top: 1em;
+	border: 4px solid #d98082;
+	border-style: none none solid none;
+	background: #ecc0c1;
+	padding: 0.5em;
+}
+.topics h4,
+.topics h5 {
+	margin-bottom: 0.5em;
+	font-size: 1em;
+}
+.topics h4 /* presenter */
+{
+	border: 4px solid #d98082;
+	border-style: none none none solid;
+	padding: 0.5em;
+}
+.topics h5 /* sub topic/heading within topic */
+{
+	border: 4px solid #ecc0c1;
+	border-style: none none solid none;
+	padding: 0.5em 0.5em 0.5em 0;
+	list-style-type: none;
+}
+h6, ol > li /* links to materials */
+{
+	list-style-type: none;	
+	margin: 0 0 0 5%;
+	padding: 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+.sectionjumps {
+	text-align: left;
+}
+.sectionjumps:before {
+	content: "[";
+}
+.sectionjumps:after {
+	content: "]";
+}
+.sectionjumps p,
+.sectionjumps ul,
+.sectionjumps li {
+	display: inline;
+	margin: 0;
+}
+.sectionjumps ul {
+	margin: 0;
+	padding: 0;
+}
+.sectionjumps li:before {
+	content: "| ";
+}
+.sectionjumps li:first-child:before {
+	content: "";
+}
+pre {
+	background: #eee;
+	padding: 0.5em;
+	white-space: pre-wrap;
+}
+pre, .remark-code, .remark-inline-code {
+	background: #eee;
+	font-family: 'Ubuntu Mono';
+	font-size: 80%;
+}
+pre, .remark-code {
+	display: block;
+	border: 0.2em #ccc;
+	border-style: solid none;
+	background: #ddd;
+}
+blockquote {
+	padding: 0 1em;
+}
+blockquote > p,
+blockquote > pre {
+	margin: 1em 0;
+}
+.warning {
+	background: #fed;
+	border: 0.2em solid #fdc;
+}

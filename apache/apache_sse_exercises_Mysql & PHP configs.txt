@@ -1,0 +1,129 @@
+Configuring MySQL5 and PHP5 & Installation of Wordpress
+=======================================================
+
+1. Configuring MySQL:
+------------------------------------------------------------------------------------
+ 
+1.1 Enable the mysql service by issuing the following command.
+
+	$ sudo update-rc.d mysql enable
+
+
+1.2 Start the mysql server using command below
+
+	$ sudo service mysql start
+
+
+1.3 Setting the Mysql Admin password and security we use the following procedure 
+
+* Please read the instructions and use the letters "y" or “n” on the keyboard.
+
+	$ sudo mysql_secure_installation
+
+The password to set for mysql is afnog
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y                                            
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] n
+... Success!
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+1.4. Log in to mysql console to check if the password was set properly using command below.
+
+	$ mysql -u root -p
+	Password:
+
+     Type the password at the prompt.
+
+     You can exit from the mysql> prompt by typing "exit" command
+
+
+2. Configuring PHP:
+------------------------------------------------------------------------------------
+
+2.1 PHP Configuration
+
+    Settings for PHP are stored in the /etc/php5/apache2/php.ini file.
+
+
+2.2 Edit /etc/php5/apache2/php.ini and uncomment the following:
+
+	$ sudo nano /etc/php5/apache2/php.ini
+
+Uncomment the following lines;
+
+	; display_errors
+	   Default Value: On
+	   Development Value: On
+	;   Production Value: Off
+	
+	; display_startup_errors
+	   Default Value: Off
+	   Development Value: On
+	;   Production Value: Off
+	
+	; error_reporting
+	   Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
+	   Development Value: E_ALL
+	;   Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
+	
+	; html_errors
+	   Default Value: On
+	   Development Value: On
+	;   Production value: On
+	
+	; log_errors
+	   Default Value: Off
+	   Development Value: On
+	;   Production Value: On
+   
+   Save and exit php.ini
+
+
+2.3 Restart apache 
+
+	$ sudo service apache2 restart
+
+
+2.4 To test PHP, create the following file in the apache 
+
+	$ sudo bash -c 'echo "<? phpinfo(); ?>" >> /var/www/html/test.php'
+
+     Now check the phpinfo page http://<your-server-ip>/test.php
+
+
+Proceed to Wordpress Exercise
+
+
+

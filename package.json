@@ -1,0 +1,8 @@
+{
+  "name": "afnog-sse",
+  "version": "0.0.0",
+  "dependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-este-watch": "^0.1.18"
+  }
+}

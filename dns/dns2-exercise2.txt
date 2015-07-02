@@ -1,0 +1,54 @@
+[DNS Exercise 2.2] DNS Worksheet
+Domain name to test: __________________________________  Query type: "A"
+
+1. Start at any root server
+	dig +norec @k.root-servers.net.  _____________________  a
+
+2. Referral: what NS records were returned in the "authority" section? List
+them here.
+
+
+
+
+
+
+
+3. Repeat your query for every NS record found in step 2.
+Was the response a referral or a final authoritative answer?
+List the response here.
+
+
+
+
+
+
+
+Did every server respond? ____   Were the responses the same? _____
+
+4. If step 3 was a referral, repeat again for every NS record found.
+List the response here.
+
+
+
+
+
+
+
+Did every server respond? ____   Were the responses the same? _____
+Continue for further referrals if necessary.
+
+
+
+
+
+
+
+5. Checklist:
+Did all the nameservers give a response?
+Did they all give either a referral to a subdomain, or an AA (Authoritative
+Answer)?
+Were all the answers from each group of nameservers the same?
+Did each group consist of at least two nameservers on two different networks?
+For the final set of authoritative servers: did the list of NS records in the
+Authority Section match the list of nameservers in the referral from above?
+Were the TTL values reasonable?

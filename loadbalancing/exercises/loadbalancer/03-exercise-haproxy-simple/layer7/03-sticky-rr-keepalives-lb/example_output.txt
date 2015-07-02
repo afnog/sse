@@ -1,0 +1,67 @@
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to  (127.0.0.1) port 8080 (#0)
+> GET /tiles/tile-0.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: :8080
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:38:39 GMT
+< Content-type: image/jpeg
+< Content-Length: 33990
+< Last-Modified: Mon, 26 May 2014 11:36:19 GMT
+* Added cookie EXERCISE2="cookie-for-exercise3-server2" for domain , path /, expire 0
+< Set-Cookie: EXERCISE2=cookie-for-exercise3-server2; path=/
+* HTTP/1.0 connection set to keep alive!
+< Connection: keep-alive
+< 
+{ [data not shown]
+100 33990  100 33990    0     0  4729k      0 --:--:-- --:--:-- --:--:-- 10.8M
+* Connection #0 to host  left intact
+* Found bundle for host : 0x100319ea0
+* Re-using existing connection! (#0) with host 
+* Connected to  (127.0.0.1) port 8080 (#0)
+> GET /tiles/tile-1.jpg HTTP/1.0
+> User-Agent: curl/7.37.0
+> Host: :8080
+> Accept: */*
+> Cookie: EXERCISE2=cookie-for-exercise3-server2
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:38:39 GMT
+< Content-type: image/jpeg
+< Content-Length: 46942
+< Last-Modified: Mon, 26 May 2014 11:36:19 GMT
+< 
+{ [data not shown]
+100 46942  100 46942    0     0  1129k      0 --:--:-- --:--:-- --:--:-- 1129k
+* Closing connection 0
+* Hostname was found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to  (127.0.0.1) port 8080 (#1)
+> GET /tiles/tile-2.jpg HTTP/1.1
+> User-Agent: curl/7.37.0
+> Host: :8080
+> Accept: */*
+> Cookie: EXERCISE2=cookie-for-exercise3-server2
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/2.7.6
+< Date: Mon, 26 May 2014 13:38:39 GMT
+< Content-type: image/jpeg
+< Content-Length: 46727
+< Last-Modified: Mon, 26 May 2014 11:36:19 GMT
+* HTTP/1.0 connection set to keep alive!
+< Connection: keep-alive
+< 
+{ [data not shown]
+100 46727  100 46727    0     0  10.6M      0 --:--:-- --:--:-- --:--:-- 10.6M
+* Connection #1 to host  left intact

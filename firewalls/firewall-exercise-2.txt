@@ -1,0 +1,92 @@
+Firewall exercise 2
+
+
+Block incoming traffic from your neighbour as follows:
+
+
+
+1. Change the block rules to do the opposite of Exercise 1 in /etc/pf.conf 
+
+	$sudo ee /etc/pf.conf
+
+	Then paste the following ruleset replacing XX as indicated with the required values
+	
+
+#########PF RULES####
+	
+lan_if="em0"						#Your FreeBSD Network Card
+afnog_v4="196.200.208.0/20"  				#Afnog's full IPv4 Block
+afnog_v6="2001:43f8:220::/48"  			#Afnog's full IPv6 Block 
+bsd_vm_v4="196.200.219.XX"   				#Your FreeBSD VM IPv4 Block
+bsd_vm_v6="2001:43f8:220:219:196:200:219:XX"  	#Your FreeBSD VM's IPv6 Block
+neighbour_v4="196.200.219.YY"				#Your neighbour's IPv4 block
+neighbour_v6="2001:43f8:220:219:196:200:219:YY"  	#Your neighbour's IPv6 block
+ipv6_ll="fe80::/10"                             	#IPv6 link local on LAN interface for Router Advertisements
+set skip on lo0 					#Don't bother processing localhost packets
+
+
+block in all						#incoming packets blocked unless specified in below rules
+pass out all                                    #whatever communication this server initiates is allowed
+
+#Things I want to always allow
+pass in quick on $lan_if inet6 proto { tcp, udp, icmp6 } from $ipv6_ll to any #allow link local IPv6
+pass in on $lan_if from { $afnog_v4, $afnog_v6 } to { $bsd_vm_v4, $bsd_vm_v6 }
+
+
+##Add your rules block rules below
+
+block in log quick on $lan_if inet6 proto tcp from $neighbour_v6 to $bsd_vm_v6 port 22
+block in log quick on $lan_if inet proto tcp from $neighbour_v4 to $bsd_vm_v4 port { 80, 22 }
+
+
+####END OF PF RULES####
+
+	Save and exit the file. The rules will block SSH over IPv6 and HTTP from your Neighbour to your VM. Ask your neighbour to try the following tests before the PF is reloaded from HIS machine.
+
+
+	$telnet -6 2001:43f8:220:219:196:200:219:XX 80
+	$telnet pcXX.sse.ws.afnog.org 80
+	$telnet -6 2001:43f8:220:219:196:200:219:XX 22
+	$telnet pcXX.sse.ws.afnog.org 22
+
+	Where XX is your VM's IP
+
+2. Now reload PF. Remember it is now loaded but not started:
+
+	
+	$sudo pfctl -f /etc/pf.conf
+
+	And check which rules it has loaded
+	 
+	$sudo pfctl -s rules
+
+
+3. Ask your neighbour to do the following tests:
+
+	$telnet -6 2001:43f8:220:219:196:200:219:XX 80
+	$telnet pcXX.sse.ws.afnog.org 80
+	$telnet -6 2001:43f8:220:219:196:200:219:XX 22
+	$telnet pcXX.sse.ws.afnog.org 22
+
+	Where XX is your VM's IP
+	
+	
+	Check your log file as follows: 
+	
+
+	$sudo tcpdump -i pflog0 -tte
+
+
+	OR check the log file
+
+
+	$sudo tcpdump -tte -r /var/log/pflog
+
+
+	
+	
+
+
+
+
+

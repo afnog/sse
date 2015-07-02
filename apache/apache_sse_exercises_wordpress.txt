@@ -1,0 +1,146 @@
+INSTALLATION AND CONFIGURING WORDPRESS
+-------------------------------------------------------------------
+
+
+1. Install Wordpress:
+------------------------------------------------------------------------------------
+
+1.1 Install wordpress using packages:
+
+	$ sudo apt-get install wordpress
+
+
+2. Configure Wordpress
+
+2.1 Create the mysql database for wordpress:
+
+$ mysql -u root -p
+Password:
+mysql> CREATE DATABASE wordpress; 
+mysql> GRANT ALL PRIVILEGES ON wordpress.* TO "wpuser"@"localhost" IDENTIFIED BY "afnog";
+mysql> FLUSH PRIVILEGES;
+mysql> EXIT
+
+
+2.1 Configure Apache to host the wordpress site. Create an Apache Config file for wordpress with .conf extension in the /etc/apache2 sites-available folder
+Paste the details below
+
+	$ sudo nano /etc/apache2/sites-available/wordpress.conf
+
+
+ <VirtualHost *:80>
+        ServerName pcXX.sse.ws.afnog.org
+        DocumentRoot /usr/share/wordpress/
+        DirectoryIndex index.php index.html
+        ErrorLog /var/log/apache2/wp-error.log
+        TransferLog /var/log/apache2/wp-access.log
+
+        # wp-content in /var/lib/wordpress/wp-content
+        Alias /wp-content /var/lib/wordpress/wp-content
+
+        <Directory /usr/share/wordpress>
+            Options FollowSymLinks
+            <IfVersion < 2.3>
+                Order allow,deny
+                Allow from all
+            </IfVersion>
+            <IfVersion >= 2.3>
+                Require all granted
+            </IfVersion>
+        </Directory>
+        <Directory /var/lib/wordpress/wp-content>
+            Options FollowSymLinks
+            <IfVersion < 2.3>
+                Order allow,deny
+                Allow from all
+            </IfVersion>
+            <IfVersion >= 2.3>
+                Require all granted
+            </IfVersion>
+        </Directory>
+        </VirtualHost>
+
+
+2.2 Create the wordpress config for the fully qualified domain name:
+
+	$ cd /etc/wordpress/
+	$ sudo nano config-pcXX.sse.ws.afnog.org.php 
+
+2.2.1 Edit the config-pcXX.sse.ws.afnog.org.php with the database name, username and passwords 
+created above so that it looks like so:
+
+<?php
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'wpuser');
+define('DB_PASSWORD', 'afnog');
+define('DB_HOST', 'localhost');
+define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');
+?>                 
+
+
+Save the configuration file .
+
+2.2.2 Enable the site on Apache and restart apache
+
+$ sudo a2ensite wordpress
+
+$ sudo service apache2 restart
+
+Point your browser to your WordPress virtual host 
+
+http://pcXX.sse.ws.afnog.org/
+
+Complete the setup as instructed on the page then:
+
+Happy blogging!!!!!!!!!!!!!!!!!!!!!!!
+
+2.3 To browse it on HTTPS, add the following to the top of the default-ssl.conf file:
+
+	$ sudo nano /etc/apache2/sites-available/wordpress-ssl.conf
+
+Add the following lines;
+
+
+<VirtualHost *:443>
+	
+	ServerName pcXX.sse.ws.afnog.org
+	ServerAdmin webmaster@pcXX.sse.ws.afnog.org
+	DocumentRoot /usr/share/wordpress
+	DirectoryIndex index.php index.html
+	
+	<Directory "/usr/share/wordpress">
+        	Options Indexes FollowSymLinks
+        	AllowOverride AuthConfig FileInfo
+        	Order allow,deny
+        	Allow from all
+	<Directory>
+	SSLEngine on
+	SSLCertificateFile /etc/apache2/ssl/server.crt
+	SSLCertificateKeyFile /etc/apache2/ssl/server.key
+	<FilesMatch "\.(cgi|shtml|phtml|php)$">
+    	SSLOptions +StdEnvVars
+	</FilesMatch>
+       	<Directory "/usr/lib/cgi-bin">
+    	SSLOptions +StdEnvVars
+	</Directory>
+	BrowserMatch ".*MSIE.*" \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+        ErrorLog /var/log/apache2/wordpress-s.err-error.log
+	TransferLog /var/log/apache2/wordpress-s.tx-access.log
+	</VirtualHost>
+	
+Save, exit the file
+
+2.3.1 We need to disable the default-ssl site because SSL works on a per IP basis. Then enable the wordpress-ssl site and restart apache
+
+	$ sudo a2dissite default-ssl
+	
+	$ sudo a2ensite wordpress-ssl
+
+	$ sudo service apache2 restart
+
+Point your browser to your WordPress virtual host 
+
+https://pcXX.sse.ws.afnog.org/
+

@@ -1,0 +1,42 @@
+#!/bin/sh
+
+led='/sys/class/leds/smc::sleep_led'
+interval_min=300
+interval_max=2000
+mark_min=100
+brightness_min=4
+brightness_max=31
+
+modprobe ledtrig_timer
+
+echo timer > $led/trigger
+
+top -b </dev/null \
+| grep ^%Cpu --color=none --line-buffered \
+| sed -ue "s/ id.*//" -e "s/.* //" -e "s/\.[0-9]$//" \
+| while read idle; do
+	oldmark=$mark
+	oldspace=$space
+	oldbrightness=$brightness
+
+	busy=$(( 100-$idle ))
+
+	interval=$(( $idle * ($interval_max-$interval_min) / 100 + $interval_min ))
+	
+	mark=$(( $busy * ($interval-$mark_min) / 100 + $mark_min ))
+	if [ $mark -lt $mark_min ]; then mark=$mark_min; fi
+	space=$(($interval - $mark))
+
+	brightness=$(( $busy * ($brightness_max - $brightness_min) / 100 + $brightness_min ))
+	if [ $brightness -lt $brightness_min ]; then brightness=$brightness_min; fi
+	if [ "$oldbrightness" != $brightness ]; then
+		echo $mark $space $brightness
+		echo $brightness > $led/brightness
+	fi
+
+	if [ "$oldmark" != $mark -o "$oldspace" != $space ]; then
+		echo $mark $space $brightness
+		echo $mark > $led/delay_on
+		echo $space > $led/delay_off
+	fi
+done

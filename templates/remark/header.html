@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+This is a document loader and renderer using Remark: http://remarkjs.com/#1
+
+It acts as a 404 page handler, intercepting requests for pages that don't
+exist, adding .md to the end of the URL, fetching the contents using AJAX
+and rendering them as an HTML presentation using Remark.
+
+The actual content is found at the URL that you accessed, followed by .md,
+for example: http://afnog.github.io/sse/exim/presentation.md
+
+You can fork and modify this presentation on Github:
+https://github.com/afnog/afnog.github.io
+-->
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+	@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+	@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+	body {
+		font-family: 'Droid Serif';
+	}
+	h1, h2, h3 {
+		font-family: 'Yanone Kaffeesatz';
+		font-weight: normal;
+	}
+	h1, h2 {
+		border-bottom: 0.1em solid red;
+	}
+	.title h1 {
+		padding-bottom: 0.5em;
+	}
+	.title h2 {
+		border: none;
+	}
+	img {
+		max-width: 100%;
+		max-height: 80%;
+	}
+	.remark-slide-content {
+		font-size: 150%;
+	}
+	.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	li {
+		margin: 1em 0;
+	}
+	.remark-code-line {
+		white-space: pre-wrap;
+		line-height: 150%;
+		background: #eee;
+		padding: 0 0.5em;
+		position: relative;
+		font-size: 140%;
+	}
+	.sh .remark-code-line {
+		margin-left: 1.5em;
+		color: #804;
+	}
+	.sh .remark-code-line:before {
+		content: '\25B8';
+		position: absolute;
+		left: -1em;
+	}
+	li > ul, .small ul, .small p {
+		font-size: 85%;
+	}
+	li > ul > li, .small li {
+		margin: 0.7em 0;
+	}
+	.height_8em > * {
+		height: 8em;
+	}
+	blockquote {
+		background: #fee;
+		margin: 0;
+		padding: 0.5em 1em;
+		border-left: 0.2em solid red;
+	}
+	.red {
+		color: red;
+	}
+    </style>
+  </head>
+  <body>
+	<div id="loading">
+		<h1>Loading</h1>
+		<p>Please wait... If this message doesn't disappear soon, check whether you have JavaScript enabled?</p>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var url = location.pathname + ".md";
+		var lastText = undefined;
+		var slideshow = remark.create({sourceUrl: url});
+		$('#loading').hide();
+
+		/*
+		jQuery.ajax({
+			url: url,
+			dataType: "text",
+			success: function(data, textStatus, jqXHR)
+			{
+				lastText = data;
+				jQuery('#source').html(data);
+				slideshow = remark.create();
+				$('#loading').hide();
+			},
+			error: function(jqXHR, textStatus, errorThrown)
+			{
+				alert("Failed to load page: " + url + ": " +
+					textStatus + " " + errorThrown);
+			}
+		});
+		*/
+
+		var interval = setInterval(function() {
+			// Do nothing if not finished loading yet
+			if (slideshow)
+			{
+				jQuery.ajax({
+					url: url,
+					dataType: "text",
+					cache: false,
+					success: function(data, textStatus, jqXHR)
+					{
+						if (data != lastText)
+						{
+							slideshow.loadFromString(data);
+							lastText = data;
+						}
+					},
+					error: function(jqXHR, textStatus, errorThrown)
+					{
+						console.log("Failed to load page: " + url + ": " +
+							textStatus + " " + errorThrown);
+					}
+				});
+			}
+		}, 2000);
+	</script>
+  </body>
+</html>

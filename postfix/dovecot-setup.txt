@@ -1,0 +1,109 @@
+Dovecot Setup
+
+1. Make a copy of the existing dovecot file and add the following to the file we will use
+
+	cd /usr/local/etc
+	sudo mv dovecot.conf dovecot.conf.orig
+	sudo ee dovecot.conf
+
+###########
+protocols = imap imaps
+disable_plaintext_auth = yes
+log_path = /var/log/dovecot
+ssl_cert_file = /usr/local/etc/apache22/server.crt
+ssl_key_file = /usr/local/etc/apache22/server.key
+mail_location = mbox:~/mail/:INBOX=/var/mail/%u
+mail_privileged_group = mail
+dotlock_use_excl = yes
+verbose_proctitle = yes
+first_valid_uid = 1000
+first_valid_gid = 1000
+maildir_copy_with_hardlinks = yes
+protocol imap {
+  imap_client_workarounds = delay-newmail netscape-eoh tb-extra-mailbox-sep
+}
+  
+protocol pop3 {
+  pop3_uidl_format = %08Xu%08Xv
+  pop3_client_workarounds = outlook-no-nuls oe-ns-eoh
+}
+protocol managesieve {
+}
+protocol lda {
+  sendmail_path = /usr/sbin/sendmail
+}
+auth_username_format = %Lu
+auth default {
+  mechanisms = plain login
+  passdb pam {
+    args = session=yes dovecot
+  }
+  userdb passwd {
+    args = blocking=yes
+  }
+  user = root
+  socket listen {
+    master {
+      path = /var/run/dovecot/auth-master
+      mode = 0600
+    }
+    client {
+      path = /var/run/dovecot/auth-client
+      mode = 0660
+    }
+  }
+}
+dict {
+}
+plugin {
+}
+######
+
+Save and exit the file. 
+
+
+3. Create log file and start dovecot
+	
+	sudo touch /var/log/dovecot
+	sudo service dovecot start
+
+
+
+4. Test your IMAP client with telnet
+
+	$openssl s_client -crlf -connect localhost:993
+
+TRY THE FOLLOWING COMMANDS ONE BY ONE:
+	
+
+	tag login afnog afnog
+
+	tag LIST "" "*"
+
+	tag SELECT INBOX
+	
+	tag STATUS INBOX (MESSAGES)
+
+	tag FETCH 1:5 (BODY[HEADER])
+	
+	tag FETCH 2 (BODY)
+
+	tag LOGOUT
+
+
+
+5. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
+
+6. Optional: Try the same commands with normal IMAP on port 143.
+
+	$telnet localhost 143
+
+
+
+
+
+
+
+
+
+
