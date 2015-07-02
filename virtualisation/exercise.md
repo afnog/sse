@@ -165,6 +165,19 @@ Depends on your physical keyboard. Only used on the console, not by SSH, so not 
 * virsh list --all
 * virsh autostart FreeBSD-Gold
 
+## Questions
+
+* How big are the disk images?
+	* How big could they become?
+* What hostname do the machines have?
+	* How would you set it automatically?
+* 	Use DHCP, set hostname="" in /etc/rc.conf
+* How can you manage them in bulk?
+	* How do you deal with OS updates?
+	* What is the system clock set to?
+	* What happens to system logs?
+	* What are the SSH keys of these systems?
+
 ## AfNOG gold image
 
 These steps are to create a new gold image for training (each year).
