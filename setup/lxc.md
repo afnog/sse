@@ -68,5 +68,21 @@ Check that you can access the Internet, and then reboot the box and check that i
 Now we can setup the guest:
 
 	adduser afnog
-	apt install nano sudo openssh-server vim
+	apt install nano sudo openssh-server vim ping
 	usermod -G sudo afnog
+
+You should now be able to SSH in as user `afnog` to complete the installation:
+
+	sudo vi /etc/network/interfaces
+
+Make it look like this:
+
+	auto lo
+	iface lo inet loopback
+
+	auto eth0
+	iface eth0 inet static
+		# Please check the following values are appropriate for your network:
+		address 196.200.219.101
+		netmask 255.255.255.0
+		gateway 196.200.219.1
