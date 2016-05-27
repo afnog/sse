@@ -36,7 +36,7 @@ Setup a local APT cache:
 
 	sudo apt install apt-cacher-ng
 
-Following https://help.ubuntu.com/lts/serverguide/lxc.html:
+Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
 	sudo apt install lxc vlan
 
@@ -44,9 +44,8 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html:
 	echo "lxc.id_map = u 0 100000 65536" > ~/.config/lxc/default.conf
 	echo "lxc.id_map = g 0 100000 65536" >> ~/.config/lxc/default.conf
 	echo "lxc.network.type = veth" >> ~/.config/lxc/default.conf
-	# echo "lxc.network.link = lxcbr0" >> ~/.config/lxc/default.conf
 	echo "lxc.network.link = br0" >> ~/.config/lxc/default.conf
-	# echo "$USER veth lxcbr0 2" | sudo tee -a /etc/lxc/lxc-usernet
+	echo "lxc.start.auto = 1" >> ~/.config/lxc/default.conf
 	echo "$USER veth br0 2" | sudo tee -a /etc/lxc/lxc-usernet
 
 	# https://help.ubuntu.com/lts/serverguide/network-configuration.html#bridging
