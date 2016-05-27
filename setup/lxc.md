@@ -90,6 +90,6 @@ Make it look like this:
 	auto eth0
 	iface eth0 inet static
 		# Please check the following values are appropriate for your network:
-		address 196.200.219.101
+		address 196.200.219.100
 		netmask 255.255.255.0
 		gateway 196.200.219.1
