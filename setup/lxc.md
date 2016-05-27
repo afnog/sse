@@ -126,4 +126,7 @@ Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 
 Check that you can run `apt update` on the guest.
 
+Edit your user's crontab and add the following line to make your containers auto-start:
+
+	@reboot lxc-autostart
 
