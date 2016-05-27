@@ -148,10 +148,12 @@ Optional: time how long it takes for them all to start completely (enough to get
 
 And try to reduce it with unionfs mounts:
 
+	lxc-autostart -k -t 5
+	ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
-		mv .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs{,.orig}
-		echo ".local/share/lxc/debian8/rootfs=RO:.local/share/lxc/pc$i.sse.ws.afnog.org/rootfs.rw=RW" \
-			".local/share/lxc/pc$i.sse.ws.afnog.org/rootfs" \
+		mv $ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
+		echo "$ROOT/debian8/rootfs=RO:$ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=RW" \
+			"$ROOT/pc$i.sse.ws.afnog.org/rootfs" \
 			"fuse.unionfs-fuse allow_other,cow,use_ino 0 0" \
 		| sudo tee -a /etc/fstab
 	done
