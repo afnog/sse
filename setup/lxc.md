@@ -141,3 +141,16 @@ Stop the container and make a lot of copies:
 	done
 	lxc-autostart
 
+Optional: time how long it takes for them all to start completely (enough to get an IP address):
+
+	lxc-autostart -k -t 5
+	lxc-autostart & time while lxc-ls --fancy | awk '{ print $5 }' | grep -q -- -; do sleep 1; done
+
+And try to reduce it with unionfs mounts:
+
+	for i in `seq 1 $NUM_PCS`; do
+		mv .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs{,.orig}
+		echo ".local/share/lxc/debian8/rootfs=RO:.local/share/lxc/pc$i.sse.ws.afnog.org/rootfs.rw=RW" \
+			".local/share/lxc/pc$i.sse.ws.afnog.org/rootfs"
+			"fuse.unionfs-fuse allow_other,cow,use_ino 0 0"
+	done
