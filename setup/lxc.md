@@ -25,6 +25,7 @@ Then restart Squid
 	echo "lxc.network.link = lxcbr0" >> ~/.config/lxc/default.conf
 	echo "$USER veth lxcbr0 2" | sudo tee -a /etc/lxc/lxc-usernet
 
-	lxc-create --template debian --name debian8
+	# lxc-create --template debian --name debian8
+	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
 	lxc-ls
 	lxc-start --name debian8
