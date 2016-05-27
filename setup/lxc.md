@@ -141,12 +141,12 @@ Stop the container and make a lot of copies:
 	done
 	lxc-autostart
 
-Optional (and not yet working properly): time how long it takes for them all to start completely (enough to get an IP address):
+Optional: time how long it takes for them all to start completely (enough to get an IP address):
 
 	lxc-autostart -k -t 5
 	lxc-autostart & time while lxc-ls --fancy | awk '{ print $5 }' | grep -q -- -; do sleep 1; done
 
-And try to reduce it with unionfs mounts:
+And try to reduce it with unionfs mounts (not yet working properly due to permissions problems):
 
 	lxc-autostart -k -t 5
 	ROOT=/home/inst/.local/share/lxc
