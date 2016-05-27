@@ -156,4 +156,5 @@ And try to reduce it with unionfs mounts:
 			"$ROOT/pc$i.sse.ws.afnog.org/rootfs" \
 			"fuse.unionfs-fuse allow_other,cow,use_ino 0 0" \
 		| sudo tee -a /etc/fstab
+		sudo mount $ROOT/pc$i.sse.ws.afnog.org/rootfs
 	done
