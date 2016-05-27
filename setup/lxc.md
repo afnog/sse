@@ -38,7 +38,7 @@ Setup a local APT cache:
 
 Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
-	sudo apt install lxc vlan
+	sudo apt install bridge-utils lxc vlan
 
 	mkdir -p ~/.config/lxc
 	echo "lxc.id_map = u 0 100000 65536" > ~/.config/lxc/default.conf
@@ -48,10 +48,9 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	echo "lxc.start.auto = 1" >> ~/.config/lxc/default.conf
 	echo "$USER veth br0 2" | sudo tee -a /etc/lxc/lxc-usernet
 
-	# https://help.ubuntu.com/lts/serverguide/network-configuration.html#bridging
-	sudo apt install bridge-utils
-
 Edit `/etc/network/interfaces` and make it look like this, to enable bridging for LXC containers:
+
+	# https://help.ubuntu.com/lts/serverguide/network-configuration.html#bridging
 
 	auto lo
 	iface lo inet loopback
