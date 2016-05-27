@@ -141,7 +141,7 @@ Stop the container and make a lot of copies:
 	done
 	lxc-autostart
 
-Optional: time how long it takes for them all to start completely (enough to get an IP address):
+Optional (and not yet working properly): time how long it takes for them all to start completely (enough to get an IP address):
 
 	lxc-autostart -k -t 5
 	lxc-autostart & time while lxc-ls --fancy | awk '{ print $5 }' | grep -q -- -; do sleep 1; done
@@ -156,5 +156,6 @@ And try to reduce it with unionfs mounts:
 			"$ROOT/pc$i.sse.ws.afnog.org/rootfs" \
 			"fuse.unionfs-fuse allow_other,cow,use_ino 0 0" \
 		| sudo tee -a /etc/fstab
+		sudo sed -i -e "s/100/$[100+$i]/" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
 		sudo mount $ROOT/pc$i.sse.ws.afnog.org/rootfs
 	done
