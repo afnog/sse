@@ -159,3 +159,4 @@ And try to reduce it with unionfs mounts (not yet working properly due to permis
 		sudo sed -i -e "s/100/$[100+$i]/" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
 		sudo mount $ROOT/pc$i.sse.ws.afnog.org/rootfs
 	done
+	lxc-autostart
