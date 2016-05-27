@@ -67,4 +67,6 @@ Check that you can access the Internet, and then reboot the box and check that i
 
 Now we can setup the guest:
 
-
+	adduser afnog
+	apt install nano sudo openssh-server vim
+	usermod -G sudo afnog
