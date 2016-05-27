@@ -35,20 +35,27 @@ Edit `/etc/network/interfaces` and make it look like this, to enable bridging fo
 	auto lo
 	iface lo inet loopback
 
-	auto br0
-	iface br0 inet static
-		# Please check the following values are appropriate for your network:
+	auto enp1s0f0
+	iface enp1s0f0 inet static
 		address 196.200.223.144
 		netmask 255.255.255.0
 		gateway 196.200.223.1
-		bridge_ports enp1s0f0
+
+	auto br0
+	iface br0 inet static
+		# Please check the following values are appropriate for your network:
+		address 196.200.219.2
+		netmask 255.255.255.0
+		bridge_ports enp1s0f0.219
 		bridge_fd 0
 		bridge_hello 2
 		bridge_maxage 12
 		bridge_stp off
 
-	iface enp1s0f0 inet static
+	auto enp1s0f0.219
+	iface enp1s0f0.219 inet static
 		address 0.0.0.0
+		vlan-raw-device enp1s0f0
 
 Then bring the interface down and up again:
 
