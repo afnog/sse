@@ -135,9 +135,9 @@ Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
 	NUM_PCS=30
-	for i in {1..$NUM_PCS}; do lxc-copy --name debian8 --newname pc$i.sse.ws.afnog.org; done
-	for i in {1..$NUM_PCS}; do sudo sed -i -e "s/100/$[100+$i]./" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces; done
-	for i in {1..$NUM_PCS}; do lxc-start --name pc$i.sse.ws.afnog.org; done
-
-
+	for i in `seq 1 $NUM_PCS`; do
+		lxc-copy --name debian8 --newname pc$i.sse.ws.afnog.org
+		sudo sed -i -e "s/100/$[100+$i]/" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
+	done
+	lxc-autostart
 
