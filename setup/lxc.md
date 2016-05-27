@@ -46,7 +46,8 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	echo "lxc.network.type = veth" >> ~/.config/lxc/default.conf
 	echo "lxc.network.link = br0" >> ~/.config/lxc/default.conf
 	echo "lxc.start.auto = 1" >> ~/.config/lxc/default.conf
-	echo "$USER veth br0 2" | sudo tee -a /etc/lxc/lxc-usernet
+	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
+	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
 
 Edit `/etc/network/interfaces` and make it look like this, to enable bridging for LXC containers:
 
@@ -86,7 +87,7 @@ Check that you can access the Internet, and then reboot the box and check that i
 
 	# lxc-create --template debian --name debian8
 	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
-	lxc-ls
+	lxc-ls --fancy
 	chmod a+x .local
 	chmod a+x .local/share
 	lxc-start --name debian8
@@ -129,4 +130,12 @@ Check that you can run `apt update` on the guest.
 Edit your user's crontab and add the following line to make your containers auto-start:
 
 	@reboot lxc-autostart
+
+Stop the container and make a lot of copies:
+
+	lxc-stop --name debian8 -t 30
+	for i in {1..30}; do lxc-copy --name debian8 --newname pc$i.sse.ws.afnog.org; done
+	for i in {1..30}; do lxc-start --name pc$i.sse.ws.afnog.org; done
+
+
 
