@@ -16,7 +16,7 @@ Edit `/etc/squid/squid.conf` and add the following lines:
 
 Then restart Squid
 
-	sudo apt install lxc
+	sudo apt install lxc vlan
 
 	mkdir -p ~/.config/lxc
 	echo "lxc.id_map = u 0 100000 65536" > ~/.config/lxc/default.conf
