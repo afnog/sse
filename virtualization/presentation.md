@@ -105,7 +105,7 @@ Check that you can ping the Apt cache server:
 
 Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 
-	Acquire::http::Proxy "http://197.4.11.251:3142";
+	Acquire::http::Proxy "http://196.200.219.2:3142";
 
 ---
 ## Install the Kilo repository
