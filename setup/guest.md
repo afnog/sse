@@ -12,6 +12,7 @@ You should now be able to SSH in as user `afnog` to complete the installation.
 
 	ssh afnog@<dynamic-ip>
 	mkdir .ssh
+	sudo mkdir /root/.ssh
 
 Sudo edit `/etc/network/interfaces` and make it look like this:
 
@@ -30,6 +31,7 @@ Restart networking (on the guest) and reconnect using the new IP (196.200.219.10
 Copy an SSH key into the guest:
 
 	scp ~/.ssh/id_rsa.pub afnog@196.200.219.100:.ssh/authorized_keys
+	ssh afnog@196.200.219.100 sudo cp .ssh/authorized_keys /root/.ssh/authorized_keys
 
 (Unless already present in `/etc/apt/apt.conf`:) sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 
