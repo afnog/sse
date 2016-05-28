@@ -16,7 +16,7 @@ Connect to the server using a VNC client to complete the installation. E.g. 196.
 
 During installation, say Yes to using a network mirror, and set the HTTP proxy to
 http://196.200.223.144:3142/. For Software Selection, enable only SSH Server and
-standard system utilities, disable the desktop
+standard system utilities, disable the desktop.
 
 Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
