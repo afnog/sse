@@ -35,5 +35,5 @@ Copy an SSH key into the guest:
 
 	Acquire::http::Proxy "http://196.200.219.2:3142";
 
-Check that you can run `apt update` on the guest.
+Run `apt update` and `apt upgrade` on the guest.
 
