@@ -15,7 +15,7 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
 	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
 
-Create a gold master server:
+Create a gold master guest image:
 
 	# lxc-create --template debian --name debian8
 	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
