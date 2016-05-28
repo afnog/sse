@@ -46,10 +46,12 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 	<tbody>
 		<!-- sorted by surname -->
 		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
+		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td>Ghana</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
+		<tr id="E"> <td>Emmanuel</td>   <td>E</td> <td></td> </tr>
 	</tbody>
 </table>
 
@@ -60,43 +62,26 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |First Names	|Surname	|Organisation				|Country
 |:-             |:-             |:-                                     |:-
 |Amel		|HAMIMY		|SudREN					|Sudan
-|Salma		|BASHIR		|SudREN					|Nigeria
-|Adefolarin	|BOLAHI		|Adeleke University			|Nigeria
-|Patrick	|KIREMBU	|Angani Limited				|Uganda
-|Brian		|MASIGA		|Research Education Network For Uganda	|Uganda
-|Robert		|LUBANGA	|UCU					|Uganda
-|Cedrick Adrien	|MBEYET		|AFRINIC				|Mauritius
-|Baraka		|CHUMA		|Ruaha University College		|Nigeria
-|GABRIEL	|AWOFADEJU	|University of Ibadan			|Nigeria
-|Yankuba	|JAITEH		|GAMTEL					|Ghana
-|Mary		|JONAH		|Ghana Dot Com				|Nigeria
-|Oluwafemi	|FOLARIN	|Landmark University 			|Nigeria
-|Sunday		|OYEBAMIJI	|University of Ibadan			|Nigeria
-|Caleb		|OGUNDELE	|University of Ibadan			|Nigeria
-|Timothy	|AKINFENWA	|Osun State University Osogbo		|Nigeria	
-|Serge		|Roland		|SANOU,	ARCEP				|Burkina Faso
 
 ### Timetable
 
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
-|		|25/05			|26/05			|27/05			|28/05			|29/05
-|09:00-11:00	|[Introduction][]	|[Monitoring][]		|[DNS Resolver][]	|[SMTP and Spam][]	|[PGP][]
+|		|30/05			|31/05			|01/06			|02/06			|03/06
+|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][]		|[RADIUS][]		|[Load Balancing][]
 |-
 |Tea break
-|11:30-13:00	|[DNS Fundamentals][]	|[Monitoring][]		|[DNS Authoritative][]	|[Spam Filtering][]	|[Backups][]
+|11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Virtualisation][]
 |-
 |Lunch
-|14:00-16:00	|[Apache][]		|[RADIUS][]		|[Load Balancing][]	|[MAAS][]		|[Ganeti][]
+|14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[Dovecot][]		|[Virtualisation][]
 |-
 |Tea break
-|16:30-18:30	|[Apache][]		|[RADIUS][]		|[Virtualization]	|[MAAS][]		|Expert Panel and [Closing Survey][]
+|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[SquirrelMail][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|User Databases	|[DNSSEC][] and [EduRoam][]	|Closed |Closing Ceremony
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|Closed	|[DNSSEC][]	|[Ansible][] |Closing Ceremony
 {: .timetable width="80%"}
-
-[EduRoam]: "http://www.ws.afnog.org/tutorials/eduroam/index.html"
 
 <div class="topics" markdown="1">
 ## Topics
@@ -223,8 +208,8 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.txt)
 
-### PGP
-[PGP]: #pgp
+### Data Security
+[Data Security]: #data-security
 
 #### [Joe Abley](#JA)
 
@@ -242,8 +227,8 @@ Goal: to understand the contents and layering of common Internet protocols
 * [Presentation/powerpoint](radius/radius_presentation.ppt?raw=true)
 * [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
 
-### SMTP and Spam
-[SMTP and Spam]: #smtp-and-spam
+### Postfix
+[Postfix]: #postfix
 
 #### [Kevin Chege](#KC)
 
