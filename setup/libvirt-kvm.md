@@ -32,7 +32,7 @@ Shut down the master and make a copy:
 
 Clone some VMs, with specific MAC addresses:
 
-	for pc in {1..40}; do
+	for pc in {1..32}; do
 		hostname=pc$pc
 		domainname=$hostname.sse.ws.afnog.org
 		macaddr=`echo $domainname | md5sum | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:54:\1:\2:\3:\4/'`
@@ -45,3 +45,10 @@ Clone some VMs, with specific MAC addresses:
 		sudo virsh autostart $hostname
 	done
 
+Once they have all booted, fix their hostnames:
+
+	for pc in {1..32}; do
+		ssh -to StrictHostKeyChecking=no root@196.200.219.$[200+$pc] \
+		"echo pc$pc.sse.ws.afnog.org | sudo tee /etc/hostname; 
+		"'sudo hostname `cat /etc/hostname`'
+	done
