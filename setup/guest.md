@@ -11,6 +11,7 @@ Using Debian 8 (Jessie). Setup the guest for AfNOG, starting from a (virtual) co
 You should now be able to SSH in as user `afnog` to complete the installation. 
 
 	ssh afnog@<dynamic-ip>
+	mkdir .ssh
 
 Sudo edit `/etc/network/interfaces` and make it look like this:
 
@@ -30,7 +31,7 @@ Copy an SSH key into the guest:
 
 	scp ~/.ssh/id_rsa.pub afnog@196.200.219.100:.ssh/authorized_keys
 
-Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
+(Unless already present in `/etc/apt/apt.conf`:) sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
 
 	Acquire::http::Proxy "http://196.200.219.2:3142";
 
