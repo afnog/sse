@@ -25,41 +25,7 @@ Create a gold master server:
 	lxc-start --name debian8
 	lxc-attach --name debian8
 
-Now we can setup the guest:
-
-	adduser afnog
-	apt install nano sudo openssh-server vim ping
-	usermod -G sudo afnog
-	ifconfig 
-	# Get the IP address assigned by the DHCP server
-
-You should now be able to SSH in as user `afnog` to complete the installation. 
-
-	ssh afnog@<dynamic-ip>
-
-Sudo edit `/etc/network/interfaces` and make it look like this:
-
-	auto lo
-	iface lo inet loopback
-
-	auto eth0
-	iface eth0 inet static
-		# Please check the following values are appropriate for your network:
-		address 196.200.219.100
-		netmask 255.255.255.0
-		gateway 196.200.219.1
-
-Restart networking (on the guest) and reconnect using the new IP (196.200.219.100).
-
-Copy an SSH key into the guest:
-
-	scp ~/.ssh/id_rsa.pub afnog@196.200.219.100:.ssh/authorized_keys
-
-Sudo edit `/etc/apt/apt.conf.d/01proxy` and add:
-
-	Acquire::http::Proxy "http://196.200.219.2:3142";
-
-Check that you can run `apt update` on the guest.
+Follow [guest.md] to configure the gold master guest.
 
 Edit your user's crontab and add the following line to make your containers auto-start:
 
