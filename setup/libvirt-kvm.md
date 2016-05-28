@@ -14,7 +14,7 @@ Install libvirt and KVM:
 
 Connect to the server using a VNC client to complete the installation. E.g. 196.200.223.144:5901.
 
-During installation, set the HTTP proxy to http://196.200.223.144:3124/
+During installation, set the HTTP proxy to http://196.200.223.144:3142/
 
 Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
