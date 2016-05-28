@@ -37,7 +37,7 @@ You should now be able to SSH in as user `afnog` to complete the installation.
 
 	ssh afnog@<dynamic-ip>
 
-Edit `/etc/network/interfaces` and make it look like this:
+Sudo edit `/etc/network/interfaces` and make it look like this:
 
 	auto lo
 	iface lo inet loopback
