@@ -12,7 +12,9 @@ Install libvirt and KVM:
 		--cdrom iso/debian-8.4.0-i386-DVD-1.iso --network=bridge=br0 \
 		--graphics type=vnc,port=5901,listen=0.0.0.0,password=foo
 
-Connect to the server using a VNC client to complete the installation. E.g. 196.200.223.144:5901
+Connect to the server using a VNC client to complete the installation. E.g. 196.200.223.144:5901.
+
+During installation, set the HTTP proxy to http://196.200.223.144:3124/
 
 Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
