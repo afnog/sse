@@ -1,6 +1,8 @@
 # VM setup using LXC
 
-Install Ubuntu Desktop (not Server) 16.04 AMD64.
+Install Ubuntu Desktop (not Server) 16.04 AMD64, then:
+
+	sudo apt install vim
 
 Create `/etc/network/iptables` with the following contents:
 
