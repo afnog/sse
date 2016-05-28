@@ -151,11 +151,15 @@ And try to reduce it with unionfs mounts (experimental):
 	lxc-autostart -k -t 5
 	ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
+		sudo umount $ROOT/pc$i.sse.ws.afnog.org/rootfs
 		test -d $ROOT/pc$i.sse.ws.afnog.org/rootfs.orig || mv $ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
+		mkdir -p $ROOT/pc$i.sse.ws.afnog.org/rootfs
+
 		echo "none $ROOT/pc$i.sse.ws.afnog.org/rootfs" \
-			"aufs br=$ROOT/debian8/rootfs=ro:$ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw 0 0" \
+			"aufs br=$ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw:$ROOT/debian8/rootfs=ro 0 0" \
 		| sudo tee -a /etc/fstab
-		sudo sed -i -e "s/100/$[100+$i]/" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
+
 		sudo mount $ROOT/pc$i.sse.ws.afnog.org/rootfs
+		sudo sed -i -e "s/100/$[100+$i]/" $ROOT/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
 	done
 	lxc-autostart
