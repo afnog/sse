@@ -3,7 +3,7 @@
 Using Debian 8 (Jessie). Setup the guest for AfNOG, starting from a (virtual) console:
 
 	adduser afnog
-	apt install nano sudo openssh-server vim ping
+	apt install nano sudo openssh-server vim iputils-ping
 	usermod -G sudo afnog
 	ifconfig 
 	# Get the IP address assigned by the DHCP server
