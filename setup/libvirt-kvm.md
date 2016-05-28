@@ -5,6 +5,9 @@ Using Ubuntu 16.04. Follow [server.md] first to configure the server.
 Install libvirt and KVM:
 
 	sudo apt install libvirt-bin qemu-kvm virtinst libosinfo-bin
+
+Create a gold master guest image:
+
 	osinfo-query os
 
 	sudo virt-install --connect qemu:///system     --virt-type kvm --name SSE-Gold \
@@ -17,29 +20,6 @@ Connect to the server using a VNC client to complete the installation. E.g. 196.
 During installation, say Yes to using a network mirror, and set the HTTP proxy to
 http://196.200.223.144:3142/. For Software Selection, enable only SSH Server and
 standard system utilities, disable the desktop.
-
-Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
-
-	sudo apt install lxc
-
-	mkdir -p ~/.config/lxc
-	echo "lxc.id_map = u 0 100000 65536" > ~/.config/lxc/default.conf
-	echo "lxc.id_map = g 0 100000 65536" >> ~/.config/lxc/default.conf
-	echo "lxc.network.type = veth" >> ~/.config/lxc/default.conf
-	echo "lxc.network.link = br0" >> ~/.config/lxc/default.conf
-	echo "lxc.start.auto = 1" >> ~/.config/lxc/default.conf
-	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
-	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
-
-Create a gold master server:
-
-	# lxc-create --template debian --name debian8
-	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
-	lxc-ls --fancy
-	chmod a+x .local
-	chmod a+x .local/share
-	lxc-start --name debian8
-	lxc-attach --name debian8
 
 Follow [guest.md] to configure the gold master guest.
 
