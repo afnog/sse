@@ -146,7 +146,7 @@ Optional: time how long it takes for them all to start completely (enough to get
 	lxc-autostart -k -t 5
 	lxc-autostart & time while lxc-ls --fancy | awk '{ print $5 }' | grep -q -- -; do sleep 1; done
 
-And try to reduce it with unionfs mounts (not yet working properly due to permissions problems):
+And try to reduce it with unionfs mounts (experimental):
 
 	lxc-autostart -k -t 5
 	ROOT=/home/inst/.local/share/lxc
