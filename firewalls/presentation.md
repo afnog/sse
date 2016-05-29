@@ -183,7 +183,8 @@ What effect will this have?
 
 ???
 
-No effect for now, because the policy is also ACCEPT. However you will see
+It will **-A**ppend a rule to the `INPUT` chain, which will match incoming packets.
+It will have no effect for now, because the policy is also ACCEPT. However you will see
 *icmp* packets accounted against the rule, instead of the chain.
 
 ---
