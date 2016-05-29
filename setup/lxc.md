@@ -91,7 +91,7 @@ And try to reduce it with unionfs mounts (experimental):
 	for i in `seq 1 $NUM_PCS`; do
 		sudo umount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
 		test -d $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.orig || mv $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
-		mkdir -p $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
+		mkdir -p $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs{,.rw}
 
 		echo "none $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs" \
 			"aufs br=$LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw:$LXC_ROOT/debian8/rootfs=ro 0 0" \
