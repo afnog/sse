@@ -181,11 +181,16 @@ Configure your firewall to allow ICMP packets.
 
 What effect will this have?
 
+What are the numbers?
+
 ???
 
 It will **-A**ppend a rule to the `INPUT` chain, which will match incoming packets.
 It will have no effect for now, because the policy is also ACCEPT. However you will see
 *icmp* packets accounted against the rule, instead of the chain.
+
+The first two numbers show that 0 packets (totalling 0 bytes) have matched this rule
+(since it was created or the packet counters were last reset).
 
 ---
 
@@ -238,13 +243,13 @@ Is that what you expected?
 Some people would have expected that pings would be dropped.
 
 * Hint: look at the number of packets matching the DROP rule
-* Why did no packets match? the ACCEPT rule came first
+* Why did no packets match? The ACCEPT rule came first!
 
 ---
 
 ## Rule precedence
 
-Add a DROP rule **before** the ACCEPT rule:
+Insert a DROP rule **before** the ACCEPT rule with `-I`:
 
 	$ sudo iptables -I INPUT -p icmp -j DROP
 
