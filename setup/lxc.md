@@ -35,9 +35,13 @@ Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
 	NUM_PCS=30
+	LXC_ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
-		lxc-copy --name debian8 --newname pc$i.sse.ws.afnog.org
-		sudo sed -i -e "s/100/$[100+$i]/" .local/share/lxc/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
+		hostname=pc$pc
+		domainname=$hostname.sse.ws.afnog.org
+		lxc-copy --name debian8 --newname $hostname
+		macaddr=`openssl rand -hex 4 | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:56:\1:\2:\3:\4/'`
+		echo 'lxc.network.hwaddr = $macaddr' >> $LXC_ROOT/pc$i.sse.ws.afnog.org/config
 	done
 	lxc-autostart
 
