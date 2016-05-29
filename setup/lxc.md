@@ -57,6 +57,14 @@ to LXC containers started by `at` and `cron`, by editing `/etc/systemd/system.co
 uncommenting `DefaultTasksMax` and setting it to at least 12288.
 See [here](https://news.ycombinator.com/item?id=11675133) for more information on this problem.
 
+The following commands are useful for dealing with `systemd` and control groups:
+
+* `systemd-cgls`
+* `systemd-cgtop`
+* `systemctl status`
+* `systemctl show`
+* `/sys/fs/cgroup/memory/user/inst/*/lxc`
+
 Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
