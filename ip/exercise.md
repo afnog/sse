@@ -14,6 +14,7 @@ Chris Wilson, AfNOG 2016
 * What is ARP?
 * Source and Destination Ports
 * Ports used by common services
+* What is a firewall?
 * What is Wireshark?
 
 ## Investigations
