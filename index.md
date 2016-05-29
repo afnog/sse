@@ -51,7 +51,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
-		<tr id="E"> <td>Emmanuel</td>   <td>E</td> <td></td> </tr>
+		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td></td> </tr>
 	</tbody>
 </table>
 
