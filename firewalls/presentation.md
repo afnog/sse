@@ -404,20 +404,26 @@ Add a rule to block all connection tracking to a particular port:
 
 Write your rules so that connection tracking is **not needed** (allow traffic both ways).
 
+You probably want to do this for your DNS server. How?
 
+---
 
-* FreeBSD-10.0 OS installed
-* sudo and bash installed, ports tree updated
-* Use SSH to access your server (e.g. Putty for Windows)
-* Login with afnog/afnog
-* Use sudo to execute commands as root
-* Don't change passwords
-* Don't "close security holes"
-* Don't `shutdown` your server (there's no power button!)
-* Your servers are accessible over the Internet
+## Connection Tracking Problems
+
+Add a rule to block all connection tracking to a particular port:
+
+	sudo /sbin/iptables -t raw -A PREROUTING -p tcp --dport 22 -j NOTRACK
+
+Write your rules so that connection tracking is **not needed** (allow traffic both ways).
+
+You probably want to do this for your DNS server. How?
+
+	sudo /sbin/iptables -t raw -A PREROUTING -p udp --dport 53 -j NOTRACK
 
 ---
 
 ## FIN
 
 Any questions?
+
+(yeah, right!)
