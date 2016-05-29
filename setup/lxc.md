@@ -7,13 +7,19 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	sudo apt install lxc
 
 	mkdir -p ~/.config/lxc
-	echo "lxc.id_map = u 0 100000 65536" > ~/.config/lxc/default.conf
-	echo "lxc.id_map = g 0 100000 65536" >> ~/.config/lxc/default.conf
-	echo "lxc.network.type = veth" >> ~/.config/lxc/default.conf
-	echo "lxc.network.link = br0" >> ~/.config/lxc/default.conf
-	echo "lxc.start.auto = 1" >> ~/.config/lxc/default.conf
+	LXC_DEFAULTS=~/.config/lxc/default.conf
+	echo "lxc.id_map = u 0 100000 65536" > $LXC_DEFAULTS
+	echo "lxc.id_map = g 0 100000 65536" >> $LXC_DEFAULTS
+	echo "lxc.network.type = veth" >> $LXC_DEFAULTS
+	echo "lxc.network.link = br0" >> $LXC_DEFAULTS
+	echo "lxc.start.auto = 1" >> $LXC_DEFAULTS
+	# Limit RAM used by containers:
+	echo 'lxc.cgroup.memory.limit_in_bytes = 512M' >> $LXC_DEFAULTS
+	echo 'lxc.cgroup.memory.memsw.limit_in_bytes = 1G' >> $LXC_DEFAULTS
+
 	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
 	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
+
 
 Create a gold master guest image:
 
