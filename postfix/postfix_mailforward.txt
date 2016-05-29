@@ -14,7 +14,7 @@ Edit Postfix main.cf
 	$sudo nano /etc/postfix/main.cf
 
 	##Add your neighbour's domain to the mydestination entries
-	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, , localhost
+	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, localhost
 
 
 	##Add at the end. This file contains mail routing information
