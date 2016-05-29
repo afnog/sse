@@ -1,6 +1,6 @@
 # VM setup using Libvirt and KVM
 
-Using Ubuntu 16.04. Follow [server.md] first to configure the server.
+Using Ubuntu 16.04. Follow [server.md](server.md) first to configure the server.
 
 Install libvirt and KVM:
 
@@ -21,7 +21,7 @@ During installation, say Yes to using a network mirror, and set the HTTP proxy t
 http://196.200.223.144:3142/. For Software Selection, enable only SSH Server and
 standard system utilities, disable the desktop.
 
-Follow [guest.md] to configure the gold master guest, but **leave the network configuration alone**
+Follow [guest.md](guest.md) to configure the gold master guest, but **leave the network configuration alone**
 (configured by DHCP, the default).
 
 Shut down the master and make a copy:
