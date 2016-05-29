@@ -260,6 +260,10 @@ Insert a DROP rule **before** the ACCEPT rule with `-I`:
 	   10   840 ACCEPT     icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
 	    0     0 DROP       icmp --  *      *       0.0.0.0/0    0.0.0.0/0           
 
+---
+
+## Rule precedence testing
+
 	$ ping -c1 127.0.0.1
 	PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
 	^C
