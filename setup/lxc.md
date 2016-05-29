@@ -102,7 +102,6 @@ And try to reduce it with unionfs mounts (experimental):
 		sudo mount $LXC_ROOT/$hostname/rootfs
 		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/$hostname/rootfs/etc/network/interfaces
 		lxc-start -n $hostname
-		lxc-attach -n $hostname -- sh -c "echo $domainname > /etc/hostname"
-		lxc-stop -n $hostname -r -W
+		lxc-attach -n $hostname -- sh -c "echo $domainname > /etc/hostname; reboot"
 	done
 	lxc-autostart
