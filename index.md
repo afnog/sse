@@ -51,7 +51,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
-		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td></td> </tr>
+		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td>?</td> </tr>
 	</tbody>
 </table>
 
@@ -131,7 +131,19 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 * [Exercise](config-mgmt/Readme.md)
 
+### Data Security
+[Data Security]: #data-security
+
+#### [Joe Abley](#JA)
+
+* [Presentation (PowerPoint)](pgp/pgp-presentation1.pptx)
+* [Presentation (PDF)](pgp/pgp-presentation1.pdf)
+* [Exercise](pgp/pgp-exercise1.txt)
+* [Key File](pgp/pgp-presentation1.key)
+* [Old NANOG Presentation](pgp/nanog29-jabley-pgp.pdf)
+
 ### DNS
+[DNS]: #dns
 
 #### [Joe Abley](#JA)
 
@@ -207,17 +219,6 @@ Goal: to understand the contents and layering of common Internet protocols
 
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.txt)
-
-### Data Security
-[Data Security]: #data-security
-
-#### [Joe Abley](#JA)
-
-* [Presentation (PowerPoint)](pgp/pgp-presentation1.pptx)
-* [Presentation (PDF)](pgp/pgp-presentation1.pdf)
-* [Exercise](pgp/pgp-exercise1.txt)
-* [Key File](pgp/pgp-presentation1.key)
-* [Old NANOG Presentation](pgp/nanog29-jabley-pgp.pdf)
 
 ### RADIUS
 [RADIUS]: #radius
