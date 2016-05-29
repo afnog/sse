@@ -187,13 +187,13 @@ Goal: DNSSEC High Level Awareness.
 * Ganeti Presentation: to be written
 * [Ganeti Exercise](virtualization/ganeti-exercise.html)
 
-### Internet Protocols
+### Network Security
+[Network Security]: #network-security
 
 #### [Chris Wilson](#CW)
 
-Goal: to understand the contents and layering of common Internet protocols
-
-* [Exercise](ip/exercise.html)
+* Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
+* Firewalls: [presentation](firewalls)
 
 ### Load Balancing
 [Load Balancing]: #load-balancing
