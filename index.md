@@ -317,14 +317,27 @@ All done by CW unless anyone else wants to.
 
 ### Quick Start (editing)
 
+If someone else is hosting, then all you have to do is:
+
 * Request write access to the repositories below, or clone them (and use the clone URLs instead)
 * Install SparkleShare
 * Add `git@github.com:afnog/sse.git` to it
+* Edit the Markdown files in `~/SparkleShare/sse/.../*.md`
+* The host will detect your changes, generate the HTML and upload to Github and the local server.
+
+### Quick Start (hosting)
+
+Only one person should host a repository, otherwise you will duplicate work and maybe have race conditions
+(although you should both be producing and updating the same content, so it should actually work if you
+have more than one, but there's no point or advantage to it.)
+
+If you want to host, you need a Linux or Mac desktop with `lsyncd`, `rsync` and `ruby` installed. Then follow
+these steps:
+
 * Add `git@github.com:afnog/afnog.github.io.git` to it
 * Install Jekyll: `sudo gem install jekyll execjs therubyracer`
 * Open a command prompt and go to ~/SparkleShare/sse
 * Run `make serve`
-* Edit the Markdown files in `~/SparkleShare/sse/.../*.md`
 * View the results in your browser at http://localhost:4000/.../*.html
 
 ### Source code (Markdown)
