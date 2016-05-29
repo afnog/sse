@@ -29,7 +29,8 @@ otherwise the `lxc.cgroup.memory.memsw.limit_in_bytes` setting will not work, an
 you from starting any LXC containers. 
 
 For this to work, you also need to edit `/etc/pam.d/common-session*, find the lines for
-`pam_cgso.so` and add `,devices` to the end, like this:
+`pam_cgso.so` and add `,devices` to the end, as described
+[here](http://comments.gmane.org/gmane.linux.kernel.containers.lxc.general/11395), like this:
 
 	session optional        pam_cgfs.so -c freezer,memory,name=systemd,devices
 
