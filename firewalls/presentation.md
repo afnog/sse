@@ -143,6 +143,7 @@ Decisions that can't be made based on one packet:
 
 We use the `iptables` command to interact with the firewall (in the kernel):
 
+	$ sudo apt install iptables
 	$ sudo iptables -L -nv
 
 	Chain INPUT (policy ACCEPT 119 packets, 30860 bytes)
