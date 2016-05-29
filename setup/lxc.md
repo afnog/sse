@@ -68,7 +68,7 @@ The following commands are useful for dealing with `systemd` and control groups:
 Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
-	NUM_PCS=30
+	NUM_PCS=40
 	LXC_ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
 		hostname=pc$pc
@@ -87,17 +87,17 @@ Optional: time how long it takes for them all to start completely (enough to get
 And try to reduce it with unionfs mounts (experimental):
 
 	lxc-autostart -k -t 5
-	ROOT=/home/inst/.local/share/lxc
+	LXC_ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
-		sudo umount $ROOT/pc$i.sse.ws.afnog.org/rootfs
-		test -d $ROOT/pc$i.sse.ws.afnog.org/rootfs.orig || mv $ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
-		mkdir -p $ROOT/pc$i.sse.ws.afnog.org/rootfs
+		sudo umount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
+		test -d $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.orig || mv $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
+		mkdir -p $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
 
-		echo "none $ROOT/pc$i.sse.ws.afnog.org/rootfs" \
-			"aufs br=$ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw:$ROOT/debian8/rootfs=ro 0 0" \
+		echo "none $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs" \
+			"aufs br=$LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw:$LXC_ROOT/debian8/rootfs=ro 0 0" \
 		| sudo tee -a /etc/fstab
 
-		sudo mount $ROOT/pc$i.sse.ws.afnog.org/rootfs
-		sudo sed -i -e "s/100/$[100+$i]/" $ROOT/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
+		sudo mount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
+		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
 	done
 	lxc-autostart
