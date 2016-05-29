@@ -304,6 +304,25 @@ Check the results:
 
 ---
 
+### Simple rule set
+
+This is one of the first things I set up on any new box:
+
+	iptables -P INPUT ACCEPT
+	iptables -F INPUT
+	iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
+	iptables -A INPUT -i lo -j ACCEPT
+	iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+	iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+	iptables -A INPUT -m limit --limit 5/min -j LOG --log-prefix 'Rejected INPUT '
+
+Check that I can access the server without triggering a "Rejected INPUT" message in the logs, and then
+lock it down:
+
+	iptables -P INPUT DROP
+
+---
+
 ## Persistent Rules
 
 What happens when you reboot?
@@ -328,8 +347,6 @@ Or install `iptables-persistent` which automates this a little.
 ## Connection Tracking
 
 Every packet is tracked by default (made into a connection).
-
-* Even if you don't use iptables at all!
 
 You can see them with `conntrack -L`:
 
@@ -381,8 +398,11 @@ Or if you run a server that has thousands of clients?
 
 ## Connection Tracking Problems
 
+Add a rule to block all connection tracking to a particular port:
 
+	sudo /sbin/iptables -t raw -A PREROUTING -p tcp --dport 22 -j NOTRACK
 
+Write your rules so that connection tracking is **not needed** (allow traffic both ways).
 
 
 
