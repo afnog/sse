@@ -3,7 +3,7 @@ jekyll: process
 layout: default
 ---
 
-# Internet Protocols
+# Internet Protocols and Network Security
 
 Chris Wilson, AfNOG 2016
 
@@ -66,16 +66,20 @@ If you find something interesting/unusual, send a pcap file to the intructor.
 ### Check for open ports
 
 ```
-sudo pkg install nmap
+sudo apt install nmap
 ```
 
 Find out which hosts are up on our LAN, and the whole of AfNOG. Try to identify them.
+
+	nmap -sP 196.200.219.0/24
 
 Check for open ports:
 
 * On your virtual server
 * On your laptop
 * On a real server under your control
+
+	nmap -sS 196.200.219.2
 
 What do the different states mean? open/closed/filtered
 
