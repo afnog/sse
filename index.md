@@ -42,16 +42,16 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ### Instructors
 
 <table class="instructors">
-	<thead><tr><th>Name</th><th>Initials</th><th>From</th></tr></thead>
+	<thead><tr><th>Name</th><th>Initials</th><th>From</th><th>Country</th></tr></thead>
 	<tbody>
 		<!-- sorted by surname -->
-		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td>Canada</td> </tr>
-		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td>Ghana</td> </tr>
-		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td>Kenya</td> </tr>
-		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td>Ghana</td> </tr>
-		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td>Kenya</td> </tr>
-		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td>UK</td> </tr>
-		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td>?</td> </tr>
+		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td><a href="http://www.nsrc.org/">NSRC</a></td> <td>Canada</td> </tr>
+		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td></td> <td>Ghana</td> </tr>
+		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td></td> <td>Kenya</td> </tr>
+		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td></td> <td>Ghana</td> </tr>
+		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td></td> <td>Kenya</td> </tr>
+		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td></td> <td>UK</td> </tr>
+		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td></td> <td></td> </tr>
 	</tbody>
 </table>
 
