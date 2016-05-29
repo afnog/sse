@@ -308,7 +308,7 @@ Check the results:
 
 ---
 
-### Simple rule set
+## Simple rule set
 
 This is one of the first things I set up on any new box:
 
