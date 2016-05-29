@@ -21,7 +21,7 @@ Chris Wilson, AfNOG 2016
 ### Install Wireshark on your computer
 
 Some versions [already downloaded](http://sse-mini1.mtg.afnog.org/wireshark/),
-otherwise go to http://www.wireshark.org/download.html.
+otherwise go to [http://www.wireshark.org/download.html].
 
 ### Capture some traffic
 
