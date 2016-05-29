@@ -6,7 +6,13 @@ Exercise 2.3: Building a DNS resolver
 
     # dpkg --get-selections | grep unbound
 
-(is Unbound already installed?)
+If Unbound is already installed, the command above will display
+some package names with "unbound" in their names. If it isn't, you
+won't see anything, and you need to install it.
+
+Another way of checking is to simply run the unbound command and
+see whether it seems to be there. The -h option means "help" -- the
+command below will not work if unbound is not installed.
 
     $ /usr/sbin/unbound -h
     usage:  unbound [options]
@@ -32,6 +38,7 @@ Happily, the unbound package comes with a script to set up everything
 we need for this to work.
 
     # unbound-control-setup
+
 
 2. Start the server and check it is running
 -------------------------------------------
@@ -115,13 +122,14 @@ answer our query. We can configure Unbound to accept requests from
 other machines (but not ALL other machines! Why?)
 
 We can expand the default access control list by creating a new
-file as root in /etc/unbound/unbound.conf.d called clients.conf:
+file as root in the directory /etc/unbound/unbound.conf.d called
+clients.conf:
 
     server:
         interface: 0.0.0.0
         interface: ::0
-        access-control: 197.4.11.0/24 allow
-        access-control: 2001:43f8:220:219::/64 allow
+        access-control: 196.200.219.0/20 allow
+        access-control: 2001:43f8:220::/48 allow
 
 The two interface lines instruct inbound to bind to all interfaces
 on IPv4 (first line) and IPv6 (second line).

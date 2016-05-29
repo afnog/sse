@@ -7,28 +7,31 @@ will setup their machine to be a slave server for your domain. Then you
 will ask the administrator for the domain above you (afnog.guru) to delegate
 your domain to you.
 
-IMPORTANT! Yesterday we configured named as a cache. Today we will configure
-named as an authority server. Change the configuration of your server so that
-it uses other resolvers itself:
+* IMPORTANT! Yesterday we configured unbound as a cache that would
+* respond to DNS requests from other clients in the AfNOG network.
+*
+* In this exercise we want to configure an authoritative server for
+* clients throughout the world to send queries to, using BIND9.
+*
+* We can't have both unbound and BIND9 listening on the same port on
+* the same addresses. So we will restrict unbound just to listen to
+* localhost, and BIND9 just to live on other interfaces.
 
->    # vi /etc/resolv.conf
+Recall that the default behaviour of unbound was just to listen on
+localhost -- we had to add configuration to make it listen to other
+interfaces, which we will now remove:
 
-Change the nameservers to the following:
+>   # rm /etc/unbound/unbound.conf.d/clients.conf
 
-  nameserver 197.4.15.10
+Then we will restart unbound:
 
-Do not leave the "nameserver 127.0.0.1" line in the file.
+>   # service unbound restart
 
-Then stop Unbound from running:
+And check that it is still running:
 
-    # service unbound stop
+>   # unbound-control status
 
-We can only have one piece of software listening to requests on
-port 53 at any time, so in order to let BIND9 work as an authoritative
-server on the same address we need to first stop Unbound working
-as a recursive server.
-
-We are now ready to start.
+We are now ready to start!
 
 
 Exercise
@@ -82,7 +85,7 @@ Exercise
 
         # named-checkconf
         # named-checkzone xxxxx.afnog.guru. \
-			/var/cache/bind/master/xxxxx.bogus.gh.
+			/var/cache/bind/master/xxxxx.afnog.guru.
 
 *   If there are any errors, correct them*
 
@@ -142,3 +145,4 @@ Exercise
 *   Add a new resource record to your zone file. Remember to update the
     serial number. Check that your slaves have updated. Try resolving this
     new name from elsewhere.
+
