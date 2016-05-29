@@ -5,7 +5,7 @@ layout: default
 
 # Internet Protocols
 
-Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
+Chris Wilson, AfNOG 2016
 
 ## Questions to get you thinking
 
@@ -20,7 +20,7 @@ Chris Wilson, [Aptivate](http://www.aptivate.org/), AfNOG 2014
 
 ### Install Wireshark on your computer
 
-Some versions [already downloaded](http://mini1.sse.ws.afnog.org/~inst/wireshark/),
+Some versions [already downloaded](http://sse-mini1.mtg.afnog.org/wireshark/),
 otherwise go to http://www.wireshark.org/download.html.
 
 ### Capture some traffic
