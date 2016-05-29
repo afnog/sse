@@ -20,6 +20,13 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
 	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
 
+Edit `/etc/default/grub` and set:
+
+	GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"
+
+otherwise the `lxc.cgroup.memory.memsw.limit_in_bytes` setting will not work, and will prevent
+you from starting any LXC containers. Then `sudo update-grup` and `sudo reboot` to activate swap
+accounting.
 
 Create a gold master guest image:
 
