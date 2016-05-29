@@ -304,142 +304,87 @@ Check the results:
 
 ---
 
+## Persistent Rules
 
-* Theory followed by practical exercises
-* Help us to help you!
-* Complaints box
-* Please set phones to silent
-* Please close your laptops during theory sessions
-
-???
-
-Please tell us if you don't understand. You're not the only one.
-
-Please don't distract others - tell us if you're bored!
-
-Suggestion: if someone's phone rings, they have to do a dance for us :)
+What happens when you reboot?
 
 ---
 
-## Timetable
+## Persistent Rules
 
-* 06:30-08:00: Breakfast at the hotel (Kempinski)
-* 07:45, 08:00, 08:15 and 08:30: Buses to the venue (Palace du Peuple)
-* 09:00: Workshops start
-* 11:00: tea break
-* 14:00-15:00: lunch at the venue (Palace du Peuple)
-* 16:30: tea break
-* 18:30: dinner at the venue (Palace du Peuple)
-* 19:30, 19:45, 20:00 and 20:15: buses to hotel (Kempinski)
+What happens when you reboot?
 
-Updates on the [NSRC wiki](https://nsrc.org/workshops/2014/afnog/wiki/Timetable).
+The rules that we created are only in the kernel's memory. They will be lost on reboot.
 
----
+How can we make them permanent? Could be as simple as:
 
-## Meals
+	/sbin/iptables-save > /etc/default/iptables
+	/sbin/iptables-restore < /etc/default/iptables
 
-* Breakfast at the hotel (Kempinski): 06:30-08:00
-* Lunch at the Palace du Peuple: 14:00-15:00
-* Dinner at the Palace du Peuple: 18:30-20:30
-
-Please be back in class on time from breaks!
+Or install `iptables-persistent` which automates this a little.
 
 ---
 
-## Extra Charges
+## Connection Tracking
 
-AfNOG will not pay for any extra charges on your hotel room, such as:
+Every packet is tracked by default (made into a connection).
 
-* phone calls
-* food and drinks (including room service)
-* laundry
+* Even if you don't use iptables at all!
 
-Beware the hotel prices!
+You can see them with `conntrack -L`:
 
----
+	sudo /usr/sbin/conntrack -L
+	tcp      6 431999 ESTABLISHED src=196.200.216.99 dst=196.200.219.140 sport=58516 dport=22
+	src=196.200.219.140 dst=196.200.216.99 sport=22 dport=58516 [ASSURED] mark=0 use=1
 
-## Inventory
-
-You should have received:
-
-* Name badges
-* Folder with notepad, pen, information pack
-
-Take your name badge to meals at the Palace du Peuple!
+What does this mean?
 
 ---
 
-## Gifts
+## Connection Tracking
 
-At the end you will receive:
+	sudo /usr/sbin/conntrack -L
+	tcp      6 431999 ESTABLISHED src=196.200.216.99 dst=196.200.219.140 sport=58516 dport=22
+	src=196.200.219.140 dst=196.200.216.99 sport=22 dport=58516 [ASSURED] mark=0 use=1
 
-* A USB stick with some O'Reilly eBooks
-* Possibly a FreeBSD CD-ROM
-
-Please share with your colleagues back at home.
-
-## Community
-
-What did Sunday said about community?
-
-???
-
-* Who will you share your knowledge with?
-* How can you continue to learn and improve your skills after the event?
-
-Build a local community, be active, organise an event and invite people!
-
-Make a plan, share the work, think about what you have to give and what you
-can gain by sharing. Who is married here? Why did you get married? Is it
-worth it?
+* ESTABLISHED is the connection state
+  * What are valid states?
+* src=196.200.216.99 is the source address of the tracked connection
+* dst=196.200.219.140 is the destination address
+  * Which one is the address of this host? Will it always be?
+* sport=58516: source port
+* dport=22: destination port
+* Another set of addresses: what is this?
 
 ---
 
-## Electronic Resources
+## Connection Tracking
 
-Web site: http://www.ws.afnog.org/afnog2014/
+How do we use it?
 
-AfNOG Mailing List:
+* `iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT`
+  * You normally want this!
 
-* Q&A on Internet operational and technical issues.
-* No foul language or disrespect for other participants.
-* No blatant product marketing.
-* No political postings.
-
-Please [subscribe](http://www.afnog.org/mailman/listinfo/afnog/) while at
-the Workshop:
-
-* So we can help you if you have problems subscribing.
-* Please raise any questions related to the workshop content.
+Can you see any problems?
 
 ---
 
-## Safety
+## Connection Tracking Problems
 
-Please be careful in class:
+What happens if someone hits your server with this?
 
-* trip on power cords
-* pull cables out of sockets
-* knock equipment off tables
-* fall from leaning back too far in your chair
+	sudo hping3 --faster --rand-source -p 22 196.200.219.140 --syn
 
----
-
-## Learning Environment
-
-* 34 virtual servers (named pc1 – pc34)
-  * DNS names are pc1.sse.ws.afnog.org (etc)
-* Use your own laptops for:
-  * Web browsing
-  * Control your virtual machines
-  * Virtualisation exercises
-* Wireless Internet
-  * Use the AIS network if possible, otherwise AIS-bgn
-  * Password for both is "`success!`"
+Or if you run a server that has thousands of clients?
 
 ---
 
-## Servers
+## Connection Tracking Problems
+
+
+
+
+
 
 * FreeBSD-10.0 OS installed
 * sudo and bash installed, ports tree updated
