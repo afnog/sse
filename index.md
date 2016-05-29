@@ -59,9 +59,28 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 <!-- sorted by surname -->
 
-|First Names	|Surname	|Organisation				|Country
-|:-             |:-             |:-                                     |:-
-|Amel		|HAMIMY		|SudREN					|Sudan
+|First Names		|Surname	|Organisation				|Country
+|:-             	|:-             |:-                                     |:-
+|Agunbiade Janet	|Folasade	|					|
+|Alfred O.		|Orimbo		|					|
+|Benjamin		|Ikibah		|					|
+|Caroline		|Mwangi		|					|
+|Daurice		|Nyirongo	|					|
+|Dorcas			|Kagoya		|					|
+|Frank			|Chilimsungwi	|					|
+|Geoffrey		|Wenani		|					|
+|Korsah			|Anthony	|					|
+|Lucas			|Akohin		|					|
+|Michael		|Ansah		|					|
+|Morris			|Muzoora	|					|
+|Ousmane		|Ndiaye		|					|
+|Papa Alioune		|Sakho		|					|
+|Portia			|Mwine		|					|
+|Richard		|Magosi		|					|
+|Samira Ali		|Danburam	|					|
+|Sidati			|Hassimi	|					|
+|Theodore Kouete	|Fossap		|					|
+|Yahya			|Gobir		|					|
 
 ### Timetable
 
