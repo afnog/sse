@@ -321,6 +321,7 @@ All done by CW unless anyone else wants to.
 * Add `git@github.com:afnog/sse.git` to it
 * Add `git@github.com:afnog/afnog.github.io.git` to it
 * Install Jekyll: `sudo gem install jekyll execjs therubyracer`
+* Open a command prompt and go to ~/SparkleShare/sse
 * Run `make serve`
 * Edit the Markdown files in `~/SparkleShare/sse/.../*.md`
 * View the results in your browser at http://localhost:4000/.../*.html
@@ -336,8 +337,8 @@ All done by CW unless anyone else wants to.
 
 * HTML files are auto-generated from Markdown by Jekyll - do not edit by hand!
 * All files except those starting with `---` ([front matter](http://jekyllrb.com/docs/frontmatter/)) are copied literally from the source (`sse`) repository.
-* Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io).
-* [Browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
+* Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io),
+  [browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
 * Some variables are stored in `_config.yml`, e.g. the year, and used with `{{page.year}}` in HTML and Markdown files.
 
