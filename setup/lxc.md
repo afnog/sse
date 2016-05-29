@@ -99,5 +99,6 @@ And try to reduce it with unionfs mounts (experimental):
 
 		sudo mount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
 		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
+		lxc-start -n pc$i.sse.ws.afnog.org
 	done
 	lxc-autostart
