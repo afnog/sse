@@ -26,8 +26,14 @@ Edit `/etc/default/grub` and set:
 
 as seen [here](https://github.com/docker/docker/issues/4250#issuecomment-35566530), 
 otherwise the `lxc.cgroup.memory.memsw.limit_in_bytes` setting will not work, and will prevent
-you from starting any LXC containers. Then `sudo update-grub` and `sudo reboot` to activate swap
-accounting.
+you from starting any LXC containers. 
+
+For this to work, you also need to edit `/etc/pam.d/common-session*, find the lines for
+`pam_cgso.so` and add `,devices` to the end, like this:
+
+	session optional        pam_cgfs.so -c freezer,memory,name=systemd,devices
+
+Then `sudo update-grub` and `sudo reboot` to activate swap accounting.
 
 Create a gold master guest image:
 
