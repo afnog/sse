@@ -31,6 +31,9 @@ Edit your user's crontab and add the following line to make your containers auto
 
 	@reboot lxc-autostart
 
+Ensure that systemd gives [sufficient tasks](http://unix.stackexchange.com/questions/253903/creating-threads-fails-with-resource-temporarily-unavailable-with-4-3-kernel)
+to LXC containers started by `at`, by editing `/etc/systemd/system.conf`, uncommenting `DefaultTasksMax` and setting it to at least 12288.
+
 Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
