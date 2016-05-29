@@ -58,6 +58,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ### Participants
 
 <!-- sorted by surname -->
+<!-- Please note that the alignment line (|:-) does not work if it contains ANY tabs! So use spaces instead. -->
 
 |First Names		|Surname	|Organisation				|Country
 |:-                     |:-             |:-                                     |:-
