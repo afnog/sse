@@ -89,16 +89,18 @@ And try to reduce it with unionfs mounts (experimental):
 	lxc-autostart -k -t 5
 	LXC_ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
-		sudo umount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
-		test -d $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.orig || mv $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs{,.orig}
-		mkdir -p $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs{,.rw}
+		hostname=pc$pc
+		domainname=$hostname.sse.ws.afnog.org
+		sudo umount $LXC_ROOT/$hostname/rootfs
+		test -d $LXC_ROOT/$hostname/rootfs.orig || mv $LXC_ROOT/$hostname/rootfs{,.orig}
+		mkdir -p $LXC_ROOT/$hostname/rootfs{,.rw}
 
-		echo "none $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs" \
-			"aufs br=$LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs.rw=rw:$LXC_ROOT/debian8/rootfs=ro 0 0" \
+		echo "none $LXC_ROOT/$hostname/rootfs" \
+			"aufs br=$LXC_ROOT/$hostname/rootfs.rw=rw:$LXC_ROOT/debian8/rootfs=ro 0 0" \
 		| sudo tee -a /etc/fstab
 
-		sudo mount $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs
-		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/pc$i.sse.ws.afnog.org/rootfs/etc/network/interfaces
-		lxc-start -n pc$i.sse.ws.afnog.org
+		sudo mount $LXC_ROOT/$hostname/rootfs
+		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/$hostname/rootfs/etc/network/interfaces
+		lxc-start -n $hostname
 	done
 	lxc-autostart
