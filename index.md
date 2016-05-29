@@ -71,7 +71,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][]		|[RADIUS][]		|[Load Balancing][]
 |-
 |Tea break
-|11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Virtualisation][]
+|11:30-13:00	|[DNS Fundamentals][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Virtualisation][]
 |-
 |Lunch
 |14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[Dovecot][]		|[Virtualisation][]
