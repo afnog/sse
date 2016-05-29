@@ -1,6 +1,6 @@
 class: center, middle
 
-# Welcome to Scalable Internet Services
+# Scalable Internet Services
 
 .height_8em[[![Service Station](https://farm3.staticflickr.com/2766/4160009881_49e5d81a92_z_d.jpg)](https://www.flickr.com/photos/caveman_92223/4160009881)]
 
