@@ -31,7 +31,7 @@ Create a gold master guest image:
 	lxc-start --name debian8
 	lxc-attach --name debian8
 
-Follow [guest.md] to configure the gold master guest.
+Follow [guest.md](guest.md) to configure the gold master guest.
 
 Edit your user's crontab and add the following line to make your containers auto-start:
 
