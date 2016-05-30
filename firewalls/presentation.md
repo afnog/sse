@@ -443,6 +443,23 @@ You probably want to do this for your DNS server. How?
 
 ---
 
+## Exercise
+
+Install `nmap`:
+
+	sudo apt install nmap
+
+Scan your system:
+
+	sudo nmap -sS pcXX.sse.ws.afnog.org
+
+* Which ports are open?
+* How would you block them?
+
+You will probably lock yourself out of your PC. That is OK, we can fix it :)
+
+---
+
 ## FIN
 
 Any questions?
