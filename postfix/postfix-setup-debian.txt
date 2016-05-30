@@ -3,7 +3,7 @@ Install Postfix and Dovecot
 
 1. Using Pkg:
 
-	$sudo apt-get install postfix dovecot-core
+	$sudo apt-get install postfix dovecot-core dovecot-imapd dovecot-lmtpd
 
 	Answer yes if prompted with (by pressing y then enter)
 
