@@ -16,7 +16,7 @@ Download MailWatch - MailScanner Frontend
 	$unzip master.zip
 	$unzip 1.2.0-mailwatch.zip
 	$cd 1.2.0-master
-	$sudo mv mailscanner /var/www
+	$sudo mv mailscanner /var/www/
 
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
 
