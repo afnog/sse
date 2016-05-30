@@ -254,7 +254,7 @@ What content is it serving? How do we change it?
 
 ## Enable and test IPv6
 
-Set your IPv6 address to match your IPv4 address:
+Set your IPv6 address to match your IPv4 address (replace `XX` with your PC number plus 100):
 
 	$ sudo ip -6 addr add 2001:43f8:220:219::XX/64 dev eth0
 
@@ -269,14 +269,12 @@ Test your IPv6 connectivity:
 
 	$ ping6 www.google.com
 
-
-Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
-
-
+Then browse your IPv6 address at http://[2001:43f8:220:219::XX] (the square brackets
+are deliberate and essential!).
 
 ---
 
-## File system layout
+## Apache configuration files
 
 * /etc
   * /apache2
@@ -292,6 +290,8 @@ Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
   * sites-available (and sites-enabled)
     * 000-default.conf
     *  default-ssl.conf
+* /var/www/html (content)
+  * index.html (the test page)
 
 Why this structure?
 
