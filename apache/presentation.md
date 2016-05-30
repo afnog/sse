@@ -13,9 +13,9 @@ You can access this presentation at: http://afnog.github.io/sse/apache/
 
 .smaller.left[
 * Online: http://afnog.github.io/sse/apache/
-* Local: http://www.ws.afnog.org/afnog{{page.year}}/sse/apache/index.html
-* Github: https://github.com/afnog/sse/blob/master/{{page.path}}
-* Download PDF: http://www.ws.afnog.org/afnog{{page.year}}/sse/apache/presentation.pdf
+* Local: http://www.ws.afnog.org/afnog2016/sse/apache/index.html
+* Github: https://github.com/afnog/sse/blob/master/sse/apache/presentation.md
+* Download PDF: http://www.ws.afnog.org/afnog2016/sse/apache/presentation.pdf
 ]
 
 ---
@@ -101,12 +101,16 @@ Apache support virtual hosting (deciding which website to display) using:
 
 ???
 
-*Name based* virtual hosting is recommended for modern systems to conserve IP addresses.
+**Name based** virtual hosting is recommended for modern systems to conserve IP addresses. The server looks
+at the Host: header of the request to identify which website to serve. 
 
 However sometimes you will want to show a default page regardless of the hostname that the client accesses,
 e.g. if you are intercepting HTTP requests or to show a helpful error page when your Apache configuration
 does not recognise the domain, e.g. it has not yet been updated to match the DNS pointing a new domain to your
-server.
+server. To do this, you will need to understand IP/Port based virtual hosting.
+
+**IP/Port based** virtual hosting looks at the IP and port that received the request to identify which
+website to serve.
 
 ---
 
@@ -124,7 +128,10 @@ server.
   * Used to secure several protocols including HTTP
   * When used properly, protects the wrapped protocol from 
   * Usually the wrapped protocol has little or no interaction with SSL layer (transparent)
-* HTTPS (HTTP over SSL) runs on port 443
+  * This causes problems with virtual hosting!
+* HTTPS (HTTP over SSL) runs on port 443 by convention
+  * Each SSL-wrapped service runs on a different port than its non-SSL-wrapped version
+
 
 * Many web applications written in PHP and using a MySQL database.
 * Relatively easy to deploy under Apache (and most web hosting).
