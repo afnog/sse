@@ -439,6 +439,15 @@ You may need to click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (
 
 ---
 
+## Testing SSL
+
+.fill[![Test page with SSL warning](test-page-with-ssl-warning.png)]
+
+Success!
+
+
+---
+
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
 For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
 Self signed Certificates will also work but your browser will not trust it and will give a warning to users (which most don’t read)
