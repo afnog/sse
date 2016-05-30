@@ -113,6 +113,17 @@ Decisions that can't be made based on one packet:
 
 .fill[![TCP exchange of packets](tcp-exchange.png)]
 
+???
+
+This shows the packets that might be exchanged in a short HTTP session.
+
+* What is port XX?
+* What is port 80?
+* Where is the name of the website? How does the server know which website to serve in response?
+* Which of these packets can a firewall filter?
+  * On the client side?
+  * On the server side?
+
 ---
 
 ## Typical features
