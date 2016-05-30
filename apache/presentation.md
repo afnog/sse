@@ -37,7 +37,6 @@ What other HTTP (web) servers are commonly used?
 What other HTTP (web) servers are commonly used?
 
 [![Netcraft Survey](wpid-wss-share.png)](http://news.netcraft.com/archives/2015/09/16/september-2015-web-server-survey.html)
-.height_8em[[![Netcraft Survey](wpid-wss-share.png)](http://news.netcraft.com/archives/2015/09/16/september-2015-web-server-survey.html)]
 
 ???
 

@@ -114,8 +114,6 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 #### [Michuki Mwangi](#MM)
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx)
-* [Opening Survey](https://www.surveymonkey.com/s/JW98WTD)
-* [Survey Results](intro/opening-survey-results.pdf)
 
 ### Apache
 [Apache]: #apache
