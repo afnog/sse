@@ -347,6 +347,43 @@ Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>. You should s
 
 ---
 
+## Securing MySQL
+
+Please read the instructions and use the letters "y" or “n” on the keyboard.
+
+	$ sudo mysql_secure_installation
+
+The password to set for mysql is afnog
+
+	Enter current password for root (enter for none): 
+	OK, successfully used password, moving on...
+
+	Remove anonymous users? [Y/n] y                                            
+	 ... Success!
+
+	Disallow root login remotely? [Y/n] n
+	... Success!
+
+	Remove test database and access to it? [Y/n] y
+
+	Reload privilege tables now? [Y/n] y
+	 ... Success!
+
+Cleaning up...
+
+1.4. Log in to mysql console to check if the password was set properly using command below.
+
+	$ mysql -u root -p
+	Password:
+
+     Type the password at the prompt.
+
+     You can exit from the mysql> prompt by typing "exit" command
+
+
+
+---
+
 ## Configuring SSL
 
 To create a secure virtual host accessed via https rather than http, you will
