@@ -1,6 +1,6 @@
 # VM setup using Libvirt and KVM
 
-Using Ubuntu 16.04. Follow [server.md](server.md) first to configure the server.
+Using Ubuntu 16.04. Follow [server setup](../server/) first to configure the server.
 
 Install libvirt and KVM:
 
