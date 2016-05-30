@@ -149,7 +149,7 @@ does not match any site configured on the IP and port. This is useful for:
 * Need to generate a Certificate Signing Request (CSR) and get someone to sign it
   * Chain of trust, established by signatures
   * Signer needs to be trusted by web browser (directly or indirectly)
-* Each SSL certificate.red.bold[*] has a Public and Private key
+* Each SSL certificate .red.bold[*] has a Public and Private key
   * The public key is used to encrypt the information
   * The public key is accessible to everyone
   * The private Key is used to decipher the information
