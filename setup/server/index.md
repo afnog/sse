@@ -4,7 +4,7 @@ jekyll: process
 layout: default
 ---
 
-# VM setup using LXC
+# Server setup for AfNOG SS-E virtualisation
 
 Install Ubuntu Desktop (not Server) 16.04 AMD64, then:
 
