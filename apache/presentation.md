@@ -80,9 +80,30 @@ bringing down your HTTP server (by overloading or a vulnerability).
 
 More at: http://httpd.apache.org/docs/2.2/new_features_2_0.html 
 
+---
 
+## Virtual Hosting
 
+What does it mean?
 
+Apache support virtual hosting (deciding which website to display) using:
+
+* Name based virtual hosts (`Host` header)
+* IP/Port based virtual hosts
+* Aliases (subdirectories)
+
+???
+
+*Name based* virtual hosting is recommended for modern systems to conserve IP addresses.
+
+However sometimes you will want to show a default page regardless of the hostname that the client accesses,
+e.g. if you are intercepting HTTP requests or to show a helpful error page when your Apache configuration
+does not recognise the domain, e.g. it has not yet been updated to match the DNS pointing a new domain to your
+server.
+
+---
+
+## 
 
 ---
 
