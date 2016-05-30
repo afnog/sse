@@ -281,16 +281,16 @@ class: pre-compact
 	  * /apache2
 	    * apache2.conf
 	    * ports.conf
-	  * conf-available
-	    * *.conf
-	  * conf-enabled
-	    * symlinks to mods-available for services which are enabled
-	  * mods-available (and mods-enabled)
-	    * *.load
-	    * *.conf
-	  * sites-available (and sites-enabled)
-	    * 000-default.conf
-	    *  default-ssl.conf
+	    * conf-available
+	      * *.conf
+	    * conf-enabled
+	      * symlinks to mods-available for services which are enabled
+	    * mods-available (and mods-enabled)
+	      * *.load
+	      * *.conf
+	    * sites-available (and sites-enabled)
+	      * 000-default.conf
+	      *  default-ssl.conf
 	* /var/www/html (content)
 	  * index.html (the test page)
 
