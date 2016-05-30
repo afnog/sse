@@ -14,7 +14,7 @@ You can access this presentation at: http://afnog.github.io/sse/apache/
 .smaller.left[
 * Online: http://afnog.github.io/sse/apache/
 * Local: http://www.ws.afnog.org/afnog{{page.year}}/sse/apache/index.html
-* Github: https://github.com/afnog/sse/apache/blob/master/{{page.path}}
+* Github: https://github.com/afnog/sse/blob/master/{{page.path}}
 * Download PDF: http://www.ws.afnog.org/afnog{{page.year}}/sse/apache/presentation.pdf
 ]
 
