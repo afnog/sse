@@ -52,9 +52,18 @@ Also note growing popularity of nginx.
 
 ## Which one to use?
 
-Apache
-: Popular, well-documented, flexible, secure, big, slow.
+* Apache: Popular, well-documented, flexible, secure, big, slow, heavy.
+* Nginx: Increasingly popular, quite well-documented, very fast, reverse proxy, no PHP.
+* Lighttpd: Simple, fast, no PHP.
+* Thttpd: Tiny, fast, no PHP.
 
+???
+
+Notice how only Apache supports PHP (natively)?
+
+Most web servers need you to install and run a FastCGI server to support PHP, which is more complex.
+But it does completely isolate the PHP server process from your web server, preventing it from
+bringing down your HTTP server (by overloading or a vulnerability).
 
 ## Stateful Firewalls
 
