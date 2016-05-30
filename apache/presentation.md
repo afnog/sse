@@ -6,39 +6,23 @@ class: center, middle
 
 ### Chris Wilson, AfNOG 2016
 
-Based on a previous talk by Kevin Chege with thanks!
+Based on a previous talk by Joel Jaeggli with thanks!
 
-You can access this presentation at: http://afnog.github.io/sse/firewalls/
-([edit](https://github.com/afnog/sse/firewalls/presentation.md))
+You can access this presentation at: http://afnog.github.io/sse/apache/
+([edit](https://github.com/afnog/sse/apache/presentation.md))
 
 ---
 
-## What is a Firewall?
+## What is Apache?
 
-.height_8em[[![Firewall](firewall-art-800.jpg)](http://www.ittechnewsdaily.com/216-firewall-security.html)]
-.height_8em[[![Firewall](firewall_man-800.jpg)](http://prajwaldesai.com/configuring-firewall-settings-for-configuration-manager-2012-r2/)]
-.height_8em[[![Firewall](NAT-Firewall-VPN.jpg)](http://www.bestvpnservice.com/blog/nat-firewall-vpn-router-security/)]
-.height_8em[[![Firewall](640_edge-if.jpg)](http://eandt.theiet.org/magazine/2013/08/cyber-securitys-new-hard-line.cfm)]
-.height_8em[[![Firewall](China_S5_Kids_phone_low_RF_Smart_Alert_Firewall_Protection_Position_Tracking_Etc20144241306509.jpg)](http://www.ecvv.com/product/4338436.html)]
+* An HTTP server (web server)
+* A foundation supporting several web-related software projects
 
-???
+.height_8em[[![Apache projects](apache-projects.png)](http://www.apache.org/index.html#projects-list)]
 
-* Computer network security device
-* Decided whether packets are allowed or denied
-* Uses a pre-defined set of rules
+For clarity it might help to talk about "Apache Server" to mean the HTTPD server.
 
-Many devices have built-in firewalls:
-
-* End devices (desktop, laptop and server)
-* Routers
-* IP-connected devices
-* Dedicated hardware
-
-Questions:
-
-* Ask for some examples in each category
-* Software and hardware firewalls
-* Any unusual examples? Mobile phones, desk phones, toasters?
+.height_8em[[![Pronouncing HTTPD](bill.png)](http://acme.com/software/thttpd/)]
 
 ---
 
