@@ -462,6 +462,36 @@ You will probably lock yourself out of your PC. That is OK, we can fix it :)
 
 ---
 
+## Exercise
+
+The correct answer is:
+
+	iptables -I INPUT 2 -p tcp --dport 22 -j DROP
+
+Which prevents new connections, but as long as rule 1 allows ESTABLISHED connections
+you will not be locked out (unless you lose your connection).
+
+The output of `iptables -L -nv` should look like:
+
+
+
+
+	sudo apt install nmap
+
+Scan your system:
+
+	sudo nmap -sS pcXX.sse.ws.afnog.org
+
+* Which ports are open?
+* How would you block them?
+
+You will probably lock yourself out of your PC. That is OK, we can fix it :)
+
+* As long as the changes have NOT been made permanent, we can reboot the system to restore access.
+
+
+---
+
 ## FIN
 
 Any questions?
