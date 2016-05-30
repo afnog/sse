@@ -443,7 +443,16 @@ You may need to click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (
 
 .fill[![Test page with SSL warning](test-page-with-ssl-warning.png)]
 
-Success!
+Success! (kind of)
+
+---
+
+## Testing SSL
+
+What about the red padlock? Click on it, and then *Details* and *View Certificate* (or similar):
+
+.fill[![Certificate details](certificate-details.png)]
+
 
 
 ---
