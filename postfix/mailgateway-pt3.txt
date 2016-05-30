@@ -23,7 +23,7 @@ You will need the following CPAN module
 
 Enable MailScanner
 
-	$sudo nano /etc/default/mailscanner
+	$sudo nano /etc/MailScanner/defaults
 
 	##Uncomment the following line:
 	run_mailscanner=1
