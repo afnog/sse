@@ -226,7 +226,8 @@ So how do I get one again?
 * Self-certified (own CA)
 * Self-signed
 
-We will show you how to setup your own CA and create valid certs signed by it.
+We will use a self-signed certificate in order to proceed quickly. There are tutorials on the
+Internet on running your own CA with OpenSSL (it's not that hard, really).
 
 ---
 
