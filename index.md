@@ -170,7 +170,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ##### DNS Fundamentals
 [DNS Fundamentals]: #dns-fundamentals
 
-* [PowerPoint](dns/dns1-presentation.ppt)
+* [PowerPoint](dns/dns1-presentation.pptx)
 * [PDF](dns/dns1-presentation.pdf)
 * [Exercise](dns/dns1-exercise.txt)
 
@@ -186,7 +186,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ##### DNS Authoritative Name Servers
 [DNS Authoritative]: #dns-authoritative-name-servers
 
-* [PowerPoint](dns/dns3-presentation.ppt)
+* [PowerPoint](dns/dns3-presentation.pptx)
 * [PDF](dns/dns3-presentation.pdf)
 * [Exercise](dns/dns3-exercise.txt)
 
