@@ -20,7 +20,8 @@ You will need the following CPAN module
 	$sudo cpan install Encoding::FixLatin
 
 Update spamassassin:
-
+Just incase it did not corretly install
+	$sudo apt-get install spamassassin
 	$sudo sa-update
 
 Enable MailScanner
