@@ -276,8 +276,6 @@ are deliberate and essential!).
 
 ## Apache configuration files
 
-	.small[
-
 	* /etc
 	  * /apache2
 	    * apache2.conf
@@ -294,8 +292,6 @@ are deliberate and essential!).
 	    *  default-ssl.conf
 	* /var/www/html (content)
 	  * index.html (the test page)
-
-	]
 
 Why this structure?
 
