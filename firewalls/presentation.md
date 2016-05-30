@@ -11,7 +11,7 @@ Based on a previous talk by Kevin Chege with thanks!
 .smaller.left[
 * Online: http://afnog.github.io/sse/firewalls/
 * Local: http://www.ws.afnog.org/afnog{{page.year}}/sse/firewalls/index.html
-* Github: https://github.com/afnog/sse/firewalls/presentation.md
+* Github: https://github.com/afnog/sse/blob/master/{{page.path}}
 * Download PDF: http://www.ws.afnog.org/afnog{{page.year}}/sse/firewalls/presentation.pdf
 ]
 
