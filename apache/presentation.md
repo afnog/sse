@@ -53,7 +53,7 @@ Also note growing popularity of nginx.
 ## Which one to use?
 
 * Apache: Popular, well-documented, flexible, secure, big, slow, heavy.
-* Nginx: Increasingly popular, quite well-documented, very fast, reverse proxy, no PHP.
+* Nginx: Increasingly popular, quite well-documented, very fast, reverse proxy, SSL support/wrapper, no PHP.
 * Lighttpd: Simple, fast, no PHP.
 * Thttpd: Tiny, fast, no PHP.
 
@@ -108,6 +108,20 @@ server.
 * Many web applications written in PHP and using a MySQL database.
 * Relatively easy to deploy under Apache (and most web hosting).
 * We will install the necessary software shortly.
+
+---
+
+## Apache and SSL
+
+* SSL is the "Secure Socket Layer"
+
+* Used to secure several protocols including HTTP
+* Usually the secured protocol has little or no interaction with SSL layer (transparent)
+* 
+* Many web applications written in PHP and using a MySQL database.
+* Relatively easy to deploy under Apache (and most web hosting).
+* We will install the necessary software shortly.
+
 
 ---
 
