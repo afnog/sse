@@ -126,7 +126,7 @@ https://github.com/afnog/sse.
 		}
 		url += "presentation.md";
 		var lastText = undefined;
-		var slideshow = remark.create({sourceUrl: url});
+		var slideshow = remark.create({sourceUrl: url, footnotes: true});
 		$('#loading').hide();
 
 		var interval = setInterval(function() {
