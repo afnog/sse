@@ -346,6 +346,7 @@ Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>. You should s
 .height_12em[![phpinfo output](phpinfo.png)]
 
 ---
+class: pre-compact
 
 ## Securing MySQL
 
