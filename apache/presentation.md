@@ -412,8 +412,8 @@ self-signed certificate):
 We need to tell Apache where to find the certificate and the private key files
 that we want it to use. 
 
-Edit `/etc/apache2/sites-available/default-ssl.conf` and find and modify the `SSLCertificateFile`
-and `SSLCertificateKeyFile` lines as follows:
+* Edit `/etc/apache2/sites-available/default-ssl.conf`
+* Find and modify the `SSLCertificateFile` and `SSLCertificateKeyFile` lines to:
 
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
