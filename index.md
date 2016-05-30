@@ -238,6 +238,14 @@ Goal: DNSSEC High Level Awareness.
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.txt)
 
+### OpenLDAP
+[OpenLDAP]: #openldap
+
+#### [Frank Kuse](#FK)
+
+* Presentation: [PowerPoint](ldap/Openldap presentation.pptx) [PDF](ldap/Openldap presentation.pdf)
+* Exercise: [PowerPoint](ldap/Openldap exercise.pptx) [PDF](ldap/Openldap exercise.pdf)
+
 ### RADIUS
 [RADIUS]: #radius
 
