@@ -478,22 +478,6 @@ The output of `iptables -L -nv` should look like:
 	  151 11173 ACCEPT all  --  *  *   0.0.0.0/0 0.0.0.0/0   state ESTABLISHED
 	    0     0        tcp  --  *  *   0.0.0.0/0 0.0.0.0/0   tcp dpt:22
 
-
-
-	sudo apt install nmap
-
-Scan your system:
-
-	sudo nmap -sS pcXX.sse.ws.afnog.org
-
-* Which ports are open?
-* How would you block them?
-
-You will probably lock yourself out of your PC. That is OK, we can fix it :)
-
-* As long as the changes have NOT been made permanent, we can reboot the system to restore access.
-
-
 ---
 
 ## FIN
