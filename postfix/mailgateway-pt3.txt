@@ -16,7 +16,12 @@ Copy preconfigured files for Mailwatch from the instructor’s server. The only 
 
 You will need the following CPAN module
 
+	
 	$sudo cpan install Encoding::FixLatin
+
+Update spamassassin:
+
+	$sudo sa-update
 
 Enable MailScanner
 
