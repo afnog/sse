@@ -320,8 +320,8 @@ heavier-weight, so you can't run as many on the same host (especially RAM is a l
 each VM needs ~512 MB of dedicated RAM).
 
 * [Server setup](setup/server/) (Mac Mini)
-* [LXC setup](setup/lxc/)
-* [KVM setup](setup/kvm/) (alternative)
+* [LXC setup](setup/lxc/) for ~40 containers
+* [KVM setup](setup/kvm/) for ~24 containers (alternative)
 
 ### Administration
 
