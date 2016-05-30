@@ -111,9 +111,9 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ### Introduction
 [Introduction]: #introduction-1
 
-#### [Chris Wilson](#CW)
+#### [Michuki Mwangi](#MM)
 
-* [Presentation](intro/index.html)
+* Presentation: [PowerPoint](intro/IntroPresentation.pptx)
 * [Opening Survey](https://www.surveymonkey.com/s/JW98WTD)
 * [Survey Results](intro/opening-survey-results.pdf)
 
