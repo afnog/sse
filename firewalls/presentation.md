@@ -10,9 +10,9 @@ Based on a previous talk by Kevin Chege with thanks!
 
 .smaller.left[
 * Online: http://afnog.github.io/sse/firewalls/
-* Local: http://www.ws.afnog.org/afnog2016/sse/firewalls/index.html
+* Local: http://www.ws.afnog.org/afnog{{page.year}}/sse/firewalls/index.html
 * Github: https://github.com/afnog/sse/firewalls/presentation.md
-* Download PDF: http://www.ws.afnog.org/afnog2016/sse/firewalls/presentation.pdf
+* Download PDF: http://www.ws.afnog.org/afnog{{page.year}}/sse/firewalls/presentation.pdf
 ]
 
 ---
