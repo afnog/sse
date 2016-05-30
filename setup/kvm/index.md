@@ -2,6 +2,7 @@
 vim: autoread
 jekyll: process
 layout: default
+root: ../..
 ---
 
 # VM setup using Libvirt and KVM
