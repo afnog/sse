@@ -426,6 +426,13 @@ that we want it to use.
 	sudo a2ensite default-ssl
 	sudo service apache2 reload
 
+---
+
+## Testing SSL
+
+Open <https://pcXX.sse.ws.afnog.org> in your browser. What do you see?
+
+.fill[![Chrome SSL security warning](ssl-security-warning.png)]
 
 ---
 
