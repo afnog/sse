@@ -11,6 +11,13 @@ Based on a previous talk by Joel Jaeggli with thanks!
 You can access this presentation at: http://afnog.github.io/sse/apache/
 ([edit](https://github.com/afnog/sse/apache/presentation.md))
 
+.smaller.left[
+* Online: http://afnog.github.io/sse/apache/
+* Local: http://www.ws.afnog.org/afnog{{page.year}}/sse/apache/index.html
+* Github: https://github.com/afnog/sse/apache/blob/master/{{page.path}}
+* Download PDF: http://www.ws.afnog.org/afnog{{page.year}}/sse/firewalls/presentation.pdf
+]
+
 ---
 
 ## What is Apache?
@@ -114,10 +121,11 @@ server.
 ## Apache and SSL
 
 * SSL is the "Secure Socket Layer"
+  * Used to secure several protocols including HTTP
+  * When used properly, protects the wrapped protocol from 
+  * Usually the wrapped protocol has little or no interaction with SSL layer (transparent)
+* HTTPS (HTTP over SSL) runs on port 443
 
-* Used to secure several protocols including HTTP
-* Usually the secured protocol has little or no interaction with SSL layer (transparent)
-* 
 * Many web applications written in PHP and using a MySQL database.
 * Relatively easy to deploy under Apache (and most web hosting).
 * We will install the necessary software shortly.
