@@ -22,7 +22,7 @@ You can access this presentation at: http://afnog.github.io/sse/apache/
 
 For clarity it might help to talk about "Apache Server" to mean the HTTPD server.
 
-.height_8em[[![Pronouncing HTTPD](bill.png)](http://acme.com/software/thttpd/)]
+.height_8em[[![Pronouncing HTTPD](bill.gif)](http://acme.com/software/thttpd/)]
 
 ---
 
