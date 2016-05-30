@@ -28,6 +28,9 @@ Create the MySQL Database (root password for Mysql is "afnog")
 
 	GRANT ALL ON mailscanner.* TO 'mailwatch'@'localhost' IDENTIFIED BY 'mailwatch';
 	FLUSH PRIVILEGES;
+	exit;
+
+
 
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
 
