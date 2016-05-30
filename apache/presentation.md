@@ -155,7 +155,8 @@ does not match any site configured on the IP and port. This is useful for:
   * The private Key is used to decipher the information
   * The private should be not be disclosed to anyone
 
-[*] The key is included on the certificate, but can be reused on more certificates as long as not compromised.
+[*] The key is included on the certificate, but can be reused on more certificates as long
+as not compromised. There is no way to revoke it except to revoke all certs signed with it.
 
 ---
 
