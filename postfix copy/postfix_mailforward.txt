@@ -1,0 +1,72 @@
+POSTFIX MAIL GATEWAY
+===================
+
+1. ===MX RECORDS==
+
+The mail filter for your domain should have an MX record with a lower priority number
+
+
+2. ===Configure Postfix====
+=============================
+
+Edit Postfix main.cf
+
+	$sudo nano /etc/postfix/main.cf
+
+	##Add your neighbour's domain to the mydestination entries
+	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, localhost
+
+
+	##Add at the end. This file contains mail routing information
+	transport_maps = hash:/etc/postfix/transport
+
+Save and Exit
+
+
+	$sudo nano /etc/postfix/transport
+	
+	##Add your neighbor's server where his mail will be routed to
+	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
+
+
+Save and Exit
+
+
+Run postmap against the file you created. This should be done each time you add or remove a domain
+
+	$cd /etc/postfix
+	$sudo postmap transport
+	$sudo postfix reload
+
+
+
+
+ADDITIONAL SECTION
+==================
+
+To increase the security restrictions on Postfix, here are a few configs you can add to main.cf
+
+
+	$sudo vi /etc/postfix/main.cf
+
+	##Add at the bottom
+
+	smtpd_recipient_restrictions =
+    		permit_mynetworks,
+    		permit_sasl_authenticated,
+    		reject_invalid_hostname,
+    		reject_non_fqdn_hostname,
+    		reject_unknown_sender_domain,
+    		reject_non_fqdn_sender,
+    		reject_non_fqdn_recipient,
+    		reject_unknown_recipient_domain,
+    		reject_unauth_pipelining,
+    		reject_unauth_destination,
+    		permit
+
+
+Save and exit
+
+
+Restart Postfix
+	$sudo service postfix restart
