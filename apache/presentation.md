@@ -103,7 +103,11 @@ server.
 
 ---
 
-## 
+## PHP and MySQL
+
+* Many web applications written in PHP and using a MySQL database.
+* Relatively easy to deploy under Apache (and most web hosting).
+* We will install the necessary software shortly.
 
 ---
 
