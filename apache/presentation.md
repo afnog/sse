@@ -346,7 +346,21 @@ Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>. You should s
 .height_12em[![phpinfo output](phpinfo.png)]
 
 ---
-	
+
+## Configuring SSL
+
+To create a secure virtual host accessed via https rather than http, you will
+need to configure your Apache server to use OpenSSL for encrypting the data
+served from the web server.
+
+NOTE:
+
+* Each virtual host must have its own certificate file see comments on "CommonName".
+* The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
+* The path is where the certificate File and Keys are located, in this case `/etc/apache2/ssl`.
+ 
+
+
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
 For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
