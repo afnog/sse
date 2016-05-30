@@ -59,12 +59,18 @@ Also note growing popularity of nginx.
 
 ## Which one to use?
 
-* Apache: Popular, well-documented, flexible, secure, big, slow, heavy, PHP!
+* Apache:
+  * Popular
+  * Well-documented
+  * Flexible
+  * Secure
+  * big, slow, heavy, PHP!
 * Nginx: 
   * Increasingly popular
   * Quite well-documented
   * Very fast
   * Reverse proxy and SSL support/wrapper
+  * No PHP
 * Lighttpd: Simple, fast, no PHP
 * Thttpd: Tiny, fast, no PHP
 
