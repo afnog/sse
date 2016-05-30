@@ -379,6 +379,27 @@ and maintain the original key, run these commands:
 	$ sudo cp server.key server.key.orig
 	$ sudo openssl rsa -in server.key.orig -out server.key
 
+---
+
+## Configuring SSL
+
+### Create Certificate Signing Request
+
+Use this command to generate a new Certificate Signing Request (CSR):
+
+	$ sudo openssl req -new -key server.key -out server.csr
+
+This will prompt for some information. Most doesn't matter, but the CommonName
+is the name of the Website you will use to access the Apache server. In this case
+you will access your PC using its hostname, i.e. `pcXX.sse.ws.afnog.org`, where
+XX is your computer number.
+
+3.1.2	Self Sign your Own Certificate
+
+	$ sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+
+
 
 ---
 
