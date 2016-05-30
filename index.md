@@ -385,7 +385,8 @@ these steps:
 * Possibly outdated copy in [GitHub](https://github.com/afnog/afnog.github.io),
   [browsable online](http://afnog.github.io/sse/) at http://afnog.github.io/sse/.
 * Clone an offline copy (HTML, not Markdown) at `git@github.com:afnog/afnog.github.io.git`.
-* Some variables are stored in `_config.yml`, e.g. the year, and used with `{{page.year}}` in HTML and Markdown files.
+* Some variables are stored in `_config.yml`, e.g. the year, and used with `{ { page.year } }` in HTML and Markdown files
+  (spaces added to stop Markdown from replacing this with the year number!)
 
 ### Presentations
 

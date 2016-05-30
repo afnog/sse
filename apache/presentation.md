@@ -26,26 +26,33 @@ For clarity it might help to talk about "Apache Server" to mean the HTTPD server
 
 ---
 
-## Advanced Firewalls
+## Other HTTP servers
 
-* Basic firewalls are packet filters
-* Can't always make a decision based on one packet (examples?)
-* Stateful firewalls (connection table)
-* Application layer (L7) filtering/inspection/IDS
-* Redundant firewalls with synchronisation
-* VPNs and SSL "VPNs"
+What other HTTP (web) servers are commonly used?
+
+---
+
+## Other HTTP servers
+
+.height_8em[[![Netcraft Survey](wpid-wss-share.png)](http://news.netcraft.com/archives/2015/09/16/september-2015-web-server-survey.html)]
 
 ???
 
-Decisions that can't be made based on one packet:
+Note: The "Other" category is 20%! This includes:
 
-* Downloading a forbidden file type
-* Downloading a virus
-* Sending emails with a virus
-* Established connections/Reply packets (information smuggling)
-* P2P traffic (bittorrent, skype, etc)
+* Apache Tomcat
+* Lighttpd
+* Thttpd
+
+Also note growing popularity of nginx.
 
 ---
+
+## Which one to use?
+
+Apache
+: Popular, well-documented, flexible, secure, big, slow.
+
 
 ## Stateful Firewalls
 
