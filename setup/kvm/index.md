@@ -1,3 +1,9 @@
+---
+vim: autoread
+jekyll: process
+layout: default
+---
+
 # VM setup using Libvirt and KVM
 
 Using Ubuntu 16.04. Follow [server setup](../server/) first to configure the server.
