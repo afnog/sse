@@ -419,6 +419,16 @@ that we want it to use.
 	SSLCertificateFile    /etc/apache2/ssl/server.crt
 	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
+* Enable the default SSL site:
+
+
+	sudo a2ensite default-ssl
+
+Tell Apache to reload its configuration:
+
+	$ sudo service apache2 reload
+
+
 ---
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
