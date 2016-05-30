@@ -458,6 +458,8 @@ Scan your system:
 
 You will probably lock yourself out of your PC. That is OK, we can fix it :)
 
+* As long as the changes have NOT been made permanent, we can reboot the system to restore access.
+
 ---
 
 ## FIN
