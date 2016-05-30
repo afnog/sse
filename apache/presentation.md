@@ -258,12 +258,30 @@ What content is it serving? How do we change it?
   * /apache2
     * apache2.conf
     * ports.conf
-  * mods-available
+  * conf-available
+    * *.conf
+  * conf-enabled
+    * symlinks to mods-available for services which are enabled
+  * mods-available (and mods-enabled)
     * *.load
     * *.conf
-  * mods-enabled
-    * symlinks to mods-available for services which are enabled
-  * 
+  * sites-available (and sites-enabled)
+    * 000-default.conf
+    *  default-ssl.conf
+
+Why this structure?
+
+---
+
+## Enabled sites and modules
+
+* `mods-available` and `sites-available` allows packages to ship default configuration files
+  * **without** them being enabled automatically
+  * more secure than Red Hat/CentOS system
+* Use `a2enmod` and `a2ensite` to enable sites and modules
+  * `
+
+   
 |-- conf-enabled
 |       `-- *.conf
 |-- sites-enabled
