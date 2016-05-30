@@ -252,6 +252,30 @@ What content is it serving? How do we change it?
 
 ---
 
+## Enable and test IPv6
+
+Set your IPv6 address to match your IPv4 address:
+
+	$ sudo ip -6 addr add 2001:43f8:220:219::XX/64 dev eth0
+
+Then add your default route for IPv6:
+
+	$ sudo ip -6 route add default via 2001:43f8:220:219::1
+
+On the above if you get the error message `RTNETLINK answers: File exists`, it means that
+the gateway is already in place, as it was auto-configured.
+
+Test your IPv6 connectivity:
+
+	$ ping6 www.google.com
+
+
+Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
+
+
+
+---
+
 ## File system layout
 
 * /etc
@@ -278,15 +302,28 @@ Why this structure?
 * `mods-available` and `sites-available` allows packages to ship default configuration files
   * **without** them being enabled automatically
   * more secure than Red Hat/CentOS system
-* Use `a2enmod` and `a2ensite` to enable sites and modules
-  * `
+* Enable and disable with commands:
+  * `a2enmod` and `a2dismod`: modules (mods)
+  * `a2ensite` and `a2dissite`: sites
+  * `a2enconf` and `a2disconf`: configuration files (confs)
 
-   
-|-- conf-enabled
-|       `-- *.conf
-|-- sites-enabled
-|       `-- *.conf/etc
- 
+Which sites, modules and confs are enabled by default, and which are not?
+
+---
+
+## Starting Apache
+
+* Startup scripts are located in `/etc/init.d/`
+  * `/etc/init.d/apache2 start`
+  * `service apache2 start`
+* Other useful commands:
+  * `/etc/init.d/apache2 stop`
+  * `/etc/init.d/apache2 restart` (stop+start)
+  * `/etc/init.d/apache2 reload` (graceful reload config)
+
+---
+
+## Install MySQL and PHP
 
 
 
