@@ -1,3 +1,9 @@
+---
+vim: autoread
+jekyll: process
+layout: default
+---
+
 # Guest Configuration
 
 Using Debian 8 (Jessie). Setup the guest for AfNOG, starting from a (virtual) console:
