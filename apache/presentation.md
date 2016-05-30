@@ -140,6 +140,27 @@ does not match any site configured on the IP and port. This is useful for:
 * HTTPS (HTTP over SSL) runs on port 443 by convention
   * Each SSL-wrapped service runs on a different port than its non-SSL-wrapped version
 
+---
+
+## SSL Certificates
+
+* Certificates identify parties (servers and sometimes clients)
+  * SSL useless without server auth - why not?
+* Need to generate a Certificate Signing Request (CSR) and get someone to sign it
+  * Chain of trust, established by signatures
+  * Signer needs to be trusted by web browser (directly or indirectly)
+
+---
+
+## How SSL works
+
+.fill[![How SSL works](how-ssl-works.svg)]
+
+Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
+For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
+Self signed Certificates will also work but your browser will not trust it and will give a warning to users (which most don’t read)
+Refer to the Creating SSL Certificate Exercise Section
+
 
 * Many web applications written in PHP and using a MySQL database.
 * Relatively easy to deploy under Apache (and most web hosting).
