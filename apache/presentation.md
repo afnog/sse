@@ -273,7 +273,7 @@ Then browse your IPv6 address at http://[2001:43f8:220:219::XX] (the square brac
 are deliberate and essential!).
 
 ---
-class: pre-small
+class: pre-compact
 
 ## Apache configuration files
 
