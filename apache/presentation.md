@@ -371,18 +371,21 @@ during the installation above).
 	Reload privilege tables now? [Y/n] y
 	 ... Success!
 
-Cleaning up...
+	Cleaning up...
 
-1.4. Log in to mysql console to check if the password was set properly using command below.
+---
+
+## Testing MySQL
+
+Log in to mysql console to check if the password was set properly using command below.
 
 	$ mysql -u root -p
 	Password:
 
-     Type the password at the prompt.
+Type the password at the prompt. Then you should see a `mysql>` prompt, which means that
+you authenticated successfully and can enter SQL commands.
 
-     You can exit from the mysql> prompt by typing "exit" command
-
-
+You can exit from the mysql> prompt by typing "exit" command.
 
 ---
 
