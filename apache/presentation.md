@@ -394,7 +394,14 @@ is the name of the Website you will use to access the Apache server. In this cas
 you will access your PC using its hostname, i.e. `pcXX.sse.ws.afnog.org`, where
 XX is your computer number.
 
-3.1.2	Self Sign your Own Certificate
+---
+
+## Configuring SSL
+
+### Self Sign your Own Certificate
+
+Use this command to sign the certificate with the same public key (a
+self-signed certificate):
 
 	$ sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
