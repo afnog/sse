@@ -312,6 +312,17 @@ To host this track you will probably need the following equipment:
 rooms.
 * White board, pens and eraser: at least 3 pens in 2 different colours.
 
+### Setup
+
+We usually use LXC containers, although not everything is supported (e.g. you can't run an iSCSI Target
+in an LXC container yet), so there is an alternative setup using KVM virtual machines. These are much
+heavier-weight, so you can't run as many on the same host (especially RAM is a limiting factor, since
+each VM needs ~512 MB of dedicated RAM).
+
+* [Server setup](setup/server/) (Mac Mini)
+* [LXC setup](setup/lxc/)
+* [KVM setup](setup/kvm/) (alternative)
+
 ### Administration
 
 All done by CW unless anyone else wants to.
