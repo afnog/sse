@@ -212,7 +212,7 @@ Goal: DNSSEC High Level Awareness.
 #### [Chris Wilson](#CW)
 
 * Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
-* Firewalls: [presentation](firewalls)
+* Firewalls: [HTML](firewalls) [PDF](firewalls/presentation.pdf)
 
 ### Load Balancing
 [Load Balancing]: #load-balancing
