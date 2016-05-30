@@ -96,13 +96,36 @@ Save and Exit
 5. Setup Mailwatch
 ==================
 
-Set up MailwWatch
+Download MailWatch - MailScanner Frontend
+
+	$cd /home/afnog/
+	$wget https://github.com/mailwatch/1.2.0/archive/master.zip
+	$unzip master.zip
+	$unzip 1.2.0-mailwatch.zip
+	$cd 1.2.0-master
+	$sudo mv mailscanner /var/www/
+
+
+
+
+Set up MailWatch
 
 	$cd /home/afnog/1.2.0-master
 
+Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
+
+	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
+
+Setup MailWatch web page for Apache:
+
+
+	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf’
+
+
+
 
 Setup the database. The password is afnog
-
+	$cd /home/afnog/1.2.0-master
 	$mysql –u root –p < create.sql 
 
 THEN
@@ -225,24 +248,7 @@ Type quit to exit
 8. SETUP MAILWATCH
 ====================
 
-Download MailWatch - MailScanner Frontend
 
-	$cd /home/afnog/
-	$wget https://github.com/mailwatch/1.2.0/archive/master.zip
-	$unzip master.zip
-	$unzip 1.2.0-mailwatch.zip
-	$cd 1.2.0-master
-	$sudo mv mailscanner /var/www/
-
-
-Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
-
-	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
-
-Setup MailWatch web page for Apache:
-
-
-	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf’
 
 
 
