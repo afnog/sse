@@ -290,7 +290,7 @@ class: pre-compact
 	      * *.conf
 	    * sites-available (and sites-enabled)
 	      * 000-default.conf
-	      *  default-ssl.conf
+	      * default-ssl.conf
 	* /var/www/html (content)
 	  * index.html (the test page)
 
