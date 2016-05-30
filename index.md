@@ -243,8 +243,8 @@ Goal: DNSSEC High Level Awareness.
 
 #### [Frank Kuse](#FK)
 
-* [Presentation/powerpoint](radius/radius_presentation.ppt?raw=true)
-* [Presentation/PDF](radius/radius_presentation_140528_cw.pdf?raw=true)
+* Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
+* Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
 ### Postfix
 [Postfix]: #postfix
