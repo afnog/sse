@@ -473,6 +473,10 @@ you will not be locked out (unless you lose your connection).
 
 The output of `iptables -L -nv` should look like:
 
+	Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+	 pkts bytes target prot opt in out source    destination         
+	  151 11173 ACCEPT all  --  *  *   0.0.0.0/0 0.0.0.0/0   state ESTABLISHED
+	    0     0        tcp  --  *  *   0.0.0.0/0 0.0.0.0/0   tcp dpt:22
 
 
 
