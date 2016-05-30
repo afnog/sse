@@ -325,7 +325,19 @@ Which sites, modules and confs are enabled by default, and which are not?
 
 ## Install MySQL and PHP
 
+Install the packages:
 
+	$ sudo apt install mysql-server apache2 php5 php5-mysql
+	
+When the mysql-server prompts for a password to be entered use 'afnog' as the
+password. If not prompted, don't worry, we will set it later.
+
+Create the file `/var/www/html/test.php` with the following contents:
+
+	<?php echo phpinfo(); ?>
+
+Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>.
+	
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
 For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
