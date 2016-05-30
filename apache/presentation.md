@@ -353,7 +353,8 @@ Please read the instructions and use the letters "y" or “n” on the keyboard.
 
 	$ sudo mysql_secure_installation
 
-The password to set for mysql is afnog
+The password for MySQL is probably `afnog` (unless you entered a different password
+during the installation above).
 
 	Enter current password for root (enter for none): 
 	OK, successfully used password, moving on...
