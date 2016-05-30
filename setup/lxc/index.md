@@ -65,6 +65,16 @@ The following commands are useful for dealing with `systemd` and control groups:
 * `systemctl show`
 * `/sys/fs/cgroup/memory/user/inst/*/lxc`
 
+You may also have issues logging into `sshd` with password authentication due to 
+[this issue](https://github.com/lxc/lxc/issues/661#issuecomment-222444916). The solution
+is to edit `/etc/pam.d/sshd` and `/etc/pam.d/cron` in the guest, find the line that says:
+
+	session    required     pam_loginuid.so
+
+and change it to:
+
+	session    optional     pam_loginuid.so
+
 Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
