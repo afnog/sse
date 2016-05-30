@@ -398,7 +398,7 @@ XX is your computer number.
 
 ## Configuring SSL
 
-### Self Sign your Own Certificate
+### Self-sign your own certificate
 
 Use this command to sign the certificate with the same public key (a
 self-signed certificate):
