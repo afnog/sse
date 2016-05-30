@@ -149,13 +149,13 @@ does not match any site configured on the IP and port. This is useful for:
 * Need to generate a Certificate Signing Request (CSR) and get someone to sign it
   * Chain of trust, established by signatures
   * Signer needs to be trusted by web browser (directly or indirectly)
-* Each SSL certificate* has a Public and Private key
+* Each SSL certificate[^*] has a Public and Private key
   * The public key is used to encrypt the information
   * The public key is accessible to everyone
   * The private Key is used to decipher the information
   * The private should be not be disclosed to anyone
 
-[*] The key is included on the certificate, but can be reused on more certificates as long
+[^*]: The key is included on the certificate, but can be reused on more certificates as long
 as not compromised. There is no way to revoke it except to revoke all certs signed with it.
 
 ---
