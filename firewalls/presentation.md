@@ -109,6 +109,12 @@ Decisions that can't be made based on one packet:
 
 ---
 
+## What do firewalls filter?
+
+.fill[![TCP exchange of packets](tcp-exchange.png)]
+
+---
+
 ## Typical features
 
 * Rulesets (lists of rules, read in order)
