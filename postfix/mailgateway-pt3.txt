@@ -18,6 +18,11 @@ Download MailWatch - MailScanner Frontend
 	$cd 1.2.0-master
 	$sudo mv mailscanner /var/www/
 
+
+Create the MySQL Database (root password for Mysql is "afnog")
+
+	$mysql -u root -p < create.sql
+
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
 
 	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
