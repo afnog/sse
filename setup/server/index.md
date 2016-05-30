@@ -2,6 +2,7 @@
 vim: autoread
 jekyll: process
 layout: default
+root: ../..
 ---
 
 # Server setup for AfNOG SS-E virtualisation
