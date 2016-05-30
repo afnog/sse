@@ -50,13 +50,10 @@ Prepare MailScanner directories (they may already exist)
 ========================================================================
 
 Clamav will automatically attempt to obtain fresh antivirus signatures from the Internet via
-freshclam after installation. This will take too long for us so please use pre-downloaded signatures for the class.
-(No need to do this on a real server)
+freshclam after installation. Type "freshclam" to see how updates are fetched.
 	
 	$sudo freshclam
-	$sudo killall -9 freshclam
-	$sudo scp afnog@pc39.sse.ws.afnog.org:/var/lib/clamav/* /var/lib/clamav/
-	$sudo service clamav-daemon start
+	
 
 
 4. Setup Postfix and SpamAssassin
