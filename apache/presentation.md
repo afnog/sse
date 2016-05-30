@@ -385,7 +385,7 @@ Log in to mysql console to check if the password was set properly using command 
 Type the password at the prompt. Then you should see a `mysql>` prompt, which means that
 you authenticated successfully and can enter SQL commands.
 
-You can exit from the mysql> prompt by typing "exit" command.
+You can exit from the mysql> prompt by typing the command `exit`.
 
 ---
 
