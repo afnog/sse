@@ -325,25 +325,6 @@ Check the results:
 
 ---
 
-## Simple rule set
-
-This is one of the first things I set up on any new box:
-
-	iptables -P INPUT ACCEPT
-	iptables -F INPUT
-	iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
-	iptables -A INPUT -i lo -j ACCEPT
-	iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
-	iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-	iptables -A INPUT -m limit --limit 5/min -j LOG --log-prefix 'Rejected INPUT '
-
-Check that I can access the server without triggering a "Rejected INPUT" message in the logs, and then
-lock it down:
-
-	iptables -P INPUT DROP
-
----
-
 ## Persistent Rules
 
 What happens when you reboot?
@@ -440,6 +421,25 @@ Write your rules so that connection tracking is **not needed** (allow traffic bo
 You probably want to do this for your DNS server. How?
 
 	sudo /sbin/iptables -t raw -A PREROUTING -p udp --dport 53 -j NOTRACK
+
+---
+
+## Standard simple rule set
+
+This is one of the first things I set up on any new box:
+
+	iptables -P INPUT ACCEPT
+	iptables -F INPUT
+	iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
+	iptables -A INPUT -i lo -j ACCEPT
+	iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+	iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+	iptables -A INPUT -m limit --limit 5/min -j LOG --log-prefix 'Rejected INPUT '
+
+Check that I can access the server without triggering a "Rejected INPUT" message in the logs, and then
+lock it down:
+
+	iptables -P INPUT DROP
 
 ---
 
