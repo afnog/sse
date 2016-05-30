@@ -1,8 +1,8 @@
 class: center, middle
 
-# Linux Firewalls
+# Apache
 
-.height_8em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
+.height_8em[[![Apache](geronimo.jpg)](http://www.greatdreams.com/apache/apache-index.htm)]
 
 ### Chris Wilson, AfNOG 2016
 
