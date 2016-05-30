@@ -106,8 +106,6 @@ Download MailWatch - MailScanner Frontend
 	$sudo mv mailscanner /var/www/
 
 
-
-
 Set up MailWatch
 
 	$cd /home/afnog/1.2.0-master
