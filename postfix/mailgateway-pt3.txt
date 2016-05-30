@@ -82,7 +82,7 @@ Configure Postfix to hold mail first. Effectivly a mail arrives and is put into 
 
 Save and Exit
 
-Configure the main.cf file to read the file created above.
+Configure the main.cf file to read the file created above. Add the following line at the end:
 
 	$sudo nano /etc/postfix/main.cf
 
