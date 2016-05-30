@@ -1,3 +1,9 @@
+---
+vim: autoread
+jekyll: process
+layout: default
+---
+
 # VM setup using LXC
 
 Install Ubuntu Desktop (not Server) 16.04 AMD64, then:
