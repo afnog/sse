@@ -12,7 +12,7 @@ Copy preconfigured files for Mailwatch from the instructor’s server. The only 
 Download MailWatch - MailScanner Frontend
 
 	$cd /home/afnog/
-	$wget http://197.4.11.139/1.2.0-mailwatch.zip
+	$wget https://github.com/mailwatch/1.2.0/archive/master.zip
 	$unzip 1.2.0-mailwatch.zip
 	$cd 1.2.0-master
 	$sudo mv mailscanner /var/www
