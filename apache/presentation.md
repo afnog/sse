@@ -60,7 +60,7 @@ Also note growing popularity of nginx.
 ## Which one to use?
 
 * Apache
-  * Popular, well-documented, flexible, secure, big, slow, heavy.
+  * Popular, well-documented, flexible, secure, big, slow, heavy, PHP integration.
 * Nginx
   * Increasingly popular, quite well-documented, very fast, reverse proxy, SSL support/wrapper, no PHP.
 * Lighttpd
