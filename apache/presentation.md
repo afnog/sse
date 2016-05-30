@@ -248,7 +248,27 @@ How do you test that it worked?
 
 And visit http://pcXX.sse.ws.afnog.org in your browser.
 
+What content is it serving? How do we change it?
 
+---
+
+## File system layout
+
+* /etc
+  * /apache2
+    * apache2.conf
+    * ports.conf
+  * mods-available
+    * *.load
+    * *.conf
+  * mods-enabled
+    * symlinks to mods-available for services which are enabled
+  * 
+|-- conf-enabled
+|       `-- *.conf
+|-- sites-enabled
+|       `-- *.conf/etc
+ 
 
 
 
