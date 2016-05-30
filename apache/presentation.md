@@ -359,8 +359,28 @@ NOTE:
 * The "CommonName" is the FQDN in this case pcXX.sse.ws.afnog.org  
 * The path is where the certificate File and Keys are located, in this case `/etc/apache2/ssl`.
  
+---
+
+## Configuring SSL
+
+### Create the SSL Certificates
+
+Generate a public and private key-pair:
+
+	$ sudo mkdir /etc/apache2/ssl/
+	$ cd /etc/apache2/ssl/
+	$ sudo openssl genrsa -des3 -out server.key 2048 
+
+NOTE: A passphrase will be requested to encrypt the key. For this exercise, use
+"afnog" as the pass phrase. However, this pass-phrase will be needed at every
+apache restart. To get rid of the passphrase prompts at every apache restart
+and maintain the original key, run these commands:
+
+	$ sudo cp server.key server.key.orig
+	$ sudo openssl rsa -in server.key.orig -out server.key
 
 
+---
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
 For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
