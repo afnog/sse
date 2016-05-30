@@ -62,8 +62,13 @@ Also note growing popularity of nginx.
 Notice how only Apache supports PHP (natively)?
 
 Most web servers need you to install and run a FastCGI server to support PHP, which is more complex.
+
 But it does completely isolate the PHP server process from your web server, preventing it from
 bringing down your HTTP server (by overloading or a vulnerability).
+
+
+
+
 
 ## Stateful Firewalls
 
