@@ -105,16 +105,20 @@ Apache support virtual hosting (deciding which website to display) using:
 
 ???
 
-**Name based** virtual hosting is recommended for modern systems to conserve IP addresses. The server looks
-at the Host: header of the request to identify which website to serve. 
-
-However sometimes you will want to show a default page regardless of the hostname that the client accesses,
-e.g. if you are intercepting HTTP requests or to show a helpful error page when your Apache configuration
-does not recognise the domain, e.g. it has not yet been updated to match the DNS pointing a new domain to your
-server. To do this, you will need to understand IP/Port based virtual hosting.
-
 **IP/Port based** virtual hosting looks at the IP and port that received the request to identify which
 website to serve.
+
+**Name based** virtual hosting is recommended for modern systems to conserve IP addresses. The server looks
+at the IP and port **and also the Host: header of the request** to identify which website to serve. 
+
+Every IP and port with `NameVirtualHost` enabled has a default site that is shown if the Host: header
+does not match any site configured on the IP and port. This is useful for:
+
+* showing a default page if the DNS has been changed to point a new domain to the web server,
+  but the web server not yet configured for it;
+
+* when you do not know which domain name the client is going to use, e.g. when intercepting 
+  web requests (captive portal)
 
 ---
 
