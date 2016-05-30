@@ -405,8 +405,18 @@ self-signed certificate):
 
 	$ sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
+---
 
+## Enable SSL in Apache
 
+We need to tell Apache where to find the certificate and the private key files
+that we want it to use. 
+
+Edit `/etc/apache2/sites-available/default-ssl.conf` and find and modify the `SSLCertificateFile`
+and `SSLCertificateKeyFile` lines as follows:
+
+	SSLCertificateFile    /etc/apache2/ssl/server.crt
+	SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
 ---
 
