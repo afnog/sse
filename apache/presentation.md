@@ -228,6 +228,25 @@ So how do I get one again?
 
 We will show you how to setup your own CA and create valid certs signed by it.
 
+---
+
+## Install Apache
+
+	sudo apt install apache2
+
+How do you test that it worked?
+
+---
+
+## Install Apache
+
+	sudo apt install apache2
+
+How do you test that it worked?
+
+	telnet localhost 80
+
+And visit http://pcXX.sse.ws.afnog.org in your browser.
 
 
 
