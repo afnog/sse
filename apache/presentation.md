@@ -37,7 +37,6 @@ What other HTTP (web) servers are commonly used?
 What other HTTP (web) servers are commonly used?
 
 [![Netcraft Survey](wpid-wss-share.png)](http://news.netcraft.com/archives/2015/09/16/september-2015-web-server-survey.html)
-.height_8em[[![Netcraft Survey](wpid-wss-share.png)](http://news.netcraft.com/archives/2015/09/16/september-2015-web-server-survey.html)]
 
 ???
 
@@ -53,9 +52,39 @@ Also note growing popularity of nginx.
 
 ## Which one to use?
 
-Apache
-: Popular, well-documented, flexible, secure, big, slow.
+* Apache: Popular, well-documented, flexible, secure, big, slow, heavy.
+* Nginx: Increasingly popular, quite well-documented, very fast, reverse proxy, no PHP.
+* Lighttpd: Simple, fast, no PHP.
+* Thttpd: Tiny, fast, no PHP.
 
+???
+
+Notice how only Apache supports PHP (natively)?
+
+Most web servers need you to install and run a FastCGI server to support PHP, which is more complex.
+
+But it does completely isolate the PHP server process from your web server, preventing it from
+bringing down your HTTP server (by overloading or a vulnerability).
+
+---
+
+## Apache Features
+
+* Server Side Programming Language Support
+  * Apache supports some common language interfaces which include Perl, Python, Tcl, and PHP. It also supports a variety of popular authentication modules like mod_auth, mod_access, mod_digest and many others.
+* IPv6 Support
+  * On systems where IPv6 is supported by the underlying Apache Portable Runtime library, Apache gets IPv6 listening sockets by default. 
+* Virtual Hosting
+  * Apache will allow one installation instance to serve multiple websites. For instance one Apache installation can serve sse.afnog.org, ws.afnog.org etc
+* Simplified configuration (!)
+
+More at: http://httpd.apache.org/docs/2.2/new_features_2_0.html 
+
+
+
+
+
+---
 
 ## Stateful Firewalls
 
