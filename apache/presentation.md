@@ -363,7 +363,7 @@ NOTE:
 
 ## Configuring SSL
 
-### Create the SSL Certificates
+### Create your public and private key
 
 Generate a public and private key-pair:
 
@@ -383,7 +383,7 @@ and maintain the original key, run these commands:
 
 ## Configuring SSL
 
-### Create Certificate Signing Request
+### Create a Certificate Signing Request (CSR)
 
 Use this command to generate a new Certificate Signing Request (CSR):
 
