@@ -273,10 +273,10 @@ Then browse your IPv6 address at http://[2001:43f8:220:219::XX] (the square brac
 are deliberate and essential!).
 
 ---
+class: pre-small
 
 ## Apache configuration files
 
-.pre.small[
 	* /etc
 	  * /apache2
 	    * apache2.conf
@@ -293,7 +293,6 @@ are deliberate and essential!).
 	    *  default-ssl.conf
 	* /var/www/html (content)
 	  * index.html (the test page)
-]
 
 Why this structure?
 
