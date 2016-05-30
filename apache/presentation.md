@@ -149,12 +149,85 @@ does not match any site configured on the IP and port. This is useful for:
 * Need to generate a Certificate Signing Request (CSR) and get someone to sign it
   * Chain of trust, established by signatures
   * Signer needs to be trusted by web browser (directly or indirectly)
+* Each SSL certificate* has a Public and Private key
+  * The public key is used to encrypt the information
+  * The public key is accessible to everyone
+  * The private Key is used to decipher the information
+  * The private should be not be disclosed to anyone
 
 ---
 
 ## How SSL works
 
 .fill[![How SSL works](how-ssl-works.svg)]
+
+???
+
+* Server gets a certificate:
+  * Generates a public-private key pair
+  * Generates a Certificate Signing Request (CSR) containing a hash of the public key
+  * Sends CSR and money to a Certificate Authority (CA)
+  * CA generates a certificate, including its own public key, signed with the corresponding private key, and returns to server
+  * All of this happens ~1 time per certificate lifetime (1-5 years)
+* Client connects to server via SSL
+  * Sends a nonce (number used once) to server
+  * Server signs nonce and returns it with the certificate (**which one?**) to client
+* Client checks that:
+  * It trusts the CA - possibly via a chain from a trusted CA
+  * The cert lists the domain that it tried to connect to (**aha!**)
+  * The cert has the correct purpose (authentication)
+  * The cert has not been revoked (against a list downloaded by OCSP)
+  * The nonce was signed by the key listed in the certificate
+* All of this proves that:
+  * The server has a key
+  * which was given a certificate
+  * which is valid for the purpose
+  * and was signed (directly or indirectly) by a CA that the client trusts
+  * and has not been revoked
+  * therefore they can trust the server
+
+Note: no protection against key theft except certificate revocation!
+
+Also, invalidating a certificate invalidates all those signed by it.
+
+---
+
+## Certificate Authorities
+
+Who are these guys anyway?
+
+* Geotrust, Go Daddy, RSA, Thawte, Verisign, many others...
+* Trusted by browsers
+* Verify your identity (not really any more)
+* Take your money
+* Try not to lose their private keys
+  * What would happen if they did?
+
+---
+
+## Self-signed certificates
+
+* Useful for testing
+* Useful in controlled environments
+* Free (as in beer, but take time and skill to manage)
+* Useless for clients who won't install the cert
+
+---
+
+## Getting Certificates
+
+So how do I get one again?
+
+* Pay money
+* Self-certified (own CA)
+* Self-signed
+
+We will show you how to setup your own CA and create valid certs signed by it.
+
+
+
+
+
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
 For integrity, SSL certificates are signed by a Certificate Authority’s (CA) such as Verisign
