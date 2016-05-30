@@ -19,10 +19,7 @@ You will need the following CPAN module
 	
 	$sudo cpan install Encoding::FixLatin
 
-Update spamassassin:
-Just incase it did not corretly install
-	$sudo apt-get install spamassassin
-	$sudo sa-update
+
 
 Enable MailScanner
 
@@ -58,6 +55,12 @@ freshclam after installation. Type "freshclam" to see how updates are fetched.
 
 4. Setup Postfix and SpamAssassin
 ================================
+
+Update spamassassin:
+Just incase it did not corretly install:
+
+	$sudo apt-get install spamassassin
+	$sudo sa-update
 
 Enable SpamAssassin 
 
