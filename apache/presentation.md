@@ -333,11 +333,19 @@ Install the packages:
 When the mysql-server prompts for a password to be entered use 'afnog' as the
 password. If not prompted, don't worry, we will set it later.
 
+---
+
+## Testing PHP
+
 Create the file `/var/www/html/test.php` with the following contents:
 
 	<?php echo phpinfo(); ?>
 
-Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>.
+Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>. You should see this:
+
+.height_8em[![phpinfo output](phpinfo.png)]
+
+---
 	
 
 Requires the creation of SSL certificates and Certificate Signing Requests (CSR)
