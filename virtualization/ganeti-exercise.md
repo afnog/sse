@@ -139,15 +139,16 @@ your host. You will also need to choose a name (hostname) and IP address for
 your cluster, which must be different. For example:
 
 	127.0.0.1       localhost
-	192.168.56.10   ganeti1.sse.ws.afnog.org
-	192.168.56.11   cluster1.sse.ws.afnog.org
+	192.168.56.10   ganeti.pcXX.sse.ws.afnog.org
+	192.168.56.11   cluster.pcXX.sse.ws.afnog.org
 
 Normally you would add DNS entries for all of these. Feel free to use the DNS
 for the cluster name, instead of editing `/etc/hosts`. Your hostname should
 really be in the DNS as well, but for the purposes of this exercise
 (non-production deployment) it doesn't matter too much.
 
-Edit `/etc/default/grub` and add the following line:
+Edit `/etc/default/grub` and add the following line to enable Xen (you would
+not need this for a KVM cluster in production):
 
 	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:384M,max:384M"
 
