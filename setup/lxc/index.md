@@ -7,7 +7,7 @@ root: ../..
 
 # VM setup using LXC
 
-Using Ubuntu 16.04. Follow [server setup](../server/) first to configure the server.
+Using Ubuntu 16.04. Follow [server setup](../server/index.html) first to configure the server.
 
 Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLAN bridging:
 
