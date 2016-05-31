@@ -175,7 +175,8 @@ Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
-* Installing RBD: skip to [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
+* Installing DRBD and Installing RBD: skip to
+  [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
 * KVM userspace access
 * Configuring the network
 * Configuring LVM
