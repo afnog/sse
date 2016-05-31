@@ -6,17 +6,19 @@ class: center, middle, inverse
 
 ### Chris Wilson, AfNOG 2016
 
+---
+
+## About this presentation
+
 Based on a previous talk by Joel Jaeggli with thanks!
 
 You can access this presentation at: http://afnog.github.io/sse/apache/
 ([edit](https://github.com/afnog/sse/apache/presentation.md))
 
-.smaller.left[
 * Online: http://afnog.github.io/sse/apache/
 * Local: http://www.ws.afnog.org/afnog2016/sse/apache/index.html
 * Github: https://github.com/afnog/sse/blob/master/apache/presentation.md
 * Download PDF: http://www.ws.afnog.org/afnog2016/sse/apache/presentation.pdf
-]
 
 ---
 
