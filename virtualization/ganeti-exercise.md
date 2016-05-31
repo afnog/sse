@@ -182,7 +182,7 @@ skipping the following sections:
 Run the following command, substituting the cluster name you added to
 `/etc/hosts` instead of `cluster1...`:
 
-	sudo gnt-cluster init --vg-name Main --enabled-hypervisors=xen-pvm -H xen-pvm:xen_cmd=xl cluster1.sse.ws.afnog.org
+	sudo gnt-cluster init --vg-name Main --enabled-hypervisors=xen-pvm -H xen-pvm:xen_cmd=xl cluster.pcXX.sse.ws.afnog.org
 
 **Note:** Normally you would use either `xen-hvm` or `kvm` as the hypervisor,
 instead of `xen-pvm` above. In this case we must use `xen-pvm` because we are
