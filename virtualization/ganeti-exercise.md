@@ -94,7 +94,7 @@ AfNOG workshop then this server will no longer exist, so use a local proxy
 server or leave it blank.
 
 While the installation proceeds, familiarise yourself with the terminology of
-[Ganeti](http://docs.ganeti.org/ganeti/2.17/html/admin.html#ganeti-terminology).
+[Ganeti](http://docs.ganeti.org/ganeti/2.15/html/admin.html#ganeti-terminology).
 
 #### Packages
 
@@ -171,11 +171,11 @@ Edit `/etc/xen/xend-config.sxp` and change the following setting:
 
 Then `reboot` the host and log in again.
 
-Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.13/html/install.html),
+Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
-* Installing RBD: skip to [Installing Gluster](http://docs.ganeti.org/ganeti/2.13/html/install.html#installing-gluster) instead.
+* Installing RBD: skip to [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
 * KVM userspace access
 * Configuring the network
 * Configuring LVM
