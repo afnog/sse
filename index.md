@@ -121,7 +121,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-* Presentation and Exercises: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
+* Presentation and Exercises: [HTML](apache/index.html) [PDF](apache/presentation.pdf)
 
 ### Backups
 [Backups]: #backups
