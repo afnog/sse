@@ -1,6 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 
+/* http://stackoverflow.com/questions/1542320/margin-while-printing-html-page */
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 0;
+} 
 body {
 	font-family: 'Droid Serif';
 }
