@@ -167,7 +167,7 @@ Then run the following commands:
 
 	sudo update-grub
 	sudo apt-get dist-upgrade	
-	sudo apt-get install ganeti ganeti-instance-debootstrap xen-hypervisor-amd64 xen-system-amd64
+	sudo apt-get install xen-hypervisor-amd64 xen-system-amd64
 
 Edit `/etc/xen/xend-config.sxp` and change the following setting:
 
@@ -196,7 +196,12 @@ Load the kernel module (driver) now:
 
 ### Continue Ganeti installation
 
-Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
+Start by running the following commands:
+
+	sudo mkdir /root/.ssh
+	sudo apt install ganeti ganeti-instance-debootstrap
+
+Then start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
