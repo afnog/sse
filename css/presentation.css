@@ -9,7 +9,7 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 h1, h2 {
-	border-bottom: 0.1em solid red;
+	border-bottom: 0.1em solid #b40004;
 }
 .title h1, .inverse h1 {
 	padding-bottom: 0.5em;
