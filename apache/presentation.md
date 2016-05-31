@@ -2,7 +2,7 @@ class: center, middle, inverse
 
 # Apache
 
-.height_8em[[![Apache](geronimo.jpg)](http://www.greatdreams.com/apache/apache-index.htm)]
+.height_12em[[![Apache](geronimo.jpg)](http://www.greatdreams.com/apache/apache-index.htm)]
 
 ### Chris Wilson, AfNOG 2016
 

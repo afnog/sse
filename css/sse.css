@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-h2, a, a.visited
+h2, a, a:visited
 {
 	color: #b40004;
 }
