@@ -96,6 +96,10 @@ server or leave it blank.
 While the installation proceeds, familiarise yourself with the terminology of
 [Ganeti](http://docs.ganeti.org/ganeti/2.17/html/admin.html#ganeti-terminology).
 
+#### Packages
+
+Install the OpenSSH Server.
+
 ### Network Re-Configuration
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
