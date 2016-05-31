@@ -73,6 +73,7 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 * Leave the rest of the volume group as unallocated free space.
 * Finish and Write changes to disk.
 
+
 ### Proxy Server
 
 When asked for a proxy server, enter this one (to save a LONG install time):
