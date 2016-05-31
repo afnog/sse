@@ -266,7 +266,9 @@ much with your new hypervisor. If it doesn't show enough free RAM, check that
 you have [reconfigured GRUB and run
 `update-grub`](http://askubuntu.com/a/191489/49566).
 
-Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `burnin.example.com`.
+Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `burnin.example.com`:
+
+	192.168.56.12   burnin.example.com
 
 Run the `burnin` test to make sure that everything is working properly:
 
