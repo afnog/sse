@@ -63,7 +63,8 @@ You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.o
 
 #### Partitioning
 
-The server should use LVM for disk space, so instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI1*, then:
+The server should use LVM for disk space, so instead of the default *Guided
+Partitioning*, choose *Manual*, then *SCSI1*. Write a new partition table if prompted.
 
 * Select *pri/log free space*, *Create a new partition*, 40 GB, *Primary*, *Beginning*, *Done*.
 * Select the new partition, choose *Use as > Physical volume for LVM*.
