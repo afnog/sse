@@ -157,7 +157,8 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 * [Presentation (PowerPoint)](pgp/pgp-presentation1.pptx)
 * [Presentation (PDF)](pgp/pgp-presentation1.pdf)
-* [Exercise](pgp/pgp-exercise1.txt)
+* [PGP Exercise](pgp/pgp-exercise1.txt)
+* [SSH Exercise](pgp/ssh-exercise1.txt)
 * [Key File](pgp/pgp-presentation1.key)
 * [Old NANOG Presentation](pgp/nanog29-jabley-pgp.pdf)
 
