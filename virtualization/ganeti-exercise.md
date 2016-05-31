@@ -100,7 +100,8 @@ While the installation proceeds, familiarise yourself with the terminology of
 
 #### Software selection
 
-Enable installation of the SSH Server as well.
+Enable installation of the *SSH Server* and *Standard system utilities*,
+disable everything else.
 
 ### Network Re-Configuration
 
