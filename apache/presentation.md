@@ -433,10 +433,10 @@ Use this command to generate a new Certificate Signing Request (CSR):
 
 	$ sudo openssl req -new -key server.key -out server.csr
 
-This will prompt for some information. Most doesn't matter, but the CommonName
-is the name of the Website you will use to access the Apache server. In this case
-you will access your PC using its hostname, i.e. `pcXX.sse.ws.afnog.org`, where
-XX is your computer number.
+This will prompt for some information, which will appear in the certificate.
+
+The Common Name **must match** the hostname that you will use to access the
+Apache server, for example `pcXX.sse.ws.afnog.org`, where XX is your computer number.
 
 ---
 
