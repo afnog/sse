@@ -172,15 +172,19 @@ Then run the following commands:
 
 	sudo update-grub
 	sudo apt-get dist-upgrade	
-	sudo apt-get install xen-hypervisor-amd64 xen-system-amd64
+	sudo apt-get install xen-linux-system-amd64
 
 Then `reboot` the host. Be sure to select a Xen kernel from the boot list. Log in again and check
 that the `free` command reports 384 MB of total Mem, not 2 GB:
 
+	afnog@ganeti:~$ free
+		     total       used       free     shared    buffers     cached
+	Mem:        309132
+
 ### Install DRBD
 
-The Ganeti manual has instructions for this, but they are confusing and out-of-date for Ubuntu 16.04,
-so we skip that step and do it here instead:
+The Ganeti manual has instructions for this, but they are confusing and
+out-of-date for Debian >= Wheezy, so we skip that step and do it here instead:
 
 	sudo apt install drbd-utils
 
