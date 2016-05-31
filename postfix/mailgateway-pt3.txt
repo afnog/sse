@@ -43,6 +43,7 @@ Prepare MailScanner directories (they may already exist)
 	$sudo chown postfix:clamav /var/spool/MailScanner/incoming
 	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine
 	
+	
 
 
 3. Get clamav updates (they take a long time and we will use a local copy)
@@ -59,9 +60,12 @@ freshclam after installation. Type "freshclam" to see how updates are fetched.
 ================================
 
 Update spamassassin:
-Just incase it did not corretly install:
+Just incase it did not corretly install (it failed on mine for some reason):
 
 	$sudo apt-get install spamassassin
+
+Fetch an update to the rules 
+
 	$sudo sa-update
 
 Enable SpamAssassin 
