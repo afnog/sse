@@ -330,7 +330,7 @@ Which sites, modules and confs are enabled by default, and which are not?
 
 Install the packages:
 
-	$ sudo apt install mysql-server apache2 php5 php5-mysql
+	$ sudo apt install mysql-server php5 php5-mysql
 	
 When the mysql-server prompts for a password to be entered use 'afnog' as the
 password. If not prompted, don't worry, we will set it later.
