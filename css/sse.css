@@ -32,7 +32,7 @@ h4 /* sub-subheadings in exercises */
 	font-size: 1em;
 	font-weight: bold;
 }
-p, table, h3, ul, pre, blockquote
+p, table, h3, h4, ul, pre, blockquote
 {
 	margin-left: 5%;
 	margin-right: 5%;
