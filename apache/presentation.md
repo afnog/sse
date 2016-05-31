@@ -501,9 +501,9 @@ What about the red padlock? Click on it, and then *Details* and *View Certificat
 ## Solving the security warning
 
 * Submit the (same) CSR to a well-known CA, or
-* Install the cert in your browser's certificate store
+* Install the cert in your browser's certificate store:
 
-.height_12em[![Add a certificate to trusted list](add-certificate-trust.png)]
+.height_18em.center[![Add a certificate to trusted list](add-certificate-trust.png)]
 
 ---
 
