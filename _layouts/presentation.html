@@ -155,7 +155,7 @@ https://github.com/afnog/sse.
 				jQuery.ajax({
 					url: url,
 					dataType: "text",
-					cache: false,
+					cache: true,
 					success: function(data, textStatus, jqXHR)
 					{
 						if (data != lastText)
