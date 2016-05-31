@@ -14,7 +14,7 @@ h1, h2 {
 .title h1, .inverse h1 {
 	padding-bottom: 0.5em;
 }
-.title h2 {
+.title h2, .inverse h2 {
 	border: none;
 }
 .inverse {
