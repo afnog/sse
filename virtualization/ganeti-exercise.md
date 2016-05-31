@@ -160,9 +160,10 @@ really be in the DNS as well, but for the purposes of this exercise
 
 ### Configure Xen
 
-Edit `/etc/default/grub` and add the following line to enable Xen (you would
+Edit `/etc/default/grub` and change the following lines to enable Xen (you would
 not need this for a KVM cluster in production):
 
+	GRUB_DEFAULT=saved
 	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:512M,max:512M"
 
 This restricts the master domain to 384 MB RAM, which will make it slow, but give us more RAM free
