@@ -487,6 +487,7 @@ The output of `iptables -L -nv` should look like:
 	    0     0        tcp  --  *  *   0.0.0.0/0 0.0.0.0/0   tcp dpt:22
 
 ---
+class: center, middle, inverse
 
 ## FIN
 
