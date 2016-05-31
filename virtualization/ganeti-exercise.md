@@ -71,9 +71,8 @@ Partitioning*, choose *Manual*, then *SCSI1*. Write a new partition table if pro
 * Select *Configure the Logical Volume Manager*:
 	* Select *Create volume group*
 	* Enter a name for the new main volume group, for example `xenvg`. Select device `/dev/sda1`.
-	* Select *Create logical volume* with *Name* `Root` and *Size* `8GB`.
-	* Select *Create logical volume* with *Name* `Swap` and *Size* `4GB`.
-	* Create a logical volume of 4 GB, *Name > Swap.
+	* Select *Create logical volume*, enter the *Name* `Root` and *Size* `8GB`.
+	* Select *Create logical volume*, enter the *Name* `Swap` and *Size* `4GB`.
 	* Select *Finish*.
 * Select *LVM VG xenvg, LV Root* -> *#1 8.0 GB*:
 	* Select *Use as > Ext4 journalling filesystem*.
