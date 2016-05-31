@@ -247,7 +247,7 @@ Type quit to exit
 ====================
 
 
-
+echo "This is my email, hello" | mail -s "This is a test message" kevin.chege@gmail.com
 
 
 9. LOGIN TO MAILWATCH
