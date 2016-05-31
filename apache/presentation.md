@@ -352,7 +352,8 @@ class: pre-compact
 
 ## Securing MySQL
 
-Please read the instructions and use the letters "y" or “n” on the keyboard.
+Run the `mysql_secure_installation` script and answer Yes (`Y`) to every
+question.
 
 	$ sudo mysql_secure_installation
 
