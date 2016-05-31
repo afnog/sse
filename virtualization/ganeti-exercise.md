@@ -198,7 +198,6 @@ Load the kernel module (driver) now:
 
 Start by running the following commands:
 
-	sudo mkdir /root/.ssh
 	sudo apt install ganeti ganeti-instance-debootstrap
 
 Then start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
@@ -218,7 +217,10 @@ skipping the following sections:
 Run the following command, substituting the cluster name you added to
 `/etc/hosts` instead of `cluster1...`:
 
+	sudo mkdir /root/.ssh
 	sudo gnt-cluster init --vg-name xenvg --enabled-hypervisors=xen-pvm -H xen-pvm:xen_cmd=xl cluster.pcXX.sse.ws.afnog.org
+
+The `gnt-cluster` command should take a few minutes to complete.
 
 **Note:** Normally you would use either `xen-hvm` or `kvm` as the hypervisor,
 instead of `xen-pvm` above. In this case we must use `xen-pvm` because we are
