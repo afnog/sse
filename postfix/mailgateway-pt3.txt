@@ -42,6 +42,7 @@ Prepare MailScanner directories (they may already exist)
 	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix:postfix /var/spool/MailScanner/spamassassin
 	$sudo chown postfix:clamav /var/spool/MailScanner/incoming
 	$sudo chown postfix:www-data /var/spool/MailScanner/quarantine
+	
 
 
 3. Get clamav updates (they take a long time and we will use a local copy)
