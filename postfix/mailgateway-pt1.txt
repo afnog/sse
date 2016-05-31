@@ -33,7 +33,7 @@ THE FOLLOWING INSTRUCTIONS ASSUME THAT YOU HAVE WORKING MX RECORDS
 === Install The Tools:====
 =======================
 
-	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget php-pear
+	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget php-pear mutt
 
 
 YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
