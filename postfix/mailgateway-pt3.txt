@@ -6,7 +6,7 @@
 ==================
 Copy preconfigured files for Mailwatch from the instructor’s server. The only changes made to these files was to add the MySQL username and password to allow MailWatch to connect to the database.
 
-	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/perl/custom/
+	$sudo scp afnog@pc37.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/perl/custom/
 	$sudo chmod ugo+x /usr/share/MailScanner/perl/custom/
 
 
@@ -19,7 +19,6 @@ You will need the following CPAN module
 
 	
 	$sudo cpan install Encoding::FixLatin
-
 
 
 Enable MailScanner
@@ -118,7 +117,7 @@ Set up MailWatch:
 
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
 
-	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
+	$sudo scp afnog@pc37.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
 
 Setup MailWatch web page for Apache:
 
