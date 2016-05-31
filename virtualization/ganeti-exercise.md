@@ -112,19 +112,20 @@ Then start the machine again. Log in on the console and edit `/etc/network/inter
 	iface lo inet loopback
 
 	# The primary network interface
-	auto eth0
-	iface eth0 inet dhcp
+	auto enp0s3
+	iface enp0s3 inet dhcp
 
-	auto eth1
-	iface eth1 inet manual
+	auto enp0s8
+	iface enp0s8 inet manual
 
 	auto xen-br0
 	iface xen-br0 inet static
 		address 192.168.56.10
 		netmask 255.255.255.0
-		bridge_ports eth1
+		bridge_ports enp0s8
 		bridge_stp off
 		bridge_fd 0
+
 
 Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
 
