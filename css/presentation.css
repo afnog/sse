@@ -11,10 +11,10 @@ h1, h2, h3 {
 h1, h2 {
 	border-bottom: 0.1em solid red;
 }
-.title h1 {
+.title h1, .inverse h1 {
 	padding-bottom: 0.5em;
 }
-.title h2 {
+.title h2, .inverse h2 {
 	border: none;
 }
 .inverse {
