@@ -345,7 +345,7 @@ Create the file `/var/www/html/test.php` with the following contents:
 
 Load it in your browser at <http://pcXX.sse.ws.afnog.org/test.php>. You should see this:
 
-.height_8em[![phpinfo output](phpinfo.png)]
+.height_8em.center[![phpinfo output](phpinfo.png)]
 
 ---
 class: pre-compact
