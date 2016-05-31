@@ -277,6 +277,10 @@ Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `
 
 	192.168.56.12   burnin.example.com
 
+The `burnin` test will [fail](https://groups.google.com/forum/#!topic/ganeti/ds0TwfroS8A) unless we generate a DH parameters file:
+
+	sudo openssl dhparam -out /var/lib/ganeti/server.pem 2048
+
 Run the `burnin` test to make sure that everything is working properly:
 
 	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 burnin.example.com -vv
