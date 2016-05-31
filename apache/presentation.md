@@ -442,7 +442,7 @@ Apache server, for example `pcXX.sse.ws.afnog.org`, where XX is your computer nu
 
 ## Configuring SSL
 
-### Self-sign your own certificate
+### Self-sign your certificate
 
 Use this command to sign the certificate with the same public key (a
 self-signed certificate):
