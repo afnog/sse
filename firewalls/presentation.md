@@ -1,8 +1,8 @@
-class: center, middle
+class: center, middle, inverse
 
 # Linux Firewalls
 
-.height_8em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
+.height_12em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
 
 ### Chris Wilson, AfNOG 2016
 
