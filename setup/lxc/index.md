@@ -119,6 +119,10 @@ And try to reduce it with unionfs mounts (experimental):
 		sudo mount $LXC_ROOT/$hostname/rootfs
 		sudo sed -i -e "s/100/$[100+$i]/" $LXC_ROOT/$hostname/rootfs/etc/network/interfaces
 		echo $domainname | sudo tee $LXC_ROOT/$hostname/rootfs/etc/hostname
+
+		# Dovecot has problems locking the mailbox when hosted on AUFS. Work around it
+		# by mounting a ramdisk for /var/mail in all containers:
+		echo 'none /var/mail tmpfs defaults 0 0' | sudo tee -a $LXC_ROOT/$hostname/rootfs/etc/fstab
 		lxc-start -n $hostname
 	done
 	lxc-autostart
