@@ -52,8 +52,9 @@ dynamically sized.
 
 ### Starting Installation
 
-Start the VM and attach the Debian 8.x amd64 DVD 1 ISO. Read the following sections
-**before** you start the installation, and use them at the appropriate times during the
+Start the VM and attach the debian-8.x.x-amd64-DVD-1.iso image. Read the
+following sections **before** you start the installation, and use them at the
+appropriate times during the
 installation.
 
 #### Hostname
