@@ -116,6 +116,7 @@ Then start the machine again. Log in on the console and install some packages:
 
 	su
 	apt install bridge-utils sudo
+	usermod -G sudo afnog
 
 Then edit `/etc/network/interfaces` to look like this:
 
