@@ -215,7 +215,7 @@ skipping the following sections:
   [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
 * KVM userspace access
 * Configuring the network
-* Configuring LVM
+* Configuring LVM: only follow the "Optional" step to configure LVM not to scan the DRBD devices for physical volumes. 
 * Installing Ganeti: stop following at this point.
 
 ### Initializing the Cluster
