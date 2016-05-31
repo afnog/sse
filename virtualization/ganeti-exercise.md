@@ -123,11 +123,11 @@ Then edit `/etc/network/interfaces` to look like this:
 	iface lo inet loopback
 
 	# The primary network interface
-	auto enp0s3
-	iface enp0s3 inet dhcp
+	auto eth1
+	iface eth0 inet dhcp
 
-	auto enp0s8
-	iface enp0s8 inet static
+	auto eth1
+	iface eth1 inet static
 		address 0.0.0.0
 		netmask 255.255.255.255
 
@@ -135,7 +135,7 @@ Then edit `/etc/network/interfaces` to look like this:
 	iface xen-br0 inet static
 		address 192.168.56.10
 		netmask 255.255.255.0
-		bridge_ports enp0s8
+		bridge_ports eth1
 		bridge_stp off
 		bridge_fd 0
 
