@@ -66,8 +66,8 @@ You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.o
 The server should use LVM for disk space, so instead of the default *Guided
 Partitioning*, choose *Manual*, then *SCSI1*. Write a new partition table if prompted.
 
-* Select *pri/log free space*, *Create a new partition*, `max`, *Primary*, *Beginning*, *Done*.
-* Select the new partition, choose *Use as > Physical volume for LVM*.
+* Select *pri/log free space*, *Create a new partition*, `max`, *Primary*,
+  *Use as > Physical volume for LVM*, *Done*.
 * Select *Configure the Logical Volume Manager*:
 	* Select *Create volume group*
 	* Enter a name for the new main volume group, for example `xenvg`. Select device `/dev/sda1`.
