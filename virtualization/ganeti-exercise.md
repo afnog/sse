@@ -174,7 +174,8 @@ Then run the following commands:
 	sudo apt-get dist-upgrade	
 	sudo apt-get install xen-hypervisor-amd64 xen-system-amd64
 
-Then `reboot` the host and log in again.
+Then `reboot` the host. Be sure to select a Xen kernel from the boot list. Log in again and check
+that the `free` command reports 384 MB of RAM, not 2 GB:
 
 ### Install DRBD
 
