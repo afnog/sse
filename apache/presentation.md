@@ -494,7 +494,7 @@ Success! (kind of)
 
 What about the red padlock? Click on it, and then *Details* and *View Certificate* (or similar):
 
-.fill[![Certificate details](certificate-details.png)]
+.height_18em.center[![Certificate details](certificate-details.png)]
 
 ---
 
