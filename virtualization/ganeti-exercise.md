@@ -284,7 +284,7 @@ The `burnin` test will [fail](https://groups.google.com/forum/#!topic/ganeti/ds0
 
 Run the `burnin` test to make sure that everything is working properly:
 
-	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 burnin.example.com -vv
+	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 --mem-size=512 burnin.example.com -vv
 
 Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
 
