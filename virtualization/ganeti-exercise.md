@@ -94,7 +94,7 @@ AfNOG workshop then this server will no longer exist, so use a local proxy
 server or leave it blank.
 
 While the installation proceeds, familiarise yourself with the terminology of
-[Ganeti](http://docs.ganeti.org/ganeti/2.13/html/admin.html).
+[Ganeti](http://docs.ganeti.org/ganeti/2.17/html/admin.html#ganeti-terminology).
 
 ### Network Re-Configuration
 
