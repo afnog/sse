@@ -273,11 +273,23 @@ much with your new hypervisor. If it doesn't show enough free RAM, check that
 you have [reconfigured GRUB and run
 `update-grub`](http://askubuntu.com/a/191489/49566).
 
+Test that you can run the following useful commands and examine their output:
+
+	sudo gnt-cluster verify
+	sudo gnt-node list
+	sudo gnt-instance list
+	sudo gnt-job list
+
+The [Ganeti manual page](http://docs.ganeti.org/ganeti/2.15/html/man-ganeti.html) gives
+useful information about Ganeti commands, including examples.
+
 Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `burnin.example.com`:
 
 	192.168.56.12   burnin.example.com
 
-The `burnin` test will [fail](https://groups.google.com/forum/#!topic/ganeti/ds0TwfroS8A) unless we generate a DH parameters file for SSL:
+The `burnin` test will
+[fail](https://groups.google.com/forum/#!topic/ganeti/ds0TwfroS8A) unless we
+generate a DH parameters file for SSL:
 
 	openssl dhparam -out dhparams.pem 2048
 	cat dhparams.pem | sudo tee -a /var/lib/ganeti/server.pem
@@ -286,7 +298,16 @@ Run the `burnin` test to make sure that everything is working properly:
 
 	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t plain --disk-size 1024 --mem-size=512 burnin.example.com -vv
 
-Continue following the installation instructions from [Testing the setup](http://docs.ganeti.org/ganeti/2.13/html/install.html#testing-the-setup)
+The output should end with:
+
+	- Checking confd results
+	  * Ping: OK
+	  * Master: OK
+	  * Node role for master: OK
+	- Stopping and starting instances
+	  * instance burnin.example.com
+	- Removing instances
+	  * instance burnin.example.com
 
 ### Enable Remote API
 
