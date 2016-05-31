@@ -68,7 +68,7 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 * Select the new partition, choose *Use as > Physical volume for LVM*.
 * Select *Configure the Logical Volume Manager*
 * Select *Create volume group*
-* Enter a name for the new main volume group, for example `xenvg`.
+* Enter a name for the new main volume group, for example `xenvg`. Select device `/dev/sda1`.
 * Create a logical volume of 8 GB, *Name > Root, Use as > ext4 filesystem, Mount point > / (root)*.
 * Create a logical volume of 4 GB, *Name > Swap, Use as > swap*.
 * Leave the rest of the volume group as unallocated free space.
