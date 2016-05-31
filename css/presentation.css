@@ -26,6 +26,12 @@ h1, h2 {
 	color: #f3f3f3;
 	line-height: 0.8em;
 }
+.inverse a {
+	color: #ecc;
+}
+.inverse a:visited {
+	color: #ddd;
+}
 .smaller {
 	font-size: 70%;
 }
