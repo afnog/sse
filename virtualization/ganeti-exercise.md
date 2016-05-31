@@ -76,8 +76,8 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 
 ### Proxy Server
 
-If you are following this exercise at an AfNOG event, please enter this proxy server name
-when prompted, to save a LONG install time:
+If you are following this exercise at an AfNOG event, please enter this proxy
+server name when prompted, to save a LONG install time:
 
 * http://196.200.219.2:3142
 
