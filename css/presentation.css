@@ -58,6 +58,10 @@ li > ul > li {
 	font-size: 80%;
 	color: #666;
 }
+a, a:visited
+{
+	color: #b40004;
+}
 .remark-inline-code,
 .remark-code-line {
 	background: #eee;
