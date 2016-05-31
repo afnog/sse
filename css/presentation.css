@@ -61,7 +61,7 @@ li > ul > li {
 a, a:visited
 {
 	color: #b40004;
-	font-family: 'Yanone Kaffeesatz';
+	font-family: sans;
 	text-decoration: none;
 }
 .remark-inline-code,
