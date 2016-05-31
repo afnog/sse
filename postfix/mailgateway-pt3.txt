@@ -35,7 +35,7 @@ Save and Exit the file
 Copy preconfigured MailScanner.conf file. A number of changes made, please go through it.
 	
 	$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup
-	$sudo scp afnog@pc39.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/
+	$sudo scp afnog@pc37.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/
 	
 Prepare MailScanner directories (they may already exist)
 	
