@@ -503,7 +503,7 @@ What about the red padlock? Click on it, and then *Details* and *View Certificat
 * Submit the (same) CSR to a well-known CA, or
 * Install the cert in your browser's certificate store
 
-.fill[![Add a certificate to trusted list](add-certificate-trust.png)]
+.height_12em[![Add a certificate to trusted list](add-certificate-trust.png)]
 
 ---
 
