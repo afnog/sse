@@ -86,7 +86,7 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 If you are following this exercise at an AfNOG event, please enter this proxy
 server name when prompted, to save a LONG install time:
 
-* <http://196.200.219.2:3142>
+* <http://196.200.223.144:3142>
 
 Please enter this carefully and check it. Using the wrong value will make it
 impossible for you to install any packages.  Of course, if you are not at the
