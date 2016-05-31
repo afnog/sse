@@ -174,10 +174,6 @@ Then run the following commands:
 	sudo apt-get dist-upgrade	
 	sudo apt-get install xen-hypervisor-amd64 xen-system-amd64
 
-Edit `/etc/xen/xend-config.sxp` and change the following setting:
-
-	(enable-dom0-ballooning no)
-
 Then `reboot` the host and log in again.
 
 ### Install DRBD
