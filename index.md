@@ -327,9 +327,9 @@ in an LXC container yet), so there is an alternative setup using KVM virtual mac
 heavier-weight, so you can't run as many on the same host (especially RAM is a limiting factor, since
 each VM needs ~512 MB of dedicated RAM).
 
-* [Server setup](setup/server/) (Mac Mini)
-* [LXC setup](setup/lxc/) for ~40 containers
-* [KVM setup](setup/kvm/) for ~24 containers (alternative)
+* [Server setup](setup/server/index.html) (Mac Mini)
+* [LXC setup](setup/lxc/index.html) for ~40 containers
+* [KVM setup](setup/kvm/index.html) for ~24 containers (alternative)
 
 ### Administration
 
