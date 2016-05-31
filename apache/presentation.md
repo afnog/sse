@@ -482,8 +482,9 @@ Open <https://pcXX.sse.ws.afnog.org> in your browser. What do you see?
 
 ## Testing SSL
 
-You may need to click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (unsafe)*
-(or something like that) to get to the site.
+You must bypass this warning to open the page.
+
+* On Chrome: click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (unsafe)*.
 
 .height_8em.center[![Test page with SSL warning](test-page-with-ssl-warning.png)]
 
