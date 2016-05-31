@@ -475,7 +475,7 @@ that we want it to use.
 
 Open <https://pcXX.sse.ws.afnog.org> in your browser. What do you see?
 
-.fill[![Chrome SSL security warning](ssl-security-warning.png)]
+.height_8em.center[![Chrome SSL security warning](ssl-security-warning.png)]
 
 You may need to click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (unsafe)*
 (or something like that) to get to the site.
