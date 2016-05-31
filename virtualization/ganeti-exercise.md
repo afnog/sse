@@ -52,7 +52,7 @@ dynamically sized.
 
 ### Starting Installation
 
-Start the VM and attach the Ubuntu 16.04 Server 64-bit CD. Read the following sections
+Start the VM and attach the Debian 8.x amd64 DVD 1 ISO. Read the following sections
 **before** you start the installation, and use them at the appropriate times during the
 installation.
 
@@ -62,7 +62,7 @@ You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.o
 
 #### Partitioning
 
-The server should use LVM for disk space, so instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI3*, then:
+The server should use LVM for disk space, so instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI1*, then:
 
 * Select *pri/log free space*, *Create a new partition*, 40 GB, *Primary*, *Beginning*, *Done*.
 * Select the new partition, choose *Use as > Physical volume for LVM*.
