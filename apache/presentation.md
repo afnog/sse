@@ -506,6 +506,7 @@ What about the red padlock? Click on it, and then *Details* and *View Certificat
 .height_18em.center[![Add a certificate to trusted list](add-certificate-trust.png)]
 
 ---
+class: center, middle
 
 ## FIN
 
