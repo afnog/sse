@@ -52,7 +52,7 @@ dynamically sized.
 
 ### Starting Installation
 
-Start the VM and attach the Ubuntu 14.04 Server 64-bit CD. Read the following sections
+Start the VM and attach the Ubuntu 16.04 Server 64-bit CD. Read the following sections
 **before** you start the installation, and use them at the appropriate times during the
 installation.
 
