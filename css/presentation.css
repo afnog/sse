@@ -4,8 +4,6 @@
 /* http://stackoverflow.com/questions/1542320/margin-while-printing-html-page */
 @page  
 { 
-    size: auto;   /* auto is the initial value */ 
-
     /* this affects the margin in the printer settings */ 
     margin: 0;
 } 
