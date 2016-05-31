@@ -119,13 +119,9 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 ### Apache
 [Apache]: #apache
 
-#### [Evelyn Namara](#EN)
+#### [Chris Wilson](#CW)
 
-* [Presentation/PowerPoint](apache/apache.ppt)
-* [Presentation/PDF](apache/apache.pdf)
-* [Exercise1 - Apache Installation/SSL](apache/apache_sse_exercises_apache+ssl.txt)
-* [Exercise2 - MySQL/PHP/Wordpress Install](apache/apache_sse_exercises_Mysql & PHP configs.txt)
-* [Exercise3 - Wordpress Configuration](apache/apache_sse_exercises_wordpress.txt)
+* Presentation and Exercises: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
 
 ### Backups
 [Backups]: #backups
