@@ -98,9 +98,9 @@ server or leave it blank.
 While the installation proceeds, familiarise yourself with the terminology of
 [Ganeti](http://docs.ganeti.org/ganeti/2.15/html/admin.html#ganeti-terminology).
 
-#### Packages
+#### Software selection
 
-Install the OpenSSH Server.
+Enable installation of the SSH Server as well.
 
 ### Network Re-Configuration
 
