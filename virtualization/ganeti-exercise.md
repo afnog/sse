@@ -56,11 +56,11 @@ Start the VM and attach the Ubuntu 16.04 Server 64-bit CD. Read the following se
 **before** you start the installation, and use them at the appropriate times during the
 installation.
 
-### Hostname
+#### Hostname
 
 You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.org`.
 
-### Partitioning
+#### Partitioning
 
 The server should use LVM for disk space, so instead of the default *Guided Partitioning*, choose *Manual*, then *SCSI3*, then:
 
@@ -73,9 +73,7 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 * Leave the rest of the volume group as unallocated free space.
 * Finish and Write changes to disk.
 
-
-### Proxy Server
-
+#### Proxy Server
 
 If you are following this exercise at an AfNOG event, please enter this proxy
 server name when prompted, to save a LONG install time:
