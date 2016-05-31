@@ -175,11 +175,11 @@ Then run the following commands:
 	sudo apt-get install xen-linux-system-amd64
 
 Then `reboot` the host. Be sure to select a Xen kernel from the boot list. Log in again and check
-that the `free` command reports 384 MB of total Mem, not 2 GB:
+that the `free` command reports 500 MB of total Mem, not 2 GB:
 
 	afnog@ganeti:~$ free
 		     total       used       free     shared    buffers     cached
-	Mem:        309132
+	Mem:        437896
 
 ### Install DRBD
 
