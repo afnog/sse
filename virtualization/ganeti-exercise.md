@@ -66,13 +66,20 @@ The server should use LVM for disk space, so instead of the default *Guided Part
 
 * Select *pri/log free space*, *Create a new partition*, 40 GB, *Primary*, *Beginning*, *Done*.
 * Select the new partition, choose *Use as > Physical volume for LVM*.
-* Select *Configure the Logical Volume Manager*
-* Select *Create volume group*
-* Enter a name for the new main volume group, for example `xenvg`. Select device `/dev/sda1`.
-* Create a logical volume of 8 GB, *Name > Root, Use as > ext4 filesystem, Mount point > / (root)*.
-* Create a logical volume of 4 GB, *Name > Swap, Use as > swap*.
-* Leave the rest of the volume group as unallocated free space.
-* Finish and Write changes to disk.
+* Select *Configure the Logical Volume Manager*:
+	* Select *Create volume group*
+	* Enter a name for the new main volume group, for example `xenvg`. Select device `/dev/sda1`.
+	* Create a logical volume of 8 GB, *Name > Root.
+	* Create a logical volume of 4 GB, *Name > Swap.
+	* Select *Finish*.
+* Select *LVM VG xenvg, LV Root* -> *#1 8.0 GB*:
+	* Select *Use as > Ext4 journalling filesystem*.
+	* Select *Mount point > / (root)*.
+	* Select *Done setting up the partition*.
+* Select *LVM VG xenvg, LV Swap* -> *#1 4.0 GB*:
+	* Select *Use as > swap area*.
+	* Select *Done setting up the partition*.
+* Select *Finish partitioning and write changes to disk*.
 
 #### Proxy Server
 
