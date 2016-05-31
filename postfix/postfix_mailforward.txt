@@ -14,7 +14,7 @@ Edit Postfix main.cf
 	$sudo nano /etc/postfix/main.cf
 
 	##Add your neighbour's domain to the mydestination entries
-	mydestination = pc35.sse.ws.afnog.org, pc39.sse.ws.afnog.org, localhost.sse.ws.afnog.org, localhost
+	mydestination = yourdomain.afnog.guru, yourfriendsdomain,afnog.guru, localhost.sse.ws.afnog.org, localhost
 
 
 	##Add at the end. This file contains mail routing information
@@ -25,8 +25,8 @@ Save and Exit
 
 	$sudo nano /etc/postfix/transport
 	
-	##Add your neighbor's server where his mail will be routed to
-	pc39.sse.ws.afnog.org   smtp:[pc39.sse.ws.afnog.org]
+	##Add your neighbor's server where his mail will be routed to. Replace YY with your friends IP
+	yourfriendsdomain,afnog.guru   smtp:[pcYY.sse.ws.afnog.org]
 
 
 Save and Exit
