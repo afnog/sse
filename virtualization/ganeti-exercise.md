@@ -136,6 +136,8 @@ Then edit `/etc/network/interfaces` to look like this:
 		bridge_stp off
 		bridge_fd 0
 
+### Hostnames and DNS
+
 Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
 
 Edit `/etc/hosts` and ensure that it contains the IP address and hostname of
@@ -150,6 +152,8 @@ Normally you would add DNS entries for all of these. Feel free to use the DNS
 for the cluster name, instead of editing `/etc/hosts`. Your hostname should
 really be in the DNS as well, but for the purposes of this exercise
 (non-production deployment) it doesn't matter too much.
+
+### Configure Xen
 
 Edit `/etc/default/grub` and add the following line to enable Xen (you would
 not need this for a KVM cluster in production):
@@ -171,11 +175,33 @@ Edit `/etc/xen/xend-config.sxp` and change the following setting:
 
 Then `reboot` the host and log in again.
 
+### Install DRBD
+
+The Ganeti manual has instructions for this, but they are confusing and out-of-date for Ubuntu 16.04,
+so we skip that step and do it here instead:
+
+	sudo apt install drbd-utils
+
+Edit `/etc/modprobe.d/drbd.conf` and make it look like this:
+
+	options drbd minor_count=128 usermode_helper=/bin/true
+
+Edit `/etc/modules` and add the following line at the end:
+
+	drbd
+
+Load the kernel module (driver) now:
+
+	sudo modprobe drbd
+
+### Continue Ganeti installation
+
 Start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
-* Installing DRBD and Installing RBD: skip to
+* Installing DRBD (we already did that)
+* Installing RBD: skip to
   [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
 * KVM userspace access
 * Configuring the network
