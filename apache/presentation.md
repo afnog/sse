@@ -484,7 +484,7 @@ You may need to click on *Advanced* and then *Proceed to pcXX.sse.ws.afnog.org (
 
 ## Testing SSL
 
-.fill[![Test page with SSL warning](test-page-with-ssl-warning.png)]
+.height_8em.center[![Test page with SSL warning](test-page-with-ssl-warning.png)]
 
 Success! (kind of)
 
