@@ -12,8 +12,7 @@ class: center, middle, inverse
 
 Based on a previous talk by Joel Jaeggli with thanks!
 
-You can access this presentation at: http://afnog.github.io/sse/apache/
-([edit](https://github.com/afnog/sse/apache/presentation.md))
+You can access this presentation at:
 
 * Online: http://afnog.github.io/sse/apache/
 * Local: http://www.ws.afnog.org/afnog2016/sse/apache/index.html
