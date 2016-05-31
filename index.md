@@ -116,6 +116,13 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 
+### Ansible
+[Ansible]: #ansible
+
+#### [Frank Kuse](#FK)
+
+* Presentation: [PowerPoint](ansible/Ansible_Presentation.pptx) [PDF](ansible/Ansible_Presentation.pdf)
+
 ### Apache
 [Apache]: #apache
 
