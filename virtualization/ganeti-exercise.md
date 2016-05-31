@@ -114,7 +114,8 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 Then start the machine again. Log in on the console and install some packages:
 
-	sudo apt install bridge-utils
+	su
+	apt install bridge-utils sudo
 
 Then edit `/etc/network/interfaces` to look like this:
 
