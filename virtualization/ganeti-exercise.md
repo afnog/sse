@@ -105,7 +105,11 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
-Then start the machine again. Log in on the console and edit `/etc/network/interfaces` to look like this:
+Then start the machine again. Log in on the console and install some packages:
+
+	sudo apt install bridge-utils
+
+Then edit `/etc/network/interfaces` to look like this:
 
 	# The loopback network interface
 	auto lo
