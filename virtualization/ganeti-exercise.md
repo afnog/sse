@@ -159,7 +159,7 @@ Then run the following commands:
 
 	sudo update-grub
 	sudo apt-get dist-upgrade	
-	sudo apt-get install ganeti2 ganeti-htools ganeti-instance-debootstrap xen-hypervisor-amd64
+	sudo apt-get install ganeti ganeti-instance-debootstrap xen-hypervisor-amd64
 
 Edit `/etc/xen/xend-config.sxp` and change the following setting:
 
