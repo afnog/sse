@@ -120,7 +120,9 @@ Then edit `/etc/network/interfaces` to look like this:
 	iface enp0s3 inet dhcp
 
 	auto enp0s8
-	iface enp0s8 inet manual
+	iface enp0s8 inet static
+		address 0.0.0.0
+		netmask 255.255.255.255
 
 	auto xen-br0
 	iface xen-br0 inet static
@@ -129,7 +131,6 @@ Then edit `/etc/network/interfaces` to look like this:
 		bridge_ports enp0s8
 		bridge_stp off
 		bridge_fd 0
-
 
 Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
 
