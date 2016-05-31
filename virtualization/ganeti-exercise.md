@@ -164,9 +164,9 @@ Edit `/etc/default/grub` and change the following lines to enable Xen (you would
 not need this for a KVM cluster in production):
 
 	GRUB_DEFAULT=saved
-	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:512M,max:512M"
+	GRUB_CMDLINE_XEN_DEFAULT="dom0_mem=min:600M,max:600M"
 
-This restricts the master domain to 384 MB RAM, which will make it slow, but give us more RAM free
+This restricts the master domain to 600 MB RAM, which will make it slow, but give us more RAM free
 for guests. In your own configurations you should probably allocate more RAM to the host (domain 0)!
 
 Then run the following commands:
