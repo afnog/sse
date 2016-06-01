@@ -344,9 +344,15 @@ Then we can run the installation script:
 	sudo ./scripts/setup.sh
 
 Edit the file scripts/vncauthproxy/init-systemd and if the last line contains only a `~` character,
-delete it. Then copy it to the `systemd` service directory, and start it:
+delete it. Also, in the `[Service]` section, add the following line:
+
+	User=www.data
+
+Then copy it to the `systemd` service directory, and start it:
 
 	sudo cp scripts/vncauthproxy/init-systemd /lib/systemd/system/vncauthproxy.service
+	sudo mkdir /var/log/vncauthproxy
+	sudo chown www-data /var/log/vncauthproxy
 	sudo service vncauthproxy start
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
