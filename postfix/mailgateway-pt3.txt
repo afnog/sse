@@ -4,6 +4,8 @@
 
 1. Setup MailScanner
 ==================
+
+
 Copy preconfigured files for Mailwatch from the instructor’s server. The only changes made to these files was to add the MySQL username and password to allow MailWatch to connect to the database.
 
 	$sudo scp afnog@pc37.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/perl/custom/
@@ -14,6 +16,8 @@ Copy preconfigured files for Mailwatch from the instructor’s server. The only 
 
 2. Continue MailScanner setup
 =============================
+
+
 
 You will need the following CPAN module
 
@@ -47,6 +51,7 @@ Prepare MailScanner directories (they may already exist)
 
 3. Get clamav updates 
 ========================================================================
+
 
 Clamav will automatically attempt to obtain fresh antivirus signatures from the Internet via
 freshclam after installation. Type "freshclam" to see how updates are fetched. If it fails with a lock issue, it means freshclam is running in the background and you can move to the next step
@@ -317,10 +322,12 @@ Type quit to exit
 	$sudo apt-get install mailutils
 
 
-Then test your email server
+Then test your email server to see if it will send an email out.
 
 
 	$echo "This is my email, hello" | mail -s "This is a test message" youremailaddress@gmail.com
+
+
 
 
 9. LOGIN TO MAILWATCH
