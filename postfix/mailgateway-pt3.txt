@@ -58,12 +58,8 @@ freshclam after installation. Type "freshclam" to see how updates are fetched. I
 4. Setup Postfix and SpamAssassin
 ================================
 
-Update spamassassin:
-Just incase it did not corretly install (it failed on mine for some reason):
 
-	$sudo apt-get install spamassassin
-
-Fetch an update to the rules 
+Fetch an update to the rules (if any). It will return quietly to the shell if there are no updates:
 
 	$sudo sa-update
 
@@ -78,7 +74,7 @@ Enable SpamAssassin
 Save and Exit.
 
 
-Configure Postfix to hold mail first. Effectivly a mail arrives and is put into a hold queue then mailscanner scans the mail for spam or virus content then it is released:
+Configure Postfix to hold mail first. Effectively a mail arrives and is put into a hold queue then mailscanner scans the mail for spam or virus content then it is released. Create the below empty file:
 
 	$sudo nano /etc/postfix/header_checks
 
@@ -94,10 +90,14 @@ Configure the main.cf file to read the file created above. Add the following lin
 	###Add the following
 	header_checks = regexp:/etc/postfix/header_checks
 
+=============
+
 ALSO CHECK THAT YOUR XXXX.AFNOG.GURU domain will be accepted. Look for the line starting with "mydestination" and add your domain name followed by a comma. It should looks as follows:
 
 
 mydestination = pc37.sse.ws.afnog.org, XXXXX.afnog.guru, localhost.sse.ws.afnog.org, , localhost
+
+===============
 
 
 Save and Exit
