@@ -365,8 +365,8 @@ And change it to:
 Then finish the installation:
 
 	cd /opt/ganeti_webmgr
-	mkdir .settings db
-	chown www-data .settings db
+	sudo mkdir .settings db
+	sudo chown www-data .settings db
 	sudo -u www-data /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
