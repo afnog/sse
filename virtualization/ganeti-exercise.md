@@ -311,6 +311,80 @@ The output should end with:
 	- Removing instances
 	  * instance burnin.example.com
 
+### Create a Virtual Machine
+
+Add a hostname (to `/etc/hosts` or to a DNS domain that you control) with a
+dummy IP address (normally you would give it a static IP address, but we are on
+a DHCP network with limited IP addresses here). We will use `test.example.com`
+for this example.
+
+Use the following command to create a test VM:
+
+	sudo gnt-instance add -t plain --disk 0:size=4G -B memory=512 \
+		-H xen-pvm:initrd_path=/boot/initrd-3-xenU -o debootstrap+default \
+		-n ganeti.pc40.sse.ws.afnog.org test.example.com
+
+This new VM will have the following settings:
+
+* Disk storage as an LVM logical volume of size 4 GB.
+* 512 MB memory.
+* Xen paravirtualised with an initial ramdisk containing the Xen paravirt drivers
+  (to give access to the root filesystem). With KVM or Xen-HVM you would not need to
+  specify the `-H` parameter at all.
+* Install Debian (7 in this case).
+* Hosted on our first Ganeti node, `ganeti.pc40.sse.ws.afnog.org` (you must specify
+  the host node or install an `iallocator` script to choose one automatically).
+* With hostname and instance name `test.example.com`.
+
+The output should look like this:
+
+	Wed Jun  1 11:15:37 2016 * disk 0, size 4.0G
+	Wed Jun  1 11:15:37 2016 * creating instance disks...
+	Wed Jun  1 11:15:37 2016 adding instance test.example.com to cluster config
+	Wed Jun  1 11:15:37 2016 adding disks to cluster config
+	Wed Jun  1 11:15:38 2016  - INFO: Waiting for instance test.example.com to sync disks
+	Wed Jun  1 11:15:38 2016  - INFO: Instance test.example.com's disks are in sync
+	Wed Jun  1 11:15:38 2016  - INFO: Waiting for instance test.example.com to sync disks
+	Wed Jun  1 11:15:39 2016  - INFO: Instance test.example.com's disks are in sync
+	Wed Jun  1 11:15:41 2016 * running the instance OS create scripts...
+
+If it doesn't, look for an error message in the output or in `/var/log/ganeti/jobs.log`.
+Most likely one of the `gnt-instance` parameters was missing or incorrect.
+
+Check that your new instance appears in the output of `gnt-instance list`, with status `running`:
+
+	afnog@ganeti:/tmp$ sudo gnt-instance list
+	Instance         Hypervisor OS                  Primary_node                 Status  Memory
+	test.example.com xen-pvm    debootstrap+default ganeti.pc40.sse.ws.afnog.org running   512M
+
+Connect to its console:
+
+	sudo gnt-instance console test.example.com
+
+You should see it boot up (if you're not too late) or a login prompt. If it's not running, you
+can try to start it again and connect to the console quickly to see what happened:
+
+	sudo gnt-instance start test.example.com
+	sudo gnt-instance console test.example.com
+
+You can exit the console by pressing `^]` (Ctrl+]).
+
+You should be able to login as `root` with no password at the console. Add a normal user and
+change the root password:
+
+	adduser afnog
+	passwd root
+
+And edit `/etc/network/interfaces` to configure networking, making it look like this:
+
+	auto lo
+	iface lo inet loopback
+
+	auto eth0
+	iface eth0 inet dhcp
+
+Then tell it to reboot and watch it come back up. Check that you can access the internet.
+
 ### Enable Remote API
 
 Choose a username and password for your remote account (`jack` and `mypassword` in this case) and
