@@ -1,0 +1,315 @@
+Squirrelmail Exercise
+
+1. Installing Squirrelmail
+
+afnog@pc36:~$sudo apt-get install squirrelmail
+
+2. Configure Squirrelmail
+
+afnog@pc36:~$ sudo squirrelmail-configure
+
+3. Choose the following options to configure the Domain-Name, IMAP Software to be Dovecot and others that might be of interest. 
+
+3.1 Configuring the Domains Server Settings.
+
+SquirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Main Menu --
+1.  Organization Preferences
+2.  Server Settings
+3.  Folder Defaults
+4.  General Options
+5.  Themes
+6.  Address Books
+7.  Message of the Day (MOTD)
+8.  Plugins
+9.  Database
+10. Languages
+
+D.  Set pre-defined settings for specific IMAP servers
+
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> 2  		<------- SELECT Option 2 and PRESS ENTER
+
+SquirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Server Settings
+
+General
+-------
+1.  Domain                 : trim(implode('', file('/etc/'.(file_exists('/etc/mailname')?'mail':'host').'name')))
+2.  Invert Time            : false
+3.  Sendmail or SMTP       : SMTP
+
+A.  Update IMAP Settings   : localhost:143 (other)
+B.  Update SMTP Settings   : localhost:25
+
+R   Return to Main Menu
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> 1 <------- SELECT Option 1 and PRESS ENTER
+
+
+The domain name is the suffix at the end of all email addresses.  If
+for example, your email address is jdoe@example.com, then your domain
+would be example.com.
+
+[trim(implode('', file('/etc/'.(file_exists('/etc/mailname')?'mail':'host').'name')))]: ________.afnog.guru   <------- TYPE & ENTER THE DELEGATED DOMAIN NAME FROM DNS CLASS
+
+
+3.2 Configuring the IMAP Server Settings.
+
+SquirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Server Settings
+
+General
+-------
+1.  Domain                 : XXXXXXXX.afnog.guru
+2.  Invert Time            : false
+3.  Sendmail or SMTP       : SMTP
+
+A.  Update IMAP Settings   : localhost:143 (other)
+B.  Update SMTP Settings   : localhost:25
+
+R   Return to Main Menu
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> A <------- SELECT Option A and PRESS ENTER
+
+SquirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Server Settings
+
+General
+-------
+1.  Domain                 : ____________.afnog.guru
+2.  Invert Time            : false
+3.  Sendmail or SMTP       : SMTP
+
+IMAP Settings
+--------------
+4.  IMAP Server            : localhost
+5.  IMAP Port              : 143
+6.  Authentication type    : login
+7.  Secure IMAP (TLS)      : false
+8.  Server software        : other
+9.  Delimiter              : detect
+
+B.  Update SMTP Settings   : localhost:25
+H.  Hide IMAP Server Settings
+
+R   Return to Main Menu
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> 8 <------- SELECT Option 8 and PRESS ENTER
+
+Command >> 8
+
+Each IMAP server has its own quirks.  As much as we tried to stick
+to standards, it doesn't help much if the IMAP server doesn't follow
+the same principles.  We have made some work-arounds for some of
+these servers.  If you would like to use them, please select your
+IMAP server.  If you do not wish to use these work-arounds, you can
+set this to "other", and none will be used.
+    bincimap    = Binc IMAP server
+    courier     = Courier IMAP server
+    cyrus       = Cyrus IMAP server
+    dovecot     = Dovecot Secure IMAP server
+    exchange    = Microsoft Exchange IMAP server
+    hmailserver = hMailServer
+    macosx      = Mac OS X Mailserver
+    mercury32   = Mercury/32
+    uw          = University of Washington's IMAP server
+    gmail       = IMAP access to Google mail (Gmail) accounts
+    other       = Not one of the above servers
+[other]: dovecot <------- TYPE dovecot and PRESS ENTER
+
+
+3.3 SAVE and EXIS Squirrelmail Configuration.
+
+SquirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Server Settings
+
+General
+-------
+1.  Domain                 : XXXXXX.afnog.guru
+2.  Invert Time            : false
+3.  Sendmail or SMTP       : SMTP
+
+IMAP Settings
+--------------
+4.  IMAP Server            : localhost
+5.  IMAP Port              : 143
+6.  Authentication type    : login
+7.  Secure IMAP (TLS)      : false
+8.  Server software        : dovecot
+9.  Delimiter              : detect
+
+B.  Update SMTP Settings   : localhost:25
+H.  Hide IMAP Server Settings
+
+R   Return to Main Menu
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> S <------- TYPE S and PRESS ENTER
+
+quirrelMail Configuration : Read: config.php (1.4.0)
+---------------------------------------------------------
+Server Settings
+
+General
+-------
+1.  Domain                 : _______________.afnog.guru
+2.  Invert Time            : false
+3.  Sendmail or SMTP       : SMTP
+
+IMAP Settings
+--------------
+4.  IMAP Server            : localhost
+5.  IMAP Port              : 143
+6.  Authentication type    : login
+7.  Secure IMAP (TLS)      : false
+8.  Server software        : dovecot
+9.  Delimiter              : detect
+
+B.  Update SMTP Settings   : localhost:25
+H.  Hide IMAP Server Settings
+
+R   Return to Main Menu
+C   Turn color on
+S   Save data
+Q   Quit
+
+Command >> Q <------- TYPE Q and PRESS ENTER
+
+Exiting conf.pl.
+You might want to test your configuration by browsing to
+http://your-squirrelmail-location/src/configtest.php
+Happy SquirrelMailing!
+
+4. Apache Configuration 
+
+4.1 To access Squirrelmail we have two configuration options on Apache
+
+i. To configure Squirrelmail as a Alias or subdirectory of the primary site
+
+ii. To configure Squirrelmail as virtual host
+
+5. (OPTION 1) Configuring Squirrelmail as an Alias of the primary site copy the following lines from the Squirrelmail file /etc/squirrelmail/apache.conf
+
+----------- COPY STARTING FROM BELOW THIS LINE -----------------------------
+Alias /squirrelmail /usr/share/squirrelmail
+
+<Directory /usr/share/squirrelmail>
+  Options FollowSymLinks
+  <IfModule mod_php5.c>
+    php_flag register_globals off
+  </IfModule>
+  <IfModule mod_dir.c>
+    DirectoryIndex index.php
+  </IfModule>
+
+  # access to configtest is limited by default to prevent information leak
+  <Files configtest.php>
+    order deny,allow
+    deny from all
+    allow from 127.0.0.1
+  </Files>
+</Directory>
+----------- COPY UNTIL ABOVE THIS LINE ----------------------------------
+
+5.1 Open the Apache2 config file
+
+afnog@pcXX:/etc/squirrelmail$ sudo nano /etc/apache2/apache2.conf 
+
+
+5.2 Paste the configuration above just below the line </FilesMatch> in the file apache2.conf as the example below. The trick is to first search for the line </FilesMatch> then paste below it. 
+
+<FilesMatch "^\.ht">
+        Require all denied
+</FilesMatch>
+
+Alias /squirrelmail /usr/share/squirrelmail
+
+<Directory /usr/share/squirrelmail>
+  Options FollowSymLinks
+  <IfModule mod_php5.c>
+    php_flag register_globals off
+  </IfModule>
+  <IfModule mod_dir.c>
+    DirectoryIndex index.php
+  </IfModule>
+
+  # access to configtest is limited by default to prevent information leak
+  <Files configtest.php>
+    order deny,allow
+    deny from all
+    allow from 127.0.0.1
+  </Files>
+</Directory>
+
+5.3 Close the file and exit and restart apache
+
+afnog@pcXX:/etc/squirrelmail$ sudo service apache2 restart
+
+5.4 Try and load this from the browser by going to the following url on your browser;
+
+ http://pcXX.sse.ws.afnog.org/squirrelmail/
+
+
+
+6. (OPTION 2) Configuring Squirrelmail as a Virtual Host site copy the following lines which are modified from the Squirrelmail file /etc/squirrelmail/apache.conf. Remember to replace the webmail.______.afnog.guru with your respective domain name from the DNS delegation exercise
+
+IMPORTANT: This exercise assumes that you have a DNS entry of webmail._____.afnog.guru in your DNS Master Server. Before starting this exercise try and ping webmail.______.afnog.guru from your neighbour's computer. If the ping response shows the IP of your respective PC, then you can proceed. If not, please consult the instructor on how to add this onto your DNS.
+
+----------- COPY STARTING FROM BELOW THIS LINE -----------------------------
+<VirtualHost *:80>
+		ServerName webmail.____________.afnog.guru
+		DocumentRoot /usr/share/squirrelmail
+        ServerAdmin webmaster@localhost
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+----------- COPY UNTIL ABOVE THIS LINE ----------------------------------
+
+6.1 Create the Apache Config file inside the apache available sites
+
+afnog@pcXX:/etc/squirrelmail$ sudo cd /etc/apache2/sites-available/
+
+afnog@pcXX:/etc/apache2/sites-available$ sudo nano squirrelmail.conf
+
+6.2 Paste the contents of section 6.0 into the open file, close and save it.
+
+
+6.3 Activate the site on Apache using the following command
+
+ afnog@pcXX:/etc/apache2/sites-available$ sudo a2ensite squirrelmail.conf
+
+ 
+ Enabling site squirrelmail.
+To activate the new configuration, you need to run:
+  service apache2 reload
+  
+
+6.4  Restart Apache2
+
+afnog@pcXX:/etc/apache2/sites-available$ sudo service apache2 reload
+
+6.5 Try and load this from the browser by going to the following url on your browser;
+
+ http://webmail.____.afnog.guru
+
