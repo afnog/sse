@@ -336,10 +336,12 @@ We are using Ganeti Web Manager 0.11.1, which has a bug that we need to
 [fix](https://github.com/osuosl/ganeti_webmgr/pull/93) before we install:
 
 	cd ganeti_webmgr/ganeti_web/settings
-	
+	wget https://raw.githubusercontent.com/qris/ganeti_webmgr/db1712973616765f62f85c16c246b53a73e8ac4e/ganeti_webmgr/ganeti_web/settings/base.py
+	cd .././..
+
+Then we can run the installation script:
 
 	sudo ./scripts/setup.sh
-
 
 Edit the file scripts/vncauthproxy/init-systemd and if the last line contains only a `~` character,
 delete it. Then copy it to the `systemd` service directory, and start it:
@@ -349,9 +351,7 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
 	cd /opt/ganeti_webmgr
-
-
-	cd ganeti_web/settings
+	sudo /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
 
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
