@@ -82,6 +82,12 @@ and change it to:
 
 	session    optional     pam_loginuid.so
 
+Add the following line to `/etc/sysctl.conf` on the host, to ensure that the host kernel
+[allows sufficient AIO handles](http://unix.stackexchange.com/questions/116520/mysql-server-wont-install-to-a-new-os-debian-ubuntu)
+for all the guests:
+
+	fs.aio-max-nr = 1000000
+
 Stop the container and make a lot of copies:
 
 	lxc-stop --name debian8 -t 30
