@@ -55,6 +55,12 @@ Create a gold master guest image:
 
 Follow [guest setup](../guest/index.html) to configure the gold master guest.
 
+Add the following line to `/etc/sysctl.conf` on the host, to ensure that the host kernel
+[allows sufficient AIO handles](http://unix.stackexchange.com/questions/116520/mysql-server-wont-install-to-a-new-os-debian-ubuntu)
+for all the guests:
+
+	fs.aio-max-nr = 1000000
+
 Edit your user's crontab and add the following line to make your containers auto-start:
 
 	@reboot lxc-autostart
@@ -81,12 +87,6 @@ is to edit `/etc/pam.d/sshd` and `/etc/pam.d/cron` in the guest, find the line t
 and change it to:
 
 	session    optional     pam_loginuid.so
-
-Add the following line to `/etc/sysctl.conf` on the host, to ensure that the host kernel
-[allows sufficient AIO handles](http://unix.stackexchange.com/questions/116520/mysql-server-wont-install-to-a-new-os-debian-ubuntu)
-for all the guests:
-
-	fs.aio-max-nr = 1000000
 
 Stop the container and make a lot of copies:
 
