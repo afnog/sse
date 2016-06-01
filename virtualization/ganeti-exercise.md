@@ -333,6 +333,14 @@ Run the following commands:
 	cd ganeti_webmgr-0.11.1
 	sudo ./scripts/setup.sh
 
+
+Edit the file scripts/vncauthproxy/init-systemd and if the last line contains only a `~` character,
+delete it. Then copy it to the `systemd` service directory, and start it:
+
+	sudo cp scripts/vncauthproxy/init-systemd /lib/systemd/system/vncauthproxy.service
+	sudo service vncauthproxy start
+	
+
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 0.11.0. We have a local copy which you can download here:
