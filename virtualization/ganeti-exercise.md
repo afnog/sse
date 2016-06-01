@@ -355,57 +355,11 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
 
+Edit `/opt/ganeti_webmgr/config/settings.yml` and change the `EMAIL_HOST` and
+`DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server
+and your email address.
 
-
-Download the [latest
-release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
-0.11.0. We have a local copy which you can download here:
-
-	wget http://sse-mini1.mtg.afnog.org/ganeti_webmgr-0.11.0.tar.gz
-
-Then run the following commands to install it:
-
-	sudo apt install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi gcc
-	sudo mkdir -p /opt
-	tar xzvf ganeti_webmgr-0.11.0.tar.gz
-	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
-	cd /opt/ganeti_webmgr
-	mv requirements/production.txt requirements/prod.txt
-	mv ganeti_webmgr/manage.py .
-	mkdir config
-	cp ganeti_webmgr/ganeti_web/settings/config.yml.dist config/config.yml
-	cd ganeti_webmgr/ganeti_web/settings
-	cp settings.py.dist ../settings.py
-
-If you are following this at an AfNOG workshop, you can edit
-`/opt/ganeti_webmgr/fabfile.py` to make the installation use a proxy, for
-speed. Search in that file for `def verbose_check`, then edit this line (a few
-lines below):
-
-	install_str = '%(virtualenv)s/bin/pip install '
-
-and change it to:
-
-	install_str = '%(virtualenv)s/bin/pip install -i http://196.200.223.144:3141/root/pypi/ --trusted-host 196.200.223.144 '
-
-Then deploy the web interface:
-
-	cd /opt/ganeti_webmgr
-	sudo fab v deploy
-	sudo chown -R www-data .
-
-Run this command to generate a new secret key:
-
-	openssl rand -base64 24
-
-Edit `config/config.yml` and add the following lines at the end:
-
-	SECRET_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
-	WEB_MGR_API_KEY: "YZVfMJmDGfk9jSlZ+S6sAT2288he8cEX"
-
-Also change the `EMAIL_HOST` and `DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server and your email address.
-
-Save the file, and check the configuration for errors:
+Check the configuration for errors:
 
 	cd /opt/ganeti_webmgr
 	sudo -u www-data venv/bin/python manage.py syncdb --migrate
