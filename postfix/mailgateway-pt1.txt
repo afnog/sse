@@ -39,7 +39,9 @@ You may have read somewhere on Postfix.org that MailScanner shouldn’t be used 
 === Install The Tools:====
 =======================
 
-	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget php-pear mailutils
+	$sudo apt-get install apache2 php5-cli php5 mysql-server libdbd-mysql-perl php5-gd php5-mysql libapache2-mod-php5 wget php-pear mailutils 
+
+	$sudo apt-get install postfix 
 
 
 YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
