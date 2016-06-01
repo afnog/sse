@@ -332,7 +332,7 @@ Run the following commands:
 	tar xzvf 0.11.1.tar.gz
 	cd ganeti_webmgr-0.11.1
 
-We are using Ganeti Web Manager 0.11.1 which has a bug, that we need to
+We are using Ganeti Web Manager 0.11.1, which has a bug that we need to
 [fix](https://github.com/osuosl/ganeti_webmgr/pull/93) before we install:
 
 	cd ganeti_webmgr/ganeti_web/settings
