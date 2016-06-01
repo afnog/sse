@@ -108,7 +108,6 @@ Check what the postfix config looks like:
 	$sudo postconf -n
 
 
-	afnog@pc37:/etc/postfix$ sudo postconf -n
 	alias_database = hash:/etc/aliases
 	alias_maps = hash:/etc/aliases
 	append_dot_mydomain = no
