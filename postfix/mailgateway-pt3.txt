@@ -248,11 +248,11 @@ Test that port 25 is open and that Postfix is listening
 
 Type quit to exit
 
-8. SETUP MAILWATCH
+8. TEST THE EMAIL SERVER, SEND OUT AN EMAIL
 ====================
 
 
-echo "This is my email, hello" | mail -s "This is a test message" kevin.chege@gmail.com
+echo "This is my email, hello" | mail -s "This is a test message" youremailaddress@gmail.com
 
 
 9. LOGIN TO MAILWATCH
@@ -263,6 +263,10 @@ Username is “mailwatch” password is “afnog”
 Please note that Chrome may not be able to login so try another browser if that is the case.
 
 	https://pcX.sse.ws.afnog.org/mailwatch
+
+	OR
+	
+	https://XXXX.afnog.guru/mailwatch
 
 
 
