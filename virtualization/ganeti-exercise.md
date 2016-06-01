@@ -344,6 +344,11 @@ Then run the following commands to install it:
 	cd ganeti_webmgr/ganeti_web/settings
 	cp settings.py.dist ../settings.py
 
+If you are following this at an AfNOG workshop, you can edit `/opt/ganeti_webmgr/fabfile.py`,
+search for `def verbose_check`, then edit this line (a few lines below):
+
+	install_str = '%(virtualenv)s/bin/pip install '
+
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
 be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
 
