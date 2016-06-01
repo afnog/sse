@@ -348,7 +348,8 @@ Then run the following commands to install it:
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
 be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
 
-	wget http://197.4.11.251/ganeti.patch | sudo patch -p0
+	wget http://afnog.github.io/sse/virtualization/ganeti.patch
+	sudo patch -p0 < ganeti.patch
 
 Then deploy the web interface:
 
