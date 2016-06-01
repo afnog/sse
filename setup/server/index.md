@@ -25,6 +25,7 @@ Create `/etc/network/iptables` with the following contents:
 	-A INPUT -i lxcbr0 -p tcp -m tcp --dport 67 -j ACCEPT
 	-A INPUT -i lxcbr0 -p udp -m udp --dport 67 -j ACCEPT
 	-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 80 -j ACCEPT -m comment --comment "Apache"
 	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 3142 -j ACCEPT -m comment --comment "apt-cacher-ng"
 	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 3141 -j ACCEPT -m comment --comment "devpi-server"
 	-A INPUT -d 255.255.255.255/32 -m comment --comment "Drop multicast without logging" -j DROP
