@@ -350,11 +350,6 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 	sudo service vncauthproxy start
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
-	cd /opt/ganeti_webmgr
-	sudo -u www-data /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
-
-Enter a username, password and email address for a super user for the Ganeti web manager.
-
 Edit `/opt/ganeti_webmgr/config/config.yml` and change the `EMAIL_HOST` and
 `DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server
 and your email address.
@@ -366,6 +361,13 @@ Also find this line:
 And change it to:
 
 	NAME: /opt/ganeti_webmgr/db/ganeti.db
+
+Then finish the installation:
+
+	cd /opt/ganeti_webmgr
+	sudo -u www-data /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
+
+Enter a username, password and email address for a super user for the Ganeti web manager.
 
 Now start the web server in debugging mode:
 
