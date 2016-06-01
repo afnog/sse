@@ -79,9 +79,14 @@ The following commands are useful for dealing with `systemd` and control groups:
 
 * `systemd-cgls`
 * `systemd-cgtop`
+* `systemctl`
+* `systemctl list-jobs`
 * `systemctl status`
 * `systemctl show`
 * `/sys/fs/cgroup/memory/user/inst/*/lxc`
+* `journalctl`
+* `journalctl -f`
+* `systemctl cancel`
 
 You may also have issues logging into `sshd` with password authentication due to 
 [this issue](https://github.com/lxc/lxc/issues/661#issuecomment-222444916). The solution
