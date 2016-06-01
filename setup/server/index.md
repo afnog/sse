@@ -87,6 +87,15 @@ Then bring the interface down and up again:
 Check that you can access the Internet, and then reboot the box and check that it comes up OK.
 
 To stop NetworkManager from editing /etc/resolv.conf, edit `/etc/NetworkManager/NetworkManager.conf`
-and set `dns=none`, and restart it. Then edit `/var/run/resolvconf/interface/NetworkManager` and
+and set `dns=none`, and restart it. Then edit `/var/run/resolvconf/interface/custom` and
 add your own DNS settings, and run `resolvconf -u` to install them.
 
+Setup a PIP caching server for Ganeti web manager installation:
+
+	sudo apt install virtualenv
+	virtualenv devpi
+	devpi/bin/pip install devpi-server
+	nohup devpi/bin/devpi-server --host 0.0.0.0 &
+
+
+	
