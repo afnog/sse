@@ -100,7 +100,16 @@ is not installed by default, so this file does not exist, but installing certain
 install it and break the system. Even a simple `apt install dbus` hangs during package installation,
 and it can't be safely removed either.
 
-	
+Since we cannot preconfigure `dbus` (because `dbus.service` is overwritten on package installation) and 
+we cannot easily fix the problem in `systemd` (as the actual change that fixes the issue has not been
+identified), we prevent the installation of `dbus` in all containers instead, by creating 
+`/etc/apt/preferences.d/no-dbus` (in the gold image) with these contents:
+
+	# https://github.com/systemd/systemd/issues/719#issuecomment-223057529
+	# http://askubuntu.com/questions/75895/how-to-forbid-a-specific-package-to-be-installed
+	Package: dbus
+	Pin: origin ""
+	Pin-Priority: -1
 
 Stop the container and make a lot of copies:
 
