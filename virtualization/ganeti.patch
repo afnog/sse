@@ -5,7 +5,7 @@
      Default to quiet install when env.verbose is false
      """
 -    install_str = '%(virtualenv)s/bin/pip install '
-+    install_str = '%(virtualenv)s/bin/pip install --proxy=http://197.4.11.251:3128 '
++    install_str = '%(virtualenv)s/bin/pip install --proxy=http://196.200.223.144:3128 '
      if not env.verbose:
          install_str += '-q '
  
