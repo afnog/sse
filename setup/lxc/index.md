@@ -57,7 +57,7 @@ Follow [guest setup](../guest/index.html) to configure the gold master guest.
 
 Add the following line to `/etc/sysctl.conf` on the host, to ensure that the host kernel
 [allows sufficient AIO handles](http://unix.stackexchange.com/questions/116520/mysql-server-wont-install-to-a-new-os-debian-ubuntu)
-for all the guests:
+for all the guests to run MySQL InnoDB:
 
 	fs.aio-max-nr = 1000000
 
