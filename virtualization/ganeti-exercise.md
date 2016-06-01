@@ -367,14 +367,15 @@ Then finish the installation:
 	cd /opt/ganeti_webmgr
 	sudo mkdir .settings db
 	sudo chown www-data .settings db
-	sudo -u www-data bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
+	export DJANGO_SETTINGS_MODULE=ganeti_webmgr.ganeti_web.settings
+	sudo -E -u www-data bin/django-admin.py syncdb --migrate
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
 
 Now start the web server in debugging mode:
 
 	cd /opt/ganeti_webmgr
-	sudo -u www-data bin/django-admin.py runserver --settings=ganeti_webmgr.ganeti_web.settings 0.0.0.0:8000
+	sudo -E -u www-data bin/django-admin.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that
 everything is working by visiting <http://192.168.56.10:8000>. You should get a
