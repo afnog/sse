@@ -331,6 +331,13 @@ Run the following commands:
 	wget http://sse-mini1.mtg.afnog.org/0.11.1.tar.gz
 	tar xzvf 0.11.1.tar.gz
 	cd ganeti_webmgr-0.11.1
+
+We are using Ganeti Web Manager 0.11.1 which has a bug, that we need to
+[fix](https://github.com/osuosl/ganeti_webmgr/pull/93) before we install:
+
+	cd ganeti_webmgr/ganeti_web/settings
+	
+
 	sudo ./scripts/setup.sh
 
 
@@ -341,8 +348,10 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 	sudo service vncauthproxy start
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
-	cd /opt/ganeti_webmgr	
-	sudo cp ganeti_web/settings/config.yml.dist config/config.yml
+	cd /opt/ganeti_webmgr
+
+
+	cd ganeti_web/settings
 
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
