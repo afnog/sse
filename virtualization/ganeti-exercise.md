@@ -105,9 +105,11 @@ disable everything else.
 
 ### Network Re-Configuration
 
-After installation, shut down the machine and reconfigure its network interfaces in VirtualBox
+After installation, shut down the machine and reconfigure its network interfaces in VirtualBox:
 
-* Adapter 1: Do not change, leave set to NAT.
+* Adapter 1: Try setting this to Bridged and choose your external interface. If it doesn't work
+  (the guest can't connect to the Internet), change it back to NAT. But then you won't be able
+  to access your guest VMs across the network, only from your computer (sorry!). 
 * Adapter 2: Host-only network, vboxnet0, enable Promiscuous Mode.
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
@@ -351,8 +353,8 @@ delete it. Also, in the `[Service]` section, add the following line:
 Then copy it to the `systemd` service directory, and start it:
 
 	sudo cp scripts/vncauthproxy/init-systemd /lib/systemd/system/vncauthproxy.service
-	sudo mkdir /var/log/vncauthproxy
-	sudo chown www-data /var/log/vncauthproxy
+	sudo mkdir /var/log/vncauthproxy /var/run/vncauthproxy
+	sudo chown www-data /var/log/vncauthproxy /var/run/vncauthproxy
 	sudo service vncauthproxy start
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
