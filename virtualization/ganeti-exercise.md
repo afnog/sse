@@ -370,6 +370,7 @@ Then finish the installation:
 	export DJANGO_SETTINGS_MODULE=ganeti_webmgr.ganeti_web.settings
 	sudo -E -u www-data bin/django-admin.py syncdb --migrate
 	sudo -E -u www-data bin/django-admin.py refreshcache
+	sudo -E -u www-data bin/django-admin.py rebuild_index
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
 
