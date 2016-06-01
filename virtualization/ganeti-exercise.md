@@ -332,7 +332,7 @@ release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 
 Then run the following commands to install it:
 
-	sudo apt-get install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi
+	sudo apt install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
