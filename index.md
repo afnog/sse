@@ -98,7 +98,7 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[Dovecot][]		|[Virtualisation][]
 |-
 |Tea break
-|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[SquirrelMail][]	|Expert Panel and [Closing Survey][]
+|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Squirrelmail][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|[DNSSEC][], [Ansible][]	|Instructor Dinner |Closing Ceremony
@@ -202,6 +202,15 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/Keynote](dns/DNSSEC_High-Level_Awareness.key)
 * [Exercise/Text](dns/dns5-exercise.txt)
 
+### Dovecot
+[Dovecot]: #dovecot
+
+#### [Michuki Mwangi](#MM)
+
+* [Presentation/PPT](dovecot/dovecot-intro.ppt)
+* [Presentation/PDF](dovecot/dovecot-intro.pdf)
+* [Exercise/Text](dovecot-install-setup.txt)
+
 ### Ganeti
 [Ganeti]: #ganeti
 
@@ -279,6 +288,16 @@ Goal: DNSSEC High Level Awareness.
 * [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
 * [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
 * [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
+
+
+### Squirrelmail
+[Squirrelmail]: #squirrelmail
+
+#### [Michuki Mwangi](#MM)
+
+* [Presentation/PPT](squirrelmail/squirrelmail-intro.ppt)
+* [Presentation/PDF](squirrelmail/squirrelmail-intro.pdf)
+* [Exercise/Text](squirrelmail-install-setup.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization
