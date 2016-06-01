@@ -353,6 +353,10 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 	cd /opt/ganeti_webmgr
 	sudo /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
 
+Enter a username, password and email address for a super user for the Ganeti web manager.
+
+
+
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 0.11.0. We have a local copy which you can download here:
