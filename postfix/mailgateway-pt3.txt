@@ -218,15 +218,24 @@ You should also run the SpamAssassin check. Look for errors and fix (if any). It
 
 You should get similar output at the very end.
 
+	
+
+
 	dbg: check: subtests=__BODY_TEXT_LINE,__EMPTY_BODY,__GATED_THROUGH_RCVD_REMOVER,__HAS_FROM,__HAS_MESSAGE_ID,__HAS_MSGID,__HAS_SUBJECT,__KHOP_NO_FULL_NAME,__MISSING_REF,__MISSING_REPLY,__MSGID_OK_DIGITS,__MSGID_OK_HOST,__MSOE_MID_WRONG_CASE,__NONEMPTY_BODY,__NOT_SPOOFED,__SANE_MSGID,__TO_NO_ARROWS_R,__UNUSABLE_MSGID
 May 29 12:14:46.384 [12173] dbg: timing: total 1061 ms - init: 798 (75.2%), parse: 0.55 (0.1%), extract_message_metadata: 1.14 (0.1%), get_uri_detail_list: 0.58 (0.1%), tests_pri_-1000: 5 (0.5%), compile_gen: 117 (11.0%), compile_eval: 16 (1.5%), tests_pri_-950: 3.7 (0.4%), tests_pri_-900: 4.0 (0.4%), tests_pri_-400: 3.5 (0.3%), tests_pri_0: 197 (18.5%), tests_pri_500: 45 (4.3%)
+
+
 
 
 
 You should make sure that MailScanner is working properly and can communicate with ClamAV and SpamAssassin.
 Do not run the following command from the root director (/root) as it will produce errors
 
+
+
 	$sudo MailScanner --lint --debug
+
+
 
 You should see something like this:
 
@@ -251,6 +260,10 @@ You should see something like this:
 	Virus Scanner test reports:
 	ClamAV said "eicar.com contains Eicar-Test-Signature"
 
+
+
+
+
 6. START everything
 ====================
 
@@ -259,12 +272,15 @@ If all is well then restart everything:
 	$sudo service postfix restart && sudo service apache2 restart && sudo service mailscanner restart
 
 
-And check the log
+And check the log:
 
 
 	$sudo tail -f /var/log/mail.log
 
 You should get similar output:
+
+	
+
 
 	May 29 12:19:15 pc39 MailScanner[12825]: MailScanner E-Mail Virus Scanner version 4.85.2 starting...
 	May 29 12:19:15 pc39 MailScanner[12825]: Reading configuration file /etc/MailScanner/MailScanner.conf
@@ -276,6 +292,8 @@ You should get similar output:
 	May 29 12:19:15 pc39 MailScanner[12825]: Read 0 blacklist entries
 	May 29 12:19:15 pc39 MailScanner[12825]: Config: calling custom init function SQLWhitelist
 	May 29 12:19:15 pc39 MailScanner[12825]: Starting up SQL Whitelist
+
+
 
 
 Test that port 25 is open and that Postfix is listening
@@ -290,11 +308,19 @@ Test that port 25 is open and that Postfix is listening
 
 Type quit to exit
 
+
+
 8. TEST THE EMAIL SERVER, SEND OUT AN EMAIL
 ====================
 
+	$sudo apt-get remove mailutils 
+	$sudo apt-get install mailutils
 
-echo "This is my email, hello" | mail -s "This is a test message" youremailaddress@gmail.com
+
+Then test your email server
+
+
+	$echo "This is my email, hello" | mail -s "This is a test message" youremailaddress@gmail.com
 
 
 9. LOGIN TO MAILWATCH
