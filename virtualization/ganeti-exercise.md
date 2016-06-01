@@ -343,7 +343,6 @@ Then run the following commands to install it:
 	cp ganeti_webmgr/ganeti_web/settings/config.yml.dist config/config.yml
 	cd ganeti_webmgr/ganeti_web/settings
 	cp settings.py.dist ../settings.py
-	sudo chown -R www-data /opt/ganeti_webmgr
 
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
 be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
@@ -357,6 +356,7 @@ Then deploy the web interface:
 
 	cd /opt/ganeti_webmgr
 	sudo fab deploy
+	sudo chown -R www-data .
 
 Run this command to generate a new secret key:
 
