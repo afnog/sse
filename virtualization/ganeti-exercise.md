@@ -328,7 +328,7 @@ Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 0.11.0. We have a local copy which you can download here:
 
-	wget http://197.4.11.251/ganeti_webmgr-0.11.0.tar.gz
+	wget http://sse-mini1.mtg.afnog.org/ganeti_webmgr-0.11.0.tar.gz
 
 Then run the following commands to install it:
 
