@@ -359,9 +359,19 @@ Edit `/opt/ganeti_webmgr/config/config.yml` and change the `EMAIL_HOST` and
 `DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server
 and your email address.
 
+Also find this line:
+
+	NAME: /opt/ganeti_webmgr/ganeti.db
+
+And change it to:
+
+	NAME: /opt/ganeti_webmgr/db/ganeti.db
+
 Now start the web server in debugging mode:
 
 	cd /opt/ganeti_webmgr
+	mkdir .settings db
+	chown www-data .settings db
 	sudo -u www-data venv/bin/python manage.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
