@@ -365,8 +365,8 @@ And change it to:
 Then finish the installation:
 
 	cd /opt/ganeti_webmgr
-	sudo mkdir .settings db
-	sudo chown www-data .settings db
+	sudo mkdir .settings db whoosh_index
+	sudo chown www-data .settings db whoosh_index
 	export DJANGO_SETTINGS_MODULE=ganeti_webmgr.ganeti_web.settings
 	sudo -E -u www-data bin/django-admin.py syncdb --migrate
 	sudo -E -u www-data bin/django-admin.py refreshcache
