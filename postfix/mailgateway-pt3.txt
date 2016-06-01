@@ -103,7 +103,7 @@ mydestination = pc37.sse.ws.afnog.org, XXXXX.afnog.guru, localhost.sse.ws.afnog.
 Save and Exit
 
 
-Check what the postfix config looks like:
+Check what the postfix config looks like. Postconf will reveal the running config on your system:
 
 	$sudo postconf -n
 
@@ -149,9 +149,14 @@ Set up MailWatch:
 
 	$cd /home/afnog/1.2.0-master
 
+
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
 
+
+
 	$sudo scp afnog@pc37.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
+
+
 
 Setup MailWatch web page for Apache:
 
