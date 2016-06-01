@@ -355,7 +355,8 @@ be done at an AfNOG workshop, or an environment where you are forced to use a pr
 
 Then deploy the web interface:
 
-	sudo -i sh -c 'cd /opt/ganeti_webmgr; fab deploy'
+	cd /opt/ganeti_webmgr
+	sudo fab deploy
 
 Run this command to generate a new secret key:
 
