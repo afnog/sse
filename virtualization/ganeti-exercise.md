@@ -332,7 +332,7 @@ release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 
 Then run the following commands to install it:
 
-	sudo apt install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi
+	sudo apt install fabric python-virtualenv python-dev libffi-dev libssl-dev patch apache2 libapache2-mod-wsgi gcc
 	sudo mkdir -p /opt
 	tar xzvf ganeti_webmgr-0.11.0.tar.gz
 	sudo mv ganeti_webmgr-0.11.0 /opt/ganeti_webmgr
@@ -348,6 +348,10 @@ If you are following this at an AfNOG workshop, you can edit `/opt/ganeti_webmgr
 search for `def verbose_check`, then edit this line (a few lines below):
 
 	install_str = '%(virtualenv)s/bin/pip install '
+
+and change it to:
+
+	install_str = '%(virtualenv)s/bin/pip install -i http://196.200.223.144:3141/root/pypi/ --trusted-host 196.200.223.144 '
 
 Apply a patch to make Fabric download Ganeti's dependencies using a proxy. This should only 
 be done at an AfNOG workshop, or an environment where you are forced to use a proxy:
