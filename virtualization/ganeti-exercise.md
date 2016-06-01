@@ -324,6 +324,15 @@ with `{ha1}`, and giving this user `write` permissions:
 
 ### Install the Web Manager
 
+Run the following commands:
+
+	sudo apt install git libssl-dev virtualenv
+	cd /tmp
+	wget http://sse-mini1.mtg.afnog.org/0.11.1.tar.gz
+	tar xzvf 0.11.1.tar.gz
+	cd ganeti_webmgr-0.11.1
+	sudo ./scripts/setup.sh
+
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
 0.11.0. We have a local copy which you can download here:
