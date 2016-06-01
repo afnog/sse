@@ -383,7 +383,9 @@ And edit `/etc/network/interfaces` to configure networking, making it look like 
 	auto eth0
 	iface eth0 inet dhcp
 
-Then tell it to reboot and watch it come back up. Check that you can access the internet.
+Then tell it to reboot and watch it come back up. Check that you can access the internet
+from the guest. You should also be able to access the guest from your host computer, and
+hopefully from the local network too, using its IP address (assigned by DHCP).
 
 ### Enable Remote API
 
