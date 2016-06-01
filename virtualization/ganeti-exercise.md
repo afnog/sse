@@ -339,7 +339,10 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 
 	sudo cp scripts/vncauthproxy/init-systemd /lib/systemd/system/vncauthproxy.service
 	sudo service vncauthproxy start
-	
+	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
+
+	cd /opt/ganeti_webmgr	
+	sudo cp ganeti_web/settings/config.yml.dist config/config.yml
 
 Download the [latest
 release](https://code.osuosl.org/projects/ganeti-webmgr/files), for example
