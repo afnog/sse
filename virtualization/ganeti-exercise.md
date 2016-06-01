@@ -371,6 +371,7 @@ Then finish the installation:
 	sudo -E -u www-data bin/django-admin.py syncdb --migrate
 	sudo -E -u www-data bin/django-admin.py refreshcache
 	sudo -E -u www-data bin/django-admin.py rebuild_index
+	sudo -E -u www-data bin/django-admin.py collectstatic
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
 
