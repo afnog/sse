@@ -358,7 +358,7 @@ and change it to:
 Then deploy the web interface:
 
 	cd /opt/ganeti_webmgr
-	sudo fab deploy
+	sudo fab v deploy
 	sudo chown -R www-data .
 
 Run this command to generate a new secret key:
