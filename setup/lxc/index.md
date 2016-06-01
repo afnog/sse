@@ -107,8 +107,13 @@ identified), we prevent the installation of `dbus` in all containers instead, by
 
 	# https://github.com/systemd/systemd/issues/719#issuecomment-223057529
 	# http://askubuntu.com/questions/75895/how-to-forbid-a-specific-package-to-be-installed
-	Package: dbus
-	Pin: origin ""
+
+	Package: dbus 
+	Pin: version *
+	Pin-Priority: -1
+
+	Package: dbus:amd64
+	Pin: version *
 	Pin-Priority: -1
 
 Stop the container and make a lot of copies:
