@@ -180,7 +180,9 @@ Setup the mailscanner database, where it will store details on incoming emails
 
 You should get the MySQL shell. 
 
+
 	mysql>
+
 
 Add the following exactly as it is IN ONE LINE:
 
@@ -192,6 +194,7 @@ Add the following exactly as it is IN ONE LINE:
 THEN
 
 Login as the Mailwatch user using the credentials used in the Mysql entry above. We will set the username and password to be used to login to the MailWatch web interface. Typically this should be a strong alphanumeric password or passphrase. We will use afnog for this class however:
+
 
 	$mysql mailscanner -u mailwatch –p
 
