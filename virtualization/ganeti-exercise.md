@@ -162,7 +162,7 @@ really be in the DNS as well, but for the purposes of this exercise
 
 ### Configure Xen
 
-Edit `/etc/default/grub` and change the following lines to enable Xen (you would
+Edit `/etc/default/grub` and add/change the following lines to enable Xen (you would
 not need this for a KVM cluster in production):
 
 	GRUB_DEFAULT=saved
