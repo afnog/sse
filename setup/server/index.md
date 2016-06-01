@@ -98,5 +98,3 @@ Setup a PIP caching server for Ganeti web manager installation:
 	devpi/bin/pip install devpi-server
 	nohup devpi/bin/devpi-server --host 0.0.0.0 &
 
-
-	
