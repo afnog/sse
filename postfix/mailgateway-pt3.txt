@@ -45,11 +45,11 @@ Prepare MailScanner directories (they may already exist)
 	
 
 
-3. Get clamav updates (they take a long time and we will use a local copy)
+3. Get clamav updates 
 ========================================================================
 
 Clamav will automatically attempt to obtain fresh antivirus signatures from the Internet via
-freshclam after installation. Type "freshclam" to see how updates are fetched.
+freshclam after installation. Type "freshclam" to see how updates are fetched. If it fails with a lock issue, it means freshclam is running in the background and you can move to the next step
 	
 	$sudo freshclam
 	
