@@ -43,9 +43,13 @@ For this to work, you also need to edit `/etc/pam.d/common-session*, find the li
 
 Then `sudo update-grub` and `sudo reboot` to activate swap accounting.
 
-Create a gold master guest image:
+Create a gold master guest image. According to the
+[LXC documentation](https://linuxcontainers.org/lxc/getting-started/), "most
+distribution templates simply won't work with (unprivileged containers).
+Instead you should use the "download" template which will provide you with
+pre-built images of the distributions that are known to work in such an
+environment."
 
-	# lxc-create --template debian --name debian8
 	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
 	lxc-ls --fancy
 	chmod a+x .local
@@ -65,7 +69,8 @@ Edit your user's crontab and add the following line to make your containers auto
 
 	@reboot lxc-autostart
 
-Ensure that systemd gives [sufficient tasks](http://unix.stackexchange.com/questions/253903/creating-threads-fails-with-resource-temporarily-unavailable-with-4-3-kernel)
+Ensure that systemd on the host gives
+[sufficient tasks](http://unix.stackexchange.com/questions/253903/creating-threads-fails-with-resource-temporarily-unavailable-with-4-3-kernel)
 to LXC containers started by `at` and `cron`, by editing `/etc/systemd/system.conf`,
 uncommenting `DefaultTasksMax` and setting it to at least 12288.
 See [here](https://news.ycombinator.com/item?id=11675133) for more information on this problem.
@@ -87,6 +92,15 @@ is to edit `/etc/pam.d/sshd` and `/etc/pam.d/cron` in the guest, find the line t
 and change it to:
 
 	session    optional     pam_loginuid.so
+
+And there is an issue with
+[systemd, dbus and OOM_ADJUST in the container](https://github.com/systemd/systemd/issues/719#issuecomment-223057529)
+which requires us to comment-out the `OOMScoreAdjust=-900` line in `/lib/systemd/system/dbus.service`. The `dbus` package
+is not installed by default, so this file does not exist, but installing certain applications (e.g. `mutt`) will
+install it and break the system. Even a simple `apt install dbus` hangs during package installation,
+and it can't be safely removed either.
+
+	
 
 Stop the container and make a lot of copies:
 
