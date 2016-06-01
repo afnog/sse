@@ -351,18 +351,17 @@ delete it. Then copy it to the `systemd` service directory, and start it:
 	sudo cp ganeti_webmgr/ganeti_web/settings/config.yml.dist /opt/ganeti_webmgr/config/config.yml
 
 	cd /opt/ganeti_webmgr
-	sudo /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
+	sudo -u www-data /opt/ganeti_webmgr/bin/django-admin.py syncdb --migrate --settings=ganeti_webmgr.ganeti_web.settings
 
 Enter a username, password and email address for a super user for the Ganeti web manager.
 
-Edit `/opt/ganeti_webmgr/config/settings.yml` and change the `EMAIL_HOST` and
+Edit `/opt/ganeti_webmgr/config/config.yml` and change the `EMAIL_HOST` and
 `DEFAULT_FROM_EMAIL` lines, so that their values refer to your outbound server
 and your email address.
 
-Check the configuration for errors:
+Now start the web server in debugging mode:
 
 	cd /opt/ganeti_webmgr
-	sudo -u www-data venv/bin/python manage.py syncdb --migrate
 	sudo -u www-data venv/bin/python manage.py runserver 0.0.0.0:8000
 
 This will start the debugging webserver on port 8000, so you can check that everything is working
