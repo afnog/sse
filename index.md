@@ -230,7 +230,7 @@ Goal: DNSSEC High Level Awareness.
 ### Load Balancing
 [Load Balancing]: #load-balancing
 
-#### [Frank Kuse](#FK)
+#### [Chris Wilson](#CW)
 
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
