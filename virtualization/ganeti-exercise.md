@@ -59,7 +59,7 @@ installation.
 
 #### Hostname
 
-You must use a fully qualified hostname, for example `ganeti.pcXX.sse.ws.afnog.org`.
+You must use a fully qualified hostname, for example `ganeti1.pcXX.sse.ws.afnog.org`.
 
 #### Partitioning
 
@@ -361,6 +361,7 @@ Check that your new instance appears in the output of `gnt-instance list`, with 
 	Instance         Hypervisor OS                  Primary_node                 Status  Memory
 	test.example.com xen-pvm    debootstrap+default ganeti.pc40.sse.ws.afnog.org running   512M
 
+You can also 
 Connect to its console:
 
 	sudo gnt-instance console test.example.com
