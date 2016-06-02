@@ -312,7 +312,6 @@ You can ignore the following errors and warnings from `gnt-cluster verify`. The 
 is out of date, and the warnings are not problems because not all LVM volumes are
 used by Ganeti.
 
-	Thu Jun  2 13:17:09 2016   - ERROR: cluster: File /etc/xen/xend-config.sxp is missing from node(s) ganeti1.pc40.sse.ws.afnog.org
 	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Swap is unknown
 	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Root is unknown
 
@@ -374,12 +373,16 @@ Run the `burnin` test to make sure that everything is working properly:
 
 The output should end with:
 
-	- Checking confd results
-	  * Ping: OK
-	  * Master: OK
-	  * Node role for master: OK
-	- Stopping and starting instances
+	- Attaching and removing disks
 	  * instance burnin.example.com
+	    attaching a disk with name RQLX441M
+	    removing last disk
+		Thu Jun  2 19:13:17 2016  - WARNING: Hotplug is not supported: Hotplug is not supported by this hypervisor
+		Thu Jun  2 19:13:17 2016  - INFO: Modification will take place without hotplugging.
+		Thu Jun  2 19:13:18 2016  - INFO: Waiting for instance burnin.example.com to sync disks
+		Thu Jun  2 19:13:18 2016  - INFO: Instance burnin.example.com's disks are in sync
+		Thu Jun  2 19:13:19 2016  - WARNING: Hotplug is not supported: Hotplug is not supported by this hypervisor
+		Thu Jun  2 19:13:19 2016  - INFO: Modification will take place without hotplugging.
 	- Removing instances
 	  * instance burnin.example.com
 
