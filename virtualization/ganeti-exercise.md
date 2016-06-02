@@ -268,7 +268,7 @@ Then run:
 
 Start by running the following commands:
 
-	sudo apt install ganeti ganeti-instance-debootstrap
+	sudo apt -t jessie-backports install ganeti ganeti-instance-debootstrap
 
 We also need to apply a patch to Ganeti for
 [this issue](http://git.ganeti.org/ganeti.git/?a=commit;h=6b16d04a318d33a59db24f2f7ee5e52721855428):
