@@ -430,8 +430,7 @@ Check that your new instance appears in the output of `gnt-instance list`, with 
 	Instance         Hypervisor OS                  Primary_node                 Status  Memory
 	test.example.com xen-pvm    debootstrap+default ganeti.pc40.sse.ws.afnog.org running   512M
 
-You can also 
-Connect to its console:
+You can also connect to its console:
 
 	sudo gnt-instance console test.example.com
 
