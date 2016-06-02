@@ -304,9 +304,9 @@ Goal: DNSSEC High Level Awareness.
 
 #### [Chris Wilson](#CW)
 
-* [Terminology (PDF)](virtualization/virt-terminology.pdf) (thanks to NSRC!)
 * [Intro Presentation (OpenOffice Impress)](virtualization/sse-virtualization-overview-2013.odp)
 * [Intro Presentation (PDF)](virtualization/sse-virtualization-overview-2013_150527.pdf)
+* [Virtualisation Concepts (PDF)](virtualization/virt-terminology.pdf) (thanks to NSRC!)
 * [KVM Presentation (OpenOffice Impress)](virtualization/afnog_2015_virtualization_kvm_cw.odp)
 * [KVM Presentation (PDF)](virtualization/afnog_2015_virtualization_kvm_cw_150527.pdf)
 * [Ganeti Presentation (PDF)](virtualization/ganeti-overview.pdf) (thanks to NSRC!)
