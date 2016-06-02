@@ -183,7 +183,10 @@ Then edit `/etc/network/interfaces` to look like this:
 
 ### Hostnames and DNS
 
-Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
+Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there. Then change the
+hostname to match:
+
+	hostname `cat /etc/hostname`
 
 Edit `/etc/hosts` and ensure that it contains the IP address and hostname of
 your host. You will also need to choose a name (hostname) and IP address for
@@ -213,8 +216,8 @@ for guests. In your own configurations you should probably allocate more RAM to 
 Then run the following commands:
 
 	sudo update-grub
-	sudo apt-get dist-upgrade	
-	sudo apt-get install xen-linux-system-amd64
+	sudo apt dist-upgrade	
+	sudo apt install xen-linux-system-amd64
 
 Then `reboot` the host. Be sure to select a Xen kernel from the boot list. Log in again and check
 that the `free` command reports 600 MB of total Mem, not 2 GB:
