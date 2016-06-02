@@ -72,7 +72,9 @@ I will use names like this in the example:
 
 You can use multiple clusters for different physical locations for example.
 All the nodes in the cluster expect to have very high bandwidth between them,
-for example for DRBD repication.
+for example for DRBD repication. If you have more than ~40 nodes in your
+cluster, Phil Regnauld recommends that you start a new cluster rather than
+adding more nodes.
 
 #### Partitioning
 
