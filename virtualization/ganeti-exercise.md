@@ -26,6 +26,8 @@ is slightly different. KVM is not covered here.
 
 Install VirtualBox or make sure you are running version 4.3 or higher.
 
+### VirtualBox configuration
+
 Open VirtualBox Preferences > Network > Host-Only Adaptors. Ensure that you
 have at least two listed: vboxnet0 and vboxnet1. If not, click on the Add
 button to the right of the list to create them.
@@ -50,7 +52,7 @@ this change will not take effect, as we discovered after an hour of debugging!
 Create a new VM called Ganeti Demo. Give it 2 GB RAM and a 40 GB VDI disk,
 dynamically sized.
 
-### Starting Installation
+### OS Installation
 
 Start the VM and attach the debian-8.x.x-amd64-DVD-1.iso image. Read the
 following sections **before** you start the installation, and use them at the
