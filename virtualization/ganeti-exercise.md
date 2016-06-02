@@ -150,7 +150,8 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
-Then start the machine again. Log in on the console and install some packages:
+Then start the machine again. Log in on the console, edit `/etc/apt/sources.list` and delete the
+`deb cdrom` line. Then install some packages:
 
 	su
 	apt install bridge-utils sudo
