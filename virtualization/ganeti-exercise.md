@@ -246,6 +246,12 @@ Start by running the following commands:
 
 	sudo apt install ganeti ganeti-instance-debootstrap
 
+We also need to apply a patch to Ganeti for
+[this issue](http://git.ganeti.org/ganeti.git/?a=commit;h=6b16d04a318d33a59db24f2f7ee5e52721855428):
+
+	cd /usr/share/ganeti/2.12/ganeti
+	wget http://bit.ly/25CGr4Z -O- | sudo patch -p2
+
 Then start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
 skipping the following sections:
 
@@ -292,6 +298,9 @@ used by Ganeti.
 	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Swap is unknown
 	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Root is unknown
 
+The [Ganeti manual page](http://docs.ganeti.org/ganeti/2.15/html/man-ganeti.html) gives
+useful information about Ganeti commands, including examples.
+
 Create the file `/etc/ganeti/vnc-cluster-password` containing the password that
 you want to use for VNC access to consoles.
 
@@ -329,9 +338,6 @@ free in the hypervisor to create new guests. Otherwise you won't be able to do
 much with your new hypervisor. If it doesn't show enough free RAM, check that
 you have [reconfigured GRUB and run
 `update-grub`](http://askubuntu.com/a/191489/49566).
-
-The [Ganeti manual page](http://docs.ganeti.org/ganeti/2.15/html/man-ganeti.html) gives
-useful information about Ganeti commands, including examples.
 
 Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `burnin.example.com`:
 
