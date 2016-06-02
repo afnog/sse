@@ -143,17 +143,6 @@ Then edit `/etc/network/interfaces` to look like this:
 		bridge_stp off
 		bridge_fd 0
 
-### Enable IP Forwarding
-
-Due to limitation of VirtualBox
-[bridging onto wireless networks](https://www.virtualbox.org/manual/ch06.html#network_bridged),
-we must route guest packets through the VM host, so we must enable IP Forwarding by editing
-`/etc/sysctl.conf` on the host and uncommenting the following line:
-
-	net.ipv4.ip_forward=1
-
-Then run `sysctl -p` to activate this change.
-
 ### Hostnames and DNS
 
 Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there.
