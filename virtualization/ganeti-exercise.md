@@ -265,6 +265,9 @@ skipping the following sections:
 
 ## Initializing the Cluster
 
+You should only do this on the **first node** in the cluster. Do not do this
+step again unless you are setting up a new cluster!
+
 Run the following command, ensuring that you use the correct cluster hostname:
 
 	sudo mkdir /root/.ssh
