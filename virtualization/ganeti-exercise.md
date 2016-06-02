@@ -242,7 +242,7 @@ Load the kernel module (driver) now:
 
 	sudo modprobe drbd
 
-### Continue Ganeti installation
+### Install Ganeti software
 
 Start by running the following commands:
 
