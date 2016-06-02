@@ -152,8 +152,9 @@ your host. You will also need to choose a name (hostname) and IP address for
 your cluster, which must be different. For example:
 
 	127.0.0.1       localhost
-	192.168.56.10   ganeti.pcXX.sse.ws.afnog.org
-	192.168.56.11   cluster.pcXX.sse.ws.afnog.org
+	192.168.56.10   cluster.pcXX.sse.ws.afnog.org
+	192.168.56.11   ganeti1.pcXX.sse.ws.afnog.org
+	192.168.56.12   ganeti2.pcXX.sse.ws.afnog.org
 
 Normally you would add DNS entries for all of these. Feel free to use the DNS
 for the cluster name, instead of editing `/etc/hosts`. Your hostname should
@@ -287,7 +288,7 @@ useful information about Ganeti commands, including examples.
 
 Add an entry to `/etc/hosts` for a host to use for burnin testing, for example `burnin.example.com`:
 
-	192.168.56.12   burnin.example.com
+	192.168.56.20   burnin.example.com
 
 The `burnin` test will
 [fail](https://groups.google.com/forum/#!topic/ganeti/ds0TwfroS8A) unless we
@@ -314,9 +315,12 @@ The output should end with:
 ### Create a Virtual Machine
 
 Add a hostname (to `/etc/hosts` or to a DNS domain that you control) with a
-dummy IP address (normally you would give it a static IP address, but we are on
-a DHCP network with limited IP addresses here). We will use `test.example.com`
-for this example.
+dummy IP address. We will use `test.example.com` for this example.
+
+	192.168.56.21	test.example.com
+
+Normally you would give it a static IP address, but we are on
+a DHCP network with limited IP addresses here.
 
 Use the following command to create a test VM:
 
