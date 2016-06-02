@@ -174,7 +174,8 @@ Then edit `/etc/network/interfaces` to look like this:
 
 	auto xen-br0
 	iface xen-br0 inet static
-		address 192.168.56.10
+		# This must match the address of your hostname in the DNS, not the cluster address!
+		address 192.168.56.11
 		netmask 255.255.255.0
 		bridge_ports eth1
 		bridge_stp off
