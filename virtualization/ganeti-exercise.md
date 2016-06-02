@@ -167,11 +167,6 @@ Then edit `/etc/network/interfaces` to look like this:
 	auto eth0
 	iface eth0 inet dhcp
 
-	auto eth1
-	iface eth1 inet static
-		address 0.0.0.0
-		netmask 255.255.255.255
-
 	auto xen-br0
 	iface xen-br0 inet static
 		# This must match the address of your hostname in the DNS, not the cluster address!
