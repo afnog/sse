@@ -42,11 +42,11 @@ try to point out where we are taking shortcuts or unusual configurations that we
 would not normally do in production. NSRC has a [five-day workshop](https://nsrc.org/workshops/2015/ripe-nsrc-virt/)
 on virtualisation and we have ~3 hours, so this is just an introduction!
 
-## Installing the first host machine
+## Install the first Node (VM host machine)
 
 Install VirtualBox or make sure you are running version 4.3 or higher.
 
-### VirtualBox configuration
+### Configure VirtualBox networking
 
 Open VirtualBox Preferences > Network > Host-Only Adaptors. Ensure that you
 have at least two listed: vboxnet0 and vboxnet1. If not, click on the Add
@@ -72,7 +72,7 @@ this change will not take effect, as we discovered after an hour of debugging!
 Create a new VM called Ganeti Demo. Give it 2 GB RAM and a 40 GB VDI disk,
 dynamically sized.
 
-### OS Installation
+### Install the OS for each Node
 
 Start the VM and attach the debian-8.x.x-amd64-DVD-1.iso image. Read the
 following sections **before** you start the installation, and use them at the
@@ -140,7 +140,7 @@ While the installation proceeds, familiarise yourself with the terminology of
 Enable installation of the *SSH Server* and *Standard system utilities*,
 disable everything else.
 
-### Network Re-Configuration
+### Reconfigure the virtual network
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox:
 
