@@ -368,19 +368,6 @@ If this fails, you may need to remove the instance before trying again:
 
 	sudo gnt-instance remove burnin.example.com
 
-### Add a second Node
-
-We want to create a replicating Instance (virtual machine) with high availability, so
-we need a second Node to host the backup copy of this Instance.
-
-Create a new virtual machine and configure it using the same instructions as above,
-up to the point of creating a cluster, but don't create a new cluster. Use a different
-hostname, for example `ganeti2.pcXX.sse.ws.afnog.org`, which must also be listed in
-`/etc/hosts`. The `/etc/hosts` file should be exactly the same on both hosts.
-
-Enable remote root logins by SSH on the new server, by editing `/etc/ssh/sshd_config`
-and changing the `PermitRootLogin` setting to `yes`. Restart the `ssh` service.
-
 ### Create a Virtual Machine
 
 Add a hostname (to `/etc/hosts` or to a DNS domain that you control) with a
@@ -430,7 +417,7 @@ Check that your new instance appears in the output of `gnt-instance list`, with 
 	Instance         Hypervisor OS                  Primary_node                 Status  Memory
 	test.example.com xen-pvm    debootstrap+default ganeti.pc40.sse.ws.afnog.org running   512M
 
-You can also connect to its console:
+Connect to its console:
 
 	sudo gnt-instance console test.example.com
 
@@ -459,6 +446,45 @@ And edit `/etc/network/interfaces` to configure networking, making it look like 
 Then tell it to reboot and watch it come back up. Check that you can access the internet
 from the guest. You should also be able to access the guest from your host computer, and
 hopefully from the local network too, using its IP address (assigned by DHCP).
+
+### Add a second Node
+
+We want to create a replicating Instance (virtual machine) with high availability, so
+we need a second Node to host the backup copy of this Instance.
+
+Create a new virtual machine and configure it using the same instructions as above,
+up to the point of creating a cluster, but don't create a new cluster. Use a different
+hostname, for example `ganeti2.pcXX.sse.ws.afnog.org`, which must also be listed in
+`/etc/hosts`. The `/etc/hosts` file should be exactly the same on both hosts.
+
+Enable remote root logins by SSH on the new server, by editing `/etc/ssh/sshd_config`
+and changing the `PermitRootLogin` setting to `yes`. Restart the `ssh` service.
+
+Now add this node to the existing cluster, by running the following command on a node
+already in the cluster (ganeti1):
+
+	sudo gnt-node add ganeti2.pcXX.sse.ws.afnog.org
+
+This will prompt you to login as root to the new node (ganeti2) and will forcibly add
+it to the cluster. Do not do this to a node which is already in a cluster, as it will
+probably result in data loss!
+
+Verify the cluster again:
+
+	sudo gnt-cluster verify
+
+### Test HA with DRBD replication
+
+We can now use the same `burnin` command with a different storage type, `drbd`, which will
+create an instance that replicates its data to another node:
+
+	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t drbd --disk-size 1G --mem-size=600 burnin.example.com -vv
+
+
+
+
+
+
 
 ### Enable Remote API
 
