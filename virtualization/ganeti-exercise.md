@@ -60,7 +60,15 @@ installation.
 #### Hostname
 
 You must use a fully qualified hostname, for example `ganeti1.pcXX.sse.ws.afnog.org`.
-If you have your own delegated DNS domain, you can use it!
+If you have your own delegated DNS domain, and you know how to add A records to it,
+then you can use it instead! 
+
+We will need a cluster address which is separate from each host node's address. So
+I will use names like this in the example:
+
+* **cluster**.pcXX.sse.ws.afnog.org
+* **ganeti1**.pcXX.sse.ws.afnog.org
+* **ganeti2**.pcXX.sse.ws.afnog.org
 
 #### Partitioning
 
