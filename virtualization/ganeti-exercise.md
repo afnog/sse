@@ -270,11 +270,6 @@ Start by running the following commands:
 
 	sudo apt -t jessie-backports install ganeti ganeti-instance-debootstrap
 
-We also need to apply a patch to Ganeti for
-[this issue](http://git.ganeti.org/ganeti.git/?a=commit;h=6b16d04a318d33a59db24f2f7ee5e52721855428):
-
-	sudo wget http://bit.ly/1XkrkbX -O /usr/share/ganeti/2.12/ganeti/hypervisor/hv_xen.py
-
 Then start following the [Ganeti installation tutorial](http://docs.ganeti.org/ganeti/2.15/html/install.html),
 skipping the following sections:
 
