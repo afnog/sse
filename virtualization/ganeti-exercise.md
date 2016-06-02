@@ -146,7 +146,7 @@ After installation, shut down the machine and reconfigure its network interfaces
 
 * Adapter 1: If you have a wired LAN connection, then you can set this to Bridged. Don't
   try to do that if you are using wireless and don't have a wired LAN connection!
-* Adapter 2: Host-only network, vboxnet0, set Promiscuous Mode to *Allow All*.
+* Adapter 2: Enabled, Host-only network, vboxnet0, set Promiscuous Mode to *Allow All*.
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
 
