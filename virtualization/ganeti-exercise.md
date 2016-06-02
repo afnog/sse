@@ -265,8 +265,7 @@ skipping the following sections:
 
 ## Initializing the Cluster
 
-Run the following command, substituting the cluster name you added to
-`/etc/hosts` instead of `cluster1...`:
+Run the following command, ensuring that you use the correct cluster hostname:
 
 	sudo mkdir /root/.ssh
 	sudo gnt-cluster init --vg-name xenvg --enabled-hypervisors=xen-pvm -H xen-pvm:xen_cmd=xl cluster.pcXX.sse.ws.afnog.org
