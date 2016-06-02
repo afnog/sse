@@ -26,7 +26,7 @@ adding more nodes.
 
 ## About this exercise
 
-We will install Ganeti in a virtual machine, configure it to use the Xen
+We will install Ganeti in some virtual machines, configure it to use the Xen
 hypervisor, and use it to create and manage some virtual machines.
 
 Normally you would install this on your physical hosts. We are using it in a
@@ -35,6 +35,12 @@ we don't have enough physical boxes for everyone. This forces us to use Xen
 (which is slower than KVM) because we can't use KVM inside a VirtualBox virtual
 machine. You could use either for a real deployment. The installation process
 is slightly different. KVM is not covered here.
+
+This is not a production setup! This is intended to give you hands-on experience
+of Ganeti and Xen on your own hardware (laptop) in a classroom environment. I will
+try to point out where we are taking shortcuts or unusual configurations that we
+would not normally do in production. NSRC has a [five-day workshop](https://nsrc.org/workshops/2015/ripe-nsrc-virt/)
+on virtualisation and we have ~3 hours, so this is just an introduction!
 
 ## Installing the first host machine
 
