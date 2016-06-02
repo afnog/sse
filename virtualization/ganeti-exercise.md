@@ -322,7 +322,7 @@ dummy IP address. We will use `test.example.com` for this example.
 Normally you would give it a static IP address, but we are on
 a DHCP network with limited IP addresses here.
 
-Use the following command to create a test VM:
+Use the following command to create the test VM:
 
 	sudo gnt-instance add -t plain --disk 0:size=4G -B memory=512 \
 		-H xen-pvm:initrd_path=/boot/initrd-3-xenU -o debootstrap+default \
