@@ -265,7 +265,6 @@ skipping the following sections:
 
 ## Initializing the Cluster
 
-
 Run the following command, substituting the cluster name you added to
 `/etc/hosts` instead of `cluster1...`:
 
