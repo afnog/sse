@@ -297,7 +297,7 @@ Goal: DNSSEC High Level Awareness.
 
 * [Presentation/PPT](squirrelmail/squirrelmail-intro.ppt)
 * [Presentation/PDF](squirrelmail/squirrelmail-intro.pdf)
-* [Exercise/Text](squirrelmail-install-setup.txt)
+* [Exercise/Text](squirrelmail/squirrelmail-install-setup.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization
