@@ -93,10 +93,10 @@ I will use names like this in the example:
 * **ganeti2**.pcXX.sse.ws.afnog.org
 
 You can use multiple clusters for different physical locations for example.
-All the nodes in the cluster expect to have very high bandwidth between them,
-for example for DRBD repication. If you have more than ~40 nodes in your
-cluster, Phil Regnauld recommends that you start a new cluster rather than
-adding more nodes.
+All the nodes in the cluster expect to have Layer 2 (shared LAN) between them
+(for live migration of instances to another node) and very high bandwidth (for
+DRBD replication).§ If you have more than ~40 nodes in your cluster, Phil
+Regnauld recommends that you start a new cluster rather than adding more nodes.
 
 #### Partitioning
 
