@@ -193,10 +193,10 @@ your cluster, which must be different. For example:
 	192.168.56.11   ganeti1.pcXX.sse.ws.afnog.org
 	192.168.56.12   ganeti2.pcXX.sse.ws.afnog.org
 
-Normally you would add DNS entries for all of these. Feel free to use the DNS
-for the cluster name, instead of editing `/etc/hosts`. Your hostname should
-really be in the DNS as well, but for the purposes of this exercise
-(non-production deployment) it doesn't matter too much.
+You must use fully qualified hostnames for your nodes and for the cluster, for
+example `ganeti1.pcXX.sse.ws.afnog.org`, and they must all have IP addresses.
+If you have your own delegated DNS domain, and you know how to add A records to
+it, then you can use it instead! 
 
 ### Configure Xen
 
