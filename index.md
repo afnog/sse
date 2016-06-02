@@ -209,7 +209,7 @@ Goal: DNSSEC High Level Awareness.
 
 * [Presentation/PPT](dovecot/dovecot-intro.ppt)
 * [Presentation/PDF](dovecot/dovecot-intro.pdf)
-* [Exercise/Text](dovecot-install-setup.txt)
+* [Exercise/Text](dovecot/dovecot-install-setup.txt)
 
 ### Ganeti
 [Ganeti]: #ganeti
