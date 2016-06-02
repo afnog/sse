@@ -176,6 +176,20 @@ Then edit `/etc/network/interfaces` to look like this:
 		bridge_stp off
 		bridge_fd 0
 
+
+Now you should be able to reboot the host and login with SSH using the address that you assigned to
+`xen-br0` above. SSH is much more convenient than the console, because you can copy and paste!
+
+### Enable Debian Backports
+
+Edit `/etc/apt/sources.list` and add the following line:
+
+	deb http://ftp.debian.org/debian jessie-backports main
+
+Then run:
+
+	sudo apt update
+
 ### Hostnames and DNS
 
 Edit `/etc/hostname` and put the fully-qualified hostname (FQDN) in there. Then change the
@@ -239,6 +253,16 @@ Edit `/etc/modules` and add the following line at the end:
 Load the kernel module (driver) now:
 
 	sudo modprobe drbd
+
+### Enable Debian Backports
+
+Edit `/etc/apt/sources.list` and add the following line:
+
+	deb http://ftp.debian.org/debian jessie-backports main
+
+Then run:
+
+	sudo apt update
 
 ### Install Ganeti software
 
