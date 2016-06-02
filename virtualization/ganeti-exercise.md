@@ -280,7 +280,7 @@ node (VirtualBox guest).
 Create the file `/etc/ganeti/vnc-cluster-password` containing the password that
 you want to use for VNC access to consoles.
 
-## Testing the Setup
+## Test your setup
 
 Check that the `gnt-node list` command shows your node:
 
