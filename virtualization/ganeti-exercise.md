@@ -359,6 +359,10 @@ The output should end with:
 	- Removing instances
 	  * instance burnin.example.com
 
+If this fails, you may need to remove the instance and try again:
+
+	sudo gnt-instance remove burnin.example.com
+
 ### Add a second Node
 
 We want to create a replicating Instance (virtual machine) with high availability, so
