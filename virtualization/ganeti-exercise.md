@@ -259,7 +259,7 @@ skipping the following sections:
 * Configuring LVM: only follow the "Optional" step to configure LVM not to scan the DRBD devices for physical volumes. 
 * Installing Ganeti: stop following at this point.
 
-## Initializing the Cluster
+## Create a new Ganeti cluster
 
 You should only do this on the **first node** in the cluster. Do not do this
 step again unless you are setting up a new cluster!
