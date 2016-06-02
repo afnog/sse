@@ -70,6 +70,10 @@ I will use names like this in the example:
 * **ganeti1**.pcXX.sse.ws.afnog.org
 * **ganeti2**.pcXX.sse.ws.afnog.org
 
+You can use multiple clusters for different physical locations for example.
+All the nodes in the cluster expect to have very high bandwidth between them,
+for example for DRBD repication.
+
 #### Partitioning
 
 The server should use LVM for disk space, so instead of the default *Guided
