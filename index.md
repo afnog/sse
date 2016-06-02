@@ -232,6 +232,7 @@ Goal: DNSSEC High Level Awareness.
 
 #### [Chris Wilson](#CW)
 
+* [Web article on load balancing and scaling](https://www.digitalocean.com/company/blog/horizontally-scaling-php-applications/)
 * [Presentation/PDF](loadbalancing/docs/sse-LB-overview.pdf)
 * [Presentation/OpenOffice](loadbalancing/docs/sse-LB-overview.odp)
 
