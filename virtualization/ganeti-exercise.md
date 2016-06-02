@@ -359,6 +359,19 @@ The output should end with:
 	- Removing instances
 	  * instance burnin.example.com
 
+### Add a second Node
+
+We want to create a replicating Instance (virtual machine) with high availability, so
+we need a second Node to host the backup copy of this Instance.
+
+Create a new virtual machine and configure it using the same instructions as above,
+up to the point of creating a cluster, but don't create a new cluster. Use a different
+hostname, for example `ganeti2.pcXX.sse.ws.afnog.org`, which must also be listed in
+`/etc/hosts`. The `/etc/hosts` file should be exactly the same on both hosts.
+
+Enable remote root logins by SSH on the new server, by editing `/etc/ssh/sshd_config`
+and changing the `PermitRootLogin` setting to `yes`. Restart the `ssh` service.
+
 ### Create a Virtual Machine
 
 Add a hostname (to `/etc/hosts` or to a DNS domain that you control) with a
