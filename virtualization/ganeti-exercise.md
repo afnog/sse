@@ -480,6 +480,22 @@ create an instance that replicates its data to another node:
 
 	sudo /usr/lib/ganeti/tools/burnin -o debootstrap+default -t drbd --disk-size 1G --mem-size=600 burnin.example.com -vv
 
+### Install snf-image
+
+This tool allows you to install many different distributions in a Ganeti instance, not just Debian 7.
+Unfortunately there are some problems with the packaging at the moment, so we need to download and
+install it manually:
+
+	sudo apt install curl mbr python-prctl python-scapy
+	sudo wget http://apt.dev.grnet.gr/jessie/snf-image_0.19-1~jessie_all.deb
+	sudo dpkg -i snf-image_0.19-1~jessie_all.deb
+
+When asked for the URL to download snf-image-helper image from, if you are following this
+at an AfNOG event then you can use the copy that we downloaded for you, which will be much faster,
+by entering this URL:
+
+	http://sse-mini1.mtg.afnog.org
+
 
 
 
