@@ -60,6 +60,7 @@ installation.
 #### Hostname
 
 You must use a fully qualified hostname, for example `ganeti1.pcXX.sse.ws.afnog.org`.
+If you have your own delegated DNS domain, you can use it!
 
 #### Partitioning
 
