@@ -277,6 +277,21 @@ doing this inside a virtual machine, so we can't use the virtualisation CPU
 instructions because VirtualBox is already using them to run the Ganeti host
 node (VirtualBox guest).
 
+Test that you can run the following useful commands and examine their output:
+
+	sudo gnt-cluster verify
+	sudo gnt-node list
+	sudo gnt-instance list
+	sudo gnt-job list
+
+You can ignore the following errors and warnings from `gnt-cluster verify`. The error
+is out of date, and the warnings are not problems because not all LVM volumes are
+used by Ganeti.
+
+	Thu Jun  2 13:17:09 2016   - ERROR: cluster: File /etc/xen/xend-config.sxp is missing from node(s) ganeti1.pc40.sse.ws.afnog.org
+	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Swap is unknown
+	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Root is unknown
+
 Create the file `/etc/ganeti/vnc-cluster-password` containing the password that
 you want to use for VNC access to consoles.
 
@@ -314,21 +329,6 @@ free in the hypervisor to create new guests. Otherwise you won't be able to do
 much with your new hypervisor. If it doesn't show enough free RAM, check that
 you have [reconfigured GRUB and run
 `update-grub`](http://askubuntu.com/a/191489/49566).
-
-Test that you can run the following useful commands and examine their output:
-
-	sudo gnt-cluster verify
-	sudo gnt-node list
-	sudo gnt-instance list
-	sudo gnt-job list
-
-You can ignore the following errors and warnings from `gnt-cluster verify`. The error
-is out of date, and the warnings are not problems because not all LVM volumes are
-used by Ganeti.
-
-	Thu Jun  2 13:17:09 2016   - ERROR: cluster: File /etc/xen/xend-config.sxp is missing from node(s) ganeti1.pc40.sse.ws.afnog.org
-	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Swap is unknown
-	Thu Jun  2 13:17:09 2016   - WARNING: node ganeti1.pc40.sse.ws.afnog.org: volume xenvg/Root is unknown
 
 The [Ganeti manual page](http://docs.ganeti.org/ganeti/2.15/html/man-ganeti.html) gives
 useful information about Ganeti commands, including examples.
