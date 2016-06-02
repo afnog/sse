@@ -359,7 +359,7 @@ The output should end with:
 	- Removing instances
 	  * instance burnin.example.com
 
-If this fails, you may need to remove the instance and try again:
+If this fails, you may need to remove the instance before trying again:
 
 	sudo gnt-instance remove burnin.example.com
 
