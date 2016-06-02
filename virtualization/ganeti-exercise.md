@@ -255,6 +255,7 @@ Then start following the [Ganeti installation tutorial](http://docs.ganeti.org/g
 skipping the following sections:
 
 * Anything to do with KVM (we're using Xen instead)
+* Installing th Hypervisor (we did that already)
 * Installing DRBD (we already did that)
 * Installing RBD: skip to
   [Installing Gluster](http://docs.ganeti.org/ganeti/2.15/html/install.html#installing-gluster) instead.
