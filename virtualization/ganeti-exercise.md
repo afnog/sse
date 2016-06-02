@@ -7,10 +7,24 @@ root: ..
 
 # Ganeti Exercise
 
+## About Ganeti
+
 [Ganeti](https://code.google.com/p/ganeti/) is a virtual machine cluster
 management tool developed by Google. The solution stack uses either Xen or KVM
 as the virtualization platform, LVM for disk management, and optionally DRBD
 for disk replication across physical hosts.
+
+Ganeti manages clusters of Xen or KVM host nodes. It controls and configures the
+high availability features such as instance migration, DRBD disk replication and
+host node failover.
+
+You can use multiple clusters for different physical locations for example.
+All the nodes in the cluster expect to have very high bandwidth between them,
+for example for DRBD repication. If you have more than ~40 nodes in your
+cluster, Phil Regnauld recommends that you start a new cluster rather than
+adding more nodes.
+
+## About this exercise
 
 We will install Ganeti in a virtual machine, configure it to use the Xen
 hypervisor, and use it to create and manage some virtual machines.
@@ -239,7 +253,8 @@ skipping the following sections:
 * Configuring LVM: only follow the "Optional" step to configure LVM not to scan the DRBD devices for physical volumes. 
 * Installing Ganeti: stop following at this point.
 
-### Initializing the Cluster
+## Initializing the Cluster
+
 
 Run the following command, substituting the cluster name you added to
 `/etc/hosts` instead of `cluster1...`:
@@ -258,7 +273,7 @@ node (VirtualBox guest).
 Create the file `/etc/ganeti/vnc-cluster-password` containing the password that
 you want to use for VNC access to consoles.
 
-### Testing the Setup
+## Testing the Setup
 
 Check that the `gnt-node list` command shows your node:
 
