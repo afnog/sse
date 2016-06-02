@@ -221,7 +221,7 @@ that the `free` command reports 600 MB of total Mem, not 2 GB:
 
 	afnog@ganeti:~$ free
 		     total       used       free     shared    buffers     cached
-	Mem:        437896
+	Mem:        527640
 
 ### Install DRBD
 
