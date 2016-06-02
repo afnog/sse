@@ -144,9 +144,8 @@ disable everything else.
 
 After installation, shut down the machine and reconfigure its network interfaces in VirtualBox:
 
-* Adapter 1: Try setting this to Bridged and choose your external interface. If it doesn't work
-  (the guest can't connect to the Internet), change it back to NAT. But then you won't be able
-  to access your guest VMs across the network, only from your computer (sorry!). 
+* Adapter 1: If you have a wired LAN connection, then you can set this to Bridged. Don't
+  try to do that if you are using wireless and don't have a wired LAN connection!
 * Adapter 2: Host-only network, vboxnet0, enable Promiscuous Mode.
 
 ![Configuring Network Adaptor 1](virtualbox-configure-adaptor-2.png)
