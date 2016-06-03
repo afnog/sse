@@ -154,7 +154,7 @@ automatically.
 
 * [AfNOG closing survey](http://survey.afrinic.net/index.php/174638?lang=en)
 * [SS-E closing survey link](https://www.surveymonkey.com/r/826VGTT) (online)
-* [Survey results](intro/closing-survey-results.pdf) (not updated for 2016 yet!)
+* [Survey results](intro/closing-survey-results.pdf)
 
 ### Configuration Management
 

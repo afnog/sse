@@ -148,7 +148,12 @@ Optional: time how long it takes for them all to start completely (enough to get
 	lxc-autostart -k -t 5
 	lxc-autostart & time while lxc-ls --fancy | awk '{ print $5 }' | grep -q -- -; do sleep 1; done
 
-And try to reduce it with unionfs mounts (experimental):
+And try to reduce it with unionfs mounts (experimental). This caused some issues: in particular locking
+in /var/mail did not work with Dovecot, and modifying the underlying filesystem after creating the
+union mounts (removing a package) resulted in inconsistencies between the package database and the files
+visible in the cloned PCs, so best avoided. It's probably worth checking out
+[overlayfs](https://www.flockport.com/experimenting-with-overlayfs-and-lxc/) and 
+[btrfs subvolumes](https://www.flockport.com/supercharge-lxc-with-btrfs/) for future deployments.
 
 	lxc-autostart -k -t 5
 	LXC_ROOT=/home/inst/.local/share/lxc
