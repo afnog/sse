@@ -40,6 +40,14 @@ in the establishment and/or provisioning of a basic national Internet Services i
 
 Experience using and administering *NIX Servers, Name Servers, Web Servers and Mail Servers.
 
+### Help!
+
+You can get free help with any of the tutorials or materials on this site by joining
+the [AfNOG mailing list](https://afnog.org/mailinglist.php) and sending an email to
+[afnog@afnog.org](mailto:afnog@afnog.org) with your question or problem. Please note
+that you must subscribe to the list first, otherwise your post will be rejected
+automatically.
+
 ### Instructors
 
 <table class="instructors">
