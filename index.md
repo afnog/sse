@@ -89,10 +89,10 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|30/05			|31/05			|01/06			|02/06			|03/06
-|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][]		|[RADIUS][]		|[Load Balancing][]
+|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][]		|[RADIUS][]		|Finishing up e-mail
 |-
 |Tea break
-|11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Virtualization][]
+|11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Deployment][]
 |-
 |Lunch
 |14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[Dovecot][]		|[Virtualization][]
@@ -144,8 +144,9 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 
 #### [Chris Wilson](#CW)
 
-* [Survey link](https://www.surveymonkey.com/s/623JR5J) (online)
-* [Survey results/PDF](intro/closing-survey-results.pdf)
+* [AfNOG closing survey](http://survey.afrinic.net/index.php/174638?lang=en)
+* [SS-E closing survey link](https://www.surveymonkey.com/r/826VGTT) (online)
+* [Survey results](intro/closing-survey-results.pdf) (not updated for 2016 yet!)
 
 ### Configuration Management
 
@@ -164,6 +165,13 @@ Experience using and administering *NIX Servers, Name Servers, Web Servers and M
 * [SSH Exercise](pgp/ssh-exercise1.txt)
 * [Key File](pgp/pgp-presentation1.key)
 * [Old NANOG Presentation](pgp/nanog29-jabley-pgp.pdf)
+
+### Deployment
+[Deployment]: #deployment
+
+#### [Chris Wilson](#CW)
+
+* Deployment Presentation: [HTML](deployment/index.html) [PDF](deployment/deployment_presentation.pdf)
 
 ### DNS
 [DNS]: #dns
@@ -219,14 +227,6 @@ Goal: DNSSEC High Level Awareness.
 * Ganeti Presentation: to be written
 * [Ganeti Exercise](virtualization/ganeti-exercise.html)
 
-### Network Security
-[Network Security]: #network-security
-
-#### [Chris Wilson](#CW)
-
-* Firewalls: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
-* Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
-
 ### Load Balancing
 [Load Balancing]: #load-balancing
 
@@ -253,6 +253,14 @@ Goal: DNSSEC High Level Awareness.
 * [Monitoring IP Services](nagios/nagios-presentation.pdf)
 * [Nagios Exercise-1](nagios/nagios-exercise1.txt)
 
+### Network Security
+[Network Security]: #network-security
+
+#### [Chris Wilson](#CW)
+
+* Firewalls: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
+* Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
+
 ### OpenLDAP
 [OpenLDAP]: #openldap
 
@@ -260,14 +268,6 @@ Goal: DNSSEC High Level Awareness.
 
 * Presentation: [PowerPoint](ldap/Openldap presentation.pptx) [PDF](ldap/Openldap presentation.pdf)
 * Exercise: [PowerPoint](ldap/Openldap exercise.pptx) [PDF](ldap/Openldap exercise.pdf)
-
-### RADIUS
-[RADIUS]: #radius
-
-#### [Frank Kuse](#FK)
-
-* Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
-* Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
 ### Postfix
 [Postfix]: #postfix
@@ -281,6 +281,14 @@ Goal: DNSSEC High Level Awareness.
 * [Email Overview](postfix/01_email_preso.pdf)
 * [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
 
+### RADIUS
+[RADIUS]: #radius
+
+#### [Frank Kuse](#FK)
+
+* Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
+* Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
+
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
 
@@ -289,7 +297,6 @@ Goal: DNSSEC High Level Awareness.
 * [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
 * [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
 * [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
-
 
 ### Squirrelmail
 [Squirrelmail]: #squirrelmail
@@ -402,7 +409,7 @@ these steps:
 * Install Jekyll: `sudo gem install jekyll execjs therubyracer`
 * Open a command prompt and go to ~/SparkleShare/sse
 * Run `make serve`
-* View the results in your browser at http://localhost:4000/.../*.html
+* View the results in your browser at <http://localhost:4000/> (generated HTML files)
 
 ### Source code (Markdown)
 
@@ -436,7 +443,7 @@ on the Markdown source files:
   directory using AJAX. So the URL that you use to load it is very important
   in locating the correct `presentation.md` file.
 * This means that you cannot use Kramdown extensions in presentations. No
-  presentation.html files are generated because the `presentation.md` files
+  `presentation.html` files are generated because the `presentation.md` files
   deliberately do not have a "front matter" section which Jekyll requires.
 
 ### Generating the HTML

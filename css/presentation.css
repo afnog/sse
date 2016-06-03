@@ -121,6 +121,14 @@ li > ul > li, .small li {
 	max-height: 18em;
 	max-width: 100%;
 }
+.tall_float_right img {
+	float: right;
+	display: block;
+}
+.tall_float_right img {
+	height: 22em;
+	margin-left: 5%;
+}
 blockquote {
 	background: #fee;
 	margin: 0;
@@ -129,5 +137,24 @@ blockquote {
 }
 .red {
 	color: #b40004;
+}
+
+/* Two-column layout, from Remark demo */
+.left-column {
+	color: #777;
+	width: 20%;
+	height: 92%;
+	float: left;
+}
+.left-column h2 {
+	border-bottom: none;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+	color: #000;
+}
+.right-column {
+	width: 75%;
+	float: right;
+	padding-top: 1em;
 }
 
