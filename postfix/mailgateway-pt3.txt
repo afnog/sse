@@ -48,7 +48,6 @@ Prepare MailScanner directories (they may already exist)
 	
 	
 
-
 3. Get clamav updates 
 ========================================================================
 
