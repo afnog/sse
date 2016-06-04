@@ -3,6 +3,7 @@
 # rc.local
 #
 # This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
 # value on error.
 #
 # In order to enable or disable this script just change the execution
@@ -12,6 +13,9 @@
 
 echo cfq > /sys/block/sda/queue/scheduler
 setpci -s 0:1f.0 0xa4.w=0:1
-rmmod applesmc
-modprobe applesmc debug=1 smooth_led=1
-/usr/local/bin/cpu-usage-leds &
+iptables-restore /etc/network/iptables
+
+# bash -c "mv /etc/network/interfaces{,.broken} && cp /etc/network/interfaces{.safe,} && /etc/init.d/networking restart"
+# bash -c "mv /etc/network/interfaces{,.broken} && cp /etc/network/interfaces{.safe,}"
+
+exit 0
