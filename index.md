@@ -326,6 +326,7 @@ Goal: DNSSEC High Level Awareness.
 * [KVM Presentation (OpenOffice Impress)](virtualization/afnog_2015_virtualization_kvm_cw.odp)
 * [KVM Presentation (PDF)](virtualization/afnog_2015_virtualization_kvm_cw_150527.pdf)
 * [Ganeti Presentation (PDF)](virtualization/ganeti-overview.pdf) (thanks to NSRC!)
+* [NSRC Training Materials](https://nsrc.org/workshops/2015/ripe-nsrc-virt/wiki/Agenda)
 
 </div><!-- .topics -->
 
