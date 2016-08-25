@@ -96,10 +96,10 @@ Configure the main.cf file to read the file created above. Add the following lin
 
 =============
 
-ALSO CHECK THAT YOUR XXXX.AFNOG.GURU domain will be accepted. Look for the line starting with "mydestination" and add your domain name followed by a comma. It should looks as follows:
+ALSO CHECK THAT YOUR PCX.SSE.WS.AFNOG.ORG domain will be accepted. Look for the line starting with "mydestination" and add your domain name followed by a comma. It should looks as follows:
 
 
-mydestination = pc25.sse.ws.afnog.org, XXXXX.afnog.guru, localhost.sse.ws.afnog.org, , localhost
+mydestination = pc25.sse.ws.afnog.org, localhost.sse.ws.afnog.org, , localhost
 
 ===============
 
