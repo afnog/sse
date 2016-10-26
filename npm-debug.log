@@ -1,0 +1,237 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'grunt', null ]
+7 verbose cache add spec grunt
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'grunt',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'grunt',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed grunt@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for grunt
+11 info addNameTag [ 'grunt', 'latest' ]
+12 silly mapToRegistry name grunt
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'grunt',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'grunt',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/grunt
+17 verbose addNameTag registry:https://registry.npmjs.org/grunt not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/grunt
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 4:24:34 PM
+21 verbose request id 8d6e869afcd497c6
+22 http request GET https://registry.npmjs.org/grunt
+23 http 200 https://registry.npmjs.org/grunt
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"DX4EW3MTINW3X4YEQCBRRWVQZ"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '12995',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Sun, 05 Jun 2016 14:24:35 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '192',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-fra1238-FRA',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1465136675.948236,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"DX4EW3MTINW3X4YEQCBRRWVQZ"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '12995',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Sun, 05 Jun 2016 14:24:35 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '192',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-fra1238-FRA',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1465136675.948236,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving grunt to /Users/chris/.npm/registry.npmjs.org/grunt/.cache.json
+27 verbose correctMkdir /Users/chris/.npm correctMkdir not in flight; initializing
+28 verbose makeDirectory /Users/chris/.npm creation not in flight; initializing
+29 silly makeDirectory /Users/chris/.npm uid: 501 gid: 20
+30 silly addNameTag next cb for grunt with tag latest
+31 silly addNamed grunt@1.0.1
+32 verbose addNamed "1.0.1" is a plain semver version for grunt
+33 silly mapToRegistry name grunt
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'grunt',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'grunt',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/grunt
+38 verbose addRemoteTarball https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz',
+39 verbose addRemoteTarball   'e8778764e944b18f32bb0f10b9078475c9dfb56b' ]
+40 info retry fetch attempt 1 at 4:24:35 PM
+41 info attempt registry request try #1 at 4:24:35 PM
+42 http fetch GET https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz
+43 http fetch 200 https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz
+44 silly fetchAndShaCheck shasum e8778764e944b18f32bb0f10b9078475c9dfb56b
+45 verbose addTmpTarball /var/folders/p3/php4ffts5fzgh84cqv2ykznm0000gn/T/npm-2398-6f2139d9/registry.npmjs.org/grunt/-/grunt-1.0.1.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for grunt@1.0.1
+47 verbose correctMkdir /Users/chris/.npm correctMkdir not in flight; initializing
+48 silly cache afterAdd grunt@1.0.1
+49 verbose afterAdd /Users/chris/.npm/grunt/1.0.1/package/package.json not in flight; writing
+50 verbose correctMkdir /Users/chris/.npm correctMkdir not in flight; initializing
+51 verbose afterAdd /Users/chris/.npm/grunt/1.0.1/package/package.json written
+52 silly install resolved [ { name: 'grunt',
+52 silly install resolved     description: 'The JavaScript Task Runner',
+52 silly install resolved     version: '1.0.1',
+52 silly install resolved     author:
+52 silly install resolved      { name: 'Grunt Development Team',
+52 silly install resolved        url: 'http://gruntjs.com/development-team' },
+52 silly install resolved     homepage: 'http://gruntjs.com/',
+52 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/gruntjs/grunt.git' },
+52 silly install resolved     license: 'MIT',
+52 silly install resolved     engines: { node: '>=0.10.0' },
+52 silly install resolved     scripts: { test: 'grunt test', 'test-tap': 'grunt test:tap' },
+52 silly install resolved     main: 'lib/grunt',
+52 silly install resolved     bin: { grunt: 'bin/grunt' },
+52 silly install resolved     keywords:
+52 silly install resolved      [ 'task',
+52 silly install resolved        'async',
+52 silly install resolved        'cli',
+52 silly install resolved        'minify',
+52 silly install resolved        'uglify',
+52 silly install resolved        'build',
+52 silly install resolved        'lodash',
+52 silly install resolved        'unit',
+52 silly install resolved        'test',
+52 silly install resolved        'qunit',
+52 silly install resolved        'nodeunit',
+52 silly install resolved        'server',
+52 silly install resolved        'init',
+52 silly install resolved        'scaffold',
+52 silly install resolved        'make',
+52 silly install resolved        'jake',
+52 silly install resolved        'tool' ],
+52 silly install resolved     dependencies:
+52 silly install resolved      { 'coffee-script': '~1.10.0',
+52 silly install resolved        dateformat: '~1.0.12',
+52 silly install resolved        eventemitter2: '~0.4.13',
+52 silly install resolved        exit: '~0.1.1',
+52 silly install resolved        'findup-sync': '~0.3.0',
+52 silly install resolved        glob: '~7.0.0',
+52 silly install resolved        'grunt-cli': '~1.2.0',
+52 silly install resolved        'grunt-known-options': '~1.1.0',
+52 silly install resolved        'grunt-legacy-log': '~1.0.0',
+52 silly install resolved        'grunt-legacy-util': '~1.0.0',
+52 silly install resolved        'iconv-lite': '~0.4.13',
+52 silly install resolved        'js-yaml': '~3.5.2',
+52 silly install resolved        minimatch: '~3.0.0',
+52 silly install resolved        nopt: '~3.0.6',
+52 silly install resolved        'path-is-absolute': '~1.0.0',
+52 silly install resolved        rimraf: '~2.2.8' },
+52 silly install resolved     devDependencies:
+52 silly install resolved      { difflet: '~0.2.3',
+52 silly install resolved        'grunt-contrib-jshint': '~1.0.0',
+52 silly install resolved        'grunt-contrib-nodeunit': '~0.4.1',
+52 silly install resolved        'grunt-contrib-watch': '~1.0.0',
+52 silly install resolved        'grunt-jscs': '~2.8.0',
+52 silly install resolved        semver: '2.1.0',
+52 silly install resolved        shelljs: '~0.5.3',
+52 silly install resolved        temporary: '~0.0.4',
+52 silly install resolved        through2: '~2.0.0' },
+52 silly install resolved     files: [ 'lib', 'bin' ],
+52 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+52 silly install resolved     gitHead: '8ada4948b69c6ec9b1e956b5e6b2e6814fa054ca',
+52 silly install resolved     bugs: { url: 'https://github.com/gruntjs/grunt/issues' },
+52 silly install resolved     _id: 'grunt@1.0.1',
+52 silly install resolved     _shasum: 'e8778764e944b18f32bb0f10b9078475c9dfb56b',
+52 silly install resolved     _from: 'grunt@latest',
+52 silly install resolved     _npmVersion: '2.15.2',
+52 silly install resolved     _nodeVersion: '4.4.1',
+52 silly install resolved     _npmUser: { name: 'shama', email: 'kyle@dontkry.com' },
+52 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+52 silly install resolved     dist:
+52 silly install resolved      { shasum: 'e8778764e944b18f32bb0f10b9078475c9dfb56b',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz' },
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+52 silly install resolved        tmp: 'tmp/grunt-1.0.1.tgz_1459880209209_0.8634267684537917' },
+52 silly install resolved     directories: {},
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt/-/grunt-1.0.1.tgz' } ]
+53 info install grunt@1.0.1 into /usr/local/lib
+54 info installOne grunt@1.0.1
+55 verbose installOne of grunt to /usr/local/lib not in flight; installing
+56 verbose correctMkdir /Users/chris/.npm/_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory /Users/chris/.npm/_locks creation not in flight; initializing
+58 silly makeDirectory /Users/chris/.npm/_locks uid: 501 gid: 20
+59 verbose lock using /Users/chris/.npm/_locks/grunt-3732043049c4c2bf.lock for /usr/local/lib/node_modules/grunt
+60 silly install write writing grunt 1.0.1 to /usr/local/lib/node_modules/grunt
+61 verbose unbuild lib/node_modules/grunt
+62 silly gentlyRm /usr/local/lib/node_modules/grunt is being purged from base /usr/local
+63 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt
+64 verbose tar unpack /Users/chris/.npm/grunt/1.0.1/package.tgz
+65 verbose tar unpacking to /usr/local/lib/node_modules/grunt
+66 silly gentlyRm /usr/local/lib/node_modules/grunt is being purged
+67 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt
+68 silly gunzTarPerm modes [ '755', '644' ]
+69 error tar.unpack untar error /Users/chris/.npm/grunt/1.0.1/package.tgz
+70 verbose unlock done using /Users/chris/.npm/_locks/grunt-3732043049c4c2bf.lock for /usr/local/lib/node_modules/grunt
+71 verbose fstream_path /usr/local/lib/node_modules/grunt
+72 verbose fstream_type Directory
+73 verbose fstream_class DirWriter
+74 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt'
+74 verbose stack     at Error (native)
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+75 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+76 verbose cwd /Users/chris/SparkleShare/sse
+77 error Darwin 15.5.0
+78 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "grunt"
+79 error node v4.4.5
+80 error npm  v2.15.5
+81 error path /usr/local/lib/node_modules/grunt
+82 error code EACCES
+83 error errno -13
+84 error syscall mkdir
+85 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt'
+85 error     at Error (native)
+85 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt']
+85 error   errno: -13,
+85 error   code: 'EACCES',
+85 error   syscall: 'mkdir',
+85 error   path: '/usr/local/lib/node_modules/grunt',
+85 error   fstream_type: 'Directory',
+85 error   fstream_path: '/usr/local/lib/node_modules/grunt',
+85 error   fstream_class: 'DirWriter',
+85 error   fstream_stack:
+85 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+85 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+85 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+86 error Please try running this command again as root/Administrator.
+87 verbose exit [ -13, true ]
+88 verbose unbuild lib/node_modules/grunt
+89 silly gentlyRm /usr/local/lib/node_modules/grunt is being purged from base /usr/local
+90 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt
