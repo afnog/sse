@@ -13,6 +13,7 @@ help:
 	@echo "  watch:      Watch for source changes and rebuild outputs in $(DST_DIR)"
 	@echo "  serve:      Run built-in HTTP server"
 	@echo "  sync:       Watch for file changes in $(DST_DIR) and sync to $(SYNC_HOST):$(SYNC_DIR)"
+	@echo "  autocommit: Build, autocommit and push the output directory"
 
 # Directories where various files should be found or written to:
 SRC_DIR = .
@@ -159,3 +160,9 @@ serve:
 
 sync:
 	$(LSYNC)
+
+autocommit: output
+	cd $(DST_DIR)
+	git diff -s --exit-code || git commit -a -m "autocommit by Makefile"
+	git push
+	
