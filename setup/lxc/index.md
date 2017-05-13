@@ -26,6 +26,7 @@ bridging:
 	echo "lxc.network.type = veth" >> $LXC_DEFAULTS
 	echo "lxc.network.link = br0" >> $LXC_DEFAULTS
 	echo "lxc.start.auto = 1" >> $LXC_DEFAULTS
+
 	# Limit RAM used by containers:
 	echo 'lxc.cgroup.memory.limit_in_bytes = 512M' >> $LXC_DEFAULTS
 	echo 'lxc.cgroup.memory.memsw.limit_in_bytes = 1G' >> $LXC_DEFAULTS
