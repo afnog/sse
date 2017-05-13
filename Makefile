@@ -18,6 +18,7 @@ help:
 # Directories where various files should be found or written to:
 SRC_DIR = .
 DST_DIR = ../afnog.github.io/sse
+REPO_DIR = ../afnog.github.io
 TEMPLATES_DIR = templates
 PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
@@ -162,8 +163,5 @@ sync:
 	$(LSYNC)
 
 autocommit: output
-	cd $(DST_DIR)
-	git diff -s --exit-code || git commit -a -m "autocommit by Makefile"
-	pwd
-	git push
-	
+	cd $(DST_DIR); if ! git diff -s --exit-code .; then git add -A .; git commit -m "autocommit by Makefile"; git push; fi
+
