@@ -164,5 +164,6 @@ sync:
 autocommit: output
 	cd $(DST_DIR)
 	git diff -s --exit-code || git commit -a -m "autocommit by Makefile"
+	pwd
 	git push
 	
