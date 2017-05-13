@@ -162,6 +162,10 @@ And then reboot all the containers:
 
 	lxc-autostart -r
 
+If you need to destroy all the containers, so you can recreate them, you can do this:
+
+	for i in `seq 1 $NUM_PCS`; do lxc-stop --name pc$i -k; lxc-destroy --name pc$i; done
+
 Optional: time how long it takes for them all to start completely (enough to get an IP address):
 
 	lxc-autostart -k -t 5
