@@ -27,6 +27,11 @@ Following https://help.ubuntu.com/lts/serverguide/lxc.html, but modified for VLA
 	# Allow up to 60 unprivileged users to use br0 as a veth (bridged network) device:
 	echo "$USER veth br0 60" | sudo tee -a /etc/lxc/lxc-usernet
 
+Disable the lxc-net `dnsmasq` to stop it binding to port 67, preventing our own `dnsmasq`
+from doing the same, by editing `/etc/default/lxc-net` and setting:
+
+	USE_LXC_BRIDGE="false"
+
 Edit `/etc/default/grub` and set:
 
 	GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"
