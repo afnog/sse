@@ -15,10 +15,13 @@ bridging:
 
 	sudo apt install lxc
 
+	echo 'inst:200000:65536' | sudo tee -a /etc/subuid
+	echo 'inst:200000:65536' | sudo tee -a /etc/subgid
+
 	mkdir -p ~/.config/lxc
 	LXC_DEFAULTS=~/.config/lxc/default.conf
-	echo "lxc.id_map = u 0 100000 65536" > $LXC_DEFAULTS
-	echo "lxc.id_map = g 0 100000 65536" >> $LXC_DEFAULTS
+	echo "lxc.id_map = u 0 200000 65536" > $LXC_DEFAULTS
+	echo "lxc.id_map = g 0 200000 65536" >> $LXC_DEFAULTS
 	echo "lxc.network.type = veth" >> $LXC_DEFAULTS
 	echo "lxc.network.link = br0" >> $LXC_DEFAULTS
 	echo "lxc.start.auto = 1" >> $LXC_DEFAULTS
