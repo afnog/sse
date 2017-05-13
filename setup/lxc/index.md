@@ -138,11 +138,11 @@ Stop the container and make a lot of copies:
 	NUM_PCS=40
 	LXC_ROOT=/home/inst/.local/share/lxc
 	for i in `seq 1 $NUM_PCS`; do
-		hostname=pc$pc
+		hostname=pc$i
 		domainname=$hostname.sse.ws.afnog.org
 		lxc-copy --name debian8 --newname $hostname
 		macaddr=`openssl rand -hex 4 | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:56:\1:\2:\3:\4/'`
-		echo "lxc.network.hwaddr = $macaddr" >> $LXC_ROOT/pc$i.sse.ws.afnog.org/config
+		echo "lxc.network.hwaddr = $macaddr" >> $LXC_ROOT/pc$i/config
 	done
 	lxc-autostart
 
