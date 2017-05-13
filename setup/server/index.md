@@ -20,18 +20,18 @@ Create `/etc/network/iptables` with the following contents:
 	:OUTPUT ACCEPT [256:31110]
 	-A INPUT -m state --state ESTABLISHED -j ACCEPT
 	-A INPUT -i lo -p udp -m udp --dport 53 -m comment --comment "Allow local dnsmasq" -j ACCEPT
-	-A INPUT -i lxcbr0 -p tcp -m tcp --dport 53 -j ACCEPT
-	-A INPUT -i lxcbr0 -p udp -m udp --dport 53 -j ACCEPT
-	-A INPUT -i lxcbr0 -p tcp -m tcp --dport 67 -j ACCEPT
-	-A INPUT -i lxcbr0 -p udp -m udp --dport 67 -j ACCEPT
+	-A INPUT -i br0 -p tcp -m tcp --dport 53 -j ACCEPT
+	-A INPUT -i br0 -p udp -m udp --dport 53 -j ACCEPT
+	-A INPUT -i br0 -p tcp -m tcp --dport 67 -j ACCEPT
+	-A INPUT -i br0 -p udp -m udp --dport 67 -j ACCEPT
 	-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
 	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 80 -j ACCEPT -m comment --comment "Apache"
 	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 3142 -j ACCEPT -m comment --comment "apt-cacher-ng"
 	-A INPUT -s 196.200.208.0/20 -p tcp -m tcp --dport 3141 -j ACCEPT -m comment --comment "devpi-server"
 	-A INPUT -d 255.255.255.255/32 -m comment --comment "Drop multicast without logging" -j DROP
 	-A INPUT -m limit --limit 5/min -j LOG --log-prefix "Rejected INPUT: "
-	-A FORWARD -o lxcbr0 -j ACCEPT
-	-A FORWARD -i lxcbr0 -j ACCEPT
+	-A FORWARD -o br0 -j ACCEPT
+	-A FORWARD -i br0 -j ACCEPT
 	COMMIT
 	# Completed on Fri May 27 17:09:25 2016
 
@@ -39,7 +39,7 @@ Add the following lines to `/etc/rc.local` before the line `exit 0`:
 
 	echo cfq > /sys/block/sda/queue/scheduler
 	setpci -s 0:1f.0 0xa4.w=0:1
-	iptables-restore /etc/network/iptables
+	/sbin/iptables-restore /etc/network/iptables
 
 And execute `/etc/rc.local`.
 
