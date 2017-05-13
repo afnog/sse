@@ -414,7 +414,7 @@ have more than one, but there's no point or advantage to it.)
 If you want to host, you need a Linux or Mac desktop with `lsyncd`, `rsync` and `ruby` installed. Then follow
 these steps:
 
-* Add `git@github.com:afnog/afnog.github.io.git` to it
+* Add `git@github.com:afnog/afnog.github.io.git` to SparkleShare
 * Install Jekyll: `sudo gem install jekyll execjs therubyracer`
 * Open a command prompt and go to ~/SparkleShare/sse
 * Run `make serve`
