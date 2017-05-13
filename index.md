@@ -512,6 +512,7 @@ if different (which is almost what SparkleShare does):
 	cd ~/website
 	git clone https://github.com/afnog/sse.git
 	git clone https://<your GitHub username>:<your token>@github.com/afnog/afnog.github.io.git
+	git config --global push.default simple
 	while true; do cd ~/website/sse; git pull; make autocommit; sleep 5; done
 
 Or replace the last line with a Cron job:
