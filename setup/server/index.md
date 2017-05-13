@@ -33,6 +33,12 @@ Create `/etc/network/iptables` with the following contents:
 	-A FORWARD -o br0 -j ACCEPT
 	-A FORWARD -i br0 -j ACCEPT
 	COMMIT
+	*nat
+	-A POSTROUTING -s 196.200.219.0/24 -j MASQUERADE
+	COMMIT
+	*mangle
+	-A POSTROUTING -p udp --dport bootpc -j CHECKSUM --checksum-fill
+	COMMIT
 	# Completed on Fri May 27 17:09:25 2016
 
 Add the following lines to `/etc/rc.local` before the line `exit 0`:

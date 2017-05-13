@@ -32,7 +32,7 @@ from doing the same, by editing `/etc/default/lxc-net` and setting:
 
 	USE_LXC_BRIDGE="false"
 
-Create `/etc/dnsmasq.d/afnog` and add:
+Create `/etc/dnsmasq.d/afnog` with the following contents:
 
 	server=<your host IP address>
 	interface=br0
