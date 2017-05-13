@@ -9,6 +9,7 @@ root: ../..
 
 Using Debian 8 (Jessie). Setup the guest for AfNOG, starting from a (virtual) console:
 
+	passwd
 	adduser afnog
 	apt install nano sudo openssh-server vim iputils-ping less
 	usermod -G sudo afnog
