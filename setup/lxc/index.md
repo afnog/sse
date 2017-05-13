@@ -15,7 +15,8 @@ bridging:
 
 	sudo apt install lxc
 
-	# Add a range of UIDs to be used by containers run by the "inst" user:
+	# Add a range of UIDs to be used by containers run by the "inst" user
+	# (see https://bugs.launchpad.net/serverguide/+bug/1571135 for details):
 	echo 'inst:200000:65536' | sudo tee -a /etc/subuid
 	echo 'inst:200000:65536' | sudo tee -a /etc/subgid
 
