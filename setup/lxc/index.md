@@ -151,7 +151,7 @@ To run a command on all containers (for example `hostname`):
 	for i in `seq 1 $NUM_PCS`; do
 		hostname=pc$pc
 		domainname=$hostname.sse.ws.afnog.org
-		lxc-attach -n $domainname -- hostname
+		lxc-attach -n $hostname -- hostname
 	done
 
 Optional: time how long it takes for them all to start completely (enough to get an IP address):
