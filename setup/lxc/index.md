@@ -156,7 +156,7 @@ To run a command on all containers (for example `hostname`):
 
 Give them all unique IP addresses by doing this with:
 
-	lxc-attach -n $hostname -- sed -e "s/196.200.219.100/196.200.219.$[i+100]/" /etc/network/interfaces
+	lxc-attach -n $hostname -- sed -i -e "s/196.200.219.100/196.200.219.$[i+100]/" /etc/network/interfaces
 
 Optional: time how long it takes for them all to start completely (enough to get an IP address):
 
