@@ -32,6 +32,12 @@ from doing the same, by editing `/etc/default/lxc-net` and setting:
 
 	USE_LXC_BRIDGE="false"
 
+Create `/etc/dnsmasq.d/afnog` and add:
+
+	server=<your host IP address>
+	interface=br0
+	dhcp-range=196.200.219.20,196.200.219.80,12h
+
 Edit `/etc/default/grub` and set:
 
 	GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"
