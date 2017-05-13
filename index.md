@@ -494,3 +494,26 @@ workshop server, http://www.ws.afnog.org.  You will need to check the
 destination host and directory **which will be overwritten**.
 
 	make sync
+
+### Automatic publishing
+
+If you want to have a server automatically fetch changes from Git and update
+the static website, you can't use SparkleShare on the server because it's a GUI
+tool. What you can do is checkout both Git repositories, using a fresh
+[personal access
+token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+to give it write access to the afnog.github.io repository, and "git pull" in a
+loop (or automatically from Cron), generate the HTML and commit and publish it
+if different (which is almost what SparkleShare does):
+
+	sudo apt install lsyncd rsync ruby ruby-dev gcc g++ make
+	sudo gem install jekyll execjs therubyracer
+	mkdir ~/website
+	cd ~/website
+	git clone https://github.com/afnog/sse.git
+	git clone https://<your GitHub username>:<your token>@github.com/afnog/afnog.github.io.git
+	while true; do cd ~/website/sse; git pull; make autocommit; sleep 5; done
+
+Or replace the last line with a Cron job:
+
+	* * * * *	cd ~/website/sse; git pull; make autocommit
