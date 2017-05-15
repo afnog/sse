@@ -118,7 +118,7 @@ automatically.
 <!-- Please keep these topics in alphabetical order (except for Introduction first), thanks! -->
 
 ### Introduction
-[Introduction]: #introduction-1
+[Introduction]: #introduction
 
 #### [Michuki Mwangi](#MM)
 
