@@ -27,7 +27,7 @@ Jump within this page:
 This course on Scalable Internet Services is part of the
 [AfNOG {{page.year}} Workshop on Network Technology](http://www.ws.afnog.org/afnog{{page.year}}/index.html),
 held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
-in Gaborone, Botswana, May-June {{page.year}}.
+in Nairobi, Kenya, May-June {{page.year}}.
 
 We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the configuration and operation of large scale Internet services.
 
@@ -506,6 +506,8 @@ to give it write access to the afnog.github.io repository, and "git pull" in a
 loop (or automatically from Cron), generate the HTML and commit and publish it
 if different (which is almost what SparkleShare does):
 
+	git config --global user.name "Your Name"
+	git config --global user.email you@example.com
 	sudo apt install lsyncd rsync ruby ruby-dev gcc g++ make
 	sudo gem install jekyll execjs therubyracer
 	mkdir ~/website
