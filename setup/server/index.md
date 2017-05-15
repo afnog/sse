@@ -44,6 +44,7 @@ Create `/etc/network/iptables` with the following contents:
 Add the following lines to `/etc/rc.local` before the line `exit 0`:
 
 	echo cfq > /sys/block/sda/queue/scheduler
+	# Mac Mini only: power on automatically after a power failure
 	setpci -s 0:1f.0 0xa4.w=0:1
 	/sbin/iptables-restore /etc/network/iptables
 
