@@ -95,6 +95,10 @@ Then bring the interface down and up again:
 
 Check that you can access the Internet, and then reboot the box and check that it comes up OK.
 
+Enable IP forwarding, but only if you expect the server to be used as a router
+for the virtual machines or containers, e.g. if they will need to be NATted to
+access the Internet during setup week.
+
 To stop NetworkManager from editing /etc/resolv.conf, edit `/etc/NetworkManager/NetworkManager.conf`
 and set `dns=none`, and restart it. Then edit `/var/run/resolvconf/interface/custom` and
 add your own DNS settings, and run `resolvconf -u` to install them.
