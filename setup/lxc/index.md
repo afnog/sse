@@ -152,6 +152,7 @@ Stop the container and make a lot of copies:
 		lxc-copy --name debian8 --newname $hostname
 		macaddr=`openssl rand -hex 4 | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:56:\1:\2:\3:\4/'`
 		echo "lxc.network.hwaddr = $macaddr" >> $LXC_ROOT/pc$i/config
+		sed -i -e 's/\(lxc.utsname = .*\)/\1.sse.ws.afnog.org/' $LXC_ROOT/pc$i/config
 	done
 	lxc-autostart
 
