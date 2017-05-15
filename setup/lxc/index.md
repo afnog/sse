@@ -152,7 +152,7 @@ Stop the container and make a lot of copies:
 		lxc-copy --name debian8 --newname $hostname
 		macaddr=`openssl rand -hex 4 | sed -e 's/^\(..\)\(..\)\(..\)\(..\).*/52:56:\1:\2:\3:\4/'`
 		echo "lxc.network.hwaddr = $macaddr" >> $LXC_ROOT/pc$i/config
-		sed -i -e 's/\(lxc.utsname = .*\)/\1.sse.ws.afnog.org/' $LXC_ROOT/pc$i/config
+		echo $domainname > $LXC_ROOT/pc$i/rootfs/etc/hostname
 	done
 	lxc-autostart
 
@@ -162,6 +162,7 @@ To run a command on all containers (for example `hostname`):
 		hostname=pc$pc
 		domainname=$hostname.sse.ws.afnog.org
 		lxc-attach -n $hostname -- hostname
+		lxc-attach -n $hostname -- sh -c "echo $domainname > /etc/hostname"
 	done
 
 Give them all unique IP addresses by doing this with:
