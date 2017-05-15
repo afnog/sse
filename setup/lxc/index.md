@@ -107,9 +107,10 @@ The following commands are useful for dealing with `systemd` and control groups:
 * `journalctl -f`
 * `systemctl cancel`
 
-You may also have issues logging into `sshd` with password authentication due to 
-[this issue](https://github.com/lxc/lxc/issues/661#issuecomment-222444916). The solution
-is to edit `/etc/pam.d/sshd` and `/etc/pam.d/cron` in the guest, find the line that says:
+You may also have issues logging into `sshd` with password authentication due
+to [this issue](https://github.com/lxc/lxc/issues/661#issuecomment-222444916).
+(This appears to have been fixed by 2017). The solution is to edit
+`/etc/pam.d/sshd` and `/etc/pam.d/cron` in the guest, find the line that says:
 
 	session    required     pam_loginuid.so
 
