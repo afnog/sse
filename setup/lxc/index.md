@@ -63,11 +63,12 @@ For this to work, you also need to edit `/etc/pam.d/common-session*`, find the l
 Then `sudo update-grub` and `sudo reboot` to activate swap accounting.
 
 Create a gold master guest image. According to the
-[LXC documentation](https://linuxcontainers.org/lxc/getting-started/), "most
-distribution templates simply won't work with (unprivileged containers).
-Instead you should use the "download" template which will provide you with
-pre-built images of the distributions that are known to work in such an
-environment."
+[LXC documentation](https://linuxcontainers.org/lxc/getting-started/):
+
+> most distribution templates simply won't work with (unprivileged containers).
+> Instead you should use the "download" template which will provide you with
+> pre-built images of the distributions that are known to work in such an
+> environment.
 
 	lxc-create -t download -n debian8 -- --dist debian --release jessie --arch i386
 	lxc-ls --fancy
