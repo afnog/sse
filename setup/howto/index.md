@@ -7,6 +7,8 @@ root: ../..
 
 # VM admin howto
 
+## References
+
 The following documents might be useful additional references:
 
 * [Server setup](../server/index.html) for the host (sse-nuc1.mtg.afnog.org?)
