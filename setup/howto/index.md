@@ -17,7 +17,7 @@ The following documents might be useful additional references:
 
 ## Host access
 
-SSH to inst@sse-nuc1.mtg.afnog.org (once DNS is set up) or inst@196.200.223.144.
+SSH to inst@sse-nuc1.mtg.afnog.org or inst@196.200.223.144.
 Password is the usual, adapted to this year. Email me if you don't know it.
 
 Once on the host, the following commands may be useful:
