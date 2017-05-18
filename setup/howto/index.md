@@ -14,6 +14,7 @@ The following documents might be useful additional references:
 * [Server setup](../server/index.html) for the host (sse-nuc1.mtg.afnog.org?)
 * [LXC setup](../lxc/index.html) for running ~40 containers on the host
 * [Guest setup](../guest/index.html) for each container
+* [LXC Getting Started Guide](https://linuxcontainers.org/lxc/getting-started/) (official manual)
 
 ## Host access
 
