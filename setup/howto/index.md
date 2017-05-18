@@ -42,5 +42,11 @@ The guests all have IP addresses in the 196.200.219.101-140 range, where pcX = 1
 External routing for the 196.200.219.0/24 subnet is not available at this time, hopefully it will be soon.
 
 The guests all have a user called `afnog`, with a predictable password, and the root password is the same, as usual.
-`sudo` and an `ssh` server are installed, and not much else.
+`sudo` and an `ssh` server are installed, and not much else. There is a passwordless SSH key on the NUC, so you
+can ssh afnog@pcX.sse.ws.afnog.org without a password (or to root@) to install additional SSH keys, etc.
+
+If you completely lose access to a guest and want to poke around in its filesystem, you can find it at
+`~inst/.local/share/lxc/pcX/rootfs`. The files will all be owned by strange UIDs starting from 200000 (e.g.
+root = 200000), and if they're changed to host UIDs then the guest won't be able to access or modify them,
+so try not to do that.
 
