@@ -371,6 +371,7 @@ each VM needs ~512 MB of dedicated RAM).
 * [Server setup](setup/server/index.html) (Mac Mini)
 * [LXC setup](setup/lxc/index.html) for ~40 containers
 * [KVM setup](setup/kvm/index.html) for ~24 containers (alternative)
+* [Admin howto](setup/howto/index.html) for the containers
 
 ### Administration
 
