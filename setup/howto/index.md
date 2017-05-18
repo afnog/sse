@@ -39,6 +39,12 @@ Once on the host, the following commands may be useful:
 I've assigned hostnames to each container by editing `/etc/hostname`, and IP addresses by editing `/etc/network/interfaces`.
 You'll need to redo that if you destroy and re-clone a container (otherwise you'll have an IP address conflict).
 
+The guests are all unprivileged containers, running under the `inst` user and not `root`, so
+you shouldn't ever need to use `sudo` with any of the commands above. If you do, you'll be
+creating or trying to run privileged containers under the `root` user, of which there currently
+aren't any. So if you think that all your containers have disappeared, check whether you're using
+`sudo` on your `lxc` commands by mistake.
+
 The guests all have IP addresses in the 196.200.219.101-140 range, where pcX = 196.200.219.(X + 100).
 External routing for the 196.200.219.0/24 subnet is available now, but SSH is blocked, so you'll need to
 wait until you're onsite, or login via the host (sse-nuc1.mtg.afnog.org).
