@@ -38,5 +38,8 @@ Once on the host, the following commands may be useful:
 I've assigned hostnames to each container by editing `/etc/hostname`, and IP addresses by editing `/etc/network/interfaces`.
 You'll need to redo that if you destroy and re-clone a container (otherwise you'll have an IP address conflict).
 
+The guests all have a user called `afnog`, with a predictable password, and the root password is the same, as usual.
+`sudo` is installed, and not much else.
+
 The guests all have IP addresses in the 196.200.219.101-140 range, where pcX = 196.200.219.(X + 100).
 External routing for the 196.200.219.0/24 subnet is not available at this time, hopefully it will be soon.
