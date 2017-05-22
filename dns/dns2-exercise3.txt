@@ -175,7 +175,7 @@ You can take a snapshot of the cache contents.  To dump the cache,
 change directory to somewhere you have write access (e.g. your home
 directory) and use the unbound-control dump_cache command:
 
-    # unbound-control dump_cache >cache.db
+    # unbound-control dump_cache
 
 The cache is dumped direct to your terminal. This might well not
 be the best idea -- you can also use normal Unix file redirection
