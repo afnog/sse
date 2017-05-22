@@ -12,6 +12,7 @@ help:
 	@echo "  output:     Build the output directory [$(DST_DIR)] using Jekyll"
 	@echo "  watch:      Watch for source changes and rebuild outputs in $(DST_DIR)"
 	@echo "  serve:      Run built-in HTTP server"
+	@echo "  rsync:      Sync once from $(DST_DIR) to $(SYNC_HOST):$(SYNC_DIR)"
 	@echo "  sync:       Watch for file changes in $(DST_DIR) and sync to $(SYNC_HOST):$(SYNC_DIR)"
 	@echo "  autocommit: Build, autocommit and push the output directory"
 
@@ -24,8 +25,8 @@ PROJECT_DIR_ABS = $(shell pwd)
 STATIC_DIR_ABS  = $(PROJECT_DIR_ABS)/static
 # Host and directory to be overwritten by "make sync"
 # These must now be edited in $(LSYNCD_CONF) instead:
-# SYNC_HOST = 196.200.223.173
-# SYNC_DIR  = /u/vol/www/afnog2014/sse
+SYNC_HOST = chris@noc.mtg.afnog.org
+SYNC_DIR  = /u/vol/www/vhosts/www.ws.afnog.org/data/afnog2017/sse
 LSYNCD_CONF := lsyncd.conf
 
 # Macros to manipulate relative paths, for use in URLs:
@@ -82,6 +83,7 @@ JEKYLL_OPTS = --source $(PROJECT_DIR_ABS)/$(SRC_DIR) \
 # LSYNC_OPTS = -nodaemon -log Exec -rsyncssh ../afnog.github.io/sse/ noc.mtg.afnog.org /tmp/sse/
 # LSYNC   = $(LSYNC_BIN) $(LSYNC_OPTS) -rsyncssh $(DST_DIR) $(SYNC_HOST) $(SYNC_DIR)
 LSYNC   = $(LSYNC_BIN) $(LSYNCD_CONF)
+RSYNC   = rsync -aqP -e 'ssh -o LogLevel=error' $(DST_DIR)/ $(SYNC_HOST):$(SYNC_DIR)/
 
 # Quiet aliases for common shell commands, for output readability
 RST2ODP_V = $(call QUIET, rst2odp, $@, $(RST2ODP))
@@ -158,6 +160,9 @@ watch:
 
 serve:
 	$(JEKYLL_BIN) serve $(JEKYLL_OPTS) --watch
+
+rsync:
+	@$(RSYNC)
 
 sync:
 	$(LSYNC)
