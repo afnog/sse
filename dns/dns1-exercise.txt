@@ -13,6 +13,11 @@ work. You can specify more than one if you like, like this:
 
 2. Generate some test DNS queries using "dig"
 
+Check that you have "dig" installed. Debian does not install a lot of
+things by default, so you need to install things that are missing.
+
+
+
 Run each command below, look for the "ANSWER SECTION" and write
 down the result. Make a note of the TTL as well.  Repeat the command.
 Is the TTL the same as in the first try?  Are the responses
