@@ -4,13 +4,13 @@ class: center, middle, inverse
 
 .height_12em[[![Firewall](firewall.jpg)](http://www.uits.arizona.edu/services/firewalls)]
 
-### Chris Wilson, AfNOG 2016
+### Frank Kuse, AfNOG 2017
 
 ---
 
 ## About this presentation
 
-Based on a previous talk by Kevin Chege with thanks!
+Based on a previous talk by Chris Wilson with thanks!
 
 You can access this presentation at:
 
