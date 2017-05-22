@@ -20,6 +20,24 @@ root@pc39:~# dig
 -bash: dig: command not found
 root@pc39:~# 
 
+root@pc39:~# apt-get install -y dnsutils
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  rblcheck
+The following NEW packages will be installed:
+  dnsutils
+0 upgraded, 1 newly installed, 0 to remove and 6 not upgraded.
+Need to get 0 B/125 kB of archives.
+After this operation, 379 kB of additional disk space will be used.
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package dnsutils.
+(Reading database ... 16415 files and directories currently installed.)
+Preparing to unpack .../dnsutils_1%3a9.9.5.dfsg-9+deb8u11_i386.deb ...
+Unpacking dnsutils (1:9.9.5.dfsg-9+deb8u11) ...
+Setting up dnsutils (1:9.9.5.dfsg-9+deb8u11) ...
+root@pc39:~# 
 
 
 Run each command below, look for the "ANSWER SECTION" and write
@@ -102,6 +120,10 @@ Now try the short form of dig using the '-x' flag for reverse lookups:
 
 
 4. Use tcpdump to show DNS traffic
+
+Just like before, we need to make sure tcpdump is installed.
+
+
 
 In a separate window, run the following command (you must be 'root')
 
