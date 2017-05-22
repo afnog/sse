@@ -121,7 +121,7 @@ automatically.
 ### Introduction
 [Introduction]: #introduction
 
-#### [Michuki Mwangi](#MM)
+#### [Ayitey Bulley](#AB)
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 
