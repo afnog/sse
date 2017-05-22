@@ -268,7 +268,7 @@ Goal: DNSSEC High Level Awareness.
 #### [Frank Kuse](#FK)
 
 * Firewalls: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
-* Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
+* Understand the contents and layering of common Internet protocols: [exercise](firewalls/Exercises.pdf)
 
 ### OpenLDAP
 [OpenLDAP]: #openldap
