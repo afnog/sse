@@ -16,6 +16,10 @@ work. You can specify more than one if you like, like this:
 Check that you have "dig" installed. Debian does not install a lot of
 things by default, so you need to install things that are missing.
 
+root@pc39:~# dig
+-bash: dig: command not found
+root@pc39:~# 
+
 
 
 Run each command below, look for the "ANSWER SECTION" and write
