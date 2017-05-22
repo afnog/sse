@@ -148,10 +148,6 @@ In a separate window, run the following command (you must be 'root')
 
 # tcpdump -n -s 0 -v udp port 53
 
-(if tcpdump is not installed, you will see a "command not found"
-error. You can install tcpdump and avoid the error by typing "apt-get
-install tcpdump" as root)
-
 This shows all packets going in and out of your machine for UDP
 port 53 (DNS). Now go to another window and repeat some of the 'dig'
 queries from earlier. Look at the output of tcpdump, check the
@@ -164,7 +160,7 @@ source and destination IP address of each packet
 -s 0          Read the entire packet (otherwise tcpdump only reads
 	      the headers)
 
--i bge0       Which interface to listen on (use ifconfig to determine
+-i eth0       Which interface to listen on (use ifconfig to determine
 	      the name of your ethernet interface)
 
 udp port 53   A filter which matches only packets to/from UDP port 53 
