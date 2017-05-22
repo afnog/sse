@@ -168,6 +168,7 @@ sync:
 	$(LSYNC)
 
 autocommit:
+	@ cd $(DST_DIR); git fetch; git checkout -fq
 	@ $(JEKYLL_BIN) build $(JEKYLL_OPTS) >/dev/null
 	@ cd $(DST_DIR); if ! git diff -s --exit-code .; then git add -A .; git commit -q -m "autocommit by Makefile"; git push -q; fi
 
