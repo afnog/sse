@@ -5,7 +5,7 @@ layout: default
 
 # Internet Protocols and Network Security
 
-Chris Wilson, AfNOG 2016
+Frank Kuse, AfNOG 2017
 
 ## Questions to get you thinking
 
