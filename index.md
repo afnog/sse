@@ -264,7 +264,7 @@ Goal: DNSSEC High Level Awareness.
 ### Network Security
 [Network Security]: #network-security
 
-#### [Chris Wilson](#CW)
+#### [Frank Kuse](#FK)
 
 * Firewalls: [HTML](firewalls/index.html) [PDF](firewalls/presentation.pdf)
 * Understand the contents and layering of common Internet protocols: [exercise](ip/exercise.html)
