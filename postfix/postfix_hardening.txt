@@ -10,5 +10,14 @@ Require HELO as per RFC
 
 	$sudo service postfix restart
 
-Try 
 
+Try From the Server, telnet localhost port 25
+	
+	$telnet localhost 25
+
+
+Then type the following pressing enter after each line:
+
+	mail from: manager@theGrandLottery.com
+
+You should be prompted to require HELO first
