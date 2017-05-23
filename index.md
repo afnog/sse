@@ -283,15 +283,12 @@ Goal: DNSSEC High Level Awareness.
 
 #### [Kevin Chege](#KC)
 
-+ understanding email
-+ Some Email Best Practices
-+ Postfix and Dovecot
++ understanding email - [Email Overview](postfix/01_email_preso.pdf)
++ Some Email Best Practices -  [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
++ Postfix 
 
-* [Email Overview](postfix/01_email_preso.pdf)
-* [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
-
-* [Installing Postfix](postfix/postfix_install.txt)
-* [Command line Email](postfix/commandline_email.txt)
+* Exercise 1 - [Installing Postfix](postfix/postfix_install.txt)
+* Exercise 2 1 [Command line Email](postfix/commandline_email.txt)
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
