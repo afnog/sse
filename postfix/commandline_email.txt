@@ -23,7 +23,9 @@
 	Subject: my new email 
 	This is a new email. I like sending emails
 	
-PRESS CTRL D
+
+
+** PRESS CTRL D
 
 
 ** You should receive a status message of 250 and info that the message has been queued. 
