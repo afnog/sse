@@ -151,7 +151,7 @@ Download MailWatch - MailScanner Frontend
 
 Set up MailWatch:
 
-	$cd /home/afnog/1.2.0-master
+	$cd /home/afnog/MailWatch-master/
 
 
 Setup MailWatch conf.php (copy preconfigured). The changes here were to include the MySQL credentials for MailWatch and also to set the home directory: [[define('MAILWATCH_HOME', '/var/www/mailscanner');]]
