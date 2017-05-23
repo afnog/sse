@@ -135,9 +135,9 @@ automatically.
 ### Apache
 [Apache]: #apache
 
-#### [Chris Wilson](#CW)
+#### [Isabel Odida](#IO)
 
-* Presentation and Exercises: [HTML](apache/index.html) [PDF](apache/presentation.pdf)
+* Presentation and Exercises: [PDF](apache/Apachepresentation.pdf)
 
 ### Backups
 [Backups]: #backups
