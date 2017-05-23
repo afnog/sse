@@ -286,7 +286,7 @@ Goal: DNSSEC High Level Awareness.
 + understanding email - [Email Overview](postfix/01_email_preso.pdf)
 + Some Email Best Practices -  [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
 * Exercise 1 - [Installing Postfix](postfix/postfix_install.txt)
-* Exercise 2 1 [Command line Email](postfix/commandline_email.txt)
+* Exercise 2 - [Command line Email](postfix/commandline_email.txt)
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
