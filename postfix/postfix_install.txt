@@ -3,7 +3,18 @@
 
 ********* Part 1 *************
 
-	$sudo apt-get install postfix mailutils
+	$sudo apt-get install postfix mailutils telnet
+
+PRESS ENTER TO SELECT DEFAULT POSTFIX CONFIGS
+
+
+
+
+********* Part 2 *************
+
+	Start Postfix
+
+	$sudo service postfix start
 
 
 
