@@ -35,3 +35,6 @@ Check your email logs and try to email your partner using the same method.
 
 
 Try sending to your gmail or yahoo account using the same method.
+
+
+***** SENDING EMAILS FROM THE COMMAND LINE - OPTION B *****
