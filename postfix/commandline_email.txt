@@ -1,24 +1,24 @@
 ***** SENDING EMAILS FROM THE COMMAND LINE - OPTION A *****
 
 
-Try this from your server or from your own PC/Laptop terminal if you have Linux or Mac OS
+** Try this from your server or from your own PC/Laptop terminal if you have Linux or Mac OS
 
 
 	$telnet pcX.sse.ws.afnog.org  25
 
-The server should connect and present its hostname. Type below, you can replace "anyone@anyone.com"
+** The server should connect and present its hostname. Type below, you can replace "anyone@anyone.com"
 
 	mail from: anyone@anyone.com
 
-Press enter and then enter the recipient email address. You can email to a valid user in this case the afnog user. You can also email to the root user.
+** Press enter and then enter the recipient email address. You can email to a valid user in this case the afnog user. You can also email to the root user.
 
 	rcpt to: afnog@pcX.sse.ws.afnog.org
 
-Press enter then type "data". This tells the mail server to expect the body of the message
+** Press enter then type "data". This tells the mail server to expect the body of the message
 
 	data
 
-Type in "Subject" and then add your subject. Press enter. Enter the content of your email then press enter then on a new line put "." then press enter 
+** Type in "Subject" and then add your subject. Press enter. Enter the content of your email then press enter then on a new line put "." then press enter 
 
 	Subject: my new email 
 	This is a new email. I like sending emails
@@ -26,15 +26,15 @@ Type in "Subject" and then add your subject. Press enter. Enter the content of y
 PRESS CTRL D
 
 
-You should receive a status message of 250 and info that the message has been queued. 
+** You should receive a status message of 250 and info that the message has been queued. 
 
-Check your email logs and try to email your partner using the same method.
+** Check your email logs and try to email your partner using the same method.
 
 	$sudo tail -f /var/log/mail.log
 
 
 
-Try sending to your gmail or yahoo account using the same method.
+** Try sending to your gmail or yahoo account using the same method.
 
 
 ***** SENDING EMAILS FROM THE COMMAND LINE - OPTION B *****
