@@ -37,4 +37,7 @@ Check locally on port 25
 
 You should see something similar to
 
-
+	Trying ::1...
+	Connected to localhost.
+	Escape character is '^]'.
+	220 pc35.sse.ws.afnog.org ESMTP Postfix (Debian/GNU)
