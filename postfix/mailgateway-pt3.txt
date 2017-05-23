@@ -145,7 +145,7 @@ Download MailWatch - MailScanner Frontend
 	$cd /home/afnog/
 	$wget https://github.com/mailwatch/MailWatch/archive/master.zip
 	$unzip master.zip
-	$cd 1.2.0-master
+	$cd MailWatch-master/
 	$sudo mv mailscanner /var/www/
 
 
