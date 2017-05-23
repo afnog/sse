@@ -1,0 +1,43 @@
+***** INSTALLING POSTFIX ON DEBIAN/UBUNTU *****
+
+
+********* Part 1 *************
+
+	
+$sudo apt-get install postfix mailutils telnet
+
+
+PRESS ENTER TO SELECT DEFAULT POSTFIX CONFIGS
+
+
+********* Part 2 *************
+
+Start Postfix:
+
+	$sudo service postfix start
+
+Check the logs:
+
+
+	$sudo tail -f /var/log/mail.log
+
+
+You should see something similar to:
+
+	May 23 11:33:30 pc35 postfix/qmgr[18699]: F11042B8934: removed
+	May 23 11:43:58 pc35 postfix/master[18688]: terminating on signal 15
+	May 23 11:44:19 pc35 postfix/master[19387]: daemon started -- version 2.11.3, configuration /etc/postfix
+
+
+******** Part 3 *************
+
+Check locally on port 25
+
+	$telnet localhost 25
+
+You should see something similar to
+
+	Trying ::1...
+	Connected to localhost.
+	Escape character is '^]'.
+	220 pc35.sse.ws.afnog.org ESMTP Postfix (Debian/GNU)
