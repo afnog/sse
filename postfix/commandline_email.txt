@@ -38,3 +38,31 @@ Try sending to your gmail or yahoo account using the same method.
 
 
 ***** SENDING EMAILS FROM THE COMMAND LINE - OPTION B *****
+
+
+From your Server, telnet localhost port 25
+	
+	$telnet localhost 25
+
+
+Then type the following pressing enter after each line:
+
+	mail from: manager@theGrandLottery.com
+
+	rcpt to: afnog@pcXX.sse.ws.afnog.org
+
+	data
+
+	Subject: You have won 1Million dollars
+
+	Greetings you are the lucky winner of 1 Million dollars
+
+	.
+
+	quit
+
+The single dot above indicates you 
+
+
+
+
