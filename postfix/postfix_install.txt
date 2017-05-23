@@ -29,34 +29,12 @@ You should see something similar to:
 	May 23 11:44:19 pc35 postfix/master[19387]: daemon started -- version 2.11.3, configuration /etc/postfix
 
 
+******** Part 3 *************
 
-Try this from your server or from your own PC/Laptop terminal if you have Linux or Mac OS
+Check locally on port 25
 
+	$telnet localhost 25
 
-	$telnet mail.pcX.sse.ws.afnog.org  25
-
-The server should connect and present its hostname. Type below, you can replace "anyone@anyone.com"
-
-	mail from: anyone@anyone.com
-
-Press enter and then enter the recipient email address. You can email to a valid user in this case the afnog user. You can also email to the root user.
-
-	rcpt to: afnog@pcX.sse.ws.afnog.org
-
-Press enter then type "data". This tells the mail server to expect the body of the message
-
-	data
-
-Type in "Subject" and then add your subject. Press enter. Enter the content of your email then press enter then on a new line put "." then press enter 
-
-	Subject: my new email 
-	This is a new email. I like sending emails
-	.
-	quit
+You should see something similar to
 
 
-You should receive a status message of 250 and info that the message has been queued. 
-
-Check your email logs and try to email your partner using the same method.
-
-Try sending to your gmail or yahoo account using the same method.
