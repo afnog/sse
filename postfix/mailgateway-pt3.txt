@@ -158,7 +158,7 @@ Setup MailWatch conf.php (copy preconfigured). The changes here were to include 
 
 
 
-	$sudo scp afnog@pc25.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
+	$sudo scp afnog@pc35.sse.ws.afnog.org:/home/afnog/conf.php /var/www/mailscanner/
 
 
 
