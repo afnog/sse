@@ -173,7 +173,7 @@ Setup MailWatch web page for Apache:
 
 Setup the database. The password is afnog
 	$cd /home/afnog/mailwatch/
-	$mysql –u root –p < create.sql 
+	$m 
 
 THEN
 
