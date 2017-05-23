@@ -44,7 +44,7 @@ Prepare MailScanner directories (they may already exist)
 	
 	$sudo mkdir /var/spool/MailScanner/spamassassin && sudo chown postfix.postfix /var/spool/MailScanner/spamassassin
 	$sudo chown postfix.postfix /var/spool/MailScanner/incoming
-	$sudo chown root:www-data /var/spool/MailScanner/quarantine
+	$sudo chown root.www-data /var/spool/MailScanner/quarantine
 	
 	
 
@@ -209,7 +209,7 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 
 Finally, set the rights to the images directory 
 
-	$sudo chown -R root:www-data /var/www/mailscanner/images/
+	$sudo chown -R root.www-data /var/www/mailscanner/images/
 	$sudo chmod -R 775 /var/www/mailscanner/images/
 	$sudo chown -R postfix.postfix /var/spool/MailScanner/incoming
 
