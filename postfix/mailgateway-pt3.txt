@@ -71,7 +71,7 @@ Enable SpamAssassin
 
 	$sudo nano /etc/default/spamassassin
 
-	##Uncomment the following line:
+	##Uncomment OR ADD the following line:
 	ENABLED=1
 
 
