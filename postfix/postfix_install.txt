@@ -16,6 +16,11 @@ PRESS ENTER TO SELECT DEFAULT POSTFIX CONFIGS
 
 	$sudo service postfix start
 
+	Check the logs
+
+
+	$
+
 
 
 Try this from your server or from your own PC/Laptop terminal if you have Linux or Mac OS
