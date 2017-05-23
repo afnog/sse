@@ -143,7 +143,7 @@ Check what the postfix config looks like. Postconf will reveal the running confi
 Download MailWatch - MailScanner Frontend
 
 	$cd /home/afnog/
-	$wget https://github.com/mailwatch/1.2.0/archive/master.zip
+	$wget https://github.com/mailwatch/MailWatch/archive/master.zip
 	$unzip master.zip
 	$cd 1.2.0-master
 	$sudo mv mailscanner /var/www/
