@@ -1,4 +1,4 @@
-***** SENDING EMAILS FROM THE COMMAND LINE *****
+***** SENDING EMAILS FROM THE COMMAND LINE - OPTION A *****
 
 
 Try this from your server or from your own PC/Laptop terminal if you have Linux or Mac OS
