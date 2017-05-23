@@ -3,20 +3,20 @@
 
 ********* Part 1 *************
 
-	$sudo apt-get install postfix mailutils telnet
+	
+$sudo apt-get install postfix mailutils telnet
+
 
 PRESS ENTER TO SELECT DEFAULT POSTFIX CONFIGS
 
 
-
-
 ********* Part 2 *************
 
-Start Postfix
+Start Postfix:
 
 	$sudo service postfix start
 
-Check the logs
+Check the logs:
 
 
 	$sudo tail -f /var/log/mail.log
