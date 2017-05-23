@@ -8,7 +8,7 @@
 
 Copy preconfigured files for Mailwatch from the instructor’s server. The only changes made to these files was to add the MySQL username and password to allow MailWatch to connect to the database.
 
-	$sudo scp afnog@pc25.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/perl/custom/
+	$sudo scp afnog@pc35.sse.ws.afnog.org:/home/afnog/*.pm /usr/share/MailScanner/perl/custom/
 	$sudo chmod ugo+x /usr/share/MailScanner/perl/custom/
 
 
@@ -38,7 +38,7 @@ Save and Exit the file
 Copy preconfigured MailScanner.conf file. A number of changes made, please go through it.
 	
 	$sudo mv /etc/MailScanner/MailScanner.conf /etc/MailScanner/MailScanner.conf.backup
-	$sudo scp afnog@pc25.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/
+	$sudo scp afnog@pc35.sse.ws.afnog.org:/home/afnog/MailScanner.conf /etc/MailScanner/
 	
 Prepare MailScanner directories (they may already exist)
 	
@@ -99,7 +99,7 @@ Configure the main.cf file to read the file created above. Add the following lin
 ALSO CHECK THAT YOUR PCX.SSE.WS.AFNOG.ORG domain will be accepted. Look for the line starting with "mydestination" and add your domain name followed by a comma. It should looks as follows:
 
 
-mydestination = pc25.sse.ws.afnog.org, localhost.sse.ws.afnog.org, , localhost
+mydestination = pc35.sse.ws.afnog.org, localhost.sse.ws.afnog.org, localhost
 
 ===============
 
