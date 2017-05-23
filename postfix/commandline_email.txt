@@ -61,7 +61,13 @@ Then type the following pressing enter after each line:
 
 	quit
 
-The single dot above indicates you 
+The single dot above indicates you have completed sending the email and you should get a status 250 message
+
+
+Check your email by opening the mail file
+
+
+	$less /var/mail/afnog
 
 
 
