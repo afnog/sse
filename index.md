@@ -290,13 +290,8 @@ Goal: DNSSEC High Level Awareness.
 * [Email Overview](postfix/01_email_preso.pdf)
 * [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
 
-### RADIUS
-[RADIUS]: #radius
-
-#### [Frank Kuse](#FK)
-
-* Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
-* Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
+* [Installing Postfix](postfix/postfix_install.txt)
+* [Command line Email](postfix/commandline_email.txt)
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
@@ -309,6 +304,13 @@ Goal: DNSSEC High Level Awareness.
 
 ### Squirrelmail
 [Squirrelmail]: #squirrelmail
+### RADIUS
+[RADIUS]: #radius
+
+#### [Frank Kuse](#FK)
+
+* Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
+* Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
 #### [Michuki Mwangi](#MM)
 
