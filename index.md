@@ -107,7 +107,7 @@ automatically.
 |14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[NTP][]		|[Virtualization][]
 |-
 |Tea break
-|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|Dovecot][],[Squirrelmail][]	|Expert Panel and [Closing Survey][]
+|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Dovecot][], [Squirrelmail][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|[DNSSEC][], [Ansible][]	|Instructor Dinner |Closing Ceremony
@@ -126,7 +126,7 @@ automatically.
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 [NTP]:#NTP
 * NTP Presentation: [NTP](ntp/ntp_service.pdf)
-* NTP Exercise: [NTP Exercise(ntp/ntp-service-exercise.txt)
+* NTP Exercise: [NTP Exercise](ntp/ntp-service-exercise.txt)
 
 
 ### Ansible
