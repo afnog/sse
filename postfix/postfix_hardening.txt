@@ -21,3 +21,7 @@ Then type the following pressing enter after each line:
 	mail from: manager@theGrandLottery.com
 
 You should be prompted to require HELO first
+
+************* part 2 ***************
+
+Sending email to the world 
