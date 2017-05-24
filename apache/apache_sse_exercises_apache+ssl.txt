@@ -57,6 +57,7 @@ synchronize all the other machines off these four (4) machines.
      i.e. 196.200.219.0/24
 
 4. Each of the other servers should be configured to synchronize their clocks off
+   the four (4) 
 
 To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
 
