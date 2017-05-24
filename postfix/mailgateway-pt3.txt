@@ -214,7 +214,7 @@ Finally, set the rights to the images directory
 	$sudo chown -R root.www-data /var/www/mailscanner/images/
 	$sudo chmod -R 775 /var/www/mailscanner/images/
 	$sudo chown -R postfix.postfix /var/spool/MailScanner/incoming
-	&sudo chown -R postfix.postfix /var/spool/postfix && chown postfix.postdrop /var/spool/postfix/postdrop && chown postfix.maildrop /var/spool/postfix/maildrop
+	&sudo chown -R postfix.postfix /var/spool/postfix && chown postfix.postdrop /var/spool/postfix/maildrop && chown postfix.postdrop /var/spool/postfix/public 
 
 
 6. ALWAYS CHECK LOGS
