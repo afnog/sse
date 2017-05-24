@@ -203,7 +203,8 @@ Login as the Mailwatch user using the credentials used in the Mysql entry above.
 
 	$mysql mailscanner -u mailwatch –p
 
-	INSERT INTO users SET username = ‘mailwatch’, password = MD5(‘afnog’), fullname = ’mailadmin’, type = ‘A’;
+	
+
 	exit
 
 
