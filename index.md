@@ -125,6 +125,7 @@ automatically.
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 
+### NTP
 [NTP]: #NTP
 * NTP Presentation: [NTP](ntp/ntp_service.pdf)
 * NTP Exercise: [NTP Exercise](ntp/ntp-service-exercise.txt)
