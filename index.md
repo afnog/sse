@@ -297,6 +297,7 @@ Goal: DNSSEC High Level Awareness.
 * Exercise 1 - [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
 * Exercise 2 - [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
 * Exercise 3 - [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
+* Exercise 3 - [Debian Mail Gateway Part 3 PDF](postfix/mailgateway-pt3.pdf)
 * Exercise 4 - [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
 * Additional Exercises - [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
 
