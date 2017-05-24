@@ -104,7 +104,7 @@ automatically.
 |11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Deployment][]
 |-
 |Lunch
-|14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[Dovecot][]		|[Virtualization][]
+|14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[NTPDovecot][]		|[Virtualization][]
 |-
 |Tea break
 |16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Squirrelmail][]	|Expert Panel and [Closing Survey][]
