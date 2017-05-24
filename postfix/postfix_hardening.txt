@@ -6,7 +6,7 @@
 
 Require HELO as per RFC 
 
-	$sudo sh -c echo smtpd_helo_required = yes >> /etc/postfix/main.cf 
+	$sudo sh -c "echo smtpd_helo_required = yes >> /etc/postfix/main.cf" 
 
 	$sudo service postfix restart
 
@@ -22,12 +22,14 @@ Then type the following pressing enter after each line:
 
 You should be prompted to require HELO first
 
-************* part 2 ***************
+
+
+************* Part 2 ***************
 
 Sending email to the world 
 
 
-sudo sh -c echo inet_protocols = ipv4 >>  /etc/postfix/main.cf 
+sudo sh -c "echo inet_protocols = ipv4 >>  /etc/postfix/main.cf" 
 
 
 echo "This is my email, hello" | mail -s "This is a test message" kevin.chege@gmail.com
