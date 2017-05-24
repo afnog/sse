@@ -29,16 +29,19 @@ For this class, we will install Apache, Mysql and PHP using packages.
 	
 2.2.  Once installed, the ntp startup script is placed at /etc/init.d/ . To add ntp to the System Startup
 
-	$ sudo update-rc.d nap enable
+	$ sudo update-rc.d ntp enable
 
 2.3. To start ntp run
 
 	$ sudo /etc/init.d/ntp start
 
+	OR:
+
+	$ sudo service nap start
+
 Check if the ntp service you have just installed works by issuing the following command
  
-
-	$ telnet localhost 80
+	$ sudo ntpdq -pn
 
 Then set your IPv6 address to match your IPv4 address:
 
