@@ -283,19 +283,20 @@ Goal: DNSSEC High Level Awareness.
 
 #### [Kevin Chege](#KC)
 
-+ understanding email - [Email Overview](postfix/01_email_preso.pdf)
-+ Some Email Best Practices -  [Email Best Practices, Postfix and Mail Gateways](postfix/postfix-mailgateway-debian.pdf)
++ Understanding email - [Email Overview](postfix/01_email_preso.pdf)
++ Postfix - [Introduction to Postfix](postfix/postfix_preso.pdf)
++ Some Email Best Practices -  [Email Best Practices](postfix/email_best_practices.pdf)
 * Exercise 1 - [Installing Postfix](postfix/postfix_install.txt)
 * Exercise 2 - [Command line Email](postfix/commandline_email.txt)
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
-
-* [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
-* [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
-* [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
-* [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
-* [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
++ Email Filter Gateway [Email Filter aka Email Gateway](postfix/mailfilter_preso.pdf)
+* Exercise 1 - [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
+* Exercise 2 - [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
+* Exercise 3 - [Debian Mail Gateway Part 3](postfix/mailgateway-pt3.txt)
+* Exercise 4 - [Test Your Mail Gateway](postfix/test_mailgateway.pdf)
+* Additional Exercises - [Postfix Mail Forward HowTo](postfix/postfix_mailforward.txt)
 
 ### Squirrelmail
 [Squirrelmail]: #squirrelmail
