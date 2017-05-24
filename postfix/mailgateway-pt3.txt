@@ -166,7 +166,7 @@ Setup MailWatch conf.php (copy preconfigured). The changes here were to include 
 Setup MailWatch web page for Apache:
 
 
-	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf’
+	$sudo sh -c 'echo "Alias /mailwatch /var/www/mailscanner" > /etc/apache2/conf-enabled/mailwatch.conf'
 
 
 
