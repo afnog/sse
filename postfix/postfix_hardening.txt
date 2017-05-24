@@ -27,6 +27,7 @@ You should be prompted to require HELO first
 Sending email to the world 
 
 
+sudo sh -c echo inet_protocols = ipv4 >>  /etc/postfix/main.cf 
 
 
 echo "This is my email, hello" | mail -s "This is a test message" kevin.chege@gmail.com
