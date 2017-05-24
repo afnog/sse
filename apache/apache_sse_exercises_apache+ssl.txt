@@ -47,8 +47,10 @@ Check if the ntp service you have just installed works by issuing the following 
 
 ------------
 
+In this section we will select four machines to be our internal NTP servers and 
+synchronize all the other machines off these 
 
-3. Select 
+3. Select four (4) machines to be the internal NTP servers
 
 To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
 
