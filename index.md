@@ -289,6 +289,7 @@ Goal: DNSSEC High Level Awareness.
 * Exercise 1 - Add MX record [Add MX record](postfix/add-MX-record.txt)
 * Exercise 2 - [Installing Postfix](postfix/postfix_install.txt)
 * Exercise 3 - [Command line Email](postfix/commandline_email.txt)
+* Exercise 4 - [Postix Enable HELO](postfix/postfix_hardening.txt)
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
