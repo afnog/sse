@@ -286,7 +286,7 @@ Goal: DNSSEC High Level Awareness.
 + Understanding email - [Email Overview](postfix/01_email_preso.pdf)
 + Postfix - [Introduction to Postfix](postfix/postfix_preso.pdf)
 + Some Email Best Practices -  [Email Best Practices](postfix/email_best_practices.pdf)
-* Exercise 1 - Add MX record [Add MX record][postfix/add-MX-record.txt)
+* Exercise 1 - Add MX record [Add MX record](postfix/add-MX-record.txt)
 * Exercise 2 - [Installing Postfix](postfix/postfix_install.txt)
 * Exercise 3 - [Command line Email](postfix/commandline_email.txt)
 
