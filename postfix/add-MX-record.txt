@@ -1,6 +1,6 @@
 #### Add an MX record #####
 
-	$cd /etc/namedb/master
+	$cd /etc/bind/master
 
 	$nano YYY.afnog.guru
 
