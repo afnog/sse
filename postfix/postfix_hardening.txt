@@ -25,3 +25,8 @@ You should be prompted to require HELO first
 ************* part 2 ***************
 
 Sending email to the world 
+
+
+
+
+echo "This is my email, hello" | mail -s "This is a test message" kevin.chege@gmail.com
