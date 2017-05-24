@@ -23,4 +23,4 @@ Reload BIND as follows
 
 	OR
 
-	$suo service named reload
+	$sudo service bind reload
