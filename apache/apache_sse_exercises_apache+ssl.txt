@@ -10,13 +10,14 @@ The packages to be installed are:
 
 Debian provides 2 ways of installing third party software: 
 	i. Binary Packages
-	This are pre-built package that contains the executables, config files, man/info pages, etc for the Debian system and have a distinguished file extension ".deb"
+	These are pre-built package that contains the executables, config files, man/info pages, etc for the 
+        Debian system and have a distinguished file extension ".deb"
 	
 	ii. Source packages
 	They contain the original unmodified source files in gzipped-compressed tar format.
  
 
-For this class, we will install Apache, Mysql and PHP using packages.
+For this class, we will install ntp and ntpdate using packages.
 
 -------------------
 
@@ -43,28 +44,11 @@ Check if the ntp service you have just installed works by issuing the following 
  
 	$ sudo ntpdq -pn
 
-Then set your IPv6 address to match your IPv4 address:
-
-	$ sudo ip -6 addr add 2001:43f8:220:219::XX/64 dev eth0
-
-Then add your default route for IPv6:
-
-	$ sudo ip -6 route add default via 2001:43f8:220:219::1
-
-On the above if you get an message: RTNETLINK answers: File exists
-It means the gateway is already in place - as it was auto-configured 
-
-Test your IPv6 connectivity:
-
-	$ ping6 www.google.com
-
-
-Then browse your IPv6 address at http://[2001:43f8:220:219::XX]
 
 ------------
 
 
-3. Configuring SSL
+3. Select 
 
 To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
 
