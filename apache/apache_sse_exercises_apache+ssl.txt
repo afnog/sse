@@ -50,7 +50,13 @@ Check if the ntp service you have just installed works by issuing the following 
 In this section we will select four (4) machines to be our internal NTP servers and 
 synchronize all the other machines off these four (4) machines. 
 
-3. Select four (4) machines to be the internal NTP servers and 
+3. Select four (4) machines to be the internal NTP servers and ensure they are synchronized 
+   off stratum 1 or 2 servers on the Internet.
+
+3.1. Configure the servers to restrict access to only machines in the SSE subnet
+     i.e. 196.200.219.0/24
+
+4. Each of the other servers should be configured to synchronize their clocks off
 
 To create a secure virtual host accessed via https rather than http, you will need to configure your Apache server to use OpenSSL for encrypting the data served from the web server.
 
