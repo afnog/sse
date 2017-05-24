@@ -1,13 +1,12 @@
-Apache24 with SSL, MySQL5 and PHP5 Installation Exercise
+NTP Service Installation & Configuration Exercise
 =====================================================
 
 1. Intro:
 
 The packages to be installed are:
 
-* Apache2
-* Mysql-server
-* PHP5
+* ntp
+* ntpdate
 
 Debian provides 2 ways of installing third party software: 
 	i. Binary Packages
@@ -21,13 +20,12 @@ For this class, we will install Apache, Mysql and PHP using packages.
 
 -------------------
 
-2. Installation of Apache, Mysql & PHP using packages:
+2. Installation of ntp and ntpdate using packages:
 
-2.1 Install Apache, Mysql and PHP
+2.1 Install ntp & ntpdate
 
-	$ sudo apt-get install mysql-server apache2 php5 php5-mysql
+	$ sudo apt-get install ntp ntpdate
 	
-2.1.1 When the mysql-server prompts for a password to be entered use 'afnog' as the password. If not prompted, it will be set at the next exercise.
 	
 2.2.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
 
