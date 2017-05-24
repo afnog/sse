@@ -338,11 +338,11 @@ Username is “mailwatch” password is “afnog”
 
 Please note that Chrome may not be able to login so try another browser if that is the case.
 
-	https://pcX.sse.ws.afnog.org/mailwatch
+	http://pcX.sse.ws.afnog.org/mailwatch
 
 	OR
 	
-	https://XXXX.afnog.guru/mailwatch
+	http://XXXX.afnog.guru/mailwatch
 
 
 
