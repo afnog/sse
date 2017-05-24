@@ -27,17 +27,16 @@ For this class, we will install Apache, Mysql and PHP using packages.
 	$ sudo apt-get install ntp ntpdate
 	
 	
-2.2.  Once installed, the scripts are placed at /etc/init.d/ . To add Apache to the System Startup
+2.2.  Once installed, the ntp startup script is placed at /etc/init.d/ . To add ntp to the System Startup
 
-	$ sudo update-rc.d apache2 enable
+	$ sudo update-rc.d nap enable
 
-2.3. To start apache run
+2.3. To start ntp run
 
-	$ sudo /etc/init.d/apache2 start
+	$ sudo /etc/init.d/ntp start
 
-Check if the apache web server you have just installed works by pointing a browser to the server i.e. http://<your-ip-address> or http://pcXX.sse.ws.afnog.org 
-
-You can also do 
+Check if the ntp service you have just installed works by issuing the following command
+ 
 
 	$ telnet localhost 80
 
