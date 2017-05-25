@@ -207,6 +207,11 @@ Happy SquirrelMailing!
 	$cd /etc/squirrelmail
 
 
-4.2 edit the 
+4.2 edit the apache.conf file
+
+
+	$sudo nano apache.conf
+
+4.3
 
 
