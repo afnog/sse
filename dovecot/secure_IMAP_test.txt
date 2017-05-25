@@ -31,7 +31,16 @@ TRY THE FOLLOWING COMMANDS ONE BY ONE:
 	$openssl s_client -quiet -connect localhost:995
 
 
-	
+	user afnog
+
+
+	pass afnog
+
+
+	list
+
+
+
 
 2. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
 
