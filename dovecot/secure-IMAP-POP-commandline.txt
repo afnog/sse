@@ -1,0 +1,67 @@
+Secure Dovecot test
+
+
+1. Test your IMAP client with telnet
+
+	$openssl s_client -crlf -connect localhost:993
+
+TRY THE FOLLOWING COMMANDS ONE BY ONE:
+	
+
+	tag login afnog afnog
+
+	tag LIST "" "*"
+
+	tag SELECT INBOX
+	
+	tag STATUS INBOX (MESSAGES)
+
+	tag FETCH 1:5 (BODY[HEADER])
+	
+	tag FETCH 2 (BODY)
+
+	tag LOGOUT
+
+
+
+
+2. Secure POP test
+
+
+	$openssl s_client -quiet -connect localhost:995
+
+
+	user afnog
+
+
+	pass afnog
+
+
+	list
+
+
+Try the following commands
+
+	
+
+  STAT               List number of messages, total mailbox size
+
+  LIST               List messages and sizes
+
+  RETR n             Show message n
+  
+  QUIT               Logout (expunges messages if no RSET)
+
+
+
+2. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
+
+
+
+
+
+
+
+
+
+
