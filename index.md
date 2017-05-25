@@ -93,6 +93,28 @@ automatically.
 |Theodore Kouete	|Fossap		|					|
 |Yahya			|Gobir		|					|
 
+|HELLEN 		|NAKAWUNGU				|				|
+|ABEAKU 		|BADU ARTHUR            |				|
+|ZOUMANA 		|COULIBALY              |				|
+|MUGABE 		|H. PATRICK             |				|
+|LYDIA 			|AKIRIZA                |				|
+|JEZREEL 		|M. NYANGE              |				|
+|SALLY 			|CHAM                   |				|
+|LILLIAN 		|RUTH ACHOM             |				|
+|ISAAC 			|LARTEY                 |				|
+|GRACE 			|ADONG                  |				|
+|FRANCIS 		|MALAMA                 |				|
+|VANESSA 		|A. ISSAH               |				|
+|PETER 			|JOHN CHIROMBO          |				|
+|VICTORIA 		|PHILEMON RUTAKARA      |				|
+|RICHARD 		|OTIEKU - BOADU         |				|
+|MAXWELL 		|OWUSU MARFO            |				|
+|SIMON 			|SERUYINDA              |				|
+|JOSEPH 		|MUTITI                 |				|
+|OMAR 			|SALUM SALEH            |				|
+|HARRUN 		|ISIAHO					|				|
+
+
 ### Timetable
 
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
