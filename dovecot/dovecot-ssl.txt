@@ -10,10 +10,28 @@ Obtain the directory where the certificate is stored then:
 
 	$sudo nano 
 
-Change the  from no to yes
+###Change the below from no to yes (or uncomment)
 
-ssl = yes
+	ssl = yes
 
+###Then add the following two lines
 
 ssl_cert = </etc/letsencrypt/live/YYY.afnog.guru/fullchain.pem
 ssl_key = </etc/letsencrypt/live/YYY.afnog.guru/privkey.pem
+
+
+#save and exit
+
+
+### Restart dovecot
+
+
+	$sudo service dovecot restart
+
+
+##### telnet to the port to see if its listening
+
+
+	$ telnet localhost 993
+
+	$ telnet localhost 995
