@@ -235,6 +235,9 @@ Goal: DNSSEC High Level Awareness.
 * [Presentation/PDF](dovecot/dovecot-intro.pdf)
 * [Exercise 1 - Dovecot install](dovecot/dovecot-install-setup.txt)
 * [Exercise 2 - LetsEncrypt](dovecot/letsencrypt-certificate.txt)
+* [Exercise 3 - Enable SSL in Dovecot](dovecot/dovecot-ssl.txt)
+* [Exercise 4 - IMAPS/POP3 Tests](dovecot/secure_IMAP/POP_commandline.txt)
+
 
 ### Ganeti
 [Ganeti]: #ganeti
