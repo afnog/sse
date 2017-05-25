@@ -84,4 +84,4 @@ IMPORTANT NOTES:
    Donating to EFF:                    https://eff.org/donate-le
 
 
-########DONE - browse you afnog.guru domain or your pcXX.sse.ws.afnog.org and see if it worked
+######## DONE - browse you afnog.guru domain or your pcXX.sse.ws.afnog.org and see if it worked
