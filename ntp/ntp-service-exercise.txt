@@ -62,3 +62,5 @@ synchronize all the other machines off these four (4) machines.
 5. Configure the four (4) internal NTP servers to restrict access to only machines in 
    the SSE subnet i.e. 196.200.219.0/24
 
+6. Configure the other ntp clients/servers to prevent them from answering ntp queries.  
+
