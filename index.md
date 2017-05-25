@@ -128,7 +128,7 @@ automatically.
 
 ### NTP
 [NTP]: #ntp
-* NTP Presentation: [NTP](ntp/ntp_service.pdf)
+* NTP Presentation: [NTP](ntp/ntp-service.pdf)
 * NTP Exercise: [NTP Exercise](ntp/ntp-service-exercise.txt)
 
 
