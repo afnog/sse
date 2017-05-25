@@ -40,6 +40,18 @@ TRY THE FOLLOWING COMMANDS ONE BY ONE:
 	list
 
 
+Try the following commands
+
+	
+
+  STAT               List number of messages, total mailbox size
+
+  LIST               List messages and sizes
+
+  RETR n             Show message n
+  
+  QUIT               Logout (expunges messages if no RSET)
+
 
 
 2. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
