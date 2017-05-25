@@ -72,28 +72,7 @@ automatically.
 
 |First Names		|Surname	|Organisation				|Country
 |:-                     |:-             |:-                                     |:-
-|Agunbiade Janet	|Folasade	|					|
-|Alfred O.		|Orimbo		|					|
-|Benjamin		|Ikibah		|					|
-|Caroline		|Mwangi		|					|
-|Daurice		|Nyirongo	|					|
-|Dorcas			|Kagoya		|					|
-|Frank			|Chilimsungwi	|					|
-|Geoffrey		|Wenani		|					|
-|Korsah			|Anthony	|					|
-|Lucas			|Akohin		|					|
-|Michael		|Ansah		|					|
-|Morris			|Muzoora	|					|
-|Ousmane		|Ndiaye		|					|
-|Papa Alioune		|Sakho		|					|
-|Portia			|Mwine		|					|
-|Richard		|Magosi		|					|
-|Samira Ali		|Danburam	|					|
-|Sidati			|Hassimi	|					|
-|Theodore Kouete	|Fossap		|					|
-|Yahya			|Gobir		|					|
-
-|HELLEN 		|NAKAWUNGU				|				|
+|HELLEN 		|NAKAWUNGU		|				|
 |ABEAKU 		|BADU ARTHUR            |				|
 |ZOUMANA 		|COULIBALY              |				|
 |MUGABE 		|H. PATRICK             |				|
