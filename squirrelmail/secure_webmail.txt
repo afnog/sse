@@ -8,10 +8,10 @@
 
 	$cd /home/afnog/letsencrypt
 
-	$
 
-#### INSTALL THE CERTBOT CLIENT #####
+#### INSTALL THE CERTIFICATE USING LETSENCRYPT #####
 
+	$./letsencrypt-auto --apache -d YYY.afnog.gure -d pcXX.sse.ws.afnog.org
 
 
 
