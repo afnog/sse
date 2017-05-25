@@ -21,16 +21,16 @@ afnog@pcXX:~$ cd /etc/dovecot/conf.d/
 afnog@pcXX:/etc/dovecot/conf.d$ sudo nano 10-mail.conf
 
 
-4.2 In the same file 10-mail.conf we need to give Dovecot permission to read/access the /var/mail folder. Find the line below;
+4.1 In the same file 10-mail.conf we need to give Dovecot permission to read/access the /var/mail folder. Find the line below;
 
 #mail_privileged_group =
 
-4.3 Uncomment the line in 4.3 above and add group "mail" to have access to it.
+4.2 Uncomment the line in 4.3 above and add group "mail" to have access to it.
 
 mail_privileged_group = mail
 
 
-4.4 Save and Close/Exit the file 10-mail.conf 
+4.3 Save and Close/Exit the file 10-mail.conf 
 
 5. Define the Dovecot services and the permissions by editing the file 10-master.conf file. Open the 10-master.conf file
 
