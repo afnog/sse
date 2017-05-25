@@ -8,7 +8,7 @@ Obtain the directory where the certificate is stored then:
 
 	$cd /etc/dovecot/conf.d
 
-	$sudo nano 
+	$sudo nano 10-ssl
 
 ###Change the below from no to yes (or uncomment)
 
