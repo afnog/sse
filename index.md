@@ -229,11 +229,12 @@ Goal: DNSSEC High Level Awareness.
 ### Dovecot
 [Dovecot]: #dovecot
 
-#### [Michuki Mwangi](#MM)
+#### [Kevin Chege](#KC)
 
 * [Presentation/PPT](dovecot/dovecot-intro.ppt)
 * [Presentation/PDF](dovecot/dovecot-intro.pdf)
-* [Exercise/Text](dovecot/dovecot-install-setup.txt)
+* [Exercise 1 - Dovecot install](dovecot/dovecot-install-setup.txt)
+* [Exercise 2 - LetsEncrypt](dovecot/letsencrypt-certificate.txt)
 
 ### Ganeti
 [Ganeti]: #ganeti
