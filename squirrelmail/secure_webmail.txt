@@ -1,14 +1,18 @@
 
 
-##### INSTALL Ubuntu Repository Manager
+##### INSTALL lets encrypt
 
-$sudo apt-get install git
-$sudo git clone https://github.com/letsencrypt/letsencrypt /home/afnog/letsencrypt
-$cd /home/afnog/letsencrypt
+	$sudo apt-get install git
+
+	$sudo git clone https://github.com/letsencrypt/letsencrypt /home/afnog/letsencrypt
+
+	$cd /home/afnog/letsencrypt
+
+	$
 
 #### INSTALL THE CERTBOT CLIENT #####
 
-$sudo add-apt-repository ppa:certbot/certbot
+
 
 
 ###### You will see
