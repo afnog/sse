@@ -212,6 +212,9 @@ Happy SquirrelMailing!
 
 	$sudo nano apache.conf
 
-4.3 Scroll to the bottom and uncomment the lines so that it look
+4.3 Scroll to the bottom and uncomment the lines so that it looks like this
+
+
+
 
 
