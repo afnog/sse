@@ -232,7 +232,7 @@ Alias /squirrelmail /usr/share/squirrelmail
 ----------- COPY UNTIL ABOVE THIS LINE ----------------------------------
 
 
-sudo sh -c 'echo "Alias /squirrelmail /var/www/squirrelmail" > /etc/apache2/conf-enabled/mailwatch.conf'
+
 
 5.1 Open the Apache2 config file
 
