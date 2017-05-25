@@ -207,6 +207,6 @@ Happy SquirrelMailing!
 	$cd /etc/squirrelmail
 
 
-4.2 edit 
+4.2 edit the 
 
 
