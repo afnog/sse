@@ -1,7 +1,7 @@
 Secure Dovecot test
 
 
-4. Test your IMAP client with telnet
+1. Test your IMAP client with telnet
 
 	$openssl s_client -crlf -connect localhost:993
 
@@ -24,7 +24,16 @@ TRY THE FOLLOWING COMMANDS ONE BY ONE:
 
 
 
-5. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
+
+2. Secure POP test
+
+
+	$openssl s_client -quiet -connect localhost:995
+
+
+	
+
+2. Connect your Thunderbird/Outlook client to use your email server to send and receive emails
 
 
 
