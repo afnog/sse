@@ -1,0 +1,126 @@
+Dovecot Exercice
+
+We are going to install Dovecot 2 on the Debian Virtual server assigned to each participant to enable IMAP and POP3 handling
+
+1. Installing Dovecot on Debian
+
+1.1 Run the following command at the command prompt
+
+afnog@pcXX:~$ sudo apt-get install dovecot-core dovecot-imapd dovecot-pop3d dovecot-lmtpd
+
+2. How to check the Dovecot Config
+
+afnog@pcXX:~$ doveconf -n
+
+3. Configuring Dovecot - change directory to the Dovecot conf.d folder
+
+afnog@pcXX:~$ cd /etc/dovecot/conf.d/
+
+4. There are two types of mailbox storage formats namely Mbox and Maildir. In Mbox all mails are stored as a single file with new emails being appended at the end of the file. In Maildir format, all emails are stored as individual files. Verify that the mail format is Mbox and location is /var/mail/"user" by reviewing the file 10-mail.conf
+
+afnog@pcXX:/etc/dovecot/conf.d$ sudo nano 10-mail.conf
+
+
+4.2 In the same file 10-mail.conf we need to give Dovecot permission to read/access the /var/mail folder. Find the line below;
+
+#mail_privileged_group =
+
+4.3 Uncomment the line in 4.3 above and add group "mail" to have access to it.
+
+mail_privileged_group = mail
+
+
+4.4 Save and Close/Exit the file 10-mail.conf 
+
+5. Define the Dovecot services and the permissions by editing the file 10-master.conf file. Open the 10-master.conf file
+
+afnog@pcXX:/etc/dovecot/conf.d$ sudo nano 10-master.conf
+
+
+5.1 Enable the Unix Listener using the Postfix username and password. This allows Postfix to use Dovecost for SMTP Authentication. Find these lines inside the file 10-master.conf;
+
+  #unix_listener /var/spool/postfix/private/auth {
+  #  mode = 0666
+  #}
+
+5.2 Uncomment the 3 lines (inside the 10-master.conf) and add the user and group to be postfix before the last curly bracket as below; 
+
+unix_listener /var/spool/postfix/private/auth {
+    mode = 0666
+    user = postfix
+    group = postfix
+  }
+
+5.3 Save and Close/Exit the file 10-master.conf 
+
+6.0 The Dovecot Authentication Mechanisms are stored in the 10-auth.conf file. Any changes to password formats, SSL configurations, etc are made in this file
+
+afnog@pcXX:/etc/dovecot/conf.d$ sudo nano 10-auth.conf
+
+
+6.1  Plaintext authentication is disabled by default. We need to enable plaintext authentication to be able to carry out tests. Best practice is to have them disabled.  Find the below line and change the default which blocks plaintext_authentication
+
+#disable_plaintext_auth = yes
+
+6.2 Uncomment the line  (inside the 10-auth.conf file) and change yes to no;
+
+disable_plaintext_auth = no
+
+6.3 Save and Close/Exit the file 10-auth.conf 
+
+7.0 Configure Dovecot to use the the System users. Dovecot can be configured to authenticate using various user passwords and databases. The auth-system.conf.ext is an extension of 10-auth.conf and defines how Dovecot should access the System users. Open the file auth-system.conf.ext
+
+afnog@pcXX:/etc/dovecot/conf.d$ sudo vi auth-system.conf.ext
+
+
+7.1 Configure Dovecot to use PAM Authentication to access the System Users by finding and modifying the line below;
+
+passdb {
+  driver = pam
+  # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
+  # [cache_key=<key>] [<service name>]
+  #args = dovecot
+}
+
+
+7.2 Uncomment the args line (inside the auth-system.conf.ext file) as below. This tells Dovecot to use the configuration is /etc/pam.d/dovecot which has information on the PAM libraries to use. 
+
+passdb {
+  driver = pam
+  # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
+  # [cache_key=<key>] [<service name>]
+  args = dovecot
+}
+
+5.3 Save and Close/Exit the file auth-system.conf.ext
+
+8.0 After making those changes we need to restart Dovecot
+
+afnog@pcXX:/etc/dovecot/conf.d$ sudo service dovecot restart
+
+
+9.0 You can now go into your personal or official work email address and send an email to afnog@________.afnog.guru
+
+
+10.0 Test to make sure that you can login to Dovecot and check email from your machine or any other place
+
+afnog@pcXX:/etc/dovecot/conf.d$ telnet pcXX.sse.ws.afnog.org 110
+
+----- You should see and engage with Dove as follows ----- 
+Trying 196.200.219.XXX...
+Connected to pcXX.sse.ws.afnog.org.
+Escape character is '^]'.
++OK Dovecot ready.
+user afnog <----- TYPE THIS & PRESS ENTER
++OK <----- YOU SHOULD RECEIVE THIS RESPONSE
+pass afnog <----- TYPE THIS & PRESS ENTER
++OK Logged in. <---- YOU SHOULD RECEIVE THIS RESPONSE
+list <----- TYPE THIS & PRESS ENTER
++ OK X messages <---- GET THIS RESPONSE WHERE X IS THE # OF MESSAGES
+RETR # <---- ENTER THIS TO READ THE EMAIL BY INDEX NUMBER I.E 1,2 OR 10 ETC.
+quit <----- ENTER THIS TO END THE SESSION
++OK Logging out.
+Connection closed by foreign host.
+
+
+
