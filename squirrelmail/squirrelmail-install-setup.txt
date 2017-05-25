@@ -228,7 +228,18 @@ Happy SquirrelMailing!
 
 	Save and exit
 
-4.4 Then copy the file to the Apache directory and restart apache
+4.4 Then copy the file to the Apache directory and restart apache:
+
+	$sudo cp apache.conf /etc/apache2/conf-enabled/
+
+	$sudo service apache2 restart
+
+
+Browse http://YYY.afnog.guru/squirrelmail
+
+Username: afnog
+
+Passwd: afnog
 
 
 
