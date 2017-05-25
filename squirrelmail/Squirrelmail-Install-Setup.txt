@@ -215,6 +215,17 @@ Happy SquirrelMailing!
 4.3 Scroll to the bottom and uncomment the lines so that it looks like this
 
 
+<IfModule mod_rewrite.c>
+  <IfModule mod_ssl.c>
+    <Location /squirrelmail>
+      RewriteEngine on
+      RewriteCond %{HTTPS} !^on$ [NC]
+      RewriteRule . https://%{HTTP_HOST}%{REQUEST_URI}  [L]
+    </Location>
+  </IfModule>
+</IfModule>
 
+
+Save and exit
 
 
