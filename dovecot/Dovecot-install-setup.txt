@@ -20,10 +20,6 @@ afnog@pcXX:~$ cd /etc/dovecot/conf.d/
 
 afnog@pcXX:/etc/dovecot/conf.d$ sudo nano 10-mail.conf
 
-4.1 Find the line below with the Mail location and mail format and verify that is not commented out. Do not close the file yet
-
-mail_location = mbox:~/mail:INBOX=/var/mail/%u
-
 
 4.2 In the same file 10-mail.conf we need to give Dovecot permission to read/access the /var/mail folder. Find the line below;
 
