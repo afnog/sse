@@ -314,6 +314,12 @@ Goal: DNSSEC High Level Awareness.
 
 ### Squirrelmail
 [Squirrelmail]: #squirrelmail
+#### [Kevin Chege](#KC)
+
+* [Presentation/PPT](squirrelmail/squirrelmail-intro.ppt)
+* [Presentation/PDF](squirrelmail/squirrelmail-intro.pdf)
+* [Exercise/Text](squirrelmail/squirrelmail-install-setup.txt)
+
 ### RADIUS
 [RADIUS]: #radius
 
@@ -322,11 +328,7 @@ Goal: DNSSEC High Level Awareness.
 * Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
 * Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
-#### [Michuki Mwangi](#MM)
 
-* [Presentation/PPT](squirrelmail/squirrelmail-intro.ppt)
-* [Presentation/PDF](squirrelmail/squirrelmail-intro.pdf)
-* [Exercise/Text](squirrelmail/squirrelmail-install-setup.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization
