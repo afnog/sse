@@ -15,43 +15,47 @@ start.
 
     $ dig +norec @a.root-servers.net. www.tiscali.co.uk. a
 
-    ; <<>> DiG 9.3.1 <<>> +norec @a.root-servers.net. www.tiscali.co.uk. a
-    ; (1 server found)
-    ;; global options:  printcmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5252
-    ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 9, ADDITIONAL: 10
+    ; <<>> DiG 9.10.6 <<>> +norec @a.root-servers.net. www.tiscali.co.uk. a
+	; (2 servers found)
+	;; global options: +cmd
+	;; Got answer:
+	;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 13793
+	;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 8, ADDITIONAL: 14
 
-    ;; QUESTION SECTION:
-    ;www.tiscali.co.uk.             IN      A
+	;; OPT PSEUDOSECTION:
+	; EDNS: version: 0, flags:; udp: 4096
+	;; QUESTION SECTION:
+	;www.tiscali.co.uk.		IN	A
 
-    ;; AUTHORITY SECTION:
-    uk.                     172800  IN      NS      NS1.NIC.uk.
-    uk.                     172800  IN      NS      NS2.NIC.uk.
-    uk.                     172800  IN      NS      NS4.NIC.uk.
-    uk.                     172800  IN      NS      NS3.NIC.uk.
-    uk.                     172800  IN      NS      NS5.NIC.uk.
-    uk.                     172800  IN      NS      NSA.NIC.uk.
-    uk.                     172800  IN      NS      NSB.NIC.uk.
-    uk.                     172800  IN      NS      NS6.NIC.uk.
-    uk.                     172800  IN      NS      NS7.NIC.uk.
+	;; AUTHORITY SECTION:
+	uk.			172800	IN	NS	dns1.nic.uk.
+	uk.			172800	IN	NS	dns4.nic.uk.
+	uk.			172800	IN	NS	nsa.nic.uk.
+	uk.			172800	IN	NS	nsd.nic.uk.
+	uk.			172800	IN	NS	nsc.nic.uk.
+	uk.			172800	IN	NS	nsb.nic.uk.
+	uk.			172800	IN	NS	dns3.nic.uk.
+	uk.			172800	IN	NS	dns2.nic.uk.
 
-    ;; ADDITIONAL SECTION:
-    NS1.NIC.uk.             172800  IN      A       195.66.240.130
-    NS2.NIC.uk.             172800  IN      A       217.79.164.131
-    NS4.NIC.uk.             172800  IN      AAAA    2001:630:181:35::83
-    NS4.NIC.uk.             172800  IN      A       194.83.244.131
-    NS3.NIC.uk.             172800  IN      A       213.219.13.131
-    NS5.NIC.uk.             172800  IN      A       213.246.167.131
-    NSA.NIC.uk.             172800  IN      A       204.74.112.44
-    NSB.NIC.uk.             172800  IN      A       204.74.113.44
-    NS6.NIC.uk.             172800  IN      A       213.248.254.130
-    NS7.NIC.uk.             172800  IN      A       212.121.40.130
+	;; ADDITIONAL SECTION:
+	dns1.nic.uk.		172800	IN	A	213.248.216.1
+	dns1.nic.uk.		172800	IN	AAAA	2a01:618:400::1
+	dns4.nic.uk.		172800	IN	A	43.230.48.1
+	dns4.nic.uk.		172800	IN	AAAA	2401:fd80:404::1
+	nsa.nic.uk.			172800	IN	A	156.154.100.3
+	nsa.nic.uk.			172800	IN	AAAA	2001:502:ad09::3
+	nsd.nic.uk.			172800	IN	A	156.154.103.3
+	nsc.nic.uk.			172800	IN	A	156.154.102.3
+	nsb.nic.uk.			172800	IN	A	156.154.101.3
+	dns3.nic.uk.		172800	IN	A	213.248.220.1
+	dns3.nic.uk.		172800	IN	AAAA	2a01:618:404::1
+	dns2.nic.uk.		172800	IN	A	103.49.80.1
+	dns2.nic.uk.		172800	IN	AAAA	2401:fd80:400::1
 
-    ;; Query time: 98 msec
-    ;; SERVER: 198.41.0.4#53(198.41.0.4)
-    ;; WHEN: Mon May 16 12:34:06 2005
-    ;; MSG SIZE  rcvd: 373
+	;; Query time: 139 msec
+	;; SERVER: 198.41.0.4#53(198.41.0.4)
+	;; WHEN: Sun Apr 29 13:39:34 GMT 2018
+	;; MSG SIZE  rcvd: 466
 
 Note: We only got back NS records (plus some related information - the A
 records which correspond to those nameservers). This is a REFERRAL.
@@ -67,48 +71,49 @@ you _might_ find inconsistencies between root servers, but it's rare.
 random order; this doesn't matter because we are going to try every one
 anyway)
 
->     ns1.nic.uk.
->     ns2.nic.uk.
->     ns3.nic.uk.
->     ns4.nic.uk.
->     ns5.nic.uk.
->     ns6.nic.uk.
->     ns7.nic.uk.
->     nsA.nic.uk.
->     nsB.nic.uk.
+> dns1.nic.uk.
+> dns4.nic.uk.
+> nsa.nic.uk.
+> nsd.nic.uk.
+> nsc.nic.uk.
+> nsb.nic.uk.
+> dns3.nic.uk.
+> dns2.nic.uk.
 
 3. Repeat the query for all NS records in turn
 ----------------------------------------------
 
-    $ dig +norec @ns1.nic.uk. www.tiscali.co.uk. a
+    $ dig +norec @dns1.nic.uk. www.tiscali.co.uk. a
 
-    ; <<>> DiG 9.3.1 <<>> +norec @ns1.nic.uk. www.tiscali.co.uk. a
-    ; (1 server found)
-    ;; global options:  printcmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28452
-    ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 2, ADDITIONAL: 1
+	; <<>> DiG 9.10.6 <<>> +norec @dns1.nic.uk. www.tiscali.co.uk. a
+	; (2 servers found)
+	;; global options: +cmd
+	;; Got answer:
+	;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56040
+	;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 2, ADDITIONAL: 2
 
-    ;; QUESTION SECTION:
-    ;www.tiscali.co.uk.             IN      A
+	;; OPT PSEUDOSECTION:
+	; EDNS: version: 0, flags:; udp: 4096
+	;; QUESTION SECTION:
+	;www.tiscali.co.uk.		IN	A
 
-    ;; AUTHORITY SECTION:
-    tiscali.co.uk.          172800  IN      NS      ns0.as9105.com.
-    tiscali.co.uk.          172800  IN      NS      ns0.tiscali.co.uk.
+	;; AUTHORITY SECTION:
+	tiscali.co.uk.		172800	IN	NS	ns0.as9105.com.
+	tiscali.co.uk.		172800	IN	NS	ns0.tiscali.co.uk.
 
-    ;; ADDITIONAL SECTION:
-    ns0.tiscali.co.uk.      172800  IN      A       212.74.114.132
+	;; ADDITIONAL SECTION:
+	ns0.tiscali.co.uk.	172800	IN	A	212.74.114.132
 
-    ;; Query time: 20 msec
-    ;; SERVER: 195.66.240.130#53(195.66.240.130)
-    ;; WHEN: Mon May 16 12:37:23 2005
-    ;; MSG SIZE  rcvd: 97
+	;; Query time: 70 msec
+	;; SERVER: 213.248.216.1#53(213.248.216.1)
+	;; WHEN: Sun Apr 29 13:45:32 GMT 2018
+	;; MSG SIZE  rcvd: 108
 
 
-    $ dig +norec @ns2.nic.uk. www.tiscali.co.uk. a
+    $ dig +norec @dns2.nic.uk. www.tiscali.co.uk. a
     ... results snipped to save paper
 
-    $ dig +norec @ns3.nic.uk. www.tiscali.co.uk. a
+    $ dig +norec @dns3.nic.uk. www.tiscali.co.uk. a
     ... results snipped to save paper
     ... etc
 
@@ -131,39 +136,41 @@ other nameservers:
 
     $ dig +norec @ns0.tiscali.co.uk. www.tiscali.co.uk. a
 
-    ; <<>> DiG 9.3.1 <<>> +norec @ns0.tiscali.co.uk. www.tiscali.co.uk. a
-    ; (1 server found)
-    ;; global options:  printcmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35827
-    ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2
+	; <<>> DiG 9.10.6 <<>> +norec @ns0.tiscali.co.uk. www.tiscali.co.uk. a
+	; (1 server found)
+	;; global options: +cmd
+	;; Got answer:
+	;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38761
+	;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 3
 
-    ;; QUESTION SECTION:
-    ;www.tiscali.co.uk.             IN      A
+	;; OPT PSEUDOSECTION:
+	; EDNS: version: 0, flags:; udp: 4096
+	;; QUESTION SECTION:
+	;www.tiscali.co.uk.		IN	A
 
-    ;; ANSWER SECTION:
-    www.tiscali.co.uk.      3600    IN      A       212.74.101.10
+	;; ANSWER SECTION:
+	www.tiscali.co.uk.	300	IN	A	62.24.150.2
 
-    ;; AUTHORITY SECTION:
-    tiscali.co.uk.          3600    IN      NS      ns0.as9105.com.
-    tiscali.co.uk.          3600    IN      NS      ns0.tiscali.co.uk.
+	;; AUTHORITY SECTION:
+	tiscali.co.uk.		300	IN	NS	ns0.tiscali.co.uk.
+	tiscali.co.uk.		300	IN	NS	ns0.as9105.com.
 
-    ;; ADDITIONAL SECTION:
-    ns0.as9105.com.         2419200 IN      A       212.139.129.130
-    ns0.tiscali.co.uk.      2419200 IN      A       212.74.114.132
+	;; ADDITIONAL SECTION:
+	ns0.as9105.com.		604800	IN	A	212.139.129.130
+	ns0.tiscali.co.uk.	604800	IN	A	212.74.114.132
 
-    ;; Query time: 21 msec
-    ;; SERVER: 212.74.114.132#53(212.74.114.132)
-    ;; WHEN: Mon May 16 12:40:00 2005
-    ;; MSG SIZE  rcvd: 129
+	;; Query time: 71 msec
+	;; SERVER: 212.74.114.132#53(212.74.114.132)
+	;; WHEN: Sun Apr 29 13:54:23 GMT 2018
+	;; MSG SIZE  rcvd: 140
 
 
     $ dig +norec @ns0.as9105.com. www.tiscali.co.uk. a
     ...
-    ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2
+    ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 3
     ...
     ;; ANSWER SECTION:
-    www.tiscali.co.uk.      3600    IN      A       212.74.101.10
+    www.tiscali.co.uk.	300		IN		A		62.24.150.2
 
 This time, instead of getting another delegation, we have found the answer
 we are looking for. Note that the nameservers are both giving authoritative
@@ -207,7 +214,7 @@ Example: check ns0.as9105.com
     ... referral to [a-m].gtld-servers.net.
 
     $ dig +norec @a.gtld-servers.net. ns0.as9105.com. a
-    ;; flags: qr; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 1
+    ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 2, ADDITIONAL: 2
     ;; ANSWER SECTION:
     ns0.as9105.com.         172800  IN      A       212.139.129.130     <====
 
@@ -266,12 +273,13 @@ The non-existence of a RR is an important piece of information too. The
 response you get should look like this:
 
     $ dig +norec @ns0.tiscali.co.uk. wibble.tiscali.co.uk. a
-    ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 51165
-    ;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
-
+    ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 47360
+	;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+	
     ;; AUTHORITY SECTION:
-    tiscali.co.uk.          3600    IN      SOA     ns0.tiscali.co.uk.
-    hostmaster.uk.tiscali.com. 2005051301 10800 3600 604800 3600
+	tiscali.co.uk.		300	IN	SOA	ns0.tiscali.co.uk.
+	hostmaster.talktalkplc.com. 2018032300 10800 3600 604800 3600
+
 
 AA is set, but there is nothing in the answer apart from the SOA. The
 parameters in the SOA are used to work out how much negative caching is
