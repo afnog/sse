@@ -1,10 +1,10 @@
 DNS Exercise 3.1: Setting up a domain
 =====================================
 
-In this exercise, you will create a new domain, _something_.afnog.guru.
+In this exercise, you will create a new domain, _something_.afnog.nog-oc.org.
 You will create master nameservice on your own machine, and someone else
 will setup their machine to be a slave server for your domain. Then you
-will ask the administrator for the domain above you (afnog.guru) to delegate
+will ask the administrator for the domain above you (afnog.nog-oc.org) to delegate
 your domain to you.
 
 * IMPORTANT! Yesterday we configured unbound as a cache that would
@@ -37,7 +37,7 @@ We are now ready to start!
 Exercise
 --------
 
-*   Choose a new domain, write it here:  `___________________.afnog.guru.`  
+*   Choose a new domain, write it here:  `___________________.afnog.nog-oc.org`  
     (Do not choose any of the pc names, e.g. `pc23`, as your subdomain,
     because that would be confusing)
 
@@ -49,7 +49,7 @@ Exercise
     someone on a DIFFERENT table to you. (Remember RFC2182: secondaries must
     be on remote networks). You can have more than one slave if you wish.
 
-*   Create your zone file in `/var/cache/bind/master/xxxxx.afnog.guru`
+*   Create your zone file in `/var/cache/bind/master/xxxxx.afnog.nog-oc.org`
     (where xxxxxx is your chosen domain). You will need to be root for
     this to work. You will also need to create the directory
     /var/cache/bind/master (/var/cache/bind is already there).
@@ -84,8 +84,8 @@ Exercise
     the nameserver daemon:
 
         # named-checkconf
-        # named-checkzone xxxxx.afnog.guru. \
-			/var/cache/bind/master/xxxxx.afnog.guru.
+        # named-checkzone xxxxx.afnog.nog-oc.org. \
+			/var/cache/bind/master/xxxxx.afnog.nog-oc.org.
 
 *   If there are any errors, correct them*
 
@@ -108,8 +108,8 @@ Exercise
 *   Check that you and your slaves are giving authoritative answers for
     your domain:
 
-        # dig +norec @pcXX.sse.ws.afnog.org xxxxx.afnog.guru. soa
-        # dig +norec @pcYY.sse.ws.afnog.org xxxxx.afnog.guru. soa
+        # dig +norec @pcXX.sse.ws.afnog.org xxxxx.afnog.nog-oc.org. soa
+        # dig +norec @pcYY.sse.ws.afnog.org xxxxx.afnog.nog-oc.org. soa
 
     Check that you get an AA (authoritative answer) from both, and that
     the serial numbers match.
@@ -117,7 +117,7 @@ Exercise
 *   Now you are ready to request delegation. Bring the following information to
     the classroom instructor:
 
-        Domain name:          ___________________.afnog.guru.
+        Domain name:          ___________________.afnog.nog-oc.org.
 
         Master nameserver:    pc____.sse.ws.afnog.org
 
@@ -135,7 +135,7 @@ Exercise
       requesting delegation for
     - The slave(s) are not on the same desk as you
 
-*   Once you have delegation, try to resolve www.xxxxx.afnog.guru.:
+*   Once you have delegation, try to resolve www.xxxxx.afnog.nog-oc.org.:
 
     - On your own machine
     - On someone else's machine (who is not slave for you)
