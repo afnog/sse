@@ -54,13 +54,13 @@ automatically.
 	<thead><tr><th>Name</th><th>Initials</th><th>From</th><th>Country</th></tr></thead>
 	<tbody>
 		<!-- sorted by surname -->
+		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td></td> <td>Kenya</td> </tr>
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td></td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
-		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 	</tbody>
 </table>
-<b> Lab setup with thanks to Patrick Okui!! </b>
+			<b> Lab setup with thanks to Patrick Okui! </b>
 
 ### Participants
 
