@@ -170,7 +170,7 @@ automatically.
 ### DNS
 [DNS]: #dns
 
-#### [Joe Abley](#JA)
+#### [Michuki Mwangi](#MM)
 
 ##### DNS Fundamentals
 [DNS Fundamentals]: #dns-fundamentals
