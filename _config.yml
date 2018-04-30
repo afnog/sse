@@ -4,5 +4,5 @@ defaults:
       path: "" # empty string for all files
     values:
       layout: "default"
-      year: 2017
+      year: 2018
       root: .
