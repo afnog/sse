@@ -24,7 +24,7 @@ Jump within this page:
 
 ## Introduction
 
-This course on Scalable Internet Services is part of the
+This course on Scalable Internet Services in English (SS-E) is part of the
 [AfNOG {{page.year}} Workshop on Network Technology](http://www.ws.afnog.org/afnog{{page.year}}/index.html),
 held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
 in Dakar, Senegal, April-May {{page.year}}.
