@@ -409,10 +409,23 @@ If you want to host, you need a Linux or Mac desktop with `lsyncd`, `rsync` and 
 these steps:
 
 * Add `git@github.com:afnog/afnog.github.io.git` to SparkleShare
-* Install Jekyll: `sudo gem install jekyll execjs therubyracer`
+* Install Jekyll for Ubuntu/Debian: `sudo gem install jekyll execjs therubyracer`
 * Open a command prompt and go to ~/SparkleShare/sse
 * Run `make serve`
 * View the results in your browser at <http://localhost:4000/> (generated HTML files)
+
+
+### Syncing to the Afnog webserver (ws.afnog.org)
+
+For updates to automatically sync to the webserver in use at the AFNOG workshop, do the following:
+* Login to the NOC Box
+* Install Jekyll `sudo pkg install rubygem-jekyll`
+* Go to ~cd /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX`
+* sudo mkdir sse-git-afnog20XX
+* cd sse-git-afnog20XX/
+* git init
+* git pull -p https://github.com/afnog/sse.git
+* jekyll build --destination /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX/sse/
 
 ### Source code (Markdown)
 
