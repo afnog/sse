@@ -89,7 +89,7 @@ automatically.
 |16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Dovecot][], [Squirrelmail][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|[DNSSEC][], [Ansible][]	|Instructor Dinner |Closing Ceremony
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
 {: .timetable width="80%"}
 
 <div class="topics" markdown="1">
