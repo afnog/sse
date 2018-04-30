@@ -60,6 +60,7 @@ automatically.
 		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 	</tbody>
 </table>
+Lab setup with thanks to Patrick Okui
 
 ### Participants
 
