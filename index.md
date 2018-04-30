@@ -56,7 +56,7 @@ automatically.
 		<!-- sorted by surname -->
 		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
-		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td><a href="www.vodafone.com.gh">Vodafone Ghana</a></td> <td>Ghana</td> </tr>
+		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td><a href="http://www.vodafone.com.gh">Vodafone Ghana</a></td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 	</tbody>
 </table>
