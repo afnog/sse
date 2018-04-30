@@ -68,7 +68,7 @@ automatically.
 
 |First Names		|Surname	|Organisation				|Country
 |:-                     |:-             |:-                                     |:-
-|PENDINF 		|PENDING		|				|
+|PENDING		|PENDING		|				|
 
 
 ### Timetable
