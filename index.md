@@ -100,7 +100,7 @@ automatically.
 ### Introduction
 [Introduction]: #introduction
 
-#### [Ayitey Bulley](#AB)
+#### [Isabel Odida](#IO)
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 
