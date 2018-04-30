@@ -34,7 +34,7 @@ We use hands-on training in a well-equipped classroom over a five-day period to 
 ### Who should attend
 
 Technical staff who are now providing Internet Services, or those who will be involved
-in the establishment and/or provisioning of a basic national Internet Services in the country.
+in the establishment and/or provisioning of basic national Internet Services in the country.
 
 ### Prerequisites
 
