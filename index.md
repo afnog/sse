@@ -54,12 +54,9 @@ automatically.
 	<thead><tr><th>Name</th><th>Initials</th><th>From</th><th>Country</th></tr></thead>
 	<tbody>
 		<!-- sorted by surname -->
-		<tr id="JA"> <td>Joe Abley</td>      <td>JA</td> <td><a href="http://www.nsrc.org/">NSRC</a></td> <td>Canada</td> </tr>
-		<tr id="AB"> <td>Ayitey Bulley</td>  <td>AB</td> <td></td> <td>Ghana</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td></td> <td>Kenya</td> </tr>
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td></td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
-		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td></td> <td>UK</td> </tr>
 		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 	</tbody>
 </table>
@@ -71,13 +68,7 @@ automatically.
 
 |First Names		|Surname	|Organisation				|Country
 |:-                     |:-             |:-                                     |:-
-|HELLEN 		|NAKAWUNGU		|				|
-|ABEAKU 		|BADU ARTHUR            |				|
-|ZOUMANA 		|COULIBALY              |				|
-|MUGABE 		|H. PATRICK             |				|
-|LYDIA 			|AKIRIZA                |				|
-|JEZREEL 		|M. NYANGE              |				|
-
+|PENDINF 		|PENDING		|				|
 
 
 ### Timetable
