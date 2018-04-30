@@ -60,7 +60,6 @@ automatically.
 		<tr id="FK"> <td>Frank Kuse</td>     <td>FK</td> <td></td> <td>Ghana</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 		<tr id="CW"> <td>Chris Wilson</td>   <td>CW</td> <td></td> <td>UK</td> </tr>
-		<tr id="EO"> <td>Emmanuel Odoom</td> <td>EO</td> <td></td> <td>Ghana</td> </tr>
 		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 	</tbody>
 </table>
