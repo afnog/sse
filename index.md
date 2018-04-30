@@ -24,21 +24,21 @@ Jump within this page:
 
 ## Introduction
 
-This course on Scalable Internet Services is part of the
+This course on Scalable Internet Services in English (SS-E) is part of the
 [AfNOG {{page.year}} Workshop on Network Technology](http://www.ws.afnog.org/afnog{{page.year}}/index.html),
 held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
-in Nairobi, Kenya, May-June {{page.year}}.
+in Dakar, Senegal, April-May {{page.year}}.
 
 We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the configuration and operation of large scale Internet services.
 
 ### Who should attend
 
 Technical staff who are now providing Internet Services, or those who will be involved
-in the establishment and/or provisioning of a basic national Internet Services in the country.
+in the establishment and/or provisioning of basic Internet Services.
 
 ### Prerequisites
 
-Experience using and administering *NIX Servers, Name Servers, Web Servers and Mail Servers.
+Experience using and administering *NIX Servers, Name Servers, Web Servers, Mail Servers and similar services. Knowledge of Networking is a plus!
 
 ### Help!
 
@@ -60,7 +60,7 @@ automatically.
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 	</tbody>
 </table>
-<b> Lab setup with thanks to Patrick Okui! </b>
+<b> Lab setup with many thanks to Patrick Okui! </b>
 
 ### Participants
 
@@ -89,7 +89,7 @@ automatically.
 |16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Dovecot][], [Squirrelmail][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
-|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|[DNSSEC][], [Ansible][]	|Instructor Dinner |Closing Ceremony
+|**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
 {: .timetable width="80%"}
 
 <div class="topics" markdown="1">
@@ -100,7 +100,7 @@ automatically.
 ### Introduction
 [Introduction]: #introduction
 
-#### [Ayitey Bulley](#AB)
+#### [Isabel Odida](#IO)
 
 * Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
 
@@ -170,7 +170,7 @@ automatically.
 ### DNS
 [DNS]: #dns
 
-#### [Joe Abley](#JA)
+#### [Michuki Mwangi](#MM)
 
 ##### DNS Fundamentals
 [DNS Fundamentals]: #dns-fundamentals
@@ -275,7 +275,7 @@ Goal: DNSSEC High Level Awareness.
 + Understanding email - [Email Overview](postfix/01_email_preso.pdf)
 + Postfix - [Introduction to Postfix](postfix/postfix_preso.pdf)
 + Some Email Best Practices -  [Email Best Practices](postfix/email_best_practices.pdf)
-* Exercise 1 - Add MX record [Add MX record](postfix/add-MX-record.txt)
+* Exercise 1 - Add MX records [Add MX record](postfix/add-MX-record.txt)
 * Exercise 2 - [Installing Postfix](postfix/postfix_install.txt)
 * Exercise 3 - [Command line Email](postfix/commandline_email.txt)
 * Exercise 4 - [Postix Enable HELO](postfix/postfix_hardening.txt)
