@@ -38,7 +38,7 @@ in the establishment and/or provisioning of basic national Internet Services in 
 
 ### Prerequisites
 
-Experience using and administering *NIX Servers, Name Servers, Web Servers and Mail Servers. Knowledge of Networking is a plus!
+Experience using and administering *NIX Servers, Name Servers, Web Servers, Mail Servers and similar services. Knowledge of Networking is a plus!
 
 ### Help!
 
