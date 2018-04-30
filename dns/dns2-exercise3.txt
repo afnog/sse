@@ -1,6 +1,14 @@
 Exercise 2.3: Building a DNS resolver
 =====================================
 
+
+0. Install DNS Utilities 
+------------------------------------------
+
+If dig utility is not installed we need to install it as follows;
+
+# apt-get install dnsutils
+
 1. Install Unbound if it's not already there
 --------------------------------------------
 
@@ -22,7 +30,7 @@ command below will not work if unbound is not installed.
     ...
     ... and so on
     ...
-    Version 1.4.22
+    Version 1.6.0
     ...
     ...
     $
@@ -49,30 +57,29 @@ Then run these commands:
 
 You should see something like this:
 
-    root@pc37:~# unbound-control status
-    version: 1.4.22
-    verbosity: 1
-    threads: 1
-    modules: 2 [ validator iterator ]
-    uptime: 110 seconds
-    unbound (pid 5013) is running...
-    root@pc37:~# 
+	afnog@pc25:~$ sudo unbound-control status
+	version: 1.6.0
+	verbosity: 1
+	threads: 1
+	modules: 2 [ validator iterator ]
+	uptime: 20 seconds
+	options: control(ssl)
+	unbound (pid 1151) is running...
+	afnog@pc25:~$ 
+
 
 It's also good practice to look in the system logs and make sure you
 don't see anything scary there:
 
-    root@pc37:/var/log# tail syslog
-    May 27 06:41:55 pc37 systemd[1]: Starting (null)...
-    May 27 06:41:55 pc37 unbound-anchor: /var/lib/unbound/root.key has content
-    May 27 06:41:55 pc37 unbound-anchor: success: the anchor is ok
-    May 27 06:41:55 pc37 unbound[4996]: Starting recursive DNS server: unbound.
-    May 27 06:41:55 pc37 unbound: [5013:0] notice: init module 0: validator
-    May 27 06:41:55 pc37 unbound: [5013:0] notice: init module 1: iterator
-    May 27 06:41:55 pc37 systemd[1]: Started (null).
-    May 27 06:41:55 pc37 unbound: [5013:0] info: start of service (unbound 1.4.22).
-    May 27 06:41:55 pc37 systemd[1]: Starting Host and Network Name Lookups.
-    May 27 06:41:55 pc37 systemd[1]: Reached target Host and Network Name Lookups.
-    root@pc37:/var/log# 
+	afnog@pc25:/var/log$ sudo tail syslog 
+	Apr 30 13:40:33 pc25 systemd[1]: Starting Unbound DNS server...
+	Apr 30 13:40:33 pc25 package-helper[1146]: /var/lib/unbound/root.key has content
+	Apr 30 13:40:33 pc25 package-helper[1146]: success: the anchor is ok
+	Apr 30 13:40:33 pc25 systemd[1]: Started Unbound DNS server.
+	Apr 30 13:40:33 pc25 unbound: [1151:0] notice: init module 0: validator
+	Apr 30 13:40:33 pc25 unbound: [1151:0] notice: init module 1: iterator
+	Apr 30 13:40:33 pc25 unbound: [1151:0] info: start of service (unbound 1.6.0).
+	afnog@pc25:/var/log$ 
 
 That all looks healthy. We don't see any lines describing errors or
 failures.
@@ -98,24 +105,24 @@ By default, unbound will only process requests from localhost. We can
 test this by trying to send a query from another machine, or from our
 laptops (for laptops that have dig):
 
-  $ dig @pc37.sse.ws.afnog.org afnog.org mx
-  ; <<>> DiG 9.8.3-P1 <<>> @pc37.sse.ws.afnog.org afnog.org mx
-  ; (1 server found)
-  ;; global options: +cmd
-  ;; Got answer:
-  ;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 50290
-  ;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
-  ;; WARNING: recursion requested but not available
+ISOC-Y7G3QJ:~ michukimwangi$ dig @pc25.sse.ws.afnog.org afnog.org mx
 
-  ;; QUESTION SECTION:
-  ;afnog.org.			IN	MX
+; <<>> DiG 9.10.6 <<>> @pc25.sse.ws.afnog.org afnog.org mx
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 28754
+;; flags: qr rd ad; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
 
-  ;; Query time: 27 msec
-  ;; SERVER: 197.4.11.137#53(197.4.11.137)
-  ;; WHEN: Wed May 27 07:46:57 2015
-  ;; MSG SIZE  rcvd: 31
-  
-  [scallop:~]% 
+;; Query time: 47 msec
+;; SERVER: 196.200.219.125#53(196.200.219.125)
+;; WHEN: Mon Apr 30 14:26:25 GMT 2018
+;; MSG SIZE  rcvd: 12
+
+ISOC-Y7G3QJ:~ michukimwangi$ 
+
+NB: If the result from the above exercise is a connection timed out - this is because the unbound config is not bound to any interface. 
 
 The return code "REFUSED" indicates that Unbound has refused to
 answer our query. We can configure Unbound to accept requests from
