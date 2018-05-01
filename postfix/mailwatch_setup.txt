@@ -53,4 +53,7 @@ Save and Exit
 
 
 
+#SPAMASSASSIN
+apt install spamassassin spamc 
+
 
