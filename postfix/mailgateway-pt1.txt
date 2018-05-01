@@ -41,11 +41,16 @@ You may have read somewhere on Postfix.org that MailScanner shouldn’t be used 
 
 	$sudo apt-get install apache2 php7.0-cli php7.0 mariadb-server libdbd-mysql-perl php7.0-gd php7.0-mysql  wget php-pear mailutils unrar-free apache2 libapache2-mod-php7.0 libhttp-date-perl
 
-$apt-get install spamassassin spamc libnet-ip-perl
+$sudo apt-get install spamassassin spamc libnet-ip-perl
 
 If it fails, remove the apt-cache proxy
 
 $sudo rm /etc/apt/apt.conf.d/01proxy
+
+
+then try again
+
+$sudo apt-get install spamassassin spamc libnet-ip-perl
 
 
 YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
