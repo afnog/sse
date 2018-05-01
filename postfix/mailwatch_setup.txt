@@ -23,5 +23,7 @@ INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'A
 exit;
 
 
-mv 
+cp -R /home/afnog/MailWatch-1.2.2/mailscanner /var/www/html/mailwatch
+
+vi 
 
