@@ -25,5 +25,20 @@ exit;
 
 cp -R /home/afnog/MailWatch-1.2.2/mailscanner /var/www/html/mailwatch
 
-vi 
+vi /etc/apache2/sites-available/mailwatch.conf
+
+Alias /mailwatch  /var/www/html/mailwatch
+    <Directory />
+        # Apache 2.4
+        Require all granted
+        
+        # Apache 2.2
+        #Order allow,deny
+        #Allow from all
+    </Directory>
+
+    AddType application/x-httpd-php .php
+    DirectoryIndex index.php
+
+service apache2 restart
 
