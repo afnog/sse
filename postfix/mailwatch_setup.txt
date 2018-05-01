@@ -14,9 +14,10 @@ GRANT FILE ON *.* TO mailwatch@localhost IDENTIFIED BY 'mailwatch';
 FLUSH PRIVILEGES;
 quit
 
-ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatch.pm /usr/share/MailScanner/perl/custom/
-ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLSpamSettings.pm /usr/share/MailScanner/perl/custom/
-ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLBlackWhiteList.pm /usr/share/MailScanner/perl/custom/
+cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatchConf.pm 
+cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatch.pm /usr/share/MailScanner/perl/custom/
+cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLSpamSettings.pm /usr/share/MailScanner/perl/custom/
+cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLBlackWhiteList.pm /usr/share/MailScanner/perl/custom/
 
 mysql mailscanner -u mailwatch -p
 INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'Afnog', type = 'A';
