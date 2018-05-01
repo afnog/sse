@@ -18,7 +18,7 @@ Try From the Server, telnet localhost port 25
 
 Then type the following pressing enter after each line:
 
-	mail from: manager@theGrandLottery.com
+	mail from: manager@192.168.0.4
 
 You should be prompted to require HELO first
 
@@ -26,10 +26,26 @@ You should be prompted to require HELO first
 
 ************* Part 2 ***************
 
-Sending email to the world 
+Require a fully qualified domain name from the sender to approve email delivery
+
+sudo sh -c "echo smtpd_sender_restrictions = reject_unknown_sender_domain >> /etc/postfix/main.cf" 
 
 
-sudo sh -c "echo inet_protocols = ipv4 >>  /etc/postfix/main.cf" 
+telnet your server's port 25
+
+helo bla
+mail from: sgfg@sfgdfgdfgdfgdfgdfgkdfjgkdfgjkdfgd.com
+rcpt to: afnog@localhost 
 
 
-echo "This is my email, hello" | mail -s "This is a test message" yyy@gmail.com
+************* Part 3 ***************
+Require the sender to have a Fully Qualified Domain Name on the Helo
+
+sudo sh -c "echo smtpd_helo_restrictions = reject_non_fqdn_helo_hostname >> /etc/postfix/main.cf" 
+
+helo bla
+mail from: sdfd@google.com
+rcpt to: afnog@localhost
+
+
+
