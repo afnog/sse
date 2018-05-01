@@ -19,5 +19,8 @@ ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLSpamSettings.pm /u
 ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLBlackWhiteList.pm /usr/share/MailScanner/perl/custom/
 
 mysql mailscanner -u mailwatch -p
-INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'Afnog', type = 'A'
+INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'Afnog', type = 'A';
+exit;
+
+
 
