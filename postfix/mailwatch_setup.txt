@@ -1,0 +1,23 @@
+Mailwatch Debian
+
+cd /home/afnog
+wget https://github.com/mailwatch/MailWatch/archive/v1.2.2.zip
+unzip v1.2.2.zip 
+cd MailWatch-1.2.2
+service mysql start
+mysql < create.sql
+
+mysql -u root -p
+
+GRANT ALL ON mailscanner.* TO mailwatch@localhost IDENTIFIED BY 'mailwatch';
+GRANT FILE ON *.* TO mailwatch@localhost IDENTIFIED BY 'mailwatch';
+FLUSH PRIVILEGES;
+quit
+
+ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatch.pm /usr/share/MailScanner/perl/custom/
+ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLSpamSettings.pm /usr/share/MailScanner/perl/custom/
+ln -s /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLBlackWhiteList.pm /usr/share/MailScanner/perl/custom/
+
+mysql mailscanner -u mailwatch -p
+INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'Afnog', type = 'A'
+
