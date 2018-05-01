@@ -45,7 +45,7 @@ $apt-get install spamassassin spamc libnet-ip-perl
 
 If it fails, remove the apt-cache proxy
 
-$rm root@pc23:/home/afnog/MailScanner-5.0.2-1# cd 
+$sudo rm /etc/apt/apt.conf.d/01proxy
 
 
 YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
