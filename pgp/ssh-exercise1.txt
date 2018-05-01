@@ -54,6 +54,9 @@ If you are using OpenSSH:
 
     $ cat /home/afnog/.ssh/id_rsa.pub
 
+If you are using Putty.exe:
+
+You can follow the instructions available on the following url https://www.ssh.com/ssh/putty/windows/puttygen
 
 2. Copy your public key to your server
 
