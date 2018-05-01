@@ -39,7 +39,7 @@ You may have read somewhere on Postfix.org that MailScanner shouldn’t be used 
 === Install The Tools:====
 =======================
 
-	$sudo apt-get install apache2 php7.0-cli php7.0 mariadb-server libdbd-mysql-perl php7.0-gd php7.0-mysql  wget php-pear mailutils unrar-free apache2 libapache2-mod-php7.0
+	$sudo apt-get install apache2 php7.0-cli php7.0 mariadb-server libdbd-mysql-perl php7.0-gd php7.0-mysql  wget php-pear mailutils unrar-free apache2 libapache2-mod-php7.0 libhttp-date-perl
 
 
 
