@@ -23,4 +23,5 @@ INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'A
 exit;
 
 
+mv 
 
