@@ -51,7 +51,7 @@ YOU WILL BE PROMPTED FOR A MYSQL PASSWORD. USE afnog
 
 	$cd /home/afnog
 	$wget --no-check-certificate https://s3.amazonaws.com/msv5/release/MailScanner-5.0.7-3.deb.tar.gz
-	$tar -xzf MailScanner-5.0.2-1.deb.tar.gz
+	$tar xzf MailScanner-5.0.7-3.deb.tar.gz 
 	$cd MailScanner-5.0.2-1
 	$sudo ./install.sh
 
