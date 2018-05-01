@@ -1,3 +1,11 @@
+
+cd /home/afnog
+wget https://s3.amazonaws.com/msv5/release/MailScanner-5.0.2-1.deb.tar.gz
+tar -xzf MailScanner-5.0.2-1.deb.tar.gz
+cd MailScanner-5.0.2-1
+sudo ./install.sh
+
+
 Mailwatch Debian
 
 cd /home/afnog
