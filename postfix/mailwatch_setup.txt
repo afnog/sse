@@ -40,10 +40,10 @@ Alias /mailwatch  /var/www/html/mailwatch
     AddType application/x-httpd-php .php
     DirectoryIndex index.php
 
-service apache2 restart
+service apache2 restart 
 
 
 ###### EDIT POSTFIX
 sudo sh -c "echo header_checks = regexp:/etc/postfix/header_checks >> /etc/postfix/main.cf"
-sudo sh -c "/^Received:/ HOLD
+sudo sh -c "/^Received:/ HOLD > /etc/postfix/header_checks" 
 
