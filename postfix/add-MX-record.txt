@@ -4,7 +4,7 @@
 
 	$nano YYY.afnog.nog-oc.org
 
-At the bottom of the file add the following lines
+At the bottom of the file add the following lines:
 
 
 	mail IN A 196.200.219.XX
