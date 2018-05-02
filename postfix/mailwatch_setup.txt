@@ -1,68 +1,25 @@
-
-cd /home/afnog
-wget --no-check-certificate https://s3.amazonaws.com/msv5/release/MailScanner-5.0.2-1.deb.tar.gz
-tar -xzf MailScanner-5.0.2-1.deb.tar.gz
-cd MailScanner-5.0.2-1
-sudo ./install.sh
-
-
-Mailwatch Debian
-
-cd /home/afnog
-wget https://github.com/mailwatch/MailWatch/archive/v1.2.2.zip
-unzip v1.2.2.zip 
-cd MailWatch-1.2.2
-service mysql start
-mysql < create.sql
-
-mysql -u root -p
-
-GRANT ALL ON mailscanner.* TO mailwatch@localhost IDENTIFIED BY 'mailwatch';
-GRANT FILE ON *.* TO mailwatch@localhost IDENTIFIED BY 'mailwatch';
-FLUSH PRIVILEGES;
-quit
-
-cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatchConf.pm 
-cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/MailWatch.pm /usr/share/MailScanner/perl/custom/
-cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLSpamSettings.pm /usr/share/MailScanner/perl/custom/
-cp /home/afnog/MailWatch-1.2.2/MailScanner_perl_scripts/SQLBlackWhiteList.pm /usr/share/MailScanner/perl/custom/
-
-mysql mailscanner -u mailwatch -p
-INSERT INTO users SET username = 'admin', password = MD5('afnog'), fullname = 'Afnog', type = 'A';
-exit;
-
-
-cp -R /home/afnog/MailWatch-1.2.2/mailscanner /var/www/html/mailwatch
-
-vi /etc/apache2/sites-available/mailwatch.conf
-
-Alias /mailwatch  /var/www/html/mailwatch
-    <Directory />
-        # Apache 2.4
-        Require all granted
-        
-        # Apache 2.2
-        #Order allow,deny
-        #Allow from all
-    </Directory>
-
-    AddType application/x-httpd-php .php
-    DirectoryIndex index.php
-
-service apache2 restart 
-
-
-###### EDIT POSTFIX
-sudo sh -c "echo header_checks = regexp:/etc/postfix/header_checks >> /etc/postfix/main.cf"
-sudo vi /etc/postfix/header_checks
-
-/^Received:/ HOLD
-
-Save and Exit
+apt-get install sudo -y
+sudo -i
+cd /tmp
+sudo apt-get install ca-certificates -yq
+wget http://sourceforge.net/projects/scrollout/files/update/scrolloutf1.tar/download -O scrolloutf1.tar
+tar -xvf scrolloutf1.tar
+chmod 755 /tmp/scrolloutf1/www/bin/*
+/tmp/scrolloutf1/www/bin/install.sh
 
 
 
-#SPAMASSASSIN
-apt install spamassassin spamc 
+$TTL 10m
+@       IN     SOA    kevin.nog-oc.org. yourname.example.com. (
+   2018050100    ; Serial
+ 10m           ; Refresh
+ 10m           ; Retry
+ 4w            ; Expire
+ 10m )         ; Negative
 
+   IN      NS      pc28.sse.ws.afnog.org.   ; master
 
+@         IN      MX  10     pc28-mg.kevin.nog-oc.org.         ; The Mail gateway
+@	IN      MX   20 mail.kevin.nog-oc.org. ; The real mail server
+pc25-mg IN A 196.200.219.122
+mail IN A 196.200.219.128

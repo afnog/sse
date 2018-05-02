@@ -2,14 +2,13 @@
 
 	$cd /var/cache/bind/master
 
-	$nano YYY.afnog.guru
-
+	$nano YYY.afnog.nog-oc.org
 
 At the bottom of the file add the following lines
 
 
 	mail IN A 196.200.219.XX
-	@ IN MX 10 mail.YYY.afnog.guru.
+	@ IN MX 10 mail.YYY.afnog.nog-oc.org.
 
 
 Replace XXX with your PC number name.
