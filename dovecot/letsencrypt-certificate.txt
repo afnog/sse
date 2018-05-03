@@ -11,7 +11,7 @@
 
 #### INSTALL THE CERTIFICATE USING LETSENCRYPT #####
 
-	$./letsencrypt-auto --apache -d YYY.afnog.gure -d pcXX.sse.ws.afnog.org
+	$./letsencrypt-auto --apache -d YYY.afnog.nog-oc.org -d pcXX.sse.ws.afnog.org
 
 
 
@@ -23,7 +23,7 @@
 	Enter email address (used for urgent renewal and security notices) (Enter 'c' 	to
 	cancel): afnog@YYY.afnog.guru
 
-Enter your afnog.guru email address
+Enter your YYY.afnog.nog-oc.org email address
 
 
 ####### YOU WILL SEE
@@ -88,4 +88,4 @@ IMPORTANT NOTES:
    Donating to EFF:                    https://eff.org/donate-le
 
 
-######## DONE - browse you afnog.guru domain or your pcXX.sse.ws.afnog.org and see if it worked
+######## DONE - browse you YYY.afnog.nog-oc.or domain or your pcXX.sse.ws.afnog.org and see if it worked
