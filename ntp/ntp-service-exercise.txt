@@ -39,11 +39,11 @@ For this class, we will install ntp and ntpdate using packages.
 
 	OR:
 
-	$ sudo service nap start
+	$ sudo service ntp start
 
 Check if the ntp service you have just installed works by issuing the following command
  
-	$ sudo ntpdq -pn
+	$ sudo ntpq -pn
 
 
 -------------------
