@@ -34,13 +34,21 @@
 	Save and exit and restart apache2
 
 
-3. Restart Apache
+
+3. Enable plain logins in Dovecot
+
+	sudo vi /etc/dovecot/conf.d/10-auth
+
+
+4. Restart Apache
 
 	sudo service apache2 restart
 
 
 
-4. Browse to the URL:
+
+
+5. Browse to the URL:
 
 	http://YYY.afnog.nog-oc.org/webmail?admin
 
