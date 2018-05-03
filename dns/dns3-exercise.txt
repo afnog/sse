@@ -4,8 +4,7 @@ DNS Exercise 3.1: Setting up a domain
 In this exercise, you will create a new domain, _something_.afnog.nog-oc.org.
 You will create master nameservice on your own machine, and someone else
 will setup their machine to be a slave server for your domain. Then you
-will ask the administrator for the domain above you (afnog.nog-oc.org) to delegate
-your domain to you.
+will ask the administrator for the domain above you (afnog.nog-oc.org) to delegate your domain to you.
 
 * IMPORTANT! Yesterday we configured unbound as a cache that would
 * respond to DNS requests from other clients in the AfNOG network.
