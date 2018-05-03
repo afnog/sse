@@ -271,12 +271,11 @@ Goal: DNSSEC High Level Awareness.
 [Postfix]: #postfix
 
 
-### Squirrelmail
+### Rainloop
 [Rainloop]: #rainloop
 #### [Kevin Chege](#KC)
 
-*
-* [Exercise/Text](rainloop/rainloop-setup.txt)
+* [Exercise-1/Text](rainloop/rainloop-setup.txt)
 
 
 #### [Kevin Chege](#KC)
