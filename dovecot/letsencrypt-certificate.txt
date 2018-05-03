@@ -1,3 +1,17 @@
+##### ensure you have the correct DNS Records
+
+Open your master zone file
+
+	$sudo vi /var/cache/bind/master/YYY.afnog.nog-oc.org
+
+Add a line like the one below and increase the serial
+
+	@   IN A 196.200.219.XXX
+
+Save and exit and reload Bind
+
+	$sudo rndc reload
+
 
 
 ##### INSTALL lets encrypt
