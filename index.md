@@ -273,9 +273,11 @@ Goal: DNSSEC High Level Awareness.
 
 ### Rainloop
 [Rainloop]: #rainloop
-#### [Kevin Chege](#KC)
 
-* [Exercise-1/Text](rainloop/rainloop-setup.txt)
+Rainloop is a free to use WebMail client that does not require a MySQL database
+
+* Installing Rainloop - Part 1[Exercise-1/Text](rainloop/rainloop-setup.txt)
+* Installing Rainloop - Part 2[Exercise-2/PDF](rainloop/rainloop-part2.pdf)
 
 
 #### [Kevin Chege](#KC)
