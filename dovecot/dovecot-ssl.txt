@@ -35,3 +35,11 @@ Obtain the directory where the certificate is stored then:
 	$ telnet localhost 993
 
 	$ telnet localhost 995
+
+#### Add the class IP Block to Postfix to allow mail clients from the LAN to access SMTP
+
+	$sudo vi /etc/postfix/main.cf
+
+
+Look for this line:
+
