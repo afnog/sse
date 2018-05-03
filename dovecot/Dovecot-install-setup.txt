@@ -99,6 +99,17 @@ passdb {
 afnog@pcXX:/etc/dovecot/conf.d$ sudo service dovecot restart
 
 
+IF YOU GET AN ERROR, EDIT THE FOLLOWING FILE
+
+	$sudo vi /etc/default/dovecot
+
+then set
+
+	ENABLED=1
+
+Save and exit and try restart Dovecot
+
+
 9.0 You can now go into your personal or official work email address and send an email to afnog@________.afnog.nog-oc.org
 
 

@@ -1,0 +1,52 @@
+
+##### Install Webmail - RainLoop
+
+1. Create a directory for Roundcube
+
+	sudo apt-get install unzip php7.0 php7.0-dom php7.0-curl
+	sudo wget http://www.rainloop.net/repository/webmail/rainloop-community-latest.zip
+	sudo mkdir /var/www/rainloop
+	sudo unzip rainloop-community-latest.zip -d /var/www/rainloop
+	sudo chown -R www-data.www-data /var/www/rainloop
+
+
+2. Edit the Apache config and add the below
+
+	sudo vi /etc/apache2/sites-enabled/rainloop.conf
+
+
+		Alias /webmail /var/www/rainloop 
+		<Directory /var/www/rainloop>
+ 		DirectoryIndex index.php
+ 		Options -Indexes +ExecCGI
+  		AllowOverride All
+  		Order deny,allow
+  		Allow from all
+  		Require all granted
+		</Directory>
+
+		<Directory /var/www/rainloop/data>
+ 		 Options -Indexes
+  		Deny from all
+		</Directory>
+
+
+	Save and exit and restart apache2
+
+
+3. Restart Apache
+
+	sudo service apache2 restart
+
+
+
+4. Browse to the URL:
+
+	http://YYY.afnog.nog-oc.org/webmail?admin
+
+
+	Username = admin
+	Password = 12345
+
+
+Go to Part 2
