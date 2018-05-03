@@ -37,7 +37,16 @@
 
 3. Enable plain logins in Dovecot
 
-	sudo vi /etc/dovecot/conf.d/10-auth
+	sudo vi /etc/dovecot/conf.d/10-auth.conf
+
+
+	Add this line
+
+	auth_mechanisms = plain login
+
+    Save and restart Dovecot
+
+	sudo service dovecot restart
 
 
 4. Restart Apache
