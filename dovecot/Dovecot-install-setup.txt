@@ -99,7 +99,7 @@ passdb {
 afnog@pcXX:/etc/dovecot/conf.d$ sudo service dovecot restart
 
 
-9.0 You can now go into your personal or official work email address and send an email to afnog@________.afnog.guru
+9.0 You can now go into your personal or official work email address and send an email to afnog@________.afnog.nog-oc.org
 
 
 10.0 Test to make sure that you can login to Dovecot and check email from your machine or any other place

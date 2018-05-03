@@ -16,8 +16,8 @@ Obtain the directory where the certificate is stored then:
 
 ###Then add the following two lines. Adjust YYY to fit your setup
 
-	ssl_cert = </etc/letsencrypt/live/YYY.afnog.guru/fullchain.pem
-	ssl_key = </etc/letsencrypt/live/YYY.afnog.guru/privkey.pem
+	ssl_cert = </etc/letsencrypt/live/YYY.afnog.nog-oc.org/fullchain.pem
+	ssl_key = </etc/letsencrypt/live/YYY.afnog.nog-oc.org/privkey.pem
 
 
 #save and exit
