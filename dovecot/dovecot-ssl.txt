@@ -41,5 +41,8 @@ Obtain the directory where the certificate is stored then:
 	$sudo vi /etc/postfix/main.cf
 
 
-Look for this line:
+Look for this line and add your IP Block:
 
+	mynetworks = 196.200.219.0/24 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+
+Save exit and restart Postfix
