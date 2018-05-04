@@ -26,7 +26,7 @@ Save and Exit
 	$sudo nano /etc/postfix/transport
 	
 	##Add your neighbor's server where his mail will be routed to. Replace YY with your friends IP
-	yourfriendsdomain,afnog.guru   smtp:[pcYY.sse.ws.afnog.org]
+	yourfriendsdomain.afnog.guru   smtp:[pcYY.sse.ws.afnog.org]
 
 
 Save and Exit

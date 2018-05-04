@@ -1,4 +1,4 @@
-#### Add an MX record #####
+1. #### Add an MX record for priority for the Mail gateway #####
 
 	$cd /var/cache/bind/master
 
@@ -7,12 +7,10 @@
 At the bottom of the file add the following lines:
 
 
-	mail IN A 196.200.219.XX
-	@ IN MX 5 pcYY.ws.afnog.org.
+	@ IN MX 5 pcYY.sse.ws.afnog.org.
 
 
-Replace XXX with your PC number name.
-Replace YYY with your zone name
+Replace YY with the IP of your mail gateway
 
 Incremenent the Serial number then save and exit the file
 
@@ -23,3 +21,46 @@ Reload BIND as follows
 	OR
 
 	$sudo service bind reload
+
+
+
+2. === Configure Postfix on the Mail Gateway ====
+
+
+Edit Postfix main.cf
+
+	$sudo nano /etc/postfix/main.cf
+
+	##Add the two domains that this server will receive email for and filter:
+
+
+	mydestination = yourdomain.afnog.nog-oc.org, yourfriendsdomain.afnog.nog-oc.org
+
+
+	##Add at the end. This file which contains mail routing information
+
+	transport_maps = hash:/etc/postfix/transport
+
+
+
+Save and Exit. Then edit as follows replacing with your matching domain and mailservers respectively
+
+
+	$sudo nano /etc/postfix/transport
+	
+	##Add your neighbor's server where his mail will be routed to. Replace YY with your friends IP
+	
+	yourdomain.afnog.nog-oc.org  smtp:[pcYY.sse.ws.afnog.org]
+	your-otherdomain.afnog.nog-oc.org  smtp:[pcYY-2.sse.ws.afnog.org]
+
+
+Save and Exit
+
+
+Run postmap against the file you created. This should be done each time you add or remove a domain
+
+	$cd /etc/postfix
+	$sudo postmap transport
+	$sudo postfix reload
+
+Send an email from the Internet and see via mailwatch if your email was filtered.
