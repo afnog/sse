@@ -138,7 +138,7 @@ automatically.
 
 #### [Chris Wilson](#CW)
 
-* [AfNOG closing survey](https://bit.ly/2HOtzn0)
+* [AfNOG closing survey](https://survey.afrinic.net/index.php/survey/index/sid/843624/newtest/Y/lang/en)
 * [SS-E closing survey link](https://www.surveymonkey.com/r/826VGTT) (online)
 * [Survey results](intro/closing-survey-results.pdf)
 
