@@ -321,6 +321,9 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 ### Virtualization
 [Virtualization]: #virtualization
 
+#### [Isabel Odida](#IO)
+* Virtualization Overview Presentation: [PDF](virtualization/virtualization_overview.pdf)
+
 #### [Chris Wilson](#CW)
 
 * [Intro Presentation (OpenOffice Impress)](virtualization/sse-virtualization-overview-2013.odp)
