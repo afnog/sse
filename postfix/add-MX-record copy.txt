@@ -1,0 +1,25 @@
+#### Add an MX record #####
+
+	$cd /var/cache/bind/master
+
+	$nano YYY.afnog.nog-oc.org
+
+At the bottom of the file add the following lines:
+
+
+	mail IN A 196.200.219.XX
+	@ IN MX 10 mail.YYY.afnog.nog-oc.org.
+
+
+Replace XXX with your PC number name.
+Replace YYY with your zone name
+
+Incremenent the Serial number then save and exit the file
+
+Reload BIND as follows
+
+	$sudo rndc reload
+
+	OR
+
+	$sudo service bind reload
