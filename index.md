@@ -292,6 +292,9 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 
 ##### Spam Filtering
 [Spam Filtering]: #spam-filtering
+
+* Mail Gateway - Part 1 [MB-Part1](postfix/mg-part1.txt)
+
 + Email Filter Gateway [Email Filter aka Email Gateway](postfix/mailfilter_preso.pdf)
 * Exercise 1 - [Debian Mail Gateway Part 1](postfix/mailgateway-pt1.txt)
 * Exercise 2 - [Debian Mail Gateway Part 2](postfix/mailgateway-pt2.pdf)
