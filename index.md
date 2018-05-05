@@ -441,7 +441,7 @@ For updates to automatically sync to the webserver in use at the AFNOG workshop,
 * git init
 * git pull -p https://github.com/afnog/sse.git
 * jekyll build --destination /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX/sse/
-* look at this script for a sample cron job (scripts/generate-index.html.script)
+* look at this script [for a sample cron job](scripts/generate-index.html.script)
 
 ### Source code (Markdown)
 
