@@ -1,0 +1,11 @@
+#Sample Cron
+#add with crontab -e
+#then add this line
+#*/1 * * * * /bin/sh /home/inst/.sync-git-sse2018 
+
+
+#Add the below into the /home/inst/.sync-git-sse2018  file with appropriate execute rights
+#!/bin/sh
+cd /u/vol/www/vhosts/www.ws.afnog.org/data/afnog2018/sse-git-repo2018/
+/usr/local/bin/git pull -p https://github.com/afnog/sse.git
+/usr/local/bin/jekyll build --destination /u/vol/www/vhosts/www.ws.afnog.org/data/afnog2018/sse/
