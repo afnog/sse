@@ -434,12 +434,14 @@ these steps:
 For updates to automatically sync to the webserver in use at the AFNOG workshop, do the following:
 * Login to the NOC Box
 * Install Jekyll `sudo pkg install rubygem-jekyll`
-* Go to ~cd /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX`
+* Install the Jekyll gem if necessary `sudo gem install jekyll`
+* Go to cd /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX`
 * sudo mkdir sse-git-afnog20XX
 * cd sse-git-afnog20XX/
 * git init
 * git pull -p https://github.com/afnog/sse.git
 * jekyll build --destination /u/vol/www/vhosts/www.ws.afnog.org/data/afnog20XX/sse/
+* look at this script for a sample cron job (scripts/generate-index.html.script)
 
 ### Source code (Markdown)
 
