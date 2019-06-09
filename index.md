@@ -77,7 +77,7 @@ automatically.
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|30/05			|31/05			|01/06			|02/06			|03/06
-|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][]		|[RADIUS][]		|Finishing up e-mail
+|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Postfix][], [Postfix][]		|[RADIUS][]		|Finishing up e-mail
 |-
 |Tea break
 |11:30-13:00	|[DNS][]		|[DNS][]		|[Postfix][]		|[RADIUS][]		|[Deployment][]
@@ -86,7 +86,7 @@ automatically.
 |14:00-16:00	|[Network Security][]	|[DNS][]		|[OpenLDAP][]		|[NTP][]		|[Virtualization][]
 |-
 |Tea break
-|16:30-18:30	|[DNS][]		|[Apache][], [Postfix][]|[OpenLDAP][]		|[Dovecot][], [Rainloop][]	|Expert Panel and [Closing Survey][]
+|16:30-18:30	|[DNS][]		|[Apache][], |[OpenLDAP][]		|[Dovecot][], [Rainloop][]	|Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
