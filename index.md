@@ -253,10 +253,11 @@ Goal: DNSSEC High Level Awareness.
 ### Network Security
 [Network Security]: #network-security
 
-#### [Frank Kuse](#FK)
+#### [Kevin Chege](#KC)
+#### [Manhal Mohammed](#MW)
 
-* Firewalls: [PDF](firewalls/presentation.pdf)
-* Understand the contents and layering of common Internet protocols: [exercise](firewalls/Exercises.pdf)
+* Firewalls Theory (Kevin): [PDF](firewalls/Firewalls_2019.pdf)
+* Firewall exercises (Manhal): [exercise](firewalls/ufw_debian.txt)
 
 ### OpenLDAP
 [OpenLDAP]: #openldap
