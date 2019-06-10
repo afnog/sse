@@ -44,12 +44,20 @@ Exercise
 
         # apt-get install bind9
 
+*   Start BIND9 and check for any errors
+
+	# service bind9 start
+
+*   Check the log file to see that BIND9 started well.
+
+	# tail -f -n 100 /var/log/syslog
+
 *   Find someone who will agree to be slave for your domain. You must choose
     someone on a DIFFERENT table to you. (Remember RFC2182: secondaries must
     be on remote networks). You can have more than one slave if you wish.
 
 *   Create your zone file in `/var/cache/bind/master/xxxxx.afnog.nog-oc.org`
-    (where xxxxxx is your chosen domain). You will need to be root for
+    (where xxxxxx is your chosen domain). You will need to be root (use sudo) for
     this to work. You will also need to create the directory
     /var/cache/bind/master (/var/cache/bind is already there).
 
