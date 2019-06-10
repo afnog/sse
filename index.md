@@ -77,7 +77,7 @@ automatically.
 
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
-|		|30/05			|31/05			|01/06			|02/06			|03/06
+|		|10/06			|11/06			|12/06			|13/06			|14/06
 |09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|AntiSpam
 |-
 |Tea break
