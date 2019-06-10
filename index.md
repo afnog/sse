@@ -57,7 +57,7 @@ automatically.
 		<tr id="IO"> <td>Isabel Odida</td> <td>IO</td> <td></td> <td>Uganda</td> </tr>
 		<tr id="KC"> <td>Kevin Chege</td>    <td>KC</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 		<tr id="VA"> <td>Vitus Aborogu</td>    <td>VA</td> <td><a href="http://ghana.com">Ghana.Com</a></td> <td>Ghana</td> </tr>
-		<tr id="FK"> <td>Manhal Mohamed</td>     <td>MM</td> <td><a href="http://www.sdnog.org">SdNOG</a></td> <td>Sudan</td> </tr>
+		<tr id="MH"> <td>Manhal Mohamed</td>     <td>MH</td> <td><a href="http://www.sdnog.org">SdNOG</a></td> <td>Sudan</td> </tr>
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 	</tbody>
 </table>
