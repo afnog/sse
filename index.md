@@ -103,7 +103,7 @@ automatically.
 
 #### [Isabel Odida](#IO)
 
-* Presentation: [PowerPoint](intro/IntroPresentation.pptx) [PDF](intro/IntroPresentation.pdf)
+* Presentation:  [PDF](intro/IntroPresentation_2019.pdf)
 
 ### NTP
 [NTP]: #ntp
