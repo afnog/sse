@@ -52,6 +52,27 @@ Exercise
 
 	# tail -f -n 100 /var/log/syslog
 
+*   We need to disable BIND9 from being recursive by opening the file /etc/bind/named.conf.options and adding the the line to disable recursion
+
+	# vi /etc/bind/named.conf.options
+
+*   Then add "recursion no;" after the line "listen-on-v6 { any; };" the last 3 lines of new configuration file will look as below;
+
+		auth-nxdomain no;    # conform to RFC1035
+	        	listen-on-v6 { any; };
+        		recursion no;
+		};
+
+*   Restart bind for this changes to take effect
+	
+	# service bind9 reload
+
+*   Run a test to see if recursion is disabled 
+
+	$ dig @pcXX.sse.ws.afnog.org freebsd.org NS
+
+*   The result should include "WARNING: recursion requested but not available"
+	
 *   Find someone who will agree to be slave for your domain. You must choose
     someone on a DIFFERENT table to you. (Remember RFC2182: secondaries must
     be on remote networks). You can have more than one slave if you wish.
@@ -87,6 +108,41 @@ Exercise
 *   Edit `/etc/bind/named.conf.local` to configure your machine as
     master for your domain (see slides for information how to do this).
 
+
+	# vi /etc/bind/named.conf.local
+
+*   Once file has opened define your Master zone in the named.conf.local 
+    similar to the below and save
+
+		zone "xxxxxx.afnog.nog-oc.org" {
+        			type master;
+			file "master/xxxxx.afnog.nog-oc.org"; 
+			allow-transfer { 196.200.219.X; };
+		};
+
+   
+*   Save the file and exit
+
+
+*   For those who are slave servers for Others, edit the configurations on /etc/bind/named.conf.local 
+    to configure your machine as slave for Others
+	
+	# vi /etc/bind/named.conf.local
+
+
+*   Once the file has opened define the Slave zone, you are hosting, in the named.conf.local 
+    similar to the below and save. 
+
+		zone "xxxxxx.afnog.nog-oc.org" {
+				type slave;
+			masters { 196.200.219.X; };
+			file "slave/xxxxxx.afnog.nog-oc.org"; 
+			allow-transfer { none; };
+		};
+
+*   Remember that the slaves do not need to create the zone file (as was the case for the master) 
+    as this will be downloaded automatically from the master 
+
 *   Check that your config file and zone file are valid, and then reload 
     the nameserver daemon:
 
@@ -103,7 +159,7 @@ Exercise
     cause the daemon to die completely, in which case you may have to
     start it again:
 
-        # service bind9 restart
+        # service bind9 reload
 
 *   Assist your slaves to configure themselves as slave for your domain, 
     and configure yourself as a slave if asked to do so by another table.
