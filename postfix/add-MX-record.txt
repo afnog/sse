@@ -14,7 +14,7 @@ At the bottom of the file add the following lines:
 Replace XXX with your PC number name.
 Replace YYY with your zone name
 
-Incremenent the Serial number then save and exit the file
+Increment the Serial number then save and exit the file
 
 Reload BIND as follows
 
