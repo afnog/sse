@@ -56,6 +56,8 @@ Add the following rules
  
  4. Try and ping 4.2.2.2. It should fail with a "ping: sendto: Permission denied"
  
- 5. Go back and change the "block" to "permit"
- 
+ 5. Go back and change the "permit" to "block" on this line
+ 	
+ 			block out quick on $ext_if inet proto icmp from $me to 4.2.2.2
+			
  6. Once done reload the rules with "sudo pfctl -f /etc/pf.conf"
