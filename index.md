@@ -257,7 +257,8 @@ Goal: DNSSEC High Level Awareness.
 #### [Manhal Mohammed](#MW)
 
 * Firewalls Theory (Kevin): [PDF](firewalls/Firewalls_2019.pdf)
-* Firewall exercises (Manhal): [exercise](firewalls/ufw_debian.txt)
+* Firewall exercise 1 (Manhal): [exercise](firewalls/ufw_debian.txt)
+* Firewall exercise 2: [freebsd_firewall](firewalls/firewall_freebsd_ex.txt)
 
 ### OpenLDAP
 [OpenLDAP]: #openldap
