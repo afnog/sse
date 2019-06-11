@@ -1,13 +1,21 @@
+FREEBSD FIREWALL EXERCISE
+
 
 Your FreeBSD VM is "bsdpcX.sse.ws.afnog.org"
 
+ssh as follows: ssh afnog@bsdpcX.sse.ws.afnog.org 
+
+
+	
+
+
 1. PF is installed by default in FreeBSD but is not loaded in the kernel. We will load it as well as pflog which we will use to log the rules on the firewall
 	
-		$sudo kldload pf
+	$sudo kldload pf
 
   Determine your IP address
 
-         $ifconfig vtnet0
+    $ifconfig vtnet0
 
 2. Now enable PF in /etc/rc.conf as follows by editing /etc/rc.conf with ee:
 	
@@ -25,7 +33,7 @@ Add the following rules
 	pass in quick on $ext_if inet proto tcp from any to $me port 22
 	block out quick on $ext_if inet proto icmp from $me to 4.2.2.2
 	pass out quick on $ext_if inet proto icmp from $me to any
-	########
+   #########
 
 
 
