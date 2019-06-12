@@ -78,8 +78,6 @@ Excesise 2: working with ansible ad-hoc commands
 
 * remove telnet package from remote servers on group1: 
  ansible group1 -m apt -a "name=telnet state=absent" -b
-* echo to som files : 
-ansible group1 -m command -a "name=cowsay state=absent" -b
 
 
 --------------------------------------------------
