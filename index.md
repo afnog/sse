@@ -117,6 +117,7 @@ automatically.
 #### [Manhal Mohamed](#MH)
 
 * Presentation: [PowerPoint](ansible/Ansible_Presentation2019.pptx) [PDF](ansible/Ansible_Presentation2019.pdf)
+* Ansible Hands on lab: [AnsibleExercise](ansible/Ansible_HandsOn.txt)
 
 ### Apache
 [Apache]: #apache
