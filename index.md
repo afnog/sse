@@ -61,7 +61,6 @@ automatically.
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 	</tbody>
 </table>
-<b> Lab setup with many thanks to Patrick Okui! </b>
 
 ### Participants
 
@@ -117,6 +116,7 @@ automatically.
 #### [Manhal Mohamed](#MH)
 
 * Presentation: [PowerPoint](ansible/Ansible_Presentation2019.pptx) [PDF](ansible/Ansible_Presentation2019.pdf)
+* Ansible Hands on lab: [AnsibleExercise](ansible/Ansible_HandsOn.txt)
 
 ### Apache
 [Apache]: #apache
@@ -124,6 +124,7 @@ automatically.
 #### [Isabel Odida](#IO)
 
 * Presentation and Exercises: [PDF](apache/Apachepresentation2019.pdf)
+* Apache lab: [Lab](apache/virtualhost2019.txt)
 
 ### Backups
 [Backups]: #backups
