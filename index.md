@@ -117,6 +117,7 @@ automatically.
 
 * Presentation: [PowerPoint](ansible/Ansible_Presentation2019.pptx) [PDF](ansible/Ansible_Presentation2019.pdf)
 * Ansible Hands on lab: [AnsibleExercise](ansible/Ansible_HandsOn.txt)
+* Yaml-file: [TextFile](ansible/mypcX.yaml.txt)
 
 ### Apache
 [Apache]: #apache
