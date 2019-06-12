@@ -110,7 +110,7 @@ create the pcX-vhost.j2 file and add the virtual host configuration :
 	# vi pcX-vhost.j2
 <VirtualHost *:80>
     DocumentRoot /var/www/html/wwwX.{{ ansible_fqdn }}
-    ServerName www1.{{ ansible_fqdn }}
+    ServerName wwwX.{{ ansible_fqdn }}
 </VirtualHost>
 
 
