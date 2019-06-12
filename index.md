@@ -114,16 +114,16 @@ automatically.
 ### Ansible
 [Ansible]: #ansible
 
-#### [Frank Kuse](#FK)
+#### [Manhal Mohamed](#MH)
 
-* Presentation: [PowerPoint](ansible/Ansible_Presentation.pptx) [PDF](ansible/Ansible_Presentation.pdf)
+* Presentation: [PowerPoint](ansible/Ansible_Presentation2019.pptx) [PDF](ansible/Ansible_Presentation2019.pdf)
 
 ### Apache
 [Apache]: #apache
 
 #### [Isabel Odida](#IO)
 
-* Presentation and Exercises: [PDF](apache/Apachepresentation.pdf)
+* Presentation and Exercises: [PDF](apache/Apachepresentation2019.pdf)
 
 ### Backups
 [Backups]: #backups

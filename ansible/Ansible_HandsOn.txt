@@ -1,0 +1,245 @@
+Ansible Excersise : 
+-------------------
+
+Excesise 1: working with inventory 
+----------------------------------
+* please edit your ansible.cfg file to ignore the SSH authenticity checking
+	# vi /etc/ansible.cfg
+serch for [defaults] and write this : 
+[defaults]
+host_key_checking = False
+
+* open your inventory file and add your class groups as shown : 
+	# vi /etc/ansible/hosts 
+and add the following : 
+
+[me]
+localhost
+[group1]               
+pc1.sse.ws.afnog.org                               
+pc2.sse.ws.afnog.org
+pc3.sse.ws.afnog.org      
+pc4.sse.ws.afnog.org 
+     
+[group2]
+pc[5:8].sse.ws.afnog.org
+
+[group3]
+pc[9:12].sse.ws.afnog.org
+
+[group4]
+pc[13:16].sse.ws.afnog.org
+
+[group5]
+pc[17:20].sse.ws.afnog.org
+
+[group6]
+pc[21:24].sse.ws.afnog.org
+
+[group7]
+pc[25:28].sse.ws.afnog.org
+
+[group8]
+pc[29:32].sse.ws.afnog.org
+# setting user name and password that ansible going to use for all groups
+[all:vars]                                                   
+ansible_user=afnog                              
+ansible_user_pass=SSE@Success! 	
+
+# save and quit your hosts file
+
+--------------------------------------------------
+Excesise 2: working with ansible ad-hoc commands  
+--------------------------------------------------
+* check all my inventory hosts are ready to be managed by Ansible
+ 	# ansible all -m ping                    
+
+* collect and display the discovered facts for the localhost
+	# ansible localhost -m setup
+	# ansible  pcX.ws.sse.afnog.org -m setup -a "filter=*ipv4“
+
+* run the uptime command on all hosts in the group 2 group
+	# ansible group2 -m command -a "uptime“
+
+* fetch hard drives utilization 
+	# ansible -m command -a 'df -h’ pcX.ws.sse.afnog.org
+
+--------------------------------------------------
+Excesise 3: working with ansible play-books  
+--------------------------------------------------
+create a new .yaml file with name mypcX.yaml and write tasks to:
+- task to install cowsay pakage
+- task to configure apache and create a new virtual host with the name wwwX.pcY.sse.ws.afnog.org.conf
+- task to create a new document root directory for the new virtual host under name wwwX.pcY.sse.ws.afnog.org
+- task to create a simple website in the new created document root 
+---------------------------------------------
+1) task to install cowsay pakage : 
+
+	# vi mypcX.yaml 
+---
+- hosts: groupX
+  tasks:
+  - name: install COWSAY 
+    become: yes
+    apt:
+        name: cowsay
+        state: absent
+
+save and quit then run your playbook : 
+	# ansible-playbook mypcX.yaml -b
+---------------------------------------------------
+2) task to configure apache and create a new virtual host with the name wwwX.pcY.sse.ws.afnog.org.conf
+edit your mypcX.yaml and add the folowing : 
+
+	# vi mypcX.yaml 
+
+  - name: Configuring Virtual-Host 
+    become: yes
+    template:
+         src: pcX-vhost.j2
+         dest: "/etc/apache2/sites-enabled/wwwX.{{ ansible_fqdn }}.conf"
+    notify: restart apache2
+   handlers:
+   - name: restart apache2
+     become: yes
+     service :
+        name: apache2
+        state: restarted
+save and quit 
+create the pcX-vhost.j2 file and add the virtual host configuration : 
+	# vi pcX-vhost.j2
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/www1.{{ ansible_fqdn }}
+    ServerName www1.{{ ansible_fqdn }}
+</VirtualHost>
+
+
+;; save and quit the file 
+- now run your playbook 
+	# ansible-playbook mypcX.yaml -b
+
+-----------------------------------------------------
+3) task to create a new document root directory for the new virtual host under name wwwX.pcY.sse.ws.afnog.org
+
+	# vi mypcX.yaml 
+
+  - name: creating the Document Root Dir
+    become: yes
+    file:
+        path: /var/www/html/www1.{{ ansible_fqdn }}
+        state: directory
+--------------------------------------------------------
+creating a new index file in your document root
+	
+	# vi mypcX.yaml 
+
+  - name: creating index file : 
+    become: yes
+    template:
+        src: index.j2
+        dest: /var/www/html/www1.{{ ansible_fqdn }}/index.html
+
+save and quit your file 
+
+- create the index.j2 template and add the folowing in it  : 
+
+	# vi index.j2
+
+<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+
+<FORM name="changeColor">
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<BR><BR>
+<INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
+<INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
+<INPUT type="button" onClick="document.bgColor='#00FF00'" name="colr" value=" GREEN ">
+<INPUT type="button" onClick="document.bgColor='#FFFFFF'" name="colr" value=" WHITE ">
+<INPUT type="button" onClick="document.bgColor='#C0C0C0'" name="colr" value=" SILVER "></FONT>
+<INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
+</FORM>
+
+
+;; save and quit your file 
+
+run your playbook: 
+	# ansible-playbook mypcX.yaml -b
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+ $$$$$$\   $$$$$$\  $$$$$$$$\       $$$$$$\  $$\                               
+$$  __$$\ $$  __$$\ $$  _____|     $$  __$$\ $$ |                              
+$$ /  \__|$$ /  \__|$$ |           $$ /  \__|$$ | $$$$$$\   $$$$$$$\  $$$$$$$\ 
+\$$$$$$\  \$$$$$$\  $$$$$\ $$$$$$\ $$ |      $$ | \____$$\ $$  _____|$$  _____|
+ \____$$\  \____$$\ $$  __|\______|$$ |      $$ | $$$$$$$ |\$$$$$$\  \$$$$$$\  
+$$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\ 
+\$$$$$$  |\$$$$$$  |$$$$$$$$\      \$$$$$$  |$$ |\$$$$$$$ |$$$$$$$  |$$$$$$$  |
+ \______/  \______/ \________|      \______/ \__| \_______|\_______/ \_______/ 
+                                                                              
+ 
+### full mypcX.yaml file : 
+
+---
+- hosts: groupX
+  tasks:
+  - name: installing COWSAY 
+    become: yes
+    apt:
+        name: cowsay
+        state: absent
+  - name: Configuring Virtual-Host
+    become: yes
+    become_user: root
+    template:
+         src: pcX-vhost.j2
+         dest: "/etc/apache2/sites-enabled/wwwX.{{ ansible_fqdn }}.conf"
+    notify: restart apache2
+
+  - name: creating the Document Root Dir
+    become: yes
+    file:
+        path: /var/www/html/wwwX.{{ ansible_fqdn }}
+        state: directory
+
+  - name: configuring the Document Root
+    become: yes
+    template:
+        src: index.j2
+        dest: /var/www/html/wwwX.{{ ansible_fqdn }}/index.html
+
+  handlers:
+   - name: restart apache2
+     become: yes
+     service :
+        name: apache2
+        state: restarted
+------------------------------------------------------
+#### full pcX-vhost.j2 file ####
+   
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/wwwX.{{ ansible_fqdn }}
+    ServerName wwwX.{{ ansible_fqdn }}
+</VirtualHost>
+
+---------------------------------------------------
+#### full index.j2 file ####
+
+
+<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+
+<FORM name="changeColor">
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<BR><BR>
+<INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
+<INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
+<INPUT type="button" onClick="document.bgColor='#00FF00'" name="colr" value=" GREEN ">
+<INPUT type="button" onClick="document.bgColor='#FFFFFF'" name="colr" value=" WHITE ">
+<INPUT type="button" onClick="document.bgColor='#C0C0C0'" name="colr" value=" SILVER "></FONT>
+<INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
+</FORM>
+~
+~
+~
+~
+
+
