@@ -56,13 +56,13 @@ Excesise 2: working with ansible ad-hoc commands
 
 * collect and display the discovered facts for the localhost
 	# ansible localhost -m setup
-	# ansible  pcX.ws.sse.afnog.org -m setup -a "filter=*ipv4“
+	# ansible  pcX.sse.ws.afnog.org -m setup -a "filter=*ipv4“
 
 * run the uptime command on all hosts in the group 2 group
 	# ansible group2 -m command -a "uptime“
 
 * fetch hard drives utilization 
-	# ansible -m command -a 'df -h’ pcX.ws.sse.afnog.org
+	# ansible -m command -a 'df -h’ pcX.sse.ws.afnog.org
 
 --------------------------------------------------
 Excesise 3: working with ansible play-books  
