@@ -148,7 +148,7 @@ save and quit your file
 
 <H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
 <H1 align="center">   this is " pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
-<H1 align="center">   i just hosted my wwwX.{{ ansible_fqdn }} website in your server with your domain  :P   </H1>
+<H1 align="center">   i just hosted my wwwX website in your server with your domain  :P   </H1>
 <H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
 
  <pre align=center>
@@ -246,7 +246,7 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 
 <H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
 <H1 align="center">   this is "pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
-<H1 align="center">   i just hosted my wwwX.{{ ansible_fqdn }} website in your server using your domain  :P   </H1>
+<H1 align="center">   i just hosted my wwwX website in your server using your domain  :P   </H1>
 <H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
 
  <pre align=center>
