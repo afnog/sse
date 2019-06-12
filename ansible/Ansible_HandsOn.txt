@@ -145,7 +145,7 @@ save and quit your file
 
 	# vi index.j2
 
-<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+<H1 align="center">  hi this is my www1.{{ ansible_fqdn }} website   </H1>
 
 <FORM name="changeColor">
 <FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
@@ -225,7 +225,7 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 #### full index.j2 file ####
 
 
-<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+<H1 align="center">  hi this is my www1.{{ ansible_fqdn }} website   </H1>
 
 <FORM name="changeColor">
 <FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
