@@ -3,11 +3,16 @@ Ansible Excersise :
 
 Excesise 1: working with inventory 
 ----------------------------------
+* install ansible and sshpass "ssh with arguments": 
+	# apt-get install ansible sshpass
 * please edit your ansible.cfg file to ignore the SSH authenticity checking
 	# vi /etc/ansible.cfg
 serch for [defaults] and write this : 
 [defaults]
 host_key_checking = False
+------
+to use cowsay in ansible for more fun , uncomment this line : 
+cow_selection=random
 
 * open your inventory file and add your class groups as shown : 
 	# vi /etc/ansible/hosts 
@@ -43,10 +48,14 @@ pc[25:28].sse.ws.afnog.org
 pc[29:32].sse.ws.afnog.org
 # setting user name and password that ansible going to use for all groups
 [all:vars]                                                   
-ansible_user=afnog                              
-ansible_user_pass=SSE@Success! 	
+ansible_ssh_user=afnog                              
+ansible_ssh_pass=SSE@Success! 	
 
 # save and quit your hosts file
+
+* Copy the Public Key
+	# ssh-copy-id afnog@pcX.sse.ws.afnog.org 
+* Repeat the same process for other machines you wish to login automatically with.
 
 --------------------------------------------------
 Excesise 2: working with ansible ad-hoc commands  
