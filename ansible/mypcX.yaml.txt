@@ -1,0 +1,30 @@
+---
+- hosts: fqdn
+  tasks:
+  - name: installing cowsay package
+    apt:
+     name: cowsay
+     state: latest
+
+  - name: configuring Virtual host
+    template:
+      src: pc36-vhost.j2
+      dest: /etc/apache2/sites-available/www36.{{  ansible_fqdn }}.conf
+    notify: restart apache2
+
+  - name: create the root directory
+    file:
+     path: /var/www/html/www36.{{ ansible_fqdn }}
+     state: directory
+
+  - name: creating index file
+    become: yes
+    template:
+        src: index.j2
+        dest: /var/www/html/www36.{{ ansible_fqdn }}/index.html
+
+  handlers:
+  - name: restart apache2
+    service:
+     name: apache2
+     state: restarted
