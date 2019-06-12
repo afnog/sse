@@ -1,13 +1,18 @@
 Ansible Excersise : 
 -------------------
-
 Excesise 1: working with inventory 
 ----------------------------------
+* install ansible and sshpass "ssh with arguments": 
+sshpass allows you to pass password to ssh connection as an argument
+	# apt-get install ansible sshpass
 * please edit your ansible.cfg file to ignore the SSH authenticity checking
 	# vi /etc/ansible.cfg
-serch for [defaults] and write this : 
+search for [defaults] and write this : 
 [defaults]
 host_key_checking = False
+------
+to use cowsay in ansible "for more fun" , uncomment this line : 
+cow_selection=random
 
 * open your inventory file and add your class groups as shown : 
 	# vi /etc/ansible/hosts 
@@ -43,10 +48,14 @@ pc[25:28].sse.ws.afnog.org
 pc[29:32].sse.ws.afnog.org
 # setting user name and password that ansible going to use for all groups
 [all:vars]                                                   
-ansible_user=afnog                              
-ansible_user_pass=SSE@Success! 	
+ansible_ssh_user=afnog                              
+ansible_ssh_pass=SSE@Success! 	
 
 # save and quit your hosts file
+
+* Copy the Public Key
+	# ssh-copy-id afnog@pcX.sse.ws.afnog.org 
+* Repeat the same process for other machines you wish to login automatically with.
 
 --------------------------------------------------
 Excesise 2: working with ansible ad-hoc commands  
@@ -58,11 +67,18 @@ Excesise 2: working with ansible ad-hoc commands
 	# ansible localhost -m setup
 	# ansible  pcX.ws.sse.afnog.org -m setup -a "filter=*ipv4“
 
+* excute echo in remote hosts : 
+	#  ansible all -m shell -a "echo hi its YourName  > /home/afnog/YourName.txt" -b
+
 * run the uptime command on all hosts in the group 2 group
 	# ansible group2 -m command -a "uptime“
 
 * fetch hard drives utilization 
 	# ansible -m command -a 'df -h’ pcX.ws.sse.afnog.org
+
+* remove telnet package from remote servers on group1: 
+ ansible group1 -m apt -a "name=telnet state=absent" -b
+
 
 --------------------------------------------------
 Excesise 3: working with ansible play-books  
@@ -83,7 +99,7 @@ create a new .yaml file with name mypcX.yaml and write tasks to:
     become: yes
     apt:
         name: cowsay
-        state: absent
+        state: latest
 
 save and quit then run your playbook : 
 	# ansible-playbook mypcX.yaml -b
@@ -109,8 +125,8 @@ save and quit
 create the pcX-vhost.j2 file and add the virtual host configuration : 
 	# vi pcX-vhost.j2
 <VirtualHost *:80>
-    DocumentRoot /var/www/html/www1.{{ ansible_fqdn }}
-    ServerName www1.{{ ansible_fqdn }}
+    DocumentRoot /var/www/html/wwwX.{{ ansible_fqdn }}
+    ServerName wwwX.{{ ansible_fqdn }}
 </VirtualHost>
 
 
@@ -126,7 +142,7 @@ create the pcX-vhost.j2 file and add the virtual host configuration :
   - name: creating the Document Root Dir
     become: yes
     file:
-        path: /var/www/html/www1.{{ ansible_fqdn }}
+        path: /var/www/html/wwwX.{{ ansible_fqdn }}
         state: directory
 --------------------------------------------------------
 creating a new index file in your document root
@@ -137,18 +153,57 @@ creating a new index file in your document root
     become: yes
     template:
         src: index.j2
-        dest: /var/www/html/www1.{{ ansible_fqdn }}/index.html
+        dest: /var/www/html/wwwX.{{ ansible_fqdn }}/index.html
 
 save and quit your file 
 
-- create the index.j2 template and add the folowing in it  : 
+- create the index.j2 template and add the folowing in it "replace X with your number" ,
+ just copy and paste the code : 
 
 	# vi index.j2
+; start copy from here : 
 
-<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+<H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
+<H1 align="center">   this is " pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
+<H1 align="center">   i just hosted my wwwX website in {{ ansible_nodename }} server with its {{ ansible_fqdn }} domain  :P   </H1>
+<H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+
+ <pre align=center>
+
+   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEE      222222222222222         000000000       1111111     999999999
+ SS:::::::::::::::S SS:::::::::::::::SE::::::::::::::::::::E     2:::::::::::::::22     00:::::::::00    1::::::1   99:::::::::99
+S:::::SSSSSS::::::SS:::::SSSSSS::::::SE::::::::::::::::::::E     2::::::222222:::::2  00:::::::::::::00 1:::::::1 99:::::::::::::99
+S:::::S     SSSSSSSS:::::S     SSSSSSSEE::::::EEEEEEEEE::::E     2222222     2:::::2 0:::::::000:::::::0111:::::19::::::99999::::::9
+S:::::S            S:::::S              E:::::E       EEEEEE                 2:::::2 0::::::0   0::::::0   1::::19:::::9     9:::::9
+S:::::S            S:::::S              E:::::E                              2:::::2 0:::::0     0:::::0   1::::19:::::9     9:::::9
+ S::::SSSS          S::::SSSS           E::::::EEEEEEEEEE                 2222::::2  0:::::0     0:::::0   1::::1 9:::::99999::::::9
+  SS::::::SSSSS      SS::::::SSSSS      E:::::::::::::::E            22222::::::22   0:::::0 000 0:::::0   1::::l  99::::::::::::::9
+    SSS::::::::SS      SSS::::::::SS    E:::::::::::::::E          22::::::::222     0:::::0 000 0:::::0   1::::l    99999::::::::9
+       SSSSSS::::S        SSSSSS::::S   E::::::EEEEEEEEEE         2:::::22222        0:::::0     0:::::0   1::::l         9::::::9
+            S:::::S            S:::::S  E:::::E                  2:::::2             0:::::0     0:::::0   1::::l        9::::::9
+            S:::::S            S:::::S  E:::::E       EEEEEE     2:::::2             0::::::0   0::::::0   1::::l       9::::::9
+SSSSSSS     S:::::SSSSSSSS     S:::::SEE::::::EEEEEEEE:::::E     2:::::2       2222220:::::::000:::::::0111::::::111   9::::::9
+S::::::SSSSSS:::::SS::::::SSSSSS:::::SE::::::::::::::::::::E     2::::::2222222:::::2 00:::::::::::::00 1::::::::::1  9::::::9
+S:::::::::::::::SS S:::::::::::::::SS E::::::::::::::::::::E     2::::::::::::::::::2   00:::::::::00   1::::::::::1 9::::::9
+ SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE     22222222222222222222     000000000     11111111111199999999
+
+
+</pre>
+
+ <pre align=center>
+$$\     $$\                                    $$\     $$\
+\$$\   $$  |                                   \$$\   $$  |
+ \$$\ $$  /$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\\$$\ $$  /
+  \$$$$  / \____$$\  \____$$\  \____$$\  \____$$\\$$$$  /
+   \$$  /  $$$$$$$ | $$$$$$$ | $$$$$$$ | $$$$$$$ |\$$  /
+    $$ |  $$  __$$ |$$  __$$ |$$  __$$ |$$  __$$ | $$ |
+    $$ |  \$$$$$$$ |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ | $$ |
+    \__|   \_______| \_______| \_______| \_______| \__|
+
+</pre>
 
 <FORM name="changeColor">
-<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="8">Choose a Background Color:
 <BR><BR>
 <INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
 <INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
@@ -158,12 +213,15 @@ save and quit your file
 <INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
 </FORM>
 
-
+--------------------------------------------------------------------------------------------------------------------------
 ;; save and quit your file 
 
 run your playbook: 
 	# ansible-playbook mypcX.yaml -b
 
+in your browser check your new created website ^_^ 
+use your partners domain : 
+ wwwX.pcY.sse.afnog.org 
 --------------------------------------------------------
 --------------------------------------------------------
 
@@ -176,7 +234,12 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 \$$$$$$  |\$$$$$$  |$$$$$$$$\      \$$$$$$  |$$ |\$$$$$$$ |$$$$$$$  |$$$$$$$  |
  \______/  \______/ \________|      \______/ \__| \_______|\_______/ \_______/ 
                                                                               
- 
+
+
+Appendices:
+-----------
+-----------
+
 ### full mypcX.yaml file : 
 
 ---
@@ -225,10 +288,45 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 #### full index.j2 file ####
 
 
-<H1 align="center">  hi this is my www1.{{ ansible_domain }} website   </H1>
+<H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
+<H1 align="center">   this is "pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
+<H1 align="center">   i just hosted my wwwX website in {{ ansible_nodename }} server with its {{ ansible_fqdn }} domain  :P   </H1>
+<H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+ <pre align=center>
+
+
+   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEE      222222222222222         000000000       1111111     999999999
+ SS:::::::::::::::S SS:::::::::::::::SE::::::::::::::::::::E     2:::::::::::::::22     00:::::::::00    1::::::1   99:::::::::99
+S:::::SSSSSS::::::SS:::::SSSSSS::::::SE::::::::::::::::::::E     2::::::222222:::::2  00:::::::::::::00 1:::::::1 99:::::::::::::99
+S:::::S     SSSSSSSS:::::S     SSSSSSSEE::::::EEEEEEEEE::::E     2222222     2:::::2 0:::::::000:::::::0111:::::19::::::99999::::::9
+S:::::S            S:::::S              E:::::E       EEEEEE                 2:::::2 0::::::0   0::::::0   1::::19:::::9     9:::::9
+S:::::S            S:::::S              E:::::E                              2:::::2 0:::::0     0:::::0   1::::19:::::9     9:::::9
+ S::::SSSS          S::::SSSS           E::::::EEEEEEEEEE                 2222::::2  0:::::0     0:::::0   1::::1 9:::::99999::::::9
+  SS::::::SSSSS      SS::::::SSSSS      E:::::::::::::::E            22222::::::22   0:::::0 000 0:::::0   1::::l  99::::::::::::::9
+    SSS::::::::SS      SSS::::::::SS    E:::::::::::::::E          22::::::::222     0:::::0 000 0:::::0   1::::l    99999::::::::9
+       SSSSSS::::S        SSSSSS::::S   E::::::EEEEEEEEEE         2:::::22222        0:::::0     0:::::0   1::::l         9::::::9
+            S:::::S            S:::::S  E:::::E                  2:::::2             0:::::0     0:::::0   1::::l        9::::::9
+            S:::::S            S:::::S  E:::::E       EEEEEE     2:::::2             0::::::0   0::::::0   1::::l       9::::::9
+SSSSSSS     S:::::SSSSSSSS     S:::::SEE::::::EEEEEEEE:::::E     2:::::2       2222220:::::::000:::::::0111::::::111   9::::::9
+S::::::SSSSSS:::::SS::::::SSSSSS:::::SE::::::::::::::::::::E     2::::::2222222:::::2 00:::::::::::::00 1::::::::::1  9::::::9
+S:::::::::::::::SS S:::::::::::::::SS E::::::::::::::::::::E     2::::::::::::::::::2   00:::::::::00   1::::::::::1 9::::::9
+ SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE     22222222222222222222     000000000     11111111111199999999
+
+</pre>
+ <pre align=center>
+$$\     $$\                                    $$\     $$\
+\$$\   $$  |                                   \$$\   $$  |
+ \$$\ $$  /$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\\$$\ $$  /
+  \$$$$  / \____$$\  \____$$\  \____$$\  \____$$\\$$$$  /
+   \$$  /  $$$$$$$ | $$$$$$$ | $$$$$$$ | $$$$$$$ |\$$  /
+    $$ |  $$  __$$ |$$  __$$ |$$  __$$ |$$  __$$ | $$ |
+    $$ |  \$$$$$$$ |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ | $$ |
+    \__|   \_______| \_______| \_______| \_______| \__|
+
+</pre>
 
 <FORM name="changeColor">
-<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="8"> Choose a Background Color:
 <BR><BR>
 <INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
 <INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
@@ -237,9 +335,6 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 <INPUT type="button" onClick="document.bgColor='#C0C0C0'" name="colr" value=" SILVER "></FONT>
 <INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
 </FORM>
-~
-~
-~
-~
+
 
 
