@@ -4,6 +4,7 @@ Ansible Excersise :
 Excesise 1: working with inventory 
 ----------------------------------
 * install ansible and sshpass "ssh with arguments": 
+sshpass allows you to pass password to ssh connection as an argument
 	# apt-get install ansible sshpass
 * please edit your ansible.cfg file to ignore the SSH authenticity checking
 	# vi /etc/ansible.cfg
