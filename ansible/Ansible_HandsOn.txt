@@ -145,11 +145,34 @@ save and quit your file
  just copy and paste the code : 
 
 	# vi index.j2
+; start copy from here : 
 
 <H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
 <H1 align="center">   this is " pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
-<H1 align="center">   i just hosted my wwwX website in your server with your domain  :P   </H1>
+<H1 align="center">   i just hosted my wwwX website in {{ ansible_nodename }} server with its {{ ansible_fqdn }} domain  :P   </H1>
 <H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+
+ <pre align=center>
+
+   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEE      222222222222222         000000000       1111111     999999999
+ SS:::::::::::::::S SS:::::::::::::::SE::::::::::::::::::::E     2:::::::::::::::22     00:::::::::00    1::::::1   99:::::::::99
+S:::::SSSSSS::::::SS:::::SSSSSS::::::SE::::::::::::::::::::E     2::::::222222:::::2  00:::::::::::::00 1:::::::1 99:::::::::::::99
+S:::::S     SSSSSSSS:::::S     SSSSSSSEE::::::EEEEEEEEE::::E     2222222     2:::::2 0:::::::000:::::::0111:::::19::::::99999::::::9
+S:::::S            S:::::S              E:::::E       EEEEEE                 2:::::2 0::::::0   0::::::0   1::::19:::::9     9:::::9
+S:::::S            S:::::S              E:::::E                              2:::::2 0:::::0     0:::::0   1::::19:::::9     9:::::9
+ S::::SSSS          S::::SSSS           E::::::EEEEEEEEEE                 2222::::2  0:::::0     0:::::0   1::::1 9:::::99999::::::9
+  SS::::::SSSSS      SS::::::SSSSS      E:::::::::::::::E            22222::::::22   0:::::0 000 0:::::0   1::::l  99::::::::::::::9
+    SSS::::::::SS      SSS::::::::SS    E:::::::::::::::E          22::::::::222     0:::::0 000 0:::::0   1::::l    99999::::::::9
+       SSSSSS::::S        SSSSSS::::S   E::::::EEEEEEEEEE         2:::::22222        0:::::0     0:::::0   1::::l         9::::::9
+            S:::::S            S:::::S  E:::::E                  2:::::2             0:::::0     0:::::0   1::::l        9::::::9
+            S:::::S            S:::::S  E:::::E       EEEEEE     2:::::2             0::::::0   0::::::0   1::::l       9::::::9
+SSSSSSS     S:::::SSSSSSSS     S:::::SEE::::::EEEEEEEE:::::E     2:::::2       2222220:::::::000:::::::0111::::::111   9::::::9
+S::::::SSSSSS:::::SS::::::SSSSSS:::::SE::::::::::::::::::::E     2::::::2222222:::::2 00:::::::::::::00 1::::::::::1  9::::::9
+S:::::::::::::::SS S:::::::::::::::SS E::::::::::::::::::::E     2::::::::::::::::::2   00:::::::::00   1::::::::::1 9::::::9
+ SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE     22222222222222222222     000000000     11111111111199999999
+
+
+</pre>
 
  <pre align=center>
 $$\     $$\                                    $$\     $$\
@@ -174,7 +197,7 @@ $$\     $$\                                    $$\     $$\
 <INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
 </FORM>
 
-
+--------------------------------------------------------------------------------------------------------------------------
 ;; save and quit your file 
 
 run your playbook: 
@@ -246,9 +269,29 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 
 <H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
 <H1 align="center">   this is "pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
-<H1 align="center">   i just hosted my wwwX website in your server using your domain  :P   </H1>
+<H1 align="center">   i just hosted my wwwX website in {{ ansible_nodename }} server with its {{ ansible_fqdn }} domain  :P   </H1>
 <H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+ <pre align=center>
 
+
+   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEE      222222222222222         000000000       1111111     999999999
+ SS:::::::::::::::S SS:::::::::::::::SE::::::::::::::::::::E     2:::::::::::::::22     00:::::::::00    1::::::1   99:::::::::99
+S:::::SSSSSS::::::SS:::::SSSSSS::::::SE::::::::::::::::::::E     2::::::222222:::::2  00:::::::::::::00 1:::::::1 99:::::::::::::99
+S:::::S     SSSSSSSS:::::S     SSSSSSSEE::::::EEEEEEEEE::::E     2222222     2:::::2 0:::::::000:::::::0111:::::19::::::99999::::::9
+S:::::S            S:::::S              E:::::E       EEEEEE                 2:::::2 0::::::0   0::::::0   1::::19:::::9     9:::::9
+S:::::S            S:::::S              E:::::E                              2:::::2 0:::::0     0:::::0   1::::19:::::9     9:::::9
+ S::::SSSS          S::::SSSS           E::::::EEEEEEEEEE                 2222::::2  0:::::0     0:::::0   1::::1 9:::::99999::::::9
+  SS::::::SSSSS      SS::::::SSSSS      E:::::::::::::::E            22222::::::22   0:::::0 000 0:::::0   1::::l  99::::::::::::::9
+    SSS::::::::SS      SSS::::::::SS    E:::::::::::::::E          22::::::::222     0:::::0 000 0:::::0   1::::l    99999::::::::9
+       SSSSSS::::S        SSSSSS::::S   E::::::EEEEEEEEEE         2:::::22222        0:::::0     0:::::0   1::::l         9::::::9
+            S:::::S            S:::::S  E:::::E                  2:::::2             0:::::0     0:::::0   1::::l        9::::::9
+            S:::::S            S:::::S  E:::::E       EEEEEE     2:::::2             0::::::0   0::::::0   1::::l       9::::::9
+SSSSSSS     S:::::SSSSSSSS     S:::::SEE::::::EEEEEEEE:::::E     2:::::2       2222220:::::::000:::::::0111::::::111   9::::::9
+S::::::SSSSSS:::::SS::::::SSSSSS:::::SE::::::::::::::::::::E     2::::::2222222:::::2 00:::::::::::::00 1::::::::::1  9::::::9
+S:::::::::::::::SS S:::::::::::::::SS E::::::::::::::::::::E     2::::::::::::::::::2   00:::::::::00   1::::::::::1 9::::::9
+ SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEE     22222222222222222222     000000000     11111111111199999999
+
+</pre>
  <pre align=center>
 $$\     $$\                                    $$\     $$\
 \$$\   $$  |                                   \$$\   $$  |
