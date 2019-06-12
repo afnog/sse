@@ -109,7 +109,7 @@ save and quit
 create the pcX-vhost.j2 file and add the virtual host configuration : 
 	# vi pcX-vhost.j2
 <VirtualHost *:80>
-    DocumentRoot /var/www/html/www1.{{ ansible_fqdn }}
+    DocumentRoot /var/www/html/wwwX.{{ ansible_fqdn }}
     ServerName www1.{{ ansible_fqdn }}
 </VirtualHost>
 
@@ -126,7 +126,7 @@ create the pcX-vhost.j2 file and add the virtual host configuration :
   - name: creating the Document Root Dir
     become: yes
     file:
-        path: /var/www/html/www1.{{ ansible_fqdn }}
+        path: /var/www/html/wwwX.{{ ansible_fqdn }}
         state: directory
 --------------------------------------------------------
 creating a new index file in your document root
@@ -137,18 +137,34 @@ creating a new index file in your document root
     become: yes
     template:
         src: index.j2
-        dest: /var/www/html/www1.{{ ansible_fqdn }}/index.html
+        dest: /var/www/html/wwwX.{{ ansible_fqdn }}/index.html
 
 save and quit your file 
 
-- create the index.j2 template and add the folowing in it  : 
+- create the index.j2 template and add the folowing in it "replace X with your number" ,
+ just copy and paste the code : 
 
 	# vi index.j2
 
-<H1 align="center">  hi this is my www1.{{ ansible_fqdn }} website   </H1>
+<H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
+<H1 align="center">   this is " pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
+<H1 align="center">   i just hosted my wwwX.{{ ansible_fqdn }} website in your server with your domain  :P   </H1>
+<H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+
+ <pre align=center>
+$$\     $$\                                    $$\     $$\
+\$$\   $$  |                                   \$$\   $$  |
+ \$$\ $$  /$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\\$$\ $$  /
+  \$$$$  / \____$$\  \____$$\  \____$$\  \____$$\\$$$$  /
+   \$$  /  $$$$$$$ | $$$$$$$ | $$$$$$$ | $$$$$$$ |\$$  /
+    $$ |  $$  __$$ |$$  __$$ |$$  __$$ |$$  __$$ | $$ |
+    $$ |  \$$$$$$$ |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ | $$ |
+    \__|   \_______| \_______| \_______| \_______| \__|
+
+</pre>
 
 <FORM name="changeColor">
-<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="8">Choose a Background Color:
 <BR><BR>
 <INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
 <INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
@@ -164,6 +180,9 @@ save and quit your file
 run your playbook: 
 	# ansible-playbook mypcX.yaml -b
 
+in your browser check your new created website ^_^ 
+use your partners domain : 
+ wwwX.pcY.sse.afnog.org 
 --------------------------------------------------------
 --------------------------------------------------------
 
@@ -225,10 +244,25 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 #### full index.j2 file ####
 
 
-<H1 align="center">  hi this is my www1.{{ ansible_fqdn }} website   </H1>
+<H1 align="center">   this is SSE Class 2019  and WE ARE playing ANSIBLE ^_^ </H1>
+<H1 align="center">   this is "pcX.{{ ansible_domain }} " playing on " {{ ansible_fqdn }} "  ^_^   </H1>
+<H1 align="center">   i just hosted my wwwX.{{ ansible_fqdn }} website in your server using your domain  :P   </H1>
+<H1 align="center">   CHEEEEEEEEEEEEEEEEEEEERS ^_^   </H1>
+
+ <pre align=center>
+$$\     $$\                                    $$\     $$\
+\$$\   $$  |                                   \$$\   $$  |
+ \$$\ $$  /$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\\$$\ $$  /
+  \$$$$  / \____$$\  \____$$\  \____$$\  \____$$\\$$$$  /
+   \$$  /  $$$$$$$ | $$$$$$$ | $$$$$$$ | $$$$$$$ |\$$  /
+    $$ |  $$  __$$ |$$  __$$ |$$  __$$ |$$  __$$ | $$ |
+    $$ |  \$$$$$$$ |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ | $$ |
+    \__|   \_______| \_______| \_______| \_______| \__|
+
+</pre>
 
 <FORM name="changeColor">
-<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="10">Choose a Background Color:
+<FONT face="Verdana,Arial,Helvetica,Sans Serif" size="8"> Choose a Background Color:
 <BR><BR>
 <INPUT type="button" onClick="document.bgColor='#0000FF'" name="colr" value=" BLUE ">
 <INPUT type="button" onClick="document.bgColor='#FF0000'" name="colr" value=" RED ">
@@ -237,9 +271,6 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 <INPUT type="button" onClick="document.bgColor='#C0C0C0'" name="colr" value=" SILVER "></FONT>
 <INPUT type="button" onClick="document.bgColor='#FFFF00'" name="colr" value=" YELLOW "></FONT>
 </FORM>
-~
-~
-~
-~
+
 
 
