@@ -73,7 +73,7 @@ Excesise 2: working with ansible ad-hoc commands
 
 * collect and display the discovered facts for the localhost
 	# ansible localhost -m setup
-	# ansible  pcX.ws.sse.afnog.org -m setup -a "filter=*ipv4“
+	# ansible  pcX.sse.ws.afnog.org -m setup -a "filter=*ipv4“
 
 * excute echo in remote hosts : 
 	#  ansible all -m shell -a "echo hi its YourName  > /home/afnog/YourName.txt" -b
@@ -82,7 +82,7 @@ Excesise 2: working with ansible ad-hoc commands
 	# ansible group2 -m command -a "uptime“
 
 * fetch hard drives utilization 
-	# ansible -m command -a 'df -h’ pcX.ws.sse.afnog.org
+	# ansible -m command -a 'df -h’ pcX.sse.ws.afnog.org
 
 * remove telnet package from remote servers on group1: 
  ansible group1 -m apt -a "name=telnet state=absent" -b

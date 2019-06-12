@@ -1,4 +1,3 @@
-
 Apache VirtualHost Exercise: Vitus
 -----------------------------------
 
@@ -24,21 +23,13 @@ sudo mkdir -p /var/www/html/pcX.sse.ws.afnog.org
 
 sudo mkdir -p /var/www/html/pcY.sse.ws.afnog.org
 
-
-2. sudo nano vi /var/www/html/pcX.sse.ws.afnog.org
+cd /var/www/html/pcX.sse.ws.afnog.org
+2. sudo nano /var/www/html/pcX.sse.ws.afnog.org/index.html
 
 --- WEB1---
-<html>
-<head>
-<title>SSE - Class</title>
-</head>
-<body>
-<h1>Welcome To Afnog 20 SSE Class</h1>
-</body>
-</html>
 
 
-3. nano vi /var/www/html/pcY.sse.ws.afnog.org
+3. sudo nano /var/www/html/pcY.sse.ws.afnog.org/index.html
 
 
 --- WEB2 ---
@@ -52,14 +43,15 @@ sudo mkdir -p /var/www/html/pcY.sse.ws.afnog.org
 </html>
 
 
+//createing virtual virtual host files
 
-4. sudo nano /etc/apache2/sites-available/pcX.sse.ws.afnog.org.conf
+4. sudo nano /etc/apache2/sites-available/pc33.sse.ws.afnog.org.conf
 
 <VirtualHost *:80>
 
 ServerAdmin root@pcX.sse.ws.afnog.org
-ServerName web1.xxxx.afnog.nog-oc.org
-DocumentRoot /var/www/html/pcX.sse.ws.afnog.org
+ServerName www.xxxx.afnog.nog-oc.org
+DocumentRoot /var/www/html/pc36.sse.ws.afnog.org
 
 ErrorLog ${APACHE_LOG_DIR}/www.pcX.sse.ws.afnog.org_error.log
 CustomLog ${APACHE_LOG_DIR}/www.pcX.sse.ws.afnog.org_ccess.log combined
@@ -113,7 +105,7 @@ END - Congrats.
 
 
 #HOSTFILE
-DON'T DO THIS IF YOUR DNS FINE. 
+DON'T DO THIS IF YOUR DNS IS FINE. 
 
 6. sudo nano /etc/hosts
 
