@@ -1,16 +1,15 @@
 ---
-- hosts: fqdn
+- hosts: all
   tasks:
-  - name: installing cowsay package
-    apt:
-     name: cowsay
-     state: latest
+  - name: create virtual host file
+    template: src=pc36-vhost.j2 dest=/etc/apache2/sites-available/www36.{{ ansible_fqdn }}.conf
 
-  - name: configuring Virtual host
-    template:
-      src: pc36-vhost.j2
-      dest: /etc/apache2/sites-available/www36.{{  ansible_fqdn }}.conf
-    notify: restart apache2
+  - name: create a shortcut to site-enabled directory 
+    command: a2ensite www36.{{ ansible_fqdn }}
+    args:
+       creates: /etc/apache2/sites-enabled/www36.{{ ansible_fqdn }}.conf
+    notify:
+        - restart apache2
 
   - name: create the root directory
     file:
