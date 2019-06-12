@@ -1,0 +1,63 @@
+FREEBSD FIREWALL EXERCISE
+
+
+Your FreeBSD VM is "bsdpcX.sse.ws.afnog.org"
+
+ssh as follows: ssh afnog@bsdpcX.sse.ws.afnog.org 
+
+
+	
+
+
+1. PF is installed by default in FreeBSD but is not loaded in the kernel. We will load it as well as pflog which we will use to log the rules on the firewall
+	
+	$sudo kldload pf
+
+  Determine your IP address
+
+    $ifconfig vtnet0
+
+2. Now enable PF in /etc/rc.conf as follows by editing /etc/rc.conf with ee:
+	
+	$sudo ee /etc/pf.conf
+
+Add the following rules
+
+   ##########
+	ext_if="vtnet0"                         #the external interface
+	me="196.200.219.51"     				##your IP                
+	set skip on lo0                         ##avoid the loopback interface
+                                                 
+	block in all                            #block every thing by default
+                                                 
+	pass in quick on $ext_if inet proto tcp from any to $me port 22
+	block out quick on $ext_if inet proto icmp from $me to 4.2.2.2
+	pass out quick on $ext_if inet proto icmp from $me to any
+   #########
+
+
+
+	PRESS ESCAPE
+	SELECT "leave editor" (press enter)
+	SELECT "save changes" (press enter)
+
+
+3. Check the rules syntax is correct
+
+   $sudo pfctl -n -f /etc/pf.conf
+   
+   
+   If you get no output then the rules file is correct. The next 2 lines enable the firewall and load the rules
+   
+   
+   $sudo pfctl -e
+   $sudo pfctl -f /etc/pf.conf
+   
+ 
+ 4. Try and ping 4.2.2.2. It should fail with a "ping: sendto: Permission denied"
+ 
+ 5. Go back and change the "permit" to "block" on this line
+ 	
+ 			block out quick on $ext_if inet proto icmp from $me to 4.2.2.2
+			
+ 6. Once done reload the rules with "sudo pfctl -f /etc/pf.conf"

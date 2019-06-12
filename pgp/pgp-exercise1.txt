@@ -310,7 +310,7 @@ It's a good idea also to encrypt towards yourself. Why?
   afnog@pc38:~$ gpg -a -se -r jabley@hopcount.ca -r jabley@nsrc.org plain.txt
 
   You need a passphrase to unlock the secret key for
-  user: "Joe Abley (temporary for AfNOG 2015 workshop) <jabley@nsrc.org>"
+  user: "Joe Abley (temporary for AfNOG 2019 workshop) <jabley@nsrc.org>"
   2048-bit RSA key, ID DC2B8C9F, created 2015-05-29
 
   afnog@pc38:~$
