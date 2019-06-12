@@ -1,6 +1,5 @@
 Ansible Excersise : 
 -------------------
-
 Excesise 1: working with inventory 
 ----------------------------------
 * install ansible and sshpass "ssh with arguments": 
@@ -8,11 +7,11 @@ sshpass allows you to pass password to ssh connection as an argument
 	# apt-get install ansible sshpass
 * please edit your ansible.cfg file to ignore the SSH authenticity checking
 	# vi /etc/ansible.cfg
-serch for [defaults] and write this : 
+search for [defaults] and write this : 
 [defaults]
 host_key_checking = False
 ------
-to use cowsay in ansible for more fun , uncomment this line : 
+to use cowsay in ansible "for more fun" , uncomment this line : 
 cow_selection=random
 
 * open your inventory file and add your class groups as shown : 
@@ -228,7 +227,12 @@ $$\   $$ |$$\   $$ |$$ |           $$ |  $$\ $$ |$$  __$$ | \____$$\  \____$$\
 \$$$$$$  |\$$$$$$  |$$$$$$$$\      \$$$$$$  |$$ |\$$$$$$$ |$$$$$$$  |$$$$$$$  |
  \______/  \______/ \________|      \______/ \__| \_______|\_______/ \_______/ 
                                                                               
- 
+
+
+Appendices:
+-----------
+-----------
+
 ### full mypcX.yaml file : 
 
 ---
