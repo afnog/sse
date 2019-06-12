@@ -47,6 +47,14 @@ pc[25:28].sse.ws.afnog.org
 [group8]
 pc[29:32].sse.ws.afnog.org
 # setting user name and password that ansible going to use for all groups
+
+[fqdn]
+pc[21:24].sse.ws.afnog.org
+pc[13:14].sse.ws.afnog.org
+pc[16:19].sse.ws.afnog.org
+pc[7:10].sse.ws.afnog.org
+
+
 [all:vars]                                                   
 ansible_ssh_user=afnog                              
 ansible_ssh_pass=SSE@Success! 	
