@@ -61,7 +61,6 @@ automatically.
 		<tr id="EN"> <td>Michuki Mwangi</td> <td>MM</td> <td><a href="http://www.internetsociety.org">ISOC</a></td> <td>Kenya</td> </tr>
 	</tbody>
 </table>
-<b> Lab setup with many thanks to Patrick Okui! </b>
 
 ### Participants
 
