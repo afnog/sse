@@ -83,7 +83,7 @@ create a new .yaml file with name mypcX.yaml and write tasks to:
     become: yes
     apt:
         name: cowsay
-        state: absent
+        state: latest
 
 save and quit then run your playbook : 
 	# ansible-playbook mypcX.yaml -b
