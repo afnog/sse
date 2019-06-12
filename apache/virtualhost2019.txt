@@ -6,6 +6,16 @@ NB: Please note, remember to replace X with your pc number. eg pc36.sse.ws.afnog
 
 NB: Please note, remember to replace Y with your neighbours pc number. eg pc37.sse.ws.afnog.org
 
+
+0. 
+IF your DNS is setup and working then do mapping on DNS.
+
+web1         IN      A       196.200.219.X ; your IP
+
+web2         IN      A       196.200.219.X ; your IP
+
+-- START  WORK --
+
 1. Create web directory for each host
 
 sudo mkdir -p /var/www/html/pcX.sse.ws.afnog.org
@@ -47,7 +57,7 @@ sudo mkdir -p /var/www/html/pcY.sse.ws.afnog.org
 <VirtualHost *:80>
 
 ServerAdmin root@pcX.sse.ws.afnog.org
-ServerName pcX.sse.ws.afnog.org
+ServerName web1.xxxx.afnog.nog-oc.org
 DocumentRoot /var/www/html/pcX.sse.ws.afnog.org
 
 ErrorLog ${APACHE_LOG_DIR}/www.pcX.sse.ws.afnog.org_error.log
@@ -61,7 +71,7 @@ CustomLog ${APACHE_LOG_DIR}/www.pcX.sse.ws.afnog.org_ccess.log combined
 <VirtualHost *:80>
 
 ServerAdmin root@pcX.sse.ws.afnog.org
-ServerName pcX.sse.ws.afnog.org
+ServerName web2.xxxx.afnog.nog-oc.org
 DocumentRoot /var/www/html/pcY.sse.ws.afnog.org
 
 ErrorLog ${APACHE_LOG_DIR}/www.pcY.sse.ws.afnog.org_error.log
@@ -71,7 +81,12 @@ CustomLog ${APACHE_LOG_DIR}/www.pcY.sse.ws.afnog.org_ccess.log combined
 
 
 
-IF your DNS is setup and working then do mapping on DNS. 
+IF your DNS is setup and working then do mapping on DNS.
+
+web1         IN      A       196.200.219.X ; your IP
+
+web2         IN      A       196.200.219.X ; your IP
+
 
 ELSE 
 
@@ -82,6 +97,11 @@ ELSE
 
 
 TESTING
+Go to your web browser and check sites.
+
+
+
+Else if you are using your hosts file.
 $lynx pcX.sse.ws.afnog.org
 
 $lynx pcY.sse.ws.afnog.org
