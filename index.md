@@ -125,6 +125,7 @@ automatically.
 #### [Isabel Odida](#IO)
 
 * Presentation and Exercises: [PDF](apache/Apachepresentation2019.pdf)
+* Apache lab: [Lab](apache/virtualhost2019.txt)
 
 ### Backups
 [Backups]: #backups
