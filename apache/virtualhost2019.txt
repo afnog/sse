@@ -14,6 +14,8 @@ web1         IN      A       196.200.219.X ; your IP
 
 web2         IN      A       196.200.219.X ; your IP
 
+...
+
 -- START  WORK --
 
 1. Create web directory for each host
@@ -34,7 +36,6 @@ sudo mkdir -p /var/www/html/pcY.sse.ws.afnog.org
 <h1>Welcome To Afnog 20 SSE Class</h1>
 </body>
 </html>
-
 
 
 3. nano vi /var/www/html/pcY.sse.ws.afnog.org
