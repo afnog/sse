@@ -26,7 +26,7 @@ For this class, we will install ntp and ntpdate using packages.
 
 2.1 Install ntp & ntpdate
 
-	$ sudo apt-get install ntp ntpdate
+	$ sudo apt-get install ntp
 	
 	
 2.2.  Once installed, the ntp startup script is placed at /etc/init.d/ . To add ntp to the System Startup
