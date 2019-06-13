@@ -288,9 +288,9 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 * Postfix - [Introduction to Postfix](postfix/postfix_preso.pdf)
 * Exercise 1 - Add MX records [Add MX record](postfix/add-MX-record.txt)
 * Exercise 2 - [Installing Postfix](postfix/postfix_install.txt)
-* Exercise 3 - [Postix Enable HELO](postfix/postfix_hardening.txt)
+* Exercise 3 - [Command line Email](postfix/commandline_email.txt)
 * Some Email Best Practices -  [Email Best Practices](postfix/email_best_practices.pdf)
-* Exercise 4 - [Command line Email](postfix/commandline_email.txt)
+* Exercise 4 - [Postix Enable HELO](postfix/postfix_hardening.txt)
 * Understanding email - [Email Overview](postfix/01_email_preso.pdf)
 
 ##### Spam Filtering

@@ -11,7 +11,7 @@ At the bottom of the file add the following lines:
 	@ IN MX 10 mail.YYY.afnog.nog-oc.org.
 
 
-Replace XXX with your PC number name.
+Replace XXX with your PC number. Check the last octet of your IP address.
 Replace YYY with your zone name
 
 Increment the Serial number then save and exit the file
