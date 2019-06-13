@@ -1,11 +1,64 @@
-############# Simple RSPAMD Setup ######################
+############# Install RSPAMD  ######################
 
 Login to your FreeBSD server: 
 
 ssh afnog@bsdpcX.sse.ws.afnog.org
 
-1. Install Rspamd
-		$sudo apt-get install rspamd
+
+DISABLE THE FIREWALL FOR NOW
+
+	$sudo pfctl -d
+	
+	
+
+1. Install Rspamd, Apache and Postfix and enable them
+		$sudo pkg install rspamd postfix apache24 nano
+		
+		$sudo sysrc apache24_enable=YES
+		$sudo sysrc postfix_enable=YES
+		$sudo sysrc rspamd_enable=YES
 		
 		
-2. 
+2. Configure Postfix to accept email for your mail domain as follows
+
+
+Edit Postfix main.cf
+
+	$sudo nano /usr/local/etc/postfix/main.cf
+
+################
+	##Add the two domains that this server will receive email for and filter:
+
+
+	mydestination = yourdomain.afnog.nog-oc.org, bsdpcX.sse.ws.afnog.org
+	transport_maps = hash:/etc/postfix/transport # The file to check to route email
+	smtpd_milters = inet:127.0.0.1:11332. 		 # How to connect to Rspamd
+	milter_default_action = accept.  			 # skip mail without checks if something goes wrong
+	milter_protocol = 6 						 # Required when Postfix processes email through other software before accepting in the queue
+
+################
+
+
+Save and Exit. 
+
+3. Then edit as below replacing with your matching domain and mailservers respectively
+
+
+	$sudo nano /usr/local/etc/postfix/transport
+	
+	##Add your afnog.nog-oc.org domain where his mail will be routed to. 
+	
+	yourdomain.afnog.nog-oc.org  smtp:[pcYY.sse.ws.afnog.org]
+	
+
+Save and Exit the file
+
+
+4. Run postmap against the file you created. This should be done each time you add or remove a domain
+
+	$cd /usr/local/etc/postfix
+	$sudo postmap transport
+	$sudo newaliases
+	$sudo postfix reload
+
+Save and exit and do the next part which is configuring Apache and Rspamd
