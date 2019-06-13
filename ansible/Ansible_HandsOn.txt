@@ -251,39 +251,40 @@ Appendices:
 ### full mypcX.yaml file : 
 
 ---
-- hosts: groupX
+- hosts: pc15.sse.ws.afnog.org
   tasks:
-  - name: installing COWSAY 
-    become: yes
+  - name: installing cowsay package
     apt:
-        name: cowsay
-        state: absent
-  - name: Configuring Virtual-Host
-    become: yes
-    become_user: root
-    template:
-         src: pcX-vhost.j2
-         dest: "/etc/apache2/sites-enabled/wwwX.{{ ansible_fqdn }}.conf"
-    notify: restart apache2
+     name: cowsay
+     state: latest
 
-  - name: creating the Document Root Dir
-    become: yes
+  - name: create virtual host file
+    template: src=pcX-vhost.j2 dest=/etc/apache2/sites-available/wwwX.{{ ansible_fqdn }}.conf
+
+  - name: a2ensite wwwX.{{ ansible_fqdn }}
+    command: a2ensite wwwX.{{ ansible_fqdn }}
+    args:
+       creates: /etc/apache2/sites-enabled/wwwX.{{ ansible_fqdn }}.conf
+    notify:
+        - restart apache2
+
+  - name: create the root directory
     file:
-        path: /var/www/html/wwwX.{{ ansible_fqdn }}
-        state: directory
+     path: /var/www/html/wwwX.{{ ansible_fqdn }}
+     state: directory
 
-  - name: configuring the Document Root
+  - name: creating index file
     become: yes
     template:
         src: index.j2
         dest: /var/www/html/wwwX.{{ ansible_fqdn }}/index.html
 
   handlers:
-   - name: restart apache2
-     become: yes
-     service :
-        name: apache2
-        state: restarted
+  - name: restart apache2
+    service:
+     name: apache2
+     state: restarted
+
 ------------------------------------------------------
 #### full pcX-vhost.j2 file ####
    
