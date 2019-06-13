@@ -286,7 +286,7 @@ Appendices:
      state: restarted
 
 ------------------------------------------------------
-#### full pcX-vhost.j2 file ####
+#### full pcX-vhost.j2 file #####
    
 <VirtualHost *:80>
     DocumentRoot /var/www/html/wwwX.{{ ansible_fqdn }}
