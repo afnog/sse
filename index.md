@@ -322,7 +322,12 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 * Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
 * Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
+### RSPAMD
+[RSPAMD]: #rspamd
 
+* Exercise 1 - Add a second MX: [secondmx](rspamd/01_add_second_mx.txt)
+* Exercise 2 - Install Rspamd: [secondmx](rspamd/02_install_rspamd.txt)
+* Exercise 3 - Configure Rspamd: [secondmx](rspamd/03_configure_rspamd_apache.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization
