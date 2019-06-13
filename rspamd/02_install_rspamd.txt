@@ -1,5 +1,8 @@
 ############# Install RSPAMD  ######################
 
+************RUN ON THE FREEBSD SERVER (bsdpcX.sse.ws.afnog.org)********
+
+
 Login to your FreeBSD server: 
 
 ssh afnog@bsdpcX.sse.ws.afnog.org
@@ -12,35 +15,24 @@ DISABLE THE FIREWALL FOR NOW
 	
 
 1. Install Rspamd, Apache and Postfix and enable them
-		$sudo pkg install rspamd postfix apache24 nano
+		$sudo pkg install -y rspamd postfix apache24 nano
 		
 		$sudo sysrc apache24_enable=YES
 		$sudo sysrc postfix_enable=YES
 		$sudo sysrc rspamd_enable=YES
 		
-	As it installs, it may display:
 	
-	The process will require 326 MiB more space.
-	66 MiB to be downloaded.
-
-	Proceed with this action? [y/N]:
-	
-	Type "y" and press Enter
-	
-	
-	Would you like to activate Postfix in /usr/local/etc/mail/mailer.conf [n]? 
-	
-	Type "y" and press Enter
-	
-		
 		
 2. Configure Postfix to accept email for your mail domain as follows
 
 
-Edit Postfix main.cf
+Edit Postfix main.cf. 
 
 	$sudo nano /usr/local/etc/postfix/main.cf
 
+
+	##SCROLL TO THE BOTTOM OF THE FILE!
+	
 ################
 	##Add the below and substitute "mydestination" appropriately
 
@@ -55,6 +47,8 @@ Edit Postfix main.cf
 
 
 Save and Exit. 
+
+
 
 3. Then edit as below replacing with your matching domain and mailservers respectively
 
@@ -74,19 +68,20 @@ Run postmap against the file you created. This should be done each time you add 
 
 Save and Exit the file
 
+
 4. Configure the Aliases file and set for all emails to root to go to your afnog account on your domain
 
 		$sudo nano /etc/aliases
 	
-  FIND THE BELOW LINE
+  FIND THE BELOW LINE!!
   
-  postmaster: root
+  			postmaster: root
   
-  AND ADD BELOW IT, REPLACE YYY WITH YOUR DOMAIN NAME
+  ##AND ADD BELOW IT, REPLACE YYY WITH YOUR DOMAIN NAME
   
-  root: afnog@YOURDOMAIN.afnog.nog-oc.org 
+ 	 	root: afnog@YOURDOMAIN.afnog.nog-oc.org 
   
-  Save and exit the file and reload the aliases database
+  ##Save and exit the file and reload the aliases database
   
 		$sudo newaliases
   
@@ -94,4 +89,4 @@ Save and Exit the file
 4. Start Postfix
 	$sudo service postfix start
 
-Save and exit and do the next part which is configuring Apache and Rspamd
+Move to the next exercise which is configuring Apache and Rspamd

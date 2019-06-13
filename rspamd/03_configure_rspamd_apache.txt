@@ -1,5 +1,10 @@
 ############# Configure RSPAMD and Apache  ######################
 
+
+************RUN ON THE FREEBSD SERVER (bsdpcX.sse.ws.afnog.org)********
+
+
+
 1. Create a new file to Enable Apache to be able to proxy requests
 	$cd /usr/local/etc/apache24/Includes
 	
@@ -77,8 +82,16 @@ static_dir = "${WWWDIR}";
 	Put the password success!
 
 
+SEND A FEW EMAILS FROM THE INTERNET AND ALSO VIA TELNET TO afnog@YOURDOMAIN.afnog.nog-oc.org
+
+ASK YOUR NEIGHBOUR TO EMAIL YOU VIA TELNET
+
+CHECK THE RSPAMD LOG FILE
+
+	$sudo tail -f /var/log/rspamd/rspamd.log
 
 	
+=======================END============================
 
 	
 	
