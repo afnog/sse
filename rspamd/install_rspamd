@@ -1,0 +1,11 @@
+############# Simple RSPAMD Setup ######################
+
+Login to your FreeBSD server: 
+
+ssh afnog@bsdpcX.sse.ws.afnog.org
+
+1. Install Rspamd
+		$sudo apt-get install rspamd
+		
+		
+2. 
