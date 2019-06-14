@@ -80,10 +80,10 @@ automatically.
 |09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|[Virtualization][]
 |-
 |Tea break
-|11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RADIUS][]
+|11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RSPAMD][]
 |-
 |Lunch
-|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RSPAMD][]
+|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RADIUS][]
 |-
 |Tea break
 |16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|Expert Panel and [Closing Survey][]
