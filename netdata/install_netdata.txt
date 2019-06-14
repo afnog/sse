@@ -13,7 +13,7 @@
 	$sudo sysrc netdata_enable=YES
 	
 
-3. Configure it
+3. Configure it - add the IP for your FreeBSD machine
 
 	$sudo nano /usr/local/etc/netdata/netdata.conf
 	
