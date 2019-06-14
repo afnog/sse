@@ -193,6 +193,8 @@ automatically.
 [NETDATA]: #netdata
 
 * Install Netdata [exercise](netdata/install_netdata.txt)
+
+
 ##### DNS Authoritative Name Servers
 [DNS Authoritative]: #dns-authoritative-name-servers
 
