@@ -7,28 +7,31 @@
 	$sudo pkg install -y netdata
 	
 	
-	You will be as
-
+	
 2. Enable it
 
 	$sudo sysrc netdata_enable=YES
 	
 
-3. Configure it
+3. Configure it - add the IP for your FreeBSD machine
 
 	$sudo nano /usr/local/etc/netdata/netdata.conf
 	
 	
 	FIND THIS LINE
 	
-	bind to = 127.0.0.1
+		bind to = 127.0.0.1
 	
 	REPLACE WITH
 	
-	bind to = 196.200.219.XX # Your IP addres
+		bind to = 196.200.219.XX 
 	
 	
-	Save and exit the file
+	SAVE AND EXIT
 	
 
 4. Start it
+	
+	$sudo service netdata start
+	
+	THEN BROWSE http://bsdpcX.sse.ws.afnog.org:19999
