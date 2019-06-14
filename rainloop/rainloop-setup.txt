@@ -7,10 +7,10 @@
 	sudo wget http://www.rainloop.net/repository/webmail/rainloop-community-latest.zip
 	sudo mkdir /var/www/rainloop
 	sudo unzip rainloop-community-latest.zip -d /var/www/rainloop
-	sudo chown -R www-data.www-data /var/www/rainloop
+	sudo chown -R www-data:www-data /var/www/rainloop
 
 
-2. Edit the Apache config and add the below
+2. Create the Apache config below
 
 	sudo vi /etc/apache2/sites-enabled/rainloop.conf
 

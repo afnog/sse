@@ -1,0 +1,98 @@
+############# Configure RSPAMD and Apache  ######################
+
+
+************RUN ON THE FREEBSD SERVER (bsdpcX.sse.ws.afnog.org)********
+
+
+
+1. Create a new file to Enable Apache to be able to proxy requests
+	$cd /usr/local/etc/apache24/Includes
+	
+	$sudo nano proxy.conf
+	
+###### Add the below lines
+LoadModule proxy_html_module libexec/apache24/mod_proxy_html.so
+LoadModule proxy_module libexec/apache24/mod_proxy.so
+LoadModule proxy_connect_module libexec/apache24/mod_proxy_connect.so
+LoadModule proxy_ftp_module libexec/apache24/mod_proxy_ftp.so
+LoadModule proxy_http_module libexec/apache24/mod_proxy_http.so
+LoadModule proxy_fcgi_module libexec/apache24/mod_proxy_fcgi.so
+LoadModule proxy_scgi_module libexec/apache24/mod_proxy_scgi.so
+LoadModule xml2enc_module libexec/apache24/mod_xml2enc.so
+
+
+
+ServerName bsdpcX.sse.ws.afnog.org ###ADJUST THIS TO YOUR PC NUMBER
+##### Save and exit the file
+
+
+
+
+2. Add a new configuration for Rspamd
+
+	$sudo nano rspamd.conf
+	
+###### Add the below lines	
+	<Location /rspamd/>
+	ProxyPass  http://127.0.0.1:11334/
+	ProxyPassReverse http://127.0.0.1:11334/
+	</Location>
+	
+########Save and exit the file
+	
+	
+	
+
+3. Configure Rspamd's web interface's password
+
+	$cd /usr/local/etc/rspamd
+	
+	$sudo rspamadm pw
+	
+##Please use the password as below
+
+	success!
+	
+A hashed password will be produced. Copy it as is.
+
+4. Add the hashed password in this file:
+
+
+	$sudo nano worker-controller.inc
+	
+######REMOVE EVERYTHING IN THE FILE AND PUT THE BELOW EXACTLY AS IS
+
+count = 1;
+password = "$2$yb1tm16yn9hf7jik96y4dtw3yd6xyhfh$enk5fywpwkda11cw11ru9ki8mn5axe9xde66ewzfuf47zfnqorqy";
+secure_ip = "127.0.0.1";
+secure_ip = "::1";
+static_dir = "${WWWDIR}";
+	
+	
+#####Save and exit the file
+
+5. Start rspamd and apache
+
+	$sudo service rspamd start
+	$sudo service apache24 start
+	
+
+6. Browse the following URL: http://bsdpcX.sse.ws.afnog.org/rspamd/
+
+	Put the password success!
+
+
+SEND A FEW EMAILS FROM THE INTERNET AND ALSO VIA TELNET TO afnog@YOURDOMAIN.afnog.nog-oc.org
+
+ASK YOUR NEIGHBOUR TO EMAIL YOU VIA TELNET
+
+CHECK THE RSPAMD LOG FILE
+
+	$sudo tail -f /var/log/rspamd/rspamd.log
+
+	
+=======================END============================
+
+	
+	
+	

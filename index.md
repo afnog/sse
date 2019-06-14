@@ -77,13 +77,13 @@ automatically.
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|10/06			|11/06			|12/06			|13/06			|14/06
-|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|AntiSpam
+|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|[Virtualization][]
 |-
 |Tea break
 |11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RADIUS][]
 |-
 |Lunch
-|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[Virtualization][]
+|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RSPAMD][]
 |-
 |Tea break
 |16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|Expert Panel and [Closing Survey][]
@@ -270,9 +270,9 @@ Goal: DNSSEC High Level Awareness.
 * Presentation: [PowerPoint](ldap/Openldap presentation.pptx) [PDF](ldap/Openldap presentation.pdf)
 * Exercise: [PowerPoint](ldap/Openldap exercise.pptx) [PDF](ldap/Openldap exercise.pdf)
 
-### Postfix
-[Postfix]: #postfix
 
+
+#### [Kevin Chege](#KC)
 
 ### Rainloop
 [Rainloop]: #rainloop
@@ -282,8 +282,8 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 * Installing Rainloop - Part 1[Exercise-1/Text](rainloop/rainloop-setup.txt)
 * Installing Rainloop - Part 2[Exercise-2/PDF](rainloop/rainloop-part2.pdf)
 
-
-#### [Kevin Chege](#KC)
+### Postfix
+[Postfix]: #postfix
 
 * Postfix - [Introduction to Postfix](postfix/postfix_preso.pdf)
 * Exercise 1 - Add MX records [Add MX record](postfix/add-MX-record.txt)
@@ -322,7 +322,19 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 * Presentation: [PowerPoint](radius/radius_presentation_2016.ppt) [PDF](radius/radius_presentation_2016.pdf)
 * Exercise: [PowerPoint](radius/FreeRadius Exercise 2016.pptx) [PDF](radius/FreeRadius Exercise 2016.pdf)
 
+#### [Kevin Chege](#KC)
+### RSPAMD
+[RSPAMD]: #rspamd
 
+This is a quick setup of a powerful anti-spam software known as RSPAMD with default settings to demo a sample mail filter
+
+NB: ALL COMMANDS ARE TO BE CARRIED OUT ON YOUR FREEBSD SERVER!!!
+
+RSPAMD website: http://rspamd.com
+
+* Exercise 1 - Add a second MX: [rspamd-1](rspamd/01_add_second_mx.txt)
+* Exercise 2 - Install Rspamd: [rspamd-2](rspamd/02_install_rspamd.txt)
+* Exercise 3 - Configure Rspamd: [rspamd-3](rspamd/03_configure_rspamd_apache.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization

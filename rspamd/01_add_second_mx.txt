@@ -1,0 +1,32 @@
+=========ADD A NEW MX RECORD SO THAT YOUR MAIL FILTER RECEIVES EMAIL FIRST ===========
+
+1. #### Add an MX record for priority for the Mail gateway #####
+
+	$cd /var/cache/bind/master
+
+	$nano YYY.afnog.nog-oc.org
+
+At the bottom of the file add the following lines:
+
+
+	@ IN MX 5 bsdpcX.sse.ws.afnog.org.
+
+
+Replace X with your number
+
+Incremenent the Serial number then save and exit the file
+
+Reload BIND as follows
+
+	$sudo rndc reload
+
+
+
+Now dig your domain mx record and ensure that it shows email will go to the FreeBSD Box first
+
+	$dig ____.afnog.nog-oc.org mx
+	
+
+
+=======================END============================
+

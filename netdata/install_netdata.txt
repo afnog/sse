@@ -1,0 +1,34 @@
+############### SERVER MONITOR NETDATA ##########
+
+************RUN ON THE FREEBSD SERVER (bsdpcX.sse.ws.afnog.org)********
+
+1. Install it
+
+	$sudo pkg install -y netdata
+	
+	
+	You will be as
+
+2. Enable it
+
+	$sudo sysrc netdata_enable=YES
+	
+
+3. Configure it
+
+	$sudo nano /usr/local/etc/netdata/netdata.conf
+	
+	
+	FIND THIS LINE
+	
+	bind to = 127.0.0.1
+	
+	REPLACE WITH
+	
+	bind to = 196.200.219.XX # Your IP addres
+	
+	
+	Save and exit the file
+	
+
+4. Start it

@@ -1,0 +1,92 @@
+############# Install RSPAMD  ######################
+
+************RUN ON THE FREEBSD SERVER (bsdpcX.sse.ws.afnog.org)********
+
+
+Login to your FreeBSD server: 
+
+ssh afnog@bsdpcX.sse.ws.afnog.org
+
+
+DISABLE THE FIREWALL FOR NOW
+
+	$sudo pfctl -d
+	
+	
+
+1. Install Rspamd, Apache and Postfix and enable them
+		$sudo pkg install -y rspamd postfix apache24 nano
+		
+		$sudo sysrc apache24_enable=YES
+		$sudo sysrc postfix_enable=YES
+		$sudo sysrc rspamd_enable=YES
+		
+	
+		
+2. Configure Postfix to accept email for your mail domain as follows
+
+
+Edit Postfix main.cf. 
+
+	$sudo nano /usr/local/etc/postfix/main.cf
+
+
+	##SCROLL TO THE BOTTOM OF THE FILE!
+	
+################
+	##Add the below and substitute "mydestination" appropriately
+
+
+	mydestination = yourdomain.afnog.nog-oc.org, bsdpcX.sse.ws.afnog.org
+	transport_maps = hash:/usr/local/etc/postfix/transport 
+	smtpd_milters = inet:127.0.0.1:11332 		 
+	milter_default_action = accept 			 
+	milter_protocol = 6 						 #
+
+################
+
+
+Save and Exit. 
+
+
+
+3. Then edit as below replacing with your matching domain and mailservers respectively
+
+
+	$cd /usr/local/etc/postfix
+	$sudo nano /usr/local/etc/postfix/transport
+	
+	##Add your afnog.nog-oc.org domain where his mail will be routed to. 
+	
+	YOURDOMAIN.afnog.nog-oc.org  smtp:[pcYY.sse.ws.afnog.org]
+	
+	
+Run postmap against the file you created. This should be done each time you add or remove a domain in that file
+
+	$sudo postmap transport
+	
+
+Save and Exit the file
+
+
+4. Configure the Aliases file and set for all emails to root to go to your afnog account on your domain
+
+		$sudo nano /etc/aliases
+	
+  FIND THE BELOW LINE!!
+  
+  			postmaster: root
+  
+  ##AND ADD BELOW IT, REPLACE YYY WITH YOUR DOMAIN NAME
+  
+ 	 	root: afnog@YOURDOMAIN.afnog.nog-oc.org 
+  
+  ##Save and exit the file and reload the aliases database
+  
+		$sudo newaliases
+  
+  
+4. Start Postfix
+	$sudo service postfix start
+
+Move to the next exercise which is configuring Apache and Rspamd

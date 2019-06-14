@@ -25,7 +25,7 @@ Save and exit and reload Bind
 
 #### INSTALL THE CERTIFICATE USING LETSENCRYPT #####
 
-	$./letsencrypt-auto --apache -d YYY.afnog.nog-oc.org -d pcXX.sse.ws.afnog.org
+	$./letsencrypt-auto --apache -d web1.______.afnog.nog-oc.org 
 
 
 
