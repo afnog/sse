@@ -34,4 +34,4 @@
 	
 	$sudo service netdata start
 	
-	THEN BROWSE https://bsdpcX.sse.ws.afnog.org:19999
+	THEN BROWSE http://bsdpcX.sse.ws.afnog.org:19999
