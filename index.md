@@ -80,13 +80,13 @@ automatically.
 |09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|[Virtualization][]
 |-
 |Tea break
-|11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RADIUS][]
+|11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RSPAMD][]
 |-
 |Lunch
-|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RSPAMD][]
+|14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RADIUS][]
 |-
 |Tea break
-|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|Expert Panel and [Closing Survey][]
+|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|[NETDATA][], Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
@@ -189,6 +189,10 @@ automatically.
 * [Exercise 2](dns/dns2-exercise2.txt)
 * [Exercise 3](dns/dns2-exercise3.txt)
 
+##### Netdata
+[NETDATA]: #netdata
+
+* Install Netdata [exercise](netdata/install_netdata.txt)
 ##### DNS Authoritative Name Servers
 [DNS Authoritative]: #dns-authoritative-name-servers
 
@@ -328,10 +332,11 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 
 This is a quick setup of a powerful anti-spam software known as RSPAMD with default settings to demo a sample mail filter
 
-NB: ALL COMMANDS ARE TO BE CARRIED OUT ON YOUR FREEBSD SERVER!!!
+*NB: ALL COMMANDS ARE TO BE CARRIED OUT ON YOUR FREEBSD SERVER!!!
 
 RSPAMD website: http://rspamd.com
 
+* RSPAMD Intro: [rspamd-intro-PDF](rspamd/rspamd_intro.pdf)
 * Exercise 1 - Add a second MX: [rspamd-1](rspamd/01_add_second_mx.txt)
 * Exercise 2 - Install Rspamd: [rspamd-2](rspamd/02_install_rspamd.txt)
 * Exercise 3 - Configure Rspamd: [rspamd-3](rspamd/03_configure_rspamd_apache.txt)
