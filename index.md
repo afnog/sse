@@ -86,7 +86,7 @@ automatically.
 |14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RADIUS][]
 |-
 |Tea break
-|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	| [NETDATA][], Expert Panel and [Closing Survey][]
+|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|[NETDATA][], Expert Panel and [Closing Survey][]
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
@@ -190,7 +190,7 @@ automatically.
 * [Exercise 3](dns/dns2-exercise3.txt)
 
 ##### Netdata
-[NETDATA]
+[NETDATA]: #netdata
 
 * Install Netdata [exercise](netdata/install_netdata.txt)
 ##### DNS Authoritative Name Servers
