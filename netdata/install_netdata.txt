@@ -32,6 +32,6 @@
 
 4. Start it
 	
-	$sudo service netdata start
+	$sudo service netdata restart
 	
 	THEN BROWSE http://bsdpcX.sse.ws.afnog.org:19999
