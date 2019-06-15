@@ -90,9 +90,13 @@ automatically.
 |-
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
+
+
 {: .timetable width="80%"}
 
 <div class="topics" markdown="1">
+
+
 ## Topics
 
 <!-- Please keep these topics in alphabetical order (except for Introduction first), thanks! -->
