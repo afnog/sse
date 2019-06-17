@@ -337,14 +337,14 @@ Rainloop is a free to use WebMail client that does not require a MySQL database
 
 This is a quick setup of a powerful anti-spam software known as RSPAMD with default settings to demo a sample mail filter
 
-*NB: ALL COMMANDS ARE TO BE CARRIED OUT ON YOUR FREEBSD SERVER!!!
+*NB: Exercise 2 and 3 are to be done on your FreeBSD VM.
 
 RSPAMD website: http://rspamd.com
 
 * RSPAMD Intro: [rspamd-intro-PDF](rspamd/rspamd_intro.pdf)
-* Exercise 1 - Add a second MX: [rspamd-1](rspamd/01_add_second_mx.txt)
-* Exercise 2 - Install Rspamd: [rspamd-2](rspamd/02_install_rspamd.txt)
-* Exercise 3 - Configure Rspamd: [rspamd-3](rspamd/03_configure_rspamd_apache.txt)
+* Exercise 1 - Add a second MX: [adding MX Record](rspamd/01_add_second_mx.txt)
+* Exercise 2 - Install Rspamd: [rspamd-install](rspamd/02_install_rspamd.txt)
+* Exercise 3 - Configure Rspamd and Rspamd Web gui: [rspamd-config](rspamd/03_configure_rspamd_apache.txt)
 
 ### Virtualization
 [Virtualization]: #virtualization
