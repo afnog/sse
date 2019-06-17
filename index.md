@@ -86,8 +86,8 @@ automatically.
 |14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RADIUS][]
 |-
 |Tea break
-|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|[NETDATA][] and Expert Panel
-|-
+|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|[NETDATA][] 
+|-   		|				|		|			|		|Expert Panel Discussion
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
 
