@@ -77,7 +77,7 @@ automatically.
 |		|Monday			|Tuesday		|Wednesday		|Thursday		|Friday
 |:-             |:-                     |:-                     |:-                     |:-                     |:-
 |		|10/06			|11/06			|12/06			|13/06			|14/06
-|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][], 		|[Dovecot][], [Rainloop][]		|[Virtualization][]
+|09:00-11:00	|[Introduction][]	|[Data Security][]	|[Ansible][] 		|[Dovecot][], [Rainloop][]		|[Virtualization][]
 |-
 |Tea break
 |11:30-13:00	|[DNS][]		|[DNS][]		|[Ansible][]		|[NTP][]		|[RSPAMD][]
@@ -86,7 +86,7 @@ automatically.
 |14:00-16:00	|[DNS][]	|[DNS][]		|[Postfix][]		|[Monitoring][]		|[RADIUS][]
 |-
 |Tea break
-|16:30-18:30	|[Network Security][]		|[Apache][], |[Postfix][]		|[Monitoring][]	|[Netdata][] 
+|16:30-18:30	|[Network Security][]		|[Apache][] |[Postfix][]		|[Monitoring][]	|[Netdata][] 
 |-   		|				|		|			|		|Expert Panel Discussion
 |Supper
 |**Evening Sessions:** <br /> 20:00-22:00	|General Help	|General Help	|General Help	|Instructor Dinner |Closing Ceremony
@@ -267,9 +267,9 @@ Goal: DNSSEC High Level Awareness.
 #### [Kevin Chege](#KC)
 #### [Manhal Mohammed](#MW)
 
-* Firewalls Theory (Kevin): [PDF](firewalls/Firewalls_2019.pdf)
-* Firewall exercise 1 (Manhal): [exercise](firewalls/ufw_debian.txt)
-* Firewall exercise 2: [freebsd_firewall](firewalls/firewall_freebsd_ex.txt)
+* Firewalls Theory: [PDF](firewalls/Firewalls_2019.pdf)
+* Debian Firewall exercise 1: [exercise](firewalls/ufw_debian.txt)
+* FreeBSD Firewall exercise 2: [freebsd_firewall](firewalls/firewall_freebsd_ex.txt)
 
 ### OpenLDAP
 [OpenLDAP]: #openldap
