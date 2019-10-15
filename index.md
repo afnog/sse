@@ -27,7 +27,7 @@ Jump within this page:
 This course on Scalable Internet Services in English (SS-E) is part of the
 [AfNOG {{page.year}} Workshop on Network Technology](http://www.ws.afnog.org/afnog{{page.year}}/index.html),
 held in conjunction with the [AfNOG meeting](http://www.afnog.org/)
-in Dakar, Senegal, April-May {{page.year}}.
+in Kampala, Uganda from 9th – 21st June {{page.year}}.
 
 We use hands-on training in a well-equipped classroom over a five-day period to teach skills required for the configuration and operation of large scale Internet services.
 
