@@ -19,7 +19,7 @@ Jump within this page:
 </div><!-- sectionjumps -->
 
 <p><a href="https://www.flickr.com/photos/65789103@N06/18071392728/" class="group-photo"><img
-      src="images/Class_Group_Photo.jpg"
+      src="images/pic_2019.jpg"
       alt="[SS-E Group Photo]"></a></p>
 
 ## Introduction
